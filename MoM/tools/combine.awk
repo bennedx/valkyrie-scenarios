@@ -1,0 +1,21 @@
+@include "common.awk"
+
+# usage:  awk -f combine.awk
+
+BEGIN { localizationFile = "Localization.English.txt"
+        attackFile = "localization.attack.english.txt"
+        bookFile = "localization.book.english.txt"
+        
+        backup = "Localization.English.bak"
+        
+        copyFile(localizationFile, backup)
+        
+        combineLocalization("EventWandererAttack", attackFile, localizationFile)
+        combineLocalization("EventBackyardBenBefore", bookFile, localizationFile)
+        combineLocalization("EventBackyardBenAfter", bookFile, localizationFile)
+        combineLocalization("EventJournal", bookFile, localizationFile)
+        combineLocalization("EventDVMStopRitual", bookFile, localizationFile)
+        combineLocalization("EventDVMRescueBoy", bookFile, localizationFile)
+        combineLocalization("EventDVMStopCultists", bookFile, localizationFile)
+        combineLocalization("EventSarahPatter", bookFile, localizationFile)
+      }
