@@ -1,9 +1,10 @@
-#!/bin/awk -f
-
 # this is an include file
 BEGIN   {
             stderr = "/dev/stderr"
             IGNORECASE = 1
+			
+			true = !false
+			false = !true
         }
         
 # FixQuotes() takes a string and returns a properly quoted string
@@ -64,7 +65,6 @@ function combineLocalization(header, sourceFile, targetFile,      output, tosser
     
     printf "header=%s\nsource=%s\ntarget=%s\n\n", header, sourceFile, targetFile
     
-    print "regex: " tosser
     while ( ( getline line < targetFile ) > 0 ) {
         if ( line ~ tosser ) {
             # do nothing--this line will be replaced by content from sourceFile
@@ -76,11 +76,8 @@ function combineLocalization(header, sourceFile, targetFile,      output, tosser
         }
     }
 
-print "before close"    
 	close(output)
-print "before ls"	
     system("ls " output)
-print "after ls"    
 	
     # append the sourceFile to the output file when the header matches
     while ( ( getline line < sourceFile ) > 0 ) {
@@ -90,14 +87,11 @@ print "after ls"
         }
     }
 
-print "before close all"    
     close(targetFile)
     close(sourceFile)
     close(output)
 
-print "before mv"    
     system("mv " output " " targetFile)
-print "after mv"
 }
 
 function ConvertToVarTests(conditions,                      addEntry, condition, conditionIndex, conditionList, conditionResult, conditionSeparator, flipConditionFlag) {

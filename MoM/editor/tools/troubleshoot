@@ -1,4 +1,6 @@
-#!/bin/awk -f
+#!/bin/gawk -f
+
+@include "common.awk"
 
 # usage:  awk -f troubleshoot.awk journal.txt events.ini  localization.book.english.txt 
 #
@@ -17,10 +19,7 @@
 #       x Events have localization keys
 #       # localization keys are used
 
-BEGIN	{   true = !false
-            false = !true
-
-            debug = true
+BEGIN	{   debug = true
 
             NAME = 1    # The name of the event, qitem, etc: the item
             FILE = 2    # File name where this item was defined

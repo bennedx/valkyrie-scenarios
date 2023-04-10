@@ -80,7 +80,7 @@ List
 
 *|foundCandles,>,0|The cultist shouts something about the basement and shakes you. Drop the {c:QItemCandles}. If you are not carrying them, become Dazed from the shaking.
 
-*|wanderersKilled,>,5|The cultist looks around; waves of horror and anger cross his face. He raises his arms and cries, "Brothers! I have found {var:wanderersKilled} of our brethren dead. I call upon the One True Power!" Each investigator not carrying a {c:QItemFluxStabilizer} tests {will}. If you pass, you withstand the rush of evil that passes up through the house. If you fail, suffer 1 Horror ({will} negates) and become Stunned. If all investigators who rolled pass, the power of your collective wills lifts everyone's spirits:  each investigator may discard 1 hooror.
+*|wanderersKilled,>,5|The cultist looks around; waves of horror and anger cross his face. He raises he arms and cries, "Brothers! I have found {var:wanderersKilled} of our brethren dead. I call upon the One True Power!" Each investigator not carrying a {c:QItemFluxStabilizer} tests {will}. If you pass, you withstand the rush of evil that passes up through the house. If you fail, suffer 1 Horror ({will} negates) and become Stunned. If all investigators who rolled pass, the power of your collective wills lifts everyone's spirits:  each investigator may discard 1 hooror.
 
 *|exploredGateNicely,==,0|"You would destroy the Master's house with your brutality. You must be stopped!" The cultist moves to push you. ({strength};2) If you pass, you push back hard against the cultist. If you fail, he pushes you off-balance and you fall hard to the floor; become Stunned.
 

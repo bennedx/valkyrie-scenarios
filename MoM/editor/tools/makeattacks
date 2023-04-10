@@ -1,6 +1,7 @@
-#!/bin/awk -f
+#!/bin/gawk -f
 
 @include "common.awk"
+
 BEGIN   {   header = "EventWandererAttack"
             IGNORECASE = 1
             
@@ -13,13 +14,13 @@ BEGIN   {   header = "EventWandererAttack"
             
             eventsFile = "attack.events.ini"
             localizationFile = "localization.attack.english.txt"
-            system("del " eventsFile)
-            system("del " localizationFile)
+            deleteFile(eventsFile)
+            deleteFile(localizationFile)
 
             print ".,English" >> localizationFile
             
             # add the main attack start
-#print "Add attack Start event" >> stderr
+
             printf "\n[%sStart]\n", header >> eventsFile
             printf "buttons=1\n" >> eventsFile
             printf "event1=%sStoryStart\n", header >> eventsFile
