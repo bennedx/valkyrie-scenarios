@@ -7,11 +7,17 @@
 # Reads various .ini and .txt files and validates the contents
 #
 #       included automatically:
-#           attack.events.ini
-#           book.events.ini
-#           events.ini
-#           items.ini
-#           localization.en.txt
+#			tiles.ini
+#			tokens.ini
+#			events.ini
+#			items.ini
+#			spawns.ini
+#			ui.ini
+#			monsters.ini
+#			puzzles.ini
+#			attack.events.ini
+#			journal.events.ini
+
 #
 # Things checked
 #       x Events that are used exist
@@ -28,7 +34,7 @@ BEGIN	{   debug = true
             REFS = 5    # An array of boolean indexed by name; true only if the named item exists
             KEYS = 6    # Array of localization keys referenced by this item
             
-            split("attack.events.ini book.events.ini events.ini items.ini tokens.ini monsters.ini puzzles.ini spawns.ini localization.english.txt", ARGV, " ")
+            split("tiles.ini tokens.ini events.ini items.ini spawns.ini ui.ini monsters.ini puzzles.ini attack.events.ini journal.events.ini localization.english.txt", ARGV, " ")
             #   tiles.ini ui.ini
             ARGC = length(ARGV) + 1
 

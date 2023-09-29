@@ -14,6 +14,7 @@ BEGIN   {   header = "EventWandererAttack"
             
             eventsFile = "attack.events.ini"
             localizationFile = "localization.attack.english.txt"
+			realLocalizationFile = "localization.english.txt"
             deleteFile(eventsFile)
             deleteFile(localizationFile)
 
@@ -126,5 +127,7 @@ END     {
             printf "event1=\n" >> eventsFile
             printf "%sEnd.text,\n", header >> localizationFile
             printf "%sEnd.button1,Attack End\n", header >> localizationFile
+			
+  			combineLocalization(header, localizationFile, realLocalizationFile)
 #print ">> END done" > stderr
         }

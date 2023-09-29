@@ -53,35 +53,34 @@ function copyFile(sourceFilename, targetFilename) {
 }
 
 function deleteFile(filename) {
-    system("rm " filename " >/dev/null &2>/dev/null")
+    system("rm -f " filename " >/dev/null &2>/dev/null")
 }
 
 function combineLocalization(header, sourceFile, targetFile,      output, tosser, line, first) {
-    output = "temp.localization.txt"
+    output = "combineLocalization.temp.txt"
     if (getline < output >= 0) deleteFile(output)
     
     # strip out lines that will be replaced
-    tosser = sprintf("^%s[^,]*,.*$", header)
-    
-    printf "header=%s\nsource=%s\ntarget=%s\n\n", header, sourceFile, targetFile
-    
-    while ( ( getline line < targetFile ) > 0 ) {
-        if ( line ~ tosser ) {
-            # do nothing--this line will be replaced by content from sourceFile
+    tosserRegex = sprintf("^%s[^,]*,.*$", header)
 
-        } else {
-            # this line will be kept, so send it to the output file
-            # print "output: " line
-            print line >> output
-        }
-    }
+	# copy all lines from the localization file that will not be in the new one
+	while ( ( getline line < targetFile ) > 0 ) {
+		if ( line ~ tosserRegex ) {
+			# do nothing--this line will be replaced by content from sourceFile
+
+		} else {
+			# this line will be kept, so send it to the output file
+			# print "output: " line
+			print line >> output
+		}
+	}
 
 	close(output)
     system("ls " output)
 	
     # append the sourceFile to the output file when the header matches
     while ( ( getline line < sourceFile ) > 0 ) {
-        if (line ~ tosser) {
+        if (line ~ tosserRegex) {
             # print "found line: " line
             print line >> output
         }
@@ -90,8 +89,8 @@ function combineLocalization(header, sourceFile, targetFile,      output, tosser
     close(targetFile)
     close(sourceFile)
     close(output)
-
-    system("mv " output " " targetFile)
+   
+	system("mv " output " " targetFile)
 }
 
 function ConvertToVarTests(conditions,                      addEntry, condition, conditionIndex, conditionList, conditionResult, conditionSeparator, flipConditionFlag) {

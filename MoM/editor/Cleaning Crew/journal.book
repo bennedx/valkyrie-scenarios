@@ -9,28 +9,28 @@ book|Journal|ordered|keep
 #   name        The name of the page; this is the text that shows on buttons
 #   text        The text to show when the button is pushed on the TOC
 
-page|Read Page 1|\n25 October 1925\n\nI’ve decided to record everything that happens over the next week. After three generations of Smythes making the attempt, I think the Master will finally bring Our God into this world. This time, there will be no mistakes. His uncle failed 10 years ago, but the Master will not. We are gathering supplies, preparing the altar, and looking for the right people to help us. His son will be sacrificed in the ritual. He says it is painful to think about--he's so young--but that is what sacrifice is. The Master is a great man.\n
+page|Read Page 1|\n25 October 1925\n\nI’ve decided to record what happens this week. After three generations of Smythes making the attempt, I think the Master will finally bring Our God into this world. This time, there will be no mistakes. His uncle failed 10 years ago, but the Master will not. We are gathering supplies, preparing the altar, and looking for the right people to help us. We will sacrifice His son in the ritual. He says it is painful to think about--His son is so young--but that is what sacrifice is. The Master is a great man.\n
     toc|The book looks new. When you flip through it, you see that there are only a few entries. The first one is last Sunday.
     
-page|Read Page 2|\n26 October 1925\n\nThe Master told us that we could all die in the ritual. The hunger of Our God's arrival will drain us all. But he thinks we can supply Its Greatness from another source. I hired a local cleaning company to send a crew to the house the day of the ritual. This should protect us.\n
+page|Read Page 2|\n26 October 1925\n\nThe Master told us that we could all die in the ritual. The hunger of Our God's arrival will drain us. But he thinks we can supply Its Greatness from another source. I hired a local cleaning company to come to the house the day of the ritual. They should protect us.\n
     toc|You wonder how a family could work tirelessly over so many generations to commit such evil.
     
-page|Read Page 3|\n27 October 1925\n\nPreparations continue. The power of the ritual will be demanding on the Master. He was counting on the healing stone to see him through, but one of the church members lost it. The Master told me he will likely use her instead. He said it wasn't much of a sacrifice, but it should be enough when the time comes.\n
+page|Read Page 3|\n27 October 1925\n\nPreparations continue. The ritual will test the Master and maybe break him. He counts on the healing stone to see him through, but one of the church members lost it. The Master told me he will use her instead. He said it wasn't much of a sacrifice, but it would be enough when the time comes.\n
     toc|You are shocked to learn that you are here to protect their lives. You are determined to stop them from killing you.
     
-page|Read Page 4|\n28 October 1925\n\nThe Master has prepared his son all week. The boy was isolated. The Master says his son's fear will provide the power needed to create the portal.\n\nThe boy's screaming kept me awake last night. It hurts to hear, but the Master told me this morning that power is drawing into him, making him stronger for Saturday.\n
+page|Read Page 4|\n28 October 1925\n\nThe Master has prepared his son all week. The boy is isolated. The Master says his son's fear will provide the power needed to create the portal.\n\nThe boy's screaming kept me awake last night. It hurts to hear, but the Master told me this morning that power is drawing into him, making him stronger for Saturday.\n
     toc|These people are ruthless:  a member loses something and will pay for it with her life. These people must be stopped.
     
 page|Read Page 5|\n29 October 1925\n\nKids broke into the house yesterday. One of the Brothers chased them off, but not before they broke into the basement. We secured the door with a special lock and cast a living darkness spell on the room. I piled boxes in front of the entrance to the place of power beneath the house. No one will find their way to the altar before Saturday.\n
     toc|His son?! How can he sacrifice his own son? The depth of this depravity inspires awe.
     operations|readAboutBasementDoorToCave,=,1 @FoundBasementDoorToCaveViaJournal,=,1
     
-page|Read Page 6|\n30 October 1925\n\nThe cleaning crew will be here tomorrow to start on the house. Everything is prepared for the ritual; the fear and excitement are building in all of us. Soon the world will belong to the One True God.\n\nThe Master's son continues to plead for his life during the day, then screams in the night. The Master told me in confidence the he yearns to stop, but that he must keep his commitment and see this through.\n\nThe boy has been moved to the dungeon outside the altar room. He's locked in a cell there. There is a hole in the wall that he stares through when he's not screaming. The sight of the altar gives him a look of fear I’ve never seen before. I can no longer hear him, but I can feel his fear now from across the town. I will be strong.\n
+page|Read Page 6|\n30 October 1925\n\nThe cleaning crew will be here tomorrow to start on the house. Everything is prepared for the ritual; I can feel the fear and excitement building in all of us. Soon the world will belong to the One True God.\n\nThe Master's son continues to plead for his life during the day, then screams in the night. The Master told me in confidence the he yearns to stop, but that he must keep his commitment and see this through.\n\nThe boy has been moved to the dungeon outside the altar room. There is a hole in the wall that he stares through when he's not begging or screaming. The altar is visible through the hole; looking at it terrifies the boy. I can no longer hear him, but I can feel his fear from across the town. I will be strong.\n
     toc|There are two more entries. These people must be stopped.
     operations|readAboutCellHole,=,1 @FoundCellHoleViaJournal,=,1
     
-page|Read Page 7|\n31 October 1925\n\nAll the preparations are made. Tonight we will bring the power to this world. The cleaning crew will arrive shortly and will examine the house for hours until they are... needed.\n\nThe Master told me this morning that something is bothering him, but that he cannot put his finger on it. He said something has changed, like there is another power in the house. My brethren have combed the house and can find nothing. I hope the Master is wrong.\n\nI'm going to search the chapel one more time for the healing stone. The master has already taken the woman who lost it to the altar, but her husband has pleaded with me to help him find the stone. For his sake, I hope we do.\n\nThe cleaning crew are due here momentarily. The final plan is set in motion.\n
-    toc|We are here to feed their god but that will not happen. We will put an end to this.
+page|Read Page 7|\n31 October 1925\n\nAll the preparations are made. Tonight we will bring Its power to this world.\n\nThis morning, the Master told me that something is bothering him, but that he cannot put his finger on what. He said something has changed, like there is another power in the house. My brethren have combed the house and can find nothing. I hope the Master is wrong.\n\nThe woman who lost the stone is already at the altar. Her husband pleaded with me to help him find the stone, so I'm going to search the chapel one more time. For his sake, I hope we find it.\n\nThe cleaning crew are due here momentarily. They will be here until they are... needed. The plan is set in motion.\n
+    toc|We are here to feed their god, but that will not happen. We will put an end to this.
 
 # is this correct? Or should it still be readJournal,=,1 VarReadJournal,=,1
 	operations|@readJournal,=,1
@@ -106,7 +106,7 @@ book|BackyardBenBefore|random|nokeep
     line|conditions=exploredDiningRoom,==,0
 
 
-page|“How long will it take us to look through the house?”|“How long, you say? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Even when Peter was living here, it was only him and his daughter. The girl's mother died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I'd guess you'll need a few hours just to look through the place and get your bearings. You'll want to check every drawer, cabinet, and box in the house--take as much time as you need. We need the whole house cleared out and spotless by the end of next week.”
+page|“How long will it take us to look through the house?”|“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Even when Peter was living here, it was only him and his daughter. The girl's mother died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I'd guess you'll need a few hours just to look through the place and get your bearings. You'll want to check every drawer, cabinet, and box in the house--take as much time as you need. We need the whole house cleared out and spotless by the end of next week.”
     test|exploredBackdoorNicely,==,0|“Long enough,” he snaps. “There are numerous rooms on the ground floor, a basement, and many rooms upstairs. The place has always been too big for this family. Back when Peter was living here, it was only him and his daughter. The girl's mother died under suspicious circumstances when the girl was three. Never explained.\n\n“Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren't you? And you won't break anything else?”
     operations|talkedToBenHowLong,=,1 talkedToBenCount,+,1 @TalkedToBackyardBen,=,1
     toc|Benjamin is digging through his pockets for the key, but isn't having much luck finding it. You hear him muttering about it under his breath.
@@ -121,7 +121,7 @@ page|“Where were the children found?”|“The children were found just over t
     operations|talkedToBenWhere,=,1 talkedToBenCount,+,1 @TalkedToBackyardBen,=,1
 
 page|“Why did you wait so long to sell the house?”|“Well, we tried right after the... trouble. No one would even come to look at it back then, but our priest, um, told us now is the right time.\n\nGain 1 {clue}.”
-    test|exploredBackdoorNicely,==,0|“That's none of your concern,” he snaps.\n\nYou startle at his abrupt response. You all investigators in your space suffer 1 horror ({will} negates).
+    test|exploredBackdoorNicely,==,0|“That's none of your concern,” he snaps.\n\nYou startle at his abrupt response. You and all investigators in your space suffer 1 horror ({will} negates).
     operations|talkedToBenSell,=,1 talkedToBenCount,+,1 @TalkedToBackyardBen,=,1
     
 page|“I'm sorry about the gate”|“You should be more careful. The house is old and in poor repair, but some parts have already been repaired. But no real harm done--the gate can be repaired.”
@@ -136,9 +136,9 @@ page|“Is the whole house this dirty?”|“Well,” he starts, “the house wa
     test|exploredBackyardNicely,==,0|“Well,” he snaps, “the house sat unused these last 10 years. You were hired to clean, not criticize.”\n\nThis man clearly does not like you.
     
 page|“There are footprints in the dust by that door...”|“I think the handyman was in the house yesterday. They must be his.”
-    test|exploredBackyardNicely,==,0|“Then you should sweep it up. It's what you're here for, not to complain about the dirt.”
+    test|exploredBackyardNicely,==,0|“Then you should sweep it up. That's what you're here for, not to complain about dirt.”
     
-page|“Is there anything else we need to know?”|“Oh, my, yes. Here's the key you'll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I should be going. Take your time and send someone to fetch me if you need anything.\n\nRemove this person token.
+page|“Is there anything else we need to know?”|“Oh, my, yes. Here's the key you'll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I should be going. Take your time and send someone to fetch me if you need anything.”\n\nRemove this person token.
     test|exploredBackyardNicely,==,0|“What? Oh, here's the key to the house. Don't lose it. I'm going to leave you to it.”\n\nWith disgust, he turns and carelessly drops the key in your direction. Put the {c:QItemBrassKey} common item in Ben's space, then remove Ben from the board.
     line|add=QItemBrassKey
     line|remove=TokenBackyardBenAfter
@@ -151,25 +151,25 @@ page|“Is there anything else we need to know?”|“Oh, my, yes. Here's the ke
 book|DVMStopRitualBefore|ordered|keep
 	line|conditions=goal,==,goalStopRitual ritual,==,0
 
-page|Read Page 1|Page 1\n\nYou open the book to the first page. It's a table of contents. You quickly scan down and find the spell to close portals. In the margin, someone--probably your father--has scrawled a note that reads, “Only my descendants will be able to read this book, and only at the appointed hour. I have seen to this.” \n\nGain 1 {clue} the first time you read this.
+page|Read Page 1|Page 1\n\nYou open the book to the first page. It's a table of contents. You quickly scan down and find the spell to close portals. In the margin, someone--probably your father--scrawled a note that reads, “My descendants will be able to read this book, but only at the appointed hour. I have seen to this.” \n\nGain 1 {clue} the first time you read this.
     toc|The {c:QItemDVM} looks old and worn with time.
     
-page|Read Page 2|Page 2\n\nYou leaf through the book to find the ritual you need to close a portal. The first part is an overview and list of materials. You'll need a special knife, a chalice, a skull, some religious icons, and a number of herbs. There's also mention of an “elder sign,” but you aren't sure what that is.\n\nYou must find the {c:QItemRitualDagger} Common Item, {c:QItemRitualComponents} Unique Item, and {c:QItemElderSignPendant} Common Item.\n
+page|Read Page 2|Page 2\n\nYou leaf through the book to find the ritual to close a portal. The first part is an overview and list of materials. You'll need a special knife, a chalice, a skull, some religious icons, and a number of herbs. There's also mention of an “elder sign,” but you aren't sure what that is.\n\nYou must find the {c:QItemRitualDagger} Common Item, {c:QItemRitualComponents} Unique Item, and {c:QItemElderSignPendant} Common Item.\n
     toc|The book seems to contain spells and {c:EventChosenInvestigator} might have special powers. The book is thick and should be looked at more carefully.
 
 page|Read Page 3|Page 3\n\nYou flip the page. Here the book goes into detail about the dagger you'll use. There is a long list of steps to follow to prepare it. This will take some study. Gain 1 {clue}.\n\nThere is also a “blessing” you need to speak, but it is in a language you don't read or understand.
     toc|Closing a portal doesn't sound easy. Read on.
     
-page|Read Page 4|Page 4\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the sacrifice is small:  a few drops of your blood. You shudder as you read about using your blood for the ritual. Suffer 1 Horror ({will} negates).
+page|Read Page 4|Page 4\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the sacrifice is small:  a few drops of your own blood. You shudder as you read about using your blood for the ritual. Suffer 1 Horror ({will} negates).
     toc|Each tool seems to need special attention. This will require more study.
     
-page|Read Page 5|Page 5\n\nThe next page is where the power of the ritual starts to manifest. This page talks about an incantation you'll use to begin collapsing the portal. This first part will weaken it. Even if the second half of the ritual is not completed, the portal will eventually collapse.\n\nSealing the portal will prevent another from being opened near the same location. We want to complete this ritual.\n\nWhen you get to the incantation, you realize it is written in the same language as the blessing. You think back to that margin scrawl and wonder if you'll be able to understand it later.
+page|Read Page 5|Page 5\n\nThe next page is where the power starts to manifest. This page talks about an incantation you'll use to begin collapsing the portal. This first part will weaken it. Even if the second half of the ritual is not completed, the portal will eventually collapse.\n\nSealing the portal will prevent another from being opened near the same location. We want to complete this ritual.\n\nWhen you get to the incantation, you realize it is written in the same language as the blessing. You think back to that margin scrawl and wonder if you'll be able to understand it later.
     toc|Adding your own blood to the ritual sends a chill down your spine. There's more.
     
 page|Read Page 6|Page 6\n\nOnce the portal is weakened, it must be closed and sealed. Sealing it requires more blood and an elder sign. After reading this section, you understand how the elder sign will be used to close and seal the gate. You wonder how you will find such a thing.\n\nFortunately there is a picture of one next to the description. You'll keep an eye out as you wander the house.
-    toc|You hope the margin scrawl at the end of the book helps--daggers and sacrifice are one thing, but the incantation is unreadable. There are two more entries.
+    toc|You hope the margin scrawl on the first page is right--daggers and sacrifice are one thing, but the incantation is unreadable. There are only two more entries.
     
-page|Read Page 7|Page 7\n\nThis final incantation will close and seal the portal permanently. Another portal could be opened, but not near this one. You note that the incantation is in the same language as the other two. You hope your father knew what he was talking about. Gain 1 {clue}.
+page|Read Page 7|Page 7\n\nThe final incantation will close and seal the portal permanently. Another portal could be opened, but not near this one. You think that the incantation is in the same language as the other two. You hope your father knew what he was talking about. Gain 1 {clue}.
     toc|Even more blood is required, and it may not be possible to complete the final part of the ritual. This is the last page of the ritual.
     
 end|Now you know how to perform the ritual to close and seal a portal.
@@ -332,12 +332,12 @@ page|step3|You draw the knife across the palm of your hand. A drop of blood well
 	pass|step3pass
 	fail|step3fail
 
-page|step3pass|You squeeze your hand into a tight fist and blood drips into the chalice. You can't see or hear the chalice change, but you can feel something happen to it. It feels more powerful now.\n\nThis step is complete.
+page|step3pass|You squeeze your hand into a tight fist and blood drips into the chalice. You can't see or hear the chalice change, but you can feel something happen to it.\n\nThis step is complete.
 	line|add=QItemRitualDagger
 	freeaction
 	goto|step4
 
-page|step3fail|You're going to have to slice deeper. Suffer 2 Horror ({will} negates).
+page|step3fail|A drop of blood spatters when it hits the cup, but nothing seems to happen. You're going to have to slice deeper. Suffer 2 Horror ({will} negates).
 	line|add=QItemRitualDagger
 	freeaction
 	goto|step3
@@ -353,7 +353,7 @@ page|step4pass|You feel a welling of power as you speak the last word. The feeli
 	freeaction
 	goto|step5
 
-page|step4fail|You can feel something happening inside but it is not very strong and the portal has not changed. You'll have to try the incantation again.\n\nThe ritual is wearing you down. Suffer 1 facedown Damage and 1 facedown Horror ({strength} to negate either).
+page|step4fail|You can feel something happen inside but it is not very strong and the portal has not changed. You'll have to try the incantation again.\n\nThe ritual is wearing you down. Suffer 1 facedown Damage and 1 facedown Horror ({strength} negates).
 	line|add=QItemDVM
 	freeaction
 	goto|step4
@@ -364,23 +364,23 @@ page|step5|Now you need to draw more blood. You look at your hand and see that i
 	pass|step5pass
 	fail|step5fail
 
-page|step5pass|You feel a welling of power as you speak the last word. The feeling inside you grows and you suddenly feel like you control the cosmos. The portal grows brighter and {c:TokenPortal} screams. You had forgotten about the boy--he will die in this ritual. Suffer 1 facedown Horror.\n\nAs your last word echos in the room, the portal grows dimmer and shrinks slightly. Where it was humming and stable before, it is sputtering, making an electrical sound, and pulsating. It has been weakened, but not closed. It will eventually collapse on its own, but you can do better.\n\nThis step is done.
+page|step5pass|You feel a welling of power as you speak the last word. The feeling inside you grows and you suddenly feel like you control the cosmos. The portal grows brighter and {c:TokenPortal} screams. You had forgotten about the boy--he will die in this ritual. Suffer 1 facedown Horror.\n\nAs your last word echos in the room, the portal grows dimmer and shrinks slightly. Where it was humming and stable before, now it sputters and pulses. It has been weakened, but not closed. It will eventually collapse on its own, but you can do better.\n\nThis step is done.
 	line|add=QItemDVM
 	freeaction
 	goto|step6
 
-page|step5fail|A single drop rises from the new slice. You'll have to try again. Suffer 1 Horror ({will} negates).
+page|step5fail|A single drop rises from the new slice but doesn't fall. You'll have to try again. Suffer 1 Horror ({will} negates).
 	line|add=QItemDVM
 	freeaction
 	goto|step5
 	
-page|step6|As the portal weakens, the boy regains some strength. He is screaming in pain and terror again.\n\nYou must get this last part right to close and seal the portal. You look at the last incantation and, while you can read it also, like the others, you aren't sure you understand it. If you do, test {lore}; otherwise, test {will} to muddle through. You may roll 1 extra die for each Unique Item you have.
+page|step6|As the portal weakens, the boy regains some strength. He is screaming in pain and terror again.\n\nYou must get this last part right to close and seal the portal. You look at the last incantation and, like the others, while you can read it, you aren't sure you understand it. If you do, test {lore}; otherwise, test {will} to muddle through. You may roll 1 extra die for each Unique Item you have.
 	line|add=QItemDVM
 	skillcheck|7
 	pass|step6pass
 	fail|step6fail
 
-page|step6pass|As you complete the incantation, the portal and {c:QItemElderSignPendant} continue pulsing together. The pendant rises into the air and slowly approaches the portal. The boy screams one last time as the elder sign makes contact with the his forehead. The boy goes rigid, then the portal collapses and the boy falls to the ground dead.\n\nThe investigation is over.
+page|step6pass|As you complete the incantation, the portal and the {c:QItemElderSignPendant} continue pulsing together. The pendant rises into the air and slowly approaches the portal. The boy screams one last time as the elder sign makes contact with his forehead. The boy goes rigid, then the portal collapses and the boy falls to the ground dead.\n\nThe investigation is over.
 	line|add=QItemDVM
 	freeaction
 	operations=result,=,fullWin

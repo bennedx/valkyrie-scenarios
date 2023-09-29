@@ -2,16 +2,18 @@
 
 @include "common.awk"
 
-# usage:  awk -f makebooks.awk journal.txt
+# usage:  awk -f makebooks.awk (journal).book ...
 #
 # Reads journal.txt and creates two files:
-#       book.events.ini                     The events 
-#       localization.book.english.txt       
+#       (journal).events.ini                     The events 
+#       localization.english.txt                 Updates the main localization file
 
 BEGIN       {
-				debug = 1
+				realLocalizationFile="Localization.English.txt"
+                stderr = "/dev/stderr"
+                
+				debug = 0
 
-                IGNORECASE=1
                 FS="|"
 
                 NAME = 1
@@ -32,24 +34,37 @@ BEGIN       {
                 ISEXIT = 13
                 FREEACTION = 14
 				
-                stderr = "/dev/stderr"
-                
-                eventsFile="book.events.ini"
-                localizationFile="localization.book.english.txt"
-                
-                deleteFile(eventsFile)
-                deleteFile(localizationFile)
-                
-                localizationHeader = ".,English"
-                
-                globalEventCounter = 0
-                isBook = 0
-				
 				textContinue = "Continue"
 				textCancel = "Cancel"
 				
+				previousFile = ""
 				abort = 0
             }
+
+previousFile != FILENAME {
+				if (previousFile != "") {
+                    OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pages, startLines, endLines, isEndDirective)
+    				combineLocalization("Event" bookName, localizationFile, realLocalizationFile)
+				}
+				
+				partCount = split(FILENAME, fileParts, ".")
+				if (partCount != 2 || fileParts[2] != "book") {
+				    printf "'" FILENAME "' must have an extension of '.book'" >> stderr
+					exit 1
+				}
+				
+				eventsFile = fileParts[1] ".events.ini"
+                deleteFile(eventsFile)
+
+                localizationFile="localization.temp.txt"
+                deleteFile(localizationFile)
+                
+                globalEventCounter = 0
+                isBook = 0
+
+				previousFile = FILENAME;
+			}
+
 
 # remove leading and trailing blanks
             {
@@ -77,21 +92,19 @@ BEGIN       {
 # books can be followed by:  line (only before page)
 $1 == "book" {
                 if (isBook) {
-					localizationFile = gensub(/[{]language[}]/, language, 1, localizationFile)
-					if (debug) print "localization file=" localizationFile >> stderr
                     OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pages, startLines, endLines, isEndDirective)
+    				combineLocalization("Event" bookName, localizationFile, realLocalizationFile)
                 }
-                
+				
                 isBook = 1
                 
-                type = ( $1 == "inspect" ? "Event" : "Token" )
                 bookName = $2
                 isRandom = $3 == "random"
                 isKeep = $4 == "keep"
                 
                 bookCount++
                 books[bookCount] = bookName
-                if (debug) print "bookName=" bookName ", isRandom=" isRandom ", isKeep=" isKeep >> stderr
+				if (debug) printf "bookName=%s, isRandom=%s, isKeep=%s\n", bookName, isRandom, isKeep >> stderr
                 
 				isEndDirective = 0
                 delete pages
@@ -263,9 +276,8 @@ END         {
 				}
 				
                 if (isBook) {
-					localizationFile = gensub(/[{]language[}]/, language, 1, localizationFile)
-					if (debug) print "localization file=" localizationFile >> stderr
                     OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pages, startLines, endLines, isEndDirective)
+    				combineLocalization("Event" bookName, localizationFile, realLocalizatioFile)
                 }
             }
             
@@ -279,7 +291,7 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pa
     if (bookName == "") return
 
     # start with ReadPage entries (all versions use this)
-    printf "OutputBook(%s)\n", bookName >> stderr
+    if (debug) printf "OutputBook(%s)\n", bookName >> stderr
     pageCount = length(pages)
     for(pageIndex = 1; pageIndex <= pageCount; pageIndex++) {
         separator = ""
@@ -342,12 +354,14 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pa
 		}
 
         printf "Event%sReadPage%iEnd.button1,%s\n", bookName, pageIndex, textContinue >> localizationFile
+        printf "Event%sReadPage%iEnd.text,\n", bookName, pageIndex >> localizationFile
         
         # now create the event to choose the right version of the page to show
         printf "\n[Event%sReadPage%i]\n", bookName, pageIndex >> eventsFile
         printf "buttons=1\n"  >> eventsFile
         printf "event1=%s\n", events >> eventsFile 
         printf "Event%sReadPage%i.button1,%s\n", bookName, pageIndex, textContinue >> localizationFile
+        printf "Event%sReadPage%i.text,\n", bookName, pageIndex >> localizationFile
         printf "display=false\n" >> eventsFile
     }
     
@@ -564,7 +578,7 @@ function OutputOrderedNoKeepTOC(eventsFile, localizationFile, bookName, pages, s
 			printf "%s.text,%s\n", eventName, tocText >> localizationFile
 
 			#continue button
-			printf "%s.button1,%s%s\n", eventName, (isActionable ? "{action} " : ""), textContinue
+			printf "%s.button1,%s%s\n", eventName, (isActionable ? "{action} " : ""), textContinue >> localizationFile
 			
 			#cancel button
 			printf "event2=%sEnd\n", bookName >> eventsFile
@@ -761,4 +775,8 @@ function CombineOperations(line1, line2) {
     }
 
     return line1
+}
+
+function removeLocalizationForThisBook() {
+	
 }
