@@ -10,9 +10,10 @@
 
 BEGIN       {
 				realLocalizationFile="Localization.English.txt"
+				localizationFile = "localization.temp.txt"
                 stderr = "/dev/stderr"
                 
-				debug = 0
+				debug = 1
 
                 FS="|"
 
@@ -84,8 +85,8 @@ previousFile != FILENAME {
 			}
 
 # book:  starts a book. Options are:
-#        book|random|keep        Pages are all available as {action}s; after first use, {action} goes away
-#        book|random|nokeep      Pages are all available, but each is removed after first use
+#        book|Name|random|keep        Pages are all available as {action}s; after first use, {action} goes away
+#        book||random|nokeep      Pages are all available, but each is removed after first use
 #        book|ordered|keep       Only the first page is available as an {action}. On first use, {action} is removed from Page and the second Page is made available as an {action}. Repeat.
 #        book|ordered|nokeep     First Page is shown as {action}; after first use, only the second page shows as {action}. Repeat.
 #
@@ -217,33 +218,6 @@ $1 = "fail" {
 				pages[pageCount][FAIL] = $2
 				next
 			}
-
-# the name of the file where the generated events go
-$1 == "eventfile" {
-				if (isBook) {
-					printf "'eventfile' directive must be before the first book" >> stderr
-					abort = 1
-					exit
-				}
-				
-				eventsFile=$2
-				system("if exist " $2 " del /f " $2)
-				next
-			}
-
-# the name of the file where localizable text goes
-$1 == "localizationfile" {
-				if (isBook) {
-					printf "'localizationfile' directive must be before the first book" >> stderr
-					abort = 1
-					exit
-				}
-				
-				localizationFile=$2 
-				if (debug) printf "localizationFile changed to %s\n", localizationFile >> stderr
-				system("if exist " $2 " del /f " $2)
-				next
-			}
 			
 # language:  specifies the language used in the locationization filename and the file's header
 $1 == "language" {
@@ -255,6 +229,8 @@ $1 == "language" {
 				
 				language = $2
 				localizationHeader = ".," + $2
+				
+				realLocalizationFile = sprintf("Localization.%s.txt", language)
 				next
 			}
 			
@@ -277,7 +253,7 @@ END         {
 				
                 if (isBook) {
                     OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pages, startLines, endLines, isEndDirective)
-    				combineLocalization("Event" bookName, localizationFile, realLocalizatioFile)
+    				combineLocalization("Event" bookName, localizationFile, realLocalizationFile)
                 }
             }
             
@@ -313,6 +289,7 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pa
 				# we don't want to go back to the TOC after this
 				printf "display=false\n" >> eventsFile
 				pages[pageIndex][ISEXIT] = 1
+				printf "%s.text,\n", testEventName >> localizationFile
 			} else {
 				# we have TOC text, so show it
 				printf "display=true\n" >> eventsFile
@@ -320,7 +297,7 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pa
 			}
 
 			printf "event1=Event%sReadPage%iEnd\n", bookName, pageIndex >> eventsFile
-			printf "Event%sReadPage%iEnd.text,\n", bookName, pageIndex >> localizationFile
+			#printf "Event%sReadPage%iEnd.button1,\n", bookName, pageIndex >> localizationFile
 			
 			printf "vartests=%s\n", ConvertToVarTests(pages[pageIndex][TESTS][testIndex][CONDITIONS]) >> eventsFile
         }
@@ -352,9 +329,6 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pa
 		for(lineIndex = 1; lineIndex <= length(pages[pageIndex][INILINES]); lineIndex++) {
 			print pages[pageIndex][INILINES][lineIndex] >> eventsFile
 		}
-
-        printf "Event%sReadPage%iEnd.button1,%s\n", bookName, pageIndex, textContinue >> localizationFile
-        printf "Event%sReadPage%iEnd.text,\n", bookName, pageIndex >> localizationFile
         
         # now create the event to choose the right version of the page to show
         printf "\n[Event%sReadPage%i]\n", bookName, pageIndex >> eventsFile
@@ -587,6 +561,7 @@ function OutputOrderedNoKeepTOC(eventsFile, localizationFile, bookName, pages, s
 		} else {
 			# there is no toc text, so just go read the page (this allows for seeing a popup without taking an {action} to get there)
 			printf "display=false\n" >> eventsFile
+			printf "%s.text,\n", eventName >> localizationFile
 		}
 	}
 
@@ -737,7 +712,7 @@ function OutputOrderedKeepTOCInternal(eventsFile, localizationFile, bookName, pa
         } else {
 			outputButtonIndex++
 			printf "event%i=Event%sEnd\n", outputButtonIndex, bookName >> eventsFile
-			printf "%s.text,%s\n", eventName, textContinue >> localizationFile
+			printf "%s.button%i,%s\n", eventName, outputButtonIndex, textContinue >> localizationFile
         }
         
         printf "buttons=%i\n", outputButtonIndex >> eventsFile
@@ -775,8 +750,4 @@ function CombineOperations(line1, line2) {
     }
 
     return line1
-}
-
-function removeLocalizationForThisBook() {
-	
 }

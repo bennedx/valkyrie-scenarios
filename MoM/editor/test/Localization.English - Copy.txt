@@ -1,3 +1,0 @@
-.,English
-quest.name,Scenario 2
-quest.description,Scenario 2...

@@ -1,6 +1,4 @@
 # define the outputs and language
-localizationfile|localization.book.{language}.txt
-eventfile|book.events.ini
 language|English
 
 book|Journal|ordered|keep
