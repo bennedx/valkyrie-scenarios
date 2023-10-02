@@ -1,3 +1,0 @@
-.,English
-quest.name,Book Test
-TokenSearchBookStart.button1,Start Book

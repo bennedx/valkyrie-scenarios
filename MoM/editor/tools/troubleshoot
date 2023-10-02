@@ -33,15 +33,16 @@ BEGIN	{   debug = true
             USED = 4    # Set true when a reference to this item is found
             REFS = 5    # An array of boolean indexed by name; true only if the named item exists
             KEYS = 6    # Array of localization keys referenced by this item
-            
-            split("tiles.ini tokens.ini events.ini items.ini spawns.ini ui.ini monsters.ini puzzles.ini attack.events.ini journal.events.ini localization.english.txt", ARGV, " ")
-            #   tiles.ini ui.ini
-            ARGC = length(ARGV) + 1
 
 			lookingForAdd = true
 			lookingForButton = true
 			lookingForEvent = true
 			lookingForRemove = true
+			
+			special["Quest"] = ""
+			special["QuestData"] = ""
+			special["QuestText"] = ""
+			special["EventStartupStart"] = ""
 		}
 
 BEGINFILE { isIni = FILENAME ~ /.*[.]ini$/
@@ -51,6 +52,8 @@ BEGINFILE { isIni = FILENAME ~ /.*[.]ini$/
                 FS = ","
             }
             $0 = $0
+			
+			print "File: " FILENAME
         }
 
 #### .ini files
@@ -58,11 +61,13 @@ BEGINFILE { isIni = FILENAME ~ /.*[.]ini$/
 /^[[]/  {   section = substr($0, 2, length($0) - 2)
             if (section in sections) error("Duplicate", section, FILENAME, FNR, "")
 
+			isSpecial = section in special
+
             sections[section][NAME] = name
             sections[section][FILE] = FILENAME
             sections[section][LINE] = FNR
-            sections[section][KEYS][section ".text"] = false
-			sections[section][USED] = false
+            sections[section][KEYS][section ".text"] = isSpecial
+			sections[section][USED] = isSpecial
 			
             # "declare" a more-or-less empty array
             sections[section][REFS]["*"] = "*"
@@ -71,24 +76,19 @@ BEGINFILE { isIni = FILENAME ~ /.*[.]ini$/
 
 $1 == "buttons" {
 			for(i = 1; i <= $2; i++) {
-				sections[section][KEYS][section ".button" i] = false
+				if (!((section ".button" i) in sections[section][KEYS])) {
+					sections[section][KEYS][section ".button" i] = false
+				}
 			}
-		}
-
-/^add=.*QItemJournal/ {
-			print
 		}
 
 $1 ~ /^(add|event[0-9]+|remove|monster)$/ {
             split($2, events, /[ \t]+/)
 			
             for(i = 1; i <= length(events); i++) {
-if (events[i]=="QItemJournal") print "QItemJournal stored"
-				#if (event == "EventDVMRitualReadPage14End") {
-				#	print "EventPlaceAltar found in " section " =================================================================="
-				#}
-
-				sections[section][REFS][events[i]] = false
+				if (!(events[i] in sections[section][REFS])) {
+					sections[section][REFS][events[i]] = false
+				}
 			}
         }
 
@@ -114,7 +114,7 @@ $1 ~ /[.](button|text)/ {
 
 END     {   
             # referenced sections exist
-			print "========================================================== referenced sections exist"
+			print "==================================================================== missing referenced sections"
             for(section in sections) {
                 for(event in sections[section][REFS]) {
 					if (event == "*") continue;
@@ -131,26 +131,24 @@ END     {
             }
             
             # sections are used
-			print "========================================================== sections are used"
+			print "==================================================================== unused sections"
             for(section in sections) {
                 if (!sections[section][USED]) error("Unused", section, sections[section][FILE], sections[section][LINE], section)
             }
             
-            print "========================================================== localization keys exist"
+            print "==================================================================== missing localization keys"
             # localization keys exist
             for(section in sections) {
                 for (key in sections[section][KEYS]) {
-                    found = key in localization
+                    found = key in localization || section in special
                     sections[section][KEYS][key] = found
-                    if (found) {
-                        localization[key][USED] = true
-                    } else {
-                        error("Missing", key, sections[section][FILE], sections[section][LINE], section)
-                    }
+					if (found) localization[key][USED] = true
+					
+					if (!found) error("Missing", key, sections[section][FILE], sections[section][LINE], section)
                 }
             }
             
-            print "========================================================== localizations are used"
+            print "==================================================================== unused localization keys"
             # localizations are used
             for(key in localization) {
                 if (!localization[key][USED]) {
@@ -161,6 +159,6 @@ END     {
 		
 function error(type, name, filename, line, section,          workingSection) {
     workingSection = section == "" ? "" : "(" section ")"
-	printf "%-24s %-10s %s %s\n", filename "@" line, type, name, workingSection
+	printf "%-30s %-10s %s %s\n", filename "@" line, type, name, workingSection
 }
 

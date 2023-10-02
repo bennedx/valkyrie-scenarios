@@ -56,36 +56,33 @@ function deleteFile(filename) {
     system("rm -f " filename " >/dev/null &2>/dev/null")
 }
 
-function combineLocalization(header, sourceFile, targetFile,      output, tosser, line, first) {
+function combineLocalization(header, sourceFile, targetFile,      output, evictThese, line, first) {
     if (targetFile == "") return;
 	
 	output = "combineLocalization.temp.txt"
-    if (getline < output >= 0) deleteFile(output)
-    
-    # strip out lines that will be replaced
-    tosserRegex = sprintf("^%s[^,]*,.*$", header)
+	printf "" > output    
 
-	# copy all lines from the localization file that will not be in the new one
+    # strip out lines that will be replaced
+    headerRegex = sprintf("^%s[^,]*,.*$", header)
+
+	# copy localization.english.txt to temp file
+	# remove lines that will be replaced
 	if (debug) print "targetFile: " targetFile
 	while ( ( getline line < targetFile ) > 0 ) {
-		if ( line ~ tosserRegex ) {
+		if ( line ~ headerRegex ) {
 			# do nothing--this line will be replaced by content from sourceFile
-
 		} else {
 			# this line will be kept, so send it to the output file
-			# print "output: " line
 			print line >> output
 		}
 	}
 
-	close(output)
     system("ls " output)
 	
     # append the sourceFile to the output file when the header matches
     if (debug) print "sourceFile: " sourceFile
 	while ( ( getline line < sourceFile ) > 0 ) {
-        if (line ~ tosserRegex) {
-            # print "found line: " line
+        if (line ~ headerRegex) {
             print line >> output
         }
     }
@@ -94,7 +91,7 @@ function combineLocalization(header, sourceFile, targetFile,      output, tosser
     close(sourceFile)
     close(output)
    
-	#system("mv " output " " targetFile)
+	system("mv -f " output " " targetFile)
 }
 
 function ConvertToVarTests(conditions,                      addEntry, condition, conditionIndex, conditionList, conditionResult, conditionSeparator, flipConditionFlag) {

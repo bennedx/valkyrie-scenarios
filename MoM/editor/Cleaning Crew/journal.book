@@ -42,11 +42,14 @@ end|This evil must be stopped. What you've learned tells you when and where the 
 
 
 
-# book|<event name/name of book>|{ Random | Ordered }|{ keep | remove }
+# book|<event name/name of book>|{ Random | Ordered }|{ keep | nokeep }|{ single | repeat }
 #   random / keep           Can do anything at random. Options show after use. {action} only shows when not yet used
 #   random / nokeep         Can do anything at random.  After first use, it is removed
 #   ordered / keep          Shows all previously read (no action) and only the next one (with action)
 #   ordered / nokeep        Shows only the next one, no way to re-read messages.
+#
+#   single					At the end of each page, goes to Event<book>End
+#   repeat					At the end of each page, go back to Event<book>Start
 
 # other commands following page (or end) add more functionality to the generated events
 #   test|<conditions>|alternate text        Allows substituting text when certain conditions are met; if no test passes, the main text is used
@@ -61,9 +64,6 @@ end|This evil must be stopped. What you've learned tells you when and where the 
 # if you add conditions to an event, be sure to use 'vartests' instead of 'conditions'
 #
 #   exit                                    Transfers control directly to the end of the convo instead of the TOC
-#
-#
-
 
 # Notes
 # Every page has a disambiguating event named “JournalReadPage1”  The name is <bookname>ReadPage<index>

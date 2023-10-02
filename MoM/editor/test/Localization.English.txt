@@ -1,3 +1,38 @@
 .,English
 quest.name,Book Test
 TokenSearchBookStart.button1,Start Book
+EventTestBookReadPage1Base.text,\nThis is test page 1\n
+EventTestBookReadPage1Base.button1,Continue
+EventTestBookReadPage1End.text,
+EventTestBookReadPage1End.button1,
+EventTestBookReadPage1.button1,Continue
+EventTestBookReadPage1.text,
+EventTestBookReadPage2Base.text,\nThis is test page 2\n
+EventTestBookReadPage2Base.button1,Continue
+EventTestBookReadPage2End.text,
+EventTestBookReadPage2End.button1,
+EventTestBookReadPage2.button1,Continue
+EventTestBookReadPage2.text,
+EventTestBookReadPage3Base.text,\nThis is test page 3\n
+EventTestBookReadPage3Base.button1,Continue
+EventTestBookReadPage3End.text,
+EventTestBookReadPage3End.button1,
+EventTestBookReadPage3.button1,Continue
+EventTestBookReadPage3.text,
+EventTestBookReadPage4Base.text,\n\n
+EventTestBookReadPage4Base.button1,Continue
+EventTestBookReadPage4End.text,
+EventTestBookReadPage4End.button1,
+EventTestBookReadPage4.button1,Continue
+EventTestBookReadPage4.text,
+EventTestBookReadPage1Proxy.text,
+EventTestBookReadPage1Proxy.button1,
+EventTestBookReadPage2Proxy.text,
+EventTestBookReadPage2Proxy.button1,
+EventTestBookReadPage3Proxy.text,
+EventTestBookReadPage3Proxy.button1,
+EventTestBookReadPage4Proxy.text,
+EventTestBookReadPage4Proxy.button1,
+EventTestBookStart.text,
+EventTestBookStart.button1,
+EventTestBookEnd.text,
