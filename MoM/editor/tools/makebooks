@@ -100,12 +100,13 @@ $1 == "book" {
                 }
 				
                 isBook = 1
-                
+               
                 bookName = $2
                 isRandom = $3 == "random"
                 isKeep = $4 == "keep"
-                isRepeat $5 == "repeat"
-				
+
+                isRepeat = $5 == "repeat"
+
                 bookCount++
                 books[bookCount] = bookName
 				if (debug) printf "bookName=%s, isRandom=%s, isKeep=%s\n", bookName, isRandom, isKeep >> stderr
@@ -131,8 +132,8 @@ $1 == "page" || $1 == "end" {
                 # add this page; a page is an array of values that describe the page
                 pageCount++
                 if (debug) printf "Adding pages[%i] %s\n", pageCount, $2 >> stderr
-                pages[pageCount][NAME] = $2
-                pages[pageCount][TEXT] = $3
+                pages[pageCount][NAME] = isEndDirective ? "" : $2
+                pages[pageCount][TEXT] = isEndDirective ? $2 : $3
                 testCount = 0
                 next
             }
@@ -327,7 +328,9 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pa
 		
         if (pages[pageIndex][ISEXIT] == 1) {
             printf "event1=Event%sEnd\n", bookName >> eventsFile
-        } else {
+        } else if (pageIndex == pageCount && isEndDirective) {
+			printf "event1=Event%sEnd\n", bookname >> eventsFile
+		} else {
             printf "event1=Event%s%s\n", bookName, (isRepeat ? "Start" : "End") >> eventsFile
         }
 

@@ -36,3 +36,38 @@ EventTestBookReadPage4Proxy.button1,
 EventTestBookStart.text,
 EventTestBookStart.button1,
 EventTestBookEnd.text,
+EventOrderedNoKeepReadPage1Base.text,\nThis is test page 1\n
+EventOrderedNoKeepReadPage1Base.button1,Continue
+EventOrderedNoKeepReadPage1End.text,
+EventOrderedNoKeepReadPage1End.button1,
+EventOrderedNoKeepReadPage1.button1,Continue
+EventOrderedNoKeepReadPage1.text,
+EventOrderedNoKeepReadPage2Base.text,\nThis is test page 2\n
+EventOrderedNoKeepReadPage2Base.button1,Continue
+EventOrderedNoKeepReadPage2End.text,
+EventOrderedNoKeepReadPage2End.button1,
+EventOrderedNoKeepReadPage2.button1,Continue
+EventOrderedNoKeepReadPage2.text,
+EventOrderedNoKeepReadPage3Base.text,\nThis is test page 3\n
+EventOrderedNoKeepReadPage3Base.button1,Continue
+EventOrderedNoKeepReadPage3End.text,
+EventOrderedNoKeepReadPage3End.button1,
+EventOrderedNoKeepReadPage3.button1,Continue
+EventOrderedNoKeepReadPage3.text,
+EventOrderedNoKeepReadPage4Base.text,\nThose were 3 pages\n
+EventOrderedNoKeepReadPage4Base.button1,Continue
+EventOrderedNoKeepReadPage4End.text,
+EventOrderedNoKeepReadPage4End.button1,
+EventOrderedNoKeepReadPage4.button1,Continue
+EventOrderedNoKeepReadPage4.text,
+EventOrderedNoKeepReadPage1Proxy.text,
+EventOrderedNoKeepReadPage1Proxy.button1,
+EventOrderedNoKeepReadPage2Proxy.text,
+EventOrderedNoKeepReadPage2Proxy.button1,
+EventOrderedNoKeepReadPage3Proxy.text,
+EventOrderedNoKeepReadPage3Proxy.button1,
+EventOrderedNoKeepReadPage4Proxy.text,
+EventOrderedNoKeepReadPage4Proxy.button1,
+EventOrderedNoKeepStart.text,
+EventOrderedNoKeepStart.button1,
+EventOrderedNoKeepEnd.text,

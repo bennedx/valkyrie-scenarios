@@ -241,7 +241,7 @@ end|<i>Maybe I need to explore a bit more to figure out what I need to do to sto
 
 # ----------------------------------------------------------------------------------
 # use this to manage Sarah's commentary and make it work across scenarios
-# TOC: There are no TOC entries and this ordered|nokeep:  this means the next page will be read each time it is opened
+# TOC: There are no TOC entries and this is ordered|nokeep:  this means the next page will be read each time it is opened
 # The default page text entries for goal == goalStopRitual
 # Note that the 'visible' directives may change during the game, so pages with visibility rules might show out of order if the expression changes
 

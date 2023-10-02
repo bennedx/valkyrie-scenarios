@@ -1,6 +1,6 @@
 language=English
 
-book|TestBook|ordered|nokeep|repeat
+book|OrderedNoKeep|ordered|nokeep|repeat
 page|Page 1|This is test page 1
 page|Page 2|This is test page 2
 page|Page 3|This is test page 3
