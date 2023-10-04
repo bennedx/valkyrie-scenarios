@@ -38,8 +38,7 @@ EventTestBookStart.button1,
 EventTestBookEnd.text,
 TokenSearchOrderedNoKeep.button1,Start
 TokenOrderedNoKeepLoop.button1,Start
-TokenOrderedKeep.button1,Start
-TokenOrderedKeep.text,OrderedKeep
+TokenOrderedKeepSimple.text,OrderedKeep
 EventOrderedNoKeepReadPage1Base.text,"\nThis is test page 1\n"
 EventOrderedNoKeepReadPage1Base.button1,Continue
 EventOrderedNoKeepReadPage1End.text,
@@ -191,47 +190,48 @@ EventOrderedKeepComplexTOC4.text,"\n\n"
 EventOrderedKeepComplexStart.text,
 EventOrderedKeepComplexStart.button1,
 EventOrderedKeepComplexEnd.text,
-EventOrderedKeepSimpleReadPage1Base.text,"\nThis is test page 1\n"
+TokenOrderedKeepSimple.button1,Start
+EventOrderedKeepSimpleReadPage1Base.text,\nThis is test page 1\n
 EventOrderedKeepSimpleReadPage1Base.button1,Continue
 EventOrderedKeepSimpleReadPage1End.text,
 EventOrderedKeepSimpleReadPage1End.button1,
 EventOrderedKeepSimpleReadPage1.button1,Continue
 EventOrderedKeepSimpleReadPage1.text,
-EventOrderedKeepSimpleReadPage2Base.text,"\nThis is test page 2\n"
+EventOrderedKeepSimpleReadPage2Base.text,\nThis is test page 2\n
 EventOrderedKeepSimpleReadPage2Base.button1,Continue
 EventOrderedKeepSimpleReadPage2End.text,
 EventOrderedKeepSimpleReadPage2End.button1,
 EventOrderedKeepSimpleReadPage2.button1,Continue
 EventOrderedKeepSimpleReadPage2.text,
-EventOrderedKeepSimpleReadPage3Base.text,"\nThis is test page 3\n"
+EventOrderedKeepSimpleReadPage3Base.text,\nThis is test page 3\n
 EventOrderedKeepSimpleReadPage3Base.button1,Continue
 EventOrderedKeepSimpleReadPage3End.text,
 EventOrderedKeepSimpleReadPage3End.button1,
 EventOrderedKeepSimpleReadPage3.button1,Continue
 EventOrderedKeepSimpleReadPage3.text,
-EventOrderedKeepSimpleReadPage4Base.text,"\nYou have read all the pages\n"
+EventOrderedKeepSimpleReadPage4Base.text,\nYou have read all the pages\n
 EventOrderedKeepSimpleReadPage4Base.button1,Continue
 EventOrderedKeepSimpleReadPage4End.text,
 EventOrderedKeepSimpleReadPage4End.button1,
 EventOrderedKeepSimpleReadPage4.button1,Continue
 EventOrderedKeepSimpleReadPage4.text,
+EventOrderedKeepSimpleTOC1.text,\nSoon you will read page 1\n
 EventOrderedKeepSimpleTOC1.button1,{action} page 1
 EventOrderedKeepSimpleTOC1.button2,Cancel
-EventOrderedKeepSimpleTOC1.text,"\nSoon you will read page 1\n"
+EventOrderedKeepSimpleTOC2.text,\nSoon you will read page 2\n
 EventOrderedKeepSimpleTOC2.button1,page 1
 EventOrderedKeepSimpleTOC2.button2,{action} page 2
 EventOrderedKeepSimpleTOC2.button3,Cancel
-EventOrderedKeepSimpleTOC2.text,"\nSoon you will read page 2\n"
+EventOrderedKeepSimpleTOC3.text,\nSoon you will read page 3\n
 EventOrderedKeepSimpleTOC3.button1,page 1
 EventOrderedKeepSimpleTOC3.button2,page 2
 EventOrderedKeepSimpleTOC3.button3,{action} page 3
 EventOrderedKeepSimpleTOC3.button4,Cancel
-EventOrderedKeepSimpleTOC3.text,"\nSoon you will read page 3\n"
+EventOrderedKeepSimpleTOC4.text,\nYou have read all the pages\n
 EventOrderedKeepSimpleTOC4.button1,page 1
 EventOrderedKeepSimpleTOC4.button2,page 2
 EventOrderedKeepSimpleTOC4.button3,page 3
 EventOrderedKeepSimpleTOC4.button4,Cancel
-EventOrderedKeepSimpleTOC4.text,"\n\n"
 EventOrderedKeepSimpleStart.text,
 EventOrderedKeepSimpleStart.button1,
 EventOrderedKeepSimpleEnd.text,

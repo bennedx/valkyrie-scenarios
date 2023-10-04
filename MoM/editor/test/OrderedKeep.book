@@ -3,12 +3,12 @@ language=English
 book|OrderedKeepSimple|ordered|keep
 
 page|page 1|This is test page 1
-toc|Soon you will read page 1
+	toc|Soon you will read page 1
 
 page|page 2|This is test page 2
-toc|Soon you will read page 2
+	toc|Soon you will read page 2
 
 page|page 3|This is test page 3
-toc|Soon you will read page 3
+	toc|Soon you will read page 3
 
 end|You have read all the pages

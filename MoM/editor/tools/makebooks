@@ -130,8 +130,10 @@ $1 == "book" {
 
 # page|<button text>|<text>:  Adds a new page with <button text> to access it
 $1 == "page" || $1 == "end" {
-				if (isEndDirective) {
+				if (isEndDirective && $1 == "page") {
 					printf "'page' is not allowed after 'end'\n" >> stderr
+				} else if (isEndDirective) {
+					printf "'end' cannot be used more than once in a book" >> stderr
 				} else if ($1 == "end") {
 					isEndDirective = 1
 				}
@@ -623,11 +625,9 @@ function OutputOrderedKeepTOC(eventsFile, localizationFile, bookName, pages, sta
     for (visible = 0; visible <= 1; visible++) {
         #printf "visble=%i\n", visible >> stderr
         for (visibleIndex = 0; visibleIndex <= 2 ** (length(pages) - isEndDirective) - 1; visibleIndex++) {
-            #printf "visibleIndex=%i\n", visibleIndex >> stderr
             conditions = ""
             conditionSeparator = ""
             for (pageIndex = 1; pageIndex <= length(pages); pageIndex++) {
-                #printf "pageIndex=%i of %i\n", pageIndex, length(pages) >> stderr
                 if (and(visibleIndex, 2 ** (pageIndex - 1)) && pages[pageIndex][VISIBLE] != "") {
 					if (pages[pageIndex][VISIBLEOPERATION] == "!") {
 						condition = sprintf("%s,%s,0", pages[pageIndex][VISIBLE], (visible ? "==" : ">" ) )
@@ -708,6 +708,8 @@ function OutputOrderedKeepTOCInternal(eventsFile, localizationFile, bookName, pa
         
         printf "\n[%s]\n", eventName >> eventsFile
         tocText = pages[pagesToShow[pageIndex]][TOCTEXT]
+		if (isEndDirective && pageIndex == length(pagesToShow)) tocText = pages[pagesToShow[pageIndex]][TEXT]
+        printf "%s.text,%s\n", eventName, FixQuotes( tocText ) >> localizationFile
         
         outputButtonIndex = 0
 		# output all the pages that have already been read
@@ -742,7 +744,6 @@ function OutputOrderedKeepTOCInternal(eventsFile, localizationFile, bookName, pa
         printf "buttons=%i\n", outputButtonIndex >> eventsFile
         
         # output the text for the TOC
-        printf "%s.text,%s\n", eventName, FixQuotes( tocText != "" ? tocText : endTocText ) >> localizationFile
     }
     
     return events
