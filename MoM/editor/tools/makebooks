@@ -105,7 +105,14 @@ $1 == "book" {
                 isRandom = $3 == "random"
                 isKeep = $4 == "keep"
 
-                isRepeat = $5 == "repeat"
+				if ($5 == "loop") {
+					isLooped = true
+				} else if($5 != "") {
+					isLooped = false
+				} else {
+					# default so orderd/nokeep is false and all others are true
+					isLooped = isRandom || isKeep
+				}
 
                 bookCount++
                 books[bookCount] = bookName
@@ -331,7 +338,7 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pa
         } else if (pageIndex == pageCount && isEndDirective) {
 			printf "event1=Event%sEnd\n", bookname >> eventsFile
 		} else {
-            printf "event1=Event%s%s\n", bookName, (isRepeat ? "Start" : "End") >> eventsFile
+            printf "event1=Event%s%s\n", bookName, (isLooped ? "Start" : "End") >> eventsFile
         }
 
         operations=UnionOperations(pages[pageIndex][OPERATIONS], endLines)
@@ -570,7 +577,7 @@ function OutputOrderedNoKeepTOC(eventsFile, localizationFile, bookName, pages, s
 			printf "%s.button1,%s%s\n", eventName, (isActionable ? "{action} " : ""), textContinue >> localizationFile
 			
 			#cancel button
-			printf "event2=Event%s%s\n", bookName, (isRepeat ? "Start" : "End") >> eventsFile
+			printf "event2=Event%s%s\n", bookName, (isLooped ? "Start" : "End") >> eventsFile
 			printf "event2.button2=" textCancel >> localizationFile
 			
 		} else {
@@ -635,9 +642,7 @@ function OutputOrderedKeepTOC(eventsFile, localizationFile, bookName, pages, sta
                 }
             }
             
-            #printf "vartests=%s\n", ConvertToVarTests(conditions) >> stderr
             if (conditions != "") {
-                #printf "about to OutputOrderedTOCInternal\n" >> stderr
                 newEvents = OutputOrderedKeepTOCInternal(eventsFile, localizationFile, bookName, pages, conditions, isEndDirective)
                 events = events eventSeparator newEvents
                 eventSeparator = " "
@@ -731,7 +736,7 @@ function OutputOrderedKeepTOCInternal(eventsFile, localizationFile, bookName, pa
         } else {
 			outputButtonIndex++
 			printf "event%i=Event%sEnd\n", outputButtonIndex, bookName >> eventsFile
-			printf "%s.button%i,%s\n", eventName, outputButtonIndex, textContinue >> localizationFile
+			printf "%s.button%i,%s\n", eventName, outputButtonIndex, textCancel >> localizationFile
         }
         
         printf "buttons=%i\n", outputButtonIndex >> eventsFile
