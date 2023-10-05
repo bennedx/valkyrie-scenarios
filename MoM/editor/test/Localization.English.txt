@@ -312,51 +312,45 @@ EventRandomKeepReadPage3End.text,
 EventRandomKeepReadPage3End.button1,
 EventRandomKeepReadPage3.button1,Continue
 EventRandomKeepReadPage3.text,
-EventRandomKeepReadPage4Base.text,\nYou have read all the pages\n
-EventRandomKeepReadPage4Base.button1,Continue
-EventRandomKeepReadPage4End.text,
-EventRandomKeepReadPage4End.button1,
-EventRandomKeepReadPage4.button1,Continue
-EventRandomKeepReadPage4.text,
-EventRandomKeepTOC1.button1,page 1
-EventRandomKeepTOC1.button2,page 2
-EventRandomKeepTOC1.button3,page 3
-EventRandomKeepTOC1.text,\nYou have read all the pages\n
+EventRandomKeepTOC1.button1,{action} page 1
+EventRandomKeepTOC1.button2,{action} page 2
+EventRandomKeepTOC1.button3,{action} page 3
+EventRandomKeepTOC1.text,\nSoon you will read some page\n
 EventRandomKeepTOC1.button4,Cancel
-EventRandomKeepTOC2.button1,{action} page 1
-EventRandomKeepTOC2.button2,page 2
-EventRandomKeepTOC2.button3,page 3
-EventRandomKeepTOC2.text,\nSoon you will read page 1\n
+EventRandomKeepTOC2.button1,page 1
+EventRandomKeepTOC2.button2,{action} page 2
+EventRandomKeepTOC2.button3,{action} page 3
+EventRandomKeepTOC2.text,\nPage '' has no 'toc'\n
 EventRandomKeepTOC2.button4,Cancel
-EventRandomKeepTOC3.button1,page 1
-EventRandomKeepTOC3.button2,{action} page 2
-EventRandomKeepTOC3.button3,page 3
-EventRandomKeepTOC3.text,\nSoon you will read page 2\n
+EventRandomKeepTOC3.button1,{action} page 1
+EventRandomKeepTOC3.button2,page 2
+EventRandomKeepTOC3.button3,{action} page 3
+EventRandomKeepTOC3.text,\nPage '' has no 'toc'\n
 EventRandomKeepTOC3.button4,Cancel
-EventRandomKeepTOC4.button1,{action} page 1
-EventRandomKeepTOC4.button2,{action} page 2
-EventRandomKeepTOC4.button3,page 3
-EventRandomKeepTOC4.text,\nSoon you will read page 1\n
+EventRandomKeepTOC4.button1,page 1
+EventRandomKeepTOC4.button2,page 2
+EventRandomKeepTOC4.button3,{action} page 3
+EventRandomKeepTOC4.text,\nPage '' has no 'toc'\n
 EventRandomKeepTOC4.button4,Cancel
-EventRandomKeepTOC5.button1,page 1
-EventRandomKeepTOC5.button2,page 2
-EventRandomKeepTOC5.button3,{action} page 3
-EventRandomKeepTOC5.text,\nSoon you will read page 3\n
+EventRandomKeepTOC5.button1,{action} page 1
+EventRandomKeepTOC5.button2,{action} page 2
+EventRandomKeepTOC5.button3,page 3
+EventRandomKeepTOC5.text,\nPage '' has no 'toc'\n
 EventRandomKeepTOC5.button4,Cancel
-EventRandomKeepTOC6.button1,{action} page 1
-EventRandomKeepTOC6.button2,page 2
-EventRandomKeepTOC6.button3,{action} page 3
-EventRandomKeepTOC6.text,\nSoon you will read page 1\n
+EventRandomKeepTOC6.button1,page 1
+EventRandomKeepTOC6.button2,{action} page 2
+EventRandomKeepTOC6.button3,page 3
+EventRandomKeepTOC6.text,\nPage '' has no 'toc'\n
 EventRandomKeepTOC6.button4,Cancel
-EventRandomKeepTOC7.button1,page 1
-EventRandomKeepTOC7.button2,{action} page 2
-EventRandomKeepTOC7.button3,{action} page 3
-EventRandomKeepTOC7.text,\nSoon you will read page 2\n
+EventRandomKeepTOC7.button1,{action} page 1
+EventRandomKeepTOC7.button2,page 2
+EventRandomKeepTOC7.button3,page 3
+EventRandomKeepTOC7.text,\nPage '' has no 'toc'\n
 EventRandomKeepTOC7.button4,Cancel
-EventRandomKeepTOC8.button1,{action} page 1
-EventRandomKeepTOC8.button2,{action} page 2
-EventRandomKeepTOC8.button3,{action} page 3
-EventRandomKeepTOC8.text,\nSoon you will read page 1\n
+EventRandomKeepTOC8.button1,page 1
+EventRandomKeepTOC8.button2,page 2
+EventRandomKeepTOC8.button3,page 3
+EventRandomKeepTOC8.text,\nPage '' has no 'toc'\n
 EventRandomKeepTOC8.button4,Cancel
 EventRandomKeepStart.text,
 EventRandomKeepStart.button1,
