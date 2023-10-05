@@ -13,7 +13,7 @@ BEGIN       {
 				localizationFile = "localization.temp.txt"
                 stderr = "/dev/stderr"
                 
-				debug = 1
+				debug = 0
 
                 FS="|"
 
@@ -42,8 +42,13 @@ BEGIN       {
 				abort = 0
             }
 
+$1 == "debug" {
+				debug = 1
+			}
+
+
 previousFile != FILENAME {
-				if (previousFile != "") {
+				if (previousFile != "" && !abort) {
                     OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pages, startLines, endLines, isEndDirective)
 					close(eventsFile)
 					close(localizationFile)
@@ -81,7 +86,7 @@ previousFile != FILENAME {
                 next
             }
 
-			{ if (debug) print $0 >> stderr
+			{ #if (debug) print $0 >> stderr
 			}
 
 # book:  starts a book. Options are:
@@ -132,17 +137,20 @@ $1 == "book" {
 $1 == "page" || $1 == "end" {
 				if (isEndDirective && $1 == "page") {
 					printf "'page' is not allowed after 'end'\n" >> stderr
+					abort = true
 				} else if (isEndDirective) {
 					printf "'end' cannot be used more than once in a book" >> stderr
+					abort = true
 				} else if ($1 == "end") {
 					isEndDirective = 1
 				}
 
                 # add this page; a page is an array of values that describe the page
                 pageCount++
-                if (debug) printf "Adding pages[%i] %s\n", pageCount, $2 >> stderr
+                if (debug) printf "Adding pages[%i] %s, %s\n", pageCount, $2, $1 >> stderr
                 pages[pageCount][NAME] = isEndDirective ? "" : $2
                 pages[pageCount][TEXT] = isEndDirective ? $2 : $3
+				pages[pageCount][FREEACTION] = 0
                 testCount = 0
                 next
             }
@@ -190,6 +198,7 @@ $1 == "notvisible" {
 # 
 $1 == "freeaction" {
 				pages[pageCount][FREEACTION] = 1
+				next
 			}
 			
 
@@ -221,10 +230,12 @@ $1 == "exit" {
             
 $1 == "skillcheck" {
 				pages[pageCount][SKILLCHECK] = $2
+				next
 			}
 
 $1 = "pass" {
 				pages[pageCount][PASS] = $2
+				next
 			}
 
 $1 = "fail" {
@@ -366,9 +377,9 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pa
         # requires a TOC for every permutation of { action/no-action, visibles }
 
         # random / nokeep
-        # generate a TOC that shows all options to start; user can act on any one of them; after that, that option is not longer visible
+        # generate a TOC that shows all options to start; user can act on any one of them; after that, that option is no longer visible
         # requires a TOC for each permutation of { show/not-show, visibles }
-        #printf "random book\n" >> stderr
+
         OutputRandomTOC(eventsFile, localizationFile, bookName, pages, startLines, endLines, isKeep, isEndDirective)
 
 	} else if (isKeep) {
@@ -376,58 +387,68 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pa
         OutputOrderedKeepTOC(eventsFile, localizationFile, bookName, pages, startLines, endLines, isEndDirective)
 
     } else {
-        #printf "ordered book\n" >> stderr
         OutputOrderedNoKeepTOC(eventsFile, localizationFile, bookName, pages, startLines, endLines, isEndDirective)
     }
-
 }
 
-function OutputRandomTOC(eventsFile, localizationFile, bookName, pages, startLines, endLines, isKeep, isEndDirective,      pageCounter, visiblePages, events, separator, visible, visibleIndex, conditions, conditionsSeparator, pageIndex, newEvents, lineIndex) {
+function OutputRandomTOC(eventsFile, localizationFile, bookName, pages, startLines, endLines, isKeep, isEndDirective,
+	pageCounter, visiblePages, events, separator, visible, visibleIndex, conditions, conditionsSeparator, pageIndex,
+	newEvents, lineIndex, countOfVisiblePages) {
+	
+	if (debug) printf "OutputRandomTOC(%s, %s, %s, p[%i], s[%i], e[%i], %i, %i)\n",
+		eventsFile, localizationFile, bookName, length(pages), length(startLines), length(endLines), isKeep, isEndDirective
+	
     events = ""
     separator = ""
     
+	if (isEndDirective) pages[length(pages)][SHOW] = 1
+	
     pageCounter = 0
-    for(pageIndex = 1; pageIndex <= length(pages) - isEndDirective; pageIndex++) {
-        #printf "pages[pageIndex][VISIBLE]:  pages[%i][VISIBLE] == |%s\n", pageIndex, pages[pageIndex][VISIBLE] >> stderr
+	visiblePages[0][SHOW] = 0
+    for(pageIndex = 1; pageIndex <= length(pages); pageIndex++) {
         if (pages[pageIndex][VISIBLE] != "") {
             pageCounter++
             visiblePages[pageCounter] = pageIndex
         }
         pages[pageIndex][SHOW] = 1
     }
-    #printf "%i pages found with visibility conditions\n", pageCounter >> stderr
     
     # this is a special case where no pages have visiblility conditions
-    if (length(visiblePages) == 0) {
-        #printf "special case:  no visibility conditions\n" >> stderr
+	if (pageCounter == 0) {
+		if (debug) print "no pages with visiblity rules"
         newEvents = OutputRandomTOCInternal(eventsFile, localizationFile, bookName, pages, isKeep, "", isEndDirective)
         events = events separator newEvents
         separator = " "
-    }
     
-    # loop for visibility (if no pages have visibility conditions, nothing happens)
-    for (visibleIndex = 0; visibleIndex <= 2 ** length(visiblePages) - 1; visibleIndex++) {
-        conditions = ""
-        conditionSeparator = ""
+	} else {
+		# loop for visibility (if no pages have visibility conditions, nothing happens)
+		# don't include the last page if there is an 'end' directive
+		countOfVisiblePages = (length(visiblePages) - isEndDirective)
+		if (debug) printf "pages with visibility=%i\n", countOfVisiblePages
+		
+		for(visibleIndex = 0; visibleIndex < 2 ** countOfVisiblePages; visibleIndex++) {
+			conditions = ""
+			conditionSeparator = ""
 
-        for (pageIndex = 1; pageIndex <= length(visiblePages); pageIndex++) {
-            visible = and(visibleIndex, 2 ** (pageIndex - 1)) != 0
-            pages[visiblePages[pageIndex]][SHOW] = visible
+			for (pageIndex = 1; pageIndex <= countOfVisiblePages; pageIndex++) {
+				visible = and(visibleIndex, 2 ** (pageIndex - 1)) != 0
+				pages[visiblePages[pageIndex]][SHOW] = visible
 
-			if (pages[visiblePages[pageIndex]][VISIBLEOPERATION] == "!") {
-				condition = sprintf("%s,%s,0", pages[visiblePages[pageIndex]][VISIBLE], (visible ? "==" : ">" ) )
-			} else {
-				condition = sprintf("%s,%s,0", pages[visiblePages[pageIndex]][VISIBLE], (visible ? ">" : "==" ) )
+				if (pages[visiblePages[pageIndex]][VISIBLEOPERATION] == "!") {
+					condition = sprintf("%s,%s,0", pages[visiblePages[pageIndex]][VISIBLE], (visible ? "==" : ">" ) )
+				} else {
+					condition = sprintf("%s,%s,0", pages[visiblePages[pageIndex]][VISIBLE], (visible ? ">" : "==" ) )
+				}
+				conditions = sprintf("%s%s%s", conditions, conditionSeparator, condition)
+				conditionSeparator = " AND "
 			}
-            conditions = sprintf("%s%s%s", conditions, conditionSeparator, condition)
-            conditionSeparator = " AND "
-        }
-        
-        newEvents = OutputRandomTOCInternal(eventsFile, localizationFile, bookName, pages, isKeep, conditions, isEndDirective)
-        events = events separator newEvents
-        separator = " "
+			
+			newEvents = OutputRandomTOCInternal(eventsFile, localizationFile, bookName, pages, isKeep, conditions, isEndDirective)
+			events = events separator newEvents
+			separator = " "
+		}
     }
-    
+	
     # create event to choose the toc show this time
     printf "\n[Event%sStart]\n", bookName >> eventsFile
     printf "buttons=1\n" >> eventsFile
@@ -451,7 +472,12 @@ function OutputRandomTOC(eventsFile, localizationFile, bookName, pages, startLin
     }
 }
 
-function OutputRandomTOCInternal(eventsFile, localizationFile, bookName, pages, isKeep, baseConditions, isEndDirective,     events, separators, baseSeparator, pageCount, pageIndex, pagesToShow, eventName, conditions, textFound, scanIndex, actionable, pageCondition, tocText, outputIndex, lineIndex) {
+function OutputRandomTOCInternal(eventsFile, localizationFile, bookName, pages, isKeep, baseConditions, isEndDirective,
+    events, separators, baseSeparator, pageCount, pageIndex, pagesToShow, eventName, conditions, textFound, scanIndex, actionable, pageCondition, tocText, outputIndex, lineIndex) {
+
+	if (debug) printf "OutputRandomTOCInternal(%s, %s, %s, pages[%i], %i, [%s], %i)\n",
+		eventsFile, localizationFile, bookName, length(pages), isKeep, baseConditions, isEndDirective
+
     events = ""
     separator = ""
  
@@ -464,9 +490,12 @@ function OutputRandomTOCInternal(eventsFile, localizationFile, bookName, pages, 
             pagesToShow[++pageCount] = pageIndex
         }
     }
+	if (debug) printf "  pageCount=%i\n", pageCount
 
     # go through every permutation of the displayable entries
-    for (tocIndex = 0; tocIndex <= 2 ** (pageCount - isEndDirective) - 1; tocIndex++) {
+    for (tocIndex = 0; tocIndex < 2 ** pageCount; tocIndex++) {
+		if (debug) printf "  tocIndex=%i\n", tocIndex
+
         globalEventCounter++
         eventName = sprintf("Event%sTOC%i", bookName, globalEventCounter)
         events = events separator eventName
@@ -478,18 +507,24 @@ function OutputRandomTOCInternal(eventsFile, localizationFile, bookName, pages, 
         conditionsSeparator = baseSeparator
         
         # for this permutation, show all available buttons
-        textFound = 0
+        textFound = false
         outputIndex = 0
         for (scanIndex = 1; scanIndex <= pageCount; scanIndex++) {
-            actionable = and(tocIndex, 2 ** (scanIndex - 1), pages[pagesToShow[scanIndex]][FREEACTION] != 1) 
-        
+			actionable = and(tocIndex, 2 ** (scanIndex - 1)) && pages[pagesToShow[scanIndex]][FREEACTION] == 0
+			if (debug) printf "    scanIndex=%i, actionable=%i, isKeep=%i\n", scanIndex, actionable, isKeep
+			
             if (actionable || isKeep) {
                 # we always output if the user will burn an action (actionable=true)
                 # we also create the event if all of them will show all the time (isKeep=true)
 
-                outputIndex++
-                printf "event%i=Event%sReadPage%i\n", outputIndex, bookName, pagesToShow[scanIndex] >> eventsFile
-                printf "%s.button%i,%s%s\n", eventName, outputIndex, (actionable ? "{action} " : ""), pages[pagesToShow[scanIndex]][NAME] >> localizationFile
+				outputIndex++
+				eventLine = sprintf("event%i=Event%sReadPage%i", outputIndex, bookName, pagesToShow[scanIndex])
+                printf "%s\n", eventLine >> eventsFile
+				if (debug) printf "      %s\n", eventLine
+
+				buttonLine = sprintf("%s.button%i,%s%s", eventName, outputIndex, (actionable ? "{action} " : ""), pages[pagesToShow[scanIndex]][NAME])
+                printf "%s\n", buttonLine >> localizationFile
+				if (debug) printf "      %s\n", buttonLine
             }
 
             # this toc only shows when certain pages have been read or not; add that requirement here
@@ -498,7 +533,7 @@ function OutputRandomTOCInternal(eventsFile, localizationFile, bookName, pages, 
             conditionsSeparator = " AND "
             
             # now look for the TOC text
-            if (textFound == 0) {
+            if (!textFound) {
                 if (pages[pagesToShow[scanIndex]][TOCTEXT] != "") {
                     tocText = pages[pagesToShow[scanIndex]][TOCTEXT]
                     textFound = actionable
@@ -510,8 +545,9 @@ function OutputRandomTOCInternal(eventsFile, localizationFile, bookName, pages, 
         printf "buttons=%i\n", outputIndex + 1 >> eventsFile
         
         # put out the text to show in the window
-        #print "textFound=" textFound ", tocText=" tocText >> stderr
-        if (!textFound) tocText = endTocText
+        if (!textFound && isEndDirective) tocText = pages[length(pages)][TEXT]
+		if (tocText == "") tocText = "You have done everything you can do here."
+		
         printf "%s.text,%s\n", eventName, FixQuotes(tocText) >> localizationFile
         
         # cancel button
@@ -527,6 +563,11 @@ function OutputRandomTOCInternal(eventsFile, localizationFile, bookName, pages, 
 
 function OutputOrderedNoKeepTOC(eventsFile, localizationFile, bookName, pages, startLines, endLines, isEndDirective,      pageIndex, pageEventName, eventName, events, eventSeparator, wasReadCondition, tocText, line) {
 	# for no keep, the rules are simple:  one event that references a bunch of pass-thru proxy events for ReadPage events (to handle visibility)
+
+	
+	if (debug) printf "OutputOrderedNoKeepTOC(%s, %s, %s, p[%i], s[%i], e[%i], %i)\n",
+		eventsFile, localizationFile, bookName, length(pages), length(startLines), length(endLines), isEndDirective
+
 	event = ""
 	eventSeparator = ""
 
@@ -617,13 +658,17 @@ function OutputOrderedNoKeepTOC(eventsFile, localizationFile, bookName, pages, s
 	return events
 }
 
-function OutputOrderedKeepTOC(eventsFile, localizationFile, bookName, pages, startLines, endLines, isEndDirective,    events, eventSeparator, visible, visibleIndex, conditions, conditionSeparator, pageIndex, condition, newEvents, lineIndex) {
+function OutputOrderedKeepTOC(eventsFile, localizationFile, bookName, pages, startLines, endLines, isEndDirective,
+    events, eventSeparator, visible, visibleIndex, conditions, conditionSeparator, pageIndex, condition, newEvents, lineIndex) {
+	
+	if (debug) printf "OutputOrderedKeepTOC(%s, %s, %s, p[%i], s[%i], e[%i], %i)\n",
+		eventsFile, localizationFile, bookName, length(pages), length(startLines), length(endLines), isEndDirective
+
     events = ""
     eventSeparator = ""
     
     # loop for visibility
     for (visible = 0; visible <= 1; visible++) {
-        #printf "visble=%i\n", visible >> stderr
         for (visibleIndex = 0; visibleIndex <= 2 ** (length(pages) - isEndDirective) - 1; visibleIndex++) {
             conditions = ""
             conditionSeparator = ""
@@ -680,7 +725,12 @@ function OutputOrderedKeepTOC(eventsFile, localizationFile, bookName, pages, sta
     }
 }
 
-function OutputOrderedKeepTOCInternal(eventsFile, localizationFile, bookName, pages, baseConditions, isEndDirective,     events, eventSeparator, baseConditionSeparator, pageCount, pageIndex, pagesToShow, eventName, tocText, outputButtonIndex, buttonIndex, condition, conditions) {
+function OutputOrderedKeepTOCInternal(eventsFile, localizationFile, bookName, pages, baseConditions, isEndDirective,
+	events, eventSeparator, baseConditionSeparator, pageCount, pageIndex, pagesToShow, eventName, tocText, outputButtonIndex, buttonIndex, condition, conditions) {
+	
+	if (debug) printf "OutputOrderedKeepTOCInternal(%s, %s, %s, p[%i], cond[%i], %i)\n",
+		eventsFile, localizationFile, bookName, length(pages), baseConditions, isEndDirective
+
     events = ""
     eventSeparator = ""
 

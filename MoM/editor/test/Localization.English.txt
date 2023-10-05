@@ -191,43 +191,43 @@ EventOrderedKeepComplexStart.text,
 EventOrderedKeepComplexStart.button1,
 EventOrderedKeepComplexEnd.text,
 TokenOrderedKeepSimple.button1,Start
-EventOrderedKeepSimpleReadPage1Base.text,\nThis is test page 1\n
+EventOrderedKeepSimpleReadPage1Base.text,"\nThis is test page 1\n"
 EventOrderedKeepSimpleReadPage1Base.button1,Continue
 EventOrderedKeepSimpleReadPage1End.text,
 EventOrderedKeepSimpleReadPage1End.button1,
 EventOrderedKeepSimpleReadPage1.button1,Continue
 EventOrderedKeepSimpleReadPage1.text,
-EventOrderedKeepSimpleReadPage2Base.text,\nThis is test page 2\n
+EventOrderedKeepSimpleReadPage2Base.text,"\nThis is test page 2\n"
 EventOrderedKeepSimpleReadPage2Base.button1,Continue
 EventOrderedKeepSimpleReadPage2End.text,
 EventOrderedKeepSimpleReadPage2End.button1,
 EventOrderedKeepSimpleReadPage2.button1,Continue
 EventOrderedKeepSimpleReadPage2.text,
-EventOrderedKeepSimpleReadPage3Base.text,\nThis is test page 3\n
+EventOrderedKeepSimpleReadPage3Base.text,"\nThis is test page 3\n"
 EventOrderedKeepSimpleReadPage3Base.button1,Continue
 EventOrderedKeepSimpleReadPage3End.text,
 EventOrderedKeepSimpleReadPage3End.button1,
 EventOrderedKeepSimpleReadPage3.button1,Continue
 EventOrderedKeepSimpleReadPage3.text,
-EventOrderedKeepSimpleReadPage4Base.text,\nYou have read all the pages\n
+EventOrderedKeepSimpleReadPage4Base.text,"\nYou have read all the pages\n"
 EventOrderedKeepSimpleReadPage4Base.button1,Continue
 EventOrderedKeepSimpleReadPage4End.text,
 EventOrderedKeepSimpleReadPage4End.button1,
 EventOrderedKeepSimpleReadPage4.button1,Continue
 EventOrderedKeepSimpleReadPage4.text,
-EventOrderedKeepSimpleTOC1.text,\nSoon you will read page 1\n
+EventOrderedKeepSimpleTOC1.text,"\nSoon you will read page 1\n"
 EventOrderedKeepSimpleTOC1.button1,{action} page 1
 EventOrderedKeepSimpleTOC1.button2,Cancel
-EventOrderedKeepSimpleTOC2.text,\nSoon you will read page 2\n
+EventOrderedKeepSimpleTOC2.text,"\nSoon you will read page 2\n"
 EventOrderedKeepSimpleTOC2.button1,page 1
 EventOrderedKeepSimpleTOC2.button2,{action} page 2
 EventOrderedKeepSimpleTOC2.button3,Cancel
-EventOrderedKeepSimpleTOC3.text,\nSoon you will read page 3\n
+EventOrderedKeepSimpleTOC3.text,"\nSoon you will read page 3\n"
 EventOrderedKeepSimpleTOC3.button1,page 1
 EventOrderedKeepSimpleTOC3.button2,page 2
 EventOrderedKeepSimpleTOC3.button3,{action} page 3
 EventOrderedKeepSimpleTOC3.button4,Cancel
-EventOrderedKeepSimpleTOC4.text,\nYou have read all the pages\n
+EventOrderedKeepSimpleTOC4.text,"\nYou have read all the pages\n"
 EventOrderedKeepSimpleTOC4.button1,page 1
 EventOrderedKeepSimpleTOC4.button2,page 2
 EventOrderedKeepSimpleTOC4.button3,page 3
@@ -235,3 +235,129 @@ EventOrderedKeepSimpleTOC4.button4,Cancel
 EventOrderedKeepSimpleStart.text,
 EventOrderedKeepSimpleStart.button1,
 EventOrderedKeepSimpleEnd.text,
+TokenRandomNoKeep.button1,Start
+TokenRandomNoKeep.text,RandomNoKeep
+EventRandomNoKeepReadPage1Base.text,"\nThis is test page 1\n"
+EventRandomNoKeepReadPage1Base.button1,Continue
+EventRandomNoKeepReadPage1End.text,
+EventRandomNoKeepReadPage1End.button1,
+EventRandomNoKeepReadPage1.button1,Continue
+EventRandomNoKeepReadPage1.text,
+EventRandomNoKeepReadPage2Base.text,"\nThis is test page 2\n"
+EventRandomNoKeepReadPage2Base.button1,Continue
+EventRandomNoKeepReadPage2End.text,
+EventRandomNoKeepReadPage2End.button1,
+EventRandomNoKeepReadPage2.button1,Continue
+EventRandomNoKeepReadPage2.text,
+EventRandomNoKeepReadPage3Base.text,"\nThis is test page 3\n"
+EventRandomNoKeepReadPage3Base.button1,Continue
+EventRandomNoKeepReadPage3End.text,
+EventRandomNoKeepReadPage3End.button1,
+EventRandomNoKeepReadPage3.button1,Continue
+EventRandomNoKeepReadPage3.text,
+EventRandomNoKeepReadPage4Base.text,"\nYou have read all the pages\n"
+EventRandomNoKeepReadPage4Base.button1,Continue
+EventRandomNoKeepReadPage4End.text,
+EventRandomNoKeepReadPage4End.button1,
+EventRandomNoKeepReadPage4.button1,Continue
+EventRandomNoKeepReadPage4.text,
+EventRandomNoKeepTOC1.text,"\nYou have read all the pages\n"
+EventRandomNoKeepTOC1.button1,Cancel
+EventRandomNoKeepTOC2.button1,{action} page 1
+EventRandomNoKeepTOC2.text,"\nSoon you will read page 1\n"
+EventRandomNoKeepTOC2.button2,Cancel
+EventRandomNoKeepTOC3.button1,{action} page 2
+EventRandomNoKeepTOC3.text,"\nSoon you will read page 2\n"
+EventRandomNoKeepTOC3.button2,Cancel
+EventRandomNoKeepTOC4.button1,{action} page 1
+EventRandomNoKeepTOC4.button2,{action} page 2
+EventRandomNoKeepTOC4.text,"\nSoon you will read page 1\n"
+EventRandomNoKeepTOC4.button3,Cancel
+EventRandomNoKeepTOC5.button1,{action} page 3
+EventRandomNoKeepTOC5.text,"\nSoon you will read page 3\n"
+EventRandomNoKeepTOC5.button2,Cancel
+EventRandomNoKeepTOC6.button1,{action} page 1
+EventRandomNoKeepTOC6.button2,{action} page 3
+EventRandomNoKeepTOC6.text,"\nSoon you will read page 1\n"
+EventRandomNoKeepTOC6.button3,Cancel
+EventRandomNoKeepTOC7.button1,{action} page 2
+EventRandomNoKeepTOC7.button2,{action} page 3
+EventRandomNoKeepTOC7.text,"\nSoon you will read page 2\n"
+EventRandomNoKeepTOC7.button3,Cancel
+EventRandomNoKeepTOC8.button1,{action} page 1
+EventRandomNoKeepTOC8.button2,{action} page 2
+EventRandomNoKeepTOC8.button3,{action} page 3
+EventRandomNoKeepTOC8.text,"\nSoon you will read page 1\n"
+EventRandomNoKeepTOC8.button4,Cancel
+EventRandomNoKeepStart.text,
+EventRandomNoKeepStart.button1,
+EventRandomNoKeepEnd.text,
+TokenRandomKeep.text,RandomKeep
+TokenRandomKeep.button1,Start
+EventRandomKeepReadPage1Base.text,\nThis is test page 1\n
+EventRandomKeepReadPage1Base.button1,Continue
+EventRandomKeepReadPage1End.text,
+EventRandomKeepReadPage1End.button1,
+EventRandomKeepReadPage1.button1,Continue
+EventRandomKeepReadPage1.text,
+EventRandomKeepReadPage2Base.text,\nThis is test page 2\n
+EventRandomKeepReadPage2Base.button1,Continue
+EventRandomKeepReadPage2End.text,
+EventRandomKeepReadPage2End.button1,
+EventRandomKeepReadPage2.button1,Continue
+EventRandomKeepReadPage2.text,
+EventRandomKeepReadPage3Base.text,\nThis is test page 3\n
+EventRandomKeepReadPage3Base.button1,Continue
+EventRandomKeepReadPage3End.text,
+EventRandomKeepReadPage3End.button1,
+EventRandomKeepReadPage3.button1,Continue
+EventRandomKeepReadPage3.text,
+EventRandomKeepReadPage4Base.text,\nYou have read all the pages\n
+EventRandomKeepReadPage4Base.button1,Continue
+EventRandomKeepReadPage4End.text,
+EventRandomKeepReadPage4End.button1,
+EventRandomKeepReadPage4.button1,Continue
+EventRandomKeepReadPage4.text,
+EventRandomKeepTOC1.button1,page 1
+EventRandomKeepTOC1.button2,page 2
+EventRandomKeepTOC1.button3,page 3
+EventRandomKeepTOC1.text,\nYou have read all the pages\n
+EventRandomKeepTOC1.button4,Cancel
+EventRandomKeepTOC2.button1,{action} page 1
+EventRandomKeepTOC2.button2,page 2
+EventRandomKeepTOC2.button3,page 3
+EventRandomKeepTOC2.text,\nSoon you will read page 1\n
+EventRandomKeepTOC2.button4,Cancel
+EventRandomKeepTOC3.button1,page 1
+EventRandomKeepTOC3.button2,{action} page 2
+EventRandomKeepTOC3.button3,page 3
+EventRandomKeepTOC3.text,\nSoon you will read page 2\n
+EventRandomKeepTOC3.button4,Cancel
+EventRandomKeepTOC4.button1,{action} page 1
+EventRandomKeepTOC4.button2,{action} page 2
+EventRandomKeepTOC4.button3,page 3
+EventRandomKeepTOC4.text,\nSoon you will read page 1\n
+EventRandomKeepTOC4.button4,Cancel
+EventRandomKeepTOC5.button1,page 1
+EventRandomKeepTOC5.button2,page 2
+EventRandomKeepTOC5.button3,{action} page 3
+EventRandomKeepTOC5.text,\nSoon you will read page 3\n
+EventRandomKeepTOC5.button4,Cancel
+EventRandomKeepTOC6.button1,{action} page 1
+EventRandomKeepTOC6.button2,page 2
+EventRandomKeepTOC6.button3,{action} page 3
+EventRandomKeepTOC6.text,\nSoon you will read page 1\n
+EventRandomKeepTOC6.button4,Cancel
+EventRandomKeepTOC7.button1,page 1
+EventRandomKeepTOC7.button2,{action} page 2
+EventRandomKeepTOC7.button3,{action} page 3
+EventRandomKeepTOC7.text,\nSoon you will read page 2\n
+EventRandomKeepTOC7.button4,Cancel
+EventRandomKeepTOC8.button1,{action} page 1
+EventRandomKeepTOC8.button2,{action} page 2
+EventRandomKeepTOC8.button3,{action} page 3
+EventRandomKeepTOC8.text,\nSoon you will read page 1\n
+EventRandomKeepTOC8.button4,Cancel
+EventRandomKeepStart.text,
+EventRandomKeepStart.button1,
+EventRandomKeepEnd.text,
