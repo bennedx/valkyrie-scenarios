@@ -294,19 +294,19 @@ EventRandomNoKeepStart.button1,
 EventRandomNoKeepEnd.text,
 TokenRandomKeep.text,RandomKeep
 TokenRandomKeep.button1,Start
-EventRandomKeepReadPage1Base.text,\nThis is test page 1\n
+EventRandomKeepReadPage1Base.text,"\nThis is test page 1\n"
 EventRandomKeepReadPage1Base.button1,Continue
 EventRandomKeepReadPage1End.text,
 EventRandomKeepReadPage1End.button1,
 EventRandomKeepReadPage1.button1,Continue
 EventRandomKeepReadPage1.text,
-EventRandomKeepReadPage2Base.text,\nThis is test page 2\n
+EventRandomKeepReadPage2Base.text,"\nThis is test page 2\n"
 EventRandomKeepReadPage2Base.button1,Continue
 EventRandomKeepReadPage2End.text,
 EventRandomKeepReadPage2End.button1,
 EventRandomKeepReadPage2.button1,Continue
 EventRandomKeepReadPage2.text,
-EventRandomKeepReadPage3Base.text,\nThis is test page 3\n
+EventRandomKeepReadPage3Base.text,"\nThis is test page 3\n"
 EventRandomKeepReadPage3Base.button1,Continue
 EventRandomKeepReadPage3End.text,
 EventRandomKeepReadPage3End.button1,
@@ -315,43 +315,93 @@ EventRandomKeepReadPage3.text,
 EventRandomKeepTOC1.button1,{action} page 1
 EventRandomKeepTOC1.button2,{action} page 2
 EventRandomKeepTOC1.button3,{action} page 3
-EventRandomKeepTOC1.text,\nSoon you will read some page\n
+EventRandomKeepTOC1.text,"\nSoon you will read some page\n"
 EventRandomKeepTOC1.button4,Cancel
 EventRandomKeepTOC2.button1,page 1
 EventRandomKeepTOC2.button2,{action} page 2
 EventRandomKeepTOC2.button3,{action} page 3
-EventRandomKeepTOC2.text,\nPage '' has no 'toc'\n
+EventRandomKeepTOC2.text,"\nPage '' has no 'toc'\n"
 EventRandomKeepTOC2.button4,Cancel
 EventRandomKeepTOC3.button1,{action} page 1
 EventRandomKeepTOC3.button2,page 2
 EventRandomKeepTOC3.button3,{action} page 3
-EventRandomKeepTOC3.text,\nPage '' has no 'toc'\n
+EventRandomKeepTOC3.text,"\nPage '' has no 'toc'\n"
 EventRandomKeepTOC3.button4,Cancel
 EventRandomKeepTOC4.button1,page 1
 EventRandomKeepTOC4.button2,page 2
 EventRandomKeepTOC4.button3,{action} page 3
-EventRandomKeepTOC4.text,\nPage '' has no 'toc'\n
+EventRandomKeepTOC4.text,"\nPage '' has no 'toc'\n"
 EventRandomKeepTOC4.button4,Cancel
 EventRandomKeepTOC5.button1,{action} page 1
 EventRandomKeepTOC5.button2,{action} page 2
 EventRandomKeepTOC5.button3,page 3
-EventRandomKeepTOC5.text,\nPage '' has no 'toc'\n
+EventRandomKeepTOC5.text,"\nPage '' has no 'toc'\n"
 EventRandomKeepTOC5.button4,Cancel
 EventRandomKeepTOC6.button1,page 1
 EventRandomKeepTOC6.button2,{action} page 2
 EventRandomKeepTOC6.button3,page 3
-EventRandomKeepTOC6.text,\nPage '' has no 'toc'\n
+EventRandomKeepTOC6.text,"\nPage '' has no 'toc'\n"
 EventRandomKeepTOC6.button4,Cancel
 EventRandomKeepTOC7.button1,{action} page 1
 EventRandomKeepTOC7.button2,page 2
 EventRandomKeepTOC7.button3,page 3
-EventRandomKeepTOC7.text,\nPage '' has no 'toc'\n
+EventRandomKeepTOC7.text,"\nPage '' has no 'toc'\n"
 EventRandomKeepTOC7.button4,Cancel
 EventRandomKeepTOC8.button1,page 1
 EventRandomKeepTOC8.button2,page 2
 EventRandomKeepTOC8.button3,page 3
-EventRandomKeepTOC8.text,\nPage '' has no 'toc'\n
+EventRandomKeepTOC8.text,"\nPage '' has no 'toc'\n"
 EventRandomKeepTOC8.button4,Cancel
 EventRandomKeepStart.text,
 EventRandomKeepStart.button1,
 EventRandomKeepEnd.text,
+Token0.button1,Button1
+EventSetEventTrigger.button1,Set
+EventSetEventTrigger.text,Set the trigger
+EventTrigger.text,This was triggereed
+EventTrigger.button1,Continue
+EventBackyardBenAfterReadPage1Test1.button1,Continue
+EventBackyardBenAfterReadPage1Test1.text,"\n“Well,” he snaps, “the house sat unused these last 10 years. You were hired to clean, not criticize.”\n\nThis man clearly does not like you.\n"
+EventBackyardBenAfterReadPage1Base.text,"\n“Well,” he starts, “the house was quickly packed and closed 10 years ago. There has been no one here since then, so expect the worst.”\n\nYou are not encouraged.\n"
+EventBackyardBenAfterReadPage1Base.button1,Continue
+EventBackyardBenAfterReadPage1End.text,
+EventBackyardBenAfterReadPage1End.button1,
+EventBackyardBenAfterReadPage1.button1,Continue
+EventBackyardBenAfterReadPage1.text,
+EventBackyardBenAfterReadPage2Test1.button1,Continue
+EventBackyardBenAfterReadPage2Test1.text,
+EventBackyardBenAfterReadPage2Base.text,"\n“I think the handyman was in the house yesterday. They must be his.”\n"
+EventBackyardBenAfterReadPage2Base.button1,Continue
+EventBackyardBenAfterReadPage2End.text,
+EventBackyardBenAfterReadPage2End.button1,
+EventBackyardBenAfterReadPage2.button1,Continue
+EventBackyardBenAfterReadPage2.text,
+EventBackyardBenAfterReadPage3Test1.button1,Continue
+EventBackyardBenAfterReadPage3Test1.text,
+EventBackyardBenAfterReadPage3Base.text,"\n“Oh, my, yes. Here's the key you'll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I should be going. Take your time and send someone to fetch me if you need anything.”\n\nRemove this person token.\n"
+EventBackyardBenAfterReadPage3Base.button1,Continue
+EventBackyardBenAfterReadPage3End.text,
+EventBackyardBenAfterReadPage3End.button1,
+EventBackyardBenAfterReadPage3.button1,Continue
+EventBackyardBenAfterReadPage3.text,
+EventBackyardBenAfterTOC1.button1,{action} “Is the whole house this dirty?”
+EventBackyardBenAfterTOC1.button2,{action} “There are footprints in the dust by that door...”
+EventBackyardBenAfterTOC1.text,"\nPage '“There are footprints in the dust by that door...”' needs a 'toc'\n"
+EventBackyardBenAfterTOC1.button3,Cancel
+EventBackyardBenAfterTOC2.button1,{action} “There are footprints in the dust by that door...”
+EventBackyardBenAfterTOC2.text,"\nPage '“There are footprints in the dust by that door...”' needs a 'toc'\n"
+EventBackyardBenAfterTOC2.button2,Cancel
+EventBackyardBenAfterTOC3.button1,{action} “Is the whole house this dirty?”
+EventBackyardBenAfterTOC3.text,"\nBenjamin looks around the room, like is he trying to figure out what you are doing.\n"
+EventBackyardBenAfterTOC3.button2,Cancel
+EventBackyardBenAfterTOC4.text,"\nBenjamin looks around the room, like is he trying to figure out what you are doing.\n"
+EventBackyardBenAfterTOC4.button1,Cancel
+EventBackyardBenAfterStart.text,
+EventBackyardBenAfterStart.button1,
+EventBackyardBenAfterEnd.text,
+TokenBenIsAngry.button1,Piss Off
+TokenBenIsHappy.button1,Placate
+TokenBenIsHappy.text,Ben is happy.
+TokenBackyardBenAfter.text,BackyardBenAfter.book
+TokenBackyardBenAfter.button1,Continue
+TokenBenIsAngry.text,Ben is pissed.

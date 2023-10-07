@@ -1,0 +1,30 @@
+language|English
+
+# ---------------------------------------------------------------------
+# For goal == goalStopCultists
+# this is run during the Mythos phase when the end-game starts
+
+book|StopCultistsRitual|ordered|nokeep
+
+#page1
+page|ritualStarts|You freeze as something... <i>happens</> to the house. You aren't sure what it is, but fear clutches your gut as the feeling washes over you.\n\nThen, from deep in the house, you hear a boy screams in pain and terror. He stops abruptly and you feel something in the air, like electricity. The house shudders and everything goes quiet. Sarah's eyes widen and she whispers to {c:EventChosenInvestigator}, “He’s started. The ritual has started. We have to get to the {c:TileAltar} and stop Cousin David.”\n\nAs she finishes, a townsperson in cult robes runs by you, heading toward the altar.”\n\nSarah lights up. “We have the {c:QItemElderSign}. Without it, {c:CustomMonsterDavidSmythe} needs constant sacrifice to keep the gate open. We must kill his followers before they reach him.”
+	
+#page2
+page|womanDies|You feel the power of the spell {c:CustomMonsterDavidSmythe} is casting. It both draws you closer and repulses you. A woman screams. The sound pierces the walls of the house, making the windows vibrate in their frames. You feel her take a deep, gasping breath, then she screams again. And again. And again. The screams send a chill through your gut. Each investigator takes 2 Horror ({will} negates).\n\nSarah whispers, “We need to find the ritual and stop {c:CustomMonsterDavidSmythe}.”
+
+#page3
+page|portalOpens|The woman’s screaming has stopped and, for a moment, it is silent again... as if the house were taking a breath. Then, though you cannot see it, you can feel the portal spring into being. You hear… <i>something</> moan in pain; you feel the vibrations of it through the house. You know in your gut it’s {c:CustomMonsterDavidSmythe}’s son.\n\nThe feeling of power grows stronger; it radiates through the floorboards and moves through the walls. Sarah whispers, “The portal is open, we have to stop him.”\n\nAs she speaks, another cultist brushes past you, heading toward the ritual.”
+	line|operation=stopCultistsKillCount,=,0 stopCultistsKillGoal,=,2 stopCultistsKillGoal,*,#investigators stopCultistsKillGoal,+,2 stopCultistSacrificed,=,0 stopCultistsDavidContinues,=,#rnd3
+
+#page4
+page|davidContinues|Sarah whispers, “We must hurry. What he is summoning is getting closer. I can feel it.”
+	test|stopCultistsDavidContinues,==,2|The house pulses with power, overwhelming you for a moment. You snap back to awareness as a cultist approaches. You ready yourself for another attack.
+	test|stopCultistsDavidContinues,==,3|You stop for a moment and wonder, <i>How many cultists do we have to kill?! We've already killed {stopCultistsKillCount}.</i> Out of the corner of your eye you see another one coming. It's time to get back to work.
+	operations|stopCultistsDavidContinues,=,#rnd3 readStopCultistsRitualPage5,=,0
+
+#page5
+page|repeatDavidContinues|
+	# we are setting this page and previous one to unread (yeah, it's really unclean this way:  maybe add 'clear|davidContinues' as a command?
+	operations|readStopCultistsRitualPage4,=,0 readStopCultistsRitualPage5,=,0
+	goto|davidContinues
+

@@ -1,0 +1,21 @@
+language|english
+
+# -----------------------------------------------------------------------------
+book|BackyardBenAfter|random|nokeep
+
+page|“Is the whole house this dirty?”|“Well,” he starts, “the house was quickly packed and closed 10 years ago. There has been no one here since then, so expect the worst.”\n\nYou are not encouraged.
+    toc|Benjamin looks around the room, like is he trying to figure out what you are doing.
+    test|exploredBackyardNicely,==,0|“Well,” he snaps, “the house sat unused these last 10 years. You were hired to clean, not criticize.”\n\nThis man clearly does not like you.
+    
+page|“There are footprints in the dust by that door...”|“I think the handyman was in the house yesterday. They must be his.”
+    test|exploredBackyardNicely,==,0|“Then you should sweep it up. That's what you're here for, not to complain about dirt.”
+    
+page|“Is there anything else we need to know?”|“Oh, my, yes. Here's the key you'll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I should be going. Take your time and send someone to fetch me if you need anything.”\n\nRemove this person token.
+    test|exploredBackyardNicely,==,0|“What? Oh, here's the key to the house. Don't lose it. I'm going to leave you to it.”\n\nWith disgust, he turns and carelessly drops the key in your direction. Put the {c:QItemBrassKey} common item in Ben's space, then remove Ben from the board.
+    line|add=QItemBrassKey
+    line|remove=TokenBackyardBenAfter
+    operations|$mythosKey,=,1
+    
+    # the 'exit' command forces the conversation to stop, rather than allowing it to go back to the TOC
+    exit
+    

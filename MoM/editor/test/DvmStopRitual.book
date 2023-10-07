@@ -1,0 +1,100 @@
+language|English
+
+# ----------------------------------------------------------------------------------
+# this is the ritual for goalStopRitual
+
+book|DvmStopRitual|ordered|nokeep
+	line|conditions=goal,==,goalStopRitual ritual,>,0 davidDead,>,0
+
+page|start|The portal is open and you must close it quickly. If you have the {c:QItemRitualKnife}, the {c:QItemRitualComponents}, and the {c:QItemElderSignPendant}, you can start now.\n\nOnly {c:EventChosenInvestigator} can perform this ritual and only while standing at the altar. Are you ready to begin?
+	continue|step1
+
+page|step1|You turn to the correct place in the book and lay out the materials on the altar. The pattern is complicated and it takes a few minutes to get right. Your companions are under constant attack by cult members and you can feel the approach of something from the other side. You have to hurry.\n\nDrop the {c:QItemRitualComponents} Unique Item on the altar. It must stay on the altar for the duration of the ritual.\n\nThis step is complete.
+	line|add=QItemRitualComponents
+	freeaction
+	continue|step2
+
+page|step2|You bring out the {c:QItemRitualDagger}. There is a blessing to speak while holding it. You weren't able to read it before, but as your father wrote, you are able to read it now. That said, you aren't sure if you understand it; if you do, test {lore]; otherwise, test {will} to blunder through and hope for the best. For each Unique Item you have, you may roll 1 extra die.
+	line|add=QItemRitualDagger
+
+	# this turns the dialog into a test; if 'passfail' is given, then it's a one-time thing, but if it's a number, it sets a quota
+	# the readPageN variable is not set on a quota until it is passed
+	skillcheck|3
+	pass|step2pass
+	fail|step2fail
+
+page|step2pass|As you repeat the incantation, the blade becomes heavier and brighter. The {c:QItemRitualKnife} is ready for what comes next.\n\nThis step is complete.
+	line|add=QItemRitualDagger
+	freeaction
+	goto|step3
+
+page|step2fail|You keep repeating the incantation but the {c:QItemRitualDagger} doesn't change. You'll need to keep trying.\n\nSuffer 1 facedown Damage and 1 facedown Horror ({will} negates either).
+	line|add=QItemRitualDagger
+	freeaction
+	goto|step2
+
+page|step3|You draw the knife across the palm of your hand. A drop of blood wells up and you suddenly wonder if you've drawn enough. Even what you've drawn is making you queasy ({will}). For each Unique Item you have, you may roll 1 extra die.
+	line|add=QItemRitualDagger
+	skillcheck|4
+	pass|step3pass
+	fail|step3fail
+
+page|step3pass|You squeeze your hand into a tight fist and blood drips into the chalice. You can't see or hear the chalice change, but you can feel something happen to it.\n\nThis step is complete.
+	line|add=QItemRitualDagger
+	freeaction
+	goto|step4
+
+page|step3fail|A drop of blood spatters when it hits the cup, but nothing seems to happen. You're going to have to slice deeper. Suffer 2 Horror ({will} negates).
+	line|add=QItemRitualDagger
+	freeaction
+	goto|step3
+	
+page|step4|You can read the first incantation but you aren't sure that you understand it; if you do, test {lore}; otherwise, test {will} and hope for the best. You may roll 1 extra die for each Unique Item you have.
+	line|add=QItemDVM
+	skillcheck|5
+	pass|step4pass
+	fail|step4fail
+
+page|step4pass|You feel a welling of power as you speak the last word. The feeling inside you grows and you suddenly feel like you control the cosmos. The portal grows brighter and {c:TokenPortal} screams. You had forgotten about the boy--he will die in this ritual. Suffer 1 facedown Horror.\n\nAs the scream echos in the room, the portal grows dimmer and shrinks slightly. Where it was humming and stable before, it is sputtering, pulsing, and making an electrical sound. It has been weakened, but not closed. It will eventually collapse on its own, but you can do better.\n\nThis step is done.
+	line|add=QItemDVM
+	freeaction
+	goto|step5
+
+page|step4fail|You can feel something happen inside but it is not very strong and the portal has not changed. You'll have to try the incantation again.\n\nThe ritual is wearing you down. Suffer 1 facedown Damage and 1 facedown Horror ({strength} negates).
+	line|add=QItemDVM
+	freeaction
+	goto|step4
+	
+page|step5|Now you need to draw more blood. You look at your hand and see that it has stopped bleeding. Cutting yourself again will take great courage. Test {will}. For each Unique Item you have, you may roll 1 extra die.
+	line|add=QItemRitualDagger
+	skillcheck|6
+	pass|step5pass
+	fail|step5fail
+
+page|step5pass|You feel a welling of power as you speak the last word. The feeling inside you grows and you suddenly feel like you control the cosmos. The portal grows brighter and {c:TokenPortal} screams. You had forgotten about the boy--he will die in this ritual. Suffer 1 facedown Horror.\n\nAs your last word echos in the room, the portal grows dimmer and shrinks slightly. Where it was humming and stable before, now it sputters and pulses. It has been weakened, but not closed. It will eventually collapse on its own, but you can do better.\n\nThis step is done.
+	line|add=QItemDVM
+	freeaction
+	goto|step6
+
+page|step5fail|A single drop rises from the new slice but doesn't fall. You'll have to try again. Suffer 1 Horror ({will} negates).
+	line|add=QItemDVM
+	freeaction
+	goto|step5
+	
+page|step6|As the portal weakens, the boy regains some strength. He is screaming in pain and terror again.\n\nYou must get this last part right to close and seal the portal. You look at the last incantation and, like the others, while you can read it, you aren't sure you understand it. If you do, test {lore}; otherwise, test {will} to muddle through. You may roll 1 extra die for each Unique Item you have.
+	line|add=QItemDVM
+	skillcheck|7
+	pass|step6pass
+	fail|step6fail
+
+page|step6pass|As you complete the incantation, the portal and the {c:QItemElderSignPendant} continue pulsing together. The pendant rises into the air and slowly approaches the portal. The boy screams one last time as the elder sign makes contact with his forehead. The boy goes rigid, then the portal collapses and the boy falls to the ground dead.\n\nThe investigation is over.
+	line|add=QItemDVM
+	freeaction
+	operations=result,=,fullWin
+	goto|EventGameOverStart
+
+page|step6fail|The boy is still screaming and the portal is still open. You know you are close, but you have to keep trying.\n\nSuffer 1 Damage and 1 Horror.
+	line|add=QItemDVM
+	freeaction
+	goto|step6
+	

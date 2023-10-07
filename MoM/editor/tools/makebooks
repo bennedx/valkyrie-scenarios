@@ -501,7 +501,7 @@ function OutputRandomTOCInternal(eventsFile, localizationFile, bookName, startTo
     
     # create an array of pointers to pages
     pageCount = 0
-    for (pageIndex = 1; pageIndex <= length(pages) - isEndDirective; pageIndex++) {
+    for (pageIndex = 1; pageIndex < length(pages) - isEndDirective; pageIndex++) {
         if (pages[pageIndex][SHOW] > 0) {
             pagesToShow[++pageCount] = pageIndex
         }
