@@ -1,0 +1,18 @@
+language|English
+
+# -----------------------------------------------------------------------
+# for goal == goalRescueBoy
+# this is run during the Mythos phase when the end game starts
+
+book|RescueBoy|ordered|nokeep
+
+#page1
+page|startRescue|Sarah whispers to your nephew, “Let's head to the chapel to get you out.” She turns to you and says, “Let's go. We don't have much time before the boy is missed.”
+
+#page2
+page|hurryUp|Sarah hisses into your ear, “Hurry. {c:CustomMonsterDavidSmythe} will come looking for us soon.”
+	line|conditions=exploredChapelViaCrypt,>,0 explored
+
+#page3
+page|clearChapel|You hear men approaching the chapel door. Everyone there runs; move any investigators in the {c:TileChapel} to the {c:TileCrypt}. Clear all Search, Explore, and Interact tokens from the {c:TileChapel}, then place a Sight token as indicated.
+

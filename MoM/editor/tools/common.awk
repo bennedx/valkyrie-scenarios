@@ -76,8 +76,6 @@ function combineLocalization(header, sourceFile, targetFile,      output, evictT
 			print line >> output
 		}
 	}
-
-    system("ls " output)
 	
     # append the sourceFile to the output file when the header matches
     if (debug) print "sourceFile: " sourceFile
@@ -95,12 +93,10 @@ function combineLocalization(header, sourceFile, targetFile,      output, evictT
 }
 
 function ConvertToVarTests(conditions,                      addEntry, condition, conditionIndex, conditionList, conditionResult, conditionSeparator, flipConditionFlag) {
-	#printf "CTVT/Entry=%s\n", conditions >>stderr
-	
 	# divide it up on spaces
 	split(conditions, conditionList, " ")
 	
-	isCondition = 1  # this alternates; 0=operator
+	isCondition = 1  # this alternates; 0=logical operator
 	conditionSeparator = ""
 	conditionResult = ""
 	for(conditionIndex in conditionList) {

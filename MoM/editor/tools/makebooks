@@ -49,7 +49,7 @@ $1 == "debug" {
 
 previousFile != FILENAME {
 				if (previousFile != "" && !abort) {
-                    OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, pages, startLines, endLines, isEndDirective)
+                    OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, startTocText, pages, startLines, endLines, isEndDirective)
 					close(eventsFile)
 					close(localizationFile)
     				combineLocalization("Event" bookName, localizationFile, realLocalizationFile)
@@ -61,13 +61,15 @@ previousFile != FILENAME {
 					exit 1
 				}
 				
+				printf "%s\n", FILENAME
+				
 				eventsFile = fileParts[1] ".events.ini"
                 printf "" > eventsFile
 				printf "" > localizationFile
                 
                 globalEventCounter = 0
                 isBook = 0
-
+				
 				previousFile = FILENAME;
 			}
 
@@ -98,7 +100,7 @@ previousFile != FILENAME {
 # books can be followed by:  line (only before page)
 $1 == "book" {
                 if (isBook) {
-                    OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, startTocText, pages, startLines, endLines, isEndDirective)\
+                    OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, startTocText, pages, startLines, endLines, isEndDirective)
 					close(eventsFile)
 					close(localizationFile)
     				combineLocalization("Event" bookName, localizationFile, realLocalizationFile)
@@ -301,6 +303,7 @@ END         {
 
 
 function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, startTocText, pages, startLines, endLines, isEndDirective,       pageCount, separator, events, pageIndex, testIndex, operations, testEventName, lineIndex) {
+
     # bookName will only be empty on the first run
     if (bookName == "") return
 
@@ -390,7 +393,6 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
         # random / nokeep
         # generate a TOC that shows all options to start; user can act on any one of them; after that, that option is no longer visible
         # requires a TOC for each permutation of { show/not-show, visibles }
-
         OutputRandomTOC(eventsFile, localizationFile, bookName, startTocText, pages, startLines, endLines, isKeep, isEndDirective)
 
 	} else if (isKeep) {
@@ -453,7 +455,7 @@ function OutputRandomTOC(eventsFile, localizationFile, bookName, startTocText, p
 				conditions = sprintf("%s%s%s", conditions, conditionSeparator, condition)
 				conditionSeparator = " AND "
 			}
-			
+
 			newEvents = OutputRandomTOCInternal(eventsFile, localizationFile, bookName, startTocText, pages, isKeep, conditions, isEndDirective)
 			events = events separator newEvents
 			separator = " "
@@ -484,9 +486,9 @@ function OutputRandomTOC(eventsFile, localizationFile, bookName, startTocText, p
 }
 
 function OutputRandomTOCInternal(eventsFile, localizationFile, bookName, startTocText, pages, isKeep, baseConditions, isEndDirective,
-    events, separators, baseSeparator, pageCount, pageIndex, pagesToShow, eventName,
-	conditions, textFound, scanIndex, actionable, pageCondition, tocText, outputIndex,
-	lineIndex, keepTocText, noKeepTocText) {
+    actionable, baseSeparator, conditions, eventName, events, keepTocText, lineIndex, 
+	noKeepTocText, outputIndex, pageCondition, pageCount, pageIndex, pagesToShow,
+	scanIndex, separators, textFound, tocText) {
 
 	if (debug) printf "OutputRandomTOCInternal(%s, %s, %s, '%s', pages[%i], %i, [%s], %i)\n",
 		eventsFile, localizationFile, bookName, startTocText, length(pages), isKeep, baseConditions, isEndDirective
@@ -557,7 +559,7 @@ function OutputRandomTOCInternal(eventsFile, localizationFile, bookName, startTo
         
         # put out the text to show in the window
 		if (isKeep) {
-# this should be based on the idea that... I'm not sure how to get the text of the that was pushed before this one
+# this should be based on the idea that... I'm not sure how to get the text of the last one pushed before this one
 # should it be bumped another order of magnitude to have a separate event for this-page-w/-text-from-previous-button?
 			printf "%s.text,%s\n", eventName, FixQuotes(keepTocText) >> localizationFile
 			keepTocText = pages[pagesToShow[ScanIndex]][TOCTEXT]

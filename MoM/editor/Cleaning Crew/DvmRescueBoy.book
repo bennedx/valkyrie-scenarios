@@ -1,0 +1,33 @@
+language|English
+
+book|DVMRescueBoy|ordered|keep
+	line|conditions=goal,==,goalRescueBoy
+
+page|Read Page 1|Page 1\n\nYou open the book to the first page. It's a table of contents. You quickly scan down and find the spell to open portals. On the inside cover, someone--probably {c:EventChosenInvestigator}'s father--has scrawled a note that reads, “Only my descendants will be able to read this book, and only at the appointed hour. I have seen to this.” \n\nGain 1 {clue} the first time you read this page.
+    toc|The {c:QItemDVM} looks old and worn with time.
+    
+page|Read Page 2|Page 2\n\nYou leaf through the book and come across the ritual to open a portal. This part is an overview and list of materials. The list includes a special knife, a chalice, a human skull, some religious icons, and a number of herbs. There's also mention of an “elder sign,” but you aren't sure what that is.\n\n<i>I would do well to find things these first</i>, you think to yourself. 
+    toc|The book seems to contain spells and you might have special powers. The book is thick and should be looked at more carefully.
+
+page|Read Page 3|Page 3\n\nYou flip the page. Here the book goes into detail about the dagger needed to open the portal. You are surprised at how intricate the ritual is. There is also a section about blessing a knife, but when it gets to the actual blessing, it is written in a language you do not understand.
+    toc|Opening a portal doesn't sound easy. Read on.
+    
+page|Read Page 4|Page 4\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the required sacrifice is large. A cold chill runs down your spine as you realize that only a precious loved one is enough. <i>What kind of monster could do such a thing?”</i> you wonder to yourself. The first time this is read, suffer 1 Horror ({will} negates), then gain 2 {clue} if you don't go Insane.
+	test|journalReadPage4,==,1|Page 4\n\nThe next page delves into the importance of personal sacrifice. A cold chill runs down your spine as you realize that only a precious loved one is enough. <i>The boy from the journal!</i> you think to yourself. <i>He's here somewhere and we're going to find him.</i>\n\n The first time this is read, suffer 1 Horror ({will} negates), then gain 2 {clue} if you don't go Insane.
+    toc|Each tool seems to need special attention. This will require more study.
+    
+page|Read Page 5|Page 5\n\nThe next page is where the power of the ritual starts to become clear. This page talks about an incantation that begins manifesting the portal in the sacrifice. The revulsion you feel steels your resolve to prevent this from happening again.\n\nWhen you get to the incantation, you realize it is written in the same language as the blessing. You think back to that margin scrawl and wonder if you'll be able to understand it later.
+    toc|What kind of monster could kill a child for this? But there's still more.
+    
+page|Read Page 6|Page 6\n\nOnce the portal has manifested, it is weak and unstable. As you read further, the book discusses affixing the elder sign to the portal to stabilize it and hold it open. There is a also something about feeding the elder sign with additional sacrifice, but it isn't clear to you what that means. The book describes the artifact in great detail and how it is used in the ritual. A picture clearly shows what it looks like. The incantation itself is in the same language as the other two. You wonder if your father knew what he was talking about in the front of the book. Gain 2 {clue} the first time you read this page.\n\nYou'll keep an eye out as you wander the house. You must find this artifact before your uncle does if you are going to stop him. \n\nThe first time this is read, something falls out of the book as you turn the page:  gain the {c:QItemSpells} spell and 1 {clue}. 
+    toc|You hope the margin scrawl in the cover of the book helps is right--daggers and sacrifice are one thing, but the incantation is unreadable. You also wonder where your uncle might be performing the ritual. There are two more entries.
+
+page|Read Page 7|Page 7\n\Finally, there is commentary and advice. One section discusses ley lines and how they allow you to draw more power for the ritual. The preferred date and time for the ritual is also discussed, with a full moon being the most important.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual.
+	test|journalReadPage4,==,1|Page 7\n\Finally, there is commentary and advice. One section discusses ley lines and how they allow you to draw more power for the ritual. The preferred date and time for the ritual is also discussed, with a full moon being the most important.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual. <i>The boy must be down there,</i> you think to yourself.
+    toc|It sounds like even more blood is required, and for a moment you wonder where it will come from. Then you remember the journal:  it's you. This is the last page of the ritual.
+    operations|@FoundCellHoleViaJournal,=,1 
+    
+end|<i>Maybe I need to explore a bit more to figure out what I need to do to stop this madness,</i> you think to yourself.
+    test|exploredTortureChamber,==,1|Now you know where the ritual will be performed and what is needed. You must stop your uncle!
+    test|readJournalPage4,==,1|You cannot allow a young boy to be sacrificed for this evil. You must find the artifacts before the townspeople do and, now that you think you know where the boy is, get him out of here too.
+
