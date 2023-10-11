@@ -490,7 +490,7 @@ function OutputRandomTOCInternal(eventsFile, localizationFile, bookName, startTo
 	noKeepTocText, outputIndex, pageCondition, pageCount, pageIndex, pagesToShow,
 	scanIndex, separators, textFound, tocText) {
 
-	if (debug) printf "OutputRandomTOCInternal(%s, %s, %s, '%s', pages[%i], %i, [%s], %i)\n",
+	if (debug) printf "OutputRandomTOCInternal(%s, %s, %s, '%s', pages[%i], keep=%i, cond=[%s], isEnd=%i)\n",
 		eventsFile, localizationFile, bookName, startTocText, length(pages), isKeep, baseConditions, isEndDirective
 
     events = ""

@@ -360,25 +360,31 @@ EventSetEventTrigger.button1,Set
 EventSetEventTrigger.text,Set the trigger
 EventTrigger.text,This was triggereed
 EventTrigger.button1,Continue
+TokenBenIsAngry.button1,Piss Off
+TokenBenIsHappy.button1,Placate
+TokenBenIsHappy.text,Ben is happy.
+TokenBackyardBenAfter.text,BackyardBenAfter.book
+TokenBackyardBenAfter.button1,Continue
+TokenBenIsAngry.text,Ben is pissed.
 EventBackyardBenAfterReadPage1Test1.button1,Continue
-EventBackyardBenAfterReadPage1Test1.text,"\n“Well,” he snaps, “the house sat unused these last 10 years. You were hired to clean, not criticize.”\n\nThis man clearly does not like you.\n"
-EventBackyardBenAfterReadPage1Base.text,"\n“Well,” he starts, “the house was quickly packed and closed 10 years ago. There has been no one here since then, so expect the worst.”\n\nYou are not encouraged.\n"
+EventBackyardBenAfterReadPage1Test1.text,\n“Well,” he snaps, “the house sat unused these last 10 years. You were hired to clean, not criticize.”\n\nThis man clearly does not like you.\n
+EventBackyardBenAfterReadPage1Base.text,\n“Well,” he starts, “the house was quickly packed and closed 10 years ago. There has been no one here since then, so expect the worst.”\n\nYou are not encouraged.\n
 EventBackyardBenAfterReadPage1Base.button1,Continue
 EventBackyardBenAfterReadPage1End.text,
 EventBackyardBenAfterReadPage1End.button1,
 EventBackyardBenAfterReadPage1.button1,Continue
 EventBackyardBenAfterReadPage1.text,
 EventBackyardBenAfterReadPage2Test1.button1,Continue
-EventBackyardBenAfterReadPage2Test1.text,
-EventBackyardBenAfterReadPage2Base.text,"\n“I think the handyman was in the house yesterday. They must be his.”\n"
+EventBackyardBenAfterReadPage2Test1.text,\n“Then you should sweep it up. That's what you're here for, not to complain about dirt.”\n
+EventBackyardBenAfterReadPage2Base.text,\n“I think the handyman was in the house yesterday. They must be his.”\n
 EventBackyardBenAfterReadPage2Base.button1,Continue
 EventBackyardBenAfterReadPage2End.text,
 EventBackyardBenAfterReadPage2End.button1,
 EventBackyardBenAfterReadPage2.button1,Continue
 EventBackyardBenAfterReadPage2.text,
 EventBackyardBenAfterReadPage3Test1.button1,Continue
-EventBackyardBenAfterReadPage3Test1.text,
-EventBackyardBenAfterReadPage3Base.text,"\n“Oh, my, yes. Here's the key you'll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I should be going. Take your time and send someone to fetch me if you need anything.”\n\nRemove this person token.\n"
+EventBackyardBenAfterReadPage3Test1.text,\n“What? Oh, here's the key to the house. Don't lose it.”\n\nWith contempt, he turns and carelessly drops the key in your direction. Put the {c:QItemBrassKey} common item in Ben's space, then remove Ben from the board.\n
+EventBackyardBenAfterReadPage3Base.text,\n“Oh, my, yes. Here's the key you'll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I should be going. Take your time and send someone to fetch me if you need anything.”\n\nRemove this person token.\n
 EventBackyardBenAfterReadPage3Base.button1,Continue
 EventBackyardBenAfterReadPage3End.text,
 EventBackyardBenAfterReadPage3End.button1,
@@ -386,22 +392,16 @@ EventBackyardBenAfterReadPage3.button1,Continue
 EventBackyardBenAfterReadPage3.text,
 EventBackyardBenAfterTOC1.button1,{action} “Is the whole house this dirty?”
 EventBackyardBenAfterTOC1.button2,{action} “There are footprints in the dust by that door...”
-EventBackyardBenAfterTOC1.text,"\nPage '“There are footprints in the dust by that door...”' needs a 'toc'\n"
+EventBackyardBenAfterTOC1.text,\nBen is looking at you expectantly.\n
 EventBackyardBenAfterTOC1.button3,Cancel
 EventBackyardBenAfterTOC2.button1,{action} “There are footprints in the dust by that door...”
-EventBackyardBenAfterTOC2.text,"\nPage '“There are footprints in the dust by that door...”' needs a 'toc'\n"
+EventBackyardBenAfterTOC2.text,\nBen is looking at you expectantly.\n
 EventBackyardBenAfterTOC2.button2,Cancel
 EventBackyardBenAfterTOC3.button1,{action} “Is the whole house this dirty?”
-EventBackyardBenAfterTOC3.text,"\nBenjamin looks around the room, like is he trying to figure out what you are doing.\n"
+EventBackyardBenAfterTOC3.text,\nBenjamin looks around the room, like is he trying to figure out what you are doing.\n
 EventBackyardBenAfterTOC3.button2,Cancel
-EventBackyardBenAfterTOC4.text,"\nBenjamin looks around the room, like is he trying to figure out what you are doing.\n"
+EventBackyardBenAfterTOC4.text,\nBenjamin looks around the room, like is he trying to figure out what you are doing.\n
 EventBackyardBenAfterTOC4.button1,Cancel
 EventBackyardBenAfterStart.text,
 EventBackyardBenAfterStart.button1,
 EventBackyardBenAfterEnd.text,
-TokenBenIsAngry.button1,Piss Off
-TokenBenIsHappy.button1,Placate
-TokenBenIsHappy.text,Ben is happy.
-TokenBackyardBenAfter.text,BackyardBenAfter.book
-TokenBackyardBenAfter.button1,Continue
-TokenBenIsAngry.text,Ben is pissed.
