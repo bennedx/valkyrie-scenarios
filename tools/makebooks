@@ -153,6 +153,7 @@ $1 == "page" || $1 == "end" {
                 if (debug) printf "Adding pages[%i] %s, %s\n", pageCount, $2, $1 >> stderr
                 pages[pageCount][NAME] = isEndDirective ? "" : $2
                 pages[pageCount][TEXT] = isEndDirective ? $2 : $3
+				if (isEndDirective) pages[pageCount][TOCTEXT] = $2
 				pages[pageCount][FREEACTION] = 0
                 testCount = 0
                 next
@@ -309,7 +310,7 @@ END         {
 
 
 function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, startTocText, pages, startLines, endLines, isEndDirective, 
-      pageCount, separator, events, pageIndex, testIndex, operations, testEventName, lineIndex) {
+      pageCount, separator, events, pageIndex, testIndex, operations, testEventName, lineIndex, conditions) {
 
     # bookName will only be empty on the first run
     if (bookName == "") return
@@ -345,8 +346,7 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
 				printf "%s.text,%s\n", testEventName, FixQuotes(pages[pageIndex][TESTS][testIndex][TEXT]) >> localizationFile
 			}
 
-			printf "event1=Event%sReadPage%iEnd\n", bookName, pageIndex >> eventsFile
-			
+			printf "event1=Event%sReadPage%iTestEnd Event%sReadPage%iEnd\n", bookName, pageIndex, bookName, pageIndex >> eventsFile
 			printf "vartests=%s\n", ConvertToVarTests(pages[pageIndex][TESTS][testIndex][CONDITIONS]) >> eventsFile
         }
         
@@ -357,11 +357,29 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
         printf "\n[Event%sReadPage%iBase]\n", bookName, pageIndex >> eventsFile
 		printf "display=true\n" >> eventsFile
         printf "buttons=1\n" >> eventsFile
-        printf "event1=Event%sReadPage%iEnd\n", bookName, pageIndex >> eventsFile
+        printf "event1=Event%sReadPage%iTestEnd Event%sReadPage%iEnd\n", bookName, pageIndex, bookName, pageIndex >> eventsFile
 
         printf "Event%sReadPage%iBase.text,%s\n", bookName, pageIndex, FixQuotes(pages[pageIndex][TEXT]) >> localizationFile
         printf "Event%sReadPage%iBase.button1,%s\n", bookName, pageIndex, textContinue >> localizationFile
 
+		# this "TestEnd" page checks to see if all the pages have already been read
+		# we do it before we set the flag saying we read this page
+		# (this is done for random to know when all the pages have been read so the 'end' directive text can be shown on the TOC)
+		printf "\n[Event%sReadPage%iTestEnd]\n", bookName, pageIndex >> eventsFile
+		printf "Event%sReadPage%iTestEnd.text,\n", bookName, pageIndex >> localizationFile
+		printf "display=false\n" >> eventsFile
+		printf "buttons=1\n" >> eventsFile
+		printf "event1=Event%sReadPage%iEnd\n", bookName, pageIndex >> eventsFile
+		printf "Event%sReadPage%iTestEnd.button1,\n", bookName, pageIndex >> localizationFile
+
+		conditions = sprintf("read%sFinished,==,0", bookName)
+		for (testIndex = 1; testIndex <= length(pages) - isEndDirective; testIndex++) {
+			conditions = sprintf("%s read%sPage%i,>,0", conditions, bookName, testIndex)
+		}
+		printf "vartests=%s\n", ConvertToVarTests(conditions) >> eventsFile
+		printf "operations=read%sFinished,=,1\n", bookName >> eventsFile
+		
+		# the actual end page
         printf "\n[Event%sReadPage%iEnd]\n", bookName, pageIndex >> eventsFile
 		printf "Event%sReadPage%iEnd.text,\n", bookName, pageIndex >> localizationFile
         printf "display=false\n" >> eventsFile
@@ -401,7 +419,7 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
         # random / nokeep
         # generate a TOC that shows all options to start; user can act on any one of them; after that, that option is no longer visible
         # requires a TOC for each permutation of { show/not-show, visibles }		
-        OutputRandomToc(eventsFile, localizationFile, bookName, isKeep, startTocText, pages, startLines, endLines)
+        OutputRandomToc(eventsFile, localizationFile, bookName, isKeep, startTocText, pages, startLines, endLines, isEndDirective)
 
 	} else if (isKeep) {
 		# ordered / keep
@@ -412,9 +430,9 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
     }
 }
 
-function OutputRandomToc(eventsFile, localizationFile, bookName, isKeep, startTocText, pages, startLines, endLines
+function OutputRandomToc(eventsFile, localizationFile, bookName, isKeep, startTocText, pages, startLines, endLines, isEndDirective,
     events, eventSeparator, conditions, pageIndex, lineIndex, tocs, text, visibleCondition, readCondition,
-	eventIndex) {
+	eventIndex, testIndex) {
 	
 	if (debug) printf "OutputRandomToc(%s, %s, %s, p[%i], s[%i], e[%i], %i)\n",
 		eventsFile, localizationFile, bookName, length(pages), length(startLines), length(endLines), isEndDirective
@@ -433,8 +451,7 @@ function OutputRandomToc(eventsFile, localizationFile, bookName, isKeep, startTo
 	}
 	
 	events = ""
-	for(tocIndex = 0; tocIndex <= length(tocs); tocIndex++) {
-print "D: " tocIndex " / " length(pages)
+	for(tocIndex = 0; tocIndex < length(tocs); tocIndex++) {
 		tocEventName = sprintf("Event%sToc%i", bookName, tocIndex)
 		events = events eventSeparator tocEventName
 		eventSeparator = " "
@@ -442,24 +459,20 @@ print "D: " tocIndex " / " length(pages)
 		print "" >> eventsFile
 		printf "[%s]\n", tocEventName >> eventsFile
 		
-		if (tocIndex < length(tocs)) {
+		if (tocIndex < length(tocs) - isEndDirective) {
 			# this is a normal page
 			readCondition = sprintf("read%sPreviousPage,==,%i read%sFinished,==,0", bookName, tocIndex, bookName)
 			printf "vartests=%s\n", ConvertToVarTests(readCondition) >> eventsFile
-			printf "vartests=%s\n", ConvertToVarTests(readCondition)
 		} else {
 			# this is the 'end' directive; there is no test because it will always
 			# fall through once readXxxFinished > 0
 		}
 		
 		printf "%s.text,%s\n", tocEventName, tocs[tocIndex] >> localizationFile
-		printf "%s.text,%s\n", tocEventName, tocs[tocIndex]
 		
 		eventIndex = 1
 
 		for(pageIndex = 1; pageIndex < length(pages); pageIndex++) {
-print "E: " pageIndex " (" eventIndex ")"
-			
 			visibleCondition = ""
 			if (pages[pageIndex][VISIBLE] != "") {
 				if (pages[pageIndex][VISIBLEOPERATION] == "!") {
@@ -472,9 +485,7 @@ print "E: " pageIndex " (" eventIndex ")"
 			# output the already-read version
 			if (isKeep) {
 				printf "event%i=Event%sReadPage%i\n", eventIndex, bookName, pageIndex >> eventsFile
-				printf "event%i=Event%sReadPage%i\n", eventIndex, bookName, pageIndex
 				printf "%s.button%i,%s\n", tocEventName, eventIndex, pages[pageIndex][NAME] >> localizationFile
-				printf "%s.button%i,%s\n", tocEventName, eventIndex, pages[pageIndex][NAME]
 
 				readCondition = ""
 				if (!pages[pageIndex][FREEACTION]) {
@@ -484,9 +495,7 @@ print "E: " pageIndex " (" eventIndex ")"
 				conditions = ConvertToVarTests(trim(visibleCondition " " readCondition))
 				if (conditions != "") {
 					printf "event%iCondition=%s\n", eventIndex, conditions >> eventsFile
-					printf "event%iCondition=%s\n", eventIndex, conditions
 					printf "event%iConditionAction=hide\n", eventIndex >> eventsFile
-					printf "event%iConditionAction=hide\n", eventIndex
 					
 				} else {
 					# there are no conditions, so the button always shows
@@ -500,30 +509,39 @@ print "E: " pageIndex " (" eventIndex ")"
 			
 			# output the {action} button
 			printf "event%i=Event%sReadPage%i\n", eventIndex, bookName, pageIndex >> eventsFile
-			printf "event%i=Event%sReadPage%i\n", eventIndex, bookName, pageIndex
 			printf "%s.button%i,{action} %s\n", tocEventName, eventIndex, pages[pageIndex][NAME] >> localizationFile
-			printf "%s.button%i,{action} %s\n", tocEventName, eventIndex, pages[pageIndex][NAME]
 			
 			readCondition = sprintf("read%sPage%i,==,0", bookName, pageIndex)
 			conditions = ConvertToVarTests(trim(visibleCondition " " readCondition))
 			
 			printf "event%iCondition=%s\n", eventIndex, conditions >> eventsFile
-			printf "event%iCondition=%s\n", eventIndex, conditions
 			printf "event%iConditionAction=hide\n", eventIndex >> eventsFile
-			printf "event%iConditionAction=hide\n", eventIndex
 			
 			eventIndex++
 		}
 		
-		printf "event%i=Event%sEnd\n", eventIndex, bookName >> eventsFile
-		printf "event%i=Event%sEnd\n", eventIndex, bookName
+		printf "event%i=Event%sTestEnd Event%sEnd\n", eventIndex, bookName, bookName >> eventsFile
 		printf "%s.button%i,%s\n", tocEventName, eventIndex, textCancel >> localizationFile
-		printf "%s.button%i,%s\n", tocEventName, eventIndex, textCancel
 
 		printf "buttons=%i\n", eventIndex >> eventsFile
-		printf "buttons=%i\n", eventIndex
 	}
-	
+
+	# this "TestEnd" page checks to see if all the pages have already been read
+	# we do it before we set the flag saying we read this page
+	# (this is done for random to know when all the pages have been read so the 'end' directive text can be shown on the TOC)
+	printf "\n[Event%sTestEnd]\n", bookName >> eventsFile
+	printf "Event%sTestEnd.text,\n", bookName >> localizationFile
+	printf "display=false\n" >> eventsFile
+	printf "buttons=1\n" >> eventsFile
+	printf "event1=Event%sEnd\n", bookName >> eventsFile
+	printf "Event%sTestEnd.button1,\n", bookName >> localizationFile
+
+	conditions = sprintf("read%sFinished,==,0", bookName)
+	for (testIndex = 1; testIndex <= length(pages) - isEndDirective; testIndex++) {
+		conditions = sprintf("%s read%sPage%i,>,0", conditions, bookName, testIndex)
+	}
+	printf "vartests=%s\n", ConvertToVarTests(conditions) >> eventsFile
+	printf "operations=read%sFinished,=,1\n", bookName >> eventsFile
 	
     # create event to choose the toc show this time
     printf "\n[Event%sStart]\n", bookName >> eventsFile

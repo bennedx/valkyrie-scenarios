@@ -39,68 +39,6 @@ EventTestBookEnd.text,
 TokenSearchOrderedNoKeep.button1,Start
 TokenOrderedNoKeepLoop.button1,Start
 TokenOrderedKeepSimple.text,OrderedKeep
-EventOrderedNoKeepReadPage1Base.text,"\nThis is test page 1\n"
-EventOrderedNoKeepReadPage1Base.button1,Continue
-EventOrderedNoKeepReadPage1End.text,
-EventOrderedNoKeepReadPage1End.button1,
-EventOrderedNoKeepReadPage1.button1,Continue
-EventOrderedNoKeepReadPage1.text,
-EventOrderedNoKeepReadPage2Base.text,"\nThis is test page 2\n"
-EventOrderedNoKeepReadPage2Base.button1,Continue
-EventOrderedNoKeepReadPage2End.text,
-EventOrderedNoKeepReadPage2End.button1,
-EventOrderedNoKeepReadPage2.button1,Continue
-EventOrderedNoKeepReadPage2.text,
-EventOrderedNoKeepReadPage3Base.text,"\nThis is test page 3\n"
-EventOrderedNoKeepReadPage3Base.button1,Continue
-EventOrderedNoKeepReadPage3End.text,
-EventOrderedNoKeepReadPage3End.button1,
-EventOrderedNoKeepReadPage3.button1,Continue
-EventOrderedNoKeepReadPage3.text,
-EventOrderedNoKeepReadPage1Proxy.text,
-EventOrderedNoKeepReadPage1Proxy.button1,
-EventOrderedNoKeepReadPage2Proxy.text,
-EventOrderedNoKeepReadPage2Proxy.button1,
-EventOrderedNoKeepReadPage3Proxy.text,
-EventOrderedNoKeepReadPage3Proxy.button1,
-EventOrderedNoKeepStart.text,
-EventOrderedNoKeepStart.button1,
-EventOrderedNoKeepEnd.text,
-EventOrderedNoKeepLoopReadPage1Base.text,"\nThis is test page 1\n"
-EventOrderedNoKeepLoopReadPage1Base.button1,Continue
-EventOrderedNoKeepLoopReadPage1End.text,
-EventOrderedNoKeepLoopReadPage1End.button1,
-EventOrderedNoKeepLoopReadPage1.button1,Continue
-EventOrderedNoKeepLoopReadPage1.text,
-EventOrderedNoKeepLoopReadPage2Base.text,"\nThis is test page 2\n"
-EventOrderedNoKeepLoopReadPage2Base.button1,Continue
-EventOrderedNoKeepLoopReadPage2End.text,
-EventOrderedNoKeepLoopReadPage2End.button1,
-EventOrderedNoKeepLoopReadPage2.button1,Continue
-EventOrderedNoKeepLoopReadPage2.text,
-EventOrderedNoKeepLoopReadPage3Base.text,"\nThis is test page 3\n"
-EventOrderedNoKeepLoopReadPage3Base.button1,Continue
-EventOrderedNoKeepLoopReadPage3End.text,
-EventOrderedNoKeepLoopReadPage3End.button1,
-EventOrderedNoKeepLoopReadPage3.button1,Continue
-EventOrderedNoKeepLoopReadPage3.text,
-EventOrderedNoKeepLoopReadPage4Base.text,"\nThose were 3 pages\n"
-EventOrderedNoKeepLoopReadPage4Base.button1,Continue
-EventOrderedNoKeepLoopReadPage4End.text,
-EventOrderedNoKeepLoopReadPage4End.button1,
-EventOrderedNoKeepLoopReadPage4.button1,Continue
-EventOrderedNoKeepLoopReadPage4.text,
-EventOrderedNoKeepLoopReadPage1Proxy.text,
-EventOrderedNoKeepLoopReadPage1Proxy.button1,
-EventOrderedNoKeepLoopReadPage2Proxy.text,
-EventOrderedNoKeepLoopReadPage2Proxy.button1,
-EventOrderedNoKeepLoopReadPage3Proxy.text,
-EventOrderedNoKeepLoopReadPage3Proxy.button1,
-EventOrderedNoKeepLoopReadPage4Proxy.text,
-EventOrderedNoKeepLoopReadPage4Proxy.button1,
-EventOrderedNoKeepLoopStart.text,
-EventOrderedNoKeepLoopStart.button1,
-EventOrderedNoKeepLoopEnd.text,
 TokenOrderedNoKeepLoop.text,OrderedNoKeepLoop
 EventOrderedKeepReadPage1Base.text,"\nThis is test page 1\n"
 EventOrderedKeepReadPage1Base.button1,Continue
@@ -191,108 +129,9 @@ EventOrderedKeepComplexStart.text,
 EventOrderedKeepComplexStart.button1,
 EventOrderedKeepComplexEnd.text,
 TokenOrderedKeepSimple.button1,Start
-EventOrderedKeepSimpleReadPage1Base.text,"\nThis is test page 1\n"
-EventOrderedKeepSimpleReadPage1Base.button1,Continue
-EventOrderedKeepSimpleReadPage1End.text,
-EventOrderedKeepSimpleReadPage1End.button1,
-EventOrderedKeepSimpleReadPage1.button1,Continue
-EventOrderedKeepSimpleReadPage1.text,
-EventOrderedKeepSimpleReadPage2Base.text,"\nThis is test page 2\n"
-EventOrderedKeepSimpleReadPage2Base.button1,Continue
-EventOrderedKeepSimpleReadPage2End.text,
-EventOrderedKeepSimpleReadPage2End.button1,
-EventOrderedKeepSimpleReadPage2.button1,Continue
-EventOrderedKeepSimpleReadPage2.text,
-EventOrderedKeepSimpleReadPage3Base.text,"\nThis is test page 3\n"
-EventOrderedKeepSimpleReadPage3Base.button1,Continue
-EventOrderedKeepSimpleReadPage3End.text,
-EventOrderedKeepSimpleReadPage3End.button1,
-EventOrderedKeepSimpleReadPage3.button1,Continue
-EventOrderedKeepSimpleReadPage3.text,
-EventOrderedKeepSimpleReadPage4Base.text,"\nYou have read all the pages\n"
-EventOrderedKeepSimpleReadPage4Base.button1,Continue
-EventOrderedKeepSimpleReadPage4End.text,
-EventOrderedKeepSimpleReadPage4End.button1,
-EventOrderedKeepSimpleReadPage4.button1,Continue
-EventOrderedKeepSimpleReadPage4.text,
-EventOrderedKeepSimpleTOC1.text,"\nSoon you will read page 1\n"
-EventOrderedKeepSimpleTOC1.button1,{action} page 1
-EventOrderedKeepSimpleTOC1.button2,Cancel
-EventOrderedKeepSimpleTOC2.text,"\nSoon you will read page 2\n"
-EventOrderedKeepSimpleTOC2.button1,page 1
-EventOrderedKeepSimpleTOC2.button2,{action} page 2
-EventOrderedKeepSimpleTOC2.button3,Cancel
-EventOrderedKeepSimpleTOC3.text,"\nSoon you will read page 3\n"
-EventOrderedKeepSimpleTOC3.button1,page 1
-EventOrderedKeepSimpleTOC3.button2,page 2
-EventOrderedKeepSimpleTOC3.button3,{action} page 3
-EventOrderedKeepSimpleTOC3.button4,Cancel
-EventOrderedKeepSimpleTOC4.text,"\nYou have read all the pages\n"
-EventOrderedKeepSimpleTOC4.button1,page 1
-EventOrderedKeepSimpleTOC4.button2,page 2
-EventOrderedKeepSimpleTOC4.button3,page 3
-EventOrderedKeepSimpleTOC4.button4,Cancel
-EventOrderedKeepSimpleStart.text,
-EventOrderedKeepSimpleStart.button1,
-EventOrderedKeepSimpleEnd.text,
 TokenRandomNoKeep.button1,Start
 TokenRandomNoKeep.text,RandomNoKeep
-EventRandomNoKeepReadPage1Base.text,"\nThis is test page 1\n"
-EventRandomNoKeepReadPage1Base.button1,Continue
-EventRandomNoKeepReadPage1End.text,
-EventRandomNoKeepReadPage1End.button1,
-EventRandomNoKeepReadPage1.button1,Continue
-EventRandomNoKeepReadPage1.text,
-EventRandomNoKeepReadPage2Base.text,"\nThis is test page 2\n"
-EventRandomNoKeepReadPage2Base.button1,Continue
-EventRandomNoKeepReadPage2End.text,
-EventRandomNoKeepReadPage2End.button1,
-EventRandomNoKeepReadPage2.button1,Continue
-EventRandomNoKeepReadPage2.text,
-EventRandomNoKeepReadPage3Base.text,"\nThis is test page 3\n"
-EventRandomNoKeepReadPage3Base.button1,Continue
-EventRandomNoKeepReadPage3End.text,
-EventRandomNoKeepReadPage3End.button1,
-EventRandomNoKeepReadPage3.button1,Continue
-EventRandomNoKeepReadPage3.text,
-EventRandomNoKeepReadPage4Base.text,"\nYou have read all the pages\n"
-EventRandomNoKeepReadPage4Base.button1,Continue
-EventRandomNoKeepReadPage4End.text,
-EventRandomNoKeepReadPage4End.button1,
-EventRandomNoKeepReadPage4.button1,Continue
-EventRandomNoKeepReadPage4.text,
-EventRandomNoKeepTOC1.text,"\nYou have read all the pages\n"
-EventRandomNoKeepTOC1.button1,Cancel
-EventRandomNoKeepTOC2.button1,{action} page 1
-EventRandomNoKeepTOC2.text,"\nSoon you will read page 1\n"
-EventRandomNoKeepTOC2.button2,Cancel
-EventRandomNoKeepTOC3.button1,{action} page 2
-EventRandomNoKeepTOC3.text,"\nSoon you will read page 2\n"
-EventRandomNoKeepTOC3.button2,Cancel
-EventRandomNoKeepTOC4.button1,{action} page 1
-EventRandomNoKeepTOC4.button2,{action} page 2
-EventRandomNoKeepTOC4.text,"\nSoon you will read page 1\n"
-EventRandomNoKeepTOC4.button3,Cancel
-EventRandomNoKeepTOC5.button1,{action} page 3
-EventRandomNoKeepTOC5.text,"\nSoon you will read page 3\n"
-EventRandomNoKeepTOC5.button2,Cancel
-EventRandomNoKeepTOC6.button1,{action} page 1
-EventRandomNoKeepTOC6.button2,{action} page 3
-EventRandomNoKeepTOC6.text,"\nSoon you will read page 1\n"
-EventRandomNoKeepTOC6.button3,Cancel
-EventRandomNoKeepTOC7.button1,{action} page 2
-EventRandomNoKeepTOC7.button2,{action} page 3
-EventRandomNoKeepTOC7.text,"\nSoon you will read page 2\n"
-EventRandomNoKeepTOC7.button3,Cancel
-EventRandomNoKeepTOC8.button1,{action} page 1
-EventRandomNoKeepTOC8.button2,{action} page 2
-EventRandomNoKeepTOC8.button3,{action} page 3
-EventRandomNoKeepTOC8.text,"\nSoon you will read page 1\n"
-EventRandomNoKeepTOC8.button4,Cancel
-EventRandomNoKeepStart.text,
-EventRandomNoKeepStart.button1,
-EventRandomNoKeepEnd.text,
-TokenRandomKeep.text,RandomKeep
+TokenRandomKeep.text,"RandomKeep\nreadPage1: {var:readRandomKeepPage1}\nreadPage2: {var:readRandomKeepPage2}\nreadPage3: {var:readRandomKeepPage3}\nreadFinished: {var:readRandomKeepFinished}"
 TokenRandomKeep.button1,Start
 Token0.button1,Button1
 EventSetEventTrigger.button1,Set
@@ -305,68 +144,846 @@ TokenBenIsHappy.text,Ben is happy.
 TokenBackyardBenAfter.text,BackyardBenAfter.book
 TokenBackyardBenAfter.button1,Continue
 TokenBenIsAngry.text,Ben is pissed.
+Token1.text,This is a token.
+Token1.button1,Continue
+Token1.button2,Button2
 EventBackyardBenAfterReadPage1Test1.button1,Continue
-EventBackyardBenAfterReadPage1Test1.text,"\n“Well,” he snaps, “the house sat unused these last 10 years. You were hired to clean, not criticize.”\n\nThis man clearly does not like you.\n"
-EventBackyardBenAfterReadPage1Base.text,"\n“Well,” he starts, “the house was quickly packed and closed 10 years ago. There has been no one here since then, so expect the worst.”\n\nYou are not encouraged.\n"
+EventBackyardBenAfterReadPage1Test1.text,\n“Well,” he snaps, “the house sat unused these last 10 years. You were hired to clean, not criticize.”\n\nThis man clearly does not like you.\n
+EventBackyardBenAfterReadPage1Base.text,\n“Well,” he starts, “the house was quickly packed and closed 10 years ago. There has been no one here since then, so expect the worst.”\n\nYou are not encouraged.\n
 EventBackyardBenAfterReadPage1Base.button1,Continue
+EventBackyardBenAfterReadPage1TestEnd.text,
+EventBackyardBenAfterReadPage1TestEnd.button1,
 EventBackyardBenAfterReadPage1End.text,
 EventBackyardBenAfterReadPage1End.button1,
 EventBackyardBenAfterReadPage1.button1,Continue
 EventBackyardBenAfterReadPage1.text,
 EventBackyardBenAfterReadPage2Test1.button1,Continue
-EventBackyardBenAfterReadPage2Test1.text,"\n“Then you should sweep it up. That's what you're here for, not to complain about dirt.”\n"
-EventBackyardBenAfterReadPage2Base.text,"\n“I think the handyman was in the house yesterday. They must be his.”\n"
+EventBackyardBenAfterReadPage2Test1.text,\n“Then you should sweep it up. That's what you're here for, not to complain about dirt.”\n
+EventBackyardBenAfterReadPage2Base.text,\n“I think the handyman was in the house yesterday. They must be his.”\n
 EventBackyardBenAfterReadPage2Base.button1,Continue
+EventBackyardBenAfterReadPage2TestEnd.text,
+EventBackyardBenAfterReadPage2TestEnd.button1,
 EventBackyardBenAfterReadPage2End.text,
 EventBackyardBenAfterReadPage2End.button1,
 EventBackyardBenAfterReadPage2.button1,Continue
 EventBackyardBenAfterReadPage2.text,
 EventBackyardBenAfterReadPage3Test1.button1,Continue
-EventBackyardBenAfterReadPage3Test1.text,"\n“What? Oh, here's the key to the house. Don't lose it.”\n\nWith contempt, he turns and carelessly drops the key in your direction. Put the {c:QItemBrassKey} common item in Ben's space, then remove Ben from the board.\n"
-EventBackyardBenAfterReadPage3Base.text,"\n“Oh, my, yes. Here's the key you'll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I should be going. Take your time and send someone to fetch me if you need anything.”\n\nRemove this person token.\n"
+EventBackyardBenAfterReadPage3Test1.text,\n“What? Oh, here's the key to the house. Don't lose it.”\n\nWith contempt, he turns and carelessly drops the key in your direction. Put the {c:QItemBrassKey} common item in Ben's space, then remove Ben from the board.\n
+EventBackyardBenAfterReadPage3Base.text,\n“Oh, my, yes. Here's the key you'll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I should be going. Take your time and send someone to fetch me if you need anything.”\n\nRemove this person token.\n
 EventBackyardBenAfterReadPage3Base.button1,Continue
+EventBackyardBenAfterReadPage3TestEnd.text,
+EventBackyardBenAfterReadPage3TestEnd.button1,
 EventBackyardBenAfterReadPage3End.text,
 EventBackyardBenAfterReadPage3End.button1,
 EventBackyardBenAfterReadPage3.button1,Continue
 EventBackyardBenAfterReadPage3.text,
-EventBackyardBenAfterTOC1.button1,{action} “Is the whole house this dirty?”
-EventBackyardBenAfterTOC1.button2,{action} “There are footprints in the dust by that door...”
-EventBackyardBenAfterTOC1.text,"\nBen is looking at you expectantly.\n"
-EventBackyardBenAfterTOC1.button3,Cancel
-EventBackyardBenAfterTOC2.button1,{action} “There are footprints in the dust by that door...”
-EventBackyardBenAfterTOC2.text,"\nBen is looking at you expectantly.\n"
-EventBackyardBenAfterTOC2.button2,Cancel
-EventBackyardBenAfterTOC3.button1,{action} “Is the whole house this dirty?”
-EventBackyardBenAfterTOC3.text,"\nBenjamin looks around the room, like is he trying to figure out what you are doing.\n"
-EventBackyardBenAfterTOC3.button2,Cancel
-EventBackyardBenAfterTOC4.text,"\nBenjamin looks around the room, like is he trying to figure out what you are doing.\n"
-EventBackyardBenAfterTOC4.button1,Cancel
+EventBackyardBenAfterToc0.text,
+EventBackyardBenAfterToc0.button1,{action} “Is the whole house this dirty?”
+EventBackyardBenAfterToc0.button2,{action} “There are footprints in the dust by that door...”
+EventBackyardBenAfterToc0.button3,Cancel
+EventBackyardBenAfterToc1.text,Benjamin looks around the room, like is he trying to figure out what you are doing.
+EventBackyardBenAfterToc1.button1,{action} “Is the whole house this dirty?”
+EventBackyardBenAfterToc1.button2,{action} “There are footprints in the dust by that door...”
+EventBackyardBenAfterToc1.button3,Cancel
+EventBackyardBenAfterToc2.text,Ben is looking at you expectantly.
+EventBackyardBenAfterToc2.button1,{action} “Is the whole house this dirty?”
+EventBackyardBenAfterToc2.button2,{action} “There are footprints in the dust by that door...”
+EventBackyardBenAfterToc2.button3,Cancel
+EventBackyardBenAfterToc3.text,Ben looks like he's forgetting something.
+EventBackyardBenAfterToc3.button1,{action} “Is the whole house this dirty?”
+EventBackyardBenAfterToc3.button2,{action} “There are footprints in the dust by that door...”
+EventBackyardBenAfterToc3.button3,Cancel
+EventBackyardBenAfterTestEnd.text,
+EventBackyardBenAfterTestEnd.button1,
 EventBackyardBenAfterStart.text,
 EventBackyardBenAfterStart.button1,
 EventBackyardBenAfterEnd.text,
-Token1.text,This is a token.
-Token1.button1,Continue
-Token1.button2,Button2
+EventBackyardBenBeforeReadPage1Test1.button1,Continue
+EventBackyardBenBeforeReadPage1Test1.text,\n“Long enough,” he snaps. “There are numerous rooms on the ground floor, a basement, and many rooms upstairs. The place has always been too big for this family. Back when Peter was living here, it was only him and his daughter. The girl's mother died under suspicious circumstances when the girl was three. Never explained.\n\n“Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren't you? And you won't break anything else?”\n
+EventBackyardBenBeforeReadPage1Base.text,\n“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Even when Peter was living here, it was only him and his daughter. The girl's mother died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I'd guess you'll need a few hours just to look through the place and get your bearings. You'll want to check every drawer, cabinet, and box in the house--take as much time as you need. We need the whole house cleared out and spotless by the end of next week.”\n
+EventBackyardBenBeforeReadPage1Base.button1,Continue
+EventBackyardBenBeforeReadPage1TestEnd.text,
+EventBackyardBenBeforeReadPage1TestEnd.button1,
+EventBackyardBenBeforeReadPage1End.text,
+EventBackyardBenBeforeReadPage1End.button1,
+EventBackyardBenBeforeReadPage1.button1,Continue
+EventBackyardBenBeforeReadPage1.text,
+EventBackyardBenBeforeReadPage2Test1.button1,Continue
+EventBackyardBenBeforeReadPage2Test1.text,\n“The children? Two were strangled. The burns on the third were never explained. Nasty business.\n\n“Peter and his brother Henry both went missing that night. Most folks don't know about Henry. Left a lot of folks around town wondering what really happened. But we're not here to gossip.”\n
+EventBackyardBenBeforeReadPage2Base.text,\n“The children? I'm sure you read the papers. One of them was burned from head-to-toe. The other two were strangled. The burns were never explained. Nasty business. \n\n“Peter Smythe--the girl's father and the owner of this house--went missing that night. Most folks think he did something to the children and then ran away. Still hiding, they think.\n\n“What wasn't reported is that his brother, Henry, also disappeared that night. Folks in town figured they'd run off together to avoid difficult questions.”\n\nGain 1 {clue}.\n
+EventBackyardBenBeforeReadPage2Base.button1,Continue
+EventBackyardBenBeforeReadPage2TestEnd.text,
+EventBackyardBenBeforeReadPage2TestEnd.button1,
+EventBackyardBenBeforeReadPage2End.text,
+EventBackyardBenBeforeReadPage2End.button1,
+EventBackyardBenBeforeReadPage2.button1,Continue
+EventBackyardBenBeforeReadPage2.text,
+EventBackyardBenBeforeReadPage3Test1.button1,Continue
+EventBackyardBenBeforeReadPage3Test1.text,
+EventBackyardBenBeforeReadPage3Base.text,\n“The children were found just over there,” he says, pointing back the way you came. “They were in a pile; the girl's body was still smoking from the burns. Strangest thing:  she kept smoking until the next day. Coroner wasn't able to explain it. No one was.\n\n“Our family has lived here for generations--many of them in this house. We're upset to let it go, but no one lives here... or wants to after what happened.”\n\nGain 1 {clue}.\n\nBenjamin resumes searching for his keys.\n
+EventBackyardBenBeforeReadPage3Base.button1,Continue
+EventBackyardBenBeforeReadPage3TestEnd.text,
+EventBackyardBenBeforeReadPage3TestEnd.button1,
+EventBackyardBenBeforeReadPage3End.text,
+EventBackyardBenBeforeReadPage3End.button1,
+EventBackyardBenBeforeReadPage3.button1,Continue
+EventBackyardBenBeforeReadPage3.text,
+EventBackyardBenBeforeReadPage4Test1.button1,Continue
+EventBackyardBenBeforeReadPage4Test1.text,
+EventBackyardBenBeforeReadPage4Base.text,\n“Well, we tried right after the... trouble. No one would even come to look at it back then, but our priest, um, told us now is the right time.\n\nGain 1 {clue}.”\n
+EventBackyardBenBeforeReadPage4Base.button1,Continue
+EventBackyardBenBeforeReadPage4TestEnd.text,
+EventBackyardBenBeforeReadPage4TestEnd.button1,
+EventBackyardBenBeforeReadPage4End.text,
+EventBackyardBenBeforeReadPage4End.button1,
+EventBackyardBenBeforeReadPage4.button1,Continue
+EventBackyardBenBeforeReadPage4.text,
+EventBackyardBenBeforeReadPage5Base.text,\n“You should be more careful. The house is old and in poor repair, but some parts have already been repaired. But no real harm done--the gate can be repaired.”\n
+EventBackyardBenBeforeReadPage5Base.button1,Continue
+EventBackyardBenBeforeReadPage5TestEnd.text,
+EventBackyardBenBeforeReadPage5TestEnd.button1,
+EventBackyardBenBeforeReadPage5End.text,
+EventBackyardBenBeforeReadPage5End.button1,
+EventBackyardBenBeforeReadPage5.button1,Continue
+EventBackyardBenBeforeReadPage5.text,
+EventBackyardBenBeforeToc0.text,
+EventBackyardBenBeforeToc0.button1,{action} “How long will it take us to look through the house?”
+EventBackyardBenBeforeToc0.button2,{action} “What do you think happened to the children?”
+EventBackyardBenBeforeToc0.button3,{action} “Where were the children found?”
+EventBackyardBenBeforeToc0.button4,{action} “Why did you wait so long to sell the house?”
+EventBackyardBenBeforeToc0.button5,Cancel
+EventBackyardBenBeforeToc1.text,Benjamin is digging through his pockets for the key, but isn't having much luck finding it. You hear him muttering about it under his breath.
+EventBackyardBenBeforeToc1.button1,{action} “How long will it take us to look through the house?”
+EventBackyardBenBeforeToc1.button2,{action} “What do you think happened to the children?”
+EventBackyardBenBeforeToc1.button3,{action} “Where were the children found?”
+EventBackyardBenBeforeToc1.button4,{action} “Why did you wait so long to sell the house?”
+EventBackyardBenBeforeToc1.button5,Cancel
+EventBackyardBenBeforeToc2.text,Benjamin is still digging through his pockets for the key
+EventBackyardBenBeforeToc2.button1,{action} “How long will it take us to look through the house?”
+EventBackyardBenBeforeToc2.button2,{action} “What do you think happened to the children?”
+EventBackyardBenBeforeToc2.button3,{action} “Where were the children found?”
+EventBackyardBenBeforeToc2.button4,{action} “Why did you wait so long to sell the house?”
+EventBackyardBenBeforeToc2.button5,Cancel
+EventBackyardBenBeforeToc3.text,(page '“Where were the children found?”' needs a 'toc' directive)
+EventBackyardBenBeforeToc3.button1,{action} “How long will it take us to look through the house?”
+EventBackyardBenBeforeToc3.button2,{action} “What do you think happened to the children?”
+EventBackyardBenBeforeToc3.button3,{action} “Where were the children found?”
+EventBackyardBenBeforeToc3.button4,{action} “Why did you wait so long to sell the house?”
+EventBackyardBenBeforeToc3.button5,Cancel
+EventBackyardBenBeforeToc4.text,(page '“Why did you wait so long to sell the house?”' needs a 'toc' directive)
+EventBackyardBenBeforeToc4.button1,{action} “How long will it take us to look through the house?”
+EventBackyardBenBeforeToc4.button2,{action} “What do you think happened to the children?”
+EventBackyardBenBeforeToc4.button3,{action} “Where were the children found?”
+EventBackyardBenBeforeToc4.button4,{action} “Why did you wait so long to sell the house?”
+EventBackyardBenBeforeToc4.button5,Cancel
+EventBackyardBenBeforeToc5.text,(page '“I'm sorry about the gate”' needs a 'toc' directive)
+EventBackyardBenBeforeToc5.button1,{action} “How long will it take us to look through the house?”
+EventBackyardBenBeforeToc5.button2,{action} “What do you think happened to the children?”
+EventBackyardBenBeforeToc5.button3,{action} “Where were the children found?”
+EventBackyardBenBeforeToc5.button4,{action} “Why did you wait so long to sell the house?”
+EventBackyardBenBeforeToc5.button5,Cancel
+EventBackyardBenBeforeTestEnd.text,
+EventBackyardBenBeforeTestEnd.button1,
+EventBackyardBenBeforeStart.text,
+EventBackyardBenBeforeStart.button1,
+EventBackyardBenBeforeEnd.text,
+EventDVMRescueBoyReadPage1Base.text,\nPage 1\n\nYou open the book to the first page. It's a table of contents. You quickly scan down and find the spell to open portals. On the inside cover, someone--probably {c:EventChosenInvestigator}'s father--has scrawled a note that reads, “Only my descendants will be able to read this book, and only at the appointed hour. I have seen to this.” \n\nGain 1 {clue} the first time you read this page.\n
+EventDVMRescueBoyReadPage1Base.button1,Continue
+EventDVMRescueBoyReadPage1TestEnd.text,
+EventDVMRescueBoyReadPage1TestEnd.button1,
+EventDVMRescueBoyReadPage1End.text,
+EventDVMRescueBoyReadPage1End.button1,
+EventDVMRescueBoyReadPage1.button1,Continue
+EventDVMRescueBoyReadPage1.text,
+EventDVMRescueBoyReadPage2Base.text,\nPage 2\n\nYou leaf through the book and come across the ritual to open a portal. This part is an overview and list of materials. The list includes a special knife, a chalice, a human skull, some religious icons, and a number of herbs. There's also mention of an “elder sign,” but you aren't sure what that is.\n\n<i>I would do well to find things these first</i>, you think to yourself.\n
+EventDVMRescueBoyReadPage2Base.button1,Continue
+EventDVMRescueBoyReadPage2TestEnd.text,
+EventDVMRescueBoyReadPage2TestEnd.button1,
+EventDVMRescueBoyReadPage2End.text,
+EventDVMRescueBoyReadPage2End.button1,
+EventDVMRescueBoyReadPage2.button1,Continue
+EventDVMRescueBoyReadPage2.text,
+EventDVMRescueBoyReadPage3Base.text,\nPage 3\n\nYou flip the page. Here the book goes into detail about the dagger needed to open the portal. You are surprised at how intricate the ritual is. There is also a section about blessing a knife, but when it gets to the actual blessing, it is written in a language you do not understand.\n
+EventDVMRescueBoyReadPage3Base.button1,Continue
+EventDVMRescueBoyReadPage3TestEnd.text,
+EventDVMRescueBoyReadPage3TestEnd.button1,
+EventDVMRescueBoyReadPage3End.text,
+EventDVMRescueBoyReadPage3End.button1,
+EventDVMRescueBoyReadPage3.button1,Continue
+EventDVMRescueBoyReadPage3.text,
+EventDVMRescueBoyReadPage4Test1.button1,Continue
+EventDVMRescueBoyReadPage4Test1.text,\nPage 4\n\nThe next page delves into the importance of personal sacrifice. A cold chill runs down your spine as you realize that only a precious loved one is enough. <i>The boy from the journal!</i> you think to yourself. <i>He's here somewhere and we're going to find him.</i>\n\n The first time this is read, suffer 1 Horror ({will} negates), then gain 2 {clue} if you don't go Insane.\n
+EventDVMRescueBoyReadPage4Base.text,\nPage 4\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the required sacrifice is large. A cold chill runs down your spine as you realize that only a precious loved one is enough. <i>What kind of monster could do such a thing?”</i> you wonder to yourself. The first time this is read, suffer 1 Horror ({will} negates), then gain 2 {clue} if you don't go Insane.\n
+EventDVMRescueBoyReadPage4Base.button1,Continue
+EventDVMRescueBoyReadPage4TestEnd.text,
+EventDVMRescueBoyReadPage4TestEnd.button1,
+EventDVMRescueBoyReadPage4End.text,
+EventDVMRescueBoyReadPage4End.button1,
+EventDVMRescueBoyReadPage4.button1,Continue
+EventDVMRescueBoyReadPage4.text,
+EventDVMRescueBoyReadPage5Base.text,\nPage 5\n\nThe next page is where the power of the ritual starts to become clear. This page talks about an incantation that begins manifesting the portal in the sacrifice. The revulsion you feel steels your resolve to prevent this from happening again.\n\nWhen you get to the incantation, you realize it is written in the same language as the blessing. You think back to that margin scrawl and wonder if you'll be able to understand it later.\n
+EventDVMRescueBoyReadPage5Base.button1,Continue
+EventDVMRescueBoyReadPage5TestEnd.text,
+EventDVMRescueBoyReadPage5TestEnd.button1,
+EventDVMRescueBoyReadPage5End.text,
+EventDVMRescueBoyReadPage5End.button1,
+EventDVMRescueBoyReadPage5.button1,Continue
+EventDVMRescueBoyReadPage5.text,
+EventDVMRescueBoyReadPage6Base.text,\nPage 6\n\nOnce the portal has manifested, it is weak and unstable. As you read further, the book discusses affixing the elder sign to the portal to stabilize it and hold it open. There is a also something about feeding the elder sign with additional sacrifice, but it isn't clear to you what that means. The book describes the artifact in great detail and how it is used in the ritual. A picture clearly shows what it looks like. The incantation itself is in the same language as the other two. You wonder if your father knew what he was talking about in the front of the book. Gain 2 {clue} the first time you read this page.\n\nYou'll keep an eye out as you wander the house. You must find this artifact before your uncle does if you are going to stop him. \n\nThe first time this is read, something falls out of the book as you turn the page:  gain the {c:QItemSpells} spell and 1 {clue}.\n
+EventDVMRescueBoyReadPage6Base.button1,Continue
+EventDVMRescueBoyReadPage6TestEnd.text,
+EventDVMRescueBoyReadPage6TestEnd.button1,
+EventDVMRescueBoyReadPage6End.text,
+EventDVMRescueBoyReadPage6End.button1,
+EventDVMRescueBoyReadPage6.button1,Continue
+EventDVMRescueBoyReadPage6.text,
+EventDVMRescueBoyReadPage7Test1.button1,Continue
+EventDVMRescueBoyReadPage7Test1.text,\nPage 7\n\Finally, there is commentary and advice. One section discusses ley lines and how they allow you to draw more power for the ritual. The preferred date and time for the ritual is also discussed, with a full moon being the most important.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual. <i>The boy must be down there,</i> you think to yourself.\n
+EventDVMRescueBoyReadPage7Base.text,\nPage 7\n\Finally, there is commentary and advice. One section discusses ley lines and how they allow you to draw more power for the ritual. The preferred date and time for the ritual is also discussed, with a full moon being the most important.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual.\n
+EventDVMRescueBoyReadPage7Base.button1,Continue
+EventDVMRescueBoyReadPage7TestEnd.text,
+EventDVMRescueBoyReadPage7TestEnd.button1,
+EventDVMRescueBoyReadPage7End.text,
+EventDVMRescueBoyReadPage7End.button1,
+EventDVMRescueBoyReadPage7.button1,Continue
+EventDVMRescueBoyReadPage7.text,
+EventDVMRescueBoyReadPage8Test1.button1,Continue
+EventDVMRescueBoyReadPage8Test1.text,\nNow you know where the ritual will be performed and what is needed. You must stop your uncle!\n
+EventDVMRescueBoyReadPage8Test2.button1,Continue
+EventDVMRescueBoyReadPage8Test2.text,\nYou cannot allow a young boy to be sacrificed for this evil. You must find the artifacts before the townspeople do and, now that you think you know where the boy is, get him out of here too.\n
+EventDVMRescueBoyReadPage8Base.text,\n<i>Maybe I need to explore a bit more to figure out what I need to do to stop this madness,</i> you think to yourself.\n
+EventDVMRescueBoyReadPage8Base.button1,Continue
+EventDVMRescueBoyReadPage8TestEnd.text,
+EventDVMRescueBoyReadPage8TestEnd.button1,
+EventDVMRescueBoyReadPage8End.text,
+EventDVMRescueBoyReadPage8End.button1,
+EventDVMRescueBoyReadPage8.button1,Continue
+EventDVMRescueBoyReadPage8.text,
+EventDVMRescueBoyToc1.text,\nThe {c:QItemDVM} looks old and worn with time.\n
+EventDVMRescueBoyToc1.button1,{action} Read Page 1
+EventDVMRescueBoyToc1.button2,Cancel
+EventDVMRescueBoyToc2.text,\nThe book seems to contain spells and you might have special powers. The book is thick and should be looked at more carefully.\n
+EventDVMRescueBoyToc2.button1,Read Page 1
+EventDVMRescueBoyToc2.button2,{action} Read Page 2
+EventDVMRescueBoyToc2.button3,Cancel
+EventDVMRescueBoyToc3.text,\nOpening a portal doesn't sound easy. Read on.\n
+EventDVMRescueBoyToc3.button1,Read Page 1
+EventDVMRescueBoyToc3.button2,Read Page 2
+EventDVMRescueBoyToc3.button3,{action} Read Page 3
+EventDVMRescueBoyToc3.button4,Cancel
+EventDVMRescueBoyToc4.text,\nEach tool seems to need special attention. This will require more study.\n
+EventDVMRescueBoyToc4.button1,Read Page 1
+EventDVMRescueBoyToc4.button2,Read Page 2
+EventDVMRescueBoyToc4.button3,Read Page 3
+EventDVMRescueBoyToc4.button4,{action} Read Page 4
+EventDVMRescueBoyToc4.button5,Cancel
+EventDVMRescueBoyToc5.text,\nWhat kind of monster could kill a child for this? But there's still more.\n
+EventDVMRescueBoyToc5.button1,Read Page 1
+EventDVMRescueBoyToc5.button2,Read Page 2
+EventDVMRescueBoyToc5.button3,Read Page 3
+EventDVMRescueBoyToc5.button4,Read Page 4
+EventDVMRescueBoyToc5.button5,{action} Read Page 5
+EventDVMRescueBoyToc5.button6,Cancel
+EventDVMRescueBoyToc6.text,\nYou hope the margin scrawl in the cover of the book helps is right--daggers and sacrifice are one thing, but the incantation is unreadable. You also wonder where your uncle might be performing the ritual. There are two more entries.\n
+EventDVMRescueBoyToc6.button1,Read Page 1
+EventDVMRescueBoyToc6.button2,Read Page 2
+EventDVMRescueBoyToc6.button3,Read Page 3
+EventDVMRescueBoyToc6.button4,Read Page 4
+EventDVMRescueBoyToc6.button5,Read Page 5
+EventDVMRescueBoyToc6.button6,{action} Read Page 6
+EventDVMRescueBoyToc6.button7,Cancel
+EventDVMRescueBoyToc7.text,\nIt sounds like even more blood is required, and for a moment you wonder where it will come from. Then you remember the journal:  it's you. This is the last page of the ritual.\n
+EventDVMRescueBoyToc7.button1,Read Page 1
+EventDVMRescueBoyToc7.button2,Read Page 2
+EventDVMRescueBoyToc7.button3,Read Page 3
+EventDVMRescueBoyToc7.button4,Read Page 4
+EventDVMRescueBoyToc7.button5,Read Page 5
+EventDVMRescueBoyToc7.button6,Read Page 6
+EventDVMRescueBoyToc7.button7,{action} Read Page 7
+EventDVMRescueBoyToc7.button8,Cancel
+EventDVMRescueBoyToc8.text,\n<i>Maybe I need to explore a bit more to figure out what I need to do to stop this madness,</i> you think to yourself.\n
+EventDVMRescueBoyToc8.button1,Read Page 1
+EventDVMRescueBoyToc8.button2,Read Page 2
+EventDVMRescueBoyToc8.button3,Read Page 3
+EventDVMRescueBoyToc8.button4,Read Page 4
+EventDVMRescueBoyToc8.button5,Read Page 5
+EventDVMRescueBoyToc8.button6,Read Page 6
+EventDVMRescueBoyToc8.button7,Read Page 7
+EventDVMRescueBoyToc8.button8,Cancel
+EventDVMRescueBoyStart.text,
+EventDVMRescueBoyStart.button1,
+EventDVMRescueBoyEnd.text,
+EventDVMStopCultistsReadPage1Base.text,\nPage 1\n\nYou open the book to the first page. It's a table of contents. You quickly scan down and find the spell to open portals. On the inside cover, someone--probably {c:EventChosenInvestigator}'s father--has scrawled a note that reads, “Only my descendants will be able to read this book, and only at the appointed hour. I have seen to this.” \n\nGain 1 {clue} the first time you read this page.\n
+EventDVMStopCultistsReadPage1Base.button1,Continue
+EventDVMStopCultistsReadPage1TestEnd.text,
+EventDVMStopCultistsReadPage1TestEnd.button1,
+EventDVMStopCultistsReadPage1End.text,
+EventDVMStopCultistsReadPage1End.button1,
+EventDVMStopCultistsReadPage1.button1,Continue
+EventDVMStopCultistsReadPage1.text,
+EventDVMStopCultistsReadPage2Base.text,\nPage 2\n\nYou leaf through the book and come across the ritual to open a portal. This part is an overview and list of materials. The list includes a special knife, a chalice, a human skull, some religious icons, and a number of herbs. There's also mention of an “elder sign,” but you aren't sure what that is.\n\n<i>I would do well to find things these first</i>, you think to yourself.\n
+EventDVMStopCultistsReadPage2Base.button1,Continue
+EventDVMStopCultistsReadPage2TestEnd.text,
+EventDVMStopCultistsReadPage2TestEnd.button1,
+EventDVMStopCultistsReadPage2End.text,
+EventDVMStopCultistsReadPage2End.button1,
+EventDVMStopCultistsReadPage2.button1,Continue
+EventDVMStopCultistsReadPage2.text,
+EventDVMStopCultistsReadPage3Base.text,\nPage 3\n\nYou flip the page. Here the book goes into detail about the dagger needed to open the portal. You are surprised at how intricate the ritual is. There is also a section about blessing a knife, but when it gets to the actual blessing, it is written in a language you do not understand.\n
+EventDVMStopCultistsReadPage3Base.button1,Continue
+EventDVMStopCultistsReadPage3TestEnd.text,
+EventDVMStopCultistsReadPage3TestEnd.button1,
+EventDVMStopCultistsReadPage3End.text,
+EventDVMStopCultistsReadPage3End.button1,
+EventDVMStopCultistsReadPage3.button1,Continue
+EventDVMStopCultistsReadPage3.text,
+EventDVMStopCultistsReadPage4Base.text,\nPage 4\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the required sacrifice is large. A cold chill runs down your spine as you realize that only a precious loved one is enough. <i>What kind of monster could do such a thing?</i> you wonder to yourself. The first time you read this, suffer 1 Horror ({will} negates), then gain 2 {clue} if you don't go Insane.\n
+EventDVMStopCultistsReadPage4Base.button1,Continue
+EventDVMStopCultistsReadPage4TestEnd.text,
+EventDVMStopCultistsReadPage4TestEnd.button1,
+EventDVMStopCultistsReadPage4End.text,
+EventDVMStopCultistsReadPage4End.button1,
+EventDVMStopCultistsReadPage4.button1,Continue
+EventDVMStopCultistsReadPage4.text,
+EventDVMStopCultistsReadPage5Base.text,\nPage 5\n\nThe next page is where the power of the ritual starts to become clear. This page talks about an incantation that begins manifesting the portal in the sacrifice. The revulsion you feel steels your resolve to prevent this from happening again.\n\nWhen you get to the incantation, you realize it is written in the same language as the blessing. You think back to that margin scrawl and wonder if you'll be able to understand it later.\n
+EventDVMStopCultistsReadPage5Base.button1,Continue
+EventDVMStopCultistsReadPage5TestEnd.text,
+EventDVMStopCultistsReadPage5TestEnd.button1,
+EventDVMStopCultistsReadPage5End.text,
+EventDVMStopCultistsReadPage5End.button1,
+EventDVMStopCultistsReadPage5.button1,Continue
+EventDVMStopCultistsReadPage5.text,
+EventDVMStopCultistsReadPage6Base.text,\nPage 6\n\nOnce the portal has manifested, it is weak and unstable. As you read further, the book discusses affixing the elder sign to the portal to stabilize it and hold it open. There is a also something about feeding the elder sign with additional sacrifice, but it isn't clear to you what that means. The book describes the artifact in great detail and how it is used in the ritual. A picture clearly shows what it looks like. The incantation itself is in the same language as the other two. You wonder if your father knew what he was talking about in the front of the book. Gain 2 {clue} the first time you read this page.\n\nYou'll keep an eye out as you wander the house. You must find this artifact before your uncle does if you are going to stop him. \n\nThe first time you read this, something falls out of the book as you turn the page:  gain the {c:QItemSpells} spell and 1 {clue}.\n
+EventDVMStopCultistsReadPage6Base.button1,Continue
+EventDVMStopCultistsReadPage6TestEnd.text,
+EventDVMStopCultistsReadPage6TestEnd.button1,
+EventDVMStopCultistsReadPage6End.text,
+EventDVMStopCultistsReadPage6End.button1,
+EventDVMStopCultistsReadPage6.button1,Continue
+EventDVMStopCultistsReadPage6.text,
+EventDVMStopCultistsReadPage7Base.text,\nPage 7\n\Finally, there is commentary and advice. One section discusses ley lines and how they allow you to draw more power for the ritual. The preferred date and time for the ritual is also discussed, with a full moon being the most important.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual.\n\nFinally, there is a paragraph about the importance of the {c:QItemElderSign}; if it cannot be used, the portal will not stabilize and will require constant, low-level sacrifice to remain open.\n
+EventDVMStopCultistsReadPage7Base.button1,Continue
+EventDVMStopCultistsReadPage7TestEnd.text,
+EventDVMStopCultistsReadPage7TestEnd.button1,
+EventDVMStopCultistsReadPage7End.text,
+EventDVMStopCultistsReadPage7End.button1,
+EventDVMStopCultistsReadPage7.button1,Continue
+EventDVMStopCultistsReadPage7.text,
+EventDVMStopCultistsReadPage8Test1.button1,Continue
+EventDVMStopCultistsReadPage8Test1.text,\nNow you know where the ritual will be performed and what is needed. You must stop the townspeople from helping your uncle!\n
+EventDVMStopCultistsReadPage8Base.text,\nNow you know what you need to do before your uncle does:  find the {c:QItemElderSign} and limit the number of townspeople who can be sacrificed for the portal.\n
+EventDVMStopCultistsReadPage8Base.button1,Continue
+EventDVMStopCultistsReadPage8TestEnd.text,
+EventDVMStopCultistsReadPage8TestEnd.button1,
+EventDVMStopCultistsReadPage8End.text,
+EventDVMStopCultistsReadPage8End.button1,
+EventDVMStopCultistsReadPage8.button1,Continue
+EventDVMStopCultistsReadPage8.text,
+EventDVMStopCultistsToc1.text,\nThe {c:QItemDVM} looks old and worn with time.\n
+EventDVMStopCultistsToc1.button1,{action} Read Page 1
+EventDVMStopCultistsToc1.button2,Cancel
+EventDVMStopCultistsToc2.text,\nThe book seems to contain spells and you might have special powers. The book is thick and should be looked at more carefully.\n
+EventDVMStopCultistsToc2.button1,Read Page 1
+EventDVMStopCultistsToc2.button2,{action} Read Page 2
+EventDVMStopCultistsToc2.button3,Cancel
+EventDVMStopCultistsToc3.text,\nOpening a portal doesn't sound easy. Read on.\n
+EventDVMStopCultistsToc3.button1,Read Page 1
+EventDVMStopCultistsToc3.button2,Read Page 2
+EventDVMStopCultistsToc3.button3,{action} Read Page 3
+EventDVMStopCultistsToc3.button4,Cancel
+EventDVMStopCultistsToc4.text,\nEach tool seems to need special attention. This will require more study.\n
+EventDVMStopCultistsToc4.button1,Read Page 1
+EventDVMStopCultistsToc4.button2,Read Page 2
+EventDVMStopCultistsToc4.button3,Read Page 3
+EventDVMStopCultistsToc4.button4,{action} Read Page 4
+EventDVMStopCultistsToc4.button5,Cancel
+EventDVMStopCultistsToc5.text,\nWhat kind of monster could kill a child for this? But there's still more.\n
+EventDVMStopCultistsToc5.button1,Read Page 1
+EventDVMStopCultistsToc5.button2,Read Page 2
+EventDVMStopCultistsToc5.button3,Read Page 3
+EventDVMStopCultistsToc5.button4,Read Page 4
+EventDVMStopCultistsToc5.button5,{action} Read Page 5
+EventDVMStopCultistsToc5.button6,Cancel
+EventDVMStopCultistsToc6.text,\nYou hope the margin scrawl in the cover of the book is right--daggers and sacrifice are one thing, but the incantation is unreadable. You also wonder where your uncle might be performing the ritual. There are only two more entries.\n
+EventDVMStopCultistsToc6.button1,Read Page 1
+EventDVMStopCultistsToc6.button2,Read Page 2
+EventDVMStopCultistsToc6.button3,Read Page 3
+EventDVMStopCultistsToc6.button4,Read Page 4
+EventDVMStopCultistsToc6.button5,Read Page 5
+EventDVMStopCultistsToc6.button6,{action} Read Page 6
+EventDVMStopCultistsToc6.button7,Cancel
+EventDVMStopCultistsToc7.text,\nIt sounds like even more blood is required, and for a moment you wonder where it will come from. Then you remember the journal:  it's you and probably the townfolk as lesser sacrifices. <i>Maybe if I keep them from finding the {c:QItemElderSign}...</i> This is the last page of the ritual.\n
+EventDVMStopCultistsToc7.button1,Read Page 1
+EventDVMStopCultistsToc7.button2,Read Page 2
+EventDVMStopCultistsToc7.button3,Read Page 3
+EventDVMStopCultistsToc7.button4,Read Page 4
+EventDVMStopCultistsToc7.button5,Read Page 5
+EventDVMStopCultistsToc7.button6,Read Page 6
+EventDVMStopCultistsToc7.button7,{action} Read Page 7
+EventDVMStopCultistsToc7.button8,Cancel
+EventDVMStopCultistsToc8.text,\nNow you know what you need to do before your uncle does:  find the {c:QItemElderSign} and limit the number of townspeople who can be sacrificed for the portal.\n
+EventDVMStopCultistsToc8.button1,Read Page 1
+EventDVMStopCultistsToc8.button2,Read Page 2
+EventDVMStopCultistsToc8.button3,Read Page 3
+EventDVMStopCultistsToc8.button4,Read Page 4
+EventDVMStopCultistsToc8.button5,Read Page 5
+EventDVMStopCultistsToc8.button6,Read Page 6
+EventDVMStopCultistsToc8.button7,Read Page 7
+EventDVMStopCultistsToc8.button8,Cancel
+EventDVMStopCultistsStart.text,
+EventDVMStopCultistsStart.button1,
+EventDVMStopCultistsEnd.text,
+EventDvmStopRitualReadPage1Base.text,\nThe portal is open and you must close it quickly. If you have the {c:QItemRitualKnife}, the {c:QItemRitualComponents}, and the {c:QItemElderSignPendant}, you can start now.\n\nOnly {c:EventChosenInvestigator} can perform this ritual and only while standing at the altar. Are you ready to begin?\n
+EventDvmStopRitualReadPage1Base.button1,Continue
+EventDvmStopRitualReadPage1TestEnd.text,
+EventDvmStopRitualReadPage1TestEnd.button1,
+EventDvmStopRitualReadPage1End.text,
+EventDvmStopRitualReadPage1End.button1,
+EventDvmStopRitualReadPage1.button1,Continue
+EventDvmStopRitualReadPage1.text,
+EventDvmStopRitualReadPage2Base.text,\nYou turn to the correct place in the book and lay out the materials on the altar. The pattern is complicated and it takes a few minutes to get right. Your companions are under constant attack by cult members and you can feel the approach of something from the other side. You have to hurry.\n\nDrop the {c:QItemRitualComponents} Unique Item on the altar. It must stay on the altar for the duration of the ritual.\n\nThis step is complete.\n
+EventDvmStopRitualReadPage2Base.button1,Continue
+EventDvmStopRitualReadPage2TestEnd.text,
+EventDvmStopRitualReadPage2TestEnd.button1,
+EventDvmStopRitualReadPage2End.text,
+EventDvmStopRitualReadPage2End.button1,
+EventDvmStopRitualReadPage2.button1,Continue
+EventDvmStopRitualReadPage2.text,
+EventDvmStopRitualReadPage3Base.text,\nYou bring out the {c:QItemRitualDagger}. There is a blessing to speak while holding it. You weren't able to read it before, but as your father wrote, you are able to read it now. That said, you aren't sure if you understand it; if you do, test {lore]; otherwise, test {will} to blunder through and hope for the best. For each Unique Item you have, you may roll 1 extra die.\n
+EventDvmStopRitualReadPage3Base.button1,Continue
+EventDvmStopRitualReadPage3TestEnd.text,
+EventDvmStopRitualReadPage3TestEnd.button1,
+EventDvmStopRitualReadPage3End.text,
+EventDvmStopRitualReadPage3End.button1,
+EventDvmStopRitualReadPage3.button1,Continue
+EventDvmStopRitualReadPage3.text,
+EventDvmStopRitualReadPage4Base.text,\nAs you repeat the incantation, the blade becomes heavier and brighter. The {c:QItemRitualKnife} is ready for what comes next.\n\nThis step is complete.\n
+EventDvmStopRitualReadPage4Base.button1,Continue
+EventDvmStopRitualReadPage4TestEnd.text,
+EventDvmStopRitualReadPage4TestEnd.button1,
+EventDvmStopRitualReadPage4End.text,
+EventDvmStopRitualReadPage4End.button1,
+EventDvmStopRitualReadPage4.button1,Continue
+EventDvmStopRitualReadPage4.text,
+EventDvmStopRitualReadPage5Base.text,\nYou keep repeating the incantation but the {c:QItemRitualDagger} doesn't change. You'll need to keep trying.\n\nSuffer 1 facedown Damage and 1 facedown Horror ({will} negates either).\n
+EventDvmStopRitualReadPage5Base.button1,Continue
+EventDvmStopRitualReadPage5TestEnd.text,
+EventDvmStopRitualReadPage5TestEnd.button1,
+EventDvmStopRitualReadPage5End.text,
+EventDvmStopRitualReadPage5End.button1,
+EventDvmStopRitualReadPage5.button1,Continue
+EventDvmStopRitualReadPage5.text,
+EventDvmStopRitualReadPage6Base.text,\nYou draw the knife across the palm of your hand. A drop of blood wells up and you suddenly wonder if you've drawn enough. Even what you've drawn is making you queasy ({will}). For each Unique Item you have, you may roll 1 extra die.\n
+EventDvmStopRitualReadPage6Base.button1,Continue
+EventDvmStopRitualReadPage6TestEnd.text,
+EventDvmStopRitualReadPage6TestEnd.button1,
+EventDvmStopRitualReadPage6End.text,
+EventDvmStopRitualReadPage6End.button1,
+EventDvmStopRitualReadPage6.button1,Continue
+EventDvmStopRitualReadPage6.text,
+EventDvmStopRitualReadPage7Base.text,\nYou squeeze your hand into a tight fist and blood drips into the chalice. You can't see or hear the chalice change, but you can feel something happen to it.\n\nThis step is complete.\n
+EventDvmStopRitualReadPage7Base.button1,Continue
+EventDvmStopRitualReadPage7TestEnd.text,
+EventDvmStopRitualReadPage7TestEnd.button1,
+EventDvmStopRitualReadPage7End.text,
+EventDvmStopRitualReadPage7End.button1,
+EventDvmStopRitualReadPage7.button1,Continue
+EventDvmStopRitualReadPage7.text,
+EventDvmStopRitualReadPage8Base.text,\nA drop of blood spatters when it hits the cup, but nothing seems to happen. You're going to have to slice deeper. Suffer 2 Horror ({will} negates).\n
+EventDvmStopRitualReadPage8Base.button1,Continue
+EventDvmStopRitualReadPage8TestEnd.text,
+EventDvmStopRitualReadPage8TestEnd.button1,
+EventDvmStopRitualReadPage8End.text,
+EventDvmStopRitualReadPage8End.button1,
+EventDvmStopRitualReadPage8.button1,Continue
+EventDvmStopRitualReadPage8.text,
+EventDvmStopRitualReadPage9Base.text,\nYou can read the first incantation but you aren't sure that you understand it; if you do, test {lore}; otherwise, test {will} and hope for the best. You may roll 1 extra die for each Unique Item you have.\n
+EventDvmStopRitualReadPage9Base.button1,Continue
+EventDvmStopRitualReadPage9TestEnd.text,
+EventDvmStopRitualReadPage9TestEnd.button1,
+EventDvmStopRitualReadPage9End.text,
+EventDvmStopRitualReadPage9End.button1,
+EventDvmStopRitualReadPage9.button1,Continue
+EventDvmStopRitualReadPage9.text,
+EventDvmStopRitualReadPage10Base.text,\nYou feel a welling of power as you speak the last word. The feeling inside you grows and you suddenly feel like you control the cosmos. The portal grows brighter and {c:TokenPortal} screams. You had forgotten about the boy--he will die in this ritual. Suffer 1 facedown Horror.\n\nAs the scream echos in the room, the portal grows dimmer and shrinks slightly. Where it was humming and stable before, it is sputtering, pulsing, and making an electrical sound. It has been weakened, but not closed. It will eventually collapse on its own, but you can do better.\n\nThis step is done.\n
+EventDvmStopRitualReadPage10Base.button1,Continue
+EventDvmStopRitualReadPage10TestEnd.text,
+EventDvmStopRitualReadPage10TestEnd.button1,
+EventDvmStopRitualReadPage10End.text,
+EventDvmStopRitualReadPage10End.button1,
+EventDvmStopRitualReadPage10.button1,Continue
+EventDvmStopRitualReadPage10.text,
+EventDvmStopRitualReadPage11Base.text,\nYou can feel something happen inside but it is not very strong and the portal has not changed. You'll have to try the incantation again.\n\nThe ritual is wearing you down. Suffer 1 facedown Damage and 1 facedown Horror ({strength} negates).\n
+EventDvmStopRitualReadPage11Base.button1,Continue
+EventDvmStopRitualReadPage11TestEnd.text,
+EventDvmStopRitualReadPage11TestEnd.button1,
+EventDvmStopRitualReadPage11End.text,
+EventDvmStopRitualReadPage11End.button1,
+EventDvmStopRitualReadPage11.button1,Continue
+EventDvmStopRitualReadPage11.text,
+EventDvmStopRitualReadPage12Base.text,\nNow you need to draw more blood. You look at your hand and see that it has stopped bleeding. Cutting yourself again will take great courage. Test {will}. For each Unique Item you have, you may roll 1 extra die.\n
+EventDvmStopRitualReadPage12Base.button1,Continue
+EventDvmStopRitualReadPage12TestEnd.text,
+EventDvmStopRitualReadPage12TestEnd.button1,
+EventDvmStopRitualReadPage12End.text,
+EventDvmStopRitualReadPage12End.button1,
+EventDvmStopRitualReadPage12.button1,Continue
+EventDvmStopRitualReadPage12.text,
+EventDvmStopRitualReadPage13Base.text,\nYou feel a welling of power as you speak the last word. The feeling inside you grows and you suddenly feel like you control the cosmos. The portal grows brighter and {c:TokenPortal} screams. You had forgotten about the boy--he will die in this ritual. Suffer 1 facedown Horror.\n\nAs your last word echos in the room, the portal grows dimmer and shrinks slightly. Where it was humming and stable before, now it sputters and pulses. It has been weakened, but not closed. It will eventually collapse on its own, but you can do better.\n\nThis step is done.\n
+EventDvmStopRitualReadPage13Base.button1,Continue
+EventDvmStopRitualReadPage13TestEnd.text,
+EventDvmStopRitualReadPage13TestEnd.button1,
+EventDvmStopRitualReadPage13End.text,
+EventDvmStopRitualReadPage13End.button1,
+EventDvmStopRitualReadPage13.button1,Continue
+EventDvmStopRitualReadPage13.text,
+EventDvmStopRitualReadPage14Base.text,\nA single drop rises from the new slice but doesn't fall. You'll have to try again. Suffer 1 Horror ({will} negates).\n
+EventDvmStopRitualReadPage14Base.button1,Continue
+EventDvmStopRitualReadPage14TestEnd.text,
+EventDvmStopRitualReadPage14TestEnd.button1,
+EventDvmStopRitualReadPage14End.text,
+EventDvmStopRitualReadPage14End.button1,
+EventDvmStopRitualReadPage14.button1,Continue
+EventDvmStopRitualReadPage14.text,
+EventDvmStopRitualReadPage15Base.text,\nAs the portal weakens, the boy regains some strength. He is screaming in pain and terror again.\n\nYou must get this last part right to close and seal the portal. You look at the last incantation and, like the others, while you can read it, you aren't sure you understand it. If you do, test {lore}; otherwise, test {will} to muddle through. You may roll 1 extra die for each Unique Item you have.\n
+EventDvmStopRitualReadPage15Base.button1,Continue
+EventDvmStopRitualReadPage15TestEnd.text,
+EventDvmStopRitualReadPage15TestEnd.button1,
+EventDvmStopRitualReadPage15End.text,
+EventDvmStopRitualReadPage15End.button1,
+EventDvmStopRitualReadPage15.button1,Continue
+EventDvmStopRitualReadPage15.text,
+EventDvmStopRitualReadPage16Base.text,\nAs you complete the incantation, the portal and the {c:QItemElderSignPendant} continue pulsing together. The pendant rises into the air and slowly approaches the portal. The boy screams one last time as the elder sign makes contact with his forehead. The boy goes rigid, then the portal collapses and the boy falls to the ground dead.\n\nThe investigation is over.\n
+EventDvmStopRitualReadPage16Base.button1,Continue
+EventDvmStopRitualReadPage16TestEnd.text,
+EventDvmStopRitualReadPage16TestEnd.button1,
+EventDvmStopRitualReadPage16End.text,
+EventDvmStopRitualReadPage16End.button1,
+EventDvmStopRitualReadPage16.button1,Continue
+EventDvmStopRitualReadPage16.text,
+EventDvmStopRitualReadPage17Base.text,\nThe boy is still screaming and the portal is still open. You know you are close, but you have to keep trying.\n\nSuffer 1 Damage and 1 Horror.\n
+EventDvmStopRitualReadPage17Base.button1,Continue
+EventDvmStopRitualReadPage17TestEnd.text,
+EventDvmStopRitualReadPage17TestEnd.button1,
+EventDvmStopRitualReadPage17End.text,
+EventDvmStopRitualReadPage17End.button1,
+EventDvmStopRitualReadPage17.button1,Continue
+EventDvmStopRitualReadPage17.text,
+EventDvmStopRitualReadPage1Proxy.text,
+EventDvmStopRitualReadPage1Proxy.button1,
+EventDvmStopRitualReadPage2Proxy.text,
+EventDvmStopRitualReadPage2Proxy.button1,
+EventDvmStopRitualReadPage3Proxy.text,
+EventDvmStopRitualReadPage3Proxy.button1,
+EventDvmStopRitualReadPage4Proxy.text,
+EventDvmStopRitualReadPage4Proxy.button1,
+EventDvmStopRitualReadPage5Proxy.text,
+EventDvmStopRitualReadPage5Proxy.button1,
+EventDvmStopRitualReadPage6Proxy.text,
+EventDvmStopRitualReadPage6Proxy.button1,
+EventDvmStopRitualReadPage7Proxy.text,
+EventDvmStopRitualReadPage7Proxy.button1,
+EventDvmStopRitualReadPage8Proxy.text,
+EventDvmStopRitualReadPage8Proxy.button1,
+EventDvmStopRitualReadPage9Proxy.text,
+EventDvmStopRitualReadPage9Proxy.button1,
+EventDvmStopRitualReadPage10Proxy.text,
+EventDvmStopRitualReadPage10Proxy.button1,
+EventDvmStopRitualReadPage11Proxy.text,
+EventDvmStopRitualReadPage11Proxy.button1,
+EventDvmStopRitualReadPage12Proxy.text,
+EventDvmStopRitualReadPage12Proxy.button1,
+EventDvmStopRitualReadPage13Proxy.text,
+EventDvmStopRitualReadPage13Proxy.button1,
+EventDvmStopRitualReadPage14Proxy.text,
+EventDvmStopRitualReadPage14Proxy.button1,
+EventDvmStopRitualReadPage15Proxy.text,
+EventDvmStopRitualReadPage15Proxy.button1,
+EventDvmStopRitualReadPage16Proxy.text,
+EventDvmStopRitualReadPage16Proxy.button1,
+EventDvmStopRitualReadPage17Proxy.text,
+EventDvmStopRitualReadPage17Proxy.button1,
+EventDvmStopRitualStart.text,
+EventDvmStopRitualStart.button1,
+EventDvmStopRitualEnd.text,
+EventDVMStopRitualBeforeReadPage1Base.text,\nPage 1\n\nYou open the book to the first page. It's a table of contents. You quickly scan down and find the spell to close portals. In the margin, someone--probably your father--scrawled a note that reads, “My descendants will be able to read this book, but only at the appointed hour. I have seen to this.” \n\nGain 1 {clue} the first time you read this.\n
+EventDVMStopRitualBeforeReadPage1Base.button1,Continue
+EventDVMStopRitualBeforeReadPage1TestEnd.text,
+EventDVMStopRitualBeforeReadPage1TestEnd.button1,
+EventDVMStopRitualBeforeReadPage1End.text,
+EventDVMStopRitualBeforeReadPage1End.button1,
+EventDVMStopRitualBeforeReadPage1.button1,Continue
+EventDVMStopRitualBeforeReadPage1.text,
+EventDVMStopRitualBeforeReadPage2Base.text,\nPage 2\n\nYou leaf through the book to find the ritual to close a portal. The first part is an overview and list of materials. You'll need a special knife, a chalice, a skull, some religious icons, and a number of herbs. There's also mention of an “elder sign,” but you aren't sure what that is.\n\nYou must find the {c:QItemRitualDagger} Common Item, {c:QItemRitualComponents} Unique Item, and {c:QItemElderSignPendant} Common Item.\n
+EventDVMStopRitualBeforeReadPage2Base.button1,Continue
+EventDVMStopRitualBeforeReadPage2TestEnd.text,
+EventDVMStopRitualBeforeReadPage2TestEnd.button1,
+EventDVMStopRitualBeforeReadPage2End.text,
+EventDVMStopRitualBeforeReadPage2End.button1,
+EventDVMStopRitualBeforeReadPage2.button1,Continue
+EventDVMStopRitualBeforeReadPage2.text,
+EventDVMStopRitualBeforeReadPage3Base.text,\nPage 3\n\nYou flip the page. Here the book goes into detail about the dagger you'll use. There is a long list of steps to follow to prepare it. This will take some study. Gain 1 {clue}.\n\nThere is also a “blessing” you need to speak, but it is in a language you don't read or understand.\n
+EventDVMStopRitualBeforeReadPage3Base.button1,Continue
+EventDVMStopRitualBeforeReadPage3TestEnd.text,
+EventDVMStopRitualBeforeReadPage3TestEnd.button1,
+EventDVMStopRitualBeforeReadPage3End.text,
+EventDVMStopRitualBeforeReadPage3End.button1,
+EventDVMStopRitualBeforeReadPage3.button1,Continue
+EventDVMStopRitualBeforeReadPage3.text,
+EventDVMStopRitualBeforeReadPage4Base.text,\nPage 4\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the sacrifice is small:  a few drops of your own blood. You shudder as you read about using your blood for the ritual. Suffer 1 Horror ({will} negates).\n
+EventDVMStopRitualBeforeReadPage4Base.button1,Continue
+EventDVMStopRitualBeforeReadPage4TestEnd.text,
+EventDVMStopRitualBeforeReadPage4TestEnd.button1,
+EventDVMStopRitualBeforeReadPage4End.text,
+EventDVMStopRitualBeforeReadPage4End.button1,
+EventDVMStopRitualBeforeReadPage4.button1,Continue
+EventDVMStopRitualBeforeReadPage4.text,
+EventDVMStopRitualBeforeReadPage5Base.text,\nPage 5\n\nThe next page is where the power starts to manifest. This page talks about an incantation you'll use to begin collapsing the portal. This first part will weaken it. Even if the second half of the ritual is not completed, the portal will eventually collapse.\n\nSealing the portal will prevent another from being opened near the same location. We want to complete this ritual.\n\nWhen you get to the incantation, you realize it is written in the same language as the blessing. You think back to that margin scrawl and wonder if you'll be able to understand it later.\n
+EventDVMStopRitualBeforeReadPage5Base.button1,Continue
+EventDVMStopRitualBeforeReadPage5TestEnd.text,
+EventDVMStopRitualBeforeReadPage5TestEnd.button1,
+EventDVMStopRitualBeforeReadPage5End.text,
+EventDVMStopRitualBeforeReadPage5End.button1,
+EventDVMStopRitualBeforeReadPage5.button1,Continue
+EventDVMStopRitualBeforeReadPage5.text,
+EventDVMStopRitualBeforeReadPage6Base.text,\nPage 6\n\nOnce the portal is weakened, it must be closed and sealed. Sealing it requires more blood and an elder sign. After reading this section, you understand how the elder sign will be used to close and seal the gate. You wonder how you will find such a thing.\n\nFortunately there is a picture of one next to the description. You'll keep an eye out as you wander the house.\n
+EventDVMStopRitualBeforeReadPage6Base.button1,Continue
+EventDVMStopRitualBeforeReadPage6TestEnd.text,
+EventDVMStopRitualBeforeReadPage6TestEnd.button1,
+EventDVMStopRitualBeforeReadPage6End.text,
+EventDVMStopRitualBeforeReadPage6End.button1,
+EventDVMStopRitualBeforeReadPage6.button1,Continue
+EventDVMStopRitualBeforeReadPage6.text,
+EventDVMStopRitualBeforeReadPage7Base.text,\nPage 7\n\nThe final incantation will close and seal the portal permanently. Another portal could be opened, but not near this one. You think that the incantation is in the same language as the other two. You hope your father knew what he was talking about. Gain 1 {clue}.\n
+EventDVMStopRitualBeforeReadPage7Base.button1,Continue
+EventDVMStopRitualBeforeReadPage7TestEnd.text,
+EventDVMStopRitualBeforeReadPage7TestEnd.button1,
+EventDVMStopRitualBeforeReadPage7End.text,
+EventDVMStopRitualBeforeReadPage7End.button1,
+EventDVMStopRitualBeforeReadPage7.button1,Continue
+EventDVMStopRitualBeforeReadPage7.text,
+EventDVMStopRitualBeforeReadPage8Base.text,\nNow you know how to perform the ritual to close and seal a portal.\n
+EventDVMStopRitualBeforeReadPage8Base.button1,Continue
+EventDVMStopRitualBeforeReadPage8TestEnd.text,
+EventDVMStopRitualBeforeReadPage8TestEnd.button1,
+EventDVMStopRitualBeforeReadPage8End.text,
+EventDVMStopRitualBeforeReadPage8End.button1,
+EventDVMStopRitualBeforeReadPage8.button1,Continue
+EventDVMStopRitualBeforeReadPage8.text,
+EventDVMStopRitualBeforeToc1.text,\nThe {c:QItemDVM} looks old and worn with time.\n
+EventDVMStopRitualBeforeToc1.button1,{action} Read Page 1
+EventDVMStopRitualBeforeToc1.button2,Cancel
+EventDVMStopRitualBeforeToc2.text,\nThe book seems to contain spells and {c:EventChosenInvestigator} might have special powers. The book is thick and should be looked at more carefully.\n
+EventDVMStopRitualBeforeToc2.button1,Read Page 1
+EventDVMStopRitualBeforeToc2.button2,{action} Read Page 2
+EventDVMStopRitualBeforeToc2.button3,Cancel
+EventDVMStopRitualBeforeToc3.text,\nClosing a portal doesn't sound easy. Read on.\n
+EventDVMStopRitualBeforeToc3.button1,Read Page 1
+EventDVMStopRitualBeforeToc3.button2,Read Page 2
+EventDVMStopRitualBeforeToc3.button3,{action} Read Page 3
+EventDVMStopRitualBeforeToc3.button4,Cancel
+EventDVMStopRitualBeforeToc4.text,\nEach tool seems to need special attention. This will require more study.\n
+EventDVMStopRitualBeforeToc4.button1,Read Page 1
+EventDVMStopRitualBeforeToc4.button2,Read Page 2
+EventDVMStopRitualBeforeToc4.button3,Read Page 3
+EventDVMStopRitualBeforeToc4.button4,{action} Read Page 4
+EventDVMStopRitualBeforeToc4.button5,Cancel
+EventDVMStopRitualBeforeToc5.text,\nAdding your own blood to the ritual sends a chill down your spine. There's more.\n
+EventDVMStopRitualBeforeToc5.button1,Read Page 1
+EventDVMStopRitualBeforeToc5.button2,Read Page 2
+EventDVMStopRitualBeforeToc5.button3,Read Page 3
+EventDVMStopRitualBeforeToc5.button4,Read Page 4
+EventDVMStopRitualBeforeToc5.button5,{action} Read Page 5
+EventDVMStopRitualBeforeToc5.button6,Cancel
+EventDVMStopRitualBeforeToc6.text,\nYou hope the margin scrawl on the first page is right--daggers and sacrifice are one thing, but the incantation is unreadable. There are only two more entries.\n
+EventDVMStopRitualBeforeToc6.button1,Read Page 1
+EventDVMStopRitualBeforeToc6.button2,Read Page 2
+EventDVMStopRitualBeforeToc6.button3,Read Page 3
+EventDVMStopRitualBeforeToc6.button4,Read Page 4
+EventDVMStopRitualBeforeToc6.button5,Read Page 5
+EventDVMStopRitualBeforeToc6.button6,{action} Read Page 6
+EventDVMStopRitualBeforeToc6.button7,Cancel
+EventDVMStopRitualBeforeToc7.text,\nEven more blood is required, and it may not be possible to complete the final part of the ritual. This is the last page of the ritual.\n
+EventDVMStopRitualBeforeToc7.button1,Read Page 1
+EventDVMStopRitualBeforeToc7.button2,Read Page 2
+EventDVMStopRitualBeforeToc7.button3,Read Page 3
+EventDVMStopRitualBeforeToc7.button4,Read Page 4
+EventDVMStopRitualBeforeToc7.button5,Read Page 5
+EventDVMStopRitualBeforeToc7.button6,Read Page 6
+EventDVMStopRitualBeforeToc7.button7,{action} Read Page 7
+EventDVMStopRitualBeforeToc7.button8,Cancel
+EventDVMStopRitualBeforeToc8.text,\nNow you know how to perform the ritual to close and seal a portal.\n
+EventDVMStopRitualBeforeToc8.button1,Read Page 1
+EventDVMStopRitualBeforeToc8.button2,Read Page 2
+EventDVMStopRitualBeforeToc8.button3,Read Page 3
+EventDVMStopRitualBeforeToc8.button4,Read Page 4
+EventDVMStopRitualBeforeToc8.button5,Read Page 5
+EventDVMStopRitualBeforeToc8.button6,Read Page 6
+EventDVMStopRitualBeforeToc8.button7,Read Page 7
+EventDVMStopRitualBeforeToc8.button8,Cancel
+EventDVMStopRitualBeforeStart.text,
+EventDVMStopRitualBeforeStart.button1,
+EventDVMStopRitualBeforeEnd.text,
+EventDVMStopRitualAfterStart.text,
+EventDVMStopRitualAfterStart.button1,
+EventDVMStopRitualAfterEnd.text,
+EventOrderedKeepSimpleReadPage1Base.text,\nThis is test page 1\n
+EventOrderedKeepSimpleReadPage1Base.button1,Continue
+EventOrderedKeepSimpleReadPage1TestEnd.text,
+EventOrderedKeepSimpleReadPage1TestEnd.button1,
+EventOrderedKeepSimpleReadPage1End.text,
+EventOrderedKeepSimpleReadPage1End.button1,
+EventOrderedKeepSimpleReadPage1.button1,Continue
+EventOrderedKeepSimpleReadPage1.text,
+EventOrderedKeepSimpleReadPage2Base.text,\nThis is test page 2\n
+EventOrderedKeepSimpleReadPage2Base.button1,Continue
+EventOrderedKeepSimpleReadPage2TestEnd.text,
+EventOrderedKeepSimpleReadPage2TestEnd.button1,
+EventOrderedKeepSimpleReadPage2End.text,
+EventOrderedKeepSimpleReadPage2End.button1,
+EventOrderedKeepSimpleReadPage2.button1,Continue
+EventOrderedKeepSimpleReadPage2.text,
+EventOrderedKeepSimpleReadPage3Base.text,\nThis is test page 3\n
+EventOrderedKeepSimpleReadPage3Base.button1,Continue
+EventOrderedKeepSimpleReadPage3TestEnd.text,
+EventOrderedKeepSimpleReadPage3TestEnd.button1,
+EventOrderedKeepSimpleReadPage3End.text,
+EventOrderedKeepSimpleReadPage3End.button1,
+EventOrderedKeepSimpleReadPage3.button1,Continue
+EventOrderedKeepSimpleReadPage3.text,
+EventOrderedKeepSimpleReadPage4Base.text,\nYou have read all the pages\n
+EventOrderedKeepSimpleReadPage4Base.button1,Continue
+EventOrderedKeepSimpleReadPage4TestEnd.text,
+EventOrderedKeepSimpleReadPage4TestEnd.button1,
+EventOrderedKeepSimpleReadPage4End.text,
+EventOrderedKeepSimpleReadPage4End.button1,
+EventOrderedKeepSimpleReadPage4.button1,Continue
+EventOrderedKeepSimpleReadPage4.text,
+EventOrderedKeepSimpleToc1.text,\nSoon you will read page 1\n
+EventOrderedKeepSimpleToc1.button1,{action} page 1
+EventOrderedKeepSimpleToc1.button2,Cancel
+EventOrderedKeepSimpleToc2.text,\nSoon you will read page 2\n
+EventOrderedKeepSimpleToc2.button1,page 1
+EventOrderedKeepSimpleToc2.button2,{action} page 2
+EventOrderedKeepSimpleToc2.button3,Cancel
+EventOrderedKeepSimpleToc3.text,\nSoon you will read page 3\n
+EventOrderedKeepSimpleToc3.button1,page 1
+EventOrderedKeepSimpleToc3.button2,page 2
+EventOrderedKeepSimpleToc3.button3,{action} page 3
+EventOrderedKeepSimpleToc3.button4,Cancel
+EventOrderedKeepSimpleToc4.text,\nYou have read all the pages\n
+EventOrderedKeepSimpleToc4.button1,page 1
+EventOrderedKeepSimpleToc4.button2,page 2
+EventOrderedKeepSimpleToc4.button3,page 3
+EventOrderedKeepSimpleToc4.button4,Cancel
+EventOrderedKeepSimpleStart.text,
+EventOrderedKeepSimpleStart.button1,
+EventOrderedKeepSimpleEnd.text,
+EventOrderedNoKeepReadPage1Base.text,\nThis is test page 1\n
+EventOrderedNoKeepReadPage1Base.button1,Continue
+EventOrderedNoKeepReadPage1TestEnd.text,
+EventOrderedNoKeepReadPage1TestEnd.button1,
+EventOrderedNoKeepReadPage1End.text,
+EventOrderedNoKeepReadPage1End.button1,
+EventOrderedNoKeepReadPage1.button1,Continue
+EventOrderedNoKeepReadPage1.text,
+EventOrderedNoKeepReadPage2Base.text,\nThis is test page 2\n
+EventOrderedNoKeepReadPage2Base.button1,Continue
+EventOrderedNoKeepReadPage2TestEnd.text,
+EventOrderedNoKeepReadPage2TestEnd.button1,
+EventOrderedNoKeepReadPage2End.text,
+EventOrderedNoKeepReadPage2End.button1,
+EventOrderedNoKeepReadPage2.button1,Continue
+EventOrderedNoKeepReadPage2.text,
+EventOrderedNoKeepReadPage3Base.text,\nThis is test page 3\n
+EventOrderedNoKeepReadPage3Base.button1,Continue
+EventOrderedNoKeepReadPage3TestEnd.text,
+EventOrderedNoKeepReadPage3TestEnd.button1,
+EventOrderedNoKeepReadPage3End.text,
+EventOrderedNoKeepReadPage3End.button1,
+EventOrderedNoKeepReadPage3.button1,Continue
+EventOrderedNoKeepReadPage3.text,
+EventOrderedNoKeepReadPage1Proxy.text,
+EventOrderedNoKeepReadPage1Proxy.button1,
+EventOrderedNoKeepReadPage2Proxy.text,
+EventOrderedNoKeepReadPage2Proxy.button1,
+EventOrderedNoKeepReadPage3Proxy.text,
+EventOrderedNoKeepReadPage3Proxy.button1,
+EventOrderedNoKeepStart.text,
+EventOrderedNoKeepStart.button1,
+EventOrderedNoKeepEnd.text,
+EventOrderedNoKeepLoopReadPage1Base.text,\nThis is test page 1\n
+EventOrderedNoKeepLoopReadPage1Base.button1,Continue
+EventOrderedNoKeepLoopReadPage1TestEnd.text,
+EventOrderedNoKeepLoopReadPage1TestEnd.button1,
+EventOrderedNoKeepLoopReadPage1End.text,
+EventOrderedNoKeepLoopReadPage1End.button1,
+EventOrderedNoKeepLoopReadPage1.button1,Continue
+EventOrderedNoKeepLoopReadPage1.text,
+EventOrderedNoKeepLoopReadPage2Base.text,\nThis is test page 2\n
+EventOrderedNoKeepLoopReadPage2Base.button1,Continue
+EventOrderedNoKeepLoopReadPage2TestEnd.text,
+EventOrderedNoKeepLoopReadPage2TestEnd.button1,
+EventOrderedNoKeepLoopReadPage2End.text,
+EventOrderedNoKeepLoopReadPage2End.button1,
+EventOrderedNoKeepLoopReadPage2.button1,Continue
+EventOrderedNoKeepLoopReadPage2.text,
+EventOrderedNoKeepLoopReadPage3Base.text,\nThis is test page 3\n
+EventOrderedNoKeepLoopReadPage3Base.button1,Continue
+EventOrderedNoKeepLoopReadPage3TestEnd.text,
+EventOrderedNoKeepLoopReadPage3TestEnd.button1,
+EventOrderedNoKeepLoopReadPage3End.text,
+EventOrderedNoKeepLoopReadPage3End.button1,
+EventOrderedNoKeepLoopReadPage3.button1,Continue
+EventOrderedNoKeepLoopReadPage3.text,
+EventOrderedNoKeepLoopReadPage4Base.text,\nThose were 3 pages\n
+EventOrderedNoKeepLoopReadPage4Base.button1,Continue
+EventOrderedNoKeepLoopReadPage4TestEnd.text,
+EventOrderedNoKeepLoopReadPage4TestEnd.button1,
+EventOrderedNoKeepLoopReadPage4End.text,
+EventOrderedNoKeepLoopReadPage4End.button1,
+EventOrderedNoKeepLoopReadPage4.button1,Continue
+EventOrderedNoKeepLoopReadPage4.text,
+EventOrderedNoKeepLoopReadPage1Proxy.text,
+EventOrderedNoKeepLoopReadPage1Proxy.button1,
+EventOrderedNoKeepLoopReadPage2Proxy.text,
+EventOrderedNoKeepLoopReadPage2Proxy.button1,
+EventOrderedNoKeepLoopReadPage3Proxy.text,
+EventOrderedNoKeepLoopReadPage3Proxy.button1,
+EventOrderedNoKeepLoopReadPage4Proxy.text,
+EventOrderedNoKeepLoopReadPage4Proxy.button1,
+EventOrderedNoKeepLoopReadPage4Proxy.text,Those were 3 pages
+EventOrderedNoKeepLoopReadPage4Proxy.button1,Continue
+EventOrderedNoKeepLoopStart.button1,
+EventOrderedNoKeepLoopEnd.text,
 EventRandomKeepReadPage1Base.text,\nThis is test page 1\n
 EventRandomKeepReadPage1Base.button1,Continue
+EventRandomKeepReadPage1TestEnd.text,
+EventRandomKeepReadPage1TestEnd.button1,
 EventRandomKeepReadPage1End.text,
 EventRandomKeepReadPage1End.button1,
 EventRandomKeepReadPage1.button1,Continue
 EventRandomKeepReadPage1.text,
 EventRandomKeepReadPage2Base.text,\nThis is test page 2\n
 EventRandomKeepReadPage2Base.button1,Continue
+EventRandomKeepReadPage2TestEnd.text,
+EventRandomKeepReadPage2TestEnd.button1,
 EventRandomKeepReadPage2End.text,
 EventRandomKeepReadPage2End.button1,
 EventRandomKeepReadPage2.button1,Continue
 EventRandomKeepReadPage2.text,
 EventRandomKeepReadPage3Base.text,\nThis is test page 3\n
 EventRandomKeepReadPage3Base.button1,Continue
+EventRandomKeepReadPage3TestEnd.text,
+EventRandomKeepReadPage3TestEnd.button1,
 EventRandomKeepReadPage3End.text,
 EventRandomKeepReadPage3End.button1,
 EventRandomKeepReadPage3.button1,Continue
 EventRandomKeepReadPage3.text,
 EventRandomKeepReadPage4Base.text,\nYou read all the pages\n
 EventRandomKeepReadPage4Base.button1,Continue
+EventRandomKeepReadPage4TestEnd.text,
+EventRandomKeepReadPage4TestEnd.button1,
 EventRandomKeepReadPage4End.text,
 EventRandomKeepReadPage4End.button1,
 EventRandomKeepReadPage4.button1,Continue
@@ -403,6 +1020,425 @@ EventRandomKeepToc3.button4,{action} page 2
 EventRandomKeepToc3.button5,page 3
 EventRandomKeepToc3.button6,{action} page 3
 EventRandomKeepToc3.button7,Cancel
+EventRandomKeepToc4.text,You read all the pages
+EventRandomKeepToc4.button1,page 1
+EventRandomKeepToc4.button2,{action} page 1
+EventRandomKeepToc4.button3,page 2
+EventRandomKeepToc4.button4,{action} page 2
+EventRandomKeepToc4.button5,page 3
+EventRandomKeepToc4.button6,{action} page 3
+EventRandomKeepToc4.button7,Cancel
+EventRandomKeepTestEnd.text,
+EventRandomKeepTestEnd.button1,
 EventRandomKeepStart.text,
 EventRandomKeepStart.button1,
 EventRandomKeepEnd.text,
+EventRandomNoKeepReadPage1Base.text,\nThis is test page 1\n
+EventRandomNoKeepReadPage1Base.button1,Continue
+EventRandomNoKeepReadPage1TestEnd.text,
+EventRandomNoKeepReadPage1TestEnd.button1,
+EventRandomNoKeepReadPage1End.text,
+EventRandomNoKeepReadPage1End.button1,
+EventRandomNoKeepReadPage1.button1,Continue
+EventRandomNoKeepReadPage1.text,
+EventRandomNoKeepReadPage2Base.text,\nThis is test page 2\n
+EventRandomNoKeepReadPage2Base.button1,Continue
+EventRandomNoKeepReadPage2TestEnd.text,
+EventRandomNoKeepReadPage2TestEnd.button1,
+EventRandomNoKeepReadPage2End.text,
+EventRandomNoKeepReadPage2End.button1,
+EventRandomNoKeepReadPage2.button1,Continue
+EventRandomNoKeepReadPage2.text,
+EventRandomNoKeepReadPage3Base.text,\nThis is test page 3\n
+EventRandomNoKeepReadPage3Base.button1,Continue
+EventRandomNoKeepReadPage3TestEnd.text,
+EventRandomNoKeepReadPage3TestEnd.button1,
+EventRandomNoKeepReadPage3End.text,
+EventRandomNoKeepReadPage3End.button1,
+EventRandomNoKeepReadPage3.button1,Continue
+EventRandomNoKeepReadPage3.text,
+EventRandomNoKeepReadPage4Base.text,\nYou have read all the pages\n
+EventRandomNoKeepReadPage4Base.button1,Continue
+EventRandomNoKeepReadPage4TestEnd.text,
+EventRandomNoKeepReadPage4TestEnd.button1,
+EventRandomNoKeepReadPage4End.text,
+EventRandomNoKeepReadPage4End.button1,
+EventRandomNoKeepReadPage4.button1,Continue
+EventRandomNoKeepReadPage4.text,
+EventRandomNoKeepToc0.text,Soon you will read a page
+EventRandomNoKeepToc0.button1,{action} page 1
+EventRandomNoKeepToc0.button2,{action} page 2
+EventRandomNoKeepToc0.button3,{action} page 3
+EventRandomNoKeepToc0.button4,Cancel
+EventRandomNoKeepToc1.text,You just read page 1
+EventRandomNoKeepToc1.button1,{action} page 1
+EventRandomNoKeepToc1.button2,{action} page 2
+EventRandomNoKeepToc1.button3,{action} page 3
+EventRandomNoKeepToc1.button4,Cancel
+EventRandomNoKeepToc2.text,You just read page 2
+EventRandomNoKeepToc2.button1,{action} page 1
+EventRandomNoKeepToc2.button2,{action} page 2
+EventRandomNoKeepToc2.button3,{action} page 3
+EventRandomNoKeepToc2.button4,Cancel
+EventRandomNoKeepToc3.text,You just read page 3
+EventRandomNoKeepToc3.button1,{action} page 1
+EventRandomNoKeepToc3.button2,{action} page 2
+EventRandomNoKeepToc3.button3,{action} page 3
+EventRandomNoKeepToc3.button4,Cancel
+EventRandomNoKeepToc4.text,You have read all the pages
+EventRandomNoKeepToc4.button1,{action} page 1
+EventRandomNoKeepToc4.button2,{action} page 2
+EventRandomNoKeepToc4.button3,{action} page 3
+EventRandomNoKeepToc4.button4,Cancel
+EventRandomNoKeepTestEnd.text,
+EventRandomNoKeepTestEnd.button1,
+EventRandomNoKeepStart.text,
+EventRandomNoKeepStart.button1,
+EventRandomNoKeepEnd.text,
+EventRescueBoyReadPage1Base.text,\nSarah whispers to your nephew, “Let's head to the chapel to get you out.” She turns to you and says, “Let's go. We don't have much time before the boy is missed.”\n
+EventRescueBoyReadPage1Base.button1,Continue
+EventRescueBoyReadPage1TestEnd.text,
+EventRescueBoyReadPage1TestEnd.button1,
+EventRescueBoyReadPage1End.text,
+EventRescueBoyReadPage1End.button1,
+EventRescueBoyReadPage1.button1,Continue
+EventRescueBoyReadPage1.text,
+EventRescueBoyReadPage2Base.text,\nSarah hisses into your ear, “Hurry. {c:CustomMonsterDavidSmythe} will come looking for us soon.”\n
+EventRescueBoyReadPage2Base.button1,Continue
+EventRescueBoyReadPage2TestEnd.text,
+EventRescueBoyReadPage2TestEnd.button1,
+EventRescueBoyReadPage2End.text,
+EventRescueBoyReadPage2End.button1,
+EventRescueBoyReadPage2.button1,Continue
+EventRescueBoyReadPage2.text,
+EventRescueBoyReadPage3Base.text,\nYou hear men approaching the chapel door. Everyone there runs; move any investigators in the {c:TileChapel} to the {c:TileCrypt}. Clear all Search, Explore, and Interact tokens from the {c:TileChapel}, then place a Sight token as indicated.\n
+EventRescueBoyReadPage3Base.button1,Continue
+EventRescueBoyReadPage3TestEnd.text,
+EventRescueBoyReadPage3TestEnd.button1,
+EventRescueBoyReadPage3End.text,
+EventRescueBoyReadPage3End.button1,
+EventRescueBoyReadPage3.button1,Continue
+EventRescueBoyReadPage3.text,
+EventRescueBoyReadPage1Proxy.text,
+EventRescueBoyReadPage1Proxy.button1,
+EventRescueBoyReadPage2Proxy.text,
+EventRescueBoyReadPage2Proxy.button1,
+EventRescueBoyReadPage3Proxy.text,
+EventRescueBoyReadPage3Proxy.button1,
+EventRescueBoyStart.text,
+EventRescueBoyStart.button1,
+EventRescueBoyEnd.text,
+EventSarahPatterReadPage1Test1.button1,Continue
+EventSarahPatterReadPage1Test1.text,
+EventSarahPatterReadPage1Test2.button1,Continue
+EventSarahPatterReadPage1Test2.text,
+EventSarahPatterReadPage1Base.text,\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemDVM} is a spell book. It contains many powerful spells, including how to open and close portals, and how to interrupt a ritual that has been started. If you cannot stop {c:CustomMonsterDavidSmythe} in time, you may need to perform a closing ritual. Closing portals is easier than opening them but it takes time. With the portal open, many horrors could come through while you are trying to close it. You must be prepared. Read the book carefully and read it soon.”\n
+EventSarahPatterReadPage1Base.button1,Continue
+EventSarahPatterReadPage1TestEnd.text,
+EventSarahPatterReadPage1TestEnd.button1,
+EventSarahPatterReadPage1End.text,
+EventSarahPatterReadPage1End.button1,
+EventSarahPatterReadPage1.button1,Continue
+EventSarahPatterReadPage1.text,
+EventSarahPatterReadPage2Test1.button1,Continue
+EventSarahPatterReadPage2Test1.text,
+EventSarahPatterReadPage2Test2.button1,Continue
+EventSarahPatterReadPage2Test2.text,
+EventSarahPatterReadPage2Base.text,\nSarah whispers to {c:EventChosenInvestigator}, “There’s a part of the house that is too dark to enter without light. The candles you found should help. If we move fast enough, maybe we can stop {c:CustomMonsterDavidSmythe} from opening the portal.”\n
+EventSarahPatterReadPage2Base.button1,Continue
+EventSarahPatterReadPage2TestEnd.text,
+EventSarahPatterReadPage2TestEnd.button1,
+EventSarahPatterReadPage2End.text,
+EventSarahPatterReadPage2End.button1,
+EventSarahPatterReadPage2.button1,Continue
+EventSarahPatterReadPage2.text,
+EventSarahPatterReadPage3Test1.button1,Continue
+EventSarahPatterReadPage3Test1.text,
+EventSarahPatterReadPage3Test2.button1,Continue
+EventSarahPatterReadPage3Test2.text,
+EventSarahPatterReadPage3Base.text,\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemElderSignPendant} is the most important part of the closing ritual. It seals the portal permanently. When the closing ritual was performed 10 years ago, our Uncle Henry was able to close the portal, but he died before he could seal it.”\n
+EventSarahPatterReadPage3Base.button1,Continue
+EventSarahPatterReadPage3TestEnd.text,
+EventSarahPatterReadPage3TestEnd.button1,
+EventSarahPatterReadPage3End.text,
+EventSarahPatterReadPage3End.button1,
+EventSarahPatterReadPage3.button1,Continue
+EventSarahPatterReadPage3.text,
+EventSarahPatterReadPage4Base.text,\nSarah reaches out as if to touch the {c:QItemRitualComponents} you found. “I recognize some of these items from the portal ritual. Both my father and the men who tried to stop my father brought similar items to help with the spells.”\n
+EventSarahPatterReadPage4Base.button1,Continue
+EventSarahPatterReadPage4TestEnd.text,
+EventSarahPatterReadPage4TestEnd.button1,
+EventSarahPatterReadPage4End.text,
+EventSarahPatterReadPage4End.button1,
+EventSarahPatterReadPage4.button1,Continue
+EventSarahPatterReadPage4.text,
+EventSarahPatterReadPage5Base.text,\nSarah looks down and sees you holding the {c:QItemJournal}. “The {c:QItemJournal}! I think its owner wrote down what is happening this week. You should read it carefully.”\n
+EventSarahPatterReadPage5Base.button1,Continue
+EventSarahPatterReadPage5TestEnd.text,
+EventSarahPatterReadPage5TestEnd.button1,
+EventSarahPatterReadPage5End.text,
+EventSarahPatterReadPage5End.button1,
+EventSarahPatterReadPage5.button1,Continue
+EventSarahPatterReadPage5.text,
+EventSarahPatterReadPage6Test1.button1,Continue
+EventSarahPatterReadPage6Test1.text,
+EventSarahPatterReadPage6Test2.button1,Continue
+EventSarahPatterReadPage6Test2.text,
+EventSarahPatterReadPage6Base.text,\nSarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that {c:CustomMonsterDavidSmythe} will open a portal tonight and you must stop him; if you cannot stop him, you will need to close it.”\n
+EventSarahPatterReadPage6Base.button1,Continue
+EventSarahPatterReadPage6TestEnd.text,
+EventSarahPatterReadPage6TestEnd.button1,
+EventSarahPatterReadPage6End.text,
+EventSarahPatterReadPage6End.button1,
+EventSarahPatterReadPage6.button1,Continue
+EventSarahPatterReadPage6.text,
+EventSarahPatterReadPage7Base.text,\nSarah whispers to {c:EventChosenInvestigator}, “The people in this town worship a darker god than most. Most of them want to bring their god to Earth. 10 years ago, my father cast a ritual to summon It. He opened a portal. The power it possessed was breathtaking and I was powerless to stop it. Somehow, Father summoned local townsfolk through the portal to protect his work, even after he was dead. As the portal, I could feel people and monsters approaching and passing through me from the other side.”\n
+EventSarahPatterReadPage7Base.button1,Continue
+EventSarahPatterReadPage7TestEnd.text,
+EventSarahPatterReadPage7TestEnd.button1,
+EventSarahPatterReadPage7End.text,
+EventSarahPatterReadPage7End.button1,
+EventSarahPatterReadPage7.button1,Continue
+EventSarahPatterReadPage7.text,
+EventSarahPatterReadPage8Base.text,\nSarah whispers to {c:EventChosenInvestigator}, “I could feel the god approach from the other side. Suddenly, a group of men broke into the altar chamber and began fighting the locals. One man went to the altar, killed our father, laid out some materials, and spoke words I didn’t understand. He closed the portal while his friends protected him from what came through it.”\n
+EventSarahPatterReadPage8Base.button1,Continue
+EventSarahPatterReadPage8TestEnd.text,
+EventSarahPatterReadPage8TestEnd.button1,
+EventSarahPatterReadPage8End.text,
+EventSarahPatterReadPage8End.button1,
+EventSarahPatterReadPage8.button1,Continue
+EventSarahPatterReadPage8.text,
+EventSarahPatterReadPage9Base.text,\nSarah whispers to {c:EventChosenInvestigator}, “Father believed that personal sacrifice was the most powerful magic. The portal is created by binding power to the body of a loved one. Father used me to summon the portal. The monsters came through me. When the portal closed, I died with it. The pain of the ritual so engulfed me that I can still feel it.”\n
+EventSarahPatterReadPage9Base.button1,Continue
+EventSarahPatterReadPage9TestEnd.text,
+EventSarahPatterReadPage9TestEnd.button1,
+EventSarahPatterReadPage9End.text,
+EventSarahPatterReadPage9End.button1,
+EventSarahPatterReadPage9.button1,Continue
+EventSarahPatterReadPage9.text,
+EventSarahPatterReadPage10Base.text,\nSarah whispers to {c:EventChosenInvestigator}, “You found out what was going to happen a week before the ritual. Members of Father’s church did something to you. After that, you followed orders without question. You helped Father bind me during the ritual. From what they said at the time, you probably cannot remember anything about the ritual or even before then. It's why you don't know who you are or remember what happened that night.”\n
+EventSarahPatterReadPage10Base.button1,Continue
+EventSarahPatterReadPage10TestEnd.text,
+EventSarahPatterReadPage10TestEnd.button1,
+EventSarahPatterReadPage10End.text,
+EventSarahPatterReadPage10End.button1,
+EventSarahPatterReadPage10.button1,Continue
+EventSarahPatterReadPage10.text,
+EventSarahPatterReadPage11Base.text,\nSarah whispers to {c:EventChosenInvestigator}, “The day of the ritual, two of my friends came to visit me. When Father told them I wasn’t allowed out, they sneaked to my window and jumped in when I opened it. Father was furious. I’m not sure who strangled them or who dragged them to the yard. I was burned alive when the portal closed, then my body was dumped with my friends'. It wasn't until then that I knew they were dead.”\n
+EventSarahPatterReadPage11Base.button1,Continue
+EventSarahPatterReadPage11TestEnd.text,
+EventSarahPatterReadPage11TestEnd.button1,
+EventSarahPatterReadPage11End.text,
+EventSarahPatterReadPage11End.button1,
+EventSarahPatterReadPage11.button1,Continue
+EventSarahPatterReadPage11.text,
+EventSarahPatterReadPage12Base.text,\nSarah whispers to {c:EventChosenInvestigator}, “I don’t know who the other men were, but the one who closed the portal was our uncle--Father’s brother. I think there’s something special about our family; there are things only we can do. It’s why Father could summon the portal, and why Uncle Henry could close it.\n\n“You should share the family abilities. You must trust yourself to know what to do.”\n
+EventSarahPatterReadPage12Base.button1,Continue
+EventSarahPatterReadPage12TestEnd.text,
+EventSarahPatterReadPage12TestEnd.button1,
+EventSarahPatterReadPage12End.text,
+EventSarahPatterReadPage12End.button1,
+EventSarahPatterReadPage12.button1,Continue
+EventSarahPatterReadPage12.text,
+EventSarahPatterReadPage1Proxy.text,
+EventSarahPatterReadPage1Proxy.button1,
+EventSarahPatterReadPage2Proxy.text,
+EventSarahPatterReadPage2Proxy.button1,
+EventSarahPatterReadPage3Proxy.text,
+EventSarahPatterReadPage3Proxy.button1,
+EventSarahPatterReadPage4Proxy.text,
+EventSarahPatterReadPage4Proxy.button1,
+EventSarahPatterReadPage5Proxy.text,
+EventSarahPatterReadPage5Proxy.button1,
+EventSarahPatterReadPage6Proxy.text,
+EventSarahPatterReadPage6Proxy.button1,
+EventSarahPatterReadPage7Proxy.text,
+EventSarahPatterReadPage7Proxy.button1,
+EventSarahPatterReadPage8Proxy.text,
+EventSarahPatterReadPage8Proxy.button1,
+EventSarahPatterReadPage9Proxy.text,
+EventSarahPatterReadPage9Proxy.button1,
+EventSarahPatterReadPage10Proxy.text,
+EventSarahPatterReadPage10Proxy.button1,
+EventSarahPatterReadPage11Proxy.text,
+EventSarahPatterReadPage11Proxy.button1,
+EventSarahPatterReadPage12Proxy.text,
+EventSarahPatterReadPage12Proxy.button1,
+EventSarahPatterStart.text,
+EventSarahPatterStart.button1,
+EventSarahPatterEnd.text,
+EventStopCultistsRitualReadPage1Base.text,\nYou freeze as something... <i>happens</> to the house. You aren't sure what it is, but fear clutches your gut as the feeling washes over you.\n\nThen, from deep in the house, you hear a boy screams in pain and terror. He stops abruptly and you feel something in the air, like electricity. The house shudders and everything goes quiet. Sarah's eyes widen and she whispers to {c:EventChosenInvestigator}, “He’s started. The ritual has started. We have to get to the {c:TileAltar} and stop Cousin David.”\n\nAs she finishes, a townsperson in cult robes runs by you, heading toward the altar.”\n\nSarah lights up. “We have the {c:QItemElderSign}. Without it, {c:CustomMonsterDavidSmythe} needs constant sacrifice to keep the gate open. We must kill his followers before they reach him.”\n
+EventStopCultistsRitualReadPage1Base.button1,Continue
+EventStopCultistsRitualReadPage1TestEnd.text,
+EventStopCultistsRitualReadPage1TestEnd.button1,
+EventStopCultistsRitualReadPage1End.text,
+EventStopCultistsRitualReadPage1End.button1,
+EventStopCultistsRitualReadPage1.button1,Continue
+EventStopCultistsRitualReadPage1.text,
+EventStopCultistsRitualReadPage2Base.text,\nYou feel the power of the spell {c:CustomMonsterDavidSmythe} is casting. It both draws you closer and repulses you. A woman screams. The sound pierces the walls of the house, making the windows vibrate in their frames. You feel her take a deep, gasping breath, then she screams again. And again. And again. The screams send a chill through your gut. Each investigator takes 2 Horror ({will} negates).\n\nSarah whispers, “We need to find the ritual and stop {c:CustomMonsterDavidSmythe}.”\n
+EventStopCultistsRitualReadPage2Base.button1,Continue
+EventStopCultistsRitualReadPage2TestEnd.text,
+EventStopCultistsRitualReadPage2TestEnd.button1,
+EventStopCultistsRitualReadPage2End.text,
+EventStopCultistsRitualReadPage2End.button1,
+EventStopCultistsRitualReadPage2.button1,Continue
+EventStopCultistsRitualReadPage2.text,
+EventStopCultistsRitualReadPage3Base.text,\nThe woman’s screaming has stopped and, for a moment, it is silent again... as if the house were taking a breath. Then, though you cannot see it, you can feel the portal spring into being. You hear… <i>something</> moan in pain; you feel the vibrations of it through the house. You know in your gut it’s {c:CustomMonsterDavidSmythe}’s son.\n\nThe feeling of power grows stronger; it radiates through the floorboards and moves through the walls. Sarah whispers, “The portal is open, we have to stop him.”\n\nAs she speaks, another cultist brushes past you, heading toward the ritual.”\n
+EventStopCultistsRitualReadPage3Base.button1,Continue
+EventStopCultistsRitualReadPage3TestEnd.text,
+EventStopCultistsRitualReadPage3TestEnd.button1,
+EventStopCultistsRitualReadPage3End.text,
+EventStopCultistsRitualReadPage3End.button1,
+EventStopCultistsRitualReadPage3.button1,Continue
+EventStopCultistsRitualReadPage3.text,
+EventStopCultistsRitualReadPage4Test1.button1,Continue
+EventStopCultistsRitualReadPage4Test1.text,
+EventStopCultistsRitualReadPage4Test2.button1,Continue
+EventStopCultistsRitualReadPage4Test2.text,
+EventStopCultistsRitualReadPage4Base.text,\nSarah whispers, “We must hurry. What he is summoning is getting closer. I can feel it.”\n
+EventStopCultistsRitualReadPage4Base.button1,Continue
+EventStopCultistsRitualReadPage4TestEnd.text,
+EventStopCultistsRitualReadPage4TestEnd.button1,
+EventStopCultistsRitualReadPage4End.text,
+EventStopCultistsRitualReadPage4End.button1,
+EventStopCultistsRitualReadPage4.button1,Continue
+EventStopCultistsRitualReadPage4.text,
+EventStopCultistsRitualReadPage5Base.text,\n\n
+EventStopCultistsRitualReadPage5Base.button1,Continue
+EventStopCultistsRitualReadPage5TestEnd.text,
+EventStopCultistsRitualReadPage5TestEnd.button1,
+EventStopCultistsRitualReadPage5End.text,
+EventStopCultistsRitualReadPage5End.button1,
+EventStopCultistsRitualReadPage5.button1,Continue
+EventStopCultistsRitualReadPage5.text,
+EventStopCultistsRitualReadPage1Proxy.text,
+EventStopCultistsRitualReadPage1Proxy.button1,
+EventStopCultistsRitualReadPage2Proxy.text,
+EventStopCultistsRitualReadPage2Proxy.button1,
+EventStopCultistsRitualReadPage3Proxy.text,
+EventStopCultistsRitualReadPage3Proxy.button1,
+EventStopCultistsRitualReadPage4Proxy.text,
+EventStopCultistsRitualReadPage4Proxy.button1,
+EventStopCultistsRitualReadPage5Proxy.text,
+EventStopCultistsRitualReadPage5Proxy.button1,
+EventStopCultistsRitualStart.text,
+EventStopCultistsRitualStart.button1,
+EventStopCultistsRitualEnd.text,
+EventJournalReadPage1Base.text,\n25 October 1925\n\nI’ve decided to record what happens this week. After three generations of Smythes making the attempt, I think the Master will finally bring Our God into this world. This time, there will be no mistakes. His uncle failed 10 years ago, but the Master will not. We are gathering supplies, preparing the altar, and looking for the right people to help us. We will sacrifice His son in the ritual. He says it is painful to think about--His son is so young--but that is what sacrifice is. The Master is a great man.\n
+EventJournalReadPage1Base.button1,Continue
+EventJournalReadPage1TestEnd.text,
+EventJournalReadPage1TestEnd.button1,
+EventJournalReadPage1End.text,
+EventJournalReadPage1End.button1,
+EventJournalReadPage1.button1,Continue
+EventJournalReadPage1.text,
+EventJournalReadPage2Base.text,\n26 October 1925\n\nThe Master told us that we could all die in the ritual. The hunger of Our God's arrival will drain us. But he thinks we can supply Its Greatness from another source. I hired a local cleaning company to come to the house the day of the ritual. They should protect us.\n
+EventJournalReadPage2Base.button1,Continue
+EventJournalReadPage2TestEnd.text,
+EventJournalReadPage2TestEnd.button1,
+EventJournalReadPage2End.text,
+EventJournalReadPage2End.button1,
+EventJournalReadPage2.button1,Continue
+EventJournalReadPage2.text,
+EventJournalReadPage3Base.text,\n27 October 1925\n\nPreparations continue. The ritual will test the Master and maybe break him. He counts on the healing stone to see him through, but one of the church members lost it. The Master told me he will use her instead. He said it wasn't much of a sacrifice, but it would be enough when the time comes.\n
+EventJournalReadPage3Base.button1,Continue
+EventJournalReadPage3TestEnd.text,
+EventJournalReadPage3TestEnd.button1,
+EventJournalReadPage3End.text,
+EventJournalReadPage3End.button1,
+EventJournalReadPage3.button1,Continue
+EventJournalReadPage3.text,
+EventJournalReadPage4Base.text,\n28 October 1925\n\nThe Master has prepared his son all week. The boy is isolated. The Master says his son's fear will provide the power needed to create the portal.\n\nThe boy's screaming kept me awake last night. It hurts to hear, but the Master told me this morning that power is drawing into him, making him stronger for Saturday.\n
+EventJournalReadPage4Base.button1,Continue
+EventJournalReadPage4TestEnd.text,
+EventJournalReadPage4TestEnd.button1,
+EventJournalReadPage4End.text,
+EventJournalReadPage4End.button1,
+EventJournalReadPage4.button1,Continue
+EventJournalReadPage4.text,
+EventJournalReadPage5Base.text,\n29 October 1925\n\nKids broke into the house yesterday. One of the Brothers chased them off, but not before they broke into the basement. We secured the door with a special lock and cast a living darkness spell on the room. I piled boxes in front of the entrance to the place of power beneath the house. No one will find their way to the altar before Saturday.\n
+EventJournalReadPage5Base.button1,Continue
+EventJournalReadPage5TestEnd.text,
+EventJournalReadPage5TestEnd.button1,
+EventJournalReadPage5End.text,
+EventJournalReadPage5End.button1,
+EventJournalReadPage5.button1,Continue
+EventJournalReadPage5.text,
+EventJournalReadPage6Base.text,\n30 October 1925\n\nThe cleaning crew will be here tomorrow to start on the house. Everything is prepared for the ritual; I can feel the fear and excitement building in all of us. Soon the world will belong to the One True God.\n\nThe Master's son continues to plead for his life during the day, then screams in the night. The Master told me in confidence the he yearns to stop, but that he must keep his commitment and see this through.\n\nThe boy has been moved to the dungeon outside the altar room. There is a hole in the wall that he stares through when he's not begging or screaming. The altar is visible through the hole; looking at it terrifies the boy. I can no longer hear him, but I can feel his fear from across the town. I will be strong.\n
+EventJournalReadPage6Base.button1,Continue
+EventJournalReadPage6TestEnd.text,
+EventJournalReadPage6TestEnd.button1,
+EventJournalReadPage6End.text,
+EventJournalReadPage6End.button1,
+EventJournalReadPage6.button1,Continue
+EventJournalReadPage6.text,
+EventJournalReadPage7Base.text,\n31 October 1925\n\nAll the preparations are made. Tonight we will bring Its power to this world.\n\nThis morning, the Master told me that something is bothering him, but that he cannot put his finger on what. He said something has changed, like there is another power in the house. My brethren have combed the house and can find nothing. I hope the Master is wrong.\n\nThe woman who lost the stone is already at the altar. Her husband pleaded with me to help him find the stone, so I'm going to search the chapel one more time. For his sake, I hope we find it.\n\nThe cleaning crew are due here momentarily. They will be here until they are... needed. The plan is set in motion.\n
+EventJournalReadPage7Base.button1,Continue
+EventJournalReadPage7TestEnd.text,
+EventJournalReadPage7TestEnd.button1,
+EventJournalReadPage7End.text,
+EventJournalReadPage7End.button1,
+EventJournalReadPage7.button1,Continue
+EventJournalReadPage7.text,
+EventJournalReadPage8Base.text,\nThis evil must be stopped. Now you know when and where the ritual will take place. You must hurry.\n
+EventJournalReadPage8Base.button1,Continue
+EventJournalReadPage8TestEnd.text,
+EventJournalReadPage8TestEnd.button1,
+EventJournalReadPage8End.text,
+EventJournalReadPage8End.button1,
+EventJournalReadPage8.button1,Continue
+EventJournalReadPage8.text,
+EventJournalToc1.text,\nThe book looks new. When you flip through it, you see that there are only a few entries. The first one is last Sunday.\n
+EventJournalToc1.button1,{action} Read Page 1
+EventJournalToc1.button2,Cancel
+EventJournalToc2.text,\nYou wonder how a family could work tirelessly over so many generations to commit such evil.\n
+EventJournalToc2.button1,Read Page 1
+EventJournalToc2.button2,{action} Read Page 2
+EventJournalToc2.button3,Cancel
+EventJournalToc3.text,\nYou are shocked to learn that you are here to protect their lives. You are determined to stop them from killing you.\n
+EventJournalToc3.button1,Read Page 1
+EventJournalToc3.button2,Read Page 2
+EventJournalToc3.button3,{action} Read Page 3
+EventJournalToc3.button4,Cancel
+EventJournalToc4.text,\nThese people are ruthless:  a member loses something and will pay for it with her life. These people must be stopped.\n
+EventJournalToc4.button1,Read Page 1
+EventJournalToc4.button2,Read Page 2
+EventJournalToc4.button3,Read Page 3
+EventJournalToc4.button4,{action} Read Page 4
+EventJournalToc4.button5,Cancel
+EventJournalToc5.text,\nHis son?! How can he sacrifice his own son? The depth of this depravity inspires awe.\n
+EventJournalToc5.button1,Read Page 1
+EventJournalToc5.button2,Read Page 2
+EventJournalToc5.button3,Read Page 3
+EventJournalToc5.button4,Read Page 4
+EventJournalToc5.button5,{action} Read Page 5
+EventJournalToc5.button6,Cancel
+EventJournalToc6.text,\nThere are two more entries. These people must be stopped.\n
+EventJournalToc6.button1,Read Page 1
+EventJournalToc6.button2,Read Page 2
+EventJournalToc6.button3,Read Page 3
+EventJournalToc6.button4,Read Page 4
+EventJournalToc6.button5,Read Page 5
+EventJournalToc6.button6,{action} Read Page 6
+EventJournalToc6.button7,Cancel
+EventJournalToc7.text,\nWe are here to feed their god, but that will not happen. We will put an end to this.\n
+EventJournalToc7.button1,Read Page 1
+EventJournalToc7.button2,Read Page 2
+EventJournalToc7.button3,Read Page 3
+EventJournalToc7.button4,Read Page 4
+EventJournalToc7.button5,Read Page 5
+EventJournalToc7.button6,Read Page 6
+EventJournalToc7.button7,{action} Read Page 7
+EventJournalToc7.button8,Cancel
+EventJournalToc8.text,\nThis evil must be stopped. Now you know when and where the ritual will take place. You must hurry.\n
+EventJournalToc8.button1,Read Page 1
+EventJournalToc8.button2,Read Page 2
+EventJournalToc8.button3,Read Page 3
+EventJournalToc8.button4,Read Page 4
+EventJournalToc8.button5,Read Page 5
+EventJournalToc8.button6,Read Page 6
+EventJournalToc8.button7,Read Page 7
+EventJournalToc8.button8,Cancel
+EventJournalStart.text,
+EventJournalStart.button1,
+EventJournalEnd.text,
