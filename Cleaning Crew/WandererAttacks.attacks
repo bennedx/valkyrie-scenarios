@@ -1,3 +1,5 @@
+language|English
+
 StrengthDamage
 The cultist grabs you by the collar and swings you around. You need to get away, but you aren't sure if you can pull loose. ({strength};2) If you pass, the cultist swings but you keep your footing; you may move one space. If you fail, the cultist tosses you across the room; suffer 1 facedown Damage ({agility} negates), then move your investigator 1 space toward the Dining Room.
 
@@ -5,7 +7,7 @@ StrengthStunned
 The cultist runs up on you with his fist cocked. This could be bad. ({strength};2) If you pass, you block the blows. If you fail, he cold-cocks you; become Stunned.
 
 StrengthDazed
-The cultist looks around to find something to use. He grabs a heavy brass candlestick and raises it to strike you. ({strength};2) If you pass you reach up and stop his downward swing. If you fail, he hits you over the head; become Dazed.
+The cultist looks around to find something of use. He grabs a heavy brass candlestick and raises it to strike you. ({strength};2) If you pass you reach up and stop his downward swing. If you fail, he hits you over the head; become Dazed.
 
 StrengthRestrained
 The cultist pulls out a whip and flicks it toward your leg. It wraps around both of them, making you unable to move. You reach down to grab the whip and pull. ({strength};2) If you pass, you pull the cultist off his feet; he suffers 1 Damage. If you fail, he yanks the whip and pulls your feet from under you; become Restrained.
@@ -14,7 +16,7 @@ AgilityDamage
 The cultist reaches under his robes and pulls out an ornate knife. In one swift move, he slashes you. ({agility};2) If you pass, you dodge the blade. If you fail, the cultist cuts your arm; suffer 1 facedown damage ({agility} negates).
 
 AgilityStunned
-You see the cultist glancing at the vase on the table next to you. You try to beat him to the punch. ({agility};2}) If you pass, you grab the vase first; the cultist suffers 1 Damage. If you fail, the cultist cracks the vase on your head; become Stunned.
+You see the cultist glancing at the vase on the table next to you. You try to beat him to it. ({agility};2}) If you pass, you grab the vase first; the cultist suffers 1 Damage. If you fail, the cultist cracks the vase across your left temple; become Stunned.
 
 AgilityDazed
 The cultist grabs you and pushes you to the ground. As you fall, you try to avoid the sharp corner of the table. ({agility};2) If you pass, you twist out of the way. If you fail, you hit the table; become Dazed.
@@ -23,19 +25,19 @@ AgilityRestrained
 The cultist pulls an ugly stone carving out of his pocket, mumbles something about "intruders" and "ritual," then begins speaking to the stone. When the cultist reaches forward to point at your feet, you jump. ({agility};2) If you pass, you jump just as the blackness swirls where your legs were. If you fail, the blackness coils around your legs; become Restrained.
 
 ObservationDamaged
-The cultist walks up to you, hands open, and starts talking to you, telling you the history of the Smythe family. As he talks, his hands slowly drop. ({observation};2) If you pass, you see him slide one of his hands under his robe, and you punch him hard; the cultist suffers 1 damage. If you fail, the cultist pulls a knife and stabs you; suffer 1 facedown damage ({agility} negates).
+With his hands open and raised to reassure you, the cultist starts talking to you, telling you the history of the Smythe family. As he talks, his hands slowly drop. ({observation};2) If you pass, you see him slide one of his hands under his robe, and you punch him hard; the cultist suffers 1 damage. If you fail, the cultist pulls a knife and stabs you; suffer 1 facedown damage ({agility} negates).
 
 ObservationStunned
-The cultist throws white powder at your feet and says something you cannot understand. The dust begins to rise, surrounding you.({observation};2) If you pass, you notice that the cultist is speaking to an ugly stone carving in his hand; you reach out, knock it from his fingers, and the dust settles. If you fail, the dust rises around your face and makes you feel... funny. Become Stunned.
+The cultist throws white powder at your feet and says something you cannot understand. The dust begins to rise all around you.({observation};2) If you pass, you notice that the cultist is speaking to an ugly stone carving in his hand; you reach out, knock it from his fingers, and the dust settles. If you fail, the dust rises around your face and makes you feel... funny. Become Stunned.
 
 ObservationDazed
 The cultist creeps into the room, watching you paw through drawers to steal things; he sneaks up on you. He gets behind you and... ({observation};2) If you pass, you swing around and find him with his arms raised and a look of surprise on his face:  you punch the cultist hard in the gut; the cultist suffers 1 damage. If you fail, the cultist punches you in the back of the head; become Dazed.
 
 ObservationRestrained
-The cultist leans over and does something at his feet. When he stands up, he makes eye contact with you and smiles. ({observation};2) If you pass, you glance down and see the snake heading toward your feet; move 1 space toward the dining room. If you fail, the snake grows thicker as it coils around your legs; suffer 1 Horror ({will} negates) and become Restrained.
+The cultist leans over and does something at his feet. When he stands up, he makes eye contact with you and smiles. ({observation};2) If you pass, you glance down and see a snake slithering toward you; move 1 space toward the dining room.\n\nIf you fail, the snake grows thicker as it coils around your legs; suffer 1 horror. ({will} negates) Suddenly the snake putrifies into something sticky; become Restrained. 
 
 LoreDamage
-The cultist raises a hand to his mouth and begins speaking a language you don't understand. As he speaks, you get the sensation that you know what is going to happen. ({lore};2) If you pass, you anticipate the small explosion and step aside. If you fail, the cultist casts his curse and zaps your feet, making you feel a surge of debilitating electricity from floor to hat; suffer 1 damage ({agility} negates).
+The cultist raises a hand to his mouth and begins speaking a language you don't understand. As he speaks, you get the sensation that you know what is going to happen. ({lore};2) If you pass, you anticipate the small explosion and step aside. If you fail, the cultist casts his curse at your feet, making you feel a surge of debilitating electricity from floor to hat; suffer 1 damage ({agility} negates).
 
 LoreStunned
 The cultist pulls... something from underneath his robe; the device is making funny noises. It looks something like the {c:QItemFluxStabilizer} you found earlier, but different; maybe you know what it is. ({lore};2) If you fail, the device goes off, blinding you with a flash of light; become Stunned. If you pass, you close your eyes at the last moment.
@@ -44,13 +46,13 @@ LoreDazed
 The cultist begins casting a curse. You might know this one. ({lore};2) If you pass, you speak the correct counter-curse. If you fail, a fog surrounds your head, then sinks in, confusing you and, for a moment, it feels as if Sarah is speaking to you in the same language as the cultist; become Dazed.
 
 LoreRestrained
-The cultist pours out a circle of dust and speaks in a language you do not understand, though you think you heard "David." ({lore};2) If you succeed, the dust just sits there. If you fail, the circle slides across the floor, under your feet and up your legs where it binds you; become Restrained.
+The cultist pours out a circle of dust and speaks in a language you do not understand, though you think you heard "David." You hope for the best. ({lore};2) If you succeed, the dust just sits there while the frustrated cultist continues mumbling. If you fail, the circle slides across the floor, under your feet, and up your legs where it binds you; become Restrained.
 
 InfluenceDamaged
-The cultist comes at you, threatening to beat you senseless for trying to stop the Master. You compliment him on his shoes. ({influence};2) If you pass, he is thrown off guard and starts talking to you about the cobbler in town who made them. If you fail, he makes good on his threat; suffer 1 facedown damage ({agility} negates).
+The cultist comes at you, threatening to beat you senseless for trying to stop the Master. You compliment him on his shoes. ({influence};2) If you pass, he is thrown off guard and starts talking to you about the cobbler who made them. If you fail, he makes good on his threat; suffer 1 facedown damage ({agility} negates).
 
 InfluenceStunned
-The cultist throws rope around your legs to hold you in place. You try to convince the cultist you share his goals. ({influence};2) If you pass, the cultist removes the rope. If you fail, the cultist yanks the rope, causing you to fall; become Stunned.
+The cultist throws rope around your legs to hold you in place. You try to convince the cultist you share his goals. ({influence};2) If you pass, the cultist removes the rope as he tells you how surprised he is that you are kindred spirits. If you fail, the cultist yanks the rope, causing you to fall; become Stunned.
 
 InfluenceDazed
 The cultist approaches you with a friendly smile and tries to get you to see it from his perspective. Can you keep your wits? ({influence};2) If you pass, you are not fooled. If you fail, you begin to believe in the righteousness of his cause; become Dazed.
@@ -64,44 +66,44 @@ The cultist takes a deep breath and raises his arms. As they go up, he grows tal
 The cultist speaks words of power and you feel them creeping into you. You must be strong. ({will};2) If you pass, the energy washes harmlessly over you. If you fail, the words bind you and, for a moment, you can see the ceremony that is to come; suffer 1 facedown horror ({will} negates) and become Stunned.
 
 WillDazed
-The cultist closes his eyes and begins speaking in a language you do not understand. Knowing he will try to stop you at any cost, you attempt to sneak up on him. The effort is nerve-wracking and you are starting to shake. ({will};2) If you pass, you whack the cultist as he completes his curse; the cultist suffers 1 damage. If you fail, the cultist completes the curse as you stumble; become Dazed.
+The cultist closes his eyes and begins speaking in a language you do not understand. Knowing he will try to stop you at any cost, you attempt to sneak up on him. The effort is nerve-wracking and you are starting to shake. ({will};2) If you pass, you whack the cultist as he completes his curse; the cultist suffers 1 damage. If you fail, you lose your nerve and the cultist completes the curse; become Dazed.
 
 WillRestrained
 The cultist raises his arms, looks up, and begins speaking in a language you do not understand. You can feel something happen to you as the cultist speaks. ({will};2) If you pass, you withstand the attack. If you fail, something changes, as if old Mr Smythe had touched you. Become Restrained.
 
 List
-*|exploredBasement,>,0|In a voice that reverberates through the house, the cultist cries out, "Brothers! They have made it to the basement. They must be stopped." Each investigator on the ground floor of the house--but not in the Chapel--suffers 1 Horror ({will} negates).
+*|exploredBasement,>,0|In a voice that reverberates through the house, the cultist cries out, "Brothers! They have made it to the basement. They must be stopped." Each investigator on the ground floor of the house suffers 1 Horror ({will} negates).
 
 *|exploredBasement,==,0 exploredBasementViaDiningRoom,==,1|"I will not allow you into the basement," he says to you. He raises a fist. ({strength};2) If you pass, you block his attack and counter with a punch of your own; the cultist suffers 1 damage. If you fail, he boxes your ears; become Stunned.
 
 *|foundDWM,>,0|"You cannot be allowed to leave with the Master's book." He moves as if to grab you by the lapels. ({agility};2) If you pass, you step out of the way and push the cultist to the ground from behind. If you fail, the cultist grabs you, throws you to the ground, and pins you; become Restrained.
 
-*|foundCandles,>,0 exploredBasement,==,0|"Brothers! They have found what they need to explore the basement. We must stop them!" He turns and throws something to the ground. ({observation};2) If you pass, you see what he is doing and turn your head. If you fail, you watch the thing hit the ground... and a flash of light blinds you; become Dazed.
+*|foundCandles,>,0 exploredBasementViaDiningRoom,>,0 exploredBasement,==,0|"Brothers! They have found what they need to explore the basement. We must stop them!" He turns and throws something to the ground. ({observation};2) If you pass, you see what he is doing and turn your head. If you fail, you watch the thing hit the ground... and a flash of light blinds you; become Dazed.
 
 *|foundCandles,>,0|The cultist shouts something about the basement and shakes you. Drop the {c:QItemCandles}. If you are not carrying them, become Dazed from the shaking.
 
 *|wanderersKilled,>,5|The cultist looks around; waves of horror and anger cross his face. He raises he arms and cries, "Brothers! I have found {var:wanderersKilled} of our brethren dead. I call upon the One True Power!" Each investigator not carrying a {c:QItemFluxStabilizer} tests {will}. If you pass, you withstand the rush of evil that passes up through the house. If you fail, suffer 1 Horror ({will} negates) and become Stunned. If all investigators who rolled pass, the power of your collective wills lifts everyone's spirits:  each investigator may discard 1 hooror.
 
-*|exploredGateNicely,==,0|"You would destroy the Master's house with your brutality. You must be stopped!" The cultist moves to push you. ({strength};2) If you pass, you push back hard against the cultist. If you fail, he pushes you off-balance and you fall hard to the floor; become Stunned.
+*|exploredGateNicely,==,0|"You would destroy the Master's house with your brutality. You must be stopped!" The cultist moves to push you. ({strength};2) If you pass, you push back hard against the cultist. If you fail, he pushes you off-balance and you fall hard to the floor; become Stunned.\n\n<i>I really should have been more careful with that gate</i>, you think to yourself.
 
 *|chapelPriestDead,>,0|"You have killed our High Priest. You shall pay." The cultist raises his hands, looks upward, and begins chanting. ({lore};2) If you pass, you recognize enough of the words to know what is about to happen. If you fail, you are caught off-guard as a frozen wind sweeps through you, freezing you solid for a moment; become Restrained.
 
-*|foundDWM,>,0|"They have found The Master's sacred text", the cultist wails. "They must not keep it!" The cultist raises his staff and slams the end to the floor. With a cracking sound, the room shakes and lightning erupts from the base of the staff. ({agility};2) If you pass, you leap toward the cultist as the attack peaks, avoiding it. If you fail, the ball of lightning strikes you in the chest, blinding you with a flash of light; suffer 1 damage ({agility} negates), become Dazed, and drop the {c:QItemDVM} if you are carrying it.
+*|foundDWM,>,0|"They have found The Master's sacred text," the cultist wails. "They must not keep it!" The cultist raises his staff and slams the end to the floor. With a cracking sound, lightning erupts from the base of the staff. ({agility};2) If you pass, you leap toward the cultist and over the attack. If you fail, the lightning strikes you in the chest, blinding you with a flash of light; suffer 1 damage ({agility} negates), become Dazed, and drop the {c:QItemDVM} if you are carrying it.
 
 *|foundRitualKnife,>,0|"You have found the knife, but we will take it from you," the cultist threatens. The cultist flies at you with surprising speed, trying to knock you off your feet. ({observation};2) If you pass, at the last moment you see where the cultist will hit and twist away. If you fail, the cultist slams your chest, knocking you to the ground; suffer 1 Damage ({agility} negates), become Restrained, and drop the {c:QItemRitualDagger} if you are carrying it.
 
-*|foundRitualComponents,>,0|The cultist rushes into the room, intent on catching up with you. "You cannot steal our most sacred chalice with impunity," he cries. He has nearly reached you. ({will};2) If you pass, you stand your ground as the cultist tries to pummel you. If you fail, you flinch and are unable to defend yourself as the cultist sends a quick blow to the head; become Dazed and drop the {c:QItemRitualComponents} if you are carrying them.
+*|foundRitualComponents,>,0|The cultist rushes into the room, intent on catching up with you. "You cannot steal our most sacred chalice," he cries. He has nearly reached you. ({will};2) If you pass, you stand your ground, blocking his attacks as the cultist tries to pummel you. If you fail, you flinch and are unable to defend yourself as the cultist sends a quick blow to your head; become Dazed and drop the {c:QItemRitualComponents} if you are carrying them.
 
-*|foundJournal,>,0|"Have you stolen Brother Benjamin's journal? He trusted you and this is how you respect that trust," the cultist accuses. He raises his arms and begins chanting. You think you may understand what he is doing. ({lore};2) If you pass, you duck as the curse projects itself toward your head. If you fail, the power rushes through your head, overwhelming your senses. Become Dazed.
+*|foundJournal,>,0|"Have you stolen Brother Benjamin's journal? He trusted you and this is how you respect that trust?" the cultist accuses. He raises his arms and begins chanting. You think you may understand what he is doing. ({lore};2) If you pass, you duck as the curse projects itself toward your head. If you fail, the power rushes through your head, overwhelming your senses. Become Dazed.
 
-*|foundJournal,>,0|The cultist calls out to the others, "Brother Benjamin tells us that if they have his journal, the Master's plans could be foiled. The Master wasn't... kind to Benjamin when he found out. We must stop them!"\n\nThe cultist begins chanting. The light flows out of the room and you can feel other cultists joining with him, sending a chill through you. Each investigator suffers 1 Horror ({will} negates); the investigator holding the {c:QItemJournal} drops it.
+*|foundJournal,>,0|The cultist calls out to the others, "Brother Benjamin tells us that if they have his journal, the Master's plans could be foiled. The Master wasn't... kind to Benjamin when he found out. We must stop them!"\n\nThe cultist begins chanting. The light flows out of the room and you can feel other cultists joining with him, sending a chill through you. Each investigator in range suffers 1 Horror ({will} negates); the investigator  range holding the {c:QItemJournal} drops it.
 
 *|foundDWM,>,0 foundRitualKnife,>,0|"The intruders," he calls out, "have found at least two of the items Our Master warned us to protect. We must stop them before it is too late."\n\nThe cultist begins chanting and you feel your energy draining. ({strength};2) If you pass, you rush the cultist and tackle him to the ground; the cultist suffers 2 Damage. If you fail, you suffer 1 Damage ({strength} negates) and 1 Horror ({will} negates).
 
 *|foundDWM,>,0 foundRitualComponents,>,0|The cultist enters the room and says, "You have found some of what you need, but our sacred implements will be kept from you." The cultist takes a swing. ({agility};2) If you pass, you duck in time and punch back; the cultist suffers 2 Damage. If you fail, the cultist clocks you. Become stunned and drop the {c:QItemRitualComponents} if you are carrying them.
 
-*|foundDWM,>,0 foundRitualComponents,>,0 foundRitualKnife,>,0|"They have found everything they need if they can figure out how to use them. We are almost too late, Brothers! Help me!" He raises his arms and begins chanting. The whole house begins to rumble and sway while you try to catch your footing. ({agility};2) If you pass, you hold your ground and stay upright. If you fail, you fall to the round and roll around the room, striking your head repeatedly; become Dazed.
+*|foundDWM,>,0 foundRitualComponents,>,0 foundRitualKnife,>,0|"If they can figure out how to use them, they have found everything they need. We are almost too late, Brothers! Help me!" He raises his arms and begins chanting. The whole house begins to rumble and sway while you try to catch your footing. ({agility};2) If you pass, you hold your ground and stay upright. If you fail, you fall to the round and roll around the room, striking your head repeatedly; become Dazed.\n\nThe sudden shaking startles everyone: each investigator in the house suffers 1 horror. ({will} negates)
 
 *|foundDWM,>,0 foundRitualComponents,>,0 foundRitualKnife,>,0 ritualDone,>,0 dwmReadPage6,>,0|"It is time Brothers," the cultist's voice booms through the house. "We must get to the portal before it is too late." All investigators not carrying a {c:QItemFluxStabilizer} become Restrained.
 
-*|foundDWM,>,0 foundRitualComponents,>,0 foundRitualKnife,>,0 ritual,>,0 dwmReadPage6,>,0 journalReadPage6,>,0|The cultist looks at you and sneers, "You think you are ready, but you are inadequate to challenge the Master." The cultist hurls demeaning insults while massaging a stone in his hand. You can feel the power of his words sinking into you, threatening your self-image. ({will};2) If you pass, you know these are just words. If you fail, your failings sadden and depress you; suffer 1 Horror ({will} negates).
+*|foundDWM,>,0 foundRitualComponents,>,0 foundRitualKnife,>,0 ritual,>,0 dwmReadPage6,>,0 journalReadPage6,>,0|The cultist looks at you and sneers, "You think you are ready, but you are inadequate to challenge the Master." The cultist hurls demeaning insults while massaging a stone in his hand. You can feel the power of his words sinking into you, threatening your self-image and making you feel like you cannot go on. ({will};2) If you pass, you know these are just words. If you fail, your failings sadden and depress you; suffer 1 Horror ({will} negates).

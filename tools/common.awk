@@ -56,8 +56,10 @@ function deleteFile(filename) {
     system("rm -f " filename " >/dev/null &2>/dev/null")
 }
 
-function combineLocalization(header, sourceFile, targetFile,      output, evictThese, line, first) {
-    if (targetFile == "") return;
+function combineLocalization(header, sourceFile, targetFile,
+	output, evictThese, line, first) {
+    
+	if (targetFile == "") return;
 	
 	output = "combineLocalization.temp.txt"
 	printf "" > output    

@@ -5,44 +5,53 @@
 BEGIN   {   header = "EventWandererAttack"
             IGNORECASE = 1
             
-            
             events = ""     # this is the space-delimited list of events that have been created
             separator = ""  # this is the separate used with events; it is set after the first one is added
             
             stories = ""    # this is the space-delimited list of events that are part of the story line
             storiesSeparator = "" # for the story list
             
-            eventsFile = "attack.events.ini"
-            localizationFile = "localization.attack.english.txt"
-			realLocalizationFile = "localization.english.txt"
+			language = "English"
+			realLocalizationFile="Localization.English.txt"
+			localizationFile = "localization.temp.txt"
             deleteFile(eventsFile)
             deleteFile(localizationFile)
+        }
 
-            print ".,English" >> localizationFile
-            
+BEGINFILE { if (FILENAME !~ /.*[.]attacks$/) {
+				printf "Filename must have '.attacks' extension" >> stderr
+				exit
+			}
+
+			split(FILENAME, parts, ".")
+			header = parts[1]
+			eventsFile = header ".events.ini"
+			
             # add the main attack start
-
-            printf "\n[%sStart]\n", header >> eventsFile
+			printf "\n[%sStart]\n", header >> eventsFile
             printf "buttons=1\n" >> eventsFile
             printf "event1=%sStoryStart\n", header >> eventsFile
             printf "operations=wandererAttacked,=,0\n" >> eventsFile
             
             printf "%sStart.button1,Start Attack\n", header >> localizationFile
             printf "%sStoryStart.button1,Look for Story\n", header >> localizationFile
-#print "Done initializing" > stderr   
         }
+
+# language:  specifies the language used in the localization filename and the file's header
+$1 == "language" {
+				language = $2
+				realLocalizationFile = sprintf("Localization.%s.txt", language)
+				next
+			}
 
 # a single word means a new event 
 $0 ~ /^[^ ]+$/ {
             eventName = $0
-            eventCount = 0
-#print ">> New event: " eventName > stderr
             next
         }
 
 # skip blank lines 
 $0 ~ /^$/ {
-#print ">> Skipping blank line" > stderr
             next    # skip this line
         }
         
@@ -54,8 +63,7 @@ $0 ~ /^$/ {
 
 $0 ~ /^[*][|][^|]*[|].*$/ {
             eventCount++
-#print ">> Story line found: " eventCount > stderr            
-            split($0, parts, "|")
+			split($0, parts, "|")
             
             printf "\n[%sStory%s%i]\n", header, eventName, eventCount >> eventsFile
             printf "buttons=1\n" >> eventsFile
@@ -69,14 +77,12 @@ $0 ~ /^[*][|][^|]*[|].*$/ {
             stories = stories storiesSeparator sprintf("%sStory%s%i", header, eventName, eventCount)
             storiesSeparator = " "
 
-#print ">> story line done: " eventCount > stderr
-            next
+           next
         }
        
 
 # all others
         {   eventCount++
-#print ">> non-story line found: " eventCount > stderr
         
             printf "\n[%sGeneral%s%i]\n", header, eventName, eventCount >> eventsFile
             printf "buttons=1\n" >> eventsFile
@@ -88,11 +94,9 @@ $0 ~ /^[*][|][^|]*[|].*$/ {
             
             events = events separator sprintf("%sGeneral%s%i", header, eventName, eventCount)
             separator = " "
-#print ">> non-story line done: " eventCount > stderr
-            }
+		}
         
 END     {
-#print ">> END" > stderr
             # start the list of non-story attacks
             printf "\n[%sGeneralStart]\n", header >> eventsFile
             printf "buttons=1\n" >> eventsFile
@@ -128,6 +132,9 @@ END     {
             printf "%sEnd.text,\n", header >> localizationFile
             printf "%sEnd.button1,Attack End\n", header >> localizationFile
 			
-  			combineLocalization(header, localizationFile, realLocalizationFile)
+			close(eventsFile)
+			close(localizationFile)
+			exit
+			combineLocalization("Event" header, localizationFile, realLocalizationFile)
 #print ">> END done" > stderr
         }

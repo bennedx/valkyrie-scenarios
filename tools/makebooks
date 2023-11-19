@@ -272,7 +272,6 @@ $1 == "language" {
 				}
 				
 				language = $2
-				localizationHeader = ".," + $2
 				
 				realLocalizationFile = sprintf("Localization.%s.txt", language)
 				next
@@ -389,7 +388,7 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
         if (pages[pageIndex][ISEXIT] == 1) {
             printf "event1=Event%sEnd\n", bookName >> eventsFile
         } else if (pageIndex == pageCount && isEndDirective) {
-			printf "event1=Event%sEnd\n", bookname >> eventsFile
+			printf "event1=Event%sEnd\n", bookName >> eventsFile
 		} else {
             printf "event1=Event%s%s\n", bookName, (isLooped ? "Start" : "End") >> eventsFile
         }
