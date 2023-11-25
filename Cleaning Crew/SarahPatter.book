@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------
-# use this to manage Sarah's commentary and make it work across scenarios
+# use this to manage Sarah’s commentary and make it work across scenarios
 # TOC: There are no TOC entries and this is ordered|nokeep:  this means the next page will be read each time it is opened
 # The default page text entries for goal == goalStopRitual
 # Note that the 'visible' directives may change during the game, so pages with visibility rules might show out of order
@@ -11,12 +11,12 @@ book|SarahPatter|ordered|nokeep
 page|dvm|Sarah whispers to {c:EventChosenInvestigator}, “The {c:QItemDVM} is a spell book. It contains many powerful spells, including how to open and close portals, and how to interrupt a ritual that has been started. If you cannot stop {c:CustomMonsterDavidSmythe} in time, you may need to perform a closing ritual. Closing portals is easier than opening them but it takes time. With the portal open, many horrors could come through while you are trying to close it. You must be prepared. Read the book carefully and read it soon.”
 	visible|foundDVM
 	test|goal,==,goalRescueBoy|Sarah whispers to {c:EventChosenInvestigator}, “The {c:QItemDVM} is a spell book. It contains many powerful spells, including how to open and close portals. You should read it to better understand what is happening.”
-	test|goal,==,goalStopCultists|Sarah whispers to {c:EventChosenInvestigator}, “The {c:QItemDVM} is a spell book. It contains many powerful spells, including how to open and close portals, and how to interrupt a ritual that has been started. I can feel our uncle's rage. He needs this book to open the portal, and tonight is his only chance to open it. We must be careful to keep it from his minions.”
+	test|goal,==,goalStopCultists|Sarah whispers to {c:EventChosenInvestigator}, “The {c:QItemDVM} is a spell book. It contains many powerful spells, including how to open and close portals, and how to interrupt a ritual that has been started. I can feel our uncle’s rage. He needs this book to open the portal, and tonight is his only chance to open it. We must be careful to keep it from his minions.”
 
 page|candles|Sarah whispers to {c:EventChosenInvestigator}, “There’s a part of the house that is too dark to enter without light. The candles you found should help. If we move fast enough, maybe we can stop {c:CustomMonsterDavidSmythe} from opening the portal.”
 	visible|foundCandles
-	test|goal,==,goalRescueBoy|Sarah whispers to {c:EventChosenInvestigator}, “There's a part of the house that is too dark to enter without light. The candles you found should help. You should explore down there as soon as you can.”
-	test|goal,==,goalStopCultists|Sarah whispers to {c:EventChosenInvestigator}, “There's a part of the house that is too dark to enter without light. The candles you found should help. You should explore down there as soon as you can.”
+	test|goal,==,goalRescueBoy|Sarah whispers to {c:EventChosenInvestigator}, “There’s a part of the house that is too dark to enter without light. The candles you found should help. You should explore down there as soon as you can.”
+	test|goal,==,goalStopCultists|Sarah whispers to {c:EventChosenInvestigator}, “There’s a part of the house that is too dark to enter without light. The candles you found should help. You should explore down there as soon as you can.”
 
 page|elder sign pendant|Sarah whispers to {c:EventChosenInvestigator}, “The {c:QItemElderSignPendant} is the most important part of the closing ritual. It seals the portal permanently. When the closing ritual was performed 10 years ago, our Uncle Henry was able to close the portal, but he died before he could seal it.”
 	visible|foundElderSignPendant
@@ -39,9 +39,9 @@ page|3|Sarah whispers to {c:EventChosenInvestigator}, “I could feel the god ap
     
 page|4|Sarah whispers to {c:EventChosenInvestigator}, “Father believed that personal sacrifice was the most powerful magic. The portal is created by binding power to the body of a loved one. Father used me to summon the portal. The monsters came through me. When the portal closed, I died with it. The pain of the ritual so engulfed me that I can still feel it.”
     
-page|5|Sarah whispers to {c:EventChosenInvestigator}, “You found out what was going to happen a week before the ritual. Members of Father’s church did something to you. After that, you followed orders without question. You helped Father bind me during the ritual. From what they said at the time, you probably cannot remember anything about the ritual or even before then. It's why you don't know who you are or remember what happened that night.”
+page|5|Sarah whispers to {c:EventChosenInvestigator}, “You found out what was going to happen a week before the ritual. Members of Father’s church did something to you. After that, you followed orders without question. You helped Father bind me during the ritual. From what they said at the time, you probably cannot remember anything about the ritual or even before then. It’s why you don’t know who you are or remember what happened that night.”
     
-page|6|Sarah whispers to {c:EventChosenInvestigator}, “The day of the ritual, two of my friends came to visit me. When Father told them I wasn’t allowed out, they sneaked to my window and jumped in when I opened it. Father was furious. I’m not sure who strangled them or who dragged them to the yard. I was burned alive when the portal closed, then my body was dumped with my friends'. It wasn't until then that I knew they were dead.”
+page|6|Sarah whispers to {c:EventChosenInvestigator}, “The day of the ritual, two of my friends came to visit me. When Father told them I wasn’t allowed out, they sneaked to my window and jumped in when I opened it. Father was furious. I’m not sure who strangled them or who dragged them to the yard. I was burned alive when the portal closed, then my body was dumped with my friends’. It wasn’t until then that I knew they were dead.”
     
 page|7|Sarah whispers to {c:EventChosenInvestigator}, “I don’t know who the other men were, but the one who closed the portal was our uncle--Father’s brother. I think there’s something special about our family; there are things only we can do. It’s why Father could summon the portal, and why Uncle Henry could close it.\n\n“You should share the family abilities. You must trust yourself to know what to do.”
 
