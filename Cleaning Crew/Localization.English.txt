@@ -847,8 +847,8 @@ EventTestPlaceDrivewayStart.button1,Button1
 TokenTestBenTrigger.button1,Continue
 TokenTestBenTrigger.text,Triggered Ben
 EventSearchDiningRoomFluxStabilizerBenHappy.button1,Continue
-EventSearchDiningRoomFluxStabilizerBenAngry.text,|||\n"What are you folks doing in there?!" You turn to see Benjamin yelling through the back door. "You must be careful. This house and its contents are valuable."\n\nHe seems to have something in his hand.\n|||
-EventSearchDiningRoomFluxStabilizerBenHappy.text,|||\nYou look toward the door as Benjamin calls out. "I heard a noise. This house can be dangerous with everything in disarray. Please be careful."\n\nBenjamin reaches into his pocket and pulls something out.\n|||
+EventSearchDiningRoomFluxStabilizerBenAngry.text,|||\nBenjamyn walks briskly through the door, yelling, "What are you folks doing in here?! You must be careful. This house and its contents are valuable." Move the purple man token as indicated.\n\nHe seems to have something in his hand.\n|||
+EventSearchDiningRoomFluxStabilizerBenHappy.text,|||\nBenjamin walks through the door into the {c:TileDiningRoom}. Move the purple man token as indicated.\n\nAs he walks through the door, he says, "I heard a noise. This house can be dangerous with everything in disarray. Please be careful."\n\nHe seems to be holding something in his hand.\n|||
 EventSearchDiningRoomFluxStabilizerBenAngry.button1,Continue
 TokenBackyardBenPassive.button1,Continue
 EventExploreBackdoorPass2.button1,Continue
@@ -861,7 +861,7 @@ EventPlaceBackdoor2x4Angry.text,"\nTo your right is a pile of rubble that used t
 EventExploreBackdoorPass2.text,|||\nAs you turn to look at Benjamin, you hear a second crash behind the gate.\n\n"What are you doing?! I just had that rehung yesterday!" he yells. "I hired you to help us get this house ready for sale, not destroy it. You were to meet me here; I’m not sure why you thought it was a good idea to start without me."\n\nBenjamin brushes past you with a harrumph. Remove the Purple Man token and this Explore token.\n\nYou’ve only just arrived and the client is already angry. This could turn out badly for both you and your friend’s business.\n|||
 TokenSearchDiningRoomFluxStabilizerPuzzle.text,"\nThe device just sits there, not doing anything. There seems to be a control panel. Maybe you can restart it?\n"
 TokenSearchDiningRoomFluxStabilizerPuzzle.button1,{action} Tap to Attempt the Puzzle using...
-EventSearchDiningRoomFluxStabilizerAfterPuzzle.text,"\nThe device begins humming quietly.\n\nReplace this search token with the {c:QItemFluxStabilizer} common item.\n\n{c:EventChosenInvestigator} can drop or pick up this item, but cannot trade it to another investigator. When the {c:QItemFluxStabilizer} is on the floor, any investigator who moves or is moved into the space immediately moves 1 space away from the device. Move toward the {c:TileDiningRoom} if possible, or choose the direction randomly. This does not count as a movement you do not evade monsters. {c:EventChosenInvestigator} is immune to this effect.\n\nWhen {c:EventChosenInvestigator} holds this item, add 1 additional movement to their move actions.\n\nThis information can be reviewed in the app.\n"
+EventSearchDiningRoomFluxStabilizerAfterPuzzle.text,"\nThe device begins humming quietly.\n\nReplace this search token with the {c:QItemFluxStabilizer} common item.\n\n{c:EventChosenInvestigator} can drop or pick up this item, but cannot trade it to another investigator. When the {c:QItemFluxStabilizer} is on the floor, any investigator who moves or is moved into the space immediately moves 1 space away from the device. Move toward the {c:TileDiningRoom} if possible, or choose the direction randomly; you do not evade monsters when moving this way. {c:EventChosenInvestigator} is immune to this effect.\n\nWhen {c:EventChosenInvestigator} holds this item, add 1 additional movement to their move actions.\n\nThis information can be reviewed in the app.\n"
 PuzzleDiningRoomFluxStabilizer.button1,That’s it!
 EventSearchDiningRoomFluxStabilizerAfterPuzzle.button1,Continue
 TokenBackyardBenAfter.button1,Continue
@@ -1098,7 +1098,7 @@ EventBackyardBenAfterReadPage2End.button1,
 EventBackyardBenAfterReadPage2.button1,Continue
 EventBackyardBenAfterReadPage2.text,
 EventBackyardBenAfterReadPage3Test1.button1,Continue
-EventBackyardBenAfterReadPage3Test1.text,
+EventBackyardBenAfterReadPage3Test1.text,|||\n“What? Oh, here’s the key to the house. Don’t lose it. I’m going to leave you to it.”\n\nWith contempt, he turns and carelessly drops the key in your direction. Put the {c:QItemBrassKey} common item in Ben’s space, then remove Ben from the board.\n|||
 EventBackyardBenAfterReadPage3Base.text,|||\n“Oh, my, yes. Here’s the key you’ll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I should be going. Take your time and send someone to fetch me if you need anything.”\n\nRemove this person token.\n|||
 EventBackyardBenAfterReadPage3Base.button1,Continue
 EventBackyardBenAfterReadPage3TestEnd.text,
@@ -1107,22 +1107,39 @@ EventBackyardBenAfterReadPage3End.text,
 EventBackyardBenAfterReadPage3End.button1,
 EventBackyardBenAfterReadPage3.button1,Continue
 EventBackyardBenAfterReadPage3.text,
+EventBackyardBenAfterReadPage4Base.text,|||\nthis is required but will never be seen\n|||
+EventBackyardBenAfterReadPage4Base.button1,Continue
+EventBackyardBenAfterReadPage4TestEnd.text,
+EventBackyardBenAfterReadPage4TestEnd.button1,
+EventBackyardBenAfterReadPage4End.text,
+EventBackyardBenAfterReadPage4End.button1,
+EventBackyardBenAfterReadPage4.button1,Continue
+EventBackyardBenAfterReadPage4.text,
 EventBackyardBenAfterToc0.text,Benjamin looks around the room, like is he trying to figure out what you are doing.
 EventBackyardBenAfterToc0.button1,{action} “Is the whole house this dirty?”
 EventBackyardBenAfterToc0.button2,{action} “There are footprints in the dust by that door...”
-EventBackyardBenAfterToc0.button3,Cancel
+EventBackyardBenAfterToc0.button3,{action} “Is there anything else we need to know?”
+EventBackyardBenAfterToc0.button4,Cancel
 EventBackyardBenAfterToc1.text,He seems surprised you ask about dirt. He’s muttering about it under his breath.
 EventBackyardBenAfterToc1.button1,{action} “Is the whole house this dirty?”
 EventBackyardBenAfterToc1.button2,{action} “There are footprints in the dust by that door...”
-EventBackyardBenAfterToc1.button3,Cancel
+EventBackyardBenAfterToc1.button3,{action} “Is there anything else we need to know?”
+EventBackyardBenAfterToc1.button4,Cancel
 EventBackyardBenAfterToc2.text,You notice Benjamin glancing nervously at the footprints. He seems concerned and that worries you.
 EventBackyardBenAfterToc2.button1,{action} “Is the whole house this dirty?”
 EventBackyardBenAfterToc2.button2,{action} “There are footprints in the dust by that door...”
-EventBackyardBenAfterToc2.button3,Cancel
-EventBackyardBenAfterToc3.text,(page ’“Is there anything else we need to know?”’ needs a ’toc’ directive)
+EventBackyardBenAfterToc2.button3,{action} “Is there anything else we need to know?”
+EventBackyardBenAfterToc2.button4,Cancel
+EventBackyardBenAfterToc3.text,this will never be seen
 EventBackyardBenAfterToc3.button1,{action} “Is the whole house this dirty?”
 EventBackyardBenAfterToc3.button2,{action} “There are footprints in the dust by that door...”
-EventBackyardBenAfterToc3.button3,Cancel
+EventBackyardBenAfterToc3.button3,{action} “Is there anything else we need to know?”
+EventBackyardBenAfterToc3.button4,Cancel
+EventBackyardBenAfterToc4.text,this is required but will never be seen
+EventBackyardBenAfterToc4.button1,{action} “Is the whole house this dirty?”
+EventBackyardBenAfterToc4.button2,{action} “There are footprints in the dust by that door...”
+EventBackyardBenAfterToc4.button3,{action} “Is there anything else we need to know?”
+EventBackyardBenAfterToc4.button4,Cancel
 EventBackyardBenAfterTestEnd.text,
 EventBackyardBenAfterTestEnd.button1,
 EventBackyardBenAfterStart.text,
@@ -1479,7 +1496,7 @@ EventDvmStopRitualReadPage2End.text,
 EventDvmStopRitualReadPage2End.button1,
 EventDvmStopRitualReadPage2.button1,Continue
 EventDvmStopRitualReadPage2.text,
-EventDvmStopRitualReadPage3Base.text,|||\nYou bring out the {c:QItemRitualDagger}. There is a blessing to speak while holding it. You weren’t able to read it before, but as your father wrote, you are able to read it now. That said, you aren’t sure if you understand it; if you do, test {lore]; otherwise, test {will} to blunder through and hope for the best. For each Unique Item you have, you may roll 1 extra die.\n|||
+EventDvmStopRitualReadPage3Base.text,|||\nYou bring out the {c:QItemRitualDagger}. There is a blessing to speak while holding it. You weren't able to read it before, but as your father wrote, you are able to read it now. That said, you aren't sure if you understand it; if you do, test {lore]; otherwise, test {will} to blunder through and hope for the best. For each Unique Item you have, you may roll 1 extra die.\n|||
 EventDvmStopRitualReadPage3Base.button1,Continue
 EventDvmStopRitualReadPage3TestEnd.text,
 EventDvmStopRitualReadPage3TestEnd.button1,
@@ -1495,7 +1512,7 @@ EventDvmStopRitualReadPage4End.text,
 EventDvmStopRitualReadPage4End.button1,
 EventDvmStopRitualReadPage4.button1,Continue
 EventDvmStopRitualReadPage4.text,
-EventDvmStopRitualReadPage5Base.text,|||\nYou keep repeating the incantation but the {c:QItemRitualDagger} doesn’t change. You’ll need to keep trying.\n\nSuffer 1 facedown Damage and 1 facedown Horror ({will} negates either).\n|||
+EventDvmStopRitualReadPage5Base.text,|||\nYou keep repeating the incantation but the {c:QItemRitualDagger} doesn't change. You'll need to keep trying.\n\nSuffer 1 facedown Damage and 1 facedown Horror ({will} negates either).\n|||
 EventDvmStopRitualReadPage5Base.button1,Continue
 EventDvmStopRitualReadPage5TestEnd.text,
 EventDvmStopRitualReadPage5TestEnd.button1,
@@ -1503,7 +1520,7 @@ EventDvmStopRitualReadPage5End.text,
 EventDvmStopRitualReadPage5End.button1,
 EventDvmStopRitualReadPage5.button1,Continue
 EventDvmStopRitualReadPage5.text,
-EventDvmStopRitualReadPage6Base.text,|||\nYou draw the knife across the palm of your hand. A drop of blood wells up and you suddenly wonder if you’ve drawn enough. Even what you’ve drawn is making you queasy ({will}). For each Unique Item you have, you may roll 1 extra die.\n|||
+EventDvmStopRitualReadPage6Base.text,|||\nYou draw the knife across the palm of your hand. A drop of blood wells up and you suddenly wonder if you've drawn enough. Even what you've drawn is making you queasy ({will}). For each Unique Item you have, you may roll 1 extra die.\n|||
 EventDvmStopRitualReadPage6Base.button1,Continue
 EventDvmStopRitualReadPage6TestEnd.text,
 EventDvmStopRitualReadPage6TestEnd.button1,
@@ -1511,7 +1528,7 @@ EventDvmStopRitualReadPage6End.text,
 EventDvmStopRitualReadPage6End.button1,
 EventDvmStopRitualReadPage6.button1,Continue
 EventDvmStopRitualReadPage6.text,
-EventDvmStopRitualReadPage7Base.text,|||\nYou squeeze your hand into a tight fist and blood drips into the chalice. You can’t see or hear the chalice change, but you can feel something happen to it.\n\nThis step is complete.\n|||
+EventDvmStopRitualReadPage7Base.text,|||\nYou squeeze your hand into a tight fist and blood drips into the chalice. You can't see or hear the chalice change, but you can feel something happen to it.\n\nThis step is complete.\n|||
 EventDvmStopRitualReadPage7Base.button1,Continue
 EventDvmStopRitualReadPage7TestEnd.text,
 EventDvmStopRitualReadPage7TestEnd.button1,
@@ -1519,7 +1536,7 @@ EventDvmStopRitualReadPage7End.text,
 EventDvmStopRitualReadPage7End.button1,
 EventDvmStopRitualReadPage7.button1,Continue
 EventDvmStopRitualReadPage7.text,
-EventDvmStopRitualReadPage8Base.text,|||\nA drop of blood spatters when it hits the cup, but nothing seems to happen. You’re going to have to slice deeper. Suffer 2 Horror ({will} negates).\n|||
+EventDvmStopRitualReadPage8Base.text,|||\nA drop of blood spatters when it hits the cup, but nothing seems to happen. You're going to have to slice deeper. Suffer 2 Horror ({will} negates).\n|||
 EventDvmStopRitualReadPage8Base.button1,Continue
 EventDvmStopRitualReadPage8TestEnd.text,
 EventDvmStopRitualReadPage8TestEnd.button1,
@@ -1527,7 +1544,7 @@ EventDvmStopRitualReadPage8End.text,
 EventDvmStopRitualReadPage8End.button1,
 EventDvmStopRitualReadPage8.button1,Continue
 EventDvmStopRitualReadPage8.text,
-EventDvmStopRitualReadPage9Base.text,|||\nYou can read the first incantation but you aren’t sure that you understand it; if you do, test {lore}; otherwise, test {will} and hope for the best. You may roll 1 extra die for each Unique Item you have.\n|||
+EventDvmStopRitualReadPage9Base.text,|||\nYou can read the first incantation but you aren't sure that you understand it; if you do, test {lore}; otherwise, test {will} and hope for the best. You may roll 1 extra die for each Unique Item you have.\n|||
 EventDvmStopRitualReadPage9Base.button1,Continue
 EventDvmStopRitualReadPage9TestEnd.text,
 EventDvmStopRitualReadPage9TestEnd.button1,
@@ -1543,7 +1560,7 @@ EventDvmStopRitualReadPage10End.text,
 EventDvmStopRitualReadPage10End.button1,
 EventDvmStopRitualReadPage10.button1,Continue
 EventDvmStopRitualReadPage10.text,
-EventDvmStopRitualReadPage11Base.text,|||\nYou can feel something happen inside but it is not very strong and the portal has not changed. You’ll have to try the incantation again.\n\nThe ritual is wearing you down. Suffer 1 facedown Damage and 1 facedown Horror ({strength} negates).\n|||
+EventDvmStopRitualReadPage11Base.text,|||\nYou can feel something happen inside but it is not very strong and the portal has not changed. You'll have to try the incantation again.\n\nThe ritual is wearing you down. Suffer 1 facedown Damage and 1 facedown Horror ({strength} negates).\n|||
 EventDvmStopRitualReadPage11Base.button1,Continue
 EventDvmStopRitualReadPage11TestEnd.text,
 EventDvmStopRitualReadPage11TestEnd.button1,
@@ -1567,7 +1584,7 @@ EventDvmStopRitualReadPage13End.text,
 EventDvmStopRitualReadPage13End.button1,
 EventDvmStopRitualReadPage13.button1,Continue
 EventDvmStopRitualReadPage13.text,
-EventDvmStopRitualReadPage14Base.text,|||\nA single drop rises from the new slice but doesn’t fall. You’ll have to try again. Suffer 1 Horror ({will} negates).\n|||
+EventDvmStopRitualReadPage14Base.text,|||\nA single drop rises from the new slice but doesn't fall. You'll have to try again. Suffer 1 Horror ({will} negates).\n|||
 EventDvmStopRitualReadPage14Base.button1,Continue
 EventDvmStopRitualReadPage14TestEnd.text,
 EventDvmStopRitualReadPage14TestEnd.button1,
@@ -1575,7 +1592,7 @@ EventDvmStopRitualReadPage14End.text,
 EventDvmStopRitualReadPage14End.button1,
 EventDvmStopRitualReadPage14.button1,Continue
 EventDvmStopRitualReadPage14.text,
-EventDvmStopRitualReadPage15Base.text,|||\nAs the portal weakens, the boy regains some strength. He is screaming in pain and terror again.\n\nYou must get this last part right to close and seal the portal. You look at the last incantation and, like the others, while you can read it, you aren’t sure you understand it. If you do, test {lore}; otherwise, test {will} to muddle through. You may roll 1 extra die for each Unique Item you have.\n|||
+EventDvmStopRitualReadPage15Base.text,|||\nAs the portal weakens, the boy regains some strength. He is screaming in pain and terror again.\n\nYou must get this last part right to close and seal the portal. You look at the last incantation and, like the others, while you can read it, you aren't sure you understand it. If you do, test {lore}; otherwise, test {will} to muddle through. You may roll 1 extra die for each Unique Item you have.\n|||
 EventDvmStopRitualReadPage15Base.button1,Continue
 EventDvmStopRitualReadPage15TestEnd.text,
 EventDvmStopRitualReadPage15TestEnd.button1,
@@ -1636,7 +1653,7 @@ EventDvmStopRitualReadPage17Proxy.button1,
 EventDvmStopRitualStart.text,
 EventDvmStopRitualStart.button1,
 EventDvmStopRitualEnd.text,
-EventDVMStopRitualBeforeReadPage1Base.text,|||\nPage 1\n\nYou open the book to the first page. It’s a table of contents. You quickly scan down and find the spell to close portals. In the margin, someone--probably your father--scrawled a note that reads, “My descendants will be able to read this book, but only at the appointed hour. I have seen to this.” \n\nGain 1 {clue} the first time you read this.\n|||
+EventDVMStopRitualBeforeReadPage1Base.text,|||\nPage 1\n\nYou open the book to the first page. It's a table of contents. You quickly scan down and find the spell to close portals. In the margin, someone--probably your father--scrawled a note that reads, “My descendants will be able to read this book, but only at the appointed hour. I have seen to this.” \n\nGain 1 {clue} the first time you read this.\n|||
 EventDVMStopRitualBeforeReadPage1Base.button1,Continue
 EventDVMStopRitualBeforeReadPage1TestEnd.text,
 EventDVMStopRitualBeforeReadPage1TestEnd.button1,
@@ -1644,7 +1661,7 @@ EventDVMStopRitualBeforeReadPage1End.text,
 EventDVMStopRitualBeforeReadPage1End.button1,
 EventDVMStopRitualBeforeReadPage1.button1,Continue
 EventDVMStopRitualBeforeReadPage1.text,
-EventDVMStopRitualBeforeReadPage2Base.text,|||\nPage 2\n\nYou leaf through the book to find the ritual to close a portal. The first part is an overview and list of materials. You’ll need a special knife, a chalice, a skull, some religious icons, and a number of herbs. There’s also mention of an “elder sign,” but you aren’t sure what that is.\n\nYou must find the {c:QItemRitualDagger} Common Item, {c:QItemRitualComponents} Unique Item, and {c:QItemElderSignPendant} Common Item.\n|||
+EventDVMStopRitualBeforeReadPage2Base.text,|||\nPage 2\n\nYou leaf through the book to find the ritual to close a portal. The first part is an overview and list of materials. You'll need a special knife, a chalice, a skull, some religious icons, and a number of herbs. There's also mention of an “elder sign,” but you aren't sure what that is.\n\nYou must find the {c:QItemRitualDagger} Common Item, {c:QItemRitualComponents} Unique Item, and {c:QItemElderSignPendant} Common Item.\n|||
 EventDVMStopRitualBeforeReadPage2Base.button1,Continue
 EventDVMStopRitualBeforeReadPage2TestEnd.text,
 EventDVMStopRitualBeforeReadPage2TestEnd.button1,
@@ -1652,7 +1669,7 @@ EventDVMStopRitualBeforeReadPage2End.text,
 EventDVMStopRitualBeforeReadPage2End.button1,
 EventDVMStopRitualBeforeReadPage2.button1,Continue
 EventDVMStopRitualBeforeReadPage2.text,
-EventDVMStopRitualBeforeReadPage3Base.text,|||\nPage 3\n\nYou flip the page. Here the book goes into detail about the dagger you’ll use. There is a long list of steps to follow to prepare it. This will take some study. Gain 1 {clue}.\n\nThere is also a “blessing” you need to speak, but it is in a language you don’t read or understand.\n|||
+EventDVMStopRitualBeforeReadPage3Base.text,|||\nPage 3\n\nYou flip the page. Here the book goes into detail about the dagger you'll use. There is a long list of steps to follow to prepare it. This will take some study. Gain 1 {clue}.\n\nThere is also a “blessing” you need to speak, but it is in a language you don't read or understand.\n|||
 EventDVMStopRitualBeforeReadPage3Base.button1,Continue
 EventDVMStopRitualBeforeReadPage3TestEnd.text,
 EventDVMStopRitualBeforeReadPage3TestEnd.button1,
@@ -1668,7 +1685,7 @@ EventDVMStopRitualBeforeReadPage4End.text,
 EventDVMStopRitualBeforeReadPage4End.button1,
 EventDVMStopRitualBeforeReadPage4.button1,Continue
 EventDVMStopRitualBeforeReadPage4.text,
-EventDVMStopRitualBeforeReadPage5Base.text,|||\nPage 5\n\nThe next page is where the power starts to manifest. This page talks about an incantation you’ll use to begin collapsing the portal. This first part will weaken it. Even if the second half of the ritual is not completed, the portal will eventually collapse.\n\nSealing the portal will prevent another from being opened near the same location. We want to complete this ritual.\n\nWhen you get to the incantation, you realize it is written in the same language as the blessing. You think back to that margin scrawl and wonder if you’ll be able to understand it later.\n|||
+EventDVMStopRitualBeforeReadPage5Base.text,|||\nPage 5\n\nThe next page is where the power starts to manifest. This page talks about an incantation you'll use to begin collapsing the portal. This first part will weaken it. Even if the second half of the ritual is not completed, the portal will eventually collapse.\n\nSealing the portal will prevent another from being opened near the same location. We want to complete this ritual.\n\nWhen you get to the incantation, you realize it is written in the same language as the blessing. You think back to that margin scrawl and wonder if you'll be able to understand it later.\n|||
 EventDVMStopRitualBeforeReadPage5Base.button1,Continue
 EventDVMStopRitualBeforeReadPage5TestEnd.text,
 EventDVMStopRitualBeforeReadPage5TestEnd.button1,
@@ -1676,7 +1693,7 @@ EventDVMStopRitualBeforeReadPage5End.text,
 EventDVMStopRitualBeforeReadPage5End.button1,
 EventDVMStopRitualBeforeReadPage5.button1,Continue
 EventDVMStopRitualBeforeReadPage5.text,
-EventDVMStopRitualBeforeReadPage6Base.text,|||\nPage 6\n\nOnce the portal is weakened, it must be closed and sealed. Sealing it requires more blood and an elder sign. After reading this section, you understand how the elder sign will be used to close and seal the gate. You wonder how you will find such a thing.\n\nFortunately there is a picture of one next to the description. You’ll keep an eye out as you wander the house.\n|||
+EventDVMStopRitualBeforeReadPage6Base.text,|||\nPage 6\n\nOnce the portal is weakened, it must be closed and sealed. Sealing it requires more blood and an elder sign. After reading this section, you understand how the elder sign will be used to close and seal the gate. You wonder how you will find such a thing.\n\nFortunately there is a picture of one next to the description. You'll keep an eye out as you wander the house.\n|||
 EventDVMStopRitualBeforeReadPage6Base.button1,Continue
 EventDVMStopRitualBeforeReadPage6TestEnd.text,
 EventDVMStopRitualBeforeReadPage6TestEnd.button1,
@@ -1707,7 +1724,7 @@ EventDVMStopRitualBeforeToc2.text,|||\nThe book seems to contain spells and {c:E
 EventDVMStopRitualBeforeToc2.button1,Read Page 1
 EventDVMStopRitualBeforeToc2.button2,{action} Read Page 2
 EventDVMStopRitualBeforeToc2.button3,Cancel
-EventDVMStopRitualBeforeToc3.text,|||\nClosing a portal doesn’t sound easy. Read on.\n|||
+EventDVMStopRitualBeforeToc3.text,|||\nClosing a portal doesn't sound easy. Read on.\n|||
 EventDVMStopRitualBeforeToc3.button1,Read Page 1
 EventDVMStopRitualBeforeToc3.button2,Read Page 2
 EventDVMStopRitualBeforeToc3.button3,{action} Read Page 3
@@ -1718,7 +1735,7 @@ EventDVMStopRitualBeforeToc4.button2,Read Page 2
 EventDVMStopRitualBeforeToc4.button3,Read Page 3
 EventDVMStopRitualBeforeToc4.button4,{action} Read Page 4
 EventDVMStopRitualBeforeToc4.button5,Cancel
-EventDVMStopRitualBeforeToc5.text,|||\nAdding your own blood to the ritual sends a chill down your spine. There’s more.\n|||
+EventDVMStopRitualBeforeToc5.text,|||\nAdding your own blood to the ritual sends a chill down your spine. There's more.\n|||
 EventDVMStopRitualBeforeToc5.button1,Read Page 1
 EventDVMStopRitualBeforeToc5.button2,Read Page 2
 EventDVMStopRitualBeforeToc5.button3,Read Page 3
