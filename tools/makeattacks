@@ -18,6 +18,7 @@ BEGIN   {   IGNORECASE = true
 			
 			abort = false
 			pristine = true
+			processingFile = false
         }
 
 BEGINFILE { if (processingFile) {
@@ -36,12 +37,13 @@ BEGINFILE { if (processingFile) {
 			split(FILENAME, parts, ".")
 			header = parts[1]
 			eventsFile = header ".events.ini"
+			
 			deleteFile(eventsFile)
 			deleteFile(localizationFile)
 			
             printf "" > eventsFile
 			printf "" > localizationFile
-				
+			
 	 		generalAttackSelectionVariable = sprintf("%sGeneralSelection", header)
 
 			commonOperations = ""
@@ -62,16 +64,13 @@ BEGINFILE { if (processingFile) {
 			resetGeneralEventsSeparator = ""
 
             # add the main attack start
-			printf "[%sStart]\n", header >> eventsFile
-            printf "%sStart.button1,\n", header >> localizationFile
-
+			eventName = sprintf("Event%sStart", header)
+			printf "[%s]\n", eventName >> eventsFile
+            printf "%s.text,\n", eventName >> localizationFile
 
             printf "buttons=1\n" >> eventsFile
-            printf "event1=%sStoryStart %sGeneralStart\n", header, header >> eventsFile
-			printf "%sStart.button1,\n", header >> localizationFile
-        print "l " localizationFile
-		close(localizationFile)
-		exit
+            printf "event1=Event%sStoryStart Event%sGeneralStart\n", header, header >> eventsFile
+			printf "%s.button1,\n", eventName >> localizationFile
 		}
 
 $1 == "line" {
@@ -110,7 +109,7 @@ $1 == "story" {
 			
 			eventName = sprintf("Event%sStory%i", header, storyEventsCount)
             printf "\n[%s]\n", eventName >> eventsFile
-            printf "%s.text,%s\n", eventName, FixQuotes(parts[3]) >> localizationFile
+            printf "%s.text,%s\n", eventName, FixQuotes($3) >> localizationFile
 
             printf "buttons=1\n" >> eventsFile
             printf "event1=%sStoryEnd\n", header >> eventsFile
@@ -155,7 +154,9 @@ $1 == "story" {
 			abort = true
 		}
 	
-END		{	if (pristine) {
+END		{	if (abort) exit
+
+			if (pristine) {
 				printf "No '.attack' files specified\n" >> stderr
 				exit
 			}
@@ -215,7 +216,7 @@ function FinishAttackFile() {
 
 	printf "buttons=1\n" >> eventsFile
 	printf "%s.button1,\n", eventName >> localizationFile
-	printf "events=Event%sGeneralSelect\n", header >> eventsFile
+	printf "events=Event%sGeneralStart\n", header >> eventsFile
 	printf "operations=%s\n", resetGeneralEvents >> eventsFile
 
 	printf "\n[%sGeneralEnd]\n", header >> eventsFile

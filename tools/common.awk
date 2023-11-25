@@ -8,36 +8,27 @@ BEGIN   {
         }
         
 # FixQuotes() takes a string and returns a properly quoted string
-# This function does not work on properly-formatted .ini text; instead, it assumes no surrounding quotes and single quotes, not double
-function FixQuotes(s) {
-    # if the string starts with Quotes, remove them
-    if (s ~ /^".*"$/) {
-        result = substr(s, 2, length(s) - 2)
-    } else {
-        result = s
-    }
+function FixQuotes(s,
+	result) {
+	
+	result = s
+
+	gsub(/^"+/s, "", result)		# remove leading "
+	gsub(/"+$/, "", result)			# remove trailing "
+	gsub(/^[|]{3}/, "", result)		# remove leading |||
+	gsub(/[|]{3}$/, "", result)		# remove trailing |||
+	gsub(/^(\\n)+/, "", result)		# remove leading newlines
+	gsub(/(\\n)+$/, "", result)		# remove trailing newlines
+	gsub(/""/, "\"", result)		# replace doubled quotes
     
-    # remove leading \n
-    while (result ~ /^\\n/) {
-        result = substr(result, 3, length(result) - 2)
-    }
-    
-    # remove trailing \n
-    while (result ~ /\\n$/) {
-        result = substr(result, 1, length(result) - 2)
-    }
-    
-    # double-up the quotes
-    gsub(/"/, "\"\"", result)
-    
+	if (result == "") return result
+
     # add \n to front and back
     result = sprintf("\\n%s\\n", result)
     
-    # if there are quotes, enclose string in another set
-    if (result ~ /"/) {
-        result = "\"" result "\""
-    }
-    
+    # enclose in ||| quotes
+	result = "|||" result "|||"
+        
     return result
 }
 
@@ -52,8 +43,11 @@ function copyFile(sourceFilename, targetFilename) {
     system("cp " sourceFilename " " targetFilename)
 }
 
-function deleteFile(filename) {
-    system("rm -f " filename " >/dev/null &2>/dev/null")
+function deleteFile(filename,
+	command, result) {
+	
+	command = "rm -f " filename #" >/dev/null &2>/dev/null"
+	command | getline result
 }
 
 function combineLocalization(header, sourceFile, targetFile,

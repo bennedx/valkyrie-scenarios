@@ -99,14 +99,14 @@ BEGINFILE { isIni = FILENAME ~ /.*[.]ini$/
 /^packs=/ {	split($2, tempQuestPacks, " ")
 			for(packIndex in tempQuestPacks) {
 				packId = tempQuestPacks[packIndex]
-				if (packId ~ /(MoM1EI|Mom1CK)/) packId = "RN"
+				if (packId ~ /^(MoM1|CotW|FA|SM)/) packId = "RN"
 				questPacks[tempQuestPacks[packIndex]] = false
 			}
 		}
 				
 # this is from the packs
 /^id=/	{	packId = $2
-			if (packId ~ /(MoM1EI|Mom1CK)/) packId = "RN"
+			if (packId ~ /^(MoM1|CotW|FA|SM)/) packId = "RN"
 			gamePacks[packId] = false
 		}
 
@@ -118,7 +118,7 @@ $1 == "buttons" {
 			}
 		}
 
-$1 ~ /^(add|event[0-9]+|remove|monster|inspect|itemname)$/ {
+$1 ~ /^(add|event[0-9]+|remove|monster|inspect|itemname|side)$/ {
             split($2, events, /[ \t]+/)
 			
             for(i = 1; i <= length(events); i++) {
