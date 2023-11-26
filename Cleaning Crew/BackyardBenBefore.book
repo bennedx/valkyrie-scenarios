@@ -16,26 +16,26 @@ book|BackyardBenBefore|random|nokeep
 start|Benjamin looks up at you then goes back to searching his pockets.
 
 page|“How long will it take us to look through the house?”|“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Even when Peter was living here, it was only him and his daughter. The girl’s mother died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I’d guess you’ll need a few hours just to look through the place and get your bearings. You’ll want to check every drawer, cabinet, and box in the house--take as much time as you need. We need the whole house cleared out and spotless by the end of next week.”
-    test|exploredBackdoorNicely,==,0|“Long enough,” he snaps. “There are numerous rooms on the ground floor, a basement, and many rooms upstairs. The place has always been too big for this family. Back when Peter was living here, it was only him and his daughter. The girl’s mother died under suspicious circumstances when the girl was three. Never explained.\n\n“Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren’t you? And you won’t break anything else?”
+    test|exploredBackyardNicely,==,0|“Long enough,” he snaps. “There are numerous rooms on the ground floor, a basement, and many rooms upstairs. The place has always been too big for this family. Back when Peter was living here, it was only him and his daughter. The girl’s mother died under suspicious circumstances when the girl was three. Never explained.\n\n“Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren’t you? And you won’t break anything else?”
     operations|talkedToBenHowLong,=,1 talkedToBenCount,+,1 @TalkedToBackyardBen,=,1
     toc|As he digs through his pockets, he is grumbling something about the size of the house and maybe the word "lazy"?
     
 page|“What do you think happened to the children?”|“The children? I’m sure you read the papers. One of them was burned from head-to-toe. The other two were strangled. The burns were never explained. Nasty business. \n\n“Peter Smythe--the girl’s father and the owner of this house--went missing that night. Most folks think he did something to the children and then ran away. Still hiding, they think.\n\n“What wasn’t reported is that his brother, Henry, also disappeared that night. Folks in town figured they’d run off together to avoid difficult questions.”\n\nGain 1 {clue}.
-    test|exploredBackdoorNicely,==,0|“The children? Two were strangled. The burns on the third were never explained. Nasty business.\n\n“Peter and his brother Henry both went missing that night. Most folks don’t know about Henry. Left a lot of folks around town wondering what really happened. But we’re not here to gossip.”
+    test|exploredBackyardNicely,==,0|“The children? Two were strangled. The burns on the third were never explained. Nasty business.\n\n“Peter and his brother Henry both went missing that night. Most folks don’t know about Henry. Left a lot of folks around town wondering what really happened. But we’re not here to gossip.”
     operations|talkedToBenChildren,=,1 talkedToBenCount,+,1 @TalkedToBackyardBen,=,1
     toc|Benjamin is still digging through his pockets. You hear him muttering about paying attention and minding your own business.
 
 page|“Where were the children found?”|“The children were found just over there,” he says, pointing back the way you came. “They were in a pile; the girl’s body was still smoking from the burns. Strangest thing:  she kept smoking until the next day. Coroner wasn’t able to explain it. No one was.\n\n“Our family has lived here for generations--many of them in this house. We’re upset to let it go, but no one lives here... or wants to after what happened.”\n\nGain 1 {clue}.\n\nBenjamin resumes searching his pockets, but seems a little shaken.
-    test|exploredBackdoorNicely,==,0|“The children were found just over there,” he grumbles, pointing back the way you came. “Not sure why it matters, but I’ll tell you:  the girl who was burnt, she kept smoldering until the next day. Coroner couldn’t explain it.” Benjamin resumes digging through his pockets, but seems a little shaken.
+    test|exploredBackyardNicely,==,0|“The children were found just over there,” he grumbles, pointing back the way you came. “Not sure why it matters, but I’ll tell you:  the girl who was burnt, she kept smoldering until the next day. Coroner couldn’t explain it.” Benjamin resumes digging through his pockets, but seems a little shaken.
     operations|talkedToBenWhere,=,1 talkedToBenCount,+,1 @TalkedToBackyardBen,=,1
 	toc|Benjamin is still looking through his pockets, but he’s moving slower and looks upset.
 	
 page|“Why did you wait so long to sell the house?”|“Well, we tried right after the... trouble. No one would even come to look at it back then, but our priest, um, told us now is the right time.\n\nGain 1 {clue}.”
-    test|exploredBackdoorNicely,==,0|“That’s none of your concern,” he snaps.\n\nYou startle at his abrupt response. You and all investigators in your space suffer 1 facedown horror ({will} negates).
+    test|exploredBackyardNicely,==,0|“That’s none of your concern,” he snaps.\n\nYou startle at his abrupt response. You and all investigators in your space suffer 1 facedown horror ({will} negates).
     operations|talkedToBenSell,=,1 talkedToBenCount,+,1 @TalkedToBackyardBen,=,1
     toc|Benjamin is patting himself, still looking for something. He is mumbling about busy-bodies.
 	
 page|“I’m sorry about the gate”|“You should be more careful. The house is old and in poor repair, but some parts have already been repaired. But no real harm done--the gate can be repaired.”
-    notvisible|exploredBackdoorNicely
-    operations|exploredBackdoorNicely,=,1
+    notvisible|exploredBackyardNicely
+    operations|exploredBackyardNicely,=,1
 	toc|Benjamin still doesn’t look happy, but he seems much less angry now.
