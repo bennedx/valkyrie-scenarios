@@ -26,23 +26,29 @@
 #       # localization keys are used
 
 BEGIN	{   debug = true
-
-            NAME = 1    # The name of the event, qitem, etc: the item
-            FILE = 2    # File name where this item was defined
-            LINE = 3    # Line in file where this item was defined
-            USED = 4    # Set true when a reference to this item is found
-            REFS = 5    # An array of boolean indexed by name; true only if the named item exists
-            KEYS = 6    # Array of localization keys referenced by this item
-
+            NAME = 1    	# The name of the event, qitem, etc: the item
+            FILE = 2    	# File name where this item was defined
+            LINE = 3    	# Line in file where this item was defined
+            USED = 4    	# Set true when a reference to this item is found
+            REFS = 5    	# An array of boolean indexed by name; true only if the named item exists
+            KEYS = 6    	# Array of localization keys referenced by this item
+			ISGAMEFILE = 7	# True if this is from a game file
+			PACKID = 8		# the expansion code
+			
 			lookingForAdd = true
 			lookingForButton = true
 			lookingForEvent = true
 			lookingForRemove = true
+
+			valkyrieDataPath = "/c/Program Files (x86)/Valkyrie/valkyrie_Data/StreamingAssets/content/MoM"
+
 			
 			special["Quest"] = ""
 			special["QuestData"] = ""
 			special["QuestText"] = ""
 			special["EventStartupStart"] = ""
+			
+			injectGameFilesIntoInputStream()
 		}
 
 BEGINFILE { isIni = FILENAME ~ /.*[.]ini$/
@@ -52,11 +58,25 @@ BEGINFILE { isIni = FILENAME ~ /.*[.]ini$/
                 FS = ","
             }
             $0 = $0
+
+			isGameFile = (FILENAME ~ /[/]/)
+			filename = FILENAME
+			if (isGameFile) {
+				filename = substr(filename, length(valkyrieDataPath) + 2)
+			}
 			
-			print "File: " FILENAME
+			if (FILENAME ~ /^base/) {
+				packId = "base"
+			}
+			
+			print (isGameFile ? "Game file: " : "File: ") filename 
         }
 
 #### .ini files
+
+/[[](ContentPack|ContentPackData)]/ {
+			next
+		}
 
 /^[[]/  {   section = substr($0, 2, length($0) - 2)
             if (section in sections) error("Duplicate", section, FILENAME, FNR, "")
@@ -64,15 +84,31 @@ BEGINFILE { isIni = FILENAME ~ /.*[.]ini$/
 			isSpecial = section in special
 
             sections[section][NAME] = name
-            sections[section][FILE] = FILENAME
+            sections[section][FILE] = filename
             sections[section][LINE] = FNR
-            sections[section][KEYS][section ".text"] = isSpecial
-			sections[section][USED] = isSpecial
-			
+            sections[section][KEYS][section ".text"] = isSpecial || isGameFile
+			sections[section][USED] = isSpecial || isGameFile
+			sections[section][ISGAMEFILE] = isGameFile
+			sections[section][PACKID] = packId
             # "declare" a more-or-less empty array
             sections[section][REFS]["*"] = "*"
             next
         }
+
+# this is from the scenario quest.ini and lists all the expasions needed
+/^packs=/ {	split($2, tempQuestPacks, " ")
+			for(packIndex in tempQuestPacks) {
+				packId = tempQuestPacks[packIndex]
+				if (packId ~ /^(MoM1|CotW|FA|SM)/) packId = "RN"
+				questPacks[tempQuestPacks[packIndex]] = false
+			}
+		}
+				
+# this is from the packs
+/^id=/	{	packId = $2
+			if (packId ~ /^(MoM1|CotW|FA|SM)/) packId = "RN"
+			gamePacks[packId] = false
+		}
 
 $1 == "buttons" {
 			for(i = 1; i <= $2; i++) {
@@ -82,15 +118,26 @@ $1 == "buttons" {
 			}
 		}
 
-$1 ~ /^(add|event[0-9]+|remove|monster)$/ {
+$1 ~ /^(add|event[0-9]+|remove|monster|inspect|itemname|side)$/ {
             split($2, events, /[ \t]+/)
 			
             for(i = 1; i <= length(events); i++) {
-				if (!(events[i] in sections[section][REFS])) {
-					sections[section][REFS][events[i]] = false
+				name = events[i]
+				if ($1 == "monster" && name !~ "^(Custom)?Monster") name = "Monster" name
+				
+				if (!(name in sections[section][REFS])) {
+					sections[section][REFS][name] = false
 				}
 			}
         }
+
+/^starting=true/ {
+			sections[section][USED] = true
+		}
+
+/^trigger=/ {
+			sections[section][USED] = true
+		}
 
 isIni   {   next
         }
@@ -99,14 +146,14 @@ isIni   {   next
 
 $1 ~ /[.](button|text)/ {
             if ($1 in localization) {
-                error("Duplicate", $1, FILENAME, FNR, section)
+                error("Duplicate", $1, filename, FNR, section)
                 next;
             }
             
-            localization[$1][FILE] = FILENAME
+            localization[$1][FILE] = filename
             localization[$1][LINE] = FNR
-            localization[$1][USED] = false
-            
+            localization[$1][USED] = ISGAMEFILE
+            localization[$1][ISGAMEFILE] = isGameFile
             next
         }
 
@@ -144,7 +191,7 @@ END     {
                     sections[section][KEYS][key] = found
 					if (found) localization[key][USED] = true
 					
-					if (!found) error("Missing", key, sections[section][FILE], sections[section][LINE], section)
+					if (!found && !sections[section][ISGAMEFILE]) error("Missing", key, sections[section][FILE], sections[section][LINE], section)
                 }
             }
             
@@ -155,10 +202,52 @@ END     {
                     error("Unused", key, localization[key][FILE], localization[key][LINE], "")
                 }
             }
+
+            print "==================================================================== quest needs these unselected packs"
+			for(section in sections) {
+				for(ref in sections[section][REFS]) {
+					packId = sections[ref][PACKID]
+					if (packId != "") {
+						gamePacks[packId] = true
+					
+						if (packId in questPacks) questPacks[packId] = true
+					}
+
+					if (packId != "" && !sections[section][ISGAMEFILE] && !(packId in questPacks)) {
+						error("Uses " packId, ref, sections[section][FILE], sections[section][LINE], section)
+					}
+				}
+			}
+			
+			for(packId in questPacks) {
+				if (!gamePacks[packId]) print packId
+			}
+			
+			print "==================================================================== quest doesn't need these selected packs"
+			for(packId in questPacks) {
+				if (gamePacks[packId] && !questPacks[packId]) print packId
+			}		
 		}
 		
-function error(type, name, filename, line, section,          workingSection) {
-    workingSection = section == "" ? "" : "(" section ")"
+function error(type, name, filename, line, section,
+	workingSection) {
+    
+	workingSection = section == "" ? "" : "(" section ")"
 	printf "%-30s %-10s %s %s\n", filename "@" line, type, name, workingSection
 }
 
+function injectGameFilesIntoInputStream(noparameters,
+	cmd, file) {
+	
+	cmd = sprintf("shopt -s globstar; pushd '%s' >/dev/null; for i in **/*.ini; do [ -f \"$i\" ] && echo \"$i\"; done; popd >/dev/null", valkyrieDataPath)
+    while ((cmd | getline file) > 0) {
+		ARGV[++ARGC] = sprintf("%s/%s", valkyrieDataPath, file)
+	}
+	close(cmd)
+	
+	cmd = sprintf("shopt -s globstar; pushd '%s' >/dev/null; for i in **/*.txt; do [ -f \"$i\" ] && echo \"$i\"; done; popd >/dev/null", valkyrieDataPath)
+	while ((cmd | getline file) > 0) {
+		ARGV[++ARGC] = sprintf("%s/%s", valkyrieDataPath, file)
+	}
+	close(cmd)
+}

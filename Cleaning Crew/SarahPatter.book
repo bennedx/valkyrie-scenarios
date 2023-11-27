@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------
-# use this to manage Sarah's commentary and make it work across scenarios
+# use this to manage Sarah’s commentary and make it work across scenarios
 # TOC: There are no TOC entries and this is ordered|nokeep:  this means the next page will be read each time it is opened
 # The default page text entries for goal == goalStopRitual
 # Note that the 'visible' directives may change during the game, so pages with visibility rules might show out of order
@@ -20,23 +20,23 @@ page|candles|Sarah whispers to {c:EventChosenInvestigator}, “There’s a part 
 
 page|elder sign pendant|Sarah whispers to {c:EventChosenInvestigator}, “The {c:QItemElderSignPendant} is the most important part of the closing ritual. It seals the portal permanently. When the closing ritual was performed 10 years ago, our Uncle Henry was able to close the portal, but he died before he could seal it.”
 	visible|foundElderSignPendant
-	test|goal,==,goalRescueBoy|Sarah whispers to {c:EventChosenInvestigator}, “The {c:QItemElderSignPendant} is important for their plans tonight. It is used to either secure or seal a portal. It is good we found it before they did.”
+	test|goal,==,goalRescueBoy|Sarah whispers to {c:EventChosenInvestigator}, “The {c:QItemElderSignPendant} is important for their plans tonight. It is used to either secure or seal` a portal. It is good we found it before they did.”
 	test|goal,==,goalStopCultists|Sarah whispers to {c:EventChosenInvestigator}, “The {c:QItemElderSignPendant} is an important part of the opening ritual. If used correctly, it will hold the portal open indefinitely. When the opening ritual was performed 10 years ago, our Uncle Henry stopped it before the portal could be secured. Without the {c:QItemElderSignPendant}, the portal will require endless sacrifice to remain open.”
 
 page|ritual components|Sarah reaches out as if to touch the {c:QItemRitualComponents} you found. “I recognize some of these items from the portal ritual. Both my father and the men who tried to stop my father brought similar items to help with the spells.”
 	visible|foundRitualComponents
 
-page|journal|Sarah looks down and sees you holding the {c:QItemJournal}. “The {c:QItemJournal}! I think its owner wrote down what is happening this week. You must read it carefully.”
-	test|foundJournal,==,0|Sarah whispers to {c:EventChosenInvestigator}, “That man who let you in, he was writing things all week in a book he carried with him. If you can find it, it may help you understand what is happening.”
-	test|readJournalFinished,==,0 readJournalPage1,>,0|Sarah looks down and sees you holding the {c:QItemJournal}. “The {c:QItemJournal}! I think its owner wrote down what is happening this week. You must read all of it carefully.”
-	test|readJournalFinished,>,0|Sarah looks down and sees you holding the {c:QItemJournal}. “The {c:QItemJournal}! Its owner wrote down what is happening this week. I'm glad you've read it... it will help you tonight.”
+page|journal|Sarah looks down and sees you holding the {c:QItemJournal}. “The {c:QItemJournal}! The man who let you in was writing in it all week. You should read it carefully.”
 	visible|foundJournal
+
+page|no-journal|Sarah whispers to {c:EventChosenInvestigator}, “That man who let you in, he was wrting things all week in a book he carried with him. If you can find, it may help you understand what is happeening.”
+	notvisible|foundJournal
 
 page|1|Sarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that {c:CustomMonsterDavidSmythe} will open a portal tonight and you must stop him; if you cannot stop him, you will need to close it.”
 	test|goal,==,goalRescueBoy|Sarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that {c:CustomMonsterDavidSmythe} will open a portal tonight. You must stop him.”
 	test|goal,==,goalStopCultists|Sarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that {c:CustomMonsterDavidSmythe} will open a portal tonight. You must stop him from making it permanent.”
     
-page|2|Sarah whispers to {c:EventChosenInvestigator}, “The people in this town worship a darker god than most. They want to bring their god here. 10 years ago, my father cast a ritual to summon It. He opened a portal. The power it possessed was breathtaking and I was powerless to stop it. Somehow, Father summoned local townsfolk through the portal to protect his work, even after he was dead. As the portal, I could feel people and monsters approaching and passing through me from the other side.”
+page|2|Sarah whispers to {c:EventChosenInvestigator}, “The people in this town worship a darker god than most. They want to bring their god to Earth. 10 years ago, my father cast a ritual to summon It. He opened a portal. The power it possessed was breathtaking and I was powerless to stop it. Somehow, Father summoned local townsfolk through the portal to protect his work, even after he was dead. As the portal, I could feel people and monsters approaching and passing through me from the other side.”
 
 page|3|Sarah whispers to {c:EventChosenInvestigator}, “I could feel the ancient one approach from the other side. Suddenly, a group of men broke into the altar chamber and began fighting the locals. One man went to the altar, killed our father, laid out some materials, and spoke words I didn’t understand. He closed the portal while his friends protected him from what came through it.”
     

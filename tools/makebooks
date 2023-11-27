@@ -272,7 +272,6 @@ $1 == "language" {
 				}
 				
 				language = $2
-				localizationHeader = ".," + $2
 				
 				realLocalizationFile = sprintf("Localization.%s.txt", language)
 				next
@@ -436,6 +435,14 @@ function OutputRandomToc(eventsFile, localizationFile, bookName, isKeep, startTo
 	
 	if (debug) printf "OutputRandomToc(%s, %s, %s, p[%i], s[%i], e[%i], %i)\n",
 		eventsFile, localizationFile, bookName, length(pages), length(startLines), length(endLines), isEndDirective
+
+	if (!isKeep) {
+		pageIndex = length(pages) + 1
+		pages[pageIndex][NAME] = "generatedEnd"
+		pages[pageIndex][TEXT] = "(end directive required for random/nokeep)"
+		pages[pageCount][TOCTEXT] = "(end directive required for random/nokeep)"
+		pages[pageCount][FREEACTION] = 0
+	}
 
     events = ""
     eventSeparator = ""

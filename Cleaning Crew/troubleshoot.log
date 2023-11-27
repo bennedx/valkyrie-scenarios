@@ -1,0 +1,525 @@
+File: BackyardBenAfter.events.ini
+File: BackyardBenBefore.events.ini
+File: DvmRescueBoy.events.ini
+File: DvmStopCultists.events.ini
+File: DvmStopRitual.events.ini
+File: DvmStopRitualBefore.events.ini
+File: RescueBoy.events.ini
+File: SarahPatter.events.ini
+File: StopCultistsRitual.events.ini
+File: WandererAttacks.events.ini
+File: events.ini
+File: items.ini
+File: journal.events.ini
+File: monsters.ini
+File: puzzles.ini
+File: quest.ini
+File: spawns.ini
+File: tiles.ini
+File: tokens.ini
+File: ui.ini
+File: localization.english.txt
+Game file: base/activations.ini
+Game file: base/attacks.ini
+Game file: base/audio.ini
+Game file: base/content_pack.ini
+Game file: base/dunwich_data.ini
+Game file: base/evade.ini
+Game file: base/horror.ini
+Game file: base/horror_attacks.ini
+Game file: base/images.ini
+Game file: base/investigators.ini
+Game file: base/items.ini
+Game file: base/monsters.ini
+Game file: base/mythos.ini
+Game file: base/puzzle.ini
+Game file: base/tiles.ini
+Game file: base/tokens.ini
+Game file: base/tokens_items.ini
+Game file: base/tokens_monsters.ini
+Game file: btt/content_pack.ini
+Game file: btt/investigators.ini
+Game file: btt/items.ini
+Game file: btt/monsters.ini
+Game file: btt/tiles.ini
+Game file: btt/tokens.ini
+Game file: ck/ck-tokensandcards/content_pack.ini
+Game file: ck/ck-tokensandcards/items.ini
+Game file: ck/ck-tokensandcards/tokens.ini
+Game file: ck/cotw-investigators/content_pack.ini
+Game file: ck/cotw-investigators/investigators.ini
+Game file: ck/cotw-monsters/content_pack.ini
+Game file: ck/cotw-monsters/monsters.ini
+Game file: ck/cotw-tiles/content_pack.ini
+Game file: ck/cotw-tiles/tiles.ini
+Game file: ck/fa-investigators/content_pack.ini
+Game file: ck/fa-investigators/investigators.ini
+Game file: ck/fa-monsters/content_pack.ini
+Game file: ck/fa-monsters/monsters.ini
+Game file: ck/fa-tiles/content_pack.ini
+Game file: ck/fa-tiles/tiles.ini
+Game file: ck/mom1e-investigators/content_pack.ini
+Game file: ck/mom1e-investigators/investigators.ini
+Game file: ck/mom1e-monsters/content_pack.ini
+Game file: ck/mom1e-monsters/monsters.ini
+Game file: ck/mom1e-tiles/content_pack.ini
+Game file: ck/mom1e-tiles/tiles.ini
+Game file: hj/content_pack.ini
+Game file: hj/investigators.ini
+Game file: hj/items.ini
+Game file: hj/monsters.ini
+Game file: hj/tiles.ini
+Game file: hj/tokens.ini
+Game file: hj/tokens_monsters.ini
+Game file: pots/content_pack.ini
+Game file: pots/investigators.ini
+Game file: pots/items.ini
+/c/Program Files (x86)/Valkyrie/valkyrie_Data/StreamingAssets/content/MoM/pots/items.ini@67 Duplicate  ItemCommonTorch 
+Game file: pots/monsters.ini
+Game file: pots/tiles.ini
+/c/Program Files (x86)/Valkyrie/valkyrie_Data/StreamingAssets/content/MoM/pots/tiles.ini@97 Duplicate  TileSideCampsite 
+Game file: pots/tokens.ini
+Game file: pots/tokens_monsters.ini
+Game file: rn/content_pack.ini
+Game file: sm/content_pack.ini
+Game file: soa/content_pack.ini
+Game file: soa/investigators.ini
+Game file: soa/items.ini
+Game file: soa/monsters.ini
+Game file: soa/tiles.ini
+Game file: soa/tokens.ini
+Game file: sot/content_pack.ini
+Game file: sot/investigators.ini
+Game file: sot/items.ini
+Game file: sot/monsters.ini
+Game file: sot/tiles.ini
+Game file: sot/tokens.ini
+Game file: base/Localization.English.txt
+Game file: base/Localization.French.txt
+Game file: base/Localization.German.txt
+Game file: base/Localization.Italian.txt
+Game file: base/Localization.Polish.txt
+Game file: base/Localization.Russian.txt
+==================================================================== missing referenced sections
+events.ini@1703                Missing    EventWandererAttackStart (EventWandererMove)
+WandererAttacks.events.ini@263 Missing    WandererAttacksGeneralSelectRetry (EventWandererAttacksGeneralSelect)
+WandererAttacks.events.ini@263 Missing    WandererAttacksGeneralSelectRestart (EventWandererAttacksGeneralSelect)
+WandererAttacks.events.ini@1   Missing    EventWandererAttacksStoryStart (EventWandererAttacksStart)
+WandererAttacks.events.ini@282 Missing    WandererAttacksGeneralStart (WandererAttacksStoryStart)
+events.ini@1829                Missing    EventDVMRitual (EventDWMStartDisambiguator)
+events.ini@1829                Missing    EventDVMStart (EventDWMStartDisambiguator)
+==================================================================== unused sections
+tokens.ini@62                  Unused     TokenWallHall1 (TokenWallHall1)
+tokens.ini@896                 Unused     TokenTestPlaceBasementViaDungeonCave (TokenTestPlaceBasementViaDungeonCave)
+DvmStopCultists.events.ini@179 Unused     EventDVMStopCultistsReadPage8 (EventDVMStopCultistsReadPage8)
+events.ini@1625                Unused     EventTestPlaceDrivewayStart (EventTestPlaceDrivewayStart)
+events.ini@693                 Unused     EventPlaceCellHole (EventPlaceCellHole)
+events.ini@2054                Unused     EventKillChapelEscapeRiot (EventKillChapelEscapeRiot)
+events.ini@1341                Unused     EventPlaceBasementConditionConfirm (EventPlaceBasementConditionConfirm)
+DvmStopRitual.events.ini@495   Unused     EventDvmStopRitualStart (EventDvmStopRitualStart)
+events.ini@1712                Unused     EventWandererHorrorCheck (EventWandererHorrorCheck)
+events.ini@877                 Unused     EventSearchStairsPass (EventSearchStairsPass)
+events.ini@1692                Unused     EventWandererActivationStart (EventWandererActivationStart)
+events.ini@419                 Unused     EventInteractSarahSpeaks1 (EventInteractSarahSpeaks1)
+events.ini@1089                Unused     EventTestShowVariable (EventTestShowVariable)
+spawns.ini@10                  Unused     SpawnSpawnCultist1 (SpawnSpawnCultist1)
+DvmRescueBoy.events.ini@194    Unused     EventDVMRescueBoyReadPage8 (EventDVMRescueBoyReadPage8)
+journal.events.ini@174         Unused     EventJournalReadPage8 (EventJournalReadPage8)
+events.ini@1614                Unused     EventTestGetFluxStabilizer (EventTestGetFluxStabilizer)
+events.ini@1663                Unused     EventMythosWandererActivateStart (EventMythosWandererActivateStart)
+WandererAttacks.events.ini@1   Unused     EventWandererAttacksStart (EventWandererAttacksStart)
+events.ini@1473                Unused     EventExploreDiningRoomViaBackdoor (EventExploreDiningRoomViaBackdoor)
+events.ini@801                 Unused     EventPlaceStudyBook (EventPlaceStudyBook)
+events.ini@684                 Unused     EventPlaceCellExploreAltar (EventPlaceCellExploreAltar)
+events.ini@1465                Unused     EventExploreBackdoorFailSearchJournal (EventExploreBackdoorFailSearchJournal)
+events.ini@1282                Unused     EventExploreHall2DoorLocked (EventExploreHall2DoorLocked)
+events.ini@440                 Unused     EventPlaceDrivewayBen (EventPlaceDrivewayBen)
+events.ini@100                 Unused     EventExploreDiningRoom (EventExploreDiningRoom)
+events.ini@1331                Unused     EventTestTransportInvestigatorsYes (EventTestTransportInvestigatorsYes)
+tokens.ini@55                  Unused     TokenDoorHall1 (TokenDoorHall1)
+events.ini@1783                Unused     EventFoundEvidenceStart (EventFoundEvidenceStart)
+tokens.ini@888                 Unused     TokenExploreBasementViaDungeonCave (TokenExploreBasementViaDungeonCave)
+items.ini@133                  Unused     QItemMagnifyingGlass (QItemMagnifyingGlass)
+DvmStopRitualBefore.events.ini@269 Unused     EventDVMStopRitualAfterEnd (EventDVMStopRitualAfterEnd)
+events.ini@1797                Unused     EventPlaceChapelExploreCryptNoEvidence1 (EventPlaceChapelExploreCryptNoEvidence1)
+events.ini@1803                Unused     EventPlaceChapelExploreCryptNoEvidence2 (EventPlaceChapelExploreCryptNoEvidence2)
+items.ini@24                   Unused     QItemPuzzleBox (QItemPuzzleBox)
+StopCultistsRitual.events.ini@155 Unused     EventStopCultistsRitualStart (EventStopCultistsRitualStart)
+WandererAttacks.events.ini@267 Unused     EventGeneralSelectRetry (EventGeneralSelectRetry)
+items.ini@3                    Unused     QItemKate (QItemKate)
+events.ini@731                 Unused     EventEvadeCellLloiger (EventEvadeCellLloiger)
+spawns.ini@3                   Unused     SpawnJamie (SpawnJamie)
+WandererAttacks.events.ini@273 Unused     EventWandererAttacksSelectRestart (EventWandererAttacksSelectRestart)
+events.ini@807                 Unused     EventPlaceChapelExploreCryptWithNoKey (EventPlaceChapelExploreCryptWithNoKey)
+events.ini@631                 Unused     EventPlaceAltarDavid (EventPlaceAltarDavid)
+events.ini@344                 Unused     EventExploreFoyerLockedDoor (EventExploreFoyerLockedDoor)
+items.ini@61                   Unused     QItemBladed (QItemBladed)
+events.ini@1286                Unused     EventInteractChapelTrapdoorTest (EventInteractChapelTrapdoorTest)
+RescueBoy.events.ini@89        Unused     EventRescueBoyStart (EventRescueBoyStart)
+events.ini@83                  Unused     EventPlacePorchSearchPottedPlant (EventPlacePorchSearchPottedPlant)
+items.ini@28                   Unused     QItemFireExtinguisher (QItemFireExtinguisher)
+WandererAttacks.events.ini@282 Unused     WandererAttacksStoryStart (WandererAttacksStoryStart)
+events.ini@651                 Unused     EventPlaceAltarExploreDoor (EventPlaceAltarExploreDoor)
+DvmStopRitualBefore.events.ini@174 Unused     EventDVMStopRitualBeforeReadPage8 (EventDVMStopRitualBeforeReadPage8)
+tokens.ini@440                 Unused     TokenTestDWM (TokenTestDWM)
+events.ini@21                  Unused     EventPlaceChapelExploreCryptWithKey (EventPlaceChapelExploreCryptWithKey)
+events.ini@1066                Unused     EventPlaceHall2MoveIfExplore (EventPlaceHall2MoveIfExplore)
+tokens.ini@1040                Unused     TokenDavidSmythesSonRescuable (TokenDavidSmythesSonRescuable)
+events.ini@1292                Unused     EventExploreCaveViaDungeonCaveOpen (EventExploreCaveViaDungeonCaveOpen)
+events.ini@1194                Unused     EventTestStartRitual (EventTestStartRitual)
+spawns.ini@99                  Unused     SpawnPlaceDungeonCaveViaChapelCultist1 (SpawnPlaceDungeonCaveViaChapelCultist1)
+events.ini@2080                Unused     EventPlaceChapel2 (EventPlaceChapel2)
+DvmStopRitualBefore.events.ini@263 Unused     EventDVMStopRitualAfterStart (EventDVMStopRitualAfterStart)
+events.ini@1359                Unused     EventPlaceBasementConditionStart0 (EventPlaceBasementConditionStart0)
+tokens.ini@1009                Unused     TokenExploreChapelViaCryptAgain (TokenExploreChapelViaCryptAgain)
+spawns.ini@91                  Unused     SpawnAltarCultists5 (SpawnAltarCultists5)
+events.ini@1610                Unused     EventSearchBasementRubbleChapelDor (EventSearchBasementRubbleChapelDor)
+==================================================================== missing localization keys
+WandererAttacks.events.ini@42  Missing    EventWandererAttacksGeneralAgilityDazed.text (EventWandererAttacksGeneralAgilityDazed)
+WandererAttacks.events.ini@42  Missing    EventWandererAttacksGeneralAgilityDazed.button1 (EventWandererAttacksGeneralAgilityDazed)
+WandererAttacks.events.ini@263 Missing    EventWandererAttacksGeneralSelect.button1 (EventWandererAttacksGeneralSelect)
+WandererAttacks.events.ini@263 Missing    EventWandererAttacksGeneralSelect.text (EventWandererAttacksGeneralSelect)
+tokens.ini@690                 Missing    TokenWallHall2.text (TokenWallHall2)
+tiles.ini@74                   Missing    TileDriveway.text (TileDriveway)
+items.ini@105                  Missing    QItemEvidenceCoatRoom.text (QItemEvidenceCoatRoom)
+tokens.ini@958                 Missing    TokenBackyardBenPassive.text (TokenBackyardBenPassive)
+items.ini@65                   Missing    QItemStartAttackSpell.text (QItemStartAttackSpell)
+WandererAttacks.events.ini@144 Missing    EventWandererAttacksGeneralWillRestrained.text (EventWandererAttacksGeneralWillRestrained)
+WandererAttacks.events.ini@144 Missing    EventWandererAttacksGeneralWillRestrained.button1 (EventWandererAttacksGeneralWillRestrained)
+events.ini@745                 Missing    EventMythosRitualInProgress.text (EventMythosRitualInProgress)
+events.ini@1567                Missing    EventKillWanderer.text (EventKillWanderer)
+events.ini@1625                Missing    EventTestPlaceDrivewayStart.text (EventTestPlaceDrivewayStart)
+tiles.ini@50                   Missing    TileFoyer.text (TileFoyer)
+WandererAttacks.events.ini@60  Missing    EventWandererAttacksGeneralObservationStunned.button1 (EventWandererAttacksGeneralObservationStunned)
+WandererAttacks.events.ini@60  Missing    EventWandererAttacksGeneralObservationStunned.text (EventWandererAttacksGeneralObservationStunned)
+items.ini@69                   Missing    QItemStartFirearm.text (QItemStartFirearm)
+tokens.ini@799                 Missing    TokenTestInitChosenInvestigator.text (TokenTestInitChosenInvestigator)
+WandererAttacks.events.ini@126 Missing    EventWandererAttacksGeneralWillDamage.text (EventWandererAttacksGeneralWillDamage)
+WandererAttacks.events.ini@126 Missing    EventWandererAttacksGeneralWillDamage.button1 (EventWandererAttacksGeneralWillDamage)
+events.ini@693                 Missing    EventPlaceCellHole.button1 (EventPlaceCellHole)
+events.ini@693                 Missing    EventPlaceCellHole.text (EventPlaceCellHole)
+tokens.ini@995                 Missing    TokenTestPlaceStairs.button1 (TokenTestPlaceStairs)
+tokens.ini@995                 Missing    TokenTestPlaceStairs.text (TokenTestPlaceStairs)
+items.ini@129                  Missing    QItemFoyerRandom.text (QItemFoyerRandom)
+WandererAttacks.events.ini@108 Missing    EventWandererAttacksGeneralInfluenceStunned.button1 (EventWandererAttacksGeneralInfluenceStunned)
+WandererAttacks.events.ini@108 Missing    EventWandererAttacksGeneralInfluenceStunned.text (EventWandererAttacksGeneralInfluenceStunned)
+events.ini@1240                Missing    EventStartupInitializeStart.text (EventStartupInitializeStart)
+monsters.ini@20                Missing    CustomMonsterCellLloiger.text (CustomMonsterCellLloiger)
+events.ini@1557                Missing    EventMythosWandererNotPlaced.text (EventMythosWandererNotPlaced)
+events.ini@2029                Missing    EventPlaceStairs.button1 (EventPlaceStairs)
+items.ini@40                   Missing    QItemRitualDagger.text (QItemRitualDagger)
+events.ini@1697                Missing    EventWandererMoveStart.text (EventWandererMoveStart)
+events.ini@877                 Missing    EventSearchStairsPass.button1 (EventSearchStairsPass)
+events.ini@1247                Missing    EventStartupInitializeEnd.text (EventStartupInitializeEnd)
+events.ini@1772                Missing    EventTestChosenInvestigatorWandererEnd.text (EventTestChosenInvestigatorWandererEnd)
+events.ini@2076                Missing    EventLookPlaceKitchenViaDriveway.button1 (EventLookPlaceKitchenViaDriveway)
+events.ini@2076                Missing    EventLookPlaceKitchenViaDriveway.text (EventLookPlaceKitchenViaDriveway)
+WandererAttacks.events.ini@30  Missing    EventWandererAttacksGeneralAgilityDamage.text (EventWandererAttacksGeneralAgilityDamage)
+WandererAttacks.events.ini@30  Missing    EventWandererAttacksGeneralAgilityDamage.button1 (EventWandererAttacksGeneralAgilityDamage)
+events.ini@1692                Missing    EventWandererActivationStart.text (EventWandererActivationStart)
+events.ini@1763                Missing    EventMoveAfterExploreEnd.text (EventMoveAfterExploreEnd)
+ui.ini@104                     Missing    UIGameOverLoseStopRitualText.text (UIGameOverLoseStopRitualText)
+ui.ini@80                      Missing    UIUIGameOverButton.text (UIUIGameOverButton)
+events.ini@1562                Missing    EventMythosWandererEnd.text (EventMythosWandererEnd)
+items.ini@48                   Missing    QItemDVM.text (QItemDVM)
+events.ini@1336                Missing    EventStartupEnd.text (EventStartupEnd)
+events.ini@1083                Missing    EventMoveAfterExploreCandidate.text (EventMoveAfterExploreCandidate)
+tokens.ini@980                 Missing    TokenStairsJunk.button1 (TokenStairsJunk)
+tokens.ini@980                 Missing    TokenStairsJunk.text (TokenStairsJunk)
+events.ini@1159                Missing    EventInvestigatorTransportStart.text (EventInvestigatorTransportStart)
+events.ini@1936                Missing    EventPlaceFoyerCandlesEnd.text (EventPlaceFoyerCandlesEnd)
+events.ini@1116                Missing    EventMythosRitualReady.text (EventMythosRitualReady)
+events.ini@1208                Missing    EventPlaceHall2.text (EventPlaceHall2)
+WandererAttacks.events.ini@54  Missing    EventWandererAttacksGeneralObservationDamaged.button1 (EventWandererAttacksGeneralObservationDamaged)
+WandererAttacks.events.ini@54  Missing    EventWandererAttacksGeneralObservationDamaged.text (EventWandererAttacksGeneralObservationDamaged)
+events.ini@1528                Missing    EventKillWandererEnd.text (EventKillWandererEnd)
+items.ini@85                   Missing    QItemCutlery.text (QItemCutlery)
+events.ini@1750                Missing    EventMoveAfterExploreDeadPriest.text (EventMoveAfterExploreDeadPriest)
+events.ini@1620                Missing    EventStartupClueTokens.button1 (EventStartupClueTokens)
+events.ini@1620                Missing    EventStartupClueTokens.text (EventStartupClueTokens)
+events.ini@769                 Missing    EventMythosRitualSummonsStart.text (EventMythosRitualSummonsStart)
+events.ini@1679                Missing    EventMythosWandererActivateMoveEnd.text (EventMythosWandererActivateMoveEnd)
+events.ini@2023                Missing    EventLookStairsFirst.button1 (EventLookStairsFirst)
+events.ini@2023                Missing    EventLookStairsFirst.text (EventLookStairsFirst)
+WandererAttacks.events.ini@72  Missing    EventWandererAttacksGeneralObservationRestrained.text (EventWandererAttacksGeneralObservationRestrained)
+WandererAttacks.events.ini@72  Missing    EventWandererAttacksGeneralObservationRestrained.button1 (EventWandererAttacksGeneralObservationRestrained)
+spawns.ini@170                 Missing    SpawnChapelStopCultistsRiot.text (SpawnChapelStopCultistsRiot)
+WandererAttacks.events.ini@102 Missing    EventWandererAttacksGeneralInfluenceDamaged.button1 (EventWandererAttacksGeneralInfluenceDamaged)
+WandererAttacks.events.ini@102 Missing    EventWandererAttacksGeneralInfluenceDamaged.text (EventWandererAttacksGeneralInfluenceDamaged)
+tokens.ini@942                 Missing    TokenBackyardBenBefore.text (TokenBackyardBenBefore)
+events.ini@1663                Missing    EventMythosWandererActivateStart.text (EventMythosWandererActivateStart)
+tokens.ini@751                 Missing    TokenDoorBackdoor.text (TokenDoorBackdoor)
+tokens.ini@616                 Missing    TokenAltarInvestigators.text (TokenAltarInvestigators)
+WandererAttacks.events.ini@286 Missing    WandererAttacksStoryEnd.button1 (WandererAttacksStoryEnd)
+WandererAttacks.events.ini@286 Missing    WandererAttacksStoryEnd.text (WandererAttacksStoryEnd)
+events.ini@841                 Missing    EventSearchBackdoorRandom.button2 (EventSearchBackdoorRandom)
+tokens.ini@675                 Missing    TokenDoorStudy.button1 (TokenDoorStudy)
+WandererAttacks.events.ini@1   Missing    EventWandererAttacksStart.text (EventWandererAttacksStart)
+WandererAttacks.events.ini@1   Missing    EventWandererAttacksStart.button1 (EventWandererAttacksStart)
+WandererAttacks.events.ini@66  Missing    EventWandererAttacksGeneralObservationDazed.button1 (EventWandererAttacksGeneralObservationDazed)
+WandererAttacks.events.ini@66  Missing    EventWandererAttacksGeneralObservationDazed.text (EventWandererAttacksGeneralObservationDazed)
+items.ini@147                  Missing    QItemBackdoorRandom.text (QItemBackdoorRandom)
+items.ini@113                  Missing    QItemEvidenceBasementRubble.text (QItemEvidenceBasementRubble)
+tiles.ini@26                   Missing    TileTortureChamber.text (TileTortureChamber)
+ui.ini@67                      Missing    UIGameOverWinStopRitualText.text (UIGameOverWinStopRitualText)
+items.ini@57                   Missing    QItemBigGun.text (QItemBigGun)
+tokens.ini@300                 Missing    TokenTestBasementViaDiningRoomSight.text (TokenTestBasementViaDiningRoomSight)
+events.ini@2000                Missing    EventStartupGoalStopRitual.text (EventStartupGoalStopRitual)
+events.ini@1346                Missing    EventPlaceBasementConditionStart.text (EventPlaceBasementConditionStart)
+events.ini@1265                Missing    EventPlaceDrivewayEnd.text (EventPlaceDrivewayEnd)
+events.ini@1170                Missing    EventInvestigatorTransportEnd.text (EventInvestigatorTransportEnd)
+events.ini@827                 Missing    EventStartupOpeningSplashEnd.text (EventStartupOpeningSplashEnd)
+tokens.ini@1024                Missing    TokenExploreEscapeViaChapelAjar.text (TokenExploreEscapeViaChapelAjar)
+events.ini@1658                Missing    EventPlaceDrivewayWendyEnd.text (EventPlaceDrivewayWendyEnd)
+events.ini@1140                Missing    EventMythosCounterRitualStart.text (EventMythosCounterRitualStart)
+WandererAttacks.events.ini@6   Missing    EventWandererAttacksGeneralStrengthDamage.button1 (EventWandererAttacksGeneralStrengthDamage)
+WandererAttacks.events.ini@6   Missing    EventWandererAttacksGeneralStrengthDamage.text (EventWandererAttacksGeneralStrengthDamage)
+events.ini@1966                Missing    EventGameOverTell.text (EventGameOverTell)
+events.ini@2070                Missing    EventLookStairsOthersFirstTest.button1 (EventLookStairsOthersFirstTest)
+events.ini@2070                Missing    EventLookStairsOthersFirstTest.button2 (EventLookStairsOthersFirstTest)
+events.ini@2070                Missing    EventLookStairsOthersFirstTest.text (EventLookStairsOthersFirstTest)
+monsters.ini@3                 Missing    CustomMonsterLibraryCultist.text (CustomMonsterLibraryCultist)
+items.ini@44                   Missing    QItemRitualComponents.text (QItemRitualComponents)
+events.ini@2142                Missing    EventSearchDiningRoomFluxStabilizerAfterPuzzleEnd.text (EventSearchDiningRoomFluxStabilizerAfterPuzzleEnd)
+events.ini@1582                Missing    EventExploreDungeonCaveViaCryptYes.text (EventExploreDungeonCaveViaCryptYes)
+events.ini@1271                Missing    EventStartupOpeningSplashStart.text (EventStartupOpeningSplashStart)
+events.ini@1859                Missing    EventSearchDiningRoomFluxStabilizerEnd.text (EventSearchDiningRoomFluxStabilizerEnd)
+events.ini@1111                Missing    EventMythosHealingStoneEnd.text (EventMythosHealingStoneEnd)
+puzzles.ini@11                 Missing    PuzzleDiningRoomFluxStabilizer.text (PuzzleDiningRoomFluxStabilizer)
+events.ini@2041                Missing    EventLookStairsOthersOthers.button1 (EventLookStairsOthersOthers)
+events.ini@2041                Missing    EventLookStairsOthersOthers.button2 (EventLookStairsOthersOthers)
+events.ini@1954                Missing    EventStartupGoalStart.text (EventStartupGoalStart)
+tokens.ini@24                  Missing    TokenDrivewayInvestigators.text (TokenDrivewayInvestigators)
+ui.ini@188                     Missing    UIGameOverContinue.text (UIGameOverContinue)
+events.ini@1757                Missing    EventMoveAfterExploreGoodGuys.text (EventMoveAfterExploreGoodGuys)
+WandererAttacks.events.ini@48  Missing    EventWandererAttacksGeneralAgilityRestrained.button1 (EventWandererAttacksGeneralAgilityRestrained)
+WandererAttacks.events.ini@48  Missing    EventWandererAttacksGeneralAgilityRestrained.text (EventWandererAttacksGeneralAgilityRestrained)
+events.ini@1669                Missing    EventMythosWandererActivateMoveStart.text (EventMythosWandererActivateMoveStart)
+WandererAttacks.events.ini@36  Missing    EventWandererAttacksGeneralAgilityStunned.button1 (EventWandererAttacksGeneralAgilityStunned)
+WandererAttacks.events.ini@36  Missing    EventWandererAttacksGeneralAgilityStunned.text (EventWandererAttacksGeneralAgilityStunned)
+ui.ini@164                     Missing    UIGameOverLoseStopCultistsText.text (UIGameOverLoseStopCultistsText)
+monsters.ini@6                 Missing    CustomMonsterChapelRiot.text (CustomMonsterChapelRiot)
+events.ini@2116                Missing    EventInteractEscapeCheckDone.text (EventInteractEscapeCheckDone)
+tokens.ini@153                 Missing    TokenDrivewayBen.text (TokenDrivewayBen)
+tokens.ini@153                 Missing    TokenDrivewayBen.button1 (TokenDrivewayBen)
+tokens.ini@153                 Missing    TokenDrivewayBen.button2 (TokenDrivewayBen)
+items.ini@101                  Missing    QItemRandomEquipment.text (QItemRandomEquipment)
+events.ini@735                 Missing    EventMythosSarahPatterStart.text (EventMythosSarahPatterStart)
+events.ini@1175                Missing    EventMythosRitualEnd.text (EventMythosRitualEnd)
+events.ini@1540                Missing    EventSearchDiningRoomFluxStabilizerAfterPuzzleBen.text (EventSearchDiningRoomFluxStabilizerAfterPuzzleBen)
+tiles.ini@80                   Missing    TileStairs.text (TileStairs)
+tokens.ini@55                  Missing    TokenDoorHall1.text (TokenDoorHall1)
+events.ini@1783                Missing    EventFoundEvidenceStart.text (EventFoundEvidenceStart)
+monsters.ini@33                Missing    CustomMonsterChapelTownfolk.text (CustomMonsterChapelTownfolk)
+WandererAttacks.events.ini@114 Missing    EventWandererAttacksGeneralInfluenceDazed.button1 (EventWandererAttacksGeneralInfluenceDazed)
+WandererAttacks.events.ini@114 Missing    EventWandererAttacksGeneralInfluenceDazed.text (EventWandererAttacksGeneralInfluenceDazed)
+items.ini@143                  Missing    QItemWendyGun.text (QItemWendyGun)
+events.ini@1736                Missing    EventMoveAfterExploreAngryBenDeadPriest.text (EventMoveAfterExploreAngryBenDeadPriest)
+items.ini@93                   Missing    QItemEvidenceDiningRoom.text (QItemEvidenceDiningRoom)
+items.ini@133                  Missing    QItemMagnifyingGlass.text (QItemMagnifyingGlass)
+ui.ini@128                     Missing    UIGameOverWinRescueBoyText.text (UIGameOverWinRescueBoyText)
+ui.ini@33                      Missing    UIOpeningText.text (UIOpeningText)
+ui.ini@23                      Missing    UIStoryFrame.text (UIStoryFrame)
+items.ini@32                   Missing    QItem2x4.text (QItem2x4)
+WandererAttacks.events.ini@204 Missing    EventWandererAttacksStory10.button1 (EventWandererAttacksStory10)
+WandererAttacks.events.ini@204 Missing    EventWandererAttacksStory10.text (EventWandererAttacksStory10)
+WandererAttacks.events.ini@210 Missing    EventWandererAttacksStory11.text (EventWandererAttacksStory11)
+WandererAttacks.events.ini@210 Missing    EventWandererAttacksStory11.button1 (EventWandererAttacksStory11)
+WandererAttacks.events.ini@216 Missing    EventWandererAttacksStory12.text (EventWandererAttacksStory12)
+WandererAttacks.events.ini@216 Missing    EventWandererAttacksStory12.button1 (EventWandererAttacksStory12)
+WandererAttacks.events.ini@222 Missing    EventWandererAttacksStory13.text (EventWandererAttacksStory13)
+WandererAttacks.events.ini@222 Missing    EventWandererAttacksStory13.button1 (EventWandererAttacksStory13)
+WandererAttacks.events.ini@228 Missing    EventWandererAttacksStory14.text (EventWandererAttacksStory14)
+WandererAttacks.events.ini@228 Missing    EventWandererAttacksStory14.button1 (EventWandererAttacksStory14)
+WandererAttacks.events.ini@234 Missing    EventWandererAttacksStory15.text (EventWandererAttacksStory15)
+WandererAttacks.events.ini@234 Missing    EventWandererAttacksStory15.button1 (EventWandererAttacksStory15)
+events.ini@1523                Missing    EventStartupKateEnd.text (EventStartupKateEnd)
+WandererAttacks.events.ini@240 Missing    EventWandererAttacksStory16.text (EventWandererAttacksStory16)
+WandererAttacks.events.ini@240 Missing    EventWandererAttacksStory16.button1 (EventWandererAttacksStory16)
+WandererAttacks.events.ini@246 Missing    EventWandererAttacksStory17.text (EventWandererAttacksStory17)
+WandererAttacks.events.ini@246 Missing    EventWandererAttacksStory17.button1 (EventWandererAttacksStory17)
+WandererAttacks.events.ini@252 Missing    EventWandererAttacksStory18.button1 (EventWandererAttacksStory18)
+WandererAttacks.events.ini@252 Missing    EventWandererAttacksStory18.text (EventWandererAttacksStory18)
+events.ini@1308                Missing    EventPlaceCellEnd.text (EventPlaceCellEnd)
+ui.ini@12                      Missing    UIStoryImage.text (UIStoryImage)
+monsters.ini@15                Missing    CustomMonsterDavidSmythe.text (CustomMonsterDavidSmythe)
+events.ini@1234                Missing    EventMythosRitualYes.text (EventMythosRitualYes)
+tokens.ini@988                 Missing    TokenSearchStairs.button1 (TokenSearchStairs)
+tokens.ini@988                 Missing    TokenSearchStairs.text (TokenSearchStairs)
+events.ini@655                 Missing    EventPlaceAltarSpawnCultists.text (EventPlaceAltarSpawnCultists)
+items.ini@117                  Missing    QItemKey.text (QItemKey)
+events.ini@1128                Missing    EventMythosRitualIncrement.text (EventMythosRitualIncrement)
+events.ini@1145                Missing    EventMythosCounterRitualEnd.text (EventMythosCounterRitualEnd)
+events.ini@1797                Missing    EventPlaceChapelExploreCryptNoEvidence1.text (EventPlaceChapelExploreCryptNoEvidence1)
+events.ini@1803                Missing    EventPlaceChapelExploreCryptNoEvidence2.text (EventPlaceChapelExploreCryptNoEvidence2)
+WandererAttacks.events.ini@90  Missing    EventWandererAttacksGeneralLoreDazed.button1 (EventWandererAttacksGeneralLoreDazed)
+WandererAttacks.events.ini@90  Missing    EventWandererAttacksGeneralLoreDazed.text (EventWandererAttacksGeneralLoreDazed)
+tiles.ini@15                   Missing    TileBasement.text (TileBasement)
+events.ini@1318                Missing    EventPlaceCellRitualRunning.text (EventPlaceCellRitualRunning)
+items.ini@24                   Missing    QItemPuzzleBox.text (QItemPuzzleBox)
+events.ini@1150                Missing    EventMythosRitualStart.text (EventMythosRitualStart)
+WandererAttacks.events.ini@24  Missing    EventWandererAttacksGeneralStrengthRestrained.button1 (EventWandererAttacksGeneralStrengthRestrained)
+WandererAttacks.events.ini@24  Missing    EventWandererAttacksGeneralStrengthRestrained.text (EventWandererAttacksGeneralStrengthRestrained)
+events.ini@1509                Missing    EventStartupKateStart.text (EventStartupKateStart)
+WandererAttacks.events.ini@138 Missing    EventWandererAttacksGeneralWillDazed.text (EventWandererAttacksGeneralWillDazed)
+WandererAttacks.events.ini@138 Missing    EventWandererAttacksGeneralWillDazed.button1 (EventWandererAttacksGeneralWillDazed)
+events.ini@1575                Missing    EventPlaceCryptExploreDungeonCaveYes.text (EventPlaceCryptExploreDungeonCaveYes)
+ui.ini@92                      Missing    UIGameOverHalfWinStopRitualText.text (UIGameOverHalfWinStopRitualText)
+WandererAttacks.events.ini@267 Missing    EventGeneralSelectRetry.button1 (EventGeneralSelectRetry)
+WandererAttacks.events.ini@267 Missing    EventGeneralSelectRetry.text (EventGeneralSelectRetry)
+items.ini@3                    Missing    QItemKate.text (QItemKate)
+spawns.ini@3                   Missing    SpawnJamie.text (SpawnJamie)
+WandererAttacks.events.ini@273 Missing    EventWandererAttacksSelectRestart.text (EventWandererAttacksSelectRestart)
+WandererAttacks.events.ini@273 Missing    EventWandererAttacksSelectRestart.button1 (EventWandererAttacksSelectRestart)
+monsters.ini@11                Missing    CustomMonsterAltarCultist.text (CustomMonsterAltarCultist)
+events.ini@32                  Missing    EventMythosStart.text (EventMythosStart)
+events.ini@780                 Missing    EventMythosCounterRitualYes.text (EventMythosCounterRitualYes)
+monsters.ini@28                Missing    CustomMonsterWanderer.text (CustomMonsterWanderer)
+events.ini@1296                Missing    EventInteractChapelTrapdoorPlaceDiningRoom.text (EventInteractChapelTrapdoorPlaceDiningRoom)
+events.ini@1296                Missing    EventInteractChapelTrapdoorPlaceDiningRoom.button1 (EventInteractChapelTrapdoorPlaceDiningRoom)
+items.ini@11                   Missing    QItemElderSignPendant.text (QItemElderSignPendant)
+tiles.ini@3                    Missing    TileBackdoor.text (TileBackdoor)
+events.ini@1352                Missing    EventPlaceBasementConditionRubbleSearchYes.text (EventPlaceBasementConditionRubbleSearchYes)
+events.ini@1777                Missing    EventTestChosenInvestigatorWandererSmashedGate.text (EventTestChosenInvestigatorWandererSmashedGate)
+ui.ini@116                     Missing    UIGameOverLoseRescueBoy.text (UIGameOverLoseRescueBoy)
+puzzles.ini@3                  Missing    PuzzleExploreLibraryBookcase.text (PuzzleExploreLibraryBookcase)
+events.ini@631                 Missing    EventPlaceAltarDavid.text (EventPlaceAltarDavid)
+items.ini@138                  Missing    QItemFluxStabilizer.text (QItemFluxStabilizer)
+events.ini@563                 Missing    EventGameDoneEnd.text (EventGameDoneEnd)
+items.ini@61                   Missing    QItemBladed.text (QItemBladed)
+events.ini@1124                Missing    EventMythosEnd.text (EventMythosEnd)
+events.ini@1410                Missing    EventPlaceStudyExploreHall2Yes.text (EventPlaceStudyExploreHall2Yes)
+events.ini@688                 Missing    EventPlaceCellNoRitual.text (EventPlaceCellNoRitual)
+events.ini@1995                Missing    EventStartupGoalBranch.text (EventStartupGoalBranch)
+items.ini@97                   Missing    QItemHealingStone.text (QItemHealingStone)
+events.ini@1641                Missing    EventStartupPlaceDrivewayEnd.text (EventStartupPlaceDrivewayEnd)
+events.ini@88                  Missing    EventPlacePorchExploreDiningRoom.button1 (EventPlacePorchExploreDiningRoom)
+events.ini@88                  Missing    EventPlacePorchExploreDiningRoom.text (EventPlacePorchExploreDiningRoom)
+events.ini@2048                Missing    EventLookStairsOthers.button1 (EventLookStairsOthers)
+events.ini@2048                Missing    EventLookStairsOthers.text (EventLookStairsOthers)
+items.ini@20                   Missing    QItemBrassKey.text (QItemBrassKey)
+events.ini@861                 Missing    EventPlaceHall2TileEnd.text (EventPlaceHall2TileEnd)
+events.ini@83                  Missing    EventPlacePorchSearchPottedPlant.button1 (EventPlacePorchSearchPottedPlant)
+events.ini@83                  Missing    EventPlacePorchSearchPottedPlant.text (EventPlacePorchSearchPottedPlant)
+events.ini@1743                Missing    EventMoveAfterExploreAngryBen.text (EventMoveAfterExploreAngryBen)
+ui.ini@3                       Missing    UIStoryBackground.text (UIStoryBackground)
+events.ini@1545                Missing    EventMythosWandererStart.text (EventMythosWandererStart)
+items.ini@89                   Missing    QItemWhiskey.text (QItemWhiskey)
+items.ini@28                   Missing    QItemFireExtinguisher.text (QItemFireExtinguisher)
+WandererAttacks.events.ini@150 Missing    EventWandererAttacksStory1.text (EventWandererAttacksStory1)
+WandererAttacks.events.ini@150 Missing    EventWandererAttacksStory1.button1 (EventWandererAttacksStory1)
+WandererAttacks.events.ini@156 Missing    EventWandererAttacksStory2.button1 (EventWandererAttacksStory2)
+WandererAttacks.events.ini@156 Missing    EventWandererAttacksStory2.text (EventWandererAttacksStory2)
+WandererAttacks.events.ini@162 Missing    EventWandererAttacksStory3.button1 (EventWandererAttacksStory3)
+WandererAttacks.events.ini@162 Missing    EventWandererAttacksStory3.text (EventWandererAttacksStory3)
+WandererAttacks.events.ini@168 Missing    EventWandererAttacksStory4.button1 (EventWandererAttacksStory4)
+WandererAttacks.events.ini@168 Missing    EventWandererAttacksStory4.text (EventWandererAttacksStory4)
+WandererAttacks.events.ini@174 Missing    EventWandererAttacksStory5.text (EventWandererAttacksStory5)
+WandererAttacks.events.ini@174 Missing    EventWandererAttacksStory5.button1 (EventWandererAttacksStory5)
+WandererAttacks.events.ini@180 Missing    EventWandererAttacksStory6.text (EventWandererAttacksStory6)
+WandererAttacks.events.ini@180 Missing    EventWandererAttacksStory6.button1 (EventWandererAttacksStory6)
+WandererAttacks.events.ini@186 Missing    EventWandererAttacksStory7.button1 (EventWandererAttacksStory7)
+WandererAttacks.events.ini@186 Missing    EventWandererAttacksStory7.text (EventWandererAttacksStory7)
+WandererAttacks.events.ini@192 Missing    EventWandererAttacksStory8.text (EventWandererAttacksStory8)
+WandererAttacks.events.ini@192 Missing    EventWandererAttacksStory8.button1 (EventWandererAttacksStory8)
+WandererAttacks.events.ini@198 Missing    EventWandererAttacksStory9.text (EventWandererAttacksStory9)
+WandererAttacks.events.ini@198 Missing    EventWandererAttacksStory9.button1 (EventWandererAttacksStory9)
+WandererAttacks.events.ini@282 Missing    WandererAttacksStoryStart.text (WandererAttacksStoryStart)
+WandererAttacks.events.ini@282 Missing    WandererAttacksStoryStart.button1 (WandererAttacksStoryStart)
+events.ini@740                 Missing    EventMythosSarahPatterEnd.text (EventMythosSarahPatterEnd)
+events.ini@2006                Missing    EventStartupGoalEnd.text (EventStartupGoalEnd)
+tokens.ini@1002                Missing    TokenSightPlaceKitchenViaDriveway.button1 (TokenSightPlaceKitchenViaDriveway)
+tokens.ini@1002                Missing    TokenSightPlaceKitchenViaDriveway.text (TokenSightPlaceKitchenViaDriveway)
+events.ini@1647                Missing    EventPlaceDrivewayWendy.text (EventPlaceDrivewayWendy)
+tiles.ini@68                   Missing    TileStudy.text (TileStudy)
+events.ini@2036                Missing    EventPlaceStairsSight.text (EventPlaceStairsSight)
+events.ini@557                 Missing    EventGameOverStart.text (EventGameOverStart)
+events.ini@1185                Missing    EventMythosRitualSummonsEnd.text (EventMythosRitualSummonsEnd)
+items.ini@125                  Missing    QItemFoyerSpell.text (QItemFoyerSpell)
+events.ini@2107                Missing    Event2.text (Event2)
+events.ini@1630                Missing    EventStartupPlaceDrivewayYes.text (EventStartupPlaceDrivewayYes)
+items.ini@53                   Missing    QItemGardenTool.text (QItemGardenTool)
+items.ini@36                   Missing    QItemCandles.text (QItemCandles)
+tiles.ini@62                   Missing    TileAltar.text (TileAltar)
+tiles.ini@21                   Missing    TileCrypt.text (TileCrypt)
+WandererAttacks.events.ini@12  Missing    EventWandererAttacksGeneralStrengthStunned.text (EventWandererAttacksGeneralStrengthStunned)
+WandererAttacks.events.ini@12  Missing    EventWandererAttacksGeneralStrengthStunned.button1 (EventWandererAttacksGeneralStrengthStunned)
+items.ini@73                   Missing    QItemStartEquipment1.text (QItemStartEquipment1)
+items.ini@77                   Missing    QItemStartEquipment2.text (QItemStartEquipment2)
+tokens.ini@440                 Missing    TokenTestDWM.text (TokenTestDWM)
+items.ini@81                   Missing    QItemStartEquipment3.text (QItemStartEquipment3)
+ui.ini@44                      Missing    UIOpeningTitle.text (UIOpeningTitle)
+events.ini@1229                Missing    EventInvestigatorEnd.text (EventInvestigatorEnd)
+events.ini@1258                Missing    EventMythosRitualYesTimeout.text (EventMythosRitualYesTimeout)
+events.ini@820                 Missing    EventStartupOpeningSplashStartYes.text (EventStartupOpeningSplashStartYes)
+events.ini@676                 Missing    EventPlaceCellHoleYes.text (EventPlaceCellHoleYes)
+events.ini@676                 Missing    EventPlaceCellHoleYes.button1 (EventPlaceCellHoleYes)
+tiles.ini@9                    Missing    TileDiningRoom.text (TileDiningRoom)
+tiles.ini@38                   Missing    TileGallery.text (TileGallery)
+events.ini@348                 Missing    EventSearchStairs.text (EventSearchStairs)
+events.ini@1066                Missing    EventPlaceHall2MoveIfExplore.text (EventPlaceHall2MoveIfExplore)
+ui.ini@176                     Missing    UIGameOverHalfWinStopCultists.text (UIGameOverHalfWinStopCultists)
+events.ini@1313                Missing    EventTestPlaceDungeonCellYes.text (EventTestPlaceDungeonCellYes)
+tokens.ini@186                 Missing    TokenExploreStairsViaFoyer.button1 (TokenExploreStairsViaFoyer)
+WandererAttacks.events.ini@120 Missing    EventWandererAttacksGeneralInfluenceRestrained.button1 (EventWandererAttacksGeneralInfluenceRestrained)
+WandererAttacks.events.ini@120 Missing    EventWandererAttacksGeneralInfluenceRestrained.text (EventWandererAttacksGeneralInfluenceRestrained)
+WandererAttacks.events.ini@290 Missing    WandererAttacksEnd.text (WandererAttacksEnd)
+WandererAttacks.events.ini@290 Missing    WandererAttacksEnd.button1 (WandererAttacksEnd)
+events.ini@1979                Missing    EventTriggerDwmRead.button1 (EventTriggerDwmRead)
+events.ini@1979                Missing    EventTriggerDwmRead.text (EventTriggerDwmRead)
+WandererAttacks.events.ini@278 Missing    WandererAttacksGeneralEnd.button1 (WandererAttacksGeneralEnd)
+WandererAttacks.events.ini@278 Missing    WandererAttacksGeneralEnd.text (WandererAttacksGeneralEnd)
+WandererAttacks.events.ini@78  Missing    EventWandererAttacksGeneralLoreDamage.text (EventWandererAttacksGeneralLoreDamage)
+WandererAttacks.events.ini@78  Missing    EventWandererAttacksGeneralLoreDamage.button1 (EventWandererAttacksGeneralLoreDamage)
+spawns.ini@99                  Missing    SpawnPlaceDungeonCaveViaChapelCultist1.text (SpawnPlaceDungeonCaveViaChapelCultist1)
+WandererAttacks.events.ini@84  Missing    EventWandererAttacksGeneralLoreStunned.text (EventWandererAttacksGeneralLoreStunned)
+WandererAttacks.events.ini@84  Missing    EventWandererAttacksGeneralLoreStunned.button1 (EventWandererAttacksGeneralLoreStunned)
+ui.ini@55                      Missing    UIStoryContinue.text (UIStoryContinue)
+events.ini@2080                Missing    EventPlaceChapel2.text (EventPlaceChapel2)
+WandererAttacks.events.ini@132 Missing    EventWandererAttacksGeneralWillHorror.text (EventWandererAttacksGeneralWillHorror)
+WandererAttacks.events.ini@132 Missing    EventWandererAttacksGeneralWillHorror.button1 (EventWandererAttacksGeneralWillHorror)
+events.ini@1829                Missing    EventDWMStartDisambiguator.button1 (EventDWMStartDisambiguator)
+events.ini@1829                Missing    EventDWMStartDisambiguator.text (EventDWMStartDisambiguator)
+events.ini@93                  Missing    EventMoveAfterExplore.text (EventMoveAfterExplore)
+events.ini@2017                Missing    EventStartupGoalStopCultists.text (EventStartupGoalStopCultists)
+items.ini@15                   Missing    QItemJournal.text (QItemJournal)
+tiles.ini@56                   Missing    TileChapel.text (TileChapel)
+events.ini@2064                Missing    EventLookStairsOthersOthersTest.text (EventLookStairsOthersOthersTest)
+events.ini@2064                Missing    EventLookStairsOthersOthersTest.button1 (EventLookStairsOthersOthersTest)
+events.ini@2064                Missing    EventLookStairsOthersOthersTest.button2 (EventLookStairsOthersOthersTest)
+events.ini@1359                Missing    EventPlaceBasementConditionStart0.text (EventPlaceBasementConditionStart0)
+events.ini@2011                Missing    EventStartupGoalRescueBoy.text (EventStartupGoalRescueBoy)
+events.ini@1551                Missing    EventMythosWandererPlaced.text (EventMythosWandererPlaced)
+events.ini@1636                Missing    EventStartupPlaceDrivewayStart.text (EventStartupPlaceDrivewayStart)
+WandererAttacks.events.ini@258 Missing    EventWandererAttacksGeneralStart.text (EventWandererAttacksGeneralStart)
+WandererAttacks.events.ini@258 Missing    EventWandererAttacksGeneralStart.button1 (EventWandererAttacksGeneralStart)
+ui.ini@152                     Missing    UIGameOverWinStopCultistsText.text (UIGameOverWinStopCultistsText)
+items.ini@109                  Missing    QItemEvidenceHall1.text (QItemEvidenceHall1)
+items.ini@121                  Missing    QItemEvidenceHall2.text (QItemEvidenceHall2)
+tokens.ini@934                 Missing    TokenBackyardBenAfter.text (TokenBackyardBenAfter)
+events.ini@515                 Missing    EventStartupClueTokensEnd.text (EventStartupClueTokensEnd)
+tiles.ini@32                   Missing    TileHall1.text (TileHall1)
+tiles.ini@44                   Missing    TileHall2.text (TileHall2)
+events.ini@1104                Missing    EventMythosHealingStoneStart.text (EventMythosHealingStoneStart)
+events.ini@1223                Missing    EventInvestigatorStart.text (EventInvestigatorStart)
+events.ini@1135                Missing    EventTestStartRitualYes.text (EventTestStartRitualYes)
+spawns.ini@39                  Missing    SpawnAltarCultists2.text (SpawnAltarCultists2)
+spawns.ini@64                  Missing    SpawnAltarCultists3.text (SpawnAltarCultists3)
+spawns.ini@82                  Missing    SpawnAltarCultists4.text (SpawnAltarCultists4)
+WandererAttacks.events.ini@96  Missing    EventWandererAttacksGeneralLoreRestrained.button1 (EventWandererAttacksGeneralLoreRestrained)
+WandererAttacks.events.ini@96  Missing    EventWandererAttacksGeneralLoreRestrained.text (EventWandererAttacksGeneralLoreRestrained)
+events.ini@1730                Missing    EventMoveAfterExploreSightToken.text (EventMoveAfterExploreSightToken)
+ui.ini@140                     Missing    UIGameOverHalfWinRescueBoyText.text (UIGameOverHalfWinRescueBoyText)
+events.ini@1809                Missing    EventPlaceChapelAfterPriest.text (EventPlaceChapelAfterPriest)
+events.ini@1948                Missing    EventMythosSarahPatterGo.text (EventMythosSarahPatterGo)
+spawns.ini@114                 Missing    SpawnMythosWandererBackyard.button1 (SpawnMythosWandererBackyard)
+spawns.ini@114                 Missing    SpawnMythosWandererBackyard.text (SpawnMythosWandererBackyard)
+events.ini@2058                Missing    EventLookStairsOthersFirst.text (EventLookStairsOthersFirst)
+events.ini@2058                Missing    EventLookStairsOthersFirst.button2 (EventLookStairsOthersFirst)
+items.ini@7                    Missing    QItemBrassKnuckles.text (QItemBrassKnuckles)
+events.ini@1610                Missing    EventSearchBasementRubbleChapelDor.text (EventSearchBasementRubbleChapelDor)
+WandererAttacks.events.ini@18  Missing    EventWandererAttacksGeneralStrengthDazed.text (EventWandererAttacksGeneralStrengthDazed)
+WandererAttacks.events.ini@18  Missing    EventWandererAttacksGeneralStrengthDazed.button1 (EventWandererAttacksGeneralStrengthDazed)
+==================================================================== unused localization keys
+==================================================================== quest needs these unselected packs
+==================================================================== quest doesn't need these selected packs
