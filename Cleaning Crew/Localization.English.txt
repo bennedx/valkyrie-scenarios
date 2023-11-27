@@ -2124,3 +2124,11 @@ EventJournalStart.text,
 EventJournalStart.button1,
 EventJournalEnd.text,
 EventSearchDiningRoomFluxStabilizerAfterPuzzleBen.button1,Button1
+EventPlaceDiningRoomNoJournal.button1,Continue
+TokenSightFrontDoor.text,"\nThe door looks old and its surface is peeling. A small window looks out on the grounds. An investigator in the door's space may try the door.\n"
+EventPlaceDiningRoomNoJournal.text,"\nAs you walk into the house, you remember the book in the driveway. You glance back toward the gate as you step inside. Move 1 space into the {c:TileDiningRoom}.\n"
+EventSightFoyerLookFrontDoor.button1,Continue
+EventPlaceFoyerSightFrontDoor.text,"\nThe front door looks old and disused. Place a sight token as indicated.\n"
+EventPlaceFoyerSightFrontDoor.button1,Continue
+EventSightFoyerLookFrontDoor.text,"\nYou grab and twist the knob but your hand just slides over it. No matter how you try, you cannot turn the knob. The window is filthy but most of it is on the outside. You make a note that you'll need to clean the windows later.\n\nRemove this sight token.\n"
+TokenSightFrontDoor.button1,Look
