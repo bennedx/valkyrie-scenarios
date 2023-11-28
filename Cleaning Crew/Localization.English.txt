@@ -104,8 +104,8 @@ TokenSearchHall1Rug.button1,{action} Search
 TokenExploreGalleryViaHall1.text,"\nA door leads farther into the house. The latch on the door is clean and shiny, like it has been used recently.\n"
 EventPlaceHall1Painting.text,"\nA painting glows with unnatural light. You can feel it quietly calling to you. You shake it off because paintings don’t have powers. Place a Search token as indicated.\n\nAs you look away, you catch something moving in your peripheral vision. You glance back and the painting is still lightly glowing, something that seems more troubling now.\n"
 TokenSearchDiningRoomFluxStabilizer.text,"\nA small device with gears, hoses, and lights sits on the table.\n"
-EventPlaceHall1SearchEvidence.text,"\nPapers on the desk have fallen to the floor. They are covered in dust. You may as well pick them up now. Place a Search token as indicated.\n"
-TokenSearchHall1Rug.text,"\nPapers that were neatly stacked on the desk have been bumped and scattered.\n"
+EventPlaceHall1SearchEvidence.text,"\nThe rug on the floor is old and beautiful, if dirty and poorly cared for. One corner is folded up and looks like it has been that way for years. You should probasbly put it back so you don't trip over it.\n"
+TokenSearchHall1Rug.text,The corner of the rug is folded over.
 TokenWallHall1.button1,Continue
 EventPlaceHall1ExploreHall2.button1,Continue
 EventPlaceHall1SearchEvidence.button1,Continue
@@ -368,7 +368,7 @@ UIUIGameOverButton.button1,Continue
 EventTest.button1,Continue
 EventSearchBackdoorPlantRandomGood.text,"\nAfter looking at and around the plant, you bump into the pot, knock it over, and break it. Exposed in the dirt, you find something. Gain the {c:QItemBackdoorRandom} Common Item, then remove this Search token.\n"
 TokenSearchBackdoorRandom.text,"\nA withered plant sits on a broken-down table behind the house.\n"
-EventSearchHall1Rug.text,"\nYou lean down to straighten the rug. You play with it for a bit, but have trouble getting it to stay flat--the fold has been there too long. You lift the rug a little more to try to flatten the corner. There’s a piece of paper under the rug you reach down to get. It has a diagram of a tabletop with arcane symbols. Maybe it’s part of some ritual. You’ve heard the people in this town have some funny beliefs. Gain the {c:QItemEvidenceHall1} Unique Item and 1 {clue}. Then discard this Search token.\n"
+EventSearchHall1Rug.text,"\nYou lean down to straighten the rug. You play with it for a bit, but have trouble getting it to stay flat--the fold has been there too long. You lift the rug a little more to try to flatten the corner. There’s a piece of paper under the rug. You pick it up to find it has a diagram of a tabletop with arcane symbols. Maybe it’s part of some ritual. You’ve heard the people in this town have some funny beliefs. Gain the {c:QItemEvidenceHall1} Unique Item and 1 {clue}. Then discard this Search token.\n"
 EventSearchHall1Rug.button1,Continue
 EventPlaceLibraryAfterCultistSearchBookcase.text,"\nA bookcase on the far wall is filled from floor to ceiling with books. Maybe one of them can help you understand what is happening? Place a Search token as indicated.\n"
 EventPlaceLibraryAfterCultistSearchBookcase.button1,Continue
