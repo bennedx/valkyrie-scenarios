@@ -116,17 +116,16 @@ EventPlaceHall1Flavor.button1,Continue
 EventSearchCoatRoomEvidence.button1,Continue
 EventPlaceDiningRoom.text,|||\n"Ah! Here’s the key," Benjamin exclaims. He steps up to the door and unlocks it. A surprising amount of dirt falls as he pushes it open.\n\nYou look through the door and see what looks like the servants’ dining room. The room makes the yards look orderly. Heaps of rubbish and broken glassware are strewn about the room.\n\nPlace the {c:TileDiningRoom} tile and door as indicated, then remove this Explore token.\n|||
 TokenSearchFoyerSpell.button1,{action} Search
-EventSearchFoyerSpell.text,"\nYou go through the drawers one-by-one, finding nothing of interest. Finally, in the last drawer, you find a small pamphlet with arcane symbols and odd poetry. Gain the {c:QItemFoyerSpell} spell, then discard this Search token.\n"
+EventSearchFoyerSpell.text,"\nYou go through the drawers one-by-one, finding little of interest. Finally, in the last drawer, you find a small pamphlet with arcane symbols and odd poetry. Gain the {c:QItemFoyerSpell} spell, then discard this Search token.\n"
 EventExploreBackdoorPassJournal.button1,Continue
-EventPlaceFoyerExploreStairs.button1,Continue
+EventPlaceFoyerExploreCloset.text,"\nAnother door looks like a closet. Place an Explore token as indicated.\n"
 TokenChapelTrapdoorToLibrary.button1,Continue
 EventExploreFailure.text,There were no options to explore this room.
 TokenExploreFoyerViaHall2.button1,{action} Explore
 EventExploreFoyerLockedDoor.button1,Continue
-TokenExploreStairsViaFoyer.text,"\nOn closer inspection, this is too wide and ornate to be a closet.\n"
-EventPlaceStairs.text,"\nAs you start to open the door, something shifts. As you pull back, whatever it is hits the back of the door and it swings open. A puff of dust and a child’s small, red ball rolls out. \n\nLooking in, your heart sinks. <i>How can one house have so much trash?!</i>\n\nPlace the {c:TileStairs} as shown, then remove this Explore token.\n"
-EventSearchStairs.button1,Continue
-TokenSearchFoyerCandles.text,"\nThis painting is compellingSomething about this painting makes you want to look at it.\n"
+TokenExploreFoyerCloset.button1,{action} Explore
+EventExploreFoyerClosetOpen.button1,Continue
+TokenSearchFoyerCandles.text,"\nThis painting is compelling. Something about it makes you want to have a closer look.\n"
 EventSearchBackdoorRandom.button1,Continue
 EventSearchBackdoorRandom.text,"\nYou carefully examine the pot. You aren’t sure why this is important. Maybe it’s not, but it has your attention. ({agility})\n"
 TokenSearchKitchenCutlery.button1,{action} Look through the cutlery
@@ -222,7 +221,6 @@ EventPlaceChapelExploreCryptWithKey.button1,Button1
 EventSearchChapelWhiskeyKill.button1,Continue
 TokenExploreCoatRoom.button1,{action} Explore
 SpawnSpawnCultist1.text,"\nThe other man is across the room looking over the bookcase. This cultist looks familiar. Maybe one of the townsfolk in the welcoming committee? Spawn a cultist as indicated.\n"
-EventPlaceFoyerExploreStairs.text,"\nAnother door looks like a closet. Place an Explore token as indicated.\n"
 EventSearchChapelRitualComponents.button1,Continue
 EventSearchChapelRitualComponents.text,"\nAs you walk around the altar to get a better look, you see that there is a chalice, some herbs, and even a skull! Gain the {c:QItemRitualComponents} Unique Item.\n\nThe book is the Smythe family bible. The first section lists marriages, births, and funerals going back many generations. Some of the names have a special symbol next to them:  a stylized, five-pointed star, like this:  {success}. You aren’t sure what it means, but from what you have seen and read today, it worries you. Gain 2 {clue}, then discard this Search token.\n"
 EventExploreLibraryBookcaseStrength.text,"\nYou raise your heavy weapon and swing. Roll 1 fewer die if you have suffered 3 or more Damage. ({strength};2) Deal damage equal to the weapon’s damage.\n"
@@ -394,9 +392,7 @@ EventPlaceHall2ExploreStudy.text,|||A small, tarnished brass plaque reads "Study
 TokenExploreFoyerViaGallery.button1,{action} Explore
 EventPlaceFoyerExploreStudy.text,|||\nAnother door across the room leads farther into the house. A small plaque reads "Study." Place an Explore token as indicated.\n|||
 EventSearchStairsPass.text,"\nYou find something useful. Gain the {c:QItemBigGun} Common Item, then remove the Explore token.\n"
-EventPlaceStairsSight.button1,Continue
-EventLookStairsOthersOthersTested.button1,Continue
-EventLookStairsOthersFirst.button1,{action} Try to see over pile
+TokenExploreFoyerCloset.text,"\nLike most of the doors in this house, this one is ornate... and covered in dust.\n"
 EventSearchFoyerSpell.button1,Continue
 TokenSearchFoyerRandom.button1,{action} Search
 EventPlaceGallery.text,"\nThe gallery was once stately but is old and shabby today. The walls are covered in antiquities and paintings, all covered in cobwebs and a thick layer of dust. Place the {c:TileGallery} tile as indicated, then remove all Explore tokens leading to this room. \n"
@@ -417,7 +413,7 @@ EventPlaceFoyerExploreGallery.text,"\nAcross the room, a door leads farther into
 EventPlaceFoyerExploreGallery.button1,Continue
 TokenExploreGalleryViaFoyer.button1,{action} Explore
 EventPlaceGalleryExploreCoatRoom.text,"\nA coat room sits against a far wall. Place an Explore token as indicated.\n"
-EventPlaceFoyerExploreHall2.text,"\nA door to the left leads farther into the house. Place an Explore token as indicated.\n"
+EventPlaceFoyerExploreHall2.text,"\nA door in one corner leads farther into the house. Place an Explore token as indicated.\n"
 EventPlaceFoyerExploreHall2.button1,Continue
 TokenExploreHall2ViaFoyer.text,"\nThis door leads farther into the house.\n"
 EventPlaceFoyerSearchSpell.button1,Continue
@@ -474,7 +470,6 @@ EventSearchTortureChamberRestraint.button1,Continue
 EventPlaceTortureChamberExploreCell.text,"\nA door leads to what looks like a small cell.\n"
 EventPlaceTortureChamberExploreCell.button1,Continue
 EventPlaceHall1Flavor.text,"\nAs you look around the hall, something doesn’t feel right. You feel like you are being watched.\n"
-EventLookStairsOthersOthersTested.text,"\nAs hard as you try, you cannot see over or through the rubble. You wonder if this is worth the effort, but you do notice something that strikes you as odd. You resume carrying someone else’s life to the foyer to be thrown away.\n\nGain 1 {clue}, but lose 1 facedown Sanity ({will} + 1 negates) as you feel the emptiness you are creating.\n"
 EventMoveAfterExploreCandidate.button1,Continue
 EventMoveAfterExploreYes.button1,Continue
 EventMythosRitualWoman.text,"\nYou feel the power of the spell {c:CustomMonsterDavidSmythe} is casting. It draws you in and repulses you at the same time. A woman screams. The sound pierces the walls of the house, making the windows rattle in their frames. You feel her take a deep, gasping breath, then she screams again. And again. And again. The screaming sends a chill through you. Each investigator takes 2 Horror ({will} negates).\n"
@@ -623,12 +618,11 @@ EventSearchHall2Evidence.text,|||\nThere is a dead plant and many scraps of pape
 TokenSearchHall2Evidence.button1,{action} Search
 TokenExploreStudyViaHall2.button1,{action} Explore
 TokenExploreLibraryViaStudy.text,|||\nThis door has a small brass plaque that reads "Library."\n|||
-EventLookStairsOthersOthers.text,"\nAfter carrying more refuse to the {c:TileFoyer}, you consider climbing up to try looking upstairs again.\n"
-EventPlaceFoyerSearchSpell.text,"\nA small table sits across the room from you. Place a Search token as indicated.\n"
+EventPlaceFoyerSearchSpell.text,"\nA small table sits to one side of the stairs. Place a Search token as indicated.\n"
 EventPlaceFoyerSearchRandom.text,"\nA small cabinet with drawers and little compartments sits next to the door. Place a Search token as indicated.\n"
-EventSearchFoyerRandom.text,"\nYou dig through the various compartments and find something useful. Gain the {c:QItemFoyerRandom} Common Item, then discard this Search token.\n"
+EventSearchFoyerRandom.text,"\nYou dig through the various compartments and eventually find something useful. Gain the {c:QItemFoyerRandom} Common Item, then discard this Search token.\n"
 EventSearchFoyerRandom.button1,Continue
-TokenSearchFoyerRandom.text,"\nAn old cabinet with a set of drawers sits next to the door. It looks unlocked.\n"
+TokenSearchFoyerRandom.text,"{success}\nAn old cabinet with a set of drawers sits next to the door. It looks unlocked.\n"
 EventPlaceFoyerSearchRandom.button1,Continue
 TokenExploreGalleryViaFoyer.text,|||\nA small plaque on this door reads "Gallery."\n|||
 EventExploreChapelViaCrypt.text,"\nYou carefully fit the key. It sticks at first, but eventually opens. Remove this Explore token.\n"
@@ -835,7 +829,7 @@ EventPlaceBasementSearchTrapdoorViaJournal.text,"\nThat door must be behind that
 EventPlaceBasementSearchTrapdoorViaJournal.button1,Continue
 TokenSearchFoyerCandles.button1,{action} Search
 EventSearchFoyerCandles.button1,Continue
-EventSearchFoyerCandles.text,"\nYou quickly realize what drew you to the painting:  the man’s eyes glisten and meet yours as if he were alive. But you don’t see anything that will help you with the house. As you turn away, you notice the sconces on either side of the painting. Some of the darker areas of the house could use a little light. You reach out and take down one of the candles.\n\nGain the {c:QItemCandles} Common Item, then remove this search token.\n"
+EventSearchFoyerCandles.text,"\nYou quickly realize what drew you to the painting:  the man’s eyes glisten and meet yours as if he were alive. He next to a woman and two children. You recogize one fo the children as Sarah, so it must be {c:MosterDavidSmyth}. Still, you don’t see anything that will help you with the house. As you turn away, you notice the sconces on either side of the painting. Some of the darker areas of the house could use a little light. You reach out and take down one of the candles.\n\nGain the {c:QItemCandles} Common Item, then remove this search token.\n"
 EventSearchDiningRoomFluxStabilizerAfterPuzzleBenHappy.button1,Continue
 EventSearchDiningRoomFluxStabilizerEnd.button1,Continue
 TokenBackyardBenBefore.button1,Continue
@@ -2125,10 +2119,14 @@ EventJournalStart.button1,
 EventJournalEnd.text,
 EventSearchDiningRoomFluxStabilizerAfterPuzzleBen.button1,Button1
 EventPlaceDiningRoomNoJournal.button1,Continue
-TokenSightFrontDoor.text,"\nThe door looks old and its surface is peeling. A small window looks out on the grounds. An investigator in the door's space may try the door.\n"
+TokenExploreFrontDoor.button1,{action} Explore
 EventPlaceDiningRoomNoJournal.text,"\nAs you walk into the house, you remember the book in the driveway. You glance back toward the gate as you step inside. Move 1 space into the {c:TileDiningRoom}.\n"
-EventSightFoyerLookFrontDoor.button1,Continue
+EventExploreFrontDoor.text,"\nYou grab and twist the knob but your hand just slides over it. No matter how you try, you cannot turn the knob. The window is so filthy that you cannot see through it.\n\nIf you were still worried about cleaning, this would be a lot of work.\n\nRemove this explore token.\n"
 EventPlaceFoyerSightFrontDoor.text,"\nThe front door looks old and disused. Place a sight token as indicated.\n"
 EventPlaceFoyerSightFrontDoor.button1,Continue
-EventSightFoyerLookFrontDoor.text,"\nYou grab and twist the knob but your hand just slides over it. No matter how you try, you cannot turn the knob. The window is filthy but most of it is on the outside. You make a note that you'll need to clean the windows later.\n\nRemove this sight token.\n"
-TokenSightFrontDoor.button1,Look
+EventPlaceFoyerExploreFrontdoor.button1,Continue
+EventExploreFrontDoor.button1,Continue
+EventPlaceFoyerExploreFrontdoor.text,"\nThe front door seems to be in good repair, but glass set into it is as filthy as that door off the driveway. Place an Explore token as indicated.\n"
+EventPlaceFoyerExploreCloset.button1,Continue
+EventExploreFoyerClosetOpen.text,|||\nAs you grab the knob, you hear something shift inside. When you pull back on the door, something thumps hard against it and knocks it lightly across your nose.  Take 1 injury ({agility} negates). A cloud of dust and a child’s small, red ball rolls out. You sneeze loudly. \n\nOnce the dust clears, you can see that it's a closet, filled to the top with junk. It looks like the foyer was "cleaned" years ago by moving all its trash into this closet. A broken oil can at the top of the pile teeters, slides down a 2"x4", and lands at your feet. You're startled. Take 1 horror ({will} negates). \n\nOn the floor next to the oil can is something that makes you feel a lot better. Take the {c:QItemBigGun} common item and remove this explore token.\n|||
+TokenExploreFrontDoor.text,"\nThe door seems unfazed by age. A small window purports to look out on the grounds. Maybe you can get out of this crazy house.\n"
