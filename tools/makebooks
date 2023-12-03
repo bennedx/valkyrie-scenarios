@@ -34,6 +34,8 @@ BEGIN       {
                 INILINES = 12
                 ISEXIT = 13
                 FREEACTION = 14
+				ADD = 15
+				REMOVE = 16
 				
 				textContinue = "Continue"
 				textCancel = "Cancel"
@@ -67,7 +69,8 @@ previousFile != FILENAME {
                 printf "" > eventsFile
 				printf "" > localizationFile
                 
-                globalEventCounter = 0
+                debug = false
+				globalEventCounter = 0
                 isBook = 0
 				
 				previousFile = FILENAME;
@@ -221,6 +224,13 @@ $1 == "freeaction" {
 				next
 			}
 			
+
+$1 == "add" {	pages[pageCount][ADD] = $2
+			}
+
+$1 == "remove" {
+				pages[pageCount][REMOVE] = $2
+			}
 
 # line|...:  adds a line directly to the event file. These lines are usually assignments, but can be anything. 
 #   If there are no pages, these lines go into the Start event
@@ -384,6 +394,8 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
         printf "display=false\n" >> eventsFile
         printf "buttons=1\n" >> eventsFile
 		printf "Event%sReadPage%iEnd.button1,\n", bookName, pageIndex >> localizationFile
+
+		if (pages[pageIndex][REMOVE] != "") printf "remove=%s\n", pages[pageIndex][REMOVE] >> eventsFile
 		
         if (pages[pageIndex][ISEXIT] == 1) {
             printf "event1=Event%sEnd\n", bookName >> eventsFile
@@ -407,6 +419,8 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
         printf "Event%sReadPage%i.button1,%s\n", bookName, pageIndex, textContinue >> localizationFile
         printf "Event%sReadPage%i.text,\n", bookName, pageIndex >> localizationFile
         printf "display=false\n" >> eventsFile
+		
+		if (pages[pageIndex][ADD] != "") printf "add=%s\n", pages[pageIndex][ADD] >> eventsFile
     }
     
     globalEventCounter = 0
@@ -584,13 +598,15 @@ function OutputOrderedNoKeepToc(eventsFile, localizationFile, bookName, pages, s
 	eventSeparator = ""
 
 	# go through each page, one-by-one
-	for (pageIndex = 1; pageIndex <= length(pages); pageIndex++) {
+	for (pageIndex = 1; pageIndex < length(pages); pageIndex++) {
 		# generate a proxy event
 		globalEventCounter++
 		pageEventName = sprintf("Event%sReadPage%i", bookName, pageIndex)
 		eventName = sprintf("%sProxy", pageEventName)
 		events = events eventSeparator eventName
 		eventSeparator = " "
+		
+		if (debug) printf "   %s\n", pageEventName >> stderr
 		
 		printf "\n[%s]\n", eventName >> eventsFile
 		printf "%s.text,\n", eventName >> localizationFile
@@ -641,6 +657,8 @@ function OutputOrderedNoKeepToc(eventsFile, localizationFile, bookName, pages, s
 			# printf "%s.text,\n", eventName >> localizationFile
 		}
 	}
+
+	if (debug) printf "   (done)\n" >> stderr
 
     # generate the main event to start this book
 	globalEventCounter++

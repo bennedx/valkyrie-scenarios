@@ -13,11 +13,13 @@ page|“There are footprints in the dust by that door...”|“I think the handy
     test|exploredBackyardNicely,==,0|“Then you should sweep it up. That’s what you’re here for, not to complain about dirt.”
     toc|You notice Benjamin glancing nervously at the footprints. He seems concerned and that worries you.
 	
-page|“Is there anything else we need to know?”|“Oh, my, yes. Here’s the key you’ll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I should be going. Take your time and send someone to fetch me if you need anything.”\n\nRemove this person token.
-    test|exploredBackyardNicely,==,0|“What? Oh, here’s the key to the house. Don’t lose it. I’ll be on my way.”\n\nAs he turns to leave, he drops the key in your direction. Place the {c:QItemBrassKey} common item in Ben’s space, then remove Ben from the board.
-    line|add=QItemBrassKey
-    line|remove=TokenBackyardBenAfter
-    operations|$mythosKey,=,1
+page|“Is there anything else we need to know?”|“Oh, my, yes. Here’s the key you’ll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I should be going. Take your time and send someone to fetch me if you need anything.”\n\nBen walks out the back door, saying, "Everyone needs to get started." Move any investigators who are out side to the dining room. Ben shuts the door behind you. <i>Was that a click?</i> Place an Explore token as indicated and remove Ben from the board.
+    test|exploredBackyardNicely,==,0|“What? Oh, here’s the key to the house. Don’t lose it.”\n\nAs he walks out, he drops the key in your direction. Place the {c:QItemBrassKey} common item in Ben’s space. Once outside, Benjamin snaps, "Everyone inside. No dawddling." Move any investigators who are outside to the dining room.\n\nBen slams the door shut behind him; place an Explore token as indicated.
+    add|TokenExploreBackDoorLocked TokenInvestigatorsDiningRoom
+    remove|TokenBackyardBenAfter TokenInvestigatorsDiningRoom
+    operations|$mythosKey,=,1 @removeDiningRoomInvestigators,=,1
+	line|xposition=-1.635834
+	line|yposition=8.440297
     toc|this will never be seen
 	
     # the 'exit' command forces the conversation to stop, rather than allowing it to go back to the TOC

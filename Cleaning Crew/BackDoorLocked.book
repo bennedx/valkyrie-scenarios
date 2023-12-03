@@ -1,0 +1,47 @@
+debug
+language|English
+
+continue|Explore
+
+book|BackDoorLocked|ordered|nokeep
+	operations|backdoorLockedChoice,=,#rnd5 readBackDoorLockedPage1,=,0 readBackDoorLockedPage2,=,0 readBackDoorLockedPage3,=,0 readBackDoorLockedPage4,=,0 readBackDoorLockedPage5,=,0 
+
+start|You grab the knob to open the door and...
+
+page|choice1|You try to twist the knob. Roll a die.
+	condition|backdoorLockedChoice,==,1
+	skillcheck|999
+	pass|failed
+	fail|failed
+	toc|No matter how hard you try, the knob just won't turn. Maybe if you shook it...
+	
+page|choice2|Maybe you can try to break though it. You crouch down and run at the door, slamming it with your shoulder. Roll a die.
+	condition|backdoorLockedChoice,==,2
+	skillcheck|999
+	pass|failed
+	fail|failed
+	toc|The door shudders when you hit it, but doesn't give in. Your shoulder hurts from the impact. What else can you try?
+	
+page|choice3|As you reach for the knob again, you briefly wonder if there is another way out of here. Roll a die.
+	condition|backdoorLockedChoice,==,2
+	skillcheck|999
+	pass|failed
+	fail|failed
+	toc|You can feel the panic setting in. Why won't this door open?
+	
+page|choice4|Maybe there's a way to pick the lock. For some reason you have a hairpin in your pocket. Roll a die.
+	condition|backdoorLockedChoice,==,2
+	skillcheck|999
+	pass|failed
+	fail|failed
+	toc|The lock doesn't turn and, eventually, the hairpin bends to much to be of use. Maybe this is a waste of time. 
+	
+page|choice5|You have that key. Maybe that will help. Roll a die. 
+	condition|backdoorLockedChoice,==,2
+	skillcheck|999
+	pass|failed
+	fail|failed
+	toc|Well, the key didn't work. What else do you have?
+
+page|failed|
+	notvisible|backdoorLockedChoice
