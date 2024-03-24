@@ -13,7 +13,7 @@ BEGIN       {
 				localizationFile = "localization.temp.txt"
                 stderr = "/dev/stderr"
                 
-				debug = 0
+				debug = false
 
                 FS="|"
 
@@ -41,12 +41,8 @@ BEGIN       {
 				textCancel = "Cancel"
 				
 				previousFile = ""
-				abort = 0
+				abort = false
             }
-
-$1 == "debug" {
-				debug = 1
-			}
 
 
 previousFile != FILENAME {
@@ -56,7 +52,7 @@ previousFile != FILENAME {
 					close(localizationFile)
     				combineLocalization("Event" bookName, localizationFile, realLocalizationFile)
 				}
-				
+
 				partCount = split(FILENAME, fileParts, ".")
 				if (partCount != 2 || fileParts[2] != "book") {
 				    printf "'" FILENAME "' must have an extension of '.book'" >> stderr
@@ -71,7 +67,7 @@ previousFile != FILENAME {
                 
                 debug = false
 				globalEventCounter = 0
-                isBook = 0
+                isBook = false
 				
 				previousFile = FILENAME;
 			}
@@ -91,8 +87,8 @@ previousFile != FILENAME {
                 next
             }
 
-			{ #if (debug) print $0 >> stderr
-			}
+#debug		{ print $0 >> stderr
+#			}
 
 # book:  starts a book. Options are:
 #        book|Name|random|keep        Pages are all available as {action}s; after first use, {action} goes away
@@ -138,9 +134,24 @@ $1 == "book" {
                 next
             }
 
+$1 == "debug" {
+				if (!isBook) {
+					printf "'debug' can only be used inside a 'book'\n" >> stderr
+				}
+				
+				debug = true
+				next
+			}
+
+
 
 # page|<button text>|<text>:  Adds a new page with <button text> to access it
 $1 == "page" || $1 == "end" {
+				if (!isBook) {
+					print "A 'book' directive must come before '%s'\n", $1 >> stderr
+					nextfile
+				}
+				
 				if (isEndDirective && $1 == "page") {
 					printf "'page' is not allowed after 'end'\n" >> stderr
 					abort = true
@@ -319,7 +330,7 @@ END         {
 
 
 function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, startTocText, pages, startLines, endLines, isEndDirective, 
-      pageCount, separator, events, pageIndex, testIndex, operations, testEventName, lineIndex, conditions) {
+		pageCount, separator, events, pageIndex, testIndex, operations, testEventName, lineIndex, conditions, referencedPageIndex) {
 
     # bookName will only be empty on the first run
     if (bookName == "") return
@@ -340,9 +351,7 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
             events = events separator testEventName
             separator = " "
             
-            printf "\n[%s]\n", testEventName >> eventsFile
-			printf "buttons=1\n" >> eventsFile
-			printf "%s.button1,%s\n", testEventName, textContinue >> localizationFile
+            printf "\n[%s]\n", testEventName >> eventsFile 
 
 			if (pages[pageIndex][TOCTEXT] == "") {
 				# we don't want to go back to the TOC after this
@@ -355,7 +364,28 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
 				printf "%s.text,%s\n", testEventName, FixQuotes(pages[pageIndex][TESTS][testIndex][TEXT]) >> localizationFile
 			}
 
-			printf "event1=Event%sReadPage%iTestEnd Event%sReadPage%iEnd\n", bookName, pageIndex, bookName, pageIndex >> eventsFile
+			if (pages[pageIndex][SKILLCHECK]) {
+				printf "skillcheck=%i\n", pages[pageIndex][SKILLCHECK] >> eventsFile
+				print "buttons=2" >> eventsFile
+				
+				# if the event isn't valid, it will be handled below
+				referencedPageEvent = GetPassOrFailEvent(pages[pageIndex], pages, PASS)
+
+				printf "events1=%s\n", referencedPageEvent >> eventsFile
+				printf "%s.button1,Pass\n", testEventName >> localizationFile
+				
+				referencedPage = GePassOrFailEvent(pages[pageIndex], pages, FAIL)
+				
+				printf "events2=%s\n", referencedPageEvent >> eventsFile
+				printf "%s.button2,Fail\n", testEventName >> localizationFile
+
+			} else {
+				printf "buttons=1\n" >> eventsFile
+
+				printf "%s.button1,%s\n", testEventName, textContinue >> localizationFile
+				printf "event1=Event%sReadPage%iTestEnd Event%sReadPage%iEnd\n", bookName, pageIndex, bookName, pageIndex >> eventsFile
+			}
+		
 			printf "vartests=%s\n", ConvertToVarTests(pages[pageIndex][TESTS][testIndex][CONDITIONS]) >> eventsFile
         }
         
@@ -365,11 +395,35 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
         
         printf "\n[Event%sReadPage%iBase]\n", bookName, pageIndex >> eventsFile
 		printf "display=true\n" >> eventsFile
-        printf "buttons=1\n" >> eventsFile
-        printf "event1=Event%sReadPage%iTestEnd Event%sReadPage%iEnd\n", bookName, pageIndex, bookName, pageIndex >> eventsFile
-
         printf "Event%sReadPage%iBase.text,%s\n", bookName, pageIndex, FixQuotes(pages[pageIndex][TEXT]) >> localizationFile
-        printf "Event%sReadPage%iBase.button1,%s\n", bookName, pageIndex, textContinue >> localizationFile
+
+		if (pages[pageIndex][SKILLCHECK] != "") {
+			printf "skillcheck=%i\n", pages[pageIndex][SKILLCHECK] >> eventsFile
+			print "buttons=2" >> eventsFile
+			
+			referencedPageEvent = GetPassOrFailEvent(pages[pageIndex], pages, PASS)
+			if (referencedPageEvent == "") {
+				abort = 1
+				continue
+			}
+			
+			printf "events1=%s\n", referencedPageEvent >> eventsFile
+			printf "Event%sReadPage%iBase.button1,Pass\n", bookName, pageIndex >> localizationFile
+			
+			referencedPage = GetPassOrFailEvent(pages[pageIndex], pages, FAIL)
+			if (referencedPageEvent == "") {
+				abort = 1
+				continue
+			}
+			
+			printf "events2=%s\n", referencedPageEvent >> eventsFile
+			printf "Event%sReadPage%iBase.button2,Fail\n", bookName, pageIndex >> localizationFile
+
+		} else {
+			printf "buttons=1\n" >> eventsFile
+			printf "event1=Event%sReadPage%iTestEnd Event%sReadPage%iEnd\n", bookName, pageIndex, bookName, pageIndex >> eventsFile
+			printf "Event%sReadPage%iBase.button1,%s\n", bookName, pageIndex, textContinue >> localizationFile
+		}
 
 		# this "TestEnd" page checks to see if all the pages have already been read
 		# we do it before we set the flag saying we read this page
@@ -609,7 +663,7 @@ function OutputOrderedNoKeepToc(eventsFile, localizationFile, bookName, pages, s
 		if (debug) printf "   %s\n", pageEventName >> stderr
 		
 		printf "\n[%s]\n", eventName >> eventsFile
-		printf "%s.text,\n", eventName >> localizationFile
+		# printf "%s.text,\n", eventName >> localizationFile
 
 		printf "buttons=1\n" >> eventsFile
 		printf "%s.button1,\n", eventName >> localizationFile
@@ -855,4 +909,31 @@ function CombineOperations(line1, line2) {
     }
 
     return line1
+}
+
+function GetPassOrFailEvent(currentPage, pages, passOrFail,
+	passOrFailText, searchName, pageIndex) {
+
+	passOrFailText = passOrFail == PASS ? "pass" : "fail"
+
+	if (currentPage[passOrFail] == "") {
+		printf "Page '%s' meeds a '%s' directive\n", currentPage[NAME], passOrFailText >> stderr 
+		return -1;
+	}
+	
+	searchName = tolower(name)
+	
+	# special case: if the page name starts with "event:", just return the rest of the entry
+	if (searchName ~ "^event:.+") {
+		return substr(currentPage[passOrFail], 7)
+	}
+	
+	for(pageIndex = 0; pageIndex < length(pages); pageIndex++) {
+		if (tolower(pages[pageIndex][NAME]) == searchName) {
+			return pageIndex
+		}
+	}
+	
+	printf "Page '%s':  cannot find %s page '%s'\n", currentPage[NAME], passOrFailText, currentPage[passOrFail] >> stderr 
+	return -1
 }
