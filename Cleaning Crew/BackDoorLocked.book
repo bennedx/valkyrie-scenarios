@@ -6,32 +6,36 @@ book|BackDoorLocked|ordered|nokeep|loop
 	debug
 
 
+# for skillchecks only, follow these rules:
+#    Show TOC text with page's button (include action icon in usual way)
+#    if {action}, show screen with skillchecks
+#      buttons on this screen follow Pass and Fail
+#
+# if there's pass/fail but no skillcheck:
+#    show TOC text with page's button (include action icon in usual way)
+#    if {action}, show new screen with page text and [pass]/[fail] buttons
+
 page|Turn knob|You try to turn the knob. Roll a die.
-	skillcheck|999
 	pass|failed
 	fail|failed
 	toc|You grab the knob to open the door and...
 	
-page|Slam door|Maybe you can try to break though it. You crouch down and run at the door, slamming it with your shoulder. Roll a die.
-	skillcheck|999
+page|Slam into door|Maybe you can try to break though it. You crouch down and run at the door, slamming it with your shoulder. Roll a die.
 	pass|failed
 	fail|failed
 	toc|No matter how hard you try, the knob just won't turn. Maybe if you shook it...
 	
 page|Grab knob|As you reach for the knob again, you briefly wonder if there is another way out of here. Roll a die.
-	skillcheck|999
 	pass|failed
 	fail|failed
 	toc|The door shudders when you hit it, but doesn't give in. Your shoulder hurts from the impact. What else can you try?
 	
 page|Pick lock|Maybe there's a way to pick the lock. For some reason you have a hairpin in your pocket. Roll a die.
-	skillcheck|999
 	pass|failed
 	fail|failed
 	toc|You can feel the panic setting in. Why won't this door open?
 	
 page|Try key|You have that key. Maybe that will help. Roll a die. 
-	skillcheck|999
 	pass|failed
 	fail|failed
 	toc|The lock doesn't turn and, eventually, the hairpin bends to much to be of use. Maybe this is a waste of time. 

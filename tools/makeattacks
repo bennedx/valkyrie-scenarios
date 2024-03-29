@@ -112,11 +112,11 @@ $1 == "story" {
             printf "%s.text,%s\n", eventName, FixQuotes($3) >> localizationFile
 
             printf "buttons=1\n" >> eventsFile
-            printf "event1=%sStoryEnd\n", header >> eventsFile
+            printf "event1=Event%sStoryEnd\n", header >> eventsFile
             printf "%s.button1,Continue\n", eventName >> localizationFile
             
-			printf "conditions=%s %sRead,==,0\n", $2, eventName  >> eventsFile
-            printf "operations=%sRead,=,1 %s\n", eventName, commonOperations >> eventsFile
+			printf "conditions=%s attack%sRead,==,0\n", $2, eventName  >> eventsFile
+            printf "operations=attack%sRead,=,1 %s\n", eventName, commonOperations >> eventsFile
             
             storyEvents = storyEvents storyEventsSeparator eventName
             storyEventsSeparator = " "
@@ -134,18 +134,18 @@ $1 == "story" {
             printf "%s.text,%s\n", eventName, FixQuotes($3) >> localizationFile
 
             printf "buttons=1\n" >> eventsFile
-            printf "event1=%sGeneralEnd\n", header >> eventsFile
+            printf "event1=Event%sGeneralEnd\n", header >> eventsFile
             printf "%s.button1,Continue\n", eventName >> localizationFile
 
-			printf "operations=%s %sRead,=,1\n", commonOperations, eventName >> eventsFile
+			printf "operations=%s attack%sRead,=,1\n", commonOperations, eventName >> eventsFile
 			condition = ($2 == "*" ? "" : $2)
-			printf "conditions=%sRead,>=,%i %s\n", eventName, generalEventsCount, condition >> eventsFile
+			printf "conditions=attack%sRead,>=,%i %s\n", eventName, generalEventsCount, condition >> eventsFile
 			
             
 			generalEvents = generalEvents generalEventsSeparator eventName
             generalEventsSeparator = " "
 			
-			resetGeneralEvents = resetGeneralEvents resetGeneralEventsSeparator sprintf("%sRead,=,0", eventName)
+			resetGeneralEvents = resetGeneralEvents resetGeneralEventsSeparator sprintf("attack%sRead,=,0", eventName)
 			resetGeneralEventsSeparator = " "
 			next
 		}
@@ -190,11 +190,11 @@ function FinishAttackFile() {
 	printf "%s.text\n", eventName >> localizationFile
 
 	printf "buttons=1\n" >> eventsFile
-	printf "event1=%s %sGeneralSelectRetry %sGeneralSelectRestart\n", generalEvents, header, header  >> eventsFile
+	printf "event1=%s Event%sGeneralSelectRetry Event%sGeneralSelectRestart\n", generalEvents, header, header  >> eventsFile
 	printf "%s.button1,\n", eventName >> localizationFile
 
 	# if we don't find one, it falls thru to here
-	eventName = sprintf("EventGeneralSelectRetry", header)
+	eventName = sprintf("Event%sGeneralSelectRetry", header)
 	printf "\n[%s]\n", eventName >> eventsFile
 	printf "%s.text,\n", eventName >> localizationFile
 
@@ -219,32 +219,32 @@ function FinishAttackFile() {
 	printf "events=Event%sGeneralStart\n", header >> eventsFile
 	printf "operations=%s\n", resetGeneralEvents >> eventsFile
 
-	printf "\n[%sGeneralEnd]\n", header >> eventsFile
-	printf "%sGeneralEnd.text,\n", header >> localizationFile
+	printf "\n[Event%sGeneralEnd]\n", header >> eventsFile
+	printf "Event%sGeneralEnd.text,\n", header >> localizationFile
 	printf "buttons=1\n" >> eventsFile
-	printf "event1=%sEnd\n", header >> eventsFile
-	printf "%sGeneralEnd.button1,End Attack\n", header >> localizationFile
+	printf "event1=Event%sEnd\n", header >> eventsFile
+	printf "Event%sGeneralEnd.button1,End Attack\n", header >> localizationFile
 
 	# add support for stories here
-	eventName = sprintf("%sStoryStart", header)
+	eventName = sprintf("Event%sStoryStart", header)
 	printf "\n[%s]\n", eventName >> eventsFile
-	printf "%sStoryStart.text,\n", header >> localizationFile
+	printf "Event%sStoryStart.text,\n", header >> localizationFile
 
 	printf "buttons=1\n" >> eventsFile
-	printf "event1=%s %sGeneralStart\n", storyEvents, header >> eventsFile
+	printf "event1=%s Event%sGeneralStart\n", storyEvents, header >> eventsFile
 	printf "%s.button1,Story Start\n", eventName >> localizationFile
 
 	# the end of the story block
-	eventName = sprintf("%sStoryEnd", header)
+	eventName = sprintf("Event%sStoryEnd", header)
 	printf "\n[%s]\n", eventName >> eventsFile
 	printf "%s.text,\n", eventName >> localizationFile
 
 	printf "buttons=1\n" >> eventsFile
-	printf "event1=%sEnd\n", header >> eventsFile
+	printf "event1=Event%sEnd\n", header >> eventsFile
 	printf "%.button1,Story Start\n", eventName >> localizationFile
 
 	# add the end of it all
-	eventName = sprintf("%sEnd", header)
+	eventName = sprintf("Event%sEnd", header)
 	printf "\n[%s]\n", eventName >> eventsFile
 	printf "%s.text,\n", eventName >> localizationFile
 

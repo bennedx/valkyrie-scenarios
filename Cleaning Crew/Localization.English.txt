@@ -465,7 +465,7 @@ EventSearchHall1Picture2.button1,Continue
 EventTalkToSarahFirstTime.button2,Cancel
 EventTalkToSarahFirstTime.button1,Speak with Her
 EventTalkToSarahFirstTime.text,"\nSarah looks at you expectantly. She looks like she wants to say something, but is holding back. She still looks serious, but also concerned and maybe a little afraid. You notice that she seems to be glowing, and maybe a bit transparent.\n\nShe will only speak with {c:EventChosenInvestigator}.\n"
-EventTalkToSarahHall1.text,|||\nSarah brightens up. "It’s so good to see you again. I thought you had forgotten me after that night. I’ve missed you."\n\nYou are surprised at what she said. Who is this girl? Why does she think she knows you?\n\nThe girl walks over and turns to stand next to you, then looks up at you expectantly.\n\nMove the Green Girl token to {c:EventChosenInvestigator}’s card. She will follow you to whatever ends you meet in this house.\n|||
+EventTalkToSarahHall1.text,|||\nSarah brightens up. "It’s so good to see you again. I thought you had forgotten me after that night. I’ve missed you."\n\nYou are surprised at what she said. <i>Who is this girl? Why does she think she knows you?</i>\n\nThe girl walks over and turns to stand next to you, then looks up at you expectantly.\n\nMove the Green Girl token to {c:EventChosenInvestigator}’s card. She will follow you to whatever ends you meet in this house.\n|||
 EventTalkToSarahHall1.button1,Continue
 EventInteractSarahSpeaks1.text,|||\n"I don’t remember much about it. There was a lot of noise and light. I remember Father holding knife and reading from a book. There was blood, and a cup... and many, many men fighting."\n|||
 EventMythosRitualRestrained.button1,Continue
@@ -1083,8 +1083,7 @@ EventPlaceFoyerExploreFrontdoor.text,"\nThe front door seems to be in good repai
 EventPlaceFoyerExploreCloset.button1,Continue
 EventExploreFoyerClosetOpen.text,|||\nAs you grab the knob, you hear something shift inside. When you pull back on the door, something thumps hard against it and knocks it lightly across your nose.  Take 1 injury ({agility} negates). A cloud of dust and a child’s small, red ball rolls out. You sneeze loudly. \n\nOnce the dust clears, you can see that it's a closet, filled to the top with junk. It looks like the foyer was "cleaned" years ago by moving all its trash into this closet. A broken oil can at the top of the pile teeters, slides down a 2"x4", and lands at your feet. You're startled. Take 1 horror ({will} negates). \n\nOn the floor next to the oil can is something that makes you feel a lot better. Take the {c:QItemBigGun} common item and remove this explore token.\n|||
 EventBackDoorLockedReadPage1Base.text,|||\nYou try to turn the knob. Roll a die.\n|||
-EventBackDoorLockedReadPage1Base.button1,Pass
-EventBackDoorLockedReadPage1Base.button2,Fail
+EventBackDoorLockedReadPage1Base.button1,Continue
 EventBackDoorLockedReadPage1TestEnd.text,
 EventBackDoorLockedReadPage1TestEnd.button1,
 EventBackDoorLockedReadPage1End.text,
@@ -1092,8 +1091,7 @@ EventBackDoorLockedReadPage1End.button1,
 EventBackDoorLockedReadPage1.button1,Continue
 EventBackDoorLockedReadPage1.text,
 EventBackDoorLockedReadPage2Base.text,|||\nMaybe you can try to break though it. You crouch down and run at the door, slamming it with your shoulder. Roll a die.\n|||
-EventBackDoorLockedReadPage2Base.button1,Pass
-EventBackDoorLockedReadPage2Base.button2,Fail
+EventBackDoorLockedReadPage2Base.button1,Continue
 EventBackDoorLockedReadPage2TestEnd.text,
 EventBackDoorLockedReadPage2TestEnd.button1,
 EventBackDoorLockedReadPage2End.text,
@@ -1101,8 +1099,7 @@ EventBackDoorLockedReadPage2End.button1,
 EventBackDoorLockedReadPage2.button1,Continue
 EventBackDoorLockedReadPage2.text,
 EventBackDoorLockedReadPage3Base.text,|||\nAs you reach for the knob again, you briefly wonder if there is another way out of here. Roll a die.\n|||
-EventBackDoorLockedReadPage3Base.button1,Pass
-EventBackDoorLockedReadPage3Base.button2,Fail
+EventBackDoorLockedReadPage3Base.button1,Continue
 EventBackDoorLockedReadPage3TestEnd.text,
 EventBackDoorLockedReadPage3TestEnd.button1,
 EventBackDoorLockedReadPage3End.text,
@@ -1110,8 +1107,7 @@ EventBackDoorLockedReadPage3End.button1,
 EventBackDoorLockedReadPage3.button1,Continue
 EventBackDoorLockedReadPage3.text,
 EventBackDoorLockedReadPage4Base.text,|||\nMaybe there's a way to pick the lock. For some reason you have a hairpin in your pocket. Roll a die.\n|||
-EventBackDoorLockedReadPage4Base.button1,Pass
-EventBackDoorLockedReadPage4Base.button2,Fail
+EventBackDoorLockedReadPage4Base.button1,Continue
 EventBackDoorLockedReadPage4TestEnd.text,
 EventBackDoorLockedReadPage4TestEnd.button1,
 EventBackDoorLockedReadPage4End.text,
@@ -1119,8 +1115,7 @@ EventBackDoorLockedReadPage4End.button1,
 EventBackDoorLockedReadPage4.button1,Continue
 EventBackDoorLockedReadPage4.text,
 EventBackDoorLockedReadPage5Base.text,|||\nYou have that key. Maybe that will help. Roll a die.\n|||
-EventBackDoorLockedReadPage5Base.button1,Pass
-EventBackDoorLockedReadPage5Base.button2,Fail
+EventBackDoorLockedReadPage5Base.button1,Continue
 EventBackDoorLockedReadPage5TestEnd.text,
 EventBackDoorLockedReadPage5TestEnd.button1,
 EventBackDoorLockedReadPage5End.text,
@@ -1154,9 +1149,7 @@ EventBackDoorLockedReadPage4Proxy.text,You can feel the panic setting in. Why wo
 EventBackDoorLockedReadPage4Proxy.button1,Continue
 EventBackDoorLockedReadPage5Proxy.text,The lock doesn't turn and, eventually, the hairpin bends to much to be of use. Maybe this is a waste of time.
 EventBackDoorLockedReadPage5Proxy.button1,Continue
-EventBackDoorLockedReadPage7Proxy.button1,
-EventBackDoorLockedReadPage7Proxy.text,Not even the key works. Maybe there's some other way out of the house.
-EventBackDoorLockedReadPage7Proxy.button1,Continue
+EventBackDoorLockedStart.text,
 EventBackDoorLockedStart.button1,
 EventBackDoorLockedEnd.text,
 EventBackyardBenAfterReadPage1Test1.text,|||\n“Well,” he snaps, “the house sat unused these last 10 years. You were hired to clean, not criticize.”\n\nThis man clearly does not like you.\n|||
@@ -1181,7 +1174,7 @@ EventBackyardBenAfterReadPage2.button1,Continue
 EventBackyardBenAfterReadPage2.text,
 EventBackyardBenAfterReadPage3Test1.text,|||\n“What? Oh, here’s the key to the house. Don’t lose it.”\n\nAs he walks out, he drops the key in your direction. Place the {c:QItemBrassKey} common item in Ben’s space. Once outside, Benjamin snaps, "Everyone inside. No dawddling." Move any investigators who are outside to the dining room.\n\nBen slams the door shut behind him; place an Explore token as indicated.\n|||
 EventBackyardBenAfterReadPage3Test1.button1,Continue
-EventBackyardBenAfterReadPage3Base.text,|||\n“Oh, my, yes. Here’s the key you’ll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I should be going. Take your time and send someone to fetch me if you need anything.”\n\nBen walks out the back door, saying, "Everyone needs to get started." Move any investigators who are out side to the dining room. Ben shuts the door behind you. <i>Was that a click?</i> Place an Explore token as indicated and remove Ben from the board.\n|||
+EventBackyardBenAfterReadPage3Base.text,|||\n“Oh, my, yes. Here’s the key you’ll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I must be going. Take your time and send someone to fetch me if you need anything.”\n\nBen walks out the back door, saying, "Everyone needs to get started." Move any investigators who are outside to the dining room. Ben shuts the door behind you. <i>Was that a click?</i> Place an Explore token as indicated and remove Ben from the board.\n|||
 EventBackyardBenAfterReadPage3Base.button1,Continue
 EventBackyardBenAfterReadPage3TestEnd.text,
 EventBackyardBenAfterReadPage3TestEnd.button1,
@@ -1221,7 +1214,7 @@ EventBackyardBenAfterStart.button1,
 EventBackyardBenAfterEnd.text,
 EventBackyardBenBeforeReadPage1Test1.text,|||\n“Long enough,” he snaps. “There are numerous rooms on the ground floor, a basement, and many rooms upstairs. The place has always been too big for this family. Back when Peter was living here, it was only him and his daughter. The girl’s mother died under suspicious circumstances when the girl was three. Never explained.\n\n“Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren’t you? And you won’t break anything else?”\n|||
 EventBackyardBenBeforeReadPage1Test1.button1,Continue
-EventBackyardBenBeforeReadPage1Base.text,|||\n“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Even when Peter was living here, it was only him and his daughter. The girl’s mother died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I’d guess you’ll need a few hours just to look through the place and get your bearings. You’ll want to check every drawer, cabinet, and box in the house--take as much time as you need. We need the whole house cleared out and spotless by the end of next week.”\n|||
+EventBackyardBenBeforeReadPage1Base.text,|||\n“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. When Peter was living here, it was only him and his daughter. The girl’s mother died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I’d guess you’ll need a few hours just to look through the place and get your bearings. You’ll want to check every drawer, cabinet, and box in the house--take as much time as you need. We need the whole house cleared out and spotless by the end of next week.”\n|||
 EventBackyardBenBeforeReadPage1Base.button1,Continue
 EventBackyardBenBeforeReadPage1TestEnd.text,
 EventBackyardBenBeforeReadPage1TestEnd.button1,
@@ -1914,7 +1907,7 @@ EventSarahPatterReadPage3End.text,
 EventSarahPatterReadPage3End.button1,
 EventSarahPatterReadPage3.button1,Continue
 EventSarahPatterReadPage3.text,
-EventSarahPatterReadPage4Base.text,|||\nSarah reaches out as if to touch the {c:QItemRitualComponents} you found. “I recognize some of these items from the portal ritual. Both my father and the men who tried to stop my father brought similar items to help with the spells.”\n|||
+EventSarahPatterReadPage4Base.text,|||\nSarah reaches out as if to touch the {c:QItemRitualComponents} you found. “I recognize some of these items from the portal ritual. Both my father and the men who tried to stop him brought similar items to help with the spells.”\n|||
 EventSarahPatterReadPage4Base.button1,Continue
 EventSarahPatterReadPage4TestEnd.text,
 EventSarahPatterReadPage4TestEnd.button1,
@@ -1930,7 +1923,7 @@ EventSarahPatterReadPage5End.text,
 EventSarahPatterReadPage5End.button1,
 EventSarahPatterReadPage5.button1,Continue
 EventSarahPatterReadPage5.text,
-EventSarahPatterReadPage6Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “That man who let you in, he was wrting things all week in a book he carried with him. If you can find, it may help you understand what is happeening.”\n|||
+EventSarahPatterReadPage6Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “That man who let you in, he was writing things all week in a book he carried with him. If you can find it, it may help you understand what is happening.”\n|||
 EventSarahPatterReadPage6Base.button1,Continue
 EventSarahPatterReadPage6TestEnd.text,
 EventSarahPatterReadPage6TestEnd.button1,
@@ -1942,7 +1935,7 @@ EventSarahPatterReadPage7Test1.text,
 EventSarahPatterReadPage7Test1.button1,Continue
 EventSarahPatterReadPage7Test2.text,
 EventSarahPatterReadPage7Test2.button1,Continue
-EventSarahPatterReadPage7Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that {c:CustomMonsterDavidSmythe} will open a portal tonight and you must stop him; if you cannot stop him, you will need to close it.”\n|||
+EventSarahPatterReadPage7Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that {c:CustomMonsterDavidSmythe} will open a portal tonight and you must stop him; if you cannot stop him, you will need to close that portal.”\n|||
 EventSarahPatterReadPage7Base.button1,Continue
 EventSarahPatterReadPage7TestEnd.text,
 EventSarahPatterReadPage7TestEnd.button1,
@@ -1982,7 +1975,7 @@ EventSarahPatterReadPage11End.text,
 EventSarahPatterReadPage11End.button1,
 EventSarahPatterReadPage11.button1,Continue
 EventSarahPatterReadPage11.text,
-EventSarahPatterReadPage12Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The day of the ritual, two of my friends came to visit me. When Father told them I wasn’t allowed out, they sneaked to my window and jumped in when I opened it. Father was furious. I’m not sure who strangled them or who dragged them to the yard. I was burning alive when the portal closed, then my body was dumped with my friends’. It wasn’t until then that I knew they were dead. I burned for several days, alive and conscious until the end.”\n|||
+EventSarahPatterReadPage12Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The day of the ritual, two of my friends came to visit me. When Father told them I wasn’t allowed out, they sneaked to my window and jumped in when I opened it. Father was furious. I’m not sure who strangled them or who dragged them to the yard. I was burning alive when the portal closed, then my body was dumped with my friends’. It wasn’t until then that I knew they were dead. I smouldered for several days, alive and conscious until the end.”\n|||
 EventSarahPatterReadPage12Base.button1,Continue
 EventSarahPatterReadPage12TestEnd.text,
 EventSarahPatterReadPage12TestEnd.button1,
@@ -1990,7 +1983,7 @@ EventSarahPatterReadPage12End.text,
 EventSarahPatterReadPage12End.button1,
 EventSarahPatterReadPage12.button1,Continue
 EventSarahPatterReadPage12.text,
-EventSarahPatterReadPage13Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “I don’t know who the other men were, but the one who closed the portal was our uncle--Father’s brother. I think there’s something special about our family; there are things only we can do. It’s why Father could summon the portal, and why Uncle Henry could close it.\n\n“You probably share the family abilities. You must trust yourself to know what to do.”\n|||
+EventSarahPatterReadPage13Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “I don’t know who the other men were, but the one who closed the portal was our uncle Henry--Father’s brother. I think there’s something special about our family; there are things only we can do. It’s why Father could summon the portal, and why Uncle Henry could close it.\n\n“You probably share the family abilities. You must trust yourself to know what to do.”\n|||
 EventSarahPatterReadPage13Base.button1,Continue
 EventSarahPatterReadPage13TestEnd.text,
 EventSarahPatterReadPage13TestEnd.button1,
@@ -2104,7 +2097,7 @@ EventJournalReadPage5End.text,
 EventJournalReadPage5End.button1,
 EventJournalReadPage5.button1,Continue
 EventJournalReadPage5.text,
-EventJournalReadPage6Base.text,|||\n30 October 1925\n\nThe cleaning crew will be here tomorrow to start on the house. Everything is prepared for the ritual; I can feel the fear and excitement building in all of us. Soon the world will belong to the One True God.\n\nThe Master’s son continues to plead for his life during the day, then screams in the night. The Master told me in confidence the he yearns to stop, but that he must keep his commitment and see this through.\n\nThe boy has been moved to the dungeon outside the altar room. There is a hole in the wall that he stares through when he’s not begging or screaming. The altar is visible through the hole; looking at it terrifies the boy. I can no longer hear him, but I can feel his fear from across the town. I will be strong.\n|||
+EventJournalReadPage6Base.text,|||\n30 October 1925\n\nThe cleaning crew will be here tomorrow to start on the house. Everything is prepared for the ritual; I can feel the fear and excitement building in all of us. Soon the world will belong to the One True God.\n\nThe Master’s son continues to plead for his life during the day, then screams in the night. The Master told me in confidence that he yearns to stop, but that he must keep his commitment and see this through.\n\nThe boy has been moved to the dungeon outside the altar room. There is a hole in the wall that he stares through when he’s not begging or screaming. The altar is visible through the hole; looking at it terrifies the boy. I can no longer hear him, but I can feel his fear from across the town. I will be strong.\n|||
 EventJournalReadPage6Base.button1,Continue
 EventJournalReadPage6TestEnd.text,
 EventJournalReadPage6TestEnd.button1,
@@ -2120,7 +2113,7 @@ EventJournalReadPage7End.text,
 EventJournalReadPage7End.button1,
 EventJournalReadPage7.button1,Continue
 EventJournalReadPage7.text,
-EventJournalReadPage8Base.text,|||\nThis evil must be stopped.\n|||
+EventJournalReadPage8Base.text,|||\nThis evil must be stopped. Now you know when and where the ritual will take place. You must hurry.\n|||
 EventJournalReadPage8Base.button1,Continue
 EventJournalReadPage8TestEnd.text,
 EventJournalReadPage8TestEnd.button1,
@@ -2128,32 +2121,32 @@ EventJournalReadPage8End.text,
 EventJournalReadPage8End.button1,
 EventJournalReadPage8.button1,Continue
 EventJournalReadPage8.text,
-EventJournalToc1.text,|||\nYou wonder how a family could work tirelessly over so many generations to commit such evil.\n|||
+EventJournalToc1.text,|||\nThe book looks new. When you flip through it, you see that there are only a few entries. The first one is from last Sunday.\n|||
 EventJournalToc1.button1,{action} Read Page 1
 EventJournalToc1.button2,Cancel
-EventJournalToc2.text,|||\nYou are shocked to learn that you are here to protect their lives. You are determined to stop them from killing you.\n|||
+EventJournalToc2.text,|||\nYou wonder how a family could work tirelessly over so many generations to commit such evil.\n|||
 EventJournalToc2.button1,Read Page 1
 EventJournalToc2.button2,{action} Read Page 2
 EventJournalToc2.button3,Cancel
-EventJournalToc3.text,|||\nThese people are ruthless:  a member loses something and will pay for it with her life. These people must be stopped.\n|||
+EventJournalToc3.text,|||\nYou are shocked to learn that you are here to protect their lives. You are determined to stop them from killing you.\n|||
 EventJournalToc3.button1,Read Page 1
 EventJournalToc3.button2,Read Page 2
 EventJournalToc3.button3,{action} Read Page 3
 EventJournalToc3.button4,Cancel
-EventJournalToc4.text,|||\nHis son?! How can he sacrifice his own son? The depth of this depravity inspires awe.\n|||
+EventJournalToc4.text,|||\nThese people are ruthless:  a member loses something and will pay for it with her life. These people must be stopped.\n|||
 EventJournalToc4.button1,Read Page 1
 EventJournalToc4.button2,Read Page 2
 EventJournalToc4.button3,Read Page 3
 EventJournalToc4.button4,{action} Read Page 4
 EventJournalToc4.button5,Cancel
-EventJournalToc5.text,|||\nThere are two more entries. These people must be stopped.\n|||
+EventJournalToc5.text,|||\n<i>His son?! How can he sacrifice his own son?</i> The depth of this depravity inspires awe.\n|||
 EventJournalToc5.button1,Read Page 1
 EventJournalToc5.button2,Read Page 2
 EventJournalToc5.button3,Read Page 3
 EventJournalToc5.button4,Read Page 4
 EventJournalToc5.button5,{action} Read Page 5
 EventJournalToc5.button6,Cancel
-EventJournalToc6.text,|||\nWe are here to feed their god, but that will not happen. We will put an end to this.\n|||
+EventJournalToc6.text,|||\nThere are two more entries. These people must be stopped.\n|||
 EventJournalToc6.button1,Read Page 1
 EventJournalToc6.button2,Read Page 2
 EventJournalToc6.button3,Read Page 3
@@ -2161,7 +2154,7 @@ EventJournalToc6.button4,Read Page 4
 EventJournalToc6.button5,Read Page 5
 EventJournalToc6.button6,{action} Read Page 6
 EventJournalToc6.button7,Cancel
-EventJournalToc7.text,|||\nThis evil must be stopped. Now you know when and where the ritual will take place. You must hurry.\n|||
+EventJournalToc7.text,|||\nYou are here to feed their god, but you must not let that happen. You must put an end to this.\n|||
 EventJournalToc7.button1,Read Page 1
 EventJournalToc7.button2,Read Page 2
 EventJournalToc7.button3,Read Page 3
@@ -2170,7 +2163,7 @@ EventJournalToc7.button5,Read Page 5
 EventJournalToc7.button6,Read Page 6
 EventJournalToc7.button7,{action} Read Page 7
 EventJournalToc7.button8,Cancel
-EventJournalToc8.text,|||\nThis evil must be stopped.\n|||
+EventJournalToc8.text,|||\nThis evil must be stopped. Now you know when and where the ritual will take place. You must hurry.\n|||
 EventJournalToc8.button1,Read Page 1
 EventJournalToc8.button2,Read Page 2
 EventJournalToc8.button3,Read Page 3
