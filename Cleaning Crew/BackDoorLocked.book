@@ -5,7 +5,6 @@ continue|Explore
 book|BackDoorLocked|ordered|nokeep|loop
 	debug
 
-
 # for skillchecks only, follow these rules:
 #    Show TOC text with page's button (include action icon in usual way)
 #    if {action}, show screen with skillchecks
@@ -16,31 +15,28 @@ book|BackDoorLocked|ordered|nokeep|loop
 #    if {action}, show new screen with page text and [pass]/[fail] buttons
 
 page|Turn knob|You try to turn the knob. Roll a die.
-	pass|failed
-	fail|failed
-	toc|You grab the knob to open the door and...
+	pass|@backdoorLockedPass
+	fail|@backdoorLockedFail
+	toc|The door looks larger and more solid from in here. <i>Maybe it's unlocked?</i> you wonder to yourself.
 	
-page|Slam into door|Maybe you can try to break though it. You crouch down and run at the door, slamming it with your shoulder. Roll a die.
-	pass|failed
-	fail|failed
-	toc|No matter how hard you try, the knob just won't turn. Maybe if you shook it...
+page|Shake door|You grab the knob again and begin shaking it violently. Roll a die.
+	pass|@backdoorLockedPass
+	fail|@backdoorLockedFail
+	toc|Well, now you know it's locked:  no matter how hard you try, the knob just won't turn. Looking closer, there is a little light getting through between the door and its jam. <i>Maybe I can shake open?<i>
 	
-page|Grab knob|As you reach for the knob again, you briefly wonder if there is another way out of here. Roll a die.
-	pass|failed
-	fail|failed
-	toc|The door shudders when you hit it, but doesn't give in. Your shoulder hurts from the impact. What else can you try?
+page|Hit door|You muster up your strength and prepare to bash the door down with your shoulder. Roll a die.
+	pass|@backdoorLockedPass
+	fail|@backdoorLockedFail
+	toc|No matter how hard you shake, the door doesn't budge. And you might have pulled something in your right arm. Maybe you can knock it down? You also begin to wonder if you shouldn't move on.
 	
-page|Pick lock|Maybe there's a way to pick the lock. For some reason you have a hairpin in your pocket. Roll a die.
-	pass|failed
-	fail|failed
-	toc|You can feel the panic setting in. Why won't this door open?
+page|Pick lock|You get a sharp pain stabs you in the shoulder; take 1 facedown damage ({strength} negates).\n\nAs you stick the hairpin into the lock, you wonder why it was in your pocket. Roll a die.
+	pass|@backdoorLockedPass
+	fail|@backdoorLockedFail
+	toc|The third or fourth time you hit door, something in your shoulder pops and it hurts. Bad. You feel the panic setting in. Why won't this door open? "Hey, is this a hairpin?" you ask out loud.
 	
-page|Try key|You have that key. Maybe that will help. Roll a die. 
-	pass|failed
-	fail|failed
-	toc|The lock doesn't turn and, eventually, the hairpin bends to much to be of use. Maybe this is a waste of time. 
+page|Unlock door|You pull out the key and look at for a moment before putting it into the lock. Roll a die. 
+	pass|@backdoorLockedPass
+	fail|@backdoorLockedFail
+	toc|The lock doesn't move and, eventually, the hairpin bends too much to be of use. <i>Maybe this really is a waste of time,</> you consider. <i>Wait, I have that key." If you have the {c:QItemBrassKey}, ...
 
-page|failed|
-	visible|zero
-
-end|Not even the key works. Maybe there's some other way out of the house.
+end|Well, you try to put the key into the lock but it doesn't fit. You look at the key and try again. And again. And again. Dejected and out of ideas, you turn away from the door. "I guess we'll have to find another way out," you say to no one in particular.
