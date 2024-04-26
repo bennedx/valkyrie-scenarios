@@ -9,12 +9,12 @@ book|DvmStopRitual|ordered|nokeep
 page|start|The portal is open and you must close it quickly. If you have the {c:QItemRitualKnife}, the {c:QItemRitualComponents}, and the {c:QItemElderSignPendant}, you can start now.\n\nOnly {c:EventChosenInvestigator} can perform this ritual and only while standing at the altar. Are you ready to begin?
 	continue|step1
 
-page|step1|You turn to the correct place in the book and lay out the materials on the altar. The pattern is complicated and it takes a few minutes to get right. Your companions are under constant attack by cult members and you can feel the approach of something from the other side. You have to hurry.\n\nDrop the {c:QItemRitualComponents} Unique Item on the altar. It must stay on the altar for the duration of the ritual.\n\nThis step is complete.
+page|step1|You turn to the correct place in the book and lay out the materials on the altar. The pattern is complicated and it takes a few minutes to get right. Your companions are under constant attack by cult members and you can feel the approach of something from the other side of the portal. You have to hurry.\n\nDrop the {c:QItemRitualComponents} Unique Item on the altar. It must stay on the altar for the duration of the ritual.\n\nThis step is complete.
 	line|add=QItemRitualComponents
 	freeaction
 	continue|step2
 
-page|step2|You bring out the {c:QItemRitualDagger}. There is a blessing to speak while holding it. You weren't able to read it before, but as your father wrote, you are able to read it now. That said, you aren't sure if you understand it; if you do, test {lore]; otherwise, test {will} to blunder through and hope for the best. For each Unique Item you have, you may roll 1 extra die.
+page|step2|You bring out the {c:QItemRitualDagger}. There is a blessing to speak while holding it. You weren't able to read it before but, as your father wrote, you are able to read it now. That said, you aren't sure if you understand it; if you do, test {lore]; otherwise, test {will} to blunder through and hope for the best. For each Unique Item you have, you may roll 1 extra die.
 	line|add=QItemRitualDagger
 
 	# this turns the dialog into a test; if 'passfail' is given, then it's a one-time thing, but if it's a number, it sets a quota
@@ -87,10 +87,10 @@ page|step6|As the portal weakens, the boy regains some strength. He is screaming
 	pass|step6pass
 	fail|step6fail
 
-page|step6pass|As you complete the incantation, the portal and the {c:QItemElderSignPendant} continue pulsing together. The pendant rises into the air and slowly approaches the portal. The boy screams one last time as the elder sign makes contact with his forehead. The boy goes rigid, then the portal collapses and the boy falls to the ground dead.\n\nThe investigation is over.
+page|step6pass|As you complete the incantation, the portal and the {c:QItemElderSignPendant} continue pulsing together. The pendant rises into the air and slowly approaches the portal. The boy screams one last time as the elder sign makes contact with his forehead. The boy goes rigid, then the portal collapses and the boy falls to the ground... still smoldering... still moaning.\n\nThe investigation is over.
 	line|add=QItemDVM
 	freeaction
-	operations=result,=,fullWin
+	operations|result,=,fullWin
 	goto|EventGameOverStart
 
 page|step6fail|The boy is still screaming and the portal is still open. You know you are close, but you have to keep trying.\n\nSuffer 1 Damage and 1 Horror.

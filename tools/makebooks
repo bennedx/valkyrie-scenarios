@@ -37,6 +37,7 @@ BEGIN       {
                 FREEACTION = 15
 				ADD = 16
 				REMOVE = 17
+				GOTO = 18
 				
 				textContinue = "Continue"
 				textCancel = "Cancel"
@@ -238,10 +239,12 @@ $1 == "freeaction" {
 			
 
 $1 == "add" {	pages[pageCount][ADD] = $2
+				next
 			}
 
 $1 == "remove" {
 				pages[pageCount][REMOVE] = $2
+				next
 			}
 
 # line|...:  adds a line directly to the event file. These lines are usually assignments, but can be anything. 
@@ -277,23 +280,11 @@ $1 == "skillcheck" {
 
 $1 == "pass" {
 				pages[pageCount][PASS] = $2
-				
-				if ($2 !~ /^@/) {
-					printf "Page '%s': 'pass' trigger variable must start with '@' (and not 'Var') @%i\n", pages[pageCount][NAME], FNR >> stderr
-					abort = true
-				}
-				
 				next
 			}
 
 $1 == "fail" {
 				pages[pageCount][FAIL] = $2
-
-				if ($2 !~ /^@/) {
-					printf "Page '%s': 'fail' trigger variable must start with '@' (and not 'Var') @%i\n", pages[pageCount][NAME], FNR >> stderr
-					abort = true
-				}
-				
 				next
 			}
 			
@@ -334,6 +325,11 @@ $1 == "trigger" {
 				next
 			}
 
+$1 == "goto" {
+				pages[pageCount][GOTO] = $2
+				next
+			}
+
 END         {
 				if (abort) {
 					print "Aborting"
@@ -355,7 +351,7 @@ END         {
 
 function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, startTocText, pages, startLines, endLines, isEndDirective, 
 		pageCount, separator, events, pageIndex, testIndex, operations, testEventName, lineIndex, conditions, referencedPageIndex,
-		eventsForThisPage, baseEventName) {
+		eventsForThisPage, baseEventName, gotoPageEventName) {
 
     # bookName will only be empty on the first run
     if (bookName == "") return
@@ -389,10 +385,10 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
 				printf "%s.text,%s\n", testEventName, FixQuotes(pages[pageIndex][TESTS][testIndex][TEXT]) >> localizationFile
 			}
 
-			printf "vartests=%s\n", ConvertToVarTests(pages[pageIndex][TESTS][testIndex][CONDITIONS]) >> eventsFile
+			if (debug) printf "vartests=%s\n", ConvertToVarTests(pages[pageIndex][TESTS][testIndex][CONDITIONS]) >> eventsFile
 
 			if (pages[pageIndex][SKILLCHECK]) {
-				printf "skillcheck=%i\n", pages[pageIndex][SKILLCHECK] >> eventsFile
+				if (debug) printf "skillcheck=%i\n", pages[pageIndex][SKILLCHECK] >> eventsFile
 				
 				if (pages[pageIndex][PASS] == "" || pages[pageIndex][FAIL] == "") {
 					printf "Page '%s' needs both 'pass' and 'fail' directives\n", pages[pageIndex][NAME] >> stderr
@@ -460,10 +456,21 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
 
 		if (pages[pageIndex][REMOVE] != "") printf "remove=%s\n", pages[pageIndex][REMOVE] >> eventsFile
 		
-        if (pages[pageIndex][ISEXIT] == 1) {
+		if (pages[pageIndex][GOTO]) {
+			gotoPageEventName = GetPageEventNameFor(pages, pageIndex, pages[pageIndex][GOTO])
+			if (gotoPageEventName) {
+				printf "event1=%s\n", gotoPageEventName >> eventsFile
+			} else {
+				printf "Page '%s', goto: cannot find page '%s'\n", pages[pageIndex][NAME], pages[pageIndex][GOTO] >> stderr
+				abort = 1
+			}
+			
+        } else if (pages[pageIndex][ISEXIT] == 1) {
             printf "event1=Event%sEnd\n", bookName >> eventsFile
+			
         } else if (pageIndex == pageCount && isEndDirective) {
 			printf "event1=Event%sEnd\n", bookName >> eventsFile
+			
 		} else {
             printf "event1=Event%s%s\n", bookName, (isLooped ? "Start" : "End") >> eventsFile
         }
@@ -927,33 +934,58 @@ function CombineOperations(line1, line2) {
 }
 
 function WriteButtonsAtEndOfEvent(pages, pageIndex, baseEventName, eventsForThisPage, textContinue) {
-			
+		
 	if (pages[pageIndex][PASS] != "" && pages[pageIndex][FAIL] != "") {
-		print "buttons=2" >> eventsFile
+		# figure out the page or variable to use for pass
+		passPageEventName = GetPageEventNameFor(pages, pageIndex, pages[pageIndex][PASS])
+		passTriggerVariable = passPageEventName != "" ? "" : GetTriggerVariable(pages[pageIndex][PASS], pages, pageIndex, "pass")
 
-		printf "events1=%sPass\n", baseEventName >> eventsFile
+		# and for fail: only get the trigger if we don't have a page event
+		failPageEventName = GetPageEventNameFor(pages, pageIndex, pages[pageIndex][FAIL])
+		failTriggerVariable = failPageEventName != "" ? "" : GetTriggerVariable(pages[pageIndex][FAIL], pages, pageIndex, "fail")
+		
+		# set the buttons for skillcheck/pass/fail 
+		print "buttons=2" >> eventsFile	
 		printf "%s.button1,Pass\n", baseEventName >> localizationFile
-		
-		printf "events2=%sFail\n", baseEventName >> eventsFile
+		printf "event1=%sPass\n", baseEventName >> eventsFile
 		printf "%s.button2,Fail\n", baseEventName >> localizationFile
-		
-		#write pass event
+		printf "event2=%sFail\n", baseEventName >> eventsFile
+
+		# set up the pass event
 		printf "\n[%sPass]\n", baseEventName >> eventsFile
-		printf "%sPass.text,Pass\n", baseEventName >> localizationFile
-		printf "display=true\n" >> eventsFile
+		printf "%sPass.text,\n", baseEventName >> localizationFile
+		printf "display=false\n" >> eventsFile
 		printf "buttons=1\n" >> eventsFile
 		printf "%sPass.button1,Pass\n", baseEventName >> localizationFile
-		printf "operations=test%sPass,=,1 %s,=,1\n", baseEventName, pages[pageIndex][PASS] >> eventsFile
-		printf "events1=%s\n", eventsForThisPage >> eventsFile
+		
+		# in the pass event, decide whether to transfer to an event or trigger a variable
+		if (passPageEventName) {
+			printf "event1=%s\n", passPageEventName >> eventsFile
+		} else if (passTriggerVariable) {
+			printf "operations=test%sPass,=,1 %s,=,1\n", baseEventName, passTriggerVariable >> eventsFile
+			printf "event1=%s\n", eventsForThisPage >> eventsFile
+		} else {
+			abort = true
+			printf "Page '%s', 'pass': '%s' is not a valid page name; a trigger variable starts with '@'\n", pages[pageIndex][NAME], pages[pageIndex][PASS] >> stderr
+		}
 		
 		#write fail event
 		printf "\n[%sFail]\n", baseEventName >> eventsFile
-		printf "%sFail.text,Fail\n", baseEventName >> localizationFile
-		printf "display=true\n" >> eventsFile
+		printf "%sFail.text,\n", baseEventName >> localizationFile
+		printf "display=false\n" >> eventsFile
 		printf "buttons=1\n" >> eventsFile
 		printf "%sFail.button1,Fail\n", baseEventName >> localizationFile
-		printf "operations=test%sFail,=,1 %s,=,1\n", baseEventName, pages[pageIndex][FAIL] >> eventsFile
-		printf "events1=%s\n", eventsForThisPage >> eventsFile
+
+		# in the false event, decide whether to transfer to an event or trigger a variable
+		if (failPageEventName) {
+			printf "event1=%s\n", failPageEventName >> eventsFile
+		} else if (failTriggerVariable) {
+			printf "operations=test%sFail,=,1 %s,=,1\n", baseEventName, failTriggerVariable >> eventsFile
+			printf "event1=%s\n", eventsForThisPage >> eventsFile
+		} else {
+			abort = true
+			printf "Page '%s', 'fail': '%s' is not a valid page name; a trigger variable starts with '@'\n", pages[pageIndex][NAME], pages[pageIndex][FAIL] >> stderr
+		}
 
 	} else if (pages[pageIndex][PASS] != pages[pageIndex][FAIL]) {
 		printf "Page '%s': you must use both 'pass' and 'fail' if you use either\n", pages[pageIndex][NAME] >> stderr
@@ -965,6 +997,31 @@ function WriteButtonsAtEndOfEvent(pages, pageIndex, baseEventName, eventsForThis
 		printf "buttons=1\n" >> eventsFile
 
 		printf "%s.button1,%s\n", baseEventName, textContinue >> localizationFile
-		printf "events1=%s\n", eventsForThisPage >> eventsFile
+		printf "event1=%s\n", eventsForThisPage >> eventsFile
 	}
+}
+
+function GetPageEventNameFor(pages, currentPageIndex, name,
+	eventName, pageIndex) {
+
+	eventName = ""
+	for(pageIndex = 1; pageIndex <= length(pages); pageIndex++) {
+		if (tolower(pages[pageIndex][NAME]) == tolower(name)) {
+			eventName = sprintf("evemt%sRead%sPage", bookName, pageIndex)
+			break;
+		}
+	}
+	
+	if (eventName == "" && name ~ /^Event/) eventName = name
+	
+    return eventName
+}
+
+function GetTriggerVariable(value, pages, pageIndex, area) {
+	if (value ~ /^@/) {
+		return value
+	} else if (value ~ /^var/i) {
+		printf "Page '%s', %s: Triggers must start with '@', not 'Var'\n", pages[pageIndex][NAME], area >> stderr
+	}
+	return ""
 }
