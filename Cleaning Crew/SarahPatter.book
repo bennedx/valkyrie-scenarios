@@ -29,14 +29,14 @@ page|ritual components|Sarah reaches out as if to touch the {c:QItemRitualCompon
 page|journal|Sarah looks down and sees you holding the {c:QItemJournal}. “The {c:QItemJournal}! The man who let you in was writing in it all week. You should read it carefully.”
 	visible|foundJournal
 
-page|no-journal|Sarah whispers to {c:EventChosenInvestigator}, “That man who let you in, he was writing things all week in a book he carried with him. If you can find it, it may help you understand what is happening.”
+page|no-journal|Sarah whispers to {c:EventChosenInvestigator}, “That man who let you in, he was writing things all week in a book he carried with him. If you can find it, it may help you understand what is happening.” (The journal cannot be reached because by the time we find Sarah, we cannot go outside.)
 	notvisible|foundJournal
 
 page|1|Sarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that {c:CustomMonsterDavidSmythe} will open a portal tonight and you must stop him; if you cannot stop him, you will need to close that portal.”
 	test|goal,==,goalRescueBoy|Sarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that {c:CustomMonsterDavidSmythe} will open a portal tonight. You must stop him.”
 	test|goal,==,goalStopCultists|Sarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that {c:CustomMonsterDavidSmythe} will open a portal tonight. You must stop him from making it permanent.”
     
-page|2|Sarah whispers to {c:EventChosenInvestigator}, “The people in this town worship a darker god than most. They want to bring their god to Earth. 10 years ago, my father cast a ritual to summon It. He opened a portal. The power it possessed was breathtaking and I was powerless to stop it. Somehow, Father summoned local townsfolk through the portal to protect his work, even after he was dead. As the portal, I could feel people and monsters approaching and passing through me from the other side.”
+page|2|Sarah whispers to {c:EventChosenInvestigator}, “The people in this town worship a darker god than most. They want to bring their god to Earth. 10 years ago, my father cast a ritual to summon It. He opened a portal. The power it possessed was breathtaking and I could do nothing to stop it. Somehow, Father summoned local townsfolk through the portal to protect his casting, even after he was dead. As the portal, I could feel people and monsters approaching and passing through me from the other side.”
 
 page|3|Sarah whispers to {c:EventChosenInvestigator}, “I could feel the ancient one approach from the other side. Suddenly, a group of men broke into the altar chamber and began fighting the locals. One man went to the altar, killed our father, laid out some materials, and spoke words I didn’t understand. He closed the portal while his friends protected him from what came through it.”
     

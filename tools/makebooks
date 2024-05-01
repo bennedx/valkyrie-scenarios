@@ -71,6 +71,9 @@ previousFile != FILENAME {
 				globalEventCounter = 0
                 isBook = false
 				
+				textContinue = "Continue"
+				textCancel = "Cancel"
+				
 				previousFile = FILENAME;
 			}
 
@@ -449,8 +452,8 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
 		
 		# the actual end page
         printf "\n[Event%sReadPage%iEnd]\n", bookName, pageIndex >> eventsFile
-		printf "Event%sReadPage%iEnd.text,end\n", bookName, pageIndex >> localizationFile
-        printf "display=true\n" >> eventsFile
+		printf "Event%sReadPage%iEnd.text,\n", bookName, pageIndex >> localizationFile
+        printf "display=false\n" >> eventsFile
         printf "buttons=1\n" >> eventsFile
 		printf "Event%sReadPage%iEnd.button1,\n", bookName, pageIndex >> localizationFile
 
@@ -994,6 +997,7 @@ function WriteButtonsAtEndOfEvent(pages, pageIndex, baseEventName, eventsForThis
 		abort = true
 
 	} else {
+printf "%s, textContinue=%s\n", baseEventName, textContinue >> stderr
 		printf "buttons=1\n" >> eventsFile
 
 		printf "%s.button1,%s\n", baseEventName, textContinue >> localizationFile
@@ -1001,6 +1005,7 @@ function WriteButtonsAtEndOfEvent(pages, pageIndex, baseEventName, eventsForThis
 	}
 }
 
+# finds a page by name, or return the name if it starts with "Event"
 function GetPageEventNameFor(pages, currentPageIndex, name,
 	eventName, pageIndex) {
 

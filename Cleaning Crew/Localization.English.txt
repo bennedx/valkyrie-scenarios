@@ -1093,7 +1093,7 @@ EventBackDoorLockedReadPage1BaseFail.text,
 EventBackDoorLockedReadPage1BaseFail.button1,Fail
 EventBackDoorLockedReadPage1TestEnd.text,
 EventBackDoorLockedReadPage1TestEnd.button1,
-EventBackDoorLockedReadPage1End.text,end
+EventBackDoorLockedReadPage1End.text,
 EventBackDoorLockedReadPage1End.button1,
 EventBackDoorLockedReadPage1.button1,Explore
 EventBackDoorLockedReadPage1.text,
@@ -1106,7 +1106,7 @@ EventBackDoorLockedReadPage2BaseFail.text,
 EventBackDoorLockedReadPage2BaseFail.button1,Fail
 EventBackDoorLockedReadPage2TestEnd.text,
 EventBackDoorLockedReadPage2TestEnd.button1,
-EventBackDoorLockedReadPage2End.text,end
+EventBackDoorLockedReadPage2End.text,
 EventBackDoorLockedReadPage2End.button1,
 EventBackDoorLockedReadPage2.button1,Explore
 EventBackDoorLockedReadPage2.text,
@@ -1119,7 +1119,7 @@ EventBackDoorLockedReadPage3BaseFail.text,
 EventBackDoorLockedReadPage3BaseFail.button1,Fail
 EventBackDoorLockedReadPage3TestEnd.text,
 EventBackDoorLockedReadPage3TestEnd.button1,
-EventBackDoorLockedReadPage3End.text,end
+EventBackDoorLockedReadPage3End.text,
 EventBackDoorLockedReadPage3End.button1,
 EventBackDoorLockedReadPage3.button1,Explore
 EventBackDoorLockedReadPage3.text,
@@ -1132,7 +1132,7 @@ EventBackDoorLockedReadPage4BaseFail.text,
 EventBackDoorLockedReadPage4BaseFail.button1,Fail
 EventBackDoorLockedReadPage4TestEnd.text,
 EventBackDoorLockedReadPage4TestEnd.button1,
-EventBackDoorLockedReadPage4End.text,end
+EventBackDoorLockedReadPage4End.text,
 EventBackDoorLockedReadPage4End.button1,
 EventBackDoorLockedReadPage4.button1,Explore
 EventBackDoorLockedReadPage4.text,
@@ -1145,7 +1145,7 @@ EventBackDoorLockedReadPage5BaseFail.text,
 EventBackDoorLockedReadPage5BaseFail.button1,Fail
 EventBackDoorLockedReadPage5TestEnd.text,
 EventBackDoorLockedReadPage5TestEnd.button1,
-EventBackDoorLockedReadPage5End.text,end
+EventBackDoorLockedReadPage5End.text,
 EventBackDoorLockedReadPage5End.button1,
 EventBackDoorLockedReadPage5.button1,Explore
 EventBackDoorLockedReadPage5.text,
@@ -1153,7 +1153,7 @@ EventBackDoorLockedReadPage6Base.text,|||\nWell, you try to put the key into the
 EventBackDoorLockedReadPage6Base.button1,Explore
 EventBackDoorLockedReadPage6TestEnd.text,
 EventBackDoorLockedReadPage6TestEnd.button1,
-EventBackDoorLockedReadPage6End.text,end
+EventBackDoorLockedReadPage6End.text,
 EventBackDoorLockedReadPage6End.button1,
 EventBackDoorLockedReadPage6.button1,Explore
 EventBackDoorLockedReadPage6.text,
@@ -1181,7 +1181,7 @@ EventBackyardBenAfterReadPage1Base.text,|||\n“Well,” he starts, “the house
 EventBackyardBenAfterReadPage1Base.button1,Explore
 EventBackyardBenAfterReadPage1TestEnd.text,
 EventBackyardBenAfterReadPage1TestEnd.button1,
-EventBackyardBenAfterReadPage1End.text,end
+EventBackyardBenAfterReadPage1End.text,
 EventBackyardBenAfterReadPage1End.button1,
 EventBackyardBenAfterReadPage1.button1,Explore
 EventBackyardBenAfterReadPage1.text,
@@ -1191,7 +1191,7 @@ EventBackyardBenAfterReadPage2Base.text,|||\n“I think the handyman was in the 
 EventBackyardBenAfterReadPage2Base.button1,Explore
 EventBackyardBenAfterReadPage2TestEnd.text,
 EventBackyardBenAfterReadPage2TestEnd.button1,
-EventBackyardBenAfterReadPage2End.text,end
+EventBackyardBenAfterReadPage2End.text,
 EventBackyardBenAfterReadPage2End.button1,
 EventBackyardBenAfterReadPage2.button1,Explore
 EventBackyardBenAfterReadPage2.text,
@@ -1201,7 +1201,7 @@ EventBackyardBenAfterReadPage3Base.text,|||\n“Oh, my, yes. Here’s the key yo
 EventBackyardBenAfterReadPage3Base.button1,Explore
 EventBackyardBenAfterReadPage3TestEnd.text,
 EventBackyardBenAfterReadPage3TestEnd.button1,
-EventBackyardBenAfterReadPage3End.text,end
+EventBackyardBenAfterReadPage3End.text,
 EventBackyardBenAfterReadPage3End.button1,
 EventBackyardBenAfterReadPage3.button1,Explore
 EventBackyardBenAfterReadPage3.text,
@@ -1241,7 +1241,7 @@ EventBackyardBenBeforeReadPage1Base.text,|||\n“How long, you ask? Well, the ho
 EventBackyardBenBeforeReadPage1Base.button1,Explore
 EventBackyardBenBeforeReadPage1TestEnd.text,
 EventBackyardBenBeforeReadPage1TestEnd.button1,
-EventBackyardBenBeforeReadPage1End.text,end
+EventBackyardBenBeforeReadPage1End.text,
 EventBackyardBenBeforeReadPage1End.button1,
 EventBackyardBenBeforeReadPage1.button1,Explore
 EventBackyardBenBeforeReadPage1.text,
@@ -1251,7 +1251,7 @@ EventBackyardBenBeforeReadPage2Base.text,|||\n“The children? I’m sure you re
 EventBackyardBenBeforeReadPage2Base.button1,Explore
 EventBackyardBenBeforeReadPage2TestEnd.text,
 EventBackyardBenBeforeReadPage2TestEnd.button1,
-EventBackyardBenBeforeReadPage2End.text,end
+EventBackyardBenBeforeReadPage2End.text,
 EventBackyardBenBeforeReadPage2End.button1,
 EventBackyardBenBeforeReadPage2.button1,Explore
 EventBackyardBenBeforeReadPage2.text,
@@ -1261,7 +1261,7 @@ EventBackyardBenBeforeReadPage3Base.text,|||\n“The children were found just ov
 EventBackyardBenBeforeReadPage3Base.button1,Explore
 EventBackyardBenBeforeReadPage3TestEnd.text,
 EventBackyardBenBeforeReadPage3TestEnd.button1,
-EventBackyardBenBeforeReadPage3End.text,end
+EventBackyardBenBeforeReadPage3End.text,
 EventBackyardBenBeforeReadPage3End.button1,
 EventBackyardBenBeforeReadPage3.button1,Explore
 EventBackyardBenBeforeReadPage3.text,
@@ -1271,7 +1271,7 @@ EventBackyardBenBeforeReadPage4Base.text,|||\n“Well, we tried right after the.
 EventBackyardBenBeforeReadPage4Base.button1,Explore
 EventBackyardBenBeforeReadPage4TestEnd.text,
 EventBackyardBenBeforeReadPage4TestEnd.button1,
-EventBackyardBenBeforeReadPage4End.text,end
+EventBackyardBenBeforeReadPage4End.text,
 EventBackyardBenBeforeReadPage4End.button1,
 EventBackyardBenBeforeReadPage4.button1,Explore
 EventBackyardBenBeforeReadPage4.text,
@@ -1279,7 +1279,7 @@ EventBackyardBenBeforeReadPage5Base.text,|||\n“You should be more careful. The
 EventBackyardBenBeforeReadPage5Base.button1,Explore
 EventBackyardBenBeforeReadPage5TestEnd.text,
 EventBackyardBenBeforeReadPage5TestEnd.button1,
-EventBackyardBenBeforeReadPage5End.text,end
+EventBackyardBenBeforeReadPage5End.text,
 EventBackyardBenBeforeReadPage5End.button1,
 EventBackyardBenBeforeReadPage5.button1,Explore
 EventBackyardBenBeforeReadPage5.text,
@@ -1341,7 +1341,7 @@ EventDVMRescueBoyReadPage1Base.text,|||\nPage 1\n\nYou open the book to the firs
 EventDVMRescueBoyReadPage1Base.button1,Explore
 EventDVMRescueBoyReadPage1TestEnd.text,
 EventDVMRescueBoyReadPage1TestEnd.button1,
-EventDVMRescueBoyReadPage1End.text,end
+EventDVMRescueBoyReadPage1End.text,
 EventDVMRescueBoyReadPage1End.button1,
 EventDVMRescueBoyReadPage1.button1,Explore
 EventDVMRescueBoyReadPage1.text,
@@ -1349,7 +1349,7 @@ EventDVMRescueBoyReadPage2Base.text,|||\nPage 2\n\nYou leaf through the book and
 EventDVMRescueBoyReadPage2Base.button1,Explore
 EventDVMRescueBoyReadPage2TestEnd.text,
 EventDVMRescueBoyReadPage2TestEnd.button1,
-EventDVMRescueBoyReadPage2End.text,end
+EventDVMRescueBoyReadPage2End.text,
 EventDVMRescueBoyReadPage2End.button1,
 EventDVMRescueBoyReadPage2.button1,Explore
 EventDVMRescueBoyReadPage2.text,
@@ -1357,7 +1357,7 @@ EventDVMRescueBoyReadPage3Base.text,|||\nPage 3\n\nYou flip the page. Here the b
 EventDVMRescueBoyReadPage3Base.button1,Explore
 EventDVMRescueBoyReadPage3TestEnd.text,
 EventDVMRescueBoyReadPage3TestEnd.button1,
-EventDVMRescueBoyReadPage3End.text,end
+EventDVMRescueBoyReadPage3End.text,
 EventDVMRescueBoyReadPage3End.button1,
 EventDVMRescueBoyReadPage3.button1,Explore
 EventDVMRescueBoyReadPage3.text,
@@ -1367,7 +1367,7 @@ EventDVMRescueBoyReadPage4Base.text,|||\nPage 4\n\nThe next page delves into the
 EventDVMRescueBoyReadPage4Base.button1,Explore
 EventDVMRescueBoyReadPage4TestEnd.text,
 EventDVMRescueBoyReadPage4TestEnd.button1,
-EventDVMRescueBoyReadPage4End.text,end
+EventDVMRescueBoyReadPage4End.text,
 EventDVMRescueBoyReadPage4End.button1,
 EventDVMRescueBoyReadPage4.button1,Explore
 EventDVMRescueBoyReadPage4.text,
@@ -1375,7 +1375,7 @@ EventDVMRescueBoyReadPage5Base.text,|||\nPage 5\n\nThe next page is where the po
 EventDVMRescueBoyReadPage5Base.button1,Explore
 EventDVMRescueBoyReadPage5TestEnd.text,
 EventDVMRescueBoyReadPage5TestEnd.button1,
-EventDVMRescueBoyReadPage5End.text,end
+EventDVMRescueBoyReadPage5End.text,
 EventDVMRescueBoyReadPage5End.button1,
 EventDVMRescueBoyReadPage5.button1,Explore
 EventDVMRescueBoyReadPage5.text,
@@ -1383,7 +1383,7 @@ EventDVMRescueBoyReadPage6Base.text,|||\nPage 6\n\nOnce the portal has manifeste
 EventDVMRescueBoyReadPage6Base.button1,Explore
 EventDVMRescueBoyReadPage6TestEnd.text,
 EventDVMRescueBoyReadPage6TestEnd.button1,
-EventDVMRescueBoyReadPage6End.text,end
+EventDVMRescueBoyReadPage6End.text,
 EventDVMRescueBoyReadPage6End.button1,
 EventDVMRescueBoyReadPage6.button1,Explore
 EventDVMRescueBoyReadPage6.text,
@@ -1393,7 +1393,7 @@ EventDVMRescueBoyReadPage7Base.text,|||\nPage 7\n\Finally, there is commentary a
 EventDVMRescueBoyReadPage7Base.button1,Explore
 EventDVMRescueBoyReadPage7TestEnd.text,
 EventDVMRescueBoyReadPage7TestEnd.button1,
-EventDVMRescueBoyReadPage7End.text,end
+EventDVMRescueBoyReadPage7End.text,
 EventDVMRescueBoyReadPage7End.button1,
 EventDVMRescueBoyReadPage7.button1,Explore
 EventDVMRescueBoyReadPage7.text,
@@ -1405,7 +1405,7 @@ EventDVMRescueBoyReadPage8Base.text,|||\n<i>Maybe I need to explore a bit more t
 EventDVMRescueBoyReadPage8Base.button1,Explore
 EventDVMRescueBoyReadPage8TestEnd.text,
 EventDVMRescueBoyReadPage8TestEnd.button1,
-EventDVMRescueBoyReadPage8End.text,end
+EventDVMRescueBoyReadPage8End.text,
 EventDVMRescueBoyReadPage8End.button1,
 EventDVMRescueBoyReadPage8.button1,Explore
 EventDVMRescueBoyReadPage8.text,
@@ -1467,7 +1467,7 @@ EventDVMStopCultistsReadPage1Base.text,|||\nPage 1\n\nYou open the book to the f
 EventDVMStopCultistsReadPage1Base.button1,Explore
 EventDVMStopCultistsReadPage1TestEnd.text,
 EventDVMStopCultistsReadPage1TestEnd.button1,
-EventDVMStopCultistsReadPage1End.text,end
+EventDVMStopCultistsReadPage1End.text,
 EventDVMStopCultistsReadPage1End.button1,
 EventDVMStopCultistsReadPage1.button1,Explore
 EventDVMStopCultistsReadPage1.text,
@@ -1475,7 +1475,7 @@ EventDVMStopCultistsReadPage2Base.text,|||\nPage 2\n\nYou leaf through the book 
 EventDVMStopCultistsReadPage2Base.button1,Explore
 EventDVMStopCultistsReadPage2TestEnd.text,
 EventDVMStopCultistsReadPage2TestEnd.button1,
-EventDVMStopCultistsReadPage2End.text,end
+EventDVMStopCultistsReadPage2End.text,
 EventDVMStopCultistsReadPage2End.button1,
 EventDVMStopCultistsReadPage2.button1,Explore
 EventDVMStopCultistsReadPage2.text,
@@ -1483,7 +1483,7 @@ EventDVMStopCultistsReadPage3Base.text,|||\nPage 3\n\nYou flip the page. Here th
 EventDVMStopCultistsReadPage3Base.button1,Explore
 EventDVMStopCultistsReadPage3TestEnd.text,
 EventDVMStopCultistsReadPage3TestEnd.button1,
-EventDVMStopCultistsReadPage3End.text,end
+EventDVMStopCultistsReadPage3End.text,
 EventDVMStopCultistsReadPage3End.button1,
 EventDVMStopCultistsReadPage3.button1,Explore
 EventDVMStopCultistsReadPage3.text,
@@ -1491,7 +1491,7 @@ EventDVMStopCultistsReadPage4Base.text,|||\nPage 4\n\nThe next page delves into 
 EventDVMStopCultistsReadPage4Base.button1,Explore
 EventDVMStopCultistsReadPage4TestEnd.text,
 EventDVMStopCultistsReadPage4TestEnd.button1,
-EventDVMStopCultistsReadPage4End.text,end
+EventDVMStopCultistsReadPage4End.text,
 EventDVMStopCultistsReadPage4End.button1,
 EventDVMStopCultistsReadPage4.button1,Explore
 EventDVMStopCultistsReadPage4.text,
@@ -1499,7 +1499,7 @@ EventDVMStopCultistsReadPage5Base.text,|||\nPage 5\n\nThe next page is where the
 EventDVMStopCultistsReadPage5Base.button1,Explore
 EventDVMStopCultistsReadPage5TestEnd.text,
 EventDVMStopCultistsReadPage5TestEnd.button1,
-EventDVMStopCultistsReadPage5End.text,end
+EventDVMStopCultistsReadPage5End.text,
 EventDVMStopCultistsReadPage5End.button1,
 EventDVMStopCultistsReadPage5.button1,Explore
 EventDVMStopCultistsReadPage5.text,
@@ -1507,7 +1507,7 @@ EventDVMStopCultistsReadPage6Base.text,|||\nPage 6\n\nOnce the portal has manife
 EventDVMStopCultistsReadPage6Base.button1,Explore
 EventDVMStopCultistsReadPage6TestEnd.text,
 EventDVMStopCultistsReadPage6TestEnd.button1,
-EventDVMStopCultistsReadPage6End.text,end
+EventDVMStopCultistsReadPage6End.text,
 EventDVMStopCultistsReadPage6End.button1,
 EventDVMStopCultistsReadPage6.button1,Explore
 EventDVMStopCultistsReadPage6.text,
@@ -1515,7 +1515,7 @@ EventDVMStopCultistsReadPage7Base.text,|||\nPage 7\n\Finally, there is commentar
 EventDVMStopCultistsReadPage7Base.button1,Explore
 EventDVMStopCultistsReadPage7TestEnd.text,
 EventDVMStopCultistsReadPage7TestEnd.button1,
-EventDVMStopCultistsReadPage7End.text,end
+EventDVMStopCultistsReadPage7End.text,
 EventDVMStopCultistsReadPage7End.button1,
 EventDVMStopCultistsReadPage7.button1,Explore
 EventDVMStopCultistsReadPage7.text,
@@ -1525,7 +1525,7 @@ EventDVMStopCultistsReadPage8Base.text,|||\nNow you know what you need to do bef
 EventDVMStopCultistsReadPage8Base.button1,Explore
 EventDVMStopCultistsReadPage8TestEnd.text,
 EventDVMStopCultistsReadPage8TestEnd.button1,
-EventDVMStopCultistsReadPage8End.text,end
+EventDVMStopCultistsReadPage8End.text,
 EventDVMStopCultistsReadPage8End.button1,
 EventDVMStopCultistsReadPage8.button1,Explore
 EventDVMStopCultistsReadPage8.text,
@@ -1587,7 +1587,7 @@ EventDvmStopRitualReadPage1Base.text,|||\nThe portal is open and you must close 
 EventDvmStopRitualReadPage1Base.button1,step2
 EventDvmStopRitualReadPage1TestEnd.text,
 EventDvmStopRitualReadPage1TestEnd.button1,
-EventDvmStopRitualReadPage1End.text,end
+EventDvmStopRitualReadPage1End.text,
 EventDvmStopRitualReadPage1End.button1,
 EventDvmStopRitualReadPage1.button1,step2
 EventDvmStopRitualReadPage1.text,
@@ -1595,7 +1595,7 @@ EventDvmStopRitualReadPage2Base.text,|||\nYou turn to the correct place in the b
 EventDvmStopRitualReadPage2Base.button1,step2
 EventDvmStopRitualReadPage2TestEnd.text,
 EventDvmStopRitualReadPage2TestEnd.button1,
-EventDvmStopRitualReadPage2End.text,end
+EventDvmStopRitualReadPage2End.text,
 EventDvmStopRitualReadPage2End.button1,
 EventDvmStopRitualReadPage2.button1,step2
 EventDvmStopRitualReadPage2.text,
@@ -1608,7 +1608,7 @@ EventDvmStopRitualReadPage3BaseFail.text,
 EventDvmStopRitualReadPage3BaseFail.button1,Fail
 EventDvmStopRitualReadPage3TestEnd.text,
 EventDvmStopRitualReadPage3TestEnd.button1,
-EventDvmStopRitualReadPage3End.text,end
+EventDvmStopRitualReadPage3End.text,
 EventDvmStopRitualReadPage3End.button1,
 EventDvmStopRitualReadPage3.button1,step2
 EventDvmStopRitualReadPage3.text,
@@ -1616,7 +1616,7 @@ EventDvmStopRitualReadPage4Base.text,|||\nAs you repeat the incantation, the bla
 EventDvmStopRitualReadPage4Base.button1,step2
 EventDvmStopRitualReadPage4TestEnd.text,
 EventDvmStopRitualReadPage4TestEnd.button1,
-EventDvmStopRitualReadPage4End.text,end
+EventDvmStopRitualReadPage4End.text,
 EventDvmStopRitualReadPage4End.button1,
 EventDvmStopRitualReadPage4.button1,step2
 EventDvmStopRitualReadPage4.text,
@@ -1624,7 +1624,7 @@ EventDvmStopRitualReadPage5Base.text,|||\nYou keep repeating the incantation but
 EventDvmStopRitualReadPage5Base.button1,step2
 EventDvmStopRitualReadPage5TestEnd.text,
 EventDvmStopRitualReadPage5TestEnd.button1,
-EventDvmStopRitualReadPage5End.text,end
+EventDvmStopRitualReadPage5End.text,
 EventDvmStopRitualReadPage5End.button1,
 EventDvmStopRitualReadPage5.button1,step2
 EventDvmStopRitualReadPage5.text,
@@ -1637,7 +1637,7 @@ EventDvmStopRitualReadPage6BaseFail.text,
 EventDvmStopRitualReadPage6BaseFail.button1,Fail
 EventDvmStopRitualReadPage6TestEnd.text,
 EventDvmStopRitualReadPage6TestEnd.button1,
-EventDvmStopRitualReadPage6End.text,end
+EventDvmStopRitualReadPage6End.text,
 EventDvmStopRitualReadPage6End.button1,
 EventDvmStopRitualReadPage6.button1,step2
 EventDvmStopRitualReadPage6.text,
@@ -1645,7 +1645,7 @@ EventDvmStopRitualReadPage7Base.text,|||\nYou squeeze your hand into a tight fis
 EventDvmStopRitualReadPage7Base.button1,step2
 EventDvmStopRitualReadPage7TestEnd.text,
 EventDvmStopRitualReadPage7TestEnd.button1,
-EventDvmStopRitualReadPage7End.text,end
+EventDvmStopRitualReadPage7End.text,
 EventDvmStopRitualReadPage7End.button1,
 EventDvmStopRitualReadPage7.button1,step2
 EventDvmStopRitualReadPage7.text,
@@ -1653,7 +1653,7 @@ EventDvmStopRitualReadPage8Base.text,|||\nA drop of blood spatters when it hits 
 EventDvmStopRitualReadPage8Base.button1,step2
 EventDvmStopRitualReadPage8TestEnd.text,
 EventDvmStopRitualReadPage8TestEnd.button1,
-EventDvmStopRitualReadPage8End.text,end
+EventDvmStopRitualReadPage8End.text,
 EventDvmStopRitualReadPage8End.button1,
 EventDvmStopRitualReadPage8.button1,step2
 EventDvmStopRitualReadPage8.text,
@@ -1666,7 +1666,7 @@ EventDvmStopRitualReadPage9BaseFail.text,
 EventDvmStopRitualReadPage9BaseFail.button1,Fail
 EventDvmStopRitualReadPage9TestEnd.text,
 EventDvmStopRitualReadPage9TestEnd.button1,
-EventDvmStopRitualReadPage9End.text,end
+EventDvmStopRitualReadPage9End.text,
 EventDvmStopRitualReadPage9End.button1,
 EventDvmStopRitualReadPage9.button1,step2
 EventDvmStopRitualReadPage9.text,
@@ -1674,7 +1674,7 @@ EventDvmStopRitualReadPage10Base.text,|||\nYou feel a welling of power as you sp
 EventDvmStopRitualReadPage10Base.button1,step2
 EventDvmStopRitualReadPage10TestEnd.text,
 EventDvmStopRitualReadPage10TestEnd.button1,
-EventDvmStopRitualReadPage10End.text,end
+EventDvmStopRitualReadPage10End.text,
 EventDvmStopRitualReadPage10End.button1,
 EventDvmStopRitualReadPage10.button1,step2
 EventDvmStopRitualReadPage10.text,
@@ -1682,7 +1682,7 @@ EventDvmStopRitualReadPage11Base.text,|||\nYou can feel something happen inside 
 EventDvmStopRitualReadPage11Base.button1,step2
 EventDvmStopRitualReadPage11TestEnd.text,
 EventDvmStopRitualReadPage11TestEnd.button1,
-EventDvmStopRitualReadPage11End.text,end
+EventDvmStopRitualReadPage11End.text,
 EventDvmStopRitualReadPage11End.button1,
 EventDvmStopRitualReadPage11.button1,step2
 EventDvmStopRitualReadPage11.text,
@@ -1695,7 +1695,7 @@ EventDvmStopRitualReadPage12BaseFail.text,
 EventDvmStopRitualReadPage12BaseFail.button1,Fail
 EventDvmStopRitualReadPage12TestEnd.text,
 EventDvmStopRitualReadPage12TestEnd.button1,
-EventDvmStopRitualReadPage12End.text,end
+EventDvmStopRitualReadPage12End.text,
 EventDvmStopRitualReadPage12End.button1,
 EventDvmStopRitualReadPage12.button1,step2
 EventDvmStopRitualReadPage12.text,
@@ -1703,7 +1703,7 @@ EventDvmStopRitualReadPage13Base.text,|||\nYou feel a welling of power as you sp
 EventDvmStopRitualReadPage13Base.button1,step2
 EventDvmStopRitualReadPage13TestEnd.text,
 EventDvmStopRitualReadPage13TestEnd.button1,
-EventDvmStopRitualReadPage13End.text,end
+EventDvmStopRitualReadPage13End.text,
 EventDvmStopRitualReadPage13End.button1,
 EventDvmStopRitualReadPage13.button1,step2
 EventDvmStopRitualReadPage13.text,
@@ -1711,7 +1711,7 @@ EventDvmStopRitualReadPage14Base.text,|||\nA single drop rises from the new slic
 EventDvmStopRitualReadPage14Base.button1,step2
 EventDvmStopRitualReadPage14TestEnd.text,
 EventDvmStopRitualReadPage14TestEnd.button1,
-EventDvmStopRitualReadPage14End.text,end
+EventDvmStopRitualReadPage14End.text,
 EventDvmStopRitualReadPage14End.button1,
 EventDvmStopRitualReadPage14.button1,step2
 EventDvmStopRitualReadPage14.text,
@@ -1724,7 +1724,7 @@ EventDvmStopRitualReadPage15BaseFail.text,
 EventDvmStopRitualReadPage15BaseFail.button1,Fail
 EventDvmStopRitualReadPage15TestEnd.text,
 EventDvmStopRitualReadPage15TestEnd.button1,
-EventDvmStopRitualReadPage15End.text,end
+EventDvmStopRitualReadPage15End.text,
 EventDvmStopRitualReadPage15End.button1,
 EventDvmStopRitualReadPage15.button1,step2
 EventDvmStopRitualReadPage15.text,
@@ -1732,7 +1732,7 @@ EventDvmStopRitualReadPage16Base.text,|||\nAs you complete the incantation, the 
 EventDvmStopRitualReadPage16Base.button1,step2
 EventDvmStopRitualReadPage16TestEnd.text,
 EventDvmStopRitualReadPage16TestEnd.button1,
-EventDvmStopRitualReadPage16End.text,end
+EventDvmStopRitualReadPage16End.text,
 EventDvmStopRitualReadPage16End.button1,
 EventDvmStopRitualReadPage16.button1,step2
 EventDvmStopRitualReadPage16.text,
@@ -1740,7 +1740,7 @@ EventDvmStopRitualReadPage17Base.text,|||\nThe boy is still screaming and the po
 EventDvmStopRitualReadPage17Base.button1,step2
 EventDvmStopRitualReadPage17TestEnd.text,
 EventDvmStopRitualReadPage17TestEnd.button1,
-EventDvmStopRitualReadPage17End.text,end
+EventDvmStopRitualReadPage17End.text,
 EventDvmStopRitualReadPage17End.button1,
 EventDvmStopRitualReadPage17.button1,step2
 EventDvmStopRitualReadPage17.text,
@@ -1767,7 +1767,7 @@ EventDVMStopRitualBeforeReadPage1Base.text,|||\nPage 1\n\nYou open the book to t
 EventDVMStopRitualBeforeReadPage1Base.button1,step2
 EventDVMStopRitualBeforeReadPage1TestEnd.text,
 EventDVMStopRitualBeforeReadPage1TestEnd.button1,
-EventDVMStopRitualBeforeReadPage1End.text,end
+EventDVMStopRitualBeforeReadPage1End.text,
 EventDVMStopRitualBeforeReadPage1End.button1,
 EventDVMStopRitualBeforeReadPage1.button1,step2
 EventDVMStopRitualBeforeReadPage1.text,
@@ -1775,7 +1775,7 @@ EventDVMStopRitualBeforeReadPage2Base.text,|||\nPage 2\n\nYou leaf through the b
 EventDVMStopRitualBeforeReadPage2Base.button1,step2
 EventDVMStopRitualBeforeReadPage2TestEnd.text,
 EventDVMStopRitualBeforeReadPage2TestEnd.button1,
-EventDVMStopRitualBeforeReadPage2End.text,end
+EventDVMStopRitualBeforeReadPage2End.text,
 EventDVMStopRitualBeforeReadPage2End.button1,
 EventDVMStopRitualBeforeReadPage2.button1,step2
 EventDVMStopRitualBeforeReadPage2.text,
@@ -1783,7 +1783,7 @@ EventDVMStopRitualBeforeReadPage3Base.text,|||\nPage 3\n\nYou flip the page. Her
 EventDVMStopRitualBeforeReadPage3Base.button1,step2
 EventDVMStopRitualBeforeReadPage3TestEnd.text,
 EventDVMStopRitualBeforeReadPage3TestEnd.button1,
-EventDVMStopRitualBeforeReadPage3End.text,end
+EventDVMStopRitualBeforeReadPage3End.text,
 EventDVMStopRitualBeforeReadPage3End.button1,
 EventDVMStopRitualBeforeReadPage3.button1,step2
 EventDVMStopRitualBeforeReadPage3.text,
@@ -1791,7 +1791,7 @@ EventDVMStopRitualBeforeReadPage4Base.text,|||\nPage 4\n\nThe next page delves i
 EventDVMStopRitualBeforeReadPage4Base.button1,step2
 EventDVMStopRitualBeforeReadPage4TestEnd.text,
 EventDVMStopRitualBeforeReadPage4TestEnd.button1,
-EventDVMStopRitualBeforeReadPage4End.text,end
+EventDVMStopRitualBeforeReadPage4End.text,
 EventDVMStopRitualBeforeReadPage4End.button1,
 EventDVMStopRitualBeforeReadPage4.button1,step2
 EventDVMStopRitualBeforeReadPage4.text,
@@ -1799,7 +1799,7 @@ EventDVMStopRitualBeforeReadPage5Base.text,|||\nPage 5\n\nThe next page is where
 EventDVMStopRitualBeforeReadPage5Base.button1,step2
 EventDVMStopRitualBeforeReadPage5TestEnd.text,
 EventDVMStopRitualBeforeReadPage5TestEnd.button1,
-EventDVMStopRitualBeforeReadPage5End.text,end
+EventDVMStopRitualBeforeReadPage5End.text,
 EventDVMStopRitualBeforeReadPage5End.button1,
 EventDVMStopRitualBeforeReadPage5.button1,step2
 EventDVMStopRitualBeforeReadPage5.text,
@@ -1807,7 +1807,7 @@ EventDVMStopRitualBeforeReadPage6Base.text,|||\nPage 6\n\nOnce the portal is wea
 EventDVMStopRitualBeforeReadPage6Base.button1,step2
 EventDVMStopRitualBeforeReadPage6TestEnd.text,
 EventDVMStopRitualBeforeReadPage6TestEnd.button1,
-EventDVMStopRitualBeforeReadPage6End.text,end
+EventDVMStopRitualBeforeReadPage6End.text,
 EventDVMStopRitualBeforeReadPage6End.button1,
 EventDVMStopRitualBeforeReadPage6.button1,step2
 EventDVMStopRitualBeforeReadPage6.text,
@@ -1815,7 +1815,7 @@ EventDVMStopRitualBeforeReadPage7Base.text,|||\nPage 7\n\nThe final incantation 
 EventDVMStopRitualBeforeReadPage7Base.button1,step2
 EventDVMStopRitualBeforeReadPage7TestEnd.text,
 EventDVMStopRitualBeforeReadPage7TestEnd.button1,
-EventDVMStopRitualBeforeReadPage7End.text,end
+EventDVMStopRitualBeforeReadPage7End.text,
 EventDVMStopRitualBeforeReadPage7End.button1,
 EventDVMStopRitualBeforeReadPage7.button1,step2
 EventDVMStopRitualBeforeReadPage7.text,
@@ -1823,7 +1823,7 @@ EventDVMStopRitualBeforeReadPage8Base.text,|||\nNow you know how to perform the 
 EventDVMStopRitualBeforeReadPage8Base.button1,step2
 EventDVMStopRitualBeforeReadPage8TestEnd.text,
 EventDVMStopRitualBeforeReadPage8TestEnd.button1,
-EventDVMStopRitualBeforeReadPage8End.text,end
+EventDVMStopRitualBeforeReadPage8End.text,
 EventDVMStopRitualBeforeReadPage8End.button1,
 EventDVMStopRitualBeforeReadPage8.button1,step2
 EventDVMStopRitualBeforeReadPage8.text,
@@ -1888,7 +1888,7 @@ EventRescueBoyReadPage1Base.text,|||\nSarah whispers to your nephew, “Let’s 
 EventRescueBoyReadPage1Base.button1,step2
 EventRescueBoyReadPage1TestEnd.text,
 EventRescueBoyReadPage1TestEnd.button1,
-EventRescueBoyReadPage1End.text,end
+EventRescueBoyReadPage1End.text,
 EventRescueBoyReadPage1End.button1,
 EventRescueBoyReadPage1.button1,step2
 EventRescueBoyReadPage1.text,
@@ -1896,7 +1896,7 @@ EventRescueBoyReadPage2Base.text,|||\nSarah hisses into your ear, “Hurry. {c:C
 EventRescueBoyReadPage2Base.button1,step2
 EventRescueBoyReadPage2TestEnd.text,
 EventRescueBoyReadPage2TestEnd.button1,
-EventRescueBoyReadPage2End.text,end
+EventRescueBoyReadPage2End.text,
 EventRescueBoyReadPage2End.button1,
 EventRescueBoyReadPage2.button1,step2
 EventRescueBoyReadPage2.text,
@@ -1904,7 +1904,7 @@ EventRescueBoyReadPage3Base.text,|||\nYou hear men approaching the chapel door. 
 EventRescueBoyReadPage3Base.button1,step2
 EventRescueBoyReadPage3TestEnd.text,
 EventRescueBoyReadPage3TestEnd.button1,
-EventRescueBoyReadPage3End.text,end
+EventRescueBoyReadPage3End.text,
 EventRescueBoyReadPage3End.button1,
 EventRescueBoyReadPage3.button1,step2
 EventRescueBoyReadPage3.text,
@@ -1921,7 +1921,7 @@ EventSarahPatterReadPage1Base.text,|||\nSarah whispers to {c:EventChosenInvestig
 EventSarahPatterReadPage1Base.button1,step2
 EventSarahPatterReadPage1TestEnd.text,
 EventSarahPatterReadPage1TestEnd.button1,
-EventSarahPatterReadPage1End.text,end
+EventSarahPatterReadPage1End.text,
 EventSarahPatterReadPage1End.button1,
 EventSarahPatterReadPage1.button1,step2
 EventSarahPatterReadPage1.text,
@@ -1933,7 +1933,7 @@ EventSarahPatterReadPage2Base.text,|||\nSarah whispers to {c:EventChosenInvestig
 EventSarahPatterReadPage2Base.button1,step2
 EventSarahPatterReadPage2TestEnd.text,
 EventSarahPatterReadPage2TestEnd.button1,
-EventSarahPatterReadPage2End.text,end
+EventSarahPatterReadPage2End.text,
 EventSarahPatterReadPage2End.button1,
 EventSarahPatterReadPage2.button1,step2
 EventSarahPatterReadPage2.text,
@@ -1945,7 +1945,7 @@ EventSarahPatterReadPage3Base.text,|||\nSarah whispers to {c:EventChosenInvestig
 EventSarahPatterReadPage3Base.button1,step2
 EventSarahPatterReadPage3TestEnd.text,
 EventSarahPatterReadPage3TestEnd.button1,
-EventSarahPatterReadPage3End.text,end
+EventSarahPatterReadPage3End.text,
 EventSarahPatterReadPage3End.button1,
 EventSarahPatterReadPage3.button1,step2
 EventSarahPatterReadPage3.text,
@@ -1953,7 +1953,7 @@ EventSarahPatterReadPage4Base.text,|||\nSarah reaches out as if to touch the {c:
 EventSarahPatterReadPage4Base.button1,step2
 EventSarahPatterReadPage4TestEnd.text,
 EventSarahPatterReadPage4TestEnd.button1,
-EventSarahPatterReadPage4End.text,end
+EventSarahPatterReadPage4End.text,
 EventSarahPatterReadPage4End.button1,
 EventSarahPatterReadPage4.button1,step2
 EventSarahPatterReadPage4.text,
@@ -1961,15 +1961,15 @@ EventSarahPatterReadPage5Base.text,|||\nSarah looks down and sees you holding th
 EventSarahPatterReadPage5Base.button1,step2
 EventSarahPatterReadPage5TestEnd.text,
 EventSarahPatterReadPage5TestEnd.button1,
-EventSarahPatterReadPage5End.text,end
+EventSarahPatterReadPage5End.text,
 EventSarahPatterReadPage5End.button1,
 EventSarahPatterReadPage5.button1,step2
 EventSarahPatterReadPage5.text,
-EventSarahPatterReadPage6Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “That man who let you in, he was writing things all week in a book he carried with him. If you can find it, it may help you understand what is happening.”\n|||
+EventSarahPatterReadPage6Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “That man who let you in, he was writing things all week in a book he carried with him. If you can find it, it may help you understand what is happening.” (The journal cannot be reached because by the time we find Sarah, we cannot go outside.)\n|||
 EventSarahPatterReadPage6Base.button1,step2
 EventSarahPatterReadPage6TestEnd.text,
 EventSarahPatterReadPage6TestEnd.button1,
-EventSarahPatterReadPage6End.text,end
+EventSarahPatterReadPage6End.text,
 EventSarahPatterReadPage6End.button1,
 EventSarahPatterReadPage6.button1,step2
 EventSarahPatterReadPage6.text,
@@ -1981,15 +1981,15 @@ EventSarahPatterReadPage7Base.text,|||\nSarah whispers to {c:EventChosenInvestig
 EventSarahPatterReadPage7Base.button1,step2
 EventSarahPatterReadPage7TestEnd.text,
 EventSarahPatterReadPage7TestEnd.button1,
-EventSarahPatterReadPage7End.text,end
+EventSarahPatterReadPage7End.text,
 EventSarahPatterReadPage7End.button1,
 EventSarahPatterReadPage7.button1,step2
 EventSarahPatterReadPage7.text,
-EventSarahPatterReadPage8Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The people in this town worship a darker god than most. They want to bring their god to Earth. 10 years ago, my father cast a ritual to summon It. He opened a portal. The power it possessed was breathtaking and I was powerless to stop it. Somehow, Father summoned local townsfolk through the portal to protect his work, even after he was dead. As the portal, I could feel people and monsters approaching and passing through me from the other side.”\n|||
+EventSarahPatterReadPage8Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The people in this town worship a darker god than most. They want to bring their god to Earth. 10 years ago, my father cast a ritual to summon It. He opened a portal. The power it possessed was breathtaking and I could do nothing to stop it. Somehow, Father summoned local townsfolk through the portal to protect his casting, even after he was dead. As the portal, I could feel people and monsters approaching and passing through me from the other side.”\n|||
 EventSarahPatterReadPage8Base.button1,step2
 EventSarahPatterReadPage8TestEnd.text,
 EventSarahPatterReadPage8TestEnd.button1,
-EventSarahPatterReadPage8End.text,end
+EventSarahPatterReadPage8End.text,
 EventSarahPatterReadPage8End.button1,
 EventSarahPatterReadPage8.button1,step2
 EventSarahPatterReadPage8.text,
@@ -1997,7 +1997,7 @@ EventSarahPatterReadPage9Base.text,|||\nSarah whispers to {c:EventChosenInvestig
 EventSarahPatterReadPage9Base.button1,step2
 EventSarahPatterReadPage9TestEnd.text,
 EventSarahPatterReadPage9TestEnd.button1,
-EventSarahPatterReadPage9End.text,end
+EventSarahPatterReadPage9End.text,
 EventSarahPatterReadPage9End.button1,
 EventSarahPatterReadPage9.button1,step2
 EventSarahPatterReadPage9.text,
@@ -2005,7 +2005,7 @@ EventSarahPatterReadPage10Base.text,|||\nSarah whispers to {c:EventChosenInvesti
 EventSarahPatterReadPage10Base.button1,step2
 EventSarahPatterReadPage10TestEnd.text,
 EventSarahPatterReadPage10TestEnd.button1,
-EventSarahPatterReadPage10End.text,end
+EventSarahPatterReadPage10End.text,
 EventSarahPatterReadPage10End.button1,
 EventSarahPatterReadPage10.button1,step2
 EventSarahPatterReadPage10.text,
@@ -2013,7 +2013,7 @@ EventSarahPatterReadPage11Base.text,|||\nSarah whispers to {c:EventChosenInvesti
 EventSarahPatterReadPage11Base.button1,step2
 EventSarahPatterReadPage11TestEnd.text,
 EventSarahPatterReadPage11TestEnd.button1,
-EventSarahPatterReadPage11End.text,end
+EventSarahPatterReadPage11End.text,
 EventSarahPatterReadPage11End.button1,
 EventSarahPatterReadPage11.button1,step2
 EventSarahPatterReadPage11.text,
@@ -2021,7 +2021,7 @@ EventSarahPatterReadPage12Base.text,|||\nSarah whispers to {c:EventChosenInvesti
 EventSarahPatterReadPage12Base.button1,step2
 EventSarahPatterReadPage12TestEnd.text,
 EventSarahPatterReadPage12TestEnd.button1,
-EventSarahPatterReadPage12End.text,end
+EventSarahPatterReadPage12End.text,
 EventSarahPatterReadPage12End.button1,
 EventSarahPatterReadPage12.button1,step2
 EventSarahPatterReadPage12.text,
@@ -2029,7 +2029,7 @@ EventSarahPatterReadPage13Base.text,|||\nSarah whispers to {c:EventChosenInvesti
 EventSarahPatterReadPage13Base.button1,step2
 EventSarahPatterReadPage13TestEnd.text,
 EventSarahPatterReadPage13TestEnd.button1,
-EventSarahPatterReadPage13End.text,end
+EventSarahPatterReadPage13End.text,
 EventSarahPatterReadPage13End.button1,
 EventSarahPatterReadPage13.button1,step2
 EventSarahPatterReadPage13.text,
@@ -2052,7 +2052,7 @@ EventStopCultistsRitualReadPage1Base.text,|||\nYou freeze as something... <i>hap
 EventStopCultistsRitualReadPage1Base.button1,step2
 EventStopCultistsRitualReadPage1TestEnd.text,
 EventStopCultistsRitualReadPage1TestEnd.button1,
-EventStopCultistsRitualReadPage1End.text,end
+EventStopCultistsRitualReadPage1End.text,
 EventStopCultistsRitualReadPage1End.button1,
 EventStopCultistsRitualReadPage1.button1,step2
 EventStopCultistsRitualReadPage1.text,
@@ -2060,7 +2060,7 @@ EventStopCultistsRitualReadPage2Base.text,|||\nYou feel the power of the spell {
 EventStopCultistsRitualReadPage2Base.button1,step2
 EventStopCultistsRitualReadPage2TestEnd.text,
 EventStopCultistsRitualReadPage2TestEnd.button1,
-EventStopCultistsRitualReadPage2End.text,end
+EventStopCultistsRitualReadPage2End.text,
 EventStopCultistsRitualReadPage2End.button1,
 EventStopCultistsRitualReadPage2.button1,step2
 EventStopCultistsRitualReadPage2.text,
@@ -2068,7 +2068,7 @@ EventStopCultistsRitualReadPage3Base.text,|||\nThe woman’s screaming has stopp
 EventStopCultistsRitualReadPage3Base.button1,step2
 EventStopCultistsRitualReadPage3TestEnd.text,
 EventStopCultistsRitualReadPage3TestEnd.button1,
-EventStopCultistsRitualReadPage3End.text,end
+EventStopCultistsRitualReadPage3End.text,
 EventStopCultistsRitualReadPage3End.button1,
 EventStopCultistsRitualReadPage3.button1,step2
 EventStopCultistsRitualReadPage3.text,
@@ -2080,7 +2080,7 @@ EventStopCultistsRitualReadPage4Base.text,|||\nSarah whispers, “We must hurry.
 EventStopCultistsRitualReadPage4Base.button1,step2
 EventStopCultistsRitualReadPage4TestEnd.text,
 EventStopCultistsRitualReadPage4TestEnd.button1,
-EventStopCultistsRitualReadPage4End.text,end
+EventStopCultistsRitualReadPage4End.text,
 EventStopCultistsRitualReadPage4End.button1,
 EventStopCultistsRitualReadPage4.button1,step2
 EventStopCultistsRitualReadPage4.text,
@@ -2088,7 +2088,7 @@ EventStopCultistsRitualReadPage5Base.text,
 EventStopCultistsRitualReadPage5Base.button1,step2
 EventStopCultistsRitualReadPage5TestEnd.text,
 EventStopCultistsRitualReadPage5TestEnd.button1,
-EventStopCultistsRitualReadPage5End.text,end
+EventStopCultistsRitualReadPage5End.text,
 EventStopCultistsRitualReadPage5End.button1,
 EventStopCultistsRitualReadPage5.button1,step2
 EventStopCultistsRitualReadPage5.text,
@@ -2103,7 +2103,7 @@ EventJournalReadPage1Base.text,|||\n25 October 1925\n\nI’ve decided to record 
 EventJournalReadPage1Base.button1,step2
 EventJournalReadPage1TestEnd.text,
 EventJournalReadPage1TestEnd.button1,
-EventJournalReadPage1End.text,end
+EventJournalReadPage1End.text,
 EventJournalReadPage1End.button1,
 EventJournalReadPage1.button1,step2
 EventJournalReadPage1.text,
@@ -2111,7 +2111,7 @@ EventJournalReadPage2Base.text,|||\n26 October 1925\n\nThe Master told us that w
 EventJournalReadPage2Base.button1,step2
 EventJournalReadPage2TestEnd.text,
 EventJournalReadPage2TestEnd.button1,
-EventJournalReadPage2End.text,end
+EventJournalReadPage2End.text,
 EventJournalReadPage2End.button1,
 EventJournalReadPage2.button1,step2
 EventJournalReadPage2.text,
@@ -2119,7 +2119,7 @@ EventJournalReadPage3Base.text,|||\n27 October 1925\n\nPreparations continue. Th
 EventJournalReadPage3Base.button1,step2
 EventJournalReadPage3TestEnd.text,
 EventJournalReadPage3TestEnd.button1,
-EventJournalReadPage3End.text,end
+EventJournalReadPage3End.text,
 EventJournalReadPage3End.button1,
 EventJournalReadPage3.button1,step2
 EventJournalReadPage3.text,
@@ -2127,7 +2127,7 @@ EventJournalReadPage4Base.text,|||\n28 October 1925\n\nThe Master has prepared h
 EventJournalReadPage4Base.button1,step2
 EventJournalReadPage4TestEnd.text,
 EventJournalReadPage4TestEnd.button1,
-EventJournalReadPage4End.text,end
+EventJournalReadPage4End.text,
 EventJournalReadPage4End.button1,
 EventJournalReadPage4.button1,step2
 EventJournalReadPage4.text,
@@ -2135,7 +2135,7 @@ EventJournalReadPage5Base.text,|||\n29 October 1925\n\nKids broke into the house
 EventJournalReadPage5Base.button1,step2
 EventJournalReadPage5TestEnd.text,
 EventJournalReadPage5TestEnd.button1,
-EventJournalReadPage5End.text,end
+EventJournalReadPage5End.text,
 EventJournalReadPage5End.button1,
 EventJournalReadPage5.button1,step2
 EventJournalReadPage5.text,
@@ -2143,7 +2143,7 @@ EventJournalReadPage6Base.text,|||\n30 October 1925\n\nThe cleaning crew will be
 EventJournalReadPage6Base.button1,step2
 EventJournalReadPage6TestEnd.text,
 EventJournalReadPage6TestEnd.button1,
-EventJournalReadPage6End.text,end
+EventJournalReadPage6End.text,
 EventJournalReadPage6End.button1,
 EventJournalReadPage6.button1,step2
 EventJournalReadPage6.text,
@@ -2151,7 +2151,7 @@ EventJournalReadPage7Base.text,|||\n31 October 1925\n\nAll the preparations are 
 EventJournalReadPage7Base.button1,step2
 EventJournalReadPage7TestEnd.text,
 EventJournalReadPage7TestEnd.button1,
-EventJournalReadPage7End.text,end
+EventJournalReadPage7End.text,
 EventJournalReadPage7End.button1,
 EventJournalReadPage7.button1,step2
 EventJournalReadPage7.text,
@@ -2159,7 +2159,7 @@ EventJournalReadPage8Base.text,|||\nThis evil must be stopped. Now you know when
 EventJournalReadPage8Base.button1,step2
 EventJournalReadPage8TestEnd.text,
 EventJournalReadPage8TestEnd.button1,
-EventJournalReadPage8End.text,end
+EventJournalReadPage8End.text,
 EventJournalReadPage8End.button1,
 EventJournalReadPage8.button1,step2
 EventJournalReadPage8.text,
