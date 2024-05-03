@@ -39,9 +39,6 @@ BEGIN       {
 				REMOVE = 17
 				GOTO = 18
 				
-				textContinue = "Continue"
-				textCancel = "Cancel"
-				
 				previousFile = ""
 				abort = false
             }
@@ -70,9 +67,6 @@ previousFile != FILENAME {
                 debug = false
 				globalEventCounter = 0
                 isBook = false
-				
-				textContinue = "Continue"
-				textCancel = "Cancel"
 				
 				previousFile = FILENAME;
 			}
@@ -136,6 +130,10 @@ $1 == "book" {
                 endTocText = ""
                 delete startLines
                 delete endLines
+												
+				textContinue = "Continue"
+				textCancel = "Cancel"
+				
                 next
             }
 
@@ -997,7 +995,6 @@ function WriteButtonsAtEndOfEvent(pages, pageIndex, baseEventName, eventsForThis
 		abort = true
 
 	} else {
-printf "%s, textContinue=%s\n", baseEventName, textContinue >> stderr
 		printf "buttons=1\n" >> eventsFile
 
 		printf "%s.button1,%s\n", baseEventName, textContinue >> localizationFile
