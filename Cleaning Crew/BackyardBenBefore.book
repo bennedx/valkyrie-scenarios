@@ -20,12 +20,12 @@ page|“How long will it take us to look through the house?”|“How long, you 
     operations|talkedToBenHowLong,=,1 talkedToBenCount,+,1 @TalkedToBackyardBen,=,1
     toc|As he digs through his pockets, he is grumbling something about the size of the house and maybe the word "lazy"?
     
-page|“What do you think happened to the children?”|“The children? I’m sure you read the papers. One of them was burned from head-to-toe. The other two were strangled. The burns were never explained. Nasty business. \n\n“Peter Smythe--the girl’s father and the owner of this house--went missing that night. Most folks think he did something to the children and then ran away. Still hiding, they think.\n\n“What wasn’t reported is that his brother, Henry, also disappeared that night. Folks in town figured they’d run off together to avoid difficult questions.”\n\nGain 1 {clue}.
+page|“What do you think happened to those children?”|“The children? I’m sure you read the papers. One of them was burned from head-to-toe. The other two were strangled. The burns were never explained. Nasty business. \n\n“Peter Smythe--the girl’s father and the owner of this house--went missing that night. Most folks think he did something to the children and then ran away. Still hiding, they think.\n\n“What wasn’t reported is that his brother, Henry, also disappeared that night. Folks in town figured they’d run off together to avoid difficult questions.”\n\nGain 1 {clue}.
     test|exploredBackyardNicely,==,0|“The children? Two were strangled. The burns on the third were never explained. Nasty business.\n\n“Peter and his brother Henry both went missing that night. Most folks don’t know about Henry. Left a lot of folks around town wondering what really happened. But we’re not here to gossip.”
     operations|talkedToBenChildren,=,1 talkedToBenCount,+,1 @TalkedToBackyardBen,=,1
     toc|Benjamin is still digging through his pockets. You hear him muttering about paying attention and minding your own business.
 
-page|“Where were the children found?”|“The children were found just over there,” he says, pointing back the way you came. “They were in a pile; the girl’s body was still smoking from the burns. Strangest thing:  she kept smoking until the next day. Coroner wasn’t able to explain it. No one was.\n\n“Our family has lived here for generations--many of them in this house. We’re upset to let it go, but no one lives here... or wants to after what happened.”\n\nGain 1 {clue}.\n\nBenjamin resumes searching his pockets, but seems a little shaken.
+page|“Where were those children found?”|“The children were found just over there,” he says, pointing back the way you came. “They were in a pile; the girl’s body was still smoking from the burns. Strangest thing:  she kept smoking until the next day. Coroner wasn’t able to explain it. No one was.\n\n“Our family has lived here for generations--many of them in this house. We’re upset to let it go, but no one lives here... or wants to after what happened.”\n\nGain 1 {clue}.\n\nBenjamin resumes searching his pockets, but seems a little shaken.
     test|exploredBackyardNicely,==,0|“The children were found just over there,” he grumbles, pointing back the way you came. “Not sure why it matters, but I’ll tell you:  the girl who was burnt, she kept smoldering until the next day. Coroner couldn’t explain it.” Benjamin resumes digging through his pockets, but seems a little shaken.
     operations|talkedToBenWhere,=,1 talkedToBenCount,+,1 @TalkedToBackyardBen,=,1
 	toc|Benjamin is still looking through his pockets, but he’s moving slower and looks upset.
@@ -35,7 +35,7 @@ page|“Why did you wait so long to sell the house?”|“Well, we tried right a
     operations|talkedToBenSell,=,1 talkedToBenCount,+,1 @TalkedToBackyardBen,=,1
     toc|Benjamin is looking around on the ground like maybe he dropped whatever he's looking for. <i>Could it be a book instead of a key?</i> you wonder to yourself.
 	
-page|“I’m sorry about the gate”|“You should be more careful. The house is old and in poor repair.” His shoulders rise for a moment, then fall as he sighs. “No real harm done, I guess--the gate can be repaired... again.”
+page|“I’m sorry about the gate.”|“You should be more careful. The house is old and in poor repair.” His shoulders rise for a moment, then fall as he sighs. “No real harm done... the gate can be repaired... again.”
     notvisible|exploredBackyardNicely
     operations|exploredBackyardNicely,=,1
 	toc|Benjamin still doesn’t look happy, but he doesn't seem as angry now.

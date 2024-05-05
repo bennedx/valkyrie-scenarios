@@ -29,7 +29,7 @@ page|ritual components|Sarah reaches out as if to touch the {c:QItemRitualCompon
 page|journal|Sarah looks down and sees you holding the {c:QItemJournal}. “The {c:QItemJournal}! The man who let you in was writing in it all week. You should read it carefully.”
 	visible|foundJournal
 
-page|no-journal|Sarah whispers to {c:EventChosenInvestigator}, “That man who let you in, he was writing things all week in a book he carried with him. If you can find it, it may help you understand what is happening.” (The journal cannot be reached because by the time we find Sarah, we cannot go outside.)
+page|no-journal|Sarah whispers to {c:EventChosenInvestigator}, “That man who let you in, he has a book with him. He was writing in it all week. If you can find it, it may help you understand what is happening.” (The journal cannot be reached because by the time we find Sarah, we cannot go outside.)
 	notvisible|foundJournal
 
 page|1|Sarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that {c:CustomMonsterDavidSmythe} will open a portal tonight and you must stop him; if you cannot stop him, you will need to close that portal.”
