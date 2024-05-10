@@ -1093,7 +1093,7 @@ UI0.uitext,fsdfsdfs
 UI0.text,sdfsdfsdf
 UI0.button1,Continue
 EventBackDoorLockedReadPage1Base.text,|||\nYou try to turn the knob. Test {strength} or {agility}.\n|||
-EventBackDoorLockedReadPage1Base.button1,Pass
+EventBackDoorLockedReadPage1Base.button1,Continue
 EventBackDoorLockedReadPage1Base.button2,Fail
 EventBackDoorLockedReadPage1BasePass.text,
 EventBackDoorLockedReadPage1BasePass.button1,Pass
@@ -1105,81 +1105,17 @@ EventBackDoorLockedReadPage1End.text,
 EventBackDoorLockedReadPage1End.button1,
 EventBackDoorLockedReadPage1.button1,Continue
 EventBackDoorLockedReadPage1.text,
-EventBackDoorLockedReadPage2Base.text,|||\nYou grab the knob again and begin shaking it violently. Test {strength} or {will}.\n|||
-EventBackDoorLockedReadPage2Base.button1,Pass
-EventBackDoorLockedReadPage2Base.button2,Fail
-EventBackDoorLockedReadPage2BasePass.text,
-EventBackDoorLockedReadPage2BasePass.button1,Pass
-EventBackDoorLockedReadPage2BaseFail.text,
-EventBackDoorLockedReadPage2BaseFail.button1,Fail
+EventBackDoorLockedReadPage2Base.text,|||\nWell, you try to put the key into the lock but it doesn't fit, no matter how hard you try. You look at the key and try again. And again. And again. Dejected and out of ideas, you turn away from the door. "I guess we'll have to find another way out," you say to no one in particular.\n|||
+EventBackDoorLockedReadPage2Base.button1,Continue
 EventBackDoorLockedReadPage2TestEnd.text,
 EventBackDoorLockedReadPage2TestEnd.button1,
 EventBackDoorLockedReadPage2End.text,
 EventBackDoorLockedReadPage2End.button1,
 EventBackDoorLockedReadPage2.button1,Continue
 EventBackDoorLockedReadPage2.text,
-EventBackDoorLockedReadPage3Base.text,|||\nYou muster up your strength and prepare to bash the door down with your shoulder, drawing on your inner strength. Test {strenth} or {lore}.\n|||
-EventBackDoorLockedReadPage3Base.button1,Pass
-EventBackDoorLockedReadPage3Base.button2,Fail
-EventBackDoorLockedReadPage3BasePass.text,
-EventBackDoorLockedReadPage3BasePass.button1,Pass
-EventBackDoorLockedReadPage3BaseFail.text,
-EventBackDoorLockedReadPage3BaseFail.button1,Fail
-EventBackDoorLockedReadPage3TestEnd.text,
-EventBackDoorLockedReadPage3TestEnd.button1,
-EventBackDoorLockedReadPage3End.text,
-EventBackDoorLockedReadPage3End.button1,
-EventBackDoorLockedReadPage3.button1,Continue
-EventBackDoorLockedReadPage3.text,
-EventBackDoorLockedReadPage4Base.text,|||\nYou get a sharp pain in your shoulder; take 1 facedown damage ({strength} negates).\n\nYou stick the hairpin into the lock, you wonder why it was in your pocket. Test {strength} or {influence}.\n|||
-EventBackDoorLockedReadPage4Base.button1,Pass
-EventBackDoorLockedReadPage4Base.button2,Fail
-EventBackDoorLockedReadPage4BasePass.text,
-EventBackDoorLockedReadPage4BasePass.button1,Pass
-EventBackDoorLockedReadPage4BaseFail.text,
-EventBackDoorLockedReadPage4BaseFail.button1,Fail
-EventBackDoorLockedReadPage4TestEnd.text,
-EventBackDoorLockedReadPage4TestEnd.button1,
-EventBackDoorLockedReadPage4End.text,
-EventBackDoorLockedReadPage4End.button1,
-EventBackDoorLockedReadPage4.button1,Continue
-EventBackDoorLockedReadPage4.text,
-EventBackDoorLockedReadPage5Base.text,|||\nYou pull out the key and look at for a moment before putting it into the lock. Well, trying:  the won't quite fit... Test {strength} or {observation}.\n|||
-EventBackDoorLockedReadPage5Base.button1,Pass
-EventBackDoorLockedReadPage5Base.button2,Fail
-EventBackDoorLockedReadPage5BasePass.text,
-EventBackDoorLockedReadPage5BasePass.button1,Pass
-EventBackDoorLockedReadPage5BaseFail.text,
-EventBackDoorLockedReadPage5BaseFail.button1,Fail
-EventBackDoorLockedReadPage5TestEnd.text,
-EventBackDoorLockedReadPage5TestEnd.button1,
-EventBackDoorLockedReadPage5End.text,
-EventBackDoorLockedReadPage5End.button1,
-EventBackDoorLockedReadPage5.button1,Continue
-EventBackDoorLockedReadPage5.text,
-EventBackDoorLockedReadPage6Base.text,|||\nWell, you try to put the key into the lock but it doesn't fit, no matter how hard you try. You look at the key and try again. And again. And again. Dejected and out of ideas, you turn away from the door. "I guess we'll have to find another way out," you say to no one in particular.\n|||
-EventBackDoorLockedReadPage6Base.button1,Continue
-EventBackDoorLockedReadPage6TestEnd.text,
-EventBackDoorLockedReadPage6TestEnd.button1,
-EventBackDoorLockedReadPage6End.text,
-EventBackDoorLockedReadPage6End.button1,
-EventBackDoorLockedReadPage6.button1,Continue
-EventBackDoorLockedReadPage6.text,
 EventBackDoorLockedReadPage1Proxy.text,The door looks larger and more solid from in here. <i>Maybe it's unlocked?</i> you wonder to yourself.
 EventBackDoorLockedReadPage1Proxy.button1,{action} Continue
 EventBackDoorLockedReadPage1Proxy.button2,Cancel
-EventBackDoorLockedReadPage2Proxy.text,Well, now you know it's locked:  no matter how hard you try, the knob just won't turn. Looking closer, there is a little light getting through between the door and its jam. <i>Maybe I can shake open?<i>
-EventBackDoorLockedReadPage2Proxy.button1,{action} Continue
-EventBackDoorLockedReadPage2Proxy.button2,Cancel
-EventBackDoorLockedReadPage3Proxy.text,No matter how hard you shake, the door doesn't budge. And you might have pulled something in your right arm. Maybe you can knock it down? You also begin to wonder if you shouldn't move on.
-EventBackDoorLockedReadPage3Proxy.button1,{action} Continue
-EventBackDoorLockedReadPage3Proxy.button2,Cancel
-EventBackDoorLockedReadPage4Proxy.text,The third or fourth time you hit door, something in your shoulder pops and it hurts. Bad. You feel the panic setting in. <i>Why won't this door open?</i> "Hey, is this a hairpin?" you ask out loud.
-EventBackDoorLockedReadPage4Proxy.button1,{action} Continue
-EventBackDoorLockedReadPage4Proxy.button2,Cancel
-EventBackDoorLockedReadPage5Proxy.text,The lock doesn't move and, eventually, the hairpin bends too much to be of use. <i>Maybe this really is a waste of time,</i> you consider. <i>Wait, I have that key." If you have the {c:QItemBrassKey}, ...
-EventBackDoorLockedReadPage5Proxy.button1,{action} Continue
-EventBackDoorLockedReadPage5Proxy.button2,Cancel
 EventBackDoorLockedStart.text,
 EventBackDoorLockedStart.button1,
 EventBackDoorLockedEnd.text,
@@ -1298,7 +1234,7 @@ EventBackyardBenBeforeToc0.button3,{action} “Where were those children found?�
 EventBackyardBenBeforeToc0.button4,{action} “Why did you wait so long to sell the house?”
 EventBackyardBenBeforeToc0.button5,{action} “I’m sorry about the gate.”
 EventBackyardBenBeforeToc0.button6,Cancel
-EventBackyardBenBeforeToc1.text,As he digs through his pockets, he is grumbling something about the size of the house and maybe the word "lazy"?
+EventBackyardBenBeforeToc1.text,As he digs through his pockets, he is grumbling something about the size of the house and maybe the word "indolent"?
 EventBackyardBenBeforeToc1.button1,{action} “How long will it take us to look through the house?”
 EventBackyardBenBeforeToc1.button2,{action} “What do you think happened to those children?”
 EventBackyardBenBeforeToc1.button3,{action} “Where were those children found?”
@@ -1608,7 +1544,7 @@ EventDvmStopRitualReadPage2End.button1,
 EventDvmStopRitualReadPage2.button1,step2
 EventDvmStopRitualReadPage2.text,
 EventDvmStopRitualReadPage3Base.text,|||\nYou bring out the {c:QItemRitualDagger}. There is a blessing to speak while holding it. You weren't able to read it before but, as your father wrote, you are able to read it now. That said, you aren't sure if you understand it; if you do, test {lore]; otherwise, test {will} to blunder through and hope for the best. For each Unique Item you have, you may roll 1 extra die.\n|||
-EventDvmStopRitualReadPage3Base.button1,Pass
+EventDvmStopRitualReadPage3Base.button1,step2
 EventDvmStopRitualReadPage3Base.button2,Fail
 EventDvmStopRitualReadPage3BasePass.text,
 EventDvmStopRitualReadPage3BasePass.button1,Pass
@@ -1637,7 +1573,7 @@ EventDvmStopRitualReadPage5End.button1,
 EventDvmStopRitualReadPage5.button1,step2
 EventDvmStopRitualReadPage5.text,
 EventDvmStopRitualReadPage6Base.text,|||\nYou draw the knife across the palm of your hand. A drop of blood wells up and you suddenly wonder if you've drawn enough. Even what you've drawn is making you queasy ({will}). For each Unique Item you have, you may roll 1 extra die.\n|||
-EventDvmStopRitualReadPage6Base.button1,Pass
+EventDvmStopRitualReadPage6Base.button1,step2
 EventDvmStopRitualReadPage6Base.button2,Fail
 EventDvmStopRitualReadPage6BasePass.text,
 EventDvmStopRitualReadPage6BasePass.button1,Pass
@@ -1666,7 +1602,7 @@ EventDvmStopRitualReadPage8End.button1,
 EventDvmStopRitualReadPage8.button1,step2
 EventDvmStopRitualReadPage8.text,
 EventDvmStopRitualReadPage9Base.text,|||\nYou can read the first incantation but you aren't sure that you understand it; if you do, test {lore}; otherwise, test {will} and hope for the best. You may roll 1 extra die for each Unique Item you have.\n|||
-EventDvmStopRitualReadPage9Base.button1,Pass
+EventDvmStopRitualReadPage9Base.button1,step2
 EventDvmStopRitualReadPage9Base.button2,Fail
 EventDvmStopRitualReadPage9BasePass.text,
 EventDvmStopRitualReadPage9BasePass.button1,Pass
@@ -1695,7 +1631,7 @@ EventDvmStopRitualReadPage11End.button1,
 EventDvmStopRitualReadPage11.button1,step2
 EventDvmStopRitualReadPage11.text,
 EventDvmStopRitualReadPage12Base.text,|||\nNow you need to draw more blood. You look at your hand and see that it has stopped bleeding. Cutting yourself again will take great courage. Test {will}. For each Unique Item you have, you may roll 1 extra die.\n|||
-EventDvmStopRitualReadPage12Base.button1,Pass
+EventDvmStopRitualReadPage12Base.button1,step2
 EventDvmStopRitualReadPage12Base.button2,Fail
 EventDvmStopRitualReadPage12BasePass.text,
 EventDvmStopRitualReadPage12BasePass.button1,Pass
@@ -1724,7 +1660,7 @@ EventDvmStopRitualReadPage14End.button1,
 EventDvmStopRitualReadPage14.button1,step2
 EventDvmStopRitualReadPage14.text,
 EventDvmStopRitualReadPage15Base.text,|||\nAs the portal weakens, the boy regains some strength. He is screaming in pain and terror again.\n\nYou must get this last part right to close and seal the portal. You look at the last incantation and, like the others, while you can read it, you aren't sure you understand it. If you do, test {lore}; otherwise, test {will} to muddle through. You may roll 1 extra die for each Unique Item you have.\n|||
-EventDvmStopRitualReadPage15Base.button1,Pass
+EventDvmStopRitualReadPage15Base.button1,step2
 EventDvmStopRitualReadPage15Base.button2,Fail
 EventDvmStopRitualReadPage15BasePass.text,
 EventDvmStopRitualReadPage15BasePass.button1,Pass

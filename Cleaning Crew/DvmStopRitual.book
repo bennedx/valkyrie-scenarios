@@ -19,7 +19,7 @@ page|step2|You bring out the {c:QItemRitualDagger}. There is a blessing to speak
 
 	# this turns the dialog into a test; if 'passfail' is given, then it's a one-time thing, but if it's a number, it sets a quota
 	# the readPageN variable is not set on a quota until it is passed
-	skillcheck|3
+	quota|3
 	pass|step2pass
 	fail|step2fail
 
@@ -35,7 +35,7 @@ page|step2fail|You keep repeating the incantation but the {c:QItemRitualDagger} 
 
 page|step3|You draw the knife across the palm of your hand. A drop of blood wells up and you suddenly wonder if you've drawn enough. Even what you've drawn is making you queasy ({will}). For each Unique Item you have, you may roll 1 extra die.
 	line|add=QItemRitualDagger
-	skillcheck|4
+	quota|4
 	pass|step3pass
 	fail|step3fail
 
@@ -51,7 +51,7 @@ page|step3fail|A drop of blood spatters when it hits the cup, but nothing seems 
 	
 page|step4|You can read the first incantation but you aren't sure that you understand it; if you do, test {lore}; otherwise, test {will} and hope for the best. You may roll 1 extra die for each Unique Item you have.
 	line|add=QItemDVM
-	skillcheck|5
+	quota|5
 	pass|step4pass
 	fail|step4fail
 
@@ -67,7 +67,7 @@ page|step4fail|You can feel something happen inside but it is not very strong an
 	
 page|step5|Now you need to draw more blood. You look at your hand and see that it has stopped bleeding. Cutting yourself again will take great courage. Test {will}. For each Unique Item you have, you may roll 1 extra die.
 	line|add=QItemRitualDagger
-	skillcheck|6
+	quota|6
 	pass|step5pass
 	fail|step5fail
 
@@ -83,7 +83,7 @@ page|step5fail|A single drop rises from the new slice but doesn't fall. You'll h
 	
 page|step6|As the portal weakens, the boy regains some strength. He is screaming in pain and terror again.\n\nYou must get this last part right to close and seal the portal. You look at the last incantation and, like the others, while you can read it, you aren't sure you understand it. If you do, test {lore}; otherwise, test {will} to muddle through. You may roll 1 extra die for each Unique Item you have.
 	line|add=QItemDVM
-	skillcheck|7
+	quota|7
 	pass|step6pass
 	fail|step6fail
 

@@ -21,7 +21,7 @@ BEGIN       {
                 CONDITIONS = 1
                 TEXT = 2
 
-				SKILLCHECK =3
+				QUOTA =3
 				PASS = 4
 				FAIL = 5
 				TRIGGER = 6
@@ -274,8 +274,8 @@ $1 == "exit" {
                 next
             }
             
-$1 == "skillcheck" {
-				pages[pageCount][SKILLCHECK] = $2
+$1 == "quota" {
+				pages[pageCount][QUOTA] = $2
 				next
 			}
 
@@ -388,8 +388,8 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
 
 			if (debug) printf "vartests=%s\n", ConvertToVarTests(pages[pageIndex][TESTS][testIndex][CONDITIONS]) >> eventsFile
 
-			if (pages[pageIndex][SKILLCHECK]) {
-				if (debug) printf "skillcheck=%i\n", pages[pageIndex][SKILLCHECK] >> eventsFile
+			if (pages[pageIndex][QUOTA]) {
+				if (debug) printf "quota=%i\n", pages[pageIndex][QUOTA] >> eventsFile
 				
 				if (pages[pageIndex][PASS] == "" || pages[pageIndex][FAIL] == "") {
 					printf "Page '%s' needs both 'pass' and 'fail' directives\n", pages[pageIndex][NAME] >> stderr
@@ -415,8 +415,8 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
         printf "%s.text,%s\n", baseEventName, FixQuotes(pages[pageIndex][TEXT]) >> localizationFile
 
 
-		if (pages[pageIndex][SKILLCHECK]) {
-			printf "skillcheck=%i\n", pages[pageIndex][SKILLCHECK] >> eventsFile
+		if (pages[pageIndex][QUOTA]) {
+			if (debug) printf "quota=%i\n", pages[pageIndex][QUOTA] >> eventsFile
 			
 			if (pages[pageIndex][PASS] == "" || pages[pageIndex][FAIL] == "") {
 				printf "Page '%s' needs both 'pass' and 'fail' directives\n", pages[pageIndex][NAME] >> stderr
@@ -945,9 +945,15 @@ function WriteButtonsAtEndOfEvent(pages, pageIndex, baseEventName, eventsForThis
 		failPageEventName = GetPageEventNameFor(pages, pageIndex, pages[pageIndex][FAIL])
 		failTriggerVariable = failPageEventName != "" ? "" : GetTriggerVariable(pages[pageIndex][FAIL], pages, pageIndex, "fail")
 		
-		# set the buttons for skillcheck/pass/fail 
+		# set the buttons for quota/pass/fail 
 		print "buttons=2" >> eventsFile	
-		printf "%s.button1,Pass\n", baseEventName >> localizationFile
+		
+		if (pages[pageIndex][QUOTA]) {
+			printf "%s.button1,%s\n", baseEventName, textContinue >> localizationFile
+		} else {
+			printf "%s.button1,Pass\n", baseEventName >> localizationFile
+		}
+		
 		printf "event1=%sPass\n", baseEventName >> eventsFile
 		printf "%s.button2,Fail\n", baseEventName >> localizationFile
 		printf "event2=%sFail\n", baseEventName >> eventsFile
@@ -1009,7 +1015,7 @@ function GetPageEventNameFor(pages, currentPageIndex, name,
 	eventName = ""
 	for(pageIndex = 1; pageIndex <= length(pages); pageIndex++) {
 		if (tolower(pages[pageIndex][NAME]) == tolower(name)) {
-			eventName = sprintf("evemt%sRead%sPage", bookName, pageIndex)
+			eventName = sprintf("Event%sRead%sPage", bookName, pageIndex)
 			break;
 		}
 	}

@@ -161,7 +161,7 @@ $1 ~ /[.](button|text)/ {
 
 END     {   
             # referenced sections exist
-			print "==================================================================== missing referenced sections"
+			print "====================================== missing referenced sections"
             for(section in sections) {
                 for(event in sections[section][REFS]) {
 					if (event == "*") continue;
@@ -178,12 +178,12 @@ END     {
             }
             
             # sections are used
-			print "==================================================================== unused sections"
+			print "====================================== unused sections"
             for(section in sections) {
                 if (!sections[section][USED]) error("Unused", section, sections[section][FILE], sections[section][LINE], section)
             }
             
-            print "==================================================================== missing localization keys"
+            print "====================================== missing localization keys"
             # localization keys exist
             for(section in sections) {
                 for (key in sections[section][KEYS]) {
@@ -195,7 +195,7 @@ END     {
                 }
             }
             
-            print "==================================================================== unused localization keys"
+            print "====================================== unused localization keys"
             # localizations are used
             for(key in localization) {
                 if (!localization[key][USED]) {
@@ -203,7 +203,7 @@ END     {
                 }
             }
 
-            print "==================================================================== quest needs these unselected packs"
+            print "====================================== quest needs these unselected packs"
 			for(section in sections) {
 				for(ref in sections[section][REFS]) {
 					packId = sections[ref][PACKID]
@@ -223,7 +223,7 @@ END     {
 				if (!gamePacks[packId]) print packId
 			}
 			
-			print "==================================================================== quest doesn't need these selected packs"
+			print "====================================== quest doesn't need these selected packs"
 			for(packId in questPacks) {
 				if (gamePacks[packId] && !questPacks[packId]) print packId
 			}		

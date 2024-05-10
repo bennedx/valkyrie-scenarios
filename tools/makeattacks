@@ -98,13 +98,38 @@ $1 == "commonoperations" {
             next    # skip this line
         }
 
-# lines of the form story|condition|text are story lines
+# lines like 'name|*|text' are selected randomly
+
+$2 == '*' {
+			generalEventsCount++
+
+            eventName = sprintf("Event%sGeneral%s", header, $1)
+			printf "\n[%s]\n", eventName >> eventsFile
+            printf "%s.text,%s\n", eventName, FixQuotes($3) >> localizationFile
+
+            printf "buttons=1\n" >> eventsFile
+            printf "event1=Event%sGeneralEnd\n", header >> eventsFile
+            printf "%s.button1,Continue\n", eventName >> localizationFile
+
+			printf "operations=%s attack%sRead,=,1\n", commonOperations, eventName >> eventsFile
+			condition = ($2 == "*" ? "" : $2)
+			printf "conditions=attack%sRead,==,0\n", eventName >> eventsFile
+			            
+			generalEvents = generalEvents generalEventsSeparator eventName
+            generalEventsSeparator = " "
+			
+			resetGeneralEvents = resetGeneralEvents resetGeneralEventsSeparator sprintf("attack%sRead,=,0", eventName)
+			resetGeneralEventsSeparator = " "
+			next
+		}
+
+# lines of the form 'name|condition|text are story lines
 # these lines will be grouped together with the others in their set      
 # each one maintains a variable so that it is used only once per game
 # all of them coalesce at a single event which is NOT included in the generated code;
 #   it is expected that a loop will try multiple times to match a story before giving up and trying a generic one
 
-$1 == "story" {
+/[^\]+[|][^|]+[|].*/ {
 			storyEventsCount++
 			
 			eventName = sprintf("Event%sStory%i", header, storyEventsCount)
@@ -123,32 +148,6 @@ $1 == "story" {
 
 			next
         }
-
-# other lines like 'name|condition|text' are general ones that are chosen randomly
-        
-/(.+)\|(.+)\|(.+)S/ {
-			generalEventsCount++
-
-            eventName = sprintf("Event%sGeneral%s", header, $1)
-			printf "\n[%s]\n", eventName >> eventsFile
-            printf "%s.text,%s\n", eventName, FixQuotes($3) >> localizationFile
-
-            printf "buttons=1\n" >> eventsFile
-            printf "event1=Event%sGeneralEnd\n", header >> eventsFile
-            printf "%s.button1,Continue\n", eventName >> localizationFile
-
-			printf "operations=%s attack%sRead,=,1\n", commonOperations, eventName >> eventsFile
-			condition = ($2 == "*" ? "" : $2)
-			printf "conditions=attack%sRead,>=,%i %s\n", eventName, generalEventsCount, condition >> eventsFile
-			
-            
-			generalEvents = generalEvents generalEventsSeparator eventName
-            generalEventsSeparator = " "
-			
-			resetGeneralEvents = resetGeneralEvents resetGeneralEventsSeparator sprintf("attack%sRead,=,0", eventName)
-			resetGeneralEventsSeparator = " "
-			next
-		}
         
 		{	printf "Unable to parse: %s\n", $0 >> stderr 
 			abort = true
