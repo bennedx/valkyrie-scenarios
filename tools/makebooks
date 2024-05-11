@@ -728,7 +728,7 @@ function OutputOrderedNoKeepToc(eventsFile, localizationFile, bookName, pages, s
 		} else {
 			# there is no toc text, so just go read the page (this allows for seeing a popup without taking an {action} to get there)
 			printf "display=false\n" >> eventsFile
-			# printf "%s.text,\n", eventName >> localizationFile
+			printf "%s.text,\n", eventName >> localizationFile
 		
 			printf "buttons=1\n" >> eventsFile
 			printf "%s.button1,%s\n", eventName, textContinue >> localizationFile
@@ -1015,7 +1015,7 @@ function GetPageEventNameFor(pages, currentPageIndex, name,
 	eventName = ""
 	for(pageIndex = 1; pageIndex <= length(pages); pageIndex++) {
 		if (tolower(pages[pageIndex][NAME]) == tolower(name)) {
-			eventName = sprintf("Event%sRead%sPage", bookName, pageIndex)
+			eventName = sprintf("Event%sReadPage%i", bookName, pageIndex)
 			break;
 		}
 	}

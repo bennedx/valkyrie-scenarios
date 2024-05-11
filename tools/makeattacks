@@ -100,7 +100,7 @@ $1 == "commonoperations" {
 
 # lines like 'name|*|text' are selected randomly
 
-$2 == '*' {
+$2 == "*" {
 			generalEventsCount++
 
             eventName = sprintf("Event%sGeneral%s", header, $1)
@@ -209,7 +209,7 @@ function FinishAttackFile() {
 	printf "conditions=%s,>,0\n", generalAttackSelectionVariable >> eventsFile
 
 	# finally, if it falls to here, reset all general attack variables and restart the selection
-	eventName = sprintf("Event%sSelectRestart", header)
+	eventName = sprintf("Event%sGeneralSelectRestart", header)
 	printf "\n[%s]\n", eventName >> eventsFile
 	printf "%s.text,\n", eventName >> localizationFile
 
@@ -253,6 +253,6 @@ function FinishAttackFile() {
 
 	close(eventsFile)
 	close(localizationFile)
-return
+
 	combineLocalization("Event" header, localizationFile, realLocalizationFile)
 }
