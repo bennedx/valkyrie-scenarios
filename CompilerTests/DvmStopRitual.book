@@ -1,0 +1,138 @@
+LANGUAGE English
+
+// use this for both goalStopRitual and goalRescueBoy
+BOOK DvmStopRitual ORDERED KEEP
+    IF goal == goalStopRitual AND ritual == 0 THEN EXIT BEFORE
+
+    PAGE Page1
+        PROLOG "The {c:QItemDVM} looks old and worn with time."
+
+        BUTTON "Read the first page" AFTER "Table of Contents"
+
+        TEXT "
+            Table of Contents
+
+            You open the book to the first page. It's a table of contents. You
+            quickly scan down and find the spell to close portals. In the
+            margin, someone--probably your father--scrawled a note that reads,
+            <<My descendants will be able to read this book, but only at the
+            appointed hour. I have seen to this.>>
+
+            You find <<Travel, page 72.>>
+
+            The first time this is read, gain 1 {clue}.
+        "
+    END PAGE
+
+    PAGE Page2
+        PROLOG "
+            You turn to page 72, the travel section. The first entry is for
+            portals.
+        "
+        
+        BUTTON "Read about portals" AFTER "Overview"
+
+        TEXT "
+            You read through an overview of the ritual and how to perform it.
+            Some of the materials needed are a special {c:QItemDagger}, a
+            chalice, a human skull, some religious icons, and various herbs.
+            There's also mention of an <<{c:QItemElderSign,>> but you aren>t
+            sure what that is.
+
+            You must find the {c:QItemRitualDagger} Common Item,
+            {c:QItemRitualComponents} Unique Item, and
+            {c:QItemElderSignPendant} Common Item.
+
+            <i>Maybe they don't have all of these yet</i> you think to
+            yourself.
+        "
+    END PAGE
+
+
+    PAGE Page3
+        PROLOG "This ritual seems complicated."
+
+        BUTTON "Read next page" AFTER "Tools"
+
+        TEXT "
+            The {c:QItemDagger}
+        
+            You flip the page. Here the book goes into detail about the
+            {c:QItemDagger} needed to open the portal. You are surprised at how
+            intricate the ritual is. There is also a section about blessing the
+            {c:QItemDagger}, but when it gets to the actual blessing, it is
+            written in a language you cannot read.
+
+            {c:QItemElderSign}
+        
+            Once the portal has manifested, it is weak and unstable. An
+            {c:QItemElderSign} is used to stabilize it. There is a picture of
+            one here, so you at least know what it looks like now.
+
+            Gain 1 {clue}.
+        "
+    END PAGE
+
+    PAGE Page4
+        PROLOG "Opening a portal seem complicated."
+
+        BUTTON "Read next page" AFTER "Sacrifice"
+
+        TEXT "
+            The next page delves into the importance of personal sacrifice. For
+            this ritual, the required sacrifice is large. A cold chill runs
+            down your spine as you realize that only a precious loved one is
+            enough. <i>What kind of monster could do such a thing?>></i> you
+            ask yourself.
+        
+            The first time this is read, suffer 1 Horror ({will} negates), then
+            gain 2 {clue} if you don’t go Insane.
+
+        "
+        
+        IF journalReadPage4 THEN TEXT "
+            The Sacrifice
+        
+            The next page delves into the importance of personal sacrifice.
+            For this ritual, the required sacrifice is large. A chill runs down
+            your spine as you realize that only a precious loved one is enough.
+            <i>The boy from the journal,</i> you think to yourself. <i>He>s
+            here somewhere and we>re going to find him.</i>
+        
+            The first time this is read, suffer 1 Horror ({will} negates), then
+            gain 2 {clue} if you don>t go Insane.
+        "
+
+    END PAGE
+
+    PAGE Page5
+        PROLOG "
+            You glance back through the pages to see if you missed anything.
+        "
+
+        BUTTON "Look through the pages again" AFTER "Incantations"
+
+        TEXT "
+            Incantations
+
+            As you flip through the pages again, you see notice several
+            incantations written in a language you cannot read. That's
+            probably why you missed them the first time.
+
+            You think back to the margin scrawl in the front of the book.
+            <<Maybe {c:MonsterDavidSmythe} will be able to read these?<i>
+            you wonder out loud. One of the other investigators glaces at
+            you, wondering what you are talking about.
+        "
+    END PAGE
+
+    EPILOG
+        TEXT "
+            Special tools. Unreadable incantations. Blood and sacrifice.
+            
+            This ritual is dark and terrible. It must not be allowed to
+            succeed.
+        "
+    END EPILOG
+END BOOK
+

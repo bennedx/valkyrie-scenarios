@@ -86,7 +86,7 @@ BEGINFILE { isIni = FILENAME ~ /.*[.]ini$/
             sections[section][NAME] = name
             sections[section][FILE] = filename
             sections[section][LINE] = FNR
-            sections[section][KEYS][section ".text"] = isSpecial || isGameFile
+            sections[section][KEYS][section ".text"] = isSpecial || isGameFile || name ~ /^(Tile|QItem)/
 			sections[section][USED] = isSpecial || isGameFile
 			sections[section][ISGAMEFILE] = isGameFile
 			sections[section][PACKID] = packId
@@ -152,7 +152,7 @@ $1 ~ /[.](button|text)/ {
             
             localization[$1][FILE] = filename
             localization[$1][LINE] = FNR
-            localization[$1][USED] = ISGAMEFILE
+            localization[$1][USED] = isGameFile
             localization[$1][ISGAMEFILE] = isGameFile
             next
         }

@@ -68,6 +68,10 @@ previousFile != FILENAME {
 				globalEventCounter = 0
                 isBook = false
 				
+				textContinue = "Continue"
+				textCancel = "Cancel"
+				usePageNameForOrderedNoKeep = false
+				
 				previousFile = FILENAME;
 			}
 
@@ -133,6 +137,7 @@ $1 == "book" {
 												
 				textContinue = "Continue"
 				textCancel = "Cancel"
+				usePageNameForOrderedNoKeep = false
 				
                 next
             }
@@ -315,6 +320,11 @@ $1 == "continue" {
 				next
             }
 
+$1 == "usepagename" {
+				usePageNameForOrderedNoKeep = true;
+				next
+			}
+
 $1 == "trigger" {
 				pages[pageCount][TRIGGER] = $2
 				
@@ -361,7 +371,7 @@ function OutputBook(eventsFile, localizationFile, bookName, isRandom, isKeep, st
     if (debug) printf "OutputBook(%s)\n", bookName >> stderr
 	
     pageCount = length(pages)
-    for(pageIndex = 1; pageIndex <= pageCount; pageIndex++) {
+    for(pageIndex = 1; pageIndex <= pageCount - isEndDirective; pageIndex++) {
         separator = ""
         events = ""
 
@@ -527,10 +537,11 @@ function OutputRandomToc(eventsFile, localizationFile, bookName, isKeep, startTo
 
 	if (!isKeep) {
 		pageIndex = length(pages) + 1
-		pages[pageIndex][NAME] = "generatedEnd"
-		pages[pageIndex][TEXT] = "(end directive required for random/nokeep)"
-		pages[pageCount][TOCTEXT] = "(end directive required for random/nokeep)"
+		pages[pageIndex][NAME] = "('end' directive required for random/nokeep)"
+		pages[pageIndex][TEXT] = "('end' directive required for random/nokeep)"
+		pages[pageCount][TOCTEXT] = "('end' directive required for random/nokeep)"
 		pages[pageCount][FREEACTION] = false
+		abort = 1
 	}
 
     events = ""
@@ -675,6 +686,9 @@ function OutputOrderedNoKeepToc(eventsFile, localizationFile, bookName, pages, s
 
 	# go through each page, one-by-one
 	for (pageIndex = 1; pageIndex < length(pages); pageIndex++) {
+		buttonText = textContinue
+		if (usePageNameForOrderedNoKeep) buttonText = pages[pageIndex][NAME]
+		
 		# generate a proxy event
 		globalEventCounter++
 		pageEventName = sprintf("Event%sReadPage%i", bookName, pageIndex)
@@ -708,7 +722,7 @@ function OutputOrderedNoKeepToc(eventsFile, localizationFile, bookName, pages, s
 		# branch to real read page
 		printf "event1=%s\n", pageEventName >> eventsFile
 		
-		tocText = pages[pageIndex][TOCTEXT]
+		tocText = pageIndex == length(pages) - isEndDirective ? "" : pages[pageIndex][TOCTEXT]
 		
 		if (tocText) {
 			# generate continue/cancel buttons

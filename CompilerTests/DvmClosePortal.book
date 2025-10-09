@@ -1,0 +1,175 @@
+LANGUAGE English
+DEBUG OFF
+
+BOOK DvmRescueBoy ORDERED KEEP LOOPED
+    IF goal != goalRescueBoy THEN EXIT
+
+    PAGE Page1
+        BUTTON "Read the first page" AFTER "Table of Contents"
+
+        PROLOG "The {c:QItemDVM} looks old and worn with time."
+
+        TEXT "
+            Table of Contents
+
+            You open the book to the first page. It>s a table of contents. You
+            quickly scan down to find the spell to open portals. On the inside
+            cover, someone--probably {c:EventChosenInvestigator}>s father--
+            scrawled a note that reads, <<Only my descendants will be able to
+            read this book, and only at the appointed hour. I have seen to
+            this.>> You glance at the table of contents and see <<Travel, page
+            72.>>
+
+            Gain 1 {clue} the first time you read this page.
+        "
+    END PAGE
+
+    PAGE Page2
+        PROLOG "
+            The book seems to contain spells and rituals, and
+            {c:EventChosenInvestigator} may have... abilities. The book is
+            thick and should be examined carefully.
+        "
+        
+        BUTTON "Turn to page 72" AFTER "Portal"
+
+        TEXT "
+            You flip through the pages finally find the <<Travel>> section on
+            page 72. The first entry is for portals.
+
+            Portals
+            
+            You read through an overview of the spell and skim past the opening
+            ritual. Behind it is a closing ritual: how shut down a portal that
+            has already been cast.
+            
+            There is a list of materials and artifacts needed. You note that
+            closing a portal seems to use the same materials as opening one.
+            The list includes a {c:QItemDagger}, chalice, human skull, and
+            various herbs. There>s also mention of an <<{c:QItemElderSign,>>
+            but you aren>t sure what that is.
+            
+            <i>I wonder if they actually have these already?</i> you think to
+            yourself. 
+        "
+    END PAGE
+
+    PAGE Page3
+        PROLOG "Opening a portal doesn’t sound easy."
+
+        BUTTON "Read the next page" AFTER "Tools"
+    
+        TEXT "
+            The {c:QItemDagger}
+        
+            You flip the page. Here the book goes into detail about the
+            {c:QItemDagger} needed to open the portal. You are surprised at how
+            intricate the ritual is. There is also a section about blessing the
+            {c:QItemDagger}, but when it gets to the actual blessing, it is
+            written in a language you cannot read.
+
+            {c:QItemElderSign}
+        
+            Once the portal has manifested, it is weak and unstable. An
+            {c:QItemElderSign} is used to stabilize it. There is a picture of
+            one here, so you at least know what it looks like now.
+
+            Gain 1 {clue}.
+        "
+    END PAGE
+
+    PAGE Page4
+        PROLOG "
+            Each tool seems to need special attention. This will require more
+            study.
+        "
+        
+        BUTTON "Read the next page" AFTER "Sacrifice"
+    
+        TEXT "
+            The Sacrifice
+
+
+            The next page delves into the importance of personal sacrifice.
+            For this ritual, the sacrifice is small:  a few drops of your own
+            blood. You shudder as you read about using your blood for the
+            ritual.
+
+            Suffer 1 Horror ({will} negates).
+        "
+
+	    IF journalReadPage4 THEN TEXT "
+            The Sacrifice
+        
+            The next page delves into the importance of personal sacrifice.
+            For this ritual, the required sacrifice is large. A chill runs down
+            your spine as you realize that only a precious loved one is enough.
+            <i>The boy from the journal,</i> you think to yourself. <i>He>s
+            here somewhere and we>re going to find him.</i>
+        
+            The first time this is read, suffer 1 Horror ({will} negates), then
+            gain 2 {clue} if you don>t go Insane.
+        "
+    END PAGE
+    
+    PAGE Page5
+        PROLOG "
+            Even more blood is required, and for a moment you wonder where
+            it will come from. Then you remember the journal:  it>s you. This
+            is the last page of the ritual.
+        "
+
+        BUTTON "Read the next page" AFTER "Commentary"
+
+        TEXT "
+            Commentary
+
+            Finally, there is commentary and advice. One section discusses ley
+            lines and how they allow you to draw more power for the ritual.
+            Determining the preferred dates and times for the ritual is also
+            discussed, with a full moon being the most important part.
+        
+            In the margin are notes about a place under the house that align
+            with a ley line; there is also a list of years that would be good
+            for the ritual, and specific dates that are the best. Today is on
+            the list.
+        "
+
+        IF journalReadPage4 THEN TEXT "
+            Commentary
+
+            Finally, there is commentary and advice. One section discusses ley
+            lines and how to use them draw more power for the ritual.
+            Calculating the date and time for the ritual is also discussed,
+            with a full moon being the most important.
+        
+            In the margin are notes about a place under the house that aligns
+            with a ley line; there is also a list of years that would be good
+            for the ritual, and specific dates that are the best. Today is on
+            the list.
+
+            <i>The boy must be under the house somewhere,</i> you think to
+            yourself.
+        "
+
+        TRIGGER @FoundCellHoleViaJournal
+    END PAGE
+    
+    EPILOG
+        TEXT "
+            <i>Maybe I need to explore a bit more to figure out what I need to
+            do to stop this madness,</i> you think to yourself.
+        "
+    
+        IF exploredTortureChamber THEN TEXT "
+            Now you know where the ritual will be performed and what is needed.
+            You must stop your uncle!
+        "
+
+        IF readJournalPage4 THEN TEXT "
+            You cannot allow a boy to be sacrificed for this evil. You must
+            find the artifacts before the townspeople do and, if you can,
+            save the boy.
+        "
+    END EPILOG
+END BOOK
