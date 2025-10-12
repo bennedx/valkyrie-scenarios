@@ -33,8 +33,6 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
     
             This step is complete.
         "
-
-        ADD QItemRitualComponents
     END PAGE
 
     PAGE Step2
