@@ -1,0 +1,370 @@
+LANGUAGE English
+
+BOOK ClosePortal ORDERED NO KEEP LOOPED
+    IF goal != goalClosePortal THEN EXIT
+
+    // this hides the page since we are NO KEEP
+    // this is easier than managing visibility
+    MARK Step2Repeat READ
+
+    PAGE Step1
+        PROLOG "
+            The portal is open and you must close it quickly. If you have the
+            {c:QItemRitualKnife}, the {c:QItemRitualComponents}, and the
+            {c:QItemElderSignPendant}, you can start now.
+        
+            Only {c:EventChosenInvestigator} can perform this ritual and only
+            while standing at the altar.
+        
+            Are you ready?
+        "
+
+        BUTTON "Begin Ritual"
+
+        TEXT "
+            You flip to the correct place in the book, turn to face the altar,
+			and lay out the materials. The pattern is complex and it takes a
+			few minutes to get right. Your companions are under constant attack
+			by cult members and you can feel the approach of something from the
+			other side of the portal. You must hurry.
+    
+            Drop the {c:QItemRitualComponents} Unique Item on the altar. It
+			must stay on the altar for the duration of the ritual.
+    
+            This step is complete.
+        "
+
+        ADD QItemRitualComponents
+    END PAGE
+
+    PAGE Step2
+        PROLOG "
+            You turn the page and again review the process for <<blessing>> the
+			knife. When you glance down, you are suprised that you can read the
+            words now.
+
+            You pull out the {c:QItemRitualDagger} and...
+        "
+
+        BUTTON "Prepare the knife"
+
+        TEXT "
+            The book shows you how to hold the knife and some kind movement,
+			like you>re presenting it to the altar. You fumble around, hoping
+			your first try at something like this will be good enough.
+
+            While you can read the words, you aren>t sure you understand them.
+            If you do, test {lore}; otherwise, test {will} and hope for the
+			best.
+        
+            For each Unique Item you have, you may roll 1 extra die.
+        "
+		
+		// even if we pass, we fail
+        TEST QUOTA 10
+            ON PASS GOTO Step2Fail
+            ON FAIL GOTO Step2Fail
+    END PAGE
+
+    PAGE Step2Pass
+        PAGE IS NOT VISIBLE
+
+        TEXT "
+            As you finish the incantation, the blade becomes heavier and
+			brighter. It... changes. The {c:QItemRitualKnife} is ready for
+			what comes next.
+        
+            This step is complete
+        "
+    END PAGE
+
+    PAGE Step2Fail
+        PAGE IS NOT VISIBLE
+
+        TEXT "
+            You finish the incantation but nothing seems to have happened.
+			You>ll need to keep trying.
+        
+            Suffer 1 facedown Damage and 1 facedown Horror ({will} negates).
+        "
+
+        MARK Step2Repeat UNREAD
+    END PAGE
+
+    PAGE Step2Repeat
+        PROLOG "
+            The knife still feels cold and dead in your hand. You're starting
+			to wonder if you>>ll really be able to do this. You look at your
+			fellow investigators, struggling to keep you alive and look down
+			to try again.
+        "
+
+        BUTTON "Try again"
+
+        TEXT "
+            You read the text one more time, hold the knife over the altar,
+            close your eyes, take a deep breath, and speak the words.
+
+            If are certain you understand it now, test {lore}; otherwise, test
+			{will} and hope for the best.
+        "
+
+        TEST QUOTA 4
+            ON PASS GOTO Step2Pass
+            ON FAIL GOTO Step2FailRepeat
+    END PAGE
+	
+    PAGE Step2FailRepeat
+        PAGE IS NOT VISIBLE
+
+        TEXT "
+            You finish again and... nothing. You take a breath to calm your
+            nerves, but the noise and carnage across the room make it hard
+			to focus.
+        
+            Suffer 1 facedown Damage and 1 facedown Horror ({will} negates).
+        "
+
+        MARK Step2Repeat UNREAD
+    END PAGE
+
+    PAGE Step3
+        PROLOG "
+            You turn the page and see the next step: drawing blood. You have to
+			cut yourself with the {c:QItemRitualDagger} and let the blood drip
+			into the chalice on the altar. The book says that the blood will
+			empower the ritual and to close the portal.
+    
+            You look at your hand and realize you are going to have to do this
+			more than once. You steel yourself and prepare to draw blood.
+        "
+
+		BUTTON "Slice your palm"
+
+        TEXT "
+            You grip the {c:QItemRitualDagger} tightly and prepare to draw
+			blood. You can feel your heart pounding in your chest. You must do
+			this. You must stop the ritual.
+
+            Test {will}. For each Unique Item you have, you may roll 1 extra
+			die.
+        "
+
+        // even if we pass, we fail
+		TEST QUOTA 10
+            ON PASS GOTO Step3Fail
+            ON FAIL GOTO Step3Fail
+    END PAGE
+
+    PAGE Step3Pass
+        PAGE IS NOT VISIBLE
+
+        TEXT "
+            You squeeze your hand into a tight fist and blood drips into the
+			chalice. You can>t see or hear the chalice change, but you can feel
+			something happen to it.
+
+            This step is complete.
+        "
+    END PAGE
+
+    PAGE Step3Fail
+        PAGE IS NOT VISIBLE
+
+        TEXT "
+            A drop of blood spatters when it hits the cup. And another. Nothing
+			seems to happen. You're going to have to slice deeper.
+        
+            Suffer 2 Horror ({will} negates).
+        "
+
+        MARK Step3 UNREAD
+    END PAGE
+
+    PAGE Step4
+        PROLOG "
+            The portal is humming and pulsing with energy. You can feel
+			something trying to get through from the other side. You must
+			hurry. You turn the page and see the next incantation. Like the one
+			for the dagger, blessing, you can read it, but you aren>t sure you
+			understand it.
+        "
+
+        BUTTON "Read the incantation"
+
+        TEXT "
+            The incantation is long and complex. You>ll have to get this right
+			to weaken the portal. If you don>t, it will take longer to close
+			and the onslaught from the other side isn>t abating. You close your
+			eyes for a moment, take a deep breath, look at the text again, and
+			begin to speak the incantation.
+
+            If you understand it, test {lore}; otherwise, test {will} and hope
+			for the best.
+       "
+   
+       // even if we pass, we fail
+	   TEST QUOTA 10
+            ON PASS GOTO Step4Fail
+            ON FAIL GOTO Step4Fail
+    END PAGE
+
+    PAGE Step4Pass
+        PAGE IS NOT VISIBLE
+
+        TEXT "
+            You feel a welling of power as you speak the last word. The feeling
+            inside you grows and you suddenly feel like you control the cosmos.
+            The portal grows brighter and {c:TokenPortal} screams. You had
+            forgotten about the boy--he will die in this ritual.
+        
+            Suffer 1 facedown Horror.
+        
+            As the scream echos in the room, the portal grows dimmer and shrinks
+            slightly. Where it was humming and stable before, it is sputtering,
+            pulsing erratically, and making an electrical sound. It has been
+            weakened, but not closed. It will eventually collapse on its own,
+            but you can still feel something approaching. You can do better.
+        
+            This step is complete.
+        "
+    
+    END PAGE
+
+    PAGE Step4Fail
+        PAGE IS NOT VISIBLE
+
+        TEXT "
+            You can feel something happen inside but it is not very strong. The
+			portal sputters for a moment, but nothing more. You>ll have to try
+			the incantation again.
+
+            Suffer 1 facedown Damage and 1 facedown Horror ({will} negates).
+
+            The ritual is wearing you down.
+        "
+
+        MARK Step4Repeat UNREAD
+    END PAGE
+
+    PAGE Step4Repeat
+        PROLOG "
+            The portal is still humming and pulsing with energy. Whatever is
+            approaching is getting closer.
+        
+            You look at the incantation again and take a deep, calming breath.
+        "
+
+        BUTTON "Try again"
+
+        TEXT "
+            Your fellow investigators are struggling to keep you alive and one
+            looks over at you and you meet their eyes. Terror. Horror.  You
+			must get this. You look back down at the text.
+        
+            If you understand it, test {lore}; otherwise, test {will} and hope
+			for the best.
+        "
+        
+		// even if we pass, we fail
+		TEST QUOTA 2
+            ON PASS GOTO Step4Fail
+            ON FAIL GOTO Step4Fail
+    END PAGE
+
+    PAGE Step5
+        PROLOG "
+            You turn the page and see the next step: you>ll need more blood. You
+            have to cut yourself again with the {c:QItemRitualDagger} and let the
+            blood drip on to the {c:QItemElderSign}. The book says that the blood
+            will empower the {c:QItemElderSign} to completely close the portal,
+			and seal this ley line in a way that will prevent another portal
+			from opening here ever again.
+    
+            You look at your hand and see that it has stopped bleeding. Cutting
+            yourself again will take courage.
+        "
+
+        BUTTON "Draw more blood"
+
+        TEXT "
+            You draw your knife across your palm again and a searing pain
+            momentarily overwhelms you. You have to do this.
+
+            You look back down at the book and speak.
+
+            If you understand the text, test {lore}; otherwise, test {will} and
+            hope for the best.
+        
+            For each Unique Item you have, you may roll 1 extra die.
+        "
+
+        // even if we pass, we fail
+		TEST QUOTA 10
+            ON PASS GOTO Step5Fail
+            ON FAIL GOTO Step5Fail
+    END PAGE
+
+    PAGE Step5Pass
+        PAGE IS NOT VISIBLE
+
+        TEXT "
+            You squeeze your hand into a tight fist over the trinket. As your
+			blood drips, the it begins to glow. Then it and the knife begin
+			pulsing. When you look up, you see the portal is dimmer and
+			smaller, pulsing in sync with the {QItemRitualDagger} and the
+			{c:QItemElderSign}. The boy screams again, no longer sounding
+			human.
+
+            The {c:QItemElderSign} rises and hovers over the altar. It vibrates
+            briefly, then slowly moves across the room toward the portal.
+
+            The boy screams one last time as the elder sign makes contact with
+			his forehead. The boy goes rigid, then the portal collapses and the
+			boy falls to the ground... still smoldering... still moaning.
+        
+            This investigation is over.
+        "
+		
+        result = fullWin
+        GOTO EventGameOverStart
+    END PAGE
+
+    PAGE Step5Fail
+        PAGE IS NOT VISIBLE
+
+        TEXT "
+            You finish the incantation, but the {c:QItemElderSign} just lies
+			there. You>ll have to try again.
+
+            Suffer 1 facedown Horror ({will} negates).
+        "
+
+        MARK Step5Repeat UNREAD
+    END PAGE
+
+    PAGE Step5Repeat
+        PAGE IS NOT VISIBLE
+
+        PROLOG "
+            You lift your hand over the altar again and prepare to speak again.
+            The boy is still screaming in pain and terror.
+        "
+
+        BUTTON "Try again"
+
+        TEXT "
+            You sqeeze more blood out of your fist on to the {c:QItemElderSign}.
+            As it hits the trinket, the boy stops screaming.
+
+            Test {lore} or {will}.
+        
+            For each Unique Item you have, you may roll 1 extra die.
+        "
+
+        TEST QUOTA 4
+            ON PASS GOTO Step5Pass
+            ON FAIL GOTO Step5Fail
+    END PAGE
+
+END BOOK

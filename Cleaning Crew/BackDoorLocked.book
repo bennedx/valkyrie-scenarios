@@ -1,0 +1,121 @@
+LANGUAGE English
+DEBUG OFF
+CANCEL "Cancel"
+CONTINUE "Continue"
+
+BOOK BackDoorLocked ORDERED NO KEEP LOOPED
+
+	PAGE TurnKnob
+		PROLOG "
+			The door that closed behind you looks larger and more
+			solid from inside.
+		"	
+
+		TEXT "You reach for the knob. Test {strength} or {agility}."
+
+		BUTTON "Open door"
+
+		TEST QUOTA 20
+			ON PASS DO NOTHING
+			ON FAIL DO NOTHING
+	END PAGE
+
+	PAGE ShakeDoor
+		PROLOG "
+			No matter how hard you try, the knob just won>t turn.
+			Looking closer, you see a light peeking between the door
+			and its jam. <i>Maybe I can shake it open?<i> you think
+			to yourself.
+		"
+	
+		TEXT "You grab the knob again and begin shaking it violently. Test {strength} or {will}."
+	
+		BUTTON "Shake door"
+	
+		TEST QUOTA 20
+			ON PASS DO NOTHING
+			ON FAIL DO NOTHING
+	END PAGE
+	
+	PAGE HitDoor
+		PROLOG "
+			No matter how hard you shake it, the door doesn>t budge.
+			And you might have pulled something in your right arm.
+			Maybe you can knock it down? You also begin to wonder
+			if you shouldn>t move on. Or just knock it down.
+		"
+
+		TEXT "
+			You muster up your strength and prepare to break the door down
+			with your shoulder. Test {strength} or {lore}.
+		"
+
+		BUTTON "Break it down"
+
+		TEST QUOTA 20
+			ON PASS DO NOTHING
+			ON FAIL DO NOTHING
+	END PAGE
+
+	PAGE PickLock
+		PROLOG "
+			The third or fourth time you hit door, something in your
+			shoulder pops and it hurts. Bad. You feel the panic setting in.
+			<i>Why won>t this door open?</i> you ask yourself.
+			
+			Take 1 facedown damage ({strength} negates).
+
+			<<Hey, is this a hairpin?>> you ask out loud. One of the other
+			investigators turns to look at you.
+		"
+
+		TEXT "			
+			As you work the hairpin into the lock, you wonder
+			why it was in your pocket. Test {agility} or {influence}.
+		"
+
+		BUTTON "Pick lock"
+	
+		TEST QUOTA 20
+			ON PASS DO NOTHING
+			ON FAIL DO NOTHING
+
+		pickedLock = true
+	END PAGE
+
+	PAGE UnlockDoor
+		PROLOG "
+			You can feel the tumblers, but nothing moves. Eventually, the
+			hairpin bends too much to be of use. <i>Maybe this really is
+			a waste of time,</i> you consider. <i>Wait, I have that key.</i>
+
+			If you have the	{c:QItemBrassKey}, ...
+		"
+
+		TEXT "
+			You pull out the key and look at it for a moment before putting
+			it into the lock...
+			Test {strength} or {observation}.
+		"
+	
+		BUTTON "Unlock door"
+
+		TEST QUOTA 20
+			ON PASS DO NOTHING
+			ON FAIL DO NOTHING
+	END PAGE
+
+	EPILOG 
+		TEXT "
+			Well, you try to put the key into the lock but it doesn>t fit,
+			no matter how hard you try. You look at the key and try again.
+			And again. And again. Dejected and out of ideas, you turn away
+			from the door. <<I guess we>ll have to find another way out,>>
+			you say to no one in particular.
+		
+			Remove this explore token.
+		"
+
+        REMOVE TokenBackDoorLocked AFTER
+	END EPILOG
+END BOOK
