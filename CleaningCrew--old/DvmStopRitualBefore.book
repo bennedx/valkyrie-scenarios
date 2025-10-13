@@ -1,0 +1,31 @@
+language|English
+
+book|DVMStopRitualBefore|ordered|keep
+	line|conditions=goal,==,goalStopRitual ritual,==,0
+
+page|Read Page 1|Page 1\n\nYou open the book to the first page. It's a table of contents. You quickly scan down and find the spell to close portals. In the margin, someone--probably your father--scrawled a note that reads, “My descendants will be able to read this book, but only at the appointed hour. I have seen to this.” \n\nGain 1 {clue} the first time you read this.
+    toc|The {c:QItemDVM} looks old and worn with time.
+    
+page|Read Page 2|Page 2\n\nYou leaf through the book to find the ritual to close a portal. The first part is an overview and list of materials. You'll need a special knife, a chalice, a skull, some religious icons, and a number of herbs. There's also mention of an “elder sign,” but you aren't sure what that is.\n\nYou must find the {c:QItemRitualDagger} Common Item, {c:QItemRitualComponents} Unique Item, and {c:QItemElderSignPendant} Common Item.\n
+    toc|The book seems to contain spells and {c:EventChosenInvestigator} might have special powers. The book is thick and should be looked at more carefully.
+
+page|Read Page 3|Page 3\n\nYou flip the page. Here the book goes into detail about the dagger you'll use. There is a long list of steps to follow to prepare it. This will take some study. Gain 1 {clue}.\n\nThere is also a “blessing” you need to speak, but it is in a language you don't read or understand.
+    toc|Closing a portal doesn't sound easy. Read on.
+    
+page|Read Page 4|Page 4\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the sacrifice is small:  a few drops of your own blood. You shudder as you read about using your blood for the ritual. Suffer 1 Horror ({will} negates).
+    toc|Each tool seems to need special attention. This will require more study.
+    
+page|Read Page 5|Page 5\n\nThe next page is where the power starts to manifest. This page talks about an incantation you'll use to begin collapsing the portal. This first part will weaken it. Even if the second half of the ritual is not completed, the portal will eventually collapse.\n\nSealing the portal will prevent another from being opened near the same location. We want to complete this ritual.\n\nWhen you get to the incantation, you realize it is written in the same language as the blessing. You think back to that margin scrawl and wonder if you'll be able to understand it later.
+    toc|Adding your own blood to the ritual sends a chill down your spine. There's more.
+    
+page|Read Page 6|Page 6\n\nOnce the portal is weakened, it must be closed and sealed. Sealing it requires more blood and an elder sign. After reading this section, you understand how the elder sign will be used to close and seal the gate. You wonder how you will find such a thing.\n\nFortunately there is a picture of one next to the description. You'll keep an eye out as you wander the house.
+    toc|You hope the margin scrawl on the first page is right--daggers and sacrifice are one thing, but the incantation is unreadable. There are only two more entries.
+    
+page|Read Page 7|Page 7\n\nThe final incantation will close and seal the portal permanently. Another portal could be opened, but not near this one. You think that the incantation is in the same language as the other two. You hope your father knew what he was talking about. Gain 1 {clue}.
+    toc|Even more blood is required, and it may not be possible to complete the final part of the ritual. This is the last page of the ritual.
+    
+end|Now you know how to perform the ritual to close and seal a portal.
+
+book|DVMStopRitualAfter|ordered|keep
+	line|conditions=goal,==,goalStopRitual ritual,>,0
+
