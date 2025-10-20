@@ -6,9 +6,11 @@ TEXT UncleDavid = "Uncle David"
 BOOK OpenPortal ORDERED NO KEEP LOOPED
     IF goal != goalOpenPortal THEN EXIT
 
+	MARK Step3Repeat READ
+
     PAGE Step1
         PROLOG "
-			{qst:UncleDavid} stands at the alter, arms raised, speaking
+			David stands at the alter, arms raised, speaking
 			a language you cannot understand. You can see on the altar the
 			various tools and materials needed for the ritual.
 			
@@ -20,8 +22,8 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 			begin to disrupt the ritual.
         
             Only {c:EventChosenInvestigator} can perform this task and only
-            while standing at the altar, in the space next to
-			{qst:UncleDavid}.
+            while standing at the altar in the space next to
+			David.
         
             Are you ready?
         "
@@ -29,12 +31,12 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
         BUTTON "Speak the words"
 
         TEXT "
-			When you get closer to the altar, you see that
-			{qst:UncleDavid} does not have an {c:QItemElderSign}. That
+			When you get close to the altar, you see that
+			David does not have an {c:QItemElderSign}. That
 			means he will need blood to keep the portal open. You must stop him
 			before he uses you to feed it.
 			
-			You think back to the counterspell you memorized earlier. You hold
+			You think back to the counter-spell you memorized earlier. You hold
 			the {c:QItemRitualKnife} and chalice above your head and speak the
 			words. {c:UncleDavid} snaps his head toward you, as though seeing
 			you here for the first time. Your eyes lock and you see a 
@@ -53,7 +55,7 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 			sound comes out, you see him moving his lips.
         "
 
-        BUTTON "Stab {qst:UncleDavid}"
+        BUTTON "Stab David"
 
         TEXT "
 			You choose your moment and lunge at him with your knife. At the
@@ -81,7 +83,7 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 		BUTTON "Speak the words"
 
         TEXT "
-			{qst:UncleDavid} grabs the knife and begins speaking the
+			David grabs the knife and begins speaking the
 			incantation again, his voice booming with power. The knife begins
 			glowing and lightly, slowly pulsing.
 			
@@ -100,7 +102,7 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
         PAGE IS NOT VISIBLE
 		
         TEXT "
-            You fumble the words and nothing happenes. {qst:UncleDavid}
+            You fumble the words and nothing happens. David
 			ignores you and slides the blade across his palm.
         
             Suffer 2 Horror ({will} negates).
@@ -133,7 +135,7 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 		PAGE IS NOT VISIBLE
 				
 		TEXT "
-			{qst:UncleDavid} seems unphased as blood wells up from the 
+			David seems unphased as blood wells up from the 
 			cut in his palm. You look at the dagger and chalice raised in your
 			hands and wonder why nothing is happening. You take a deep breath,
 			determined to stop this madness.
@@ -144,14 +146,14 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 
     PAGE Step4
         PROLOG "
-            As {qst:UncleDavid} squeezes blood from his fist into the
+            As David squeezes blood from his fist into the
 			chalice, the spell takes hold and... he loses his voice again.
         "
 
         BUTTON "Make your move"
 
         TEXT "
-			With {qst:UncleDavid} distracted and frustrated, you reach
+			With David distracted and frustrated, you reach
 			out to grab the skull. If only you can reach it before he... does
 			something.
 			
@@ -171,12 +173,12 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 		PAGE IS NOT VISIBLE
 		
 		TEXT "
-			{qst:UncleDavid} swings his arm at you, dagger flashing in the low
+			David swings his arm at you, dagger flashing in the low
 			light. It catches your arm, causing you to drop the dagger.
 			
 			Drop {c:QItemRitualKnife}. Take 2 {damage} ({agility} negates).
 			
-			{qst:UncleDavid} squeezes more of his blood into the chalice, 
+			David squeezes more of his blood into the chalice, 
 			causing it to... change in a way you cannot describe. It somehow
 			feels powerful, like the knife he is wielding.
 		"

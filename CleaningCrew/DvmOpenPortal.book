@@ -1,7 +1,7 @@
 LANGUAGE English
 
 // use this for both goalOpenPortal and goalFeedPortal
-BOOK DvmStopRitual ORDERED KEEP
+BOOK DvmOpenPortal ORDERED KEEP
     IF goal == goalClosePortal THEN EXIT BEFORE
 
 	// page 1 is the same as DvmClosePortal.Page1
@@ -90,6 +90,9 @@ BOOK DvmStopRitual ORDERED KEEP
         BUTTON "Read next page" AFTER "Sacrifice"
 
         TEXT "
+			The Sacrifice
+			
+			
             The next page delves into the importance of personal sacrifice. For
             this ritual, the required sacrifice is large. A cold chill runs
             down your spine as you realize that only a precious loved one is
@@ -110,6 +113,8 @@ BOOK DvmStopRitual ORDERED KEEP
             <i>The boy from the journal,</i> you think to yourself. <i>He>s
             here somewhere and we>re going to find him.</i>
         
+			<i>Who could do this to their own child?</i> you ask yourself.
+		
             {qst:FirstTimeRead}, suffer 1 Horror ({will} negates), then
             gain 2 {clue} if you don>t go Insane.
         "

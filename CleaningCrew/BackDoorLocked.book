@@ -116,6 +116,6 @@ BOOK BackDoorLocked ORDERED NO KEEP LOOPED
 			Remove this explore token.
 		"
 
-        REMOVE TokenBackDoorLocked AFTER
+        REMOVE TokenExploreBackDoorLocked AFTER
 	END EPILOG
 END BOOK

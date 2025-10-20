@@ -24,7 +24,7 @@ BOOK SarahPatter ORDERED NO KEEP
             must be prepared. Read the book carefully and read it soon.>>
         "
 
-        IF goal == goalRescueBoy OR goal == goalStopRitual THEN TEXT "
+        IF goal == goalFeedPortal OR goal == goalClosePortal THEN TEXT "
             Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDVM} is
             a spell book. It contains many powerful spells, including how to
             open and close portals. You should read it to better understand
@@ -45,6 +45,7 @@ BOOK SarahPatter ORDERED NO KEEP
 
     PAGE ElderSign
         IF foundElderSign THEN PAGE IS VISIBLE
+
         TEXT "
             Sarah whispers to {c:EventChosenInvestigator}, <<The
             {c:QItemElderSign} is a powerful protective symbol. It can be used
@@ -60,7 +61,7 @@ BOOK SarahPatter ORDERED NO KEEP
             portal, but he died before he could seal it.>>
         "
 
-        IF goal == goalRescueBoy THEN TEXT "
+        IF goal == goalOpenPortal THEN TEXT "
             Sarah whispers to {c:EventChosenInvestigator}, <<The
             {c:QItemElderSign} is important for their plans tonight. It is used
             to either secure or seal a portal. It is good we found it before
@@ -101,6 +102,7 @@ BOOK SarahPatter ORDERED NO KEEP
 
     PAGE MissingJournal
         IF NOT foundJournal THEN PAGE IS VISIBLE
+		
         TEXT "
             Sarah whispers to {c:EventChosenInvestigator}, <<That man who let you
             in, he has a book with him. He was writing in it all week. If you can
@@ -170,7 +172,7 @@ BOOK SarahPatter ORDERED NO KEEP
             church did something to you. After that, you followed orders
             without question. You helped Father bind me during the ritual. From
             what they said at the time, you probably cannot remember anything
-            about the ritual or even before then. It>s why you don>t know who
+            about the ritual or anything before. It>s why you don>t know who
             you are or remember what happened that night.>>
         "
     END PAGE
@@ -179,7 +181,7 @@ BOOK SarahPatter ORDERED NO KEEP
         TEXT "
             Sarah whispers to {c:EventChosenInvestigator}, <<The day of the
             ritual, two of my friends came to visit me. When Father told them I
-            wasn>t allowed out, they sneaked to my window and jumped in when I
+            wasn>t allowed out, they sneaked to my window and crawled in when I
             opened it. Father was furious. I>m not sure who strangled them or
             who dragged them to the yard. I was burning alive when the portal
             closed, then my body was dumped with my friends>. It wasn>t until

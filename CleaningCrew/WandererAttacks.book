@@ -1,6 +1,6 @@
 LANGUAGE English
 
-BOOK WandererAttacks
+BOOK WandererAttacks ORDERED NO KEEP
 
 	PAGE Story1
 		IF exploredBasement THEN PAGE IS VISIBLE
@@ -133,7 +133,14 @@ BOOK WandererAttacks
 		IF foundRitualComponents THEN PAGE IS VISIBLE
 
 		TEXT "
-			The cultist rushes into the room, intent on catching up with you. "You cannot steal our most sacred chalice," he cries. He has nearly reached you. ({will};2) If you pass, you stand your ground, blocking his attacks as the cultist tries to pummel you. If you fail, you flinch and are unable to defend yourself as the cultist sends a quick blow to your head; become Dazed and drop the {c:QItemRitualComponents} if you are carrying them.
+			The cultist rushes into the room, intent on catching up with you.
+			<<You cannot steal our most sacred chalice,>> he cries.
+
+			He has nearly reached you. ({will};2) If you pass, you stand your
+			ground, blocking his attacks as the cultist tries to pummel you.
+			If you fail, you flinch and are unable to defend yourself as the
+			cultist sends a quick blow to your head; become Dazed and drop
+			the {c:QItemRitualComponents} if you are carrying them.
 		"
 	END PAGE
 
@@ -167,11 +174,11 @@ BOOK WandererAttacks
 	END PAGE
 
 	PAGE Story14
-		IF foundDWM foundRitualKnife,>,0 THEN PAGE IS VISIBLE
+		IF foundDWM AND foundRitualKnife THEN PAGE IS VISIBLE
 
 		TEXT "
-			<<The intruders,>> he calls out, <<have found at least two of the items
-			Our Master warned us to protect. We must stop them before it is too
+			<<The intruders,>> he calls out, <<have found some of the items Our
+			Master warned us to protect. We must stop them before it is too
 			late.>>
 			
 			The cultist begins chanting and you feel your energy draining.
@@ -214,7 +221,7 @@ BOOK WandererAttacks
 		IF foundDWM AND foundRitualComponents AND foundRitualKnife AND ritualDone AND dwmReadPage6 THEN PAGE IS VISIBLE
 
 		TEXT "
-			<<It is time Brothers," the cultist>s voice booms through the house.
+			<<It is time Brothers,>> the cultist>s voice booms through the house.
 			<<We must get to the portal before it is too late.>> Any investigators
 			not carrying a {c:QItemFluxStabilizer} become Restrained.
 		"
@@ -308,7 +315,7 @@ BOOK WandererAttacks
 		"
 	END PAGE
 
-	PAGE AgilityRestrained RANDO<
+	PAGE AgilityRestrained RANDOM
 		TEXT "
 			The cultist pulls an ugly stone carving out of his pocket, mumbles
 			something about <<intruders>> and <<ritual,>> then begins speaking to
@@ -488,4 +495,4 @@ BOOK WandererAttacks
 		"
 	END PAGE
 
-END PAGE
+END BOOK
