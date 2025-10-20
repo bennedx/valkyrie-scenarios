@@ -657,8 +657,6 @@ EventPlaceHall1Flavor.text,"\nAs you look around the hall, something doesn’t f
 EventMoveAfterExploreCandidate.button1,Continue
 EventMoveAfterExploreYes.button1,Continue
 EventMythosRitualWoman.text,"\nYou feel the power of the spell {c:CustomMonsterDavidSmythe} is casting. It draws you in and repulses you at the same time. A woman screams. The sound pierces the walls of the house, making the windows rattle in their frames. You feel her take a deep, gasping breath, then she screams again. And again. And again. The screaming sends a chill through you. Each investigator takes 2 Horror ({will} negates).\n"
-EventTestShowVariable.text,foundDVM is set
-EventTestShowVariable.button1,Continue
 EventTestTakeJournal.text,Take journal
 EventTestTakeJournal.button1,Continue
 EventTestTakeDVM.text,Take DVM
@@ -678,12 +676,10 @@ EventMythosRitualReady.button1,Button1
 EventInvestigatorTransportYes.text,|||\nSarah whispers, "Now that the portal is open and you are ready, I can take you there. When we arrive, you must kill {c:CustomMonsterDavidSmythe} to stop him. I hope we are not too late already."\n\nAs she spreads her arms to draw you together, a group of robed figures bursts into the room. They look angry. You feel Sarah everywhere and...\n|||
 EventInvestigatorTransportYes.button1,Continue
 EventMythosRitualIncrement.button1,Button1
-EventTestStartRitual.text,Start ritual?
 EventMythosRitualSummonsPresent.button1,Continue
 EventMythosRitualSummonsEnd.button1,Button1
 EventMythosRitualSummonsNotPresent.text,|||\nYou can feel the house inhale again, making your candle flicker. A low drone signals that something important just happened. Even from here, away from the altar, you can feel the portal pulsing with evil.\n\nSarah whispers desperately, "I can feel him summoning his god. You don’t have much time."\n|||
 EventMythosRitualSummonsNotPresent.button1,Continue
-EventTestStartRitual.button1,Yes
 EventTestRitualPreparations.text,"#heroes:  {var:#heroes}\n\nYou found the dagger\nYou found the DVM and have read it\nYou found the pendant\nYou found the components\nYou found the cell\nYou found the healing stone"
 EventTestRitualPreparations.button1,Continue
 EventPlaceHall1ViaDoor.button1,Continue
@@ -726,8 +722,6 @@ EventTestPlaceDungeonCellYes.button1,Button1
 EventPlaceCellRitualRunning.button1,Button1
 EventTestRitualFinishedYes.text,ritual = 
 EventTestRitualFinishedYes.button1,Continue
-EventTestTransportInvestigatorsYes.button1,Continue
-EventTestTransportInvestigatorsYes.text,"ritualDone = 1\n\ntriggering EventInvestigatorStart"
 EventStartupInitializeEnd.button1,Button1
 EventKillWanderer.button1,Button1
 EventStartupStart.button1,Button1
@@ -805,8 +799,6 @@ EventPlaceBackdoorBenAngry.text,"\nAs you turn from the pile of rubble, you look
 EventPlaceBackdoorSearchRandom.button1,Continue
 EventExploreBackdoorFailJournal.text,|||\n"My name is Benjamin Smythe," the man says. It’s good to meet you. Are you ready to get started?" He smiles again as he walks past you through the now-open gate.\n\nRemove the Purple Man token.\n\nOut of the corner of your eye, you see that Benjamin has dropped a book where he was standing. Place a Search token as indicated.\n\nA moment later, you hear Benjamin yelp, followed by a loud crash. You quickly turn back toward the gate. Place a Sight token as indicated.\n|||
 EventExploreBackdoorFailJournal.button1,Continue
-EventTestGetFluxStabilizer.button1,Continue
-EventTestGetFluxStabilizer.text,"\nTesting:  {c:EventChosenInvestigator} takes the {c:QItemFluxStabilizer}.\n"
 EventStartupClueTokensYes.button1,Continue
 EventPlaceBasementConditionRubbleSearchYes.button1,Button1
 EventStartupPlaceDrivewayStart.button1,Button1
@@ -869,7 +861,6 @@ EventSearchFoyerCandles.button1,Continue
 EventSearchFoyerCandles.text,"\nYou quickly realize what drew you to the painting:  the man’s eyes glisten and meet yours as if he were alive. He next to a woman and two children. You recognize one of the children as Sarah, so it must be {c:MosterDavidSmyth}. Still, you don’t see anything that will help you with the house. As you turn away, you notice the sconces on either side of the painting. Some of the darker areas of the house could use a little light. You reach out and take down one of the candles.\n\nGain the {c:QItemCandles} Common Item, then remove this search token.\n"
 EventSearchDiningRoomFluxStabilizerAfterPuzzleBenHappy.button1,Continue
 EventSearchDiningRoomFluxStabilizerEnd.button1,Continue
-EventTestPlaceDrivewayStart.button1,Button1
 EventSearchDiningRoomFluxStabilizerAfterPuzzleBenHappy.text,|||\nBenjamin walks through the door into the {c:TileDiningRoom}. Move the purple man token as indicated.\n\nAs he walks through the door, he says, "I heard a noise. This house can be dangerous with everything in disarray. Please be careful."\n\nHe seems to be holding something in his hand.\n|||
 EventSearchDiningRoomFluxStabilizerBenAngry.text,|||\nBenjamin walks briskly through the door, yelling, "What are you folks doing in here?! You must be careful. This house and its contents are valuable." Move the purple man token as indicated.\n\nHe seems to have something in his hand.\n|||
 EventSearchDiningRoomFluxStabilizerBenAngry.button1,Continue
@@ -963,14 +954,14 @@ EventBackDoorLockedToc.text,
 EventBackDoorLockedToc.button1,
 EventBackDoorLockedTocSelector.text,
 EventBackDoorLockedTocSelector.button1,
-EventBackDoorLockedTocPrologTurnKnob.text,|||\nThe door that closed behind you looks larger and more solid from inside.\n|||
+EventBackDoorLockedTocPrologTurnKnob.text,"\nThe door that closed behind you looks larger and more solid from inside.\n"
 EventBackDoorLockedTocPrologTurnKnob.button1,{action} Open door
 EventBackDoorLockedTocPrologTurnKnob.button2,Cancel
 EventBackDoorLockedReadPageTurnKnob.text,
 EventBackDoorLockedReadPageTurnKnob.button1,
 EventBackDoorLockedReadPageTurnKnobDisplay.text,
 EventBackDoorLockedReadPageTurnKnobDisplay.button1,
-EventBackDoorLockedReadPageTurnKnobBase.text,|||\nYou reach for the knob. Test {strength} or {agility}.\n|||
+EventBackDoorLockedReadPageTurnKnobBase.text,"\nYou reach for the knob. Test {strength} or {agility}.\n"
 EventBackDoorLockedReadPageTurnKnobBase.button1,Continue
 EventBackDoorLockedReadPageTurnKnobBase.button2,Cancel
 EventBackDoorLockedReadPageTurnKnobBasePassTest.text,
@@ -995,14 +986,14 @@ EventBackDoorLockedReadPageTurnKnobPostTestFail.text,
 EventBackDoorLockedReadPageTurnKnobPostTestFail.button1,
 EventBackDoorLockedReadPageTurnKnobBaseFailTest.text,
 EventBackDoorLockedReadPageTurnKnobBaseFailTest.button1,
-EventBackDoorLockedTocPrologShakeDoor.text,|||\nNo matter how hard you try, the knob just won’t turn. Looking closer, you see a light peeking between the door and its jam. <i>Maybe I can shake it open?<i> you think to yourself.\n|||
+EventBackDoorLockedTocPrologShakeDoor.text,"\nNo matter how hard you try, the knob just won’t turn. Looking closer, you see a light peeking between the door and its jam. <i>Maybe I can shake it open?<i> you think to yourself.\n"
 EventBackDoorLockedTocPrologShakeDoor.button1,{action} Shake door
 EventBackDoorLockedTocPrologShakeDoor.button2,Cancel
 EventBackDoorLockedReadPageShakeDoor.text,
 EventBackDoorLockedReadPageShakeDoor.button1,
 EventBackDoorLockedReadPageShakeDoorDisplay.text,
 EventBackDoorLockedReadPageShakeDoorDisplay.button1,
-EventBackDoorLockedReadPageShakeDoorBase.text,|||\nYou grab the knob again and begin shaking it violently. Test {strength} or {will}.\n|||
+EventBackDoorLockedReadPageShakeDoorBase.text,"\nYou grab the knob again and begin shaking it violently. Test {strength} or {will}.\n"
 EventBackDoorLockedReadPageShakeDoorBase.button1,Continue
 EventBackDoorLockedReadPageShakeDoorBase.button2,Cancel
 EventBackDoorLockedReadPageShakeDoorBasePassTest.text,
@@ -1019,14 +1010,14 @@ EventBackDoorLockedReadPageShakeDoorPostTestFail.text,
 EventBackDoorLockedReadPageShakeDoorPostTestFail.button1,
 EventBackDoorLockedReadPageShakeDoorBaseFailTest.text,
 EventBackDoorLockedReadPageShakeDoorBaseFailTest.button1,
-EventBackDoorLockedTocPrologHitDoor.text,|||\nNo matter how hard you shake it, the door doesn’t budge. And you might have pulled something in your right arm. Maybe you can knock it down? You also begin to wonder if you shouldn’t move on. Or just knock it down.\n|||
+EventBackDoorLockedTocPrologHitDoor.text,"\nNo matter how hard you shake it, the door doesn’t budge. And you might have pulled something in your right arm. Maybe you can knock it down? You also begin to wonder if you shouldn’t move on. Or just knock it down.\n"
 EventBackDoorLockedTocPrologHitDoor.button1,{action} Break it down
 EventBackDoorLockedTocPrologHitDoor.button2,Cancel
 EventBackDoorLockedReadPageHitDoor.text,
 EventBackDoorLockedReadPageHitDoor.button1,
 EventBackDoorLockedReadPageHitDoorDisplay.text,
 EventBackDoorLockedReadPageHitDoorDisplay.button1,
-EventBackDoorLockedReadPageHitDoorBase.text,|||\nYou muster up your strength and prepare to break the door down with your shoulder. Test {strength} or {lore}.\n|||
+EventBackDoorLockedReadPageHitDoorBase.text,"\nYou muster up your strength and prepare to break the door down with your shoulder. Test {strength} or {lore}.\n"
 EventBackDoorLockedReadPageHitDoorBase.button1,Continue
 EventBackDoorLockedReadPageHitDoorBase.button2,Cancel
 EventBackDoorLockedReadPageHitDoorBasePassTest.text,
@@ -1043,7 +1034,7 @@ EventBackDoorLockedReadPageHitDoorPostTestFail.text,
 EventBackDoorLockedReadPageHitDoorPostTestFail.button1,
 EventBackDoorLockedReadPageHitDoorBaseFailTest.text,
 EventBackDoorLockedReadPageHitDoorBaseFailTest.button1,
-EventBackDoorLockedTocPrologPickLock.text,|||\nThe third or fourth time you hit door, something in your shoulder pops and it hurts. Bad. You feel the panic setting in. <i>Why won’t this door open?</i> you ask yourself.\n\nTake 1 facedown damage ({strength} negates).\n\n“Hey, is this a hairpin?” you ask out loud. One of the other investigators turns to look at you.\n|||
+EventBackDoorLockedTocPrologPickLock.text,"\nThe third or fourth time you hit door, something in your shoulder pops and it hurts. Bad. You feel the panic setting in. <i>Why won’t this door open?</i> you ask yourself.\n\nTake 1 facedown damage ({strength} negates).\n\n“Hey, is this a hairpin?” you ask out loud. One of the other investigators turns to look at you.\n"
 EventBackDoorLockedTocPrologPickLock.button1,{action} Pick lock
 EventBackDoorLockedTocPrologPickLock.button2,Cancel
 EventBackDoorLockedReadPagePickLock.text,
@@ -1054,7 +1045,7 @@ EventBackDoorLockedReadPagePickLockLetBefore1.text,
 EventBackDoorLockedReadPagePickLockLetBefore1.button1,
 EventBackDoorLockedReadPagePickLockDisplay.text,
 EventBackDoorLockedReadPagePickLockDisplay.button1,
-EventBackDoorLockedReadPagePickLockBase.text,|||\nAs you work the hairpin into the lock, you wonder why it was in your pocket. Test {agility} or {influence}.\n|||
+EventBackDoorLockedReadPagePickLockBase.text,"\nAs you work the hairpin into the lock, you wonder why it was in your pocket. Test {agility} or {influence}.\n"
 EventBackDoorLockedReadPagePickLockBase.button1,Continue
 EventBackDoorLockedReadPagePickLockBase.button2,Cancel
 EventBackDoorLockedReadPagePickLockBasePassTest.text,
@@ -1071,14 +1062,14 @@ EventBackDoorLockedReadPagePickLockPostTestFail.text,
 EventBackDoorLockedReadPagePickLockPostTestFail.button1,
 EventBackDoorLockedReadPagePickLockBaseFailTest.text,
 EventBackDoorLockedReadPagePickLockBaseFailTest.button1,
-EventBackDoorLockedTocPrologUnlockDoor.text,|||\nYou can feel the tumblers, but nothing moves. Eventually, the hairpin bends too much to be of use. <i>Maybe this really is a waste of time,</i> you consider. <i>Wait, I have that key.</i>\n\nIf you have the {c:QItemBrassKey}, ...\n|||
+EventBackDoorLockedTocPrologUnlockDoor.text,"\nYou can feel the tumblers, but nothing moves. Eventually, the hairpin bends too much to be of use. <i>Maybe this really is a waste of time,</i> you consider. <i>Wait, I have that key.</i>\n\nIf you have the {c:QItemBrassKey}, ...\n"
 EventBackDoorLockedTocPrologUnlockDoor.button1,{action} Unlock door
 EventBackDoorLockedTocPrologUnlockDoor.button2,Cancel
 EventBackDoorLockedReadPageUnlockDoor.text,
 EventBackDoorLockedReadPageUnlockDoor.button1,
 EventBackDoorLockedReadPageUnlockDoorDisplay.text,
 EventBackDoorLockedReadPageUnlockDoorDisplay.button1,
-EventBackDoorLockedReadPageUnlockDoorBase.text,|||\nYou pull out the key and look at it for a moment before putting it into the lock... Test {strength} or {observation}.\n|||
+EventBackDoorLockedReadPageUnlockDoorBase.text,"\nYou pull out the key and look at it for a moment before putting it into the lock... Test {strength} or {observation}.\n"
 EventBackDoorLockedReadPageUnlockDoorBase.button1,Continue
 EventBackDoorLockedReadPageUnlockDoorBase.button2,Cancel
 EventBackDoorLockedReadPageUnlockDoorBasePassTest.text,
@@ -1101,7 +1092,7 @@ EventBackDoorLockedReadPageEpilog.text,
 EventBackDoorLockedReadPageEpilog.button1,
 EventBackDoorLockedReadPageEpilogDisplay.text,
 EventBackDoorLockedReadPageEpilogDisplay.button1,
-EventBackDoorLockedReadPageEpilogBase.text,|||\nWell, you try to put the key into the lock but it doesn’t fit, no matter how hard you try. You look at the key and try again. And again. And again. Dejected and out of ideas, you turn away from the door. “I guess we’ll have to find another way out,” you say to no one in particular.\n\nRemove this explore token.\n|||
+EventBackDoorLockedReadPageEpilogBase.text,"\nWell, you try to put the key into the lock but it doesn’t fit, no matter how hard you try. You look at the key and try again. And again. And again. Dejected and out of ideas, you turn away from the door. “I guess we’ll have to find another way out,” you say to no one in particular.\n\nRemove this explore token.\n"
 EventBackDoorLockedReadPageEpilogBase.button1,Continue
 EventBackDoorLockedReadPageEpilogTiePoint.text,
 EventBackDoorLockedReadPageEpilogTiePoint.button1,
@@ -1119,7 +1110,7 @@ EventBackyardBenAfterToc.text,
 EventBackyardBenAfterToc.button1,
 EventBackyardBenAfterTocSelector.text,
 EventBackyardBenAfterTocSelector.button1,
-EventBackyardBenAfterToc0.text,|||\nBenjamin looks around the room, like is he trying to figure out what you are doing.\n|||
+EventBackyardBenAfterToc0.text,"\nBenjamin looks around the room, like is he trying to figure out what you are doing.\n"
 EventBackyardBenAfterToc0.button1,{action} “Is the whole house this dirty?”
 EventBackyardBenAfterToc0.button2,{action} “There are footprints in the dust by that door...”
 EventBackyardBenAfterToc0.button3,{action} “Is there anything else we need to know?”
@@ -1132,7 +1123,7 @@ EventBackyardBenAfterExpr3.text,
 EventBackyardBenAfterExpr3.button1,
 EventBackyardBenAfterReadPageDirtDisplay.text,
 EventBackyardBenAfterReadPageDirtDisplay.button1,
-EventBackyardBenAfterReadPageDirtOverload1.text,|||\n“Well,” he snaps, “the house sat unused these last 10 years. You were hired to clean, not criticize.”\n\nThis man clearly does not like you.\n|||
+EventBackyardBenAfterReadPageDirtOverload1.text,"\n“Well,” he snaps, “the house sat unused these last 10 years. You were hired to clean, not criticize.”\n\nThis man clearly does not like you.\n"
 EventBackyardBenAfterReadPageDirtOverload1.button1,{qst:Continue}
 EventBackyardBenAfterReadPageDirtTiePoint.text,
 EventBackyardBenAfterReadPageDirtTiePoint.button1,
@@ -1148,7 +1139,7 @@ EventBackyardBenAfterLoopBack.text,
 EventBackyardBenAfterLoopBack.button1,
 EventBackyardBenAfterEnd.text,
 EventBackyardBenAfterEnd.button1,
-EventBackyardBenAfterReadPageDirtBase.text,|||\n“Well,” he starts, “10 years ago the house was packed quickly and then close up. There has been no one here since then, so expect the worst.”\n\nYou are not encouraged.\n|||
+EventBackyardBenAfterReadPageDirtBase.text,"\n“Well,” he starts, “10 years ago the house was packed quickly and then close up. There has been no one here since then, so expect the worst.”\n\nYou are not encouraged.\n"
 EventBackyardBenAfterReadPageDirtBase.button1,{qst:Continue}
 EventBackyardBenAfterExpr4.text,
 EventBackyardBenAfterExpr4.button1,
@@ -1160,7 +1151,7 @@ EventBackyardBenAfterExpr6.text,
 EventBackyardBenAfterExpr6.button1,
 EventBackyardBenAfterReadPageFootprintsDisplay.text,
 EventBackyardBenAfterReadPageFootprintsDisplay.button1,
-EventBackyardBenAfterReadPageFootprintsOverload1.text,|||\n“Then you should sweep it up. That’s what you’re here for, not to complain about dirt.”\n|||
+EventBackyardBenAfterReadPageFootprintsOverload1.text,"\n“Then you should sweep it up. That’s what you’re here for, not to complain about dirt.”\n"
 EventBackyardBenAfterReadPageFootprintsOverload1.button1,{qst:Continue}
 EventBackyardBenAfterReadPageFootprintsTiePoint.text,
 EventBackyardBenAfterReadPageFootprintsTiePoint.button1,
@@ -1168,7 +1159,7 @@ EventBackyardBenAfterReadPageFootprintsTestEnd.text,
 EventBackyardBenAfterReadPageFootprintsTestEnd.button1,
 EventBackyardBenAfterReadPageFootprintsEnd.text,
 EventBackyardBenAfterReadPageFootprintsEnd.button1,
-EventBackyardBenAfterReadPageFootprintsBase.text,|||\n“I think the handyman was in the house yesterday. They must be his.”\n|||
+EventBackyardBenAfterReadPageFootprintsBase.text,"\n“I think the handyman was in the house yesterday. They must be his.”\n"
 EventBackyardBenAfterReadPageFootprintsBase.button1,{qst:Continue}
 EventBackyardBenAfterExpr7.text,
 EventBackyardBenAfterExpr7.button1,
@@ -1206,7 +1197,7 @@ EventBackyardBenAfterReadPageAnythingElseTriggerBefore7.text,
 EventBackyardBenAfterReadPageAnythingElseTriggerBefore7.button1,
 EventBackyardBenAfterReadPageAnythingElseDisplay.text,
 EventBackyardBenAfterReadPageAnythingElseDisplay.button1,
-EventBackyardBenAfterReadPageAnythingElseOverload1.text,|||\n“What? Oh, here’s the key to the house. Don’t lose it.”\n\nAs he walks out, he drops the key in your direction. Place the {c:QItemBrassKey} common item in Ben’s space. Once outside, Benjamin snaps, “Everyone inside. No dawddling.” Move all investigators to the dining room and remove Ben from the board.\n\nBen slams the door shut behind him; place an Explore token as indicated.\n|||
+EventBackyardBenAfterReadPageAnythingElseOverload1.text,"\n“What? Oh, here’s the key to the house. Don’t lose it.”\n\nAs he walks out, he drops the key in your direction. Place the {c:QItemBrassKey} common item in Ben’s space. Once outside, Benjamin snaps, “Everyone inside. No dawddling.” Move all investigators to the dining room and remove Ben from the board.\n\nBen slams the door shut behind him; place an Explore token as indicated.\n"
 EventBackyardBenAfterReadPageAnythingElseOverload1.button1,{qst:Continue}
 EventBackyardBenAfterReadPageAnythingElseTiePoint.text,
 EventBackyardBenAfterReadPageAnythingElseTiePoint.button1,
@@ -1216,21 +1207,21 @@ EventBackyardBenAfterReadPageAnythingElseTestEnd.text,
 EventBackyardBenAfterReadPageAnythingElseTestEnd.button1,
 EventBackyardBenAfterReadPageAnythingElseEnd.text,
 EventBackyardBenAfterReadPageAnythingElseEnd.button1,
-EventBackyardBenAfterReadPageAnythingElseBase.text,|||\n“Oh, my, yes. Here’s the key you’ll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I must be going. Take your time and send someone to fetch me if you need anything.”\n\nBen walks out the back door, saying, “Everyone needs to get started.”\n\nMove any investigators who are outside to the dining room. Ben shuts the door behind you. <i>Was that a click?</i> Place an Explore token as indicated and remove Ben from the board.\n|||
+EventBackyardBenAfterReadPageAnythingElseBase.text,"\n“Oh, my, yes. Here’s the key you’ll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I must be going. Take your time and send someone to fetch me if you need anything.”\n\nBen walks out the back door, saying, “Everyone needs to get started.”\n\nMove any investigators who are outside to the dining room. Ben shuts the door behind you. <i>Was that a click?</i> Place an Explore token as indicated and remove Ben from the board.\n"
 EventBackyardBenAfterReadPageAnythingElseBase.button1,{qst:Continue}
 EventBackyardBenAfterExpr10.text,
 EventBackyardBenAfterExpr10.button1,
-EventBackyardBenAfterToc1.text,|||\nBenjamin seems surprised you asked about dirt. Odd since you were hired to clean.\n|||
+EventBackyardBenAfterToc1.text,"\nBenjamin seems surprised you asked about dirt. Odd since you were hired to clean.\n"
 EventBackyardBenAfterToc1.button1,{action} “Is the whole house this dirty?”
 EventBackyardBenAfterToc1.button2,{action} “There are footprints in the dust by that door...”
 EventBackyardBenAfterToc1.button3,{action} “Is there anything else we need to know?”
 EventBackyardBenAfterToc1.button4,{qst:Cancel}
-EventBackyardBenAfterToc2.text,|||\nYou notice Benjamin glancing nervously at the footprints. You are starting to wonder what’s going on.\n|||
+EventBackyardBenAfterToc2.text,"\nYou notice Benjamin glancing nervously at the footprints. You are starting to wonder what’s going on.\n"
 EventBackyardBenAfterToc2.button1,{action} “Is the whole house this dirty?”
 EventBackyardBenAfterToc2.button2,{action} “There are footprints in the dust by that door...”
 EventBackyardBenAfterToc2.button3,{action} “Is there anything else we need to know?”
 EventBackyardBenAfterToc2.button4,{qst:Cancel}
-EventBackyardBenAfterToc3.text,|||\n[this should never be seen]\n|||
+EventBackyardBenAfterToc3.text,"\n[this should never be seen]\n"
 EventBackyardBenAfterToc3.button1,{action} “Is the whole house this dirty?”
 EventBackyardBenAfterToc3.button2,{action} “There are footprints in the dust by that door...”
 EventBackyardBenAfterToc3.button3,{action} “Is there anything else we need to know?”
@@ -1249,7 +1240,7 @@ EventBackyardBenBeforeToc.text,
 EventBackyardBenBeforeToc.button1,
 EventBackyardBenBeforeTocSelector.text,
 EventBackyardBenBeforeTocSelector.button1,
-EventBackyardBenBeforeToc0.text,|||\nBenjamin is digging around in his pockets. You think you hear him mutter something about a key.\n|||
+EventBackyardBenBeforeToc0.text,"\nBenjamin is digging around in his pockets. You think you hear him mutter something about a key.\n"
 EventBackyardBenBeforeToc0.button1,{action} “How long will it take us to look through the house?”
 EventBackyardBenBeforeToc0.button2,{action} “What do you think happened to those children?”
 EventBackyardBenBeforeToc0.button3,{action} “Where were those children found?”
@@ -1278,7 +1269,7 @@ EventBackyardBenBeforeReadPageHowLongTriggerBefore3.text,
 EventBackyardBenBeforeReadPageHowLongTriggerBefore3.button1,
 EventBackyardBenBeforeReadPageHowLongDisplay.text,
 EventBackyardBenBeforeReadPageHowLongDisplay.button1,
-EventBackyardBenBeforeReadPageHowLongOverload1.text,|||\n“Long enough,” he snaps. “There are numerous rooms on the ground floor, there is a basement, and there are many rooms upstairs. The place has always been too big for the family. Peter lived here with his daughter. His wife died under suspicious circumstances when the girl was three. Never explained.\n\n“Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren’t you? And you won’t break anything else?” “I hope not,” he mutters under his breath.\n|||
+EventBackyardBenBeforeReadPageHowLongOverload1.text,"\n“Long enough,” he snaps. “There are numerous rooms on the ground floor, there is a basement, and there are many rooms upstairs. The place has always been too big for the family. Peter lived here with his daughter. His wife died under suspicious circumstances when the girl was three. Never explained.\n\n“Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren’t you? And you won’t break anything else?” “I hope not,” he mutters under his breath.\n"
 EventBackyardBenBeforeReadPageHowLongOverload1.button1,Continue
 EventBackyardBenBeforeReadPageHowLongTiePoint.text,
 EventBackyardBenBeforeReadPageHowLongTiePoint.button1,
@@ -1304,7 +1295,7 @@ EventBackyardBenBeforeEnd.text,
 EventBackyardBenBeforeEnd.button1,
 EventBackyardBenBeforeExpr12.text,
 EventBackyardBenBeforeExpr12.button1,
-EventBackyardBenBeforeReadPageHowLongBase.text,|||\n“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Peter lived here with his daughter. The wife died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I guess you’ll need a few hours just to look through the place and get your bearings. You’ll want to check every drawer, cabinet, and box in the house–take as much time as you need. The whole house should be cleared out and spotless by the end of next week.”\n|||
+EventBackyardBenBeforeReadPageHowLongBase.text,"\n“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Peter lived here with his daughter. The wife died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I guess you’ll need a few hours just to look through the place and get your bearings. You’ll want to check every drawer, cabinet, and box in the house–take as much time as you need. The whole house should be cleared out and spotless by the end of next week.”\n"
 EventBackyardBenBeforeReadPageHowLongBase.button1,Continue
 EventBackyardBenBeforeExpr4.text,
 EventBackyardBenBeforeExpr4.button1,
@@ -1330,7 +1321,7 @@ EventBackyardBenBeforeReadPageWhatTriggerBefore3.text,
 EventBackyardBenBeforeReadPageWhatTriggerBefore3.button1,
 EventBackyardBenBeforeReadPageWhatDisplay.text,
 EventBackyardBenBeforeReadPageWhatDisplay.button1,
-EventBackyardBenBeforeReadPageWhatOverload1.text,|||\n“The children? Two were strangled. Parts of them were... missing. The burns on the third were never explained. Nasty business.\n\n“Peter and his brother Henry both went missing that night. Most folks don’t know about Henry. Left a lot of folks around town wondering what really happened. But we’re not here to gossip.”\n|||
+EventBackyardBenBeforeReadPageWhatOverload1.text,"\n“The children? Two were strangled. Parts of them were... missing. The burns on the third were never explained. Nasty business.\n\n“Peter and his brother Henry both went missing that night. Most folks don’t know about Henry. Left a lot of folks around town wondering what really happened. But we’re not here to gossip.”\n"
 EventBackyardBenBeforeReadPageWhatOverload1.button1,Continue
 EventBackyardBenBeforeReadPageWhatTiePoint.text,
 EventBackyardBenBeforeReadPageWhatTiePoint.button1,
@@ -1348,7 +1339,7 @@ EventBackyardBenBeforeReadPageWhatEnd.text,
 EventBackyardBenBeforeReadPageWhatEnd.button1,
 EventBackyardBenBeforeExpr23.text,
 EventBackyardBenBeforeExpr23.button1,
-EventBackyardBenBeforeReadPageWhatBase.text,|||\n“The children? One of them was burned from head-to-toe. The other two were strangled and parts were... taken. The burns were never explained. Nasty business.\n\n“Peter Smythe–the girl’s father and the owner of this house–went missing that night. Most folks think he did something to the children and then ran away. Still hiding, they think.\n\n“What wasn’t reported is that his brother, Henry, also disappeared that night. Folks in town figured they’d run off together to avoid difficult questions.”\n\nGain 1 {clue}.\n|||
+EventBackyardBenBeforeReadPageWhatBase.text,"\n“The children? One of them was burned from head-to-toe. The other two were strangled and parts were... taken. The burns were never explained. Nasty business.\n\n“Peter Smythe–the girl’s father and the owner of this house–went missing that night. Most folks think he did something to the children and then ran away. Still hiding, they think.\n\n“What wasn’t reported is that his brother, Henry, also disappeared that night. Folks in town figured they’d run off together to avoid difficult questions.”\n\nGain 1 {clue}.\n"
 EventBackyardBenBeforeReadPageWhatBase.button1,Continue
 EventBackyardBenBeforeExpr15.text,
 EventBackyardBenBeforeExpr15.button1,
@@ -1374,7 +1365,7 @@ EventBackyardBenBeforeReadPageWhereTriggerBefore3.text,
 EventBackyardBenBeforeReadPageWhereTriggerBefore3.button1,
 EventBackyardBenBeforeReadPageWhereDisplay.text,
 EventBackyardBenBeforeReadPageWhereDisplay.button1,
-EventBackyardBenBeforeReadPageWhereOverload1.text,|||\n“The children were found just over there,” he grumbles, pointing back the way you came. “Not sure why it matters, but I’ll tell you: the girl who was burnt, she kept smoldering until the next day. Coroner couldn’t explain it.” Benjamin resumes digging through his pockets, but seems a little shaken.\n|||
+EventBackyardBenBeforeReadPageWhereOverload1.text,"\n“The children were found just over there,” he grumbles, pointing back the way you came. “Not sure why it matters, but I’ll tell you: the girl who was burnt, she kept smoldering until the next day. Coroner couldn’t explain it.” Benjamin resumes digging through his pockets, but seems a little shaken.\n"
 EventBackyardBenBeforeReadPageWhereOverload1.button1,Continue
 EventBackyardBenBeforeReadPageWhereTiePoint.text,
 EventBackyardBenBeforeReadPageWhereTiePoint.button1,
@@ -1392,7 +1383,7 @@ EventBackyardBenBeforeReadPageWhereEnd.text,
 EventBackyardBenBeforeReadPageWhereEnd.button1,
 EventBackyardBenBeforeExpr34.text,
 EventBackyardBenBeforeExpr34.button1,
-EventBackyardBenBeforeReadPageWhereBase.text,|||\n“The children were found just over there,” he says, pointing back the way you came. “They were in a pile; the girl’s body was still smoking from the burns. Strangest thing: she kept smoking until the next day. Coroner wasn’t able to explain it. No one was.\n\n“Our family has lived here for generations–many of them in this house. We’re upset to let it go, but no one lives here... or wants to after what happened.”\n\nGain 1 {clue}.\n\nBenjamin resumes searching his pockets, but seems a little shaken.\n|||
+EventBackyardBenBeforeReadPageWhereBase.text,"\n“The children were found just over there,” he says, pointing back the way you came. “They were in a pile; the girl’s body was still smoking from the burns. Strangest thing: she kept smoking until the next day. Coroner wasn’t able to explain it. No one was.\n\n“Our family has lived here for generations–many of them in this house. We’re upset to let it go, but no one lives here... or wants to after what happened.”\n\nGain 1 {clue}.\n\nBenjamin resumes searching his pockets, but seems a little shaken.\n"
 EventBackyardBenBeforeReadPageWhereBase.button1,Continue
 EventBackyardBenBeforeExpr26.text,
 EventBackyardBenBeforeExpr26.button1,
@@ -1418,7 +1409,7 @@ EventBackyardBenBeforeReadPageWhyTriggerBefore3.text,
 EventBackyardBenBeforeReadPageWhyTriggerBefore3.button1,
 EventBackyardBenBeforeReadPageWhyDisplay.text,
 EventBackyardBenBeforeReadPageWhyDisplay.button1,
-EventBackyardBenBeforeReadPageWhyOverload1.text,|||\n“That’s none of your concern,” he snaps.\n\nYou startle at his abrupt response. You and all investigators in your space suffer 1 facedown horror ({will} negates).\n|||
+EventBackyardBenBeforeReadPageWhyOverload1.text,"\n“That’s none of your concern,” he snaps.\n\nYou startle at his abrupt response. You and all investigators in your space suffer 1 facedown horror ({will} negates).\n"
 EventBackyardBenBeforeReadPageWhyOverload1.button1,Continue
 EventBackyardBenBeforeReadPageWhyTiePoint.text,
 EventBackyardBenBeforeReadPageWhyTiePoint.button1,
@@ -1436,7 +1427,7 @@ EventBackyardBenBeforeReadPageWhyEnd.text,
 EventBackyardBenBeforeReadPageWhyEnd.button1,
 EventBackyardBenBeforeExpr45.text,
 EventBackyardBenBeforeExpr45.button1,
-EventBackyardBenBeforeReadPageWhyBase.text,|||\n“Well, we tried right after the... trouble. No one would even come to look at it back then, but our priest, um, told us now is the right time.”\n\nGain 1 {clue}.\n|||
+EventBackyardBenBeforeReadPageWhyBase.text,"\n“Well, we tried right after the... trouble. No one would even come to look at it back then, but our priest, um, told us now is the right time.”\n\nGain 1 {clue}.\n"
 EventBackyardBenBeforeReadPageWhyBase.button1,Continue
 EventBackyardBenBeforeExpr37.text,
 EventBackyardBenBeforeExpr37.button1,
@@ -1448,7 +1439,7 @@ EventBackyardBenBeforeReadPageSorryLetBefore1.text,
 EventBackyardBenBeforeReadPageSorryLetBefore1.button1,
 EventBackyardBenBeforeReadPageSorryDisplay.text,
 EventBackyardBenBeforeReadPageSorryDisplay.button1,
-EventBackyardBenBeforeReadPageSorryBase.text,|||\n“You should be more careful. The house is old and in poor repair.” His shoulders rise for a moment, then fall as he sighs. “No real harm done... the gate can be repaired... again.”\n|||
+EventBackyardBenBeforeReadPageSorryBase.text,"\n“You should be more careful. The house is old and in poor repair.” His shoulders rise for a moment, then fall as he sighs. “No real harm done... the gate can be repaired... again.”\n"
 EventBackyardBenBeforeReadPageSorryBase.button1,Continue
 EventBackyardBenBeforeReadPageSorryTiePoint.text,
 EventBackyardBenBeforeReadPageSorryTiePoint.button1,
@@ -1456,35 +1447,35 @@ EventBackyardBenBeforeReadPageSorryTestEnd.text,
 EventBackyardBenBeforeReadPageSorryTestEnd.button1,
 EventBackyardBenBeforeReadPageSorryEnd.text,
 EventBackyardBenBeforeReadPageSorryEnd.button1,
-EventBackyardBenBeforeToc1.text,|||\nAs he digs through his pockets, he is grumbling something about the size of the house and you catch the word... “indolent”?\n|||
+EventBackyardBenBeforeToc1.text,"\nAs he digs through his pockets, he is grumbling something about the size of the house and you catch the word... “indolent”?\n"
 EventBackyardBenBeforeToc1.button1,{action} “How long will it take us to look through the house?”
 EventBackyardBenBeforeToc1.button2,{action} “What do you think happened to those children?”
 EventBackyardBenBeforeToc1.button3,{action} “Where were those children found?”
 EventBackyardBenBeforeToc1.button4,{action} “Why did you wait so long to sell the house?”
 EventBackyardBenBeforeToc1.button5,{action} “I’m sorry about the gate.”
 EventBackyardBenBeforeToc1.button6,Cancel
-EventBackyardBenBeforeToc2.text,|||\nBenjamin is still digging through his pockets. You hear him mutter about paying attention and minding your own business.\n|||
+EventBackyardBenBeforeToc2.text,"\nBenjamin is still digging through his pockets. You hear him mutter about paying attention and minding your own business.\n"
 EventBackyardBenBeforeToc2.button1,{action} “How long will it take us to look through the house?”
 EventBackyardBenBeforeToc2.button2,{action} “What do you think happened to those children?”
 EventBackyardBenBeforeToc2.button3,{action} “Where were those children found?”
 EventBackyardBenBeforeToc2.button4,{action} “Why did you wait so long to sell the house?”
 EventBackyardBenBeforeToc2.button5,{action} “I’m sorry about the gate.”
 EventBackyardBenBeforeToc2.button6,Cancel
-EventBackyardBenBeforeToc3.text,|||\nBenjamin is still looking through his pockets, but he’s moving slower and looks upset. You wonder what his connection is to those children.\n|||
+EventBackyardBenBeforeToc3.text,"\nBenjamin is still looking through his pockets, but he’s moving slower and looks upset. You wonder what his connection is to those children.\n"
 EventBackyardBenBeforeToc3.button1,{action} “How long will it take us to look through the house?”
 EventBackyardBenBeforeToc3.button2,{action} “What do you think happened to those children?”
 EventBackyardBenBeforeToc3.button3,{action} “Where were those children found?”
 EventBackyardBenBeforeToc3.button4,{action} “Why did you wait so long to sell the house?”
 EventBackyardBenBeforeToc3.button5,{action} “I’m sorry about the gate.”
 EventBackyardBenBeforeToc3.button6,Cancel
-EventBackyardBenBeforeToc4.text,|||\nBenjamin is looking around on the ground like maybe he dropped whatever he’s looking for. <i>Could it be a book instead of a key?</i> you wonder to yourself.\n|||
+EventBackyardBenBeforeToc4.text,"\nBenjamin is looking around on the ground like maybe he dropped whatever he’s looking for. <i>Could it be a book instead of a key?</i> you wonder to yourself.\n"
 EventBackyardBenBeforeToc4.button1,{action} “How long will it take us to look through the house?”
 EventBackyardBenBeforeToc4.button2,{action} “What do you think happened to those children?”
 EventBackyardBenBeforeToc4.button3,{action} “Where were those children found?”
 EventBackyardBenBeforeToc4.button4,{action} “Why did you wait so long to sell the house?”
 EventBackyardBenBeforeToc4.button5,{action} “I’m sorry about the gate.”
 EventBackyardBenBeforeToc4.button6,Cancel
-EventBackyardBenBeforeToc5.text,|||\nBenjamin still doesn’t look happy, but he doesn’t seem as angry now.\n|||
+EventBackyardBenBeforeToc5.text,"\nBenjamin still doesn’t look happy, but he doesn’t seem as angry now.\n"
 EventBackyardBenBeforeToc5.button1,{action} “How long will it take us to look through the house?”
 EventBackyardBenBeforeToc5.button2,{action} “What do you think happened to those children?”
 EventBackyardBenBeforeToc5.button3,{action} “Where were those children found?”
@@ -1505,14 +1496,14 @@ EventClosePortalToc.text,
 EventClosePortalToc.button1,
 EventClosePortalTocSelector.text,
 EventClosePortalTocSelector.button1,
-EventClosePortalTocPrologStep1.text,|||\nThe portal is open and you must close it quickly. If you have the {c:QItemRitualKnife}, the {c:QItemRitualComponents}, and the {c:QItemElderSignPendant}, you can start now.\n\nOnly {c:EventChosenInvestigator} can perform this ritual and only while standing at the altar.\n\nAre you ready?\n|||
+EventClosePortalTocPrologStep1.text,"\nThe portal is open and you must close it quickly. If you have the {c:QItemRitualKnife}, the {c:QItemRitualComponents}, and the {c:QItemElderSignPendant}, you can start now.\n\nOnly {c:EventChosenInvestigator} can perform this ritual and only while standing at the altar.\n\nAre you ready?\n"
 EventClosePortalTocPrologStep1.button1,{action} Begin Ritual
 EventClosePortalTocPrologStep1.button2,{qst:Cancel}
 EventClosePortalReadPageStep1.text,
 EventClosePortalReadPageStep1.button1,
 EventClosePortalReadPageStep1Display.text,
 EventClosePortalReadPageStep1Display.button1,
-EventClosePortalReadPageStep1Base.text,|||\nYou flip to the correct place in the book, turn to face the altar, and lay out the materials. The pattern is complex and it takes a few minutes to get right. Your companions are under constant attack by cult members and you can feel the approach of something from the other side of the portal. You must hurry.\n\nDrop the {c:QItemRitualComponents} Unique Item on the altar. It must stay on the altar for the duration of the ritual.\n\nThis step is complete.\n|||
+EventClosePortalReadPageStep1Base.text,"\nYou flip to the correct place in the book, turn to face the altar, and lay out the materials. The pattern is complex and it takes a few minutes to get right. Your companions are under constant attack by cult members and you can feel the approach of something from the other side of the portal. You must hurry.\n\nDrop the {c:QItemRitualComponents} Unique Item on the altar. It must stay on the altar for the duration of the ritual.\n\nThis step is complete.\n"
 EventClosePortalReadPageStep1Base.button1,{qst:Continue}
 EventClosePortalReadPageStep1TiePoint.text,
 EventClosePortalReadPageStep1TiePoint.button1,
@@ -1528,14 +1519,14 @@ EventClosePortalLoopBack.text,
 EventClosePortalLoopBack.button1,
 EventClosePortalEnd.text,
 EventClosePortalEnd.button1,
-EventClosePortalTocPrologStep2.text,|||\nYou turn the page and again review the process for “blessing” the knife. When you glance down, you are suprised that you can read the words now.\n\nYou pull out the {c:QItemRitualDagger} and...\n|||
+EventClosePortalTocPrologStep2.text,"\nYou turn the page and again review the process for “blessing” the knife. When you glance down, you are suprised that you can read the words now.\n\nYou pull out the {c:QItemRitualDagger} and...\n"
 EventClosePortalTocPrologStep2.button1,{action} Prepare the knife
 EventClosePortalTocPrologStep2.button2,{qst:Cancel}
 EventClosePortalReadPageStep2.text,
 EventClosePortalReadPageStep2.button1,
 EventClosePortalReadPageStep2Display.text,
 EventClosePortalReadPageStep2Display.button1,
-EventClosePortalReadPageStep2Base.text,|||\nThe book shows you how to hold the knife and some kind movement, like you’re presenting it to the altar. You fumble around, hoping your first try at something like this will be good enough.\n\nWhile you can read the words, you aren’t sure you understand them. If you do, test {lore}; otherwise, test {will} and hope for the best.\n\nFor each Unique Item you have, you may roll 1 extra die.\n|||
+EventClosePortalReadPageStep2Base.text,"\nThe book shows you how to hold the knife and some kind movement, like you’re presenting it to the altar. You fumble around, hoping your first try at something like this will be good enough.\n\nWhile you can read the words, you aren’t sure you understand them. If you do, test {lore}; otherwise, test {will} and hope for the best.\n\nFor each Unique Item you have, you may roll 1 extra die.\n"
 EventClosePortalReadPageStep2Base.button1,{qst:Continue}
 EventClosePortalReadPageStep2Base.button2,{qst:Cancel}
 EventClosePortalReadPageStep2BasePassTest.text,
@@ -1552,7 +1543,7 @@ EventClosePortalReadPageStep2FailMarkBefore1.text,
 EventClosePortalReadPageStep2FailMarkBefore1.button1,
 EventClosePortalReadPageStep2FailDisplay.text,
 EventClosePortalReadPageStep2FailDisplay.button1,
-EventClosePortalReadPageStep2FailBase.text,|||\nYou finish the incantation but nothing seems to have happened. You’ll need to keep trying.\n\nSuffer 1 facedown Damage and 1 facedown Horror ({will} negates).\n|||
+EventClosePortalReadPageStep2FailBase.text,"\nYou finish the incantation but nothing seems to have happened. You’ll need to keep trying.\n\nSuffer 1 facedown Damage and 1 facedown Horror ({will} negates).\n"
 EventClosePortalReadPageStep2FailBase.button1,{qst:Continue}
 EventClosePortalReadPageStep2FailTiePoint.text,
 EventClosePortalReadPageStep2FailTiePoint.button1,
@@ -1568,7 +1559,7 @@ EventClosePortalReadPageStep2Pass.text,
 EventClosePortalReadPageStep2Pass.button1,
 EventClosePortalReadPageStep2PassDisplay.text,
 EventClosePortalReadPageStep2PassDisplay.button1,
-EventClosePortalReadPageStep2PassBase.text,|||\nAs you finish the incantation, the blade becomes heavier and brighter. It... changes. The {c:QItemRitualKnife} is ready for what comes next.\n\nThis step is complete\n|||
+EventClosePortalReadPageStep2PassBase.text,"\nAs you finish the incantation, the blade becomes heavier and brighter. It... changes. The {c:QItemRitualKnife} is ready for what comes next.\n\nThis step is complete\n"
 EventClosePortalReadPageStep2PassBase.button1,{qst:Continue}
 EventClosePortalReadPageStep2PassTiePoint.text,
 EventClosePortalReadPageStep2PassTiePoint.button1,
@@ -1576,14 +1567,14 @@ EventClosePortalReadPageStep2PassEnd.text,
 EventClosePortalReadPageStep2PassEnd.button1,
 EventClosePortalTocPrologStep2Fail.text,
 EventClosePortalTocPrologStep2Fail.button1,
-EventClosePortalTocPrologStep2Repeat.text,|||\nThe knife still feels cold and dead in your hand. You’re starting to wonder if you”ll really be able to do this. You look at your fellow investigators, struggling to keep you alive and look down to try again.\n|||
+EventClosePortalTocPrologStep2Repeat.text,"\nThe knife still feels cold and dead in your hand. You’re starting to wonder if you”ll really be able to do this. You look at your fellow investigators, struggling to keep you alive and look down to try again.\n"
 EventClosePortalTocPrologStep2Repeat.button1,{action} Try again
 EventClosePortalTocPrologStep2Repeat.button2,{qst:Cancel}
 EventClosePortalReadPageStep2Repeat.text,
 EventClosePortalReadPageStep2Repeat.button1,
 EventClosePortalReadPageStep2RepeatDisplay.text,
 EventClosePortalReadPageStep2RepeatDisplay.button1,
-EventClosePortalReadPageStep2RepeatBase.text,|||\nYou read the text one more time, hold the knife over the altar, close your eyes, take a deep breath, and speak the words.\n\nIf are certain you understand it now, test {lore}; otherwise, test {will} and hope for the best.\n|||
+EventClosePortalReadPageStep2RepeatBase.text,"\nYou read the text one more time, hold the knife over the altar, close your eyes, take a deep breath, and speak the words.\n\nIf are certain you understand it now, test {lore}; otherwise, test {will} and hope for the best.\n"
 EventClosePortalReadPageStep2RepeatBase.button1,{qst:Continue}
 EventClosePortalReadPageStep2RepeatBase.button2,{qst:Cancel}
 EventClosePortalReadPageStep2RepeatBasePassTest.text,
@@ -1602,7 +1593,7 @@ EventClosePortalReadPageStep2FailRepeatMarkBefore1.text,
 EventClosePortalReadPageStep2FailRepeatMarkBefore1.button1,
 EventClosePortalReadPageStep2FailRepeatDisplay.text,
 EventClosePortalReadPageStep2FailRepeatDisplay.button1,
-EventClosePortalReadPageStep2FailRepeatBase.text,|||\nYou finish again and... nothing. You take a breath to calm your nerves, but the noise and carnage across the room make it hard to focus.\n\nSuffer 1 facedown Damage and 1 facedown Horror ({will} negates).\n|||
+EventClosePortalReadPageStep2FailRepeatBase.text,"\nYou finish again and... nothing. You take a breath to calm your nerves, but the noise and carnage across the room make it hard to focus.\n\nSuffer 1 facedown Damage and 1 facedown Horror ({will} negates).\n"
 EventClosePortalReadPageStep2FailRepeatBase.button1,{qst:Continue}
 EventClosePortalReadPageStep2FailRepeatTiePoint.text,
 EventClosePortalReadPageStep2FailRepeatTiePoint.button1,
@@ -1612,14 +1603,14 @@ EventClosePortalReadPageStep2RepeatBaseFailTest.text,
 EventClosePortalReadPageStep2RepeatBaseFailTest.button1,
 EventClosePortalTocPrologStep2FailRepeat.text,
 EventClosePortalTocPrologStep2FailRepeat.button1,
-EventClosePortalTocPrologStep3.text,|||\nYou turn the page and see the next step: drawing blood. You have to cut yourself with the {c:QItemRitualDagger} and let the blood drip into the chalice on the altar. The book says that the blood will empower the ritual and to close the portal.\n\nYou look at your hand and realize you are going to have to do this more than once. You steel yourself and prepare to draw blood.\n|||
+EventClosePortalTocPrologStep3.text,"\nYou turn the page and see the next step: drawing blood. You have to cut yourself with the {c:QItemRitualDagger} and let the blood drip into the chalice on the altar. The book says that the blood will empower the ritual and to close the portal.\n\nYou look at your hand and realize you are going to have to do this more than once. You steel yourself and prepare to draw blood.\n"
 EventClosePortalTocPrologStep3.button1,{action} Slice your palm
 EventClosePortalTocPrologStep3.button2,{qst:Cancel}
 EventClosePortalReadPageStep3.text,
 EventClosePortalReadPageStep3.button1,
 EventClosePortalReadPageStep3Display.text,
 EventClosePortalReadPageStep3Display.button1,
-EventClosePortalReadPageStep3Base.text,|||\nYou grip the {c:QItemRitualDagger} tightly and prepare to draw blood. You can feel your heart pounding in your chest. You must do this. You must stop the ritual.\n\nTest {will}. For each Unique Item you have, you may roll 1 extra die.\n|||
+EventClosePortalReadPageStep3Base.text,"\nYou grip the {c:QItemRitualDagger} tightly and prepare to draw blood. You can feel your heart pounding in your chest. You must do this. You must stop the ritual.\n\nTest {will}. For each Unique Item you have, you may roll 1 extra die.\n"
 EventClosePortalReadPageStep3Base.button1,{qst:Continue}
 EventClosePortalReadPageStep3Base.button2,{qst:Cancel}
 EventClosePortalReadPageStep3BasePassTest.text,
@@ -1636,7 +1627,7 @@ EventClosePortalReadPageStep3FailMarkBefore1.text,
 EventClosePortalReadPageStep3FailMarkBefore1.button1,
 EventClosePortalReadPageStep3FailDisplay.text,
 EventClosePortalReadPageStep3FailDisplay.button1,
-EventClosePortalReadPageStep3FailBase.text,|||\nA drop of blood spatters when it hits the cup. And another. Nothing seems to happen. You’re going to have to slice deeper.\n\nSuffer 2 Horror ({will} negates).\n|||
+EventClosePortalReadPageStep3FailBase.text,"\nA drop of blood spatters when it hits the cup. And another. Nothing seems to happen. You’re going to have to slice deeper.\n\nSuffer 2 Horror ({will} negates).\n"
 EventClosePortalReadPageStep3FailBase.button1,{qst:Continue}
 EventClosePortalReadPageStep3FailTiePoint.text,
 EventClosePortalReadPageStep3FailTiePoint.button1,
@@ -1652,7 +1643,7 @@ EventClosePortalReadPageStep3Pass.text,
 EventClosePortalReadPageStep3Pass.button1,
 EventClosePortalReadPageStep3PassDisplay.text,
 EventClosePortalReadPageStep3PassDisplay.button1,
-EventClosePortalReadPageStep3PassBase.text,|||\nYou squeeze your hand into a tight fist and blood drips into the chalice. You can’t see or hear the chalice change, but you can feel something happen to it.\n\nThis step is complete.\n|||
+EventClosePortalReadPageStep3PassBase.text,"\nYou squeeze your hand into a tight fist and blood drips into the chalice. You can’t see or hear the chalice change, but you can feel something happen to it.\n\nThis step is complete.\n"
 EventClosePortalReadPageStep3PassBase.button1,{qst:Continue}
 EventClosePortalReadPageStep3PassTiePoint.text,
 EventClosePortalReadPageStep3PassTiePoint.button1,
@@ -1660,14 +1651,14 @@ EventClosePortalReadPageStep3PassEnd.text,
 EventClosePortalReadPageStep3PassEnd.button1,
 EventClosePortalTocPrologStep3Fail.text,
 EventClosePortalTocPrologStep3Fail.button1,
-EventClosePortalTocPrologStep4.text,|||\nThe portal is humming and pulsing with energy. You can feel something trying to get through from the other side. You must hurry. You turn the page and see the next incantation. Like the one for the dagger, blessing, you can read it, but you aren’t sure you understand it.\n|||
+EventClosePortalTocPrologStep4.text,"\nThe portal is humming and pulsing with energy. You can feel something trying to get through from the other side. You must hurry. You turn the page and see the next incantation. Like the one for the dagger, blessing, you can read it, but you aren’t sure you understand it.\n"
 EventClosePortalTocPrologStep4.button1,{action} Read the incantation
 EventClosePortalTocPrologStep4.button2,{qst:Cancel}
 EventClosePortalReadPageStep4.text,
 EventClosePortalReadPageStep4.button1,
 EventClosePortalReadPageStep4Display.text,
 EventClosePortalReadPageStep4Display.button1,
-EventClosePortalReadPageStep4Base.text,|||\nThe incantation is long and complex. You’ll have to get this right to weaken the portal. If you don’t, it will take longer to close and the onslaught from the other side isn’t abating. You close your eyes for a moment, take a deep breath, look at the text again, and begin to speak the incantation.\n\nIf you understand it, test {lore}; otherwise, test {will} and hope for the best.\n|||
+EventClosePortalReadPageStep4Base.text,"\nThe incantation is long and complex. You’ll have to get this right to weaken the portal. If you don’t, it will take longer to close and the onslaught from the other side isn’t abating. You close your eyes for a moment, take a deep breath, look at the text again, and begin to speak the incantation.\n\nIf you understand it, test {lore}; otherwise, test {will} and hope for the best.\n"
 EventClosePortalReadPageStep4Base.button1,{qst:Continue}
 EventClosePortalReadPageStep4Base.button2,{qst:Cancel}
 EventClosePortalReadPageStep4BasePassTest.text,
@@ -1684,7 +1675,7 @@ EventClosePortalReadPageStep4FailMarkBefore1.text,
 EventClosePortalReadPageStep4FailMarkBefore1.button1,
 EventClosePortalReadPageStep4FailDisplay.text,
 EventClosePortalReadPageStep4FailDisplay.button1,
-EventClosePortalReadPageStep4FailBase.text,|||\nYou can feel something happen inside but it is not very strong. The portal sputters for a moment, but nothing more. You’ll have to try the incantation again.\n\nSuffer 1 facedown Damage and 1 facedown Horror ({will} negates).\n\nThe ritual is wearing you down.\n|||
+EventClosePortalReadPageStep4FailBase.text,"\nYou can feel something happen inside but it is not very strong. The portal sputters for a moment, but nothing more. You’ll have to try the incantation again.\n\nSuffer 1 facedown Damage and 1 facedown Horror ({will} negates).\n\nThe ritual is wearing you down.\n"
 EventClosePortalReadPageStep4FailBase.button1,{qst:Continue}
 EventClosePortalReadPageStep4FailTiePoint.text,
 EventClosePortalReadPageStep4FailTiePoint.button1,
@@ -1700,7 +1691,7 @@ EventClosePortalReadPageStep4Pass.text,
 EventClosePortalReadPageStep4Pass.button1,
 EventClosePortalReadPageStep4PassDisplay.text,
 EventClosePortalReadPageStep4PassDisplay.button1,
-EventClosePortalReadPageStep4PassBase.text,|||\nYou feel a welling of power as you speak the last word. The feeling inside you grows and you suddenly feel like you control the cosmos. The portal grows brighter and {c:TokenPortal} screams. You had forgotten about the boy–he will die in this ritual.\n\nSuffer 1 facedown Horror.\n\nAs the scream echos in the room, the portal grows dimmer and shrinks slightly. Where it was humming and stable before, it is sputtering, pulsing erratically, and making an electrical sound. It has been weakened, but not closed. It will eventually collapse on its own, but you can still feel something approaching. You can do better.\n\nThis step is complete.\n|||
+EventClosePortalReadPageStep4PassBase.text,"\nYou feel a welling of power as you speak the last word. The feeling inside you grows and you suddenly feel like you control the cosmos. The portal grows brighter and {c:TokenPortal} screams. You had forgotten about the boy–he will die in this ritual.\n\nSuffer 1 facedown Horror.\n\nAs the scream echos in the room, the portal grows dimmer and shrinks slightly. Where it was humming and stable before, it is sputtering, pulsing erratically, and making an electrical sound. It has been weakened, but not closed. It will eventually collapse on its own, but you can still feel something approaching. You can do better.\n\nThis step is complete.\n"
 EventClosePortalReadPageStep4PassBase.button1,{qst:Continue}
 EventClosePortalReadPageStep4PassTiePoint.text,
 EventClosePortalReadPageStep4PassTiePoint.button1,
@@ -1708,14 +1699,14 @@ EventClosePortalReadPageStep4PassEnd.text,
 EventClosePortalReadPageStep4PassEnd.button1,
 EventClosePortalTocPrologStep4Fail.text,
 EventClosePortalTocPrologStep4Fail.button1,
-EventClosePortalTocPrologStep4Repeat.text,|||\nThe portal is still humming and pulsing with energy. Whatever is approaching is getting closer.\n\nYou look at the incantation again and take a deep, calming breath.\n|||
+EventClosePortalTocPrologStep4Repeat.text,"\nThe portal is still humming and pulsing with energy. Whatever is approaching is getting closer.\n\nYou look at the incantation again and take a deep, calming breath.\n"
 EventClosePortalTocPrologStep4Repeat.button1,{action} Try again
 EventClosePortalTocPrologStep4Repeat.button2,{qst:Cancel}
 EventClosePortalReadPageStep4Repeat.text,
 EventClosePortalReadPageStep4Repeat.button1,
 EventClosePortalReadPageStep4RepeatDisplay.text,
 EventClosePortalReadPageStep4RepeatDisplay.button1,
-EventClosePortalReadPageStep4RepeatBase.text,|||\nYour fellow investigators are struggling to keep you alive and one looks over at you and you meet their eyes. Terror. Horror. You must get this. You look back down at the text.\n\nIf you understand it, test {lore}; otherwise, test {will} and hope for the best.\n|||
+EventClosePortalReadPageStep4RepeatBase.text,"\nYour fellow investigators are struggling to keep you alive and one looks over at you and you meet their eyes. Terror. Horror. You must get this. You look back down at the text.\n\nIf you understand it, test {lore}; otherwise, test {will} and hope for the best.\n"
 EventClosePortalReadPageStep4RepeatBase.button1,{qst:Continue}
 EventClosePortalReadPageStep4RepeatBase.button2,{qst:Cancel}
 EventClosePortalReadPageStep4RepeatBasePassTest.text,
@@ -1730,14 +1721,14 @@ EventClosePortalReadPageStep4RepeatPostTestFail.text,
 EventClosePortalReadPageStep4RepeatPostTestFail.button1,
 EventClosePortalReadPageStep4RepeatBaseFailTest.text,
 EventClosePortalReadPageStep4RepeatBaseFailTest.button1,
-EventClosePortalTocPrologStep5.text,|||\nYou turn the page and see the next step: you’ll need more blood. You have to cut yourself again with the {c:QItemRitualDagger} and let the blood drip on to the {c:QItemElderSign}. The book says that the blood will empower the {c:QItemElderSign} to completely close the portal, and seal this ley line in a way that will prevent another portal from opening here ever again.\n\nYou look at your hand and see that it has stopped bleeding. Cutting yourself again will take courage.\n|||
+EventClosePortalTocPrologStep5.text,"\nYou turn the page and see the next step: you’ll need more blood. You have to cut yourself again with the {c:QItemRitualDagger} and let the blood drip on to the {c:QItemElderSign}. The book says that the blood will empower the {c:QItemElderSign} to completely close the portal, and seal this ley line in a way that will prevent another portal from opening here ever again.\n\nYou look at your hand and see that it has stopped bleeding. Cutting yourself again will take courage.\n"
 EventClosePortalTocPrologStep5.button1,{action} Draw more blood
 EventClosePortalTocPrologStep5.button2,{qst:Cancel}
 EventClosePortalReadPageStep5.text,
 EventClosePortalReadPageStep5.button1,
 EventClosePortalReadPageStep5Display.text,
 EventClosePortalReadPageStep5Display.button1,
-EventClosePortalReadPageStep5Base.text,|||\nYou draw your knife across your palm again and a searing pain momentarily overwhelms you. You have to do this.\n\nYou look back down at the book and speak.\n\nIf you understand the text, test {lore}; otherwise, test {will} and hope for the best.\n\nFor each Unique Item you have, you may roll 1 extra die.\n|||
+EventClosePortalReadPageStep5Base.text,"\nYou draw your knife across your palm again and a searing pain momentarily overwhelms you. You have to do this.\n\nYou look back down at the book and speak.\n\nIf you understand the text, test {lore}; otherwise, test {will} and hope for the best.\n\nFor each Unique Item you have, you may roll 1 extra die.\n"
 EventClosePortalReadPageStep5Base.button1,{qst:Continue}
 EventClosePortalReadPageStep5Base.button2,{qst:Cancel}
 EventClosePortalReadPageStep5BasePassTest.text,
@@ -1754,7 +1745,7 @@ EventClosePortalReadPageStep5FailMarkBefore1.text,
 EventClosePortalReadPageStep5FailMarkBefore1.button1,
 EventClosePortalReadPageStep5FailDisplay.text,
 EventClosePortalReadPageStep5FailDisplay.button1,
-EventClosePortalReadPageStep5FailBase.text,|||\nYou finish the incantation, but the {c:QItemElderSign} just lies there. You’ll have to try again.\n\nSuffer 1 facedown Horror ({will} negates).\n|||
+EventClosePortalReadPageStep5FailBase.text,"\nYou finish the incantation, but the {c:QItemElderSign} just lies there. You’ll have to try again.\n\nSuffer 1 facedown Horror ({will} negates).\n"
 EventClosePortalReadPageStep5FailBase.button1,{qst:Continue}
 EventClosePortalReadPageStep5FailTiePoint.text,
 EventClosePortalReadPageStep5FailTiePoint.button1,
@@ -1774,7 +1765,7 @@ EventClosePortalReadPageStep5PassLetBefore1.text,
 EventClosePortalReadPageStep5PassLetBefore1.button1,
 EventClosePortalReadPageStep5PassDisplay.text,
 EventClosePortalReadPageStep5PassDisplay.button1,
-EventClosePortalReadPageStep5PassBase.text,|||\nYou squeeze your hand into a tight fist over the trinket. As your blood drips, the it begins to glow. Then it and the knife begin pulsing. When you look up, you see the portal is dimmer and smaller, pulsing in sync with the {QItemRitualDagger} and the {c:QItemElderSign}. The boy screams again, no longer sounding human.\n\nThe {c:QItemElderSign} rises and hovers over the altar. It vibrates briefly, then slowly moves across the room toward the portal.\n\nThe boy screams one last time as the elder sign makes contact with his forehead. The boy goes rigid, then the portal collapses and the boy falls to the ground... still smoldering... still moaning.\n\nThis investigation is over.\n|||
+EventClosePortalReadPageStep5PassBase.text,"\nYou squeeze your hand into a tight fist over the trinket. As your blood drips, the it begins to glow. Then it and the knife begin pulsing. When you look up, you see the portal is dimmer and smaller, pulsing in sync with the {QItemRitualDagger} and the {c:QItemElderSign}. The boy screams again, no longer sounding human.\n\nThe {c:QItemElderSign} rises and hovers over the altar. It vibrates briefly, then slowly moves across the room toward the portal.\n\nThe boy screams one last time as the elder sign makes contact with his forehead. The boy goes rigid, then the portal collapses and the boy falls to the ground... still smoldering... still moaning.\n\nThis investigation is over.\n"
 EventClosePortalReadPageStep5PassBase.button1,{qst:Continue}
 EventClosePortalReadPageStep5PassTiePoint.text,
 EventClosePortalReadPageStep5PassTiePoint.button1,
@@ -1782,14 +1773,14 @@ EventClosePortalReadPageStep5PassEnd.text,
 EventClosePortalReadPageStep5PassEnd.button1,
 EventClosePortalTocPrologStep5Fail.text,
 EventClosePortalTocPrologStep5Fail.button1,
-EventClosePortalTocPrologStep5Repeat.text,|||\nYou lift your hand over the altar again and prepare to speak again. The boy is still screaming in pain and terror.\n|||
+EventClosePortalTocPrologStep5Repeat.text,"\nYou lift your hand over the altar again and prepare to speak again. The boy is still screaming in pain and terror.\n"
 EventClosePortalTocPrologStep5Repeat.button1,{action} Try again
 EventClosePortalTocPrologStep5Repeat.button2,{qst:Cancel}
 EventClosePortalReadPageStep5Repeat.text,
 EventClosePortalReadPageStep5Repeat.button1,
 EventClosePortalReadPageStep5RepeatDisplay.text,
 EventClosePortalReadPageStep5RepeatDisplay.button1,
-EventClosePortalReadPageStep5RepeatBase.text,|||\nYou sqeeze more blood out of your fist on to the {c:QItemElderSign}. As it hits the trinket, the boy stops screaming.\n\nTest {lore} or {will}.\n\nFor each Unique Item you have, you may roll 1 extra die.\n|||
+EventClosePortalReadPageStep5RepeatBase.text,"\nYou sqeeze more blood out of your fist on to the {c:QItemElderSign}. As it hits the trinket, the boy stops screaming.\n\nTest {lore} or {will}.\n\nFor each Unique Item you have, you may roll 1 extra die.\n"
 EventClosePortalReadPageStep5RepeatBase.button1,{qst:Continue}
 EventClosePortalReadPageStep5RepeatBase.button2,{qst:Cancel}
 EventClosePortalReadPageStep5RepeatBasePassTest.text,
@@ -1814,7 +1805,7 @@ EventDvmClosePortalOrderedToc.text,
 EventDvmClosePortalOrderedToc.button1,
 EventDvmClosePortalTocSelector.text,
 EventDvmClosePortalTocSelector.button1,
-EventDvmClosePortalOrderedToc0.text,|||\nThe De Vermis Mysterium looks old and worn with time.\n|||
+EventDvmClosePortalOrderedToc0.text,"\nThe De Vermis Mysterium looks old and worn with time.\n"
 EventDvmClosePortalOrderedToc0.button1,Table of Contents
 EventDvmClosePortalOrderedToc0.button2,{action} Open the book
 EventDvmClosePortalOrderedToc0.button3,{qst:Cancel}
@@ -1822,7 +1813,7 @@ EventDvmClosePortalReadPagePage1.text,
 EventDvmClosePortalReadPagePage1.button1,
 EventDvmClosePortalReadPagePage1Display.text,
 EventDvmClosePortalReadPagePage1Display.button1,
-EventDvmClosePortalReadPagePage1Base.text,|||\nTable of Contents\n\nYou open the book. On the inside cover, someone–probably {c:EventChosenInvestigator}’s father– scrawled a note that reads, “Only my descendants will be able to read this book, and only at the appointed hour. I have seen to this.”\n\nYou puzzle over this for a moment, then turn to the first page. It’s a table of contents. The book seems to be full of spells and rituals. You scan down to find something about portals. Maybe “Travel, page 72”?\n\n{qst:FirstTimeRead}, gain 1 {clue}.\n|||
+EventDvmClosePortalReadPagePage1Base.text,"\nTable of Contents\n\nYou open the book. On the inside cover, someone–probably {c:EventChosenInvestigator}’s father– scrawled a note that reads, “Only my descendants will be able to read this book, and only at the appointed hour. I have seen to this.”\n\nYou puzzle over this for a moment, then turn to the first page. It’s a table of contents. The book seems to be full of spells and rituals. You scan down to find something about portals. Maybe “Travel, page 72”?\n\n{qst:FirstTimeRead}, gain 1 {clue}.\n"
 EventDvmClosePortalReadPagePage1Base.button1,{qst:Continue}
 EventDvmClosePortalReadPagePage1TiePoint.text,
 EventDvmClosePortalReadPagePage1TiePoint.button1,
@@ -1836,7 +1827,7 @@ EventDvmClosePortalLoopBack.text,
 EventDvmClosePortalLoopBack.button1,
 EventDvmClosePortalEnd.text,
 EventDvmClosePortalEnd.button1,
-EventDvmClosePortalOrderedToc1.text,|||\nThis is a spell book and {c:EventChosenInvestigator} may have... abilities. Sarah is pushing to find something about closing portals.\n|||
+EventDvmClosePortalOrderedToc1.text,"\nThis is a spell book and {c:EventChosenInvestigator} may have... abilities. Sarah is pushing to find something about closing portals.\n"
 EventDvmClosePortalOrderedToc1.button1,Table of Contents
 EventDvmClosePortalOrderedToc1.button2,{action} Open the book
 EventDvmClosePortalOrderedToc1.button3,Portal
@@ -1846,13 +1837,13 @@ EventDvmClosePortalReadPagePage2.text,
 EventDvmClosePortalReadPagePage2.button1,
 EventDvmClosePortalReadPagePage2Display.text,
 EventDvmClosePortalReadPagePage2Display.button1,
-EventDvmClosePortalReadPagePage2Base.text,|||\nYou flip through the pages to find the “Travel” section on page 72. The first entry is for portals.\n\nPortals\n\nYou read through an overview of the spell and skim past the opening ritual, including the list of materials needed to open one. Behind it is a closing ritual: how to close a portal that has already been cast.\n\nThere is a list of materials and artifacts needed. The list includes a dagger, chalice, human skull, and various herbs. There’s also mention of an “elder sign” but you aren’t sure what that is. From what you saw earlier in the book, these materials seem similar to what is needed to open a portal.\n\n<i>I wonder if they actually have these already?</i> you hope to yourself.\n|||
+EventDvmClosePortalReadPagePage2Base.text,"\nYou flip through the pages to find the “Travel” section on page 72. The first entry is for portals.\n\nPortals\n\nYou read through an overview of the spell and skim past the opening ritual, including the list of materials needed to open one. Behind it is a closing ritual: how to close a portal that has already been cast.\n\nThere is a list of materials and artifacts needed. The list includes a dagger, chalice, human skull, and various herbs. There’s also mention of an “elder sign” but you aren’t sure what that is. From what you saw earlier in the book, these materials seem similar to what is needed to open a portal.\n\n<i>I wonder if they actually have these already?</i> you hope to yourself.\n"
 EventDvmClosePortalReadPagePage2Base.button1,{qst:Continue}
 EventDvmClosePortalReadPagePage2TiePoint.text,
 EventDvmClosePortalReadPagePage2TiePoint.button1,
 EventDvmClosePortalReadPagePage2End.text,
 EventDvmClosePortalReadPagePage2End.button1,
-EventDvmClosePortalOrderedToc2.text,|||\nClosing a portal is going to require a lot of work.\n|||
+EventDvmClosePortalOrderedToc2.text,"\nClosing a portal is going to require a lot of work.\n"
 EventDvmClosePortalOrderedToc2.button1,Table of Contents
 EventDvmClosePortalOrderedToc2.button2,{action} Open the book
 EventDvmClosePortalOrderedToc2.button3,Portal
@@ -1864,13 +1855,13 @@ EventDvmClosePortalReadPagePage3.text,
 EventDvmClosePortalReadPagePage3.button1,
 EventDvmClosePortalReadPagePage3Display.text,
 EventDvmClosePortalReadPagePage3Display.button1,
-EventDvmClosePortalReadPagePage3Base.text,|||\nDagger\n\nYou flip the page. Here the book goes into detail about the knife needed to close the portal. It sounds beautiful, but you wonder where you would find something like that. Next is the process of empowering the blade. When you look at the incantation, it is written in a language you cannot read and, when you try, no sound comes from your mouth. Apparently, you will use this knife to draw blood for the ritual. Your blood.\n\nElder Sign\n\nAccording to the book, once the portal has manifested, it is weak and unstable. An elder sign is used to stabilize it. Either way, an elder sign is needed to close it. There is a drawing of one here, so now you know what to look for. There is another incantation you cannot understand or even sound out.\n\n{qst:FirstTimeRead}, gain 1 {clue}.\n|||
+EventDvmClosePortalReadPagePage3Base.text,"\nDagger\n\nYou flip the page. Here the book goes into detail about the knife needed to close the portal. It sounds beautiful, but you wonder where you would find something like that. Next is the process of empowering the blade. When you look at the incantation, it is written in a language you cannot read and, when you try, no sound comes from your mouth. Apparently, you will use this knife to draw blood for the ritual. Your blood.\n\nElder Sign\n\nAccording to the book, once the portal has manifested, it is weak and unstable. An elder sign is used to stabilize it. Either way, an elder sign is needed to close it. There is a drawing of one here, so now you know what to look for. There is another incantation you cannot understand or even sound out.\n\n{qst:FirstTimeRead}, gain 1 {clue}.\n"
 EventDvmClosePortalReadPagePage3Base.button1,{qst:Continue}
 EventDvmClosePortalReadPagePage3TiePoint.text,
 EventDvmClosePortalReadPagePage3TiePoint.button1,
 EventDvmClosePortalReadPagePage3End.text,
 EventDvmClosePortalReadPagePage3End.button1,
-EventDvmClosePortalOrderedToc3.text,|||\nEach tool seems to need special attention. This will require more study.\n|||
+EventDvmClosePortalOrderedToc3.text,"\nEach tool seems to need special attention. This will require more study.\n"
 EventDvmClosePortalOrderedToc3.button1,Table of Contents
 EventDvmClosePortalOrderedToc3.button2,{action} Open the book
 EventDvmClosePortalOrderedToc3.button3,Portal
@@ -1886,15 +1877,15 @@ EventDvmClosePortalExpr5.text,
 EventDvmClosePortalExpr5.button1,
 EventDvmClosePortalReadPagePage4Display.text,
 EventDvmClosePortalReadPagePage4Display.button1,
-EventDvmClosePortalReadPagePage4Overload1.text,|||\nSacrifice\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the sacrifice is small: a few drops of your own blood. You shudder as you read about using even more of your blood for this.\n\nYou remember it saying a person is required to make the portal. <i>It must be the boy,</i> you say out loud and startle yourself when you hear your own voice.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates).\n|||
+EventDvmClosePortalReadPagePage4Overload1.text,"\nSacrifice\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the sacrifice is small: a few drops of your own blood. You shudder as you read about using even more of your blood for this.\n\nYou remember it saying a person is required to make the portal. <i>It must be the boy,</i> you say out loud and startle yourself when you hear your own voice.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates).\n"
 EventDvmClosePortalReadPagePage4Overload1.button1,{qst:Continue}
 EventDvmClosePortalReadPagePage4TiePoint.text,
 EventDvmClosePortalReadPagePage4TiePoint.button1,
 EventDvmClosePortalReadPagePage4End.text,
 EventDvmClosePortalReadPagePage4End.button1,
-EventDvmClosePortalReadPagePage4Base.text,|||\nSacrifice\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the sacrifice is small: a few drops of your own blood. You shudder as you read about using even more of your blood for this.\n\nYou remember it saying a person is required to make the portal. You wonder who they might choose.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates).\n|||
+EventDvmClosePortalReadPagePage4Base.text,"\nSacrifice\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the sacrifice is small: a few drops of your own blood. You shudder as you read about using even more of your blood for this.\n\nYou remember it saying a person is required to make the portal. You wonder who they might choose.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates).\n"
 EventDvmClosePortalReadPagePage4Base.button1,{qst:Continue}
-EventDvmClosePortalOrderedToc4.text,|||\nA look of concern and disgust on your face, you turn the page.\n|||
+EventDvmClosePortalOrderedToc4.text,"\nA look of concern and disgust on your face, you turn the page.\n"
 EventDvmClosePortalOrderedToc4.button1,Table of Contents
 EventDvmClosePortalOrderedToc4.button2,{action} Open the book
 EventDvmClosePortalOrderedToc4.button3,Portal
@@ -1912,13 +1903,13 @@ EventDvmClosePortalExpr6.text,
 EventDvmClosePortalExpr6.button1,
 EventDvmClosePortalReadPagePage5Display.text,
 EventDvmClosePortalReadPagePage5Display.button1,
-EventDvmClosePortalReadPagePage5Overload1.text,|||\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how to use them draw more power for the ritual. Calculating the date and time for the ritual is also discussed, with a full moon being the most important.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n\n<i>The boy must be under the house somewhere,</i> you think to yourself.\n|||
+EventDvmClosePortalReadPagePage5Overload1.text,"\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how to use them draw more power for the ritual. Calculating the date and time for the ritual is also discussed, with a full moon being the most important.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n\n<i>The boy must be under the house somewhere,</i> you think to yourself.\n"
 EventDvmClosePortalReadPagePage5Overload1.button1,{qst:Continue}
 EventDvmClosePortalReadPagePage5TiePoint.text,
 EventDvmClosePortalReadPagePage5TiePoint.button1,
 EventDvmClosePortalReadPagePage5End.text,
 EventDvmClosePortalReadPagePage5End.button1,
-EventDvmClosePortalReadPagePage5Base.text,|||\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how they allow you to draw more power for the ritual. Determining the preferred dates and times for the ritual is also discussed, with a full moon being the most important part.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n|||
+EventDvmClosePortalReadPagePage5Base.text,"\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how they allow you to draw more power for the ritual. Determining the preferred dates and times for the ritual is also discussed, with a full moon being the most important part.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n"
 EventDvmClosePortalReadPagePage5Base.button1,{qst:Continue}
 EventDvmClosePortalOrderedToc5.text,
 EventDvmClosePortalOrderedToc5.button1,Table of Contents
@@ -1942,7 +1933,7 @@ EventDvmOpenPortalOrderedToc.text,
 EventDvmOpenPortalOrderedToc.button1,
 EventDvmOpenPortalTocSelector.text,
 EventDvmOpenPortalTocSelector.button1,
-EventDvmOpenPortalOrderedToc0.text,|||\nThe De Vermis Mysterium looks old and worn with time.\n|||
+EventDvmOpenPortalOrderedToc0.text,"\nThe De Vermis Mysterium looks old and worn with time.\n"
 EventDvmOpenPortalOrderedToc0.button1,Table of Contents
 EventDvmOpenPortalOrderedToc0.button2,{action} Open the book
 EventDvmOpenPortalOrderedToc0.button3,{qst:Cancel}
@@ -1950,7 +1941,7 @@ EventDvmOpenPortalReadPagePage1.text,
 EventDvmOpenPortalReadPagePage1.button1,
 EventDvmOpenPortalReadPagePage1Display.text,
 EventDvmOpenPortalReadPagePage1Display.button1,
-EventDvmOpenPortalReadPagePage1Base.text,|||\nTable of Contents\n\nYou open the book. On the inside cover, someone–probably {c:EventChosenInvestigator}’s father– scrawled a note that reads, “Only my descendants will be able to read this book, and only at the appointed hour. I have seen to this.”\n\nYou puzzle over this for a moment, then turn to the first page. It’s a table of contents. The book seems to be full of spells and rituals. You scan down to find something about portals. Maybe “Travel, page 72”?\n\nThe first time you read this page, gain 1 {clue}.\n|||
+EventDvmOpenPortalReadPagePage1Base.text,"\nTable of Contents\n\nYou open the book. On the inside cover, someone–probably {c:EventChosenInvestigator}’s father– scrawled a note that reads, “Only my descendants will be able to read this book, and only at the appointed hour. I have seen to this.”\n\nYou puzzle over this for a moment, then turn to the first page. It’s a table of contents. The book seems to be full of spells and rituals. You scan down to find something about portals. Maybe “Travel, page 72”?\n\nThe first time you read this page, gain 1 {clue}.\n"
 EventDvmOpenPortalReadPagePage1Base.button1,{qst:Continue}
 EventDvmOpenPortalReadPagePage1TiePoint.text,
 EventDvmOpenPortalReadPagePage1TiePoint.button1,
@@ -1964,7 +1955,7 @@ EventDvmOpenPortalLoopBack.text,
 EventDvmOpenPortalLoopBack.button1,
 EventDvmOpenPortalEnd.text,
 EventDvmOpenPortalEnd.button1,
-EventDvmOpenPortalOrderedToc1.text,|||\nThis is a spell book and {c:EventChosenInvestigator} may have... abilities. Sarah is pushing to find something about closing portals.\n|||
+EventDvmOpenPortalOrderedToc1.text,"\nThis is a spell book and {c:EventChosenInvestigator} may have... abilities. Sarah is pushing to find something about closing portals.\n"
 EventDvmOpenPortalOrderedToc1.button1,Table of Contents
 EventDvmOpenPortalOrderedToc1.button2,{action} Open the book
 EventDvmOpenPortalOrderedToc1.button3,Overview
@@ -1974,13 +1965,13 @@ EventDvmOpenPortalReadPagePage2.text,
 EventDvmOpenPortalReadPagePage2.button1,
 EventDvmOpenPortalReadPagePage2Display.text,
 EventDvmOpenPortalReadPagePage2Display.button1,
-EventDvmOpenPortalReadPagePage2Base.text,|||\nYou read through an overview of the opening ritual and how to perform it. There is a list of materials and artifacts needed. The list includes a dagger, chalice, human skull, and various herbs. There’s also mention of an “elder sign” but you aren’t sure what that is.\n\nYou must look for the dagger, various ritual components, and an elder sign.\n\n<i>Maybe they don’t have all of these yet,</i> you hope to yourself.\n|||
+EventDvmOpenPortalReadPagePage2Base.text,"\nYou read through an overview of the opening ritual and how to perform it. There is a list of materials and artifacts needed. The list includes a dagger, chalice, human skull, and various herbs. There’s also mention of an “elder sign” but you aren’t sure what that is.\n\nYou must look for the dagger, various ritual components, and an elder sign.\n\n<i>Maybe they don’t have all of these yet,</i> you hope to yourself.\n"
 EventDvmOpenPortalReadPagePage2Base.button1,{qst:Continue}
 EventDvmOpenPortalReadPagePage2TiePoint.text,
 EventDvmOpenPortalReadPagePage2TiePoint.button1,
 EventDvmOpenPortalReadPagePage2End.text,
 EventDvmOpenPortalReadPagePage2End.button1,
-EventDvmOpenPortalOrderedToc2.text,|||\nThis ritual seems complicated.\n|||
+EventDvmOpenPortalOrderedToc2.text,"\nThis ritual seems complicated.\n"
 EventDvmOpenPortalOrderedToc2.button1,Table of Contents
 EventDvmOpenPortalOrderedToc2.button2,{action} Open the book
 EventDvmOpenPortalOrderedToc2.button3,Overview
@@ -1992,13 +1983,13 @@ EventDvmOpenPortalReadPagePage3.text,
 EventDvmOpenPortalReadPagePage3.button1,
 EventDvmOpenPortalReadPagePage3Display.text,
 EventDvmOpenPortalReadPagePage3Display.button1,
-EventDvmOpenPortalReadPagePage3Base.text,|||\nDagger\n\nYou flip the page. Here the book goes into detail about the knife needed to close the portal. It sounds beautiful, but you wonder where you would find something like that. Next is the process of empowering the blade. When you look at the incantation, it is written in a language you cannot read and, when you try, no sound comes from your mouth. Apparently, you will use this knife to draw blood for the ritual. Your blood.\n\nElder Sign\n\nOnce the portal has manifested, it is weak and unstable. An elder sign is used to stabilize it. There is a picture of one here, so you at least know what it looks like now. The book goes on to say that without an elder sign, the portal must be fed blood to stay open.\n\n{qst:FirstTimeRead}, gain 1 {clue}.\n|||
+EventDvmOpenPortalReadPagePage3Base.text,"\nDagger\n\nYou flip the page. Here the book goes into detail about the knife needed to close the portal. It sounds beautiful, but you wonder where you would find something like that. Next is the process of empowering the blade. When you look at the incantation, it is written in a language you cannot read and, when you try, no sound comes from your mouth. Apparently, you will use this knife to draw blood for the ritual. Your blood.\n\nElder Sign\n\nOnce the portal has manifested, it is weak and unstable. An elder sign is used to stabilize it. There is a picture of one here, so you at least know what it looks like now. The book goes on to say that without an elder sign, the portal must be fed blood to stay open.\n\n{qst:FirstTimeRead}, gain 1 {clue}.\n"
 EventDvmOpenPortalReadPagePage3Base.button1,{qst:Continue}
 EventDvmOpenPortalReadPagePage3TiePoint.text,
 EventDvmOpenPortalReadPagePage3TiePoint.button1,
 EventDvmOpenPortalReadPagePage3End.text,
 EventDvmOpenPortalReadPagePage3End.button1,
-EventDvmOpenPortalOrderedToc3.text,|||\nOpening a portal seem complicated.\n|||
+EventDvmOpenPortalOrderedToc3.text,"\nOpening a portal seem complicated.\n"
 EventDvmOpenPortalOrderedToc3.button1,Table of Contents
 EventDvmOpenPortalOrderedToc3.button2,{action} Open the book
 EventDvmOpenPortalOrderedToc3.button3,Overview
@@ -2014,15 +2005,15 @@ EventDvmOpenPortalExpr5.text,
 EventDvmOpenPortalExpr5.button1,
 EventDvmOpenPortalReadPagePage4Display.text,
 EventDvmOpenPortalReadPagePage4Display.button1,
-EventDvmOpenPortalReadPagePage4Overload1.text,|||\nThe Sacrifice\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the required sacrifice is large. A chill runs down your spine as you realize that only a precious loved one is enough. <i>The boy from the journal,</i> you think to yourself. <i>He’s here somewhere and we’re going to find him.</i>\n\n<i>Who could do this to their own child?</i> you ask yourself.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates), then gain 2 {clue} if you don’t go Insane.\n|||
+EventDvmOpenPortalReadPagePage4Overload1.text,"\nThe Sacrifice\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the required sacrifice is large. A chill runs down your spine as you realize that only a precious loved one is enough. <i>The boy from the journal,</i> you think to yourself. <i>He’s here somewhere and we’re going to find him.</i>\n\n<i>Who could do this to their own child?</i> you ask yourself.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates), then gain 2 {clue} if you don’t go Insane.\n"
 EventDvmOpenPortalReadPagePage4Overload1.button1,{qst:Continue}
 EventDvmOpenPortalReadPagePage4TiePoint.text,
 EventDvmOpenPortalReadPagePage4TiePoint.button1,
 EventDvmOpenPortalReadPagePage4End.text,
 EventDvmOpenPortalReadPagePage4End.button1,
-EventDvmOpenPortalReadPagePage4Base.text,|||\nThe Sacrifice\n\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the required sacrifice is large. A cold chill runs down your spine as you realize that only a precious loved one is enough. <i>What kind of monster could do such a thing?”</i> you ask yourself.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates), then gain 2 {clue} if you don’t go Insane.\n|||
+EventDvmOpenPortalReadPagePage4Base.text,"\nThe Sacrifice\n\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the required sacrifice is large. A cold chill runs down your spine as you realize that only a precious loved one is enough. <i>What kind of monster could do such a thing?”</i> you ask yourself.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates), then gain 2 {clue} if you don’t go Insane.\n"
 EventDvmOpenPortalReadPagePage4Base.button1,{qst:Continue}
-EventDvmOpenPortalOrderedToc4.text,|||\nA look of concern and disgust on your face, you turn the page.\n|||
+EventDvmOpenPortalOrderedToc4.text,"\nA look of concern and disgust on your face, you turn the page.\n"
 EventDvmOpenPortalOrderedToc4.button1,Table of Contents
 EventDvmOpenPortalOrderedToc4.button2,{action} Open the book
 EventDvmOpenPortalOrderedToc4.button3,Overview
@@ -2040,13 +2031,13 @@ EventDvmOpenPortalExpr6.text,
 EventDvmOpenPortalExpr6.button1,
 EventDvmOpenPortalReadPagePage5Display.text,
 EventDvmOpenPortalReadPagePage5Display.button1,
-EventDvmOpenPortalReadPagePage5Overload1.text,|||\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how to use them draw more power for the ritual. Calculating the date and time for the ritual is also discussed, with a full moon being the most important.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n\n<i>The boy must be under the house somewhere,</i> you think to yourself.\n|||
+EventDvmOpenPortalReadPagePage5Overload1.text,"\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how to use them draw more power for the ritual. Calculating the date and time for the ritual is also discussed, with a full moon being the most important.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n\n<i>The boy must be under the house somewhere,</i> you think to yourself.\n"
 EventDvmOpenPortalReadPagePage5Overload1.button1,{qst:Continue}
 EventDvmOpenPortalReadPagePage5TiePoint.text,
 EventDvmOpenPortalReadPagePage5TiePoint.button1,
 EventDvmOpenPortalReadPagePage5End.text,
 EventDvmOpenPortalReadPagePage5End.button1,
-EventDvmOpenPortalReadPagePage5Base.text,|||\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how they allow you to draw more power for the ritual. Determining the preferred dates and times for the ritual is also discussed, with a full moon being the most important part.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n|||
+EventDvmOpenPortalReadPagePage5Base.text,"\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how they allow you to draw more power for the ritual. Determining the preferred dates and times for the ritual is also discussed, with a full moon being the most important part.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n"
 EventDvmOpenPortalReadPagePage5Base.button1,{qst:Continue}
 EventDvmOpenPortalOrderedToc5.text,
 EventDvmOpenPortalOrderedToc5.button1,Table of Contents
@@ -2076,7 +2067,7 @@ EventFeedPortalReadPagePage1.text,
 EventFeedPortalReadPagePage1.button1,
 EventFeedPortalReadPagePage1Display.text,
 EventFeedPortalReadPagePage1Display.button1,
-EventFeedPortalReadPagePage1Base.text,|||\nYou freeze as something... <i>happens‘/’ to the house. You aren’t sure what it is, but fear clutches your gut as the feeling washes over you.\n\nThen, from deep in the house, you hear a boy scream in pain and terror. He stops abruptly and you feel something in the air, like electricity. The house shudders and everything goes quiet. Sarah’s eyes widen and she whispers to {c:EventChosenInvestigator}, “He’s started. The ritual has started. We have to get to the {c:TileAltar} and stop your cousin David.”\n\nAs she finishes speaking, someone in cult robes runs by you, heading toward the altar.\n\nSarah lights up. “We have the {c:QItemElderSign}. Without it, David needs constant sacrifice to keep the gate open. We must kill his followers before they reach him.”\n|||
+EventFeedPortalReadPagePage1Base.text,"\nYou freeze as something... <i>happens‘/’ to the house. You aren’t sure what it is, but fear clutches your gut as the feeling washes over you.\n\nThen, from deep in the house, you hear a boy scream in pain and terror. He stops abruptly and you feel something in the air, like electricity. The house shudders and everything goes quiet. Sarah’s eyes widen and she whispers to {c:EventChosenInvestigator}, “He’s started. The ritual has started. We have to get to the {c:TileAltar} and stop your cousin David.”\n\nAs she finishes speaking, someone in cult robes runs by you, heading toward the altar.\n\nSarah lights up. “We have the {c:QItemElderSign}. Without it, David needs constant sacrifice to keep the gate open. We must kill his followers before they reach him.”\n"
 EventFeedPortalReadPagePage1Base.button1,{qst:Continue}
 EventFeedPortalReadPagePage1TiePoint.text,
 EventFeedPortalReadPagePage1TiePoint.button1,
@@ -2096,7 +2087,7 @@ EventFeedPortalReadPagePage2.text,
 EventFeedPortalReadPagePage2.button1,
 EventFeedPortalReadPagePage2Display.text,
 EventFeedPortalReadPagePage2Display.button1,
-EventFeedPortalReadPagePage2Base.text,|||\nThe woman’s screaming stops and, for a moment, the house is silent again... as if the house were taking a breath. Then, though you cannot see it, you can feel the portal spring into being. You hear... <i>something‘/’ moan in pain, reverberating through the house. You know in your gut it’s David’s son.\n\nThe feeling of power grows stronger; it radiates through the floorboards and moves through the walls. Sarah whispers, “The portal is open, we have to stop him.”\n\nAs she speaks, another cultist brushes past you, heading toward the ritual. “You must kill them,” she says. “You must kill all of them.”\n\nfeedPortalKillCount = 0 feedPortalKillGoal = 2 * #investigator + 2 feedPortalKillCount = 0\n|||
+EventFeedPortalReadPagePage2Base.text,"\nThe woman’s screaming stops and, for a moment, the house is silent again... as if the house were taking a breath. Then, though you cannot see it, you can feel the portal spring into being. You hear... <i>something‘/’ moan in pain, reverberating through the house. You know in your gut it’s David’s son.\n\nThe feeling of power grows stronger; it radiates through the floorboards and moves through the walls. Sarah whispers, “The portal is open, we have to stop him.”\n\nAs she speaks, another cultist brushes past you, heading toward the ritual. “You must kill them,” she says. “You must kill all of them.”\n\nfeedPortalKillCount = 0 feedPortalKillGoal = 2 * #investigator + 2 feedPortalKillCount = 0\n"
 EventFeedPortalReadPagePage2Base.button1,{qst:Continue}
 EventFeedPortalReadPagePage2TiePoint.text,
 EventFeedPortalReadPagePage2TiePoint.button1,
@@ -2108,7 +2099,7 @@ EventFeedPortalReadPageRepeatable1.text,
 EventFeedPortalReadPageRepeatable1.button1,
 EventFeedPortalReadPageRepeatable1Display.text,
 EventFeedPortalReadPageRepeatable1Display.button1,
-EventFeedPortalReadPageRepeatable1Base.text,|||\nThe house pulses with power, overwhelming you for a moment. You snap back to awareness as a cultist approaches. You steady yourself for another attack.\n\nThe power you feel sputters with instability. With these cultists as sacrifice, the portal will remain open; without them, it will collapse.\n|||
+EventFeedPortalReadPageRepeatable1Base.text,"\nThe house pulses with power, overwhelming you for a moment. You snap back to awareness as a cultist approaches. You steady yourself for another attack.\n\nThe power you feel sputters with instability. With these cultists as sacrifice, the portal will remain open; without them, it will collapse.\n"
 EventFeedPortalReadPageRepeatable1Base.button1,{qst:Continue}
 EventFeedPortalReadPageRepeatable1TiePoint.text,
 EventFeedPortalReadPageRepeatable1TiePoint.button1,
@@ -2120,7 +2111,7 @@ EventFeedPortalReadPageRepeatable2.text,
 EventFeedPortalReadPageRepeatable2.button1,
 EventFeedPortalReadPageRepeatable2Display.text,
 EventFeedPortalReadPageRepeatable2Display.button1,
-EventFeedPortalReadPageRepeatable2Base.text,|||\nSarah whispers, “We must hurry. He is summoning his god. I can feel it.”\n\nThe house continues to vibrate with what you assume is the energy of the portal. What should be a stable hum continues its uneven popping.\n|||
+EventFeedPortalReadPageRepeatable2Base.text,"\nSarah whispers, “We must hurry. He is summoning his god. I can feel it.”\n\nThe house continues to vibrate with what you assume is the energy of the portal. What should be a stable hum continues its uneven popping.\n"
 EventFeedPortalReadPageRepeatable2Base.button1,{qst:Continue}
 EventFeedPortalReadPageRepeatable2TiePoint.text,
 EventFeedPortalReadPageRepeatable2TiePoint.button1,
@@ -2132,7 +2123,7 @@ EventFeedPortalReadPageRepeatable3.text,
 EventFeedPortalReadPageRepeatable3.button1,
 EventFeedPortalReadPageRepeatable3Display.text,
 EventFeedPortalReadPageRepeatable3Display.button1,
-EventFeedPortalReadPageRepeatable3Base.text,|||\nYou stop for a moment and wonder, <i>How many cultists do we have to kill?! We’ve already killed {feedPortalKillCount}.</i> Out of the corner of your eye you see another one coming. It’s time to get back to work.\n|||
+EventFeedPortalReadPageRepeatable3Base.text,"\nYou stop for a moment and wonder, <i>How many cultists do we have to kill?! We’ve already killed {feedPortalKillCount}.</i> Out of the corner of your eye you see another one coming. It’s time to get back to work.\n"
 EventFeedPortalReadPageRepeatable3Base.button1,{qst:Continue}
 EventFeedPortalReadPageRepeatable3TiePoint.text,
 EventFeedPortalReadPageRepeatable3TiePoint.button1,
@@ -2144,7 +2135,7 @@ EventFeedPortalReadPageRepeatable4.text,
 EventFeedPortalReadPageRepeatable4.button1,
 EventFeedPortalReadPageRepeatable4Display.text,
 EventFeedPortalReadPageRepeatable4Display.button1,
-EventFeedPortalReadPageRepeatable4Base.text,|||\nThe house stops vibrating for a moment. When it starts again, it is weaker, but still powerful.\n\n“What you are doing is working,” Sarah whispers. “Keep going. I think we’re close”\n|||
+EventFeedPortalReadPageRepeatable4Base.text,"\nThe house stops vibrating for a moment. When it starts again, it is weaker, but still powerful.\n\n“What you are doing is working,” Sarah whispers. “Keep going. I think we’re close”\n"
 EventFeedPortalReadPageRepeatable4Base.button1,{qst:Continue}
 EventFeedPortalReadPageRepeatable4TiePoint.text,
 EventFeedPortalReadPageRepeatable4TiePoint.button1,
@@ -2158,7 +2149,7 @@ EventFeedPortalReadPageRepeatable5MarkBefore1.text,
 EventFeedPortalReadPageRepeatable5MarkBefore1.button1,
 EventFeedPortalReadPageRepeatable5Display.text,
 EventFeedPortalReadPageRepeatable5Display.button1,
-EventFeedPortalReadPageRepeatable5Base.text,|||\n“Hurry,” Sarah whispers. “The portal is still open and we are running out of time.\n|||
+EventFeedPortalReadPageRepeatable5Base.text,"\n“Hurry,” Sarah whispers. “The portal is still open and we are running out of time.\n"
 EventFeedPortalReadPageRepeatable5Base.button1,{qst:Continue}
 EventFeedPortalReadPageRepeatable5TiePoint.text,
 EventFeedPortalReadPageRepeatable5TiePoint.button1,
@@ -2174,7 +2165,7 @@ EventJournalOrderedToc.text,
 EventJournalOrderedToc.button1,
 EventJournalTocSelector.text,
 EventJournalTocSelector.button1,
-EventJournalOrderedToc0.text,|||\nThe book looks new. When you flip through it, you see that there are only a few entries. The first one is from last Sunday.\n|||
+EventJournalOrderedToc0.text,"\nThe book looks new. When you flip through it, you see that there are only a few entries. The first one is from last Sunday.\n"
 EventJournalOrderedToc0.button1,Page 1
 EventJournalOrderedToc0.button2,{action} Read the first Page
 EventJournalOrderedToc0.button3,Cancel
@@ -2182,7 +2173,7 @@ EventJournalReadPagePage1.text,
 EventJournalReadPagePage1.button1,
 EventJournalReadPagePage1Display.text,
 EventJournalReadPagePage1Display.button1,
-EventJournalReadPagePage1Base.text,|||\nSunday the 25th of October 1925\n\nI’ve decided to record what happens this week. After three generations of Smythes making the attempt, I think the Master will finally bring Our God into this world. This time, there will be no mistakes. His uncle failed 10 years ago, but the Master will not. We are gathering supplies, preparing the altar, and looking for the right people to help us. We will sacrifice His son in the ritual. He says it is painful to think about–His son is so young–but that is what sacrifice is. The Master is a great man.\n\nMonday the 26th of October 1925\n\nThe Master told us that we may all die in the ritual. The hunger of Our God’s arrival will drain us. But he thinks we can supply Its Greatness from another source. I hired a local cleaning company to come to the house the day of the ritual. They should protect us.\n|||
+EventJournalReadPagePage1Base.text,"\nSunday the 25th of October 1925\n\nI’ve decided to record what happens this week. After three generations of Smythes making the attempt, I think the Master will finally bring Our God into this world. This time, there will be no mistakes. His uncle failed 10 years ago, but the Master will not. We are gathering supplies, preparing the altar, and looking for the right people to help us. We will sacrifice His son in the ritual. He says it is painful to think about–His son is so young–but that is what sacrifice is. The Master is a great man.\n\nMonday the 26th of October 1925\n\nThe Master told us that we may all die in the ritual. The hunger of Our God’s arrival will drain us. But he thinks we can supply Its Greatness from another source. I hired a local cleaning company to come to the house the day of the ritual. They should protect us.\n"
 EventJournalReadPagePage1Base.button1,Continue
 EventJournalReadPagePage1TiePoint.text,
 EventJournalReadPagePage1TiePoint.button1,
@@ -2196,7 +2187,7 @@ EventJournalLoopBack.text,
 EventJournalLoopBack.button1,
 EventJournalEnd.text,
 EventJournalEnd.button1,
-EventJournalOrderedToc1.text,|||\nYou are shocked to learn that you are here to protect their lives. You are determined to stop them from killing you.\n|||
+EventJournalOrderedToc1.text,"\nYou are shocked to learn that you are here to protect their lives. You are determined to stop them from killing you.\n"
 EventJournalOrderedToc1.button1,Page 1
 EventJournalOrderedToc1.button2,{action} Read the first Page
 EventJournalOrderedToc1.button3,Page 2
@@ -2206,13 +2197,13 @@ EventJournalReadPagePage2.text,
 EventJournalReadPagePage2.button1,
 EventJournalReadPagePage2Display.text,
 EventJournalReadPagePage2Display.button1,
-EventJournalReadPagePage2Base.text,|||\nTuesday the 27th of October 1925\n\nPreparations continue. The ritual will test the Master and maybe break him. He counts on the healing stone to see him through but one of the church members lost it. The Master told me he will use her instead. He said it wasn’t much of a sacrifice, but it would be enough when the time comes.\n\n\nWednesday the 28th of October 1925\n\nThe Master has prepared his son all week. The boy is isolated. The Master says his son’s fear will provide the power needed to create the portal.\n\nThe boy’s screaming kept me awake last night. It hurts to hear, but the Master told me this morning that power is drawing into him, making him stronger for Saturday.\n|||
+EventJournalReadPagePage2Base.text,"\nTuesday the 27th of October 1925\n\nPreparations continue. The ritual will test the Master and maybe break him. He counts on the healing stone to see him through but one of the church members lost it. The Master told me he will use her instead. He said it wasn’t much of a sacrifice, but it would be enough when the time comes.\n\n\nWednesday the 28th of October 1925\n\nThe Master has prepared his son all week. The boy is isolated. The Master says his son’s fear will provide the power needed to create the portal.\n\nThe boy’s screaming kept me awake last night. It hurts to hear, but the Master told me this morning that power is drawing into him, making him stronger for Saturday.\n"
 EventJournalReadPagePage2Base.button1,Continue
 EventJournalReadPagePage2TiePoint.text,
 EventJournalReadPagePage2TiePoint.button1,
 EventJournalReadPagePage2End.text,
 EventJournalReadPagePage2End.button1,
-EventJournalOrderedToc2.text,|||\n<i>Sacrifice? His own son?!</i> These people must be stopped.\n|||
+EventJournalOrderedToc2.text,"\n<i>Sacrifice? His own son?!</i> These people must be stopped.\n"
 EventJournalOrderedToc2.button1,Page 1
 EventJournalOrderedToc2.button2,{action} Read the first Page
 EventJournalOrderedToc2.button3,Page 2
@@ -2230,13 +2221,13 @@ EventJournalReadPagePage3TriggerBefore2.text,
 EventJournalReadPagePage3TriggerBefore2.button1,
 EventJournalReadPagePage3Display.text,
 EventJournalReadPagePage3Display.button1,
-EventJournalReadPagePage3Base.text,|||\nThursday the 29th of October 1925\n\nKids broke into the house yesterday. One of the Brothers chased them off, but not before they broke into the basement. We secured the door with a special lock and cast a living darkness spell on the room. I piled boxes in front of the entrance to the place of power beneath the house. No one will find their way to the altar before Saturday.\n|||
+EventJournalReadPagePage3Base.text,"\nThursday the 29th of October 1925\n\nKids broke into the house yesterday. One of the Brothers chased them off, but not before they broke into the basement. We secured the door with a special lock and cast a living darkness spell on the room. I piled boxes in front of the entrance to the place of power beneath the house. No one will find their way to the altar before Saturday.\n"
 EventJournalReadPagePage3Base.button1,Continue
 EventJournalReadPagePage3TiePoint.text,
 EventJournalReadPagePage3TiePoint.button1,
 EventJournalReadPagePage3End.text,
 EventJournalReadPagePage3End.button1,
-EventJournalOrderedToc3.text,|||\nThere are two more entries. These people must be stopped.\n|||
+EventJournalOrderedToc3.text,"\nThere are two more entries. These people must be stopped.\n"
 EventJournalOrderedToc3.button1,Page 1
 EventJournalOrderedToc3.button2,{action} Read the first Page
 EventJournalOrderedToc3.button3,Page 2
@@ -2254,13 +2245,13 @@ EventJournalReadPagePage4LetBefore1.text,
 EventJournalReadPagePage4LetBefore1.button1,
 EventJournalReadPagePage4Display.text,
 EventJournalReadPagePage4Display.button1,
-EventJournalReadPagePage4Base.text,|||\nFriday the 30th of October 1925\n\nThe cleaning crew will be here tomorrow. Everything is prepared for the ritual; I can feel the fear and excitement building in all of us. Soon the world will belong to the One True God.\n\nThe Master’s son continues to plead for his life during the day, then screams in the night. The Master told me in confidence that he yearns to stop, but that he must keep his commitment and see this through.\n\nThe boy has been moved to the dungeon outside the altar room. There is a hole in the wall that he stares through when he’s not begging or screaming. The altar is visible through the hole; looking at it terrifies the boy. I can no longer hear him, but I can still feel his fear, even across town. I will be strong.\n|||
+EventJournalReadPagePage4Base.text,"\nFriday the 30th of October 1925\n\nThe cleaning crew will be here tomorrow. Everything is prepared for the ritual; I can feel the fear and excitement building in all of us. Soon the world will belong to the One True God.\n\nThe Master’s son continues to plead for his life during the day, then screams in the night. The Master told me in confidence that he yearns to stop, but that he must keep his commitment and see this through.\n\nThe boy has been moved to the dungeon outside the altar room. There is a hole in the wall that he stares through when he’s not begging or screaming. The altar is visible through the hole; looking at it terrifies the boy. I can no longer hear him, but I can still feel his fear, even across town. I will be strong.\n"
 EventJournalReadPagePage4Base.button1,Continue
 EventJournalReadPagePage4TiePoint.text,
 EventJournalReadPagePage4TiePoint.button1,
 EventJournalReadPagePage4End.text,
 EventJournalReadPagePage4End.button1,
-EventJournalOrderedToc4.text,|||\nYou are here to feed their god. “We must stop this horror,” you say aloud.\n|||
+EventJournalOrderedToc4.text,"\nYou are here to feed their god. “We must stop this horror,” you say aloud.\n"
 EventJournalOrderedToc4.button1,Page 1
 EventJournalOrderedToc4.button2,{action} Read the first Page
 EventJournalOrderedToc4.button3,Page 2
@@ -2278,7 +2269,7 @@ EventJournalReadPagePage5TriggerBefore1.text,
 EventJournalReadPagePage5TriggerBefore1.button1,
 EventJournalReadPagePage5Display.text,
 EventJournalReadPagePage5Display.button1,
-EventJournalReadPagePage5Base.text,|||\nSaturday the 31st of October 1925\n\nAll the preparations are made. Tonight we will bring Its glory to this world.\n\nEarlier, the Master told me that something is bothering him, but he isn’t sure what. He said something has changed, like there is another power in the house. The brethren searched by can find nothing.\n\nThe woman who lost the stone is already at the altar. Her husband pleaded with me to help him find the stone; I’m going to search the chapel one more time. For his sake, I hope I find it.\n\nThe cleaning crew should be there soon. It is time.\n|||
+EventJournalReadPagePage5Base.text,"\nSaturday the 31st of October 1925\n\nAll the preparations are made. Tonight we will bring Its glory to this world.\n\nEarlier, the Master told me that something is bothering him, but he isn’t sure what. He said something has changed, like there is another power in the house. The brethren searched by can find nothing.\n\nThe woman who lost the stone is already at the altar. Her husband pleaded with me to help him find the stone; I’m going to search the chapel one more time. For his sake, I hope I find it.\n\nThe cleaning crew should be there soon. It is time.\n"
 EventJournalReadPagePage5Base.button1,Continue
 EventJournalReadPagePage5TiePoint.text,
 EventJournalReadPagePage5TiePoint.button1,
@@ -2306,14 +2297,14 @@ EventOpenPortalToc.text,
 EventOpenPortalToc.button1,
 EventOpenPortalTocSelector.text,
 EventOpenPortalTocSelector.button1,
-EventOpenPortalTocPrologStep1.text,|||\nDavid stands at the alter, arms raised, speaking a language you cannot understand. You can see on the altar the various tools and materials needed for the ritual.\n\nThe boy is chained to the floor, crying and quietly begging his father to stop.\n\nIf you have the {c:QItemRitualKnife}, the {c:QItemRitualComponents}, and the {c:QItemElderSign}, you can begin to disrupt the ritual.\n\nOnly {c:EventChosenInvestigator} can perform this task and only while standing at the altar in the space next to David.\n\nAre you ready?\n|||
+EventOpenPortalTocPrologStep1.text,"\nDavid stands at the alter, arms raised, speaking a language you cannot understand. You can see on the altar the various tools and materials needed for the ritual.\n\nThe boy is chained to the floor, crying and quietly begging his father to stop.\n\nIf you have the {c:QItemRitualKnife}, the {c:QItemRitualComponents}, and the {c:QItemElderSign}, you can begin to disrupt the ritual.\n\nOnly {c:EventChosenInvestigator} can perform this task and only while standing at the altar in the space next to David.\n\nAre you ready?\n"
 EventOpenPortalTocPrologStep1.button1,{action} Speak the words
 EventOpenPortalTocPrologStep1.button2,{qst:Cancel}
 EventOpenPortalReadPageStep1.text,
 EventOpenPortalReadPageStep1.button1,
 EventOpenPortalReadPageStep1Display.text,
 EventOpenPortalReadPageStep1Display.button1,
-EventOpenPortalReadPageStep1Base.text,|||\nWhen you get close to the altar, you see that David does not have an {c:QItemElderSign}. That means he will need blood to keep the portal open. You must stop him before he uses you to feed it.\n\nYou think back to the counter-spell you memorized earlier. You hold the {c:QItemRitualKnife} and chalice above your head and speak the words. {c:UncleDavid} snaps his head toward you, as though seeing you here for the first time. Your eyes lock and you see a determined but haunted look in his eyes.\n\nHe looks back at the altar and tries to start again. Nothing comes out of his mouth and he looks back at you.\n\nThis step is complete.\n|||
+EventOpenPortalReadPageStep1Base.text,"\nWhen you get close to the altar, you see that David does not have an {c:QItemElderSign}. That means he will need blood to keep the portal open. You must stop him before he uses you to feed it.\n\nYou think back to the counter-spell you memorized earlier. You hold the {c:QItemRitualKnife} and chalice above your head and speak the words. {c:UncleDavid} snaps his head toward you, as though seeing you here for the first time. Your eyes lock and you see a determined but haunted look in his eyes.\n\nHe looks back at the altar and tries to start again. Nothing comes out of his mouth and he looks back at you.\n\nThis step is complete.\n"
 EventOpenPortalReadPageStep1Base.button1,{qst:Continue}
 EventOpenPortalReadPageStep1TiePoint.text,
 EventOpenPortalReadPageStep1TiePoint.button1,
@@ -2329,14 +2320,14 @@ EventOpenPortalLoopBack.text,
 EventOpenPortalLoopBack.button1,
 EventOpenPortalEnd.text,
 EventOpenPortalEnd.button1,
-EventOpenPortalTocPrologStep2.text,|||\n{c:UncleDavid} lowers his eyes to the dagger he holds. While no sound comes out, you see him moving his lips.\n|||
+EventOpenPortalTocPrologStep2.text,"\n{c:UncleDavid} lowers his eyes to the dagger he holds. While no sound comes out, you see him moving his lips.\n"
 EventOpenPortalTocPrologStep2.button1,{action} Stab David
 EventOpenPortalTocPrologStep2.button2,{qst:Cancel}
 EventOpenPortalReadPageStep2.text,
 EventOpenPortalReadPageStep2.button1,
 EventOpenPortalReadPageStep2Display.text,
 EventOpenPortalReadPageStep2Display.button1,
-EventOpenPortalReadPageStep2Base.text,|||\nYou choose your moment and lunge at him with your knife. At the last moment, he steps to the left and your knife glances off of his robed arm without doing any damage.\n\nYou think you can turn and make a more direct hit. Test {agility}.\n\nFor each Unique Item you have, you may roll 1 extra die.\n|||
+EventOpenPortalReadPageStep2Base.text,"\nYou choose your moment and lunge at him with your knife. At the last moment, he steps to the left and your knife glances off of his robed arm without doing any damage.\n\nYou think you can turn and make a more direct hit. Test {agility}.\n\nFor each Unique Item you have, you may roll 1 extra die.\n"
 EventOpenPortalReadPageStep2Base.button1,{qst:Continue}
 EventOpenPortalReadPageStep2Base.button2,{qst:Cancel}
 EventOpenPortalReadPageStep2BasePassTest.text,
@@ -2353,14 +2344,14 @@ EventOpenPortalReadPageStep2PostTestFail.text,
 EventOpenPortalReadPageStep2PostTestFail.button1,
 EventOpenPortalReadPageStep2BaseFailTest.text,
 EventOpenPortalReadPageStep2BaseFailTest.button1,
-EventOpenPortalTocPrologStep3.text,|||\nHe steps away again and you stumble, bumping into him and knocking the {c:QItemRitualDagger} from his hand. It clatters onto the altar and you step back.\n|||
+EventOpenPortalTocPrologStep3.text,"\nHe steps away again and you stumble, bumping into him and knocking the {c:QItemRitualDagger} from his hand. It clatters onto the altar and you step back.\n"
 EventOpenPortalTocPrologStep3.button1,{action} Speak the words
 EventOpenPortalTocPrologStep3.button2,{qst:Cancel}
 EventOpenPortalReadPageStep3.text,
 EventOpenPortalReadPageStep3.button1,
 EventOpenPortalReadPageStep3Display.text,
 EventOpenPortalReadPageStep3Display.button1,
-EventOpenPortalReadPageStep3Base.text,|||\nDavid grabs the knife and begins speaking the incantation again, his voice booming with power. The knife begins glowing and lightly, slowly pulsing.\n\nYou speak the words again. Test {will}.\n\nFor each Unique Item you have, you may roll 1 extra die.\n|||
+EventOpenPortalReadPageStep3Base.text,"\nDavid grabs the knife and begins speaking the incantation again, his voice booming with power. The knife begins glowing and lightly, slowly pulsing.\n\nYou speak the words again. Test {will}.\n\nFor each Unique Item you have, you may roll 1 extra die.\n"
 EventOpenPortalReadPageStep3Base.button1,{qst:Continue}
 EventOpenPortalReadPageStep3Base.button2,{qst:Cancel}
 EventOpenPortalReadPageStep3BasePassTest.text,
@@ -2381,7 +2372,7 @@ EventOpenPortalReadPageStep3FailMarkBefore1.text,
 EventOpenPortalReadPageStep3FailMarkBefore1.button1,
 EventOpenPortalReadPageStep3FailDisplay.text,
 EventOpenPortalReadPageStep3FailDisplay.button1,
-EventOpenPortalReadPageStep3FailBase.text,|||\nYou fumble the words and nothing happens. David ignores you and slides the blade across his palm.\n\nSuffer 2 Horror ({will} negates).\n\nYou must stop him.\n|||
+EventOpenPortalReadPageStep3FailBase.text,"\nYou fumble the words and nothing happens. David ignores you and slides the blade across his palm.\n\nSuffer 2 Horror ({will} negates).\n\nYou must stop him.\n"
 EventOpenPortalReadPageStep3FailBase.button1,{qst:Continue}
 EventOpenPortalReadPageStep3FailTiePoint.text,
 EventOpenPortalReadPageStep3FailTiePoint.button1,
@@ -2391,14 +2382,14 @@ EventOpenPortalReadPageStep3BaseFailTest.text,
 EventOpenPortalReadPageStep3BaseFailTest.button1,
 EventOpenPortalTocPrologStep3Fail.text,
 EventOpenPortalTocPrologStep3Fail.button1,
-EventOpenPortalTocPrologStep3Repeat.text,|||\nSuprised that the spell didn’t work, you raise your arms again.\n|||
+EventOpenPortalTocPrologStep3Repeat.text,"\nSuprised that the spell didn’t work, you raise your arms again.\n"
 EventOpenPortalTocPrologStep3Repeat.button1,{action} Speak the words
 EventOpenPortalTocPrologStep3Repeat.button2,{qst:Cancel}
 EventOpenPortalReadPageStep3Repeat.text,
 EventOpenPortalReadPageStep3Repeat.button1,
 EventOpenPortalReadPageStep3RepeatDisplay.text,
 EventOpenPortalReadPageStep3RepeatDisplay.button1,
-EventOpenPortalReadPageStep3RepeatBase.text,|||\nYou begin speaking, hoping to block his voice again. Test {will}.\n\nFor each Unique Item you have, you may roll 1 extra die.\n|||
+EventOpenPortalReadPageStep3RepeatBase.text,"\nYou begin speaking, hoping to block his voice again. Test {will}.\n\nFor each Unique Item you have, you may roll 1 extra die.\n"
 EventOpenPortalReadPageStep3RepeatBase.button1,{qst:Continue}
 EventOpenPortalReadPageStep3RepeatBase.button2,{qst:Cancel}
 EventOpenPortalReadPageStep3RepeatBasePassTest.text,
@@ -2419,7 +2410,7 @@ EventOpenPortalReadPageStep3RepeatFailMarkBefore1.text,
 EventOpenPortalReadPageStep3RepeatFailMarkBefore1.button1,
 EventOpenPortalReadPageStep3RepeatFailDisplay.text,
 EventOpenPortalReadPageStep3RepeatFailDisplay.button1,
-EventOpenPortalReadPageStep3RepeatFailBase.text,|||\nDavid seems unphased as blood wells up from the cut in his palm. You look at the dagger and chalice raised in your hands and wonder why nothing is happening. You take a deep breath, determined to stop this madness.\n|||
+EventOpenPortalReadPageStep3RepeatFailBase.text,"\nDavid seems unphased as blood wells up from the cut in his palm. You look at the dagger and chalice raised in your hands and wonder why nothing is happening. You take a deep breath, determined to stop this madness.\n"
 EventOpenPortalReadPageStep3RepeatFailBase.button1,{qst:Continue}
 EventOpenPortalReadPageStep3RepeatFailTiePoint.text,
 EventOpenPortalReadPageStep3RepeatFailTiePoint.button1,
@@ -2429,14 +2420,14 @@ EventOpenPortalReadPageStep3RepeatBaseFailTest.text,
 EventOpenPortalReadPageStep3RepeatBaseFailTest.button1,
 EventOpenPortalTocPrologStep3RepeatFail.text,
 EventOpenPortalTocPrologStep3RepeatFail.button1,
-EventOpenPortalTocPrologStep4.text,|||\nAs David squeezes blood from his fist into the chalice, the spell takes hold and... he loses his voice again.\n|||
+EventOpenPortalTocPrologStep4.text,"\nAs David squeezes blood from his fist into the chalice, the spell takes hold and... he loses his voice again.\n"
 EventOpenPortalTocPrologStep4.button1,{action} Make your move
 EventOpenPortalTocPrologStep4.button2,{qst:Cancel}
 EventOpenPortalReadPageStep4.text,
 EventOpenPortalReadPageStep4.button1,
 EventOpenPortalReadPageStep4Display.text,
 EventOpenPortalReadPageStep4Display.button1,
-EventOpenPortalReadPageStep4Base.text,|||\nWith David distracted and frustrated, you reach out to grab the skull. If only you can reach it before he... does something.\n\nTest {agility}.\n\nFor each Unique Item you have, you may roll 1 extra die.\n|||
+EventOpenPortalReadPageStep4Base.text,"\nWith David distracted and frustrated, you reach out to grab the skull. If only you can reach it before he... does something.\n\nTest {agility}.\n\nFor each Unique Item you have, you may roll 1 extra die.\n"
 EventOpenPortalReadPageStep4Base.button1,{qst:Continue}
 EventOpenPortalReadPageStep4Base.button2,{qst:Cancel}
 EventOpenPortalReadPageStep4BasePassTest.text,
@@ -2451,7 +2442,7 @@ EventOpenPortalReadPageStep4Fail.text,
 EventOpenPortalReadPageStep4Fail.button1,
 EventOpenPortalReadPageStep4FailDisplay.text,
 EventOpenPortalReadPageStep4FailDisplay.button1,
-EventOpenPortalReadPageStep4FailBase.text,|||\nDavid swings his arm at you, dagger flashing in the low light. It catches your arm, causing you to drop the dagger.\n\nDrop {c:QItemRitualKnife}. Take 2 {damage} ({agility} negates).\n\nDavid squeezes more of his blood into the chalice, causing it to... change in a way you cannot describe. It somehow feels powerful, like the knife he is wielding.\n|||
+EventOpenPortalReadPageStep4FailBase.text,"\nDavid swings his arm at you, dagger flashing in the low light. It catches your arm, causing you to drop the dagger.\n\nDrop {c:QItemRitualKnife}. Take 2 {damage} ({agility} negates).\n\nDavid squeezes more of his blood into the chalice, causing it to... change in a way you cannot describe. It somehow feels powerful, like the knife he is wielding.\n"
 EventOpenPortalReadPageStep4FailBase.button1,{qst:Continue}
 EventOpenPortalReadPageStep4FailTiePoint.text,
 EventOpenPortalReadPageStep4FailTiePoint.button1,
@@ -2469,7 +2460,7 @@ EventOpenPortalReadPageEpilog.text,
 EventOpenPortalReadPageEpilog.button1,
 EventOpenPortalReadPageEpilogDisplay.text,
 EventOpenPortalReadPageEpilogDisplay.button1,
-EventOpenPortalReadPageEpilogBase.text,|||\nThe futility of trying to stop your uncle from completing this ritual sinks in. You’re going to have to kill him.\n|||
+EventOpenPortalReadPageEpilogBase.text,"\nThe futility of trying to stop your uncle from completing this ritual sinks in. You’re going to have to kill him.\n"
 EventOpenPortalReadPageEpilogBase.button1,{qst:Continue}
 EventOpenPortalReadPageEpilogTiePoint.text,
 EventOpenPortalReadPageEpilogTiePoint.button1,
@@ -2524,7 +2515,7 @@ EventSarahPatterExpr8.text,
 EventSarahPatterExpr8.button1,
 EventSarahPatterReadPageDvmDisplay.text,
 EventSarahPatterReadPageDvmDisplay.button1,
-EventSarahPatterReadPageDvmOverload1.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemDVM} is a spell book. It contains many powerful spells, including how to open and close portals. You should read it to better understand what is happening.”\n|||
+EventSarahPatterReadPageDvmOverload1.text,"\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemDVM} is a spell book. It contains many powerful spells, including how to open and close portals. You should read it to better understand what is happening.”\n"
 EventSarahPatterReadPageDvmOverload1.button1,{qst:Continue}
 EventSarahPatterReadPageDvmTiePoint.text,
 EventSarahPatterReadPageDvmTiePoint.button1,
@@ -2538,7 +2529,7 @@ EventSarahPatterLoopBack.text,
 EventSarahPatterLoopBack.button1,
 EventSarahPatterEnd.text,
 EventSarahPatterEnd.button1,
-EventSarahPatterReadPageDvmBase.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemDVM} is a spell book. It contains many powerful spells, including how to open and close portals, and how to interrupt a ritual that has been started.\n\n“If you cannot stop {c:CustomMonsterDavidSmythe} in time, you may need to perform a closing ritual. Closing portals is easier than opening them but it takes time. With the portal open, many horrors could come through while you are trying to close it. You must be prepared. Read the book carefully and read it soon.”\n|||
+EventSarahPatterReadPageDvmBase.text,"\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemDVM} is a spell book. It contains many powerful spells, including how to open and close portals, and how to interrupt a ritual that has been started.\n\n“If you cannot stop {c:CustomMonsterDavidSmythe} in time, you may need to perform a closing ritual. Closing portals is easier than opening them but it takes time. With the portal open, many horrors could come through while you are trying to close it. You must be prepared. Read the book carefully and read it soon.”\n"
 EventSarahPatterReadPageDvmBase.button1,{qst:Continue}
 EventSarahPatterExpr9.text,
 EventSarahPatterExpr9.button1,
@@ -2554,7 +2545,7 @@ EventSarahPatterReadPageCandles.text,
 EventSarahPatterReadPageCandles.button1,
 EventSarahPatterReadPageCandlesDisplay.text,
 EventSarahPatterReadPageCandlesDisplay.button1,
-EventSarahPatterReadPageCandlesBase.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “There’s a part of the house that is too dark to enter without light. The candles you found should help. If we move fast enough, maybe we can stop {c:CustomMonsterDavidSmythe} from opening the portal.”\n|||
+EventSarahPatterReadPageCandlesBase.text,"\nSarah whispers to {c:EventChosenInvestigator}, “There’s a part of the house that is too dark to enter without light. The candles you found should help. If we move fast enough, maybe we can stop {c:CustomMonsterDavidSmythe} from opening the portal.”\n"
 EventSarahPatterReadPageCandlesBase.button1,{qst:Continue}
 EventSarahPatterReadPageCandlesTiePoint.text,
 EventSarahPatterReadPageCandlesTiePoint.button1,
@@ -2578,15 +2569,15 @@ EventSarahPatterExpr20.text,
 EventSarahPatterExpr20.button1,
 EventSarahPatterReadPageElderSignDisplay.text,
 EventSarahPatterReadPageElderSignDisplay.button1,
-EventSarahPatterReadPageElderSignOverload1.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemElderSign} is an important part of the closing ritual. It seals the portal permanently. When the closing ritual was performed 10 years ago, our Uncle Henry was able to close the portal, but he died before he could seal it.”\n|||
+EventSarahPatterReadPageElderSignOverload1.text,"\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemElderSign} is an important part of the closing ritual. It seals the portal permanently. When the closing ritual was performed 10 years ago, our Uncle Henry was able to close the portal, but he died before he could seal it.”\n"
 EventSarahPatterReadPageElderSignOverload1.button1,{qst:Continue}
 EventSarahPatterReadPageElderSignTiePoint.text,
 EventSarahPatterReadPageElderSignTiePoint.button1,
 EventSarahPatterReadPageElderSignEnd.text,
 EventSarahPatterReadPageElderSignEnd.button1,
-EventSarahPatterReadPageElderSignOverload2.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemElderSign} is important for their plans tonight. It is used to either secure or seal a portal. It is good we found it before they did.”\n|||
+EventSarahPatterReadPageElderSignOverload2.text,"\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemElderSign} is important for their plans tonight. It is used to either secure or seal a portal. It is good we found it before they did.”\n"
 EventSarahPatterReadPageElderSignOverload2.button1,{qst:Continue}
-EventSarahPatterReadPageElderSignBase.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemElderSign} is a powerful protective symbol. It can be used to ward off evil creatures and protect people from harm. If you have it, you should keep it with you at all times.”\n|||
+EventSarahPatterReadPageElderSignBase.text,"\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemElderSign} is a powerful protective symbol. It can be used to ward off evil creatures and protect people from harm. If you have it, you should keep it with you at all times.”\n"
 EventSarahPatterReadPageElderSignBase.button1,{qst:Continue}
 EventSarahPatterExpr21.text,
 EventSarahPatterExpr21.button1,
@@ -2598,7 +2589,7 @@ EventSarahPatterReadPageRitualComponents.text,
 EventSarahPatterReadPageRitualComponents.button1,
 EventSarahPatterReadPageRitualComponentsDisplay.text,
 EventSarahPatterReadPageRitualComponentsDisplay.button1,
-EventSarahPatterReadPageRitualComponentsBase.text,|||\nSarah reaches out as if to touch the {c:QItemRitualComponents}. “I recognize some of these items from the portal ritual. Both my father and the men who tried to stop him brought similar items to help with the spells.”\n|||
+EventSarahPatterReadPageRitualComponentsBase.text,"\nSarah reaches out as if to touch the {c:QItemRitualComponents}. “I recognize some of these items from the portal ritual. Both my father and the men who tried to stop him brought similar items to help with the spells.”\n"
 EventSarahPatterReadPageRitualComponentsBase.button1,{qst:Continue}
 EventSarahPatterReadPageRitualComponentsTiePoint.text,
 EventSarahPatterReadPageRitualComponentsTiePoint.button1,
@@ -2610,7 +2601,7 @@ EventSarahPatterReadPageDagger.text,
 EventSarahPatterReadPageDagger.button1,
 EventSarahPatterReadPageDaggerDisplay.text,
 EventSarahPatterReadPageDaggerDisplay.button1,
-EventSarahPatterReadPageDaggerBase.text,|||\nSarah reaches toward the {c:QItemRitualDagger}. “I recognize this dagger,” she starts. “It looks like the one my father used in the portal ritual. With luck, they need this one and we have it.”\n|||
+EventSarahPatterReadPageDaggerBase.text,"\nSarah reaches toward the {c:QItemRitualDagger}. “I recognize this dagger,” she starts. “It looks like the one my father used in the portal ritual. With luck, they need this one and we have it.”\n"
 EventSarahPatterReadPageDaggerBase.button1,{qst:Continue}
 EventSarahPatterReadPageDaggerTiePoint.text,
 EventSarahPatterReadPageDaggerTiePoint.button1,
@@ -2622,7 +2613,7 @@ EventSarahPatterReadPageJournal.text,
 EventSarahPatterReadPageJournal.button1,
 EventSarahPatterReadPageJournalDisplay.text,
 EventSarahPatterReadPageJournalDisplay.button1,
-EventSarahPatterReadPageJournalBase.text,|||\nSarah looks down and sees you holding the {c:QItemJournal}. “The {c:QItemJournal}! The man who let you in was writing in it all week. You should read it carefully.”\n|||
+EventSarahPatterReadPageJournalBase.text,"\nSarah looks down and sees you holding the {c:QItemJournal}. “The {c:QItemJournal}! The man who let you in was writing in it all week. You should read it carefully.”\n"
 EventSarahPatterReadPageJournalBase.button1,{qst:Continue}
 EventSarahPatterReadPageJournalTiePoint.text,
 EventSarahPatterReadPageJournalTiePoint.button1,
@@ -2634,7 +2625,7 @@ EventSarahPatterReadPageMissingJournal.text,
 EventSarahPatterReadPageMissingJournal.button1,
 EventSarahPatterReadPageMissingJournalDisplay.text,
 EventSarahPatterReadPageMissingJournalDisplay.button1,
-EventSarahPatterReadPageMissingJournalBase.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “That man who let you in, he has a book with him. He was writing in it all week. If you can find it, it may help you understand what is happening.”\n\n(The journal cannot be reached because by the time we find Sarah, we cannot go outside. Do this after BackyardBenAfter disappears:\n\nYou look where Benjamyn was and see a book on the floor, like the one you found outside. <i>How did this get in here?” you ask aloud. The other inventigators turn to look. Place the {c:QItemJournal} in Benjamin’s previous space.)\n|||
+EventSarahPatterReadPageMissingJournalBase.text,"\nSarah whispers to {c:EventChosenInvestigator}, “That man who let you in, he has a book with him. He was writing in it all week. If you can find it, it may help you understand what is happening.”\n\n(The journal cannot be reached because by the time we find Sarah, we cannot go outside. Do this after BackyardBenAfter disappears:\n\nYou look where Benjamyn was and see a book on the floor, like the one you found outside. <i>How did this get in here?” you ask aloud. The other inventigators turn to look. Place the {c:QItemJournal} in Benjamin’s previous space.)\n"
 EventSarahPatterReadPageMissingJournalBase.button1,{qst:Continue}
 EventSarahPatterReadPageMissingJournalTiePoint.text,
 EventSarahPatterReadPageMissingJournalTiePoint.button1,
@@ -2646,7 +2637,7 @@ EventSarahPatterReadPageColor1.text,
 EventSarahPatterReadPageColor1.button1,
 EventSarahPatterReadPageColor1Display.text,
 EventSarahPatterReadPageColor1Display.button1,
-EventSarahPatterReadPageColor1Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that {c:CustomMonsterDavidSmythe} will open a portal tonight and you must stop him; if you cannot stop him, you will need to close that portal.”\n|||
+EventSarahPatterReadPageColor1Base.text,"\nSarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that {c:CustomMonsterDavidSmythe} will open a portal tonight and you must stop him; if you cannot stop him, you will need to close that portal.”\n"
 EventSarahPatterReadPageColor1Base.button1,{qst:Continue}
 EventSarahPatterReadPageColor1TiePoint.text,
 EventSarahPatterReadPageColor1TiePoint.button1,
@@ -2658,7 +2649,7 @@ EventSarahPatterReadPageColor2.text,
 EventSarahPatterReadPageColor2.button1,
 EventSarahPatterReadPageColor2Display.text,
 EventSarahPatterReadPageColor2Display.button1,
-EventSarahPatterReadPageColor2Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The people in this town worship a darker god than most. They want to bring their god to Earth. 10 years ago, my father cast a ritual to summon It. He opened a portal. The power it possessed was breathtaking and I could do nothing to stop it. Somehow, Father summoned local townsfolk through the portal to protect his casting, even after he was dead. As the portal, I could feel people and monsters approaching and passing through me from the other side.”\n|||
+EventSarahPatterReadPageColor2Base.text,"\nSarah whispers to {c:EventChosenInvestigator}, “The people in this town worship a darker god than most. They want to bring their god to Earth. 10 years ago, my father cast a ritual to summon It. He opened a portal. The power it possessed was breathtaking and I could do nothing to stop it. Somehow, Father summoned local townsfolk through the portal to protect his casting, even after he was dead. As the portal, I could feel people and monsters approaching and passing through me from the other side.”\n"
 EventSarahPatterReadPageColor2Base.button1,{qst:Continue}
 EventSarahPatterReadPageColor2TiePoint.text,
 EventSarahPatterReadPageColor2TiePoint.button1,
@@ -2670,7 +2661,7 @@ EventSarahPatterReadPageColor3.text,
 EventSarahPatterReadPageColor3.button1,
 EventSarahPatterReadPageColor3Display.text,
 EventSarahPatterReadPageColor3Display.button1,
-EventSarahPatterReadPageColor3Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “I could feel the ancient one approach from the other side. Suddenly, a group of men broke into the altar chamber and began fighting the locals. One man went to the altar, killed our father, laid out some materials, and spoke words I didn’t understand. He closed the portal while his friends protected him from what came through it.”\n|||
+EventSarahPatterReadPageColor3Base.text,"\nSarah whispers to {c:EventChosenInvestigator}, “I could feel the ancient one approach from the other side. Suddenly, a group of men broke into the altar chamber and began fighting the locals. One man went to the altar, killed our father, laid out some materials, and spoke words I didn’t understand. He closed the portal while his friends protected him from what came through it.”\n"
 EventSarahPatterReadPageColor3Base.button1,{qst:Continue}
 EventSarahPatterReadPageColor3TiePoint.text,
 EventSarahPatterReadPageColor3TiePoint.button1,
@@ -2682,7 +2673,7 @@ EventSarahPatterReadPageColor4.text,
 EventSarahPatterReadPageColor4.button1,
 EventSarahPatterReadPageColor4Display.text,
 EventSarahPatterReadPageColor4Display.button1,
-EventSarahPatterReadPageColor4Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “Our father believed that personal sacrifice was the most powerful magic. The portal is created by binding power to the body of a loved one. Father used me to summon the portal. When the portal closed, I died with it. The pain of the ritual so engulfed me that I can still feel it.”\n|||
+EventSarahPatterReadPageColor4Base.text,"\nSarah whispers to {c:EventChosenInvestigator}, “Our father believed that personal sacrifice was the most powerful magic. The portal is created by binding power to the body of a loved one. Father used me to summon the portal. When the portal closed, I died with it. The pain of the ritual so engulfed me that I can still feel it.”\n"
 EventSarahPatterReadPageColor4Base.button1,{qst:Continue}
 EventSarahPatterReadPageColor4TiePoint.text,
 EventSarahPatterReadPageColor4TiePoint.button1,
@@ -2694,7 +2685,7 @@ EventSarahPatterReadPageColor5.text,
 EventSarahPatterReadPageColor5.button1,
 EventSarahPatterReadPageColor5Display.text,
 EventSarahPatterReadPageColor5Display.button1,
-EventSarahPatterReadPageColor5Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “You found out what was going to happen a week before the ritual. Members of Father’s church did something to you. After that, you followed orders without question. You helped Father bind me during the ritual. From what they said at the time, you probably cannot remember anything about the ritual or anything before. It’s why you don’t know who you are or remember what happened that night.”\n|||
+EventSarahPatterReadPageColor5Base.text,"\nSarah whispers to {c:EventChosenInvestigator}, “You found out what was going to happen a week before the ritual. Members of Father’s church did something to you. After that, you followed orders without question. You helped Father bind me during the ritual. From what they said at the time, you probably cannot remember anything about the ritual or anything before. It’s why you don’t know who you are or remember what happened that night.”\n"
 EventSarahPatterReadPageColor5Base.button1,{qst:Continue}
 EventSarahPatterReadPageColor5TiePoint.text,
 EventSarahPatterReadPageColor5TiePoint.button1,
@@ -2706,7 +2697,7 @@ EventSarahPatterReadPageColor6.text,
 EventSarahPatterReadPageColor6.button1,
 EventSarahPatterReadPageColor6Display.text,
 EventSarahPatterReadPageColor6Display.button1,
-EventSarahPatterReadPageColor6Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The day of the ritual, two of my friends came to visit me. When Father told them I wasn’t allowed out, they sneaked to my window and crawled in when I opened it. Father was furious. I’m not sure who strangled them or who dragged them to the yard. I was burning alive when the portal closed, then my body was dumped with my friends’. It wasn’t until then that I knew they were dead. I smouldered for several days, alive and conscious until the end.”\n|||
+EventSarahPatterReadPageColor6Base.text,"\nSarah whispers to {c:EventChosenInvestigator}, “The day of the ritual, two of my friends came to visit me. When Father told them I wasn’t allowed out, they sneaked to my window and crawled in when I opened it. Father was furious. I’m not sure who strangled them or who dragged them to the yard. I was burning alive when the portal closed, then my body was dumped with my friends’. It wasn’t until then that I knew they were dead. I smouldered for several days, alive and conscious until the end.”\n"
 EventSarahPatterReadPageColor6Base.button1,{qst:Continue}
 EventSarahPatterReadPageColor6TiePoint.text,
 EventSarahPatterReadPageColor6TiePoint.button1,
@@ -2718,7 +2709,7 @@ EventSarahPatterReadPageColor7.text,
 EventSarahPatterReadPageColor7.button1,
 EventSarahPatterReadPageColor7Display.text,
 EventSarahPatterReadPageColor7Display.button1,
-EventSarahPatterReadPageColor7Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “I don’t know who the other men were, but the one who closed the portal was our uncle Henry–Father’s brother. I think there’s something special about our family; there are things only we can do. It’s why Father could summon the portal, and why Uncle Henry could close it.\n\n“You probably share the family abilities. You must trust yourself to know what to do.”\n|||
+EventSarahPatterReadPageColor7Base.text,"\nSarah whispers to {c:EventChosenInvestigator}, “I don’t know who the other men were, but the one who closed the portal was our uncle Henry–Father’s brother. I think there’s something special about our family; there are things only we can do. It’s why Father could summon the portal, and why Uncle Henry could close it.\n\n“You probably share the family abilities. You must trust yourself to know what to do.”\n"
 EventSarahPatterReadPageColor7Base.button1,{qst:Continue}
 EventSarahPatterReadPageColor7TiePoint.text,
 EventSarahPatterReadPageColor7TiePoint.button1,
@@ -2740,7 +2731,7 @@ EventWandererAttacksReadPageStory1.text,
 EventWandererAttacksReadPageStory1.button1,
 EventWandererAttacksReadPageStory1Display.text,
 EventWandererAttacksReadPageStory1Display.button1,
-EventWandererAttacksReadPageStory1Base.text,|||\nIn a voice that reverberates through the house, the cultist cries out, “Brothers! They have made it to the basement. They must be stopped.” Each investigator on the ground floor of the house suffers 1 Horror ({will} negates).\n|||
+EventWandererAttacksReadPageStory1Base.text,"\nIn a voice that reverberates through the house, the cultist cries out, “Brothers! They have made it to the basement. They must be stopped.” Each investigator on the ground floor of the house suffers 1 Horror ({will} negates).\n"
 EventWandererAttacksReadPageStory1Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory1TiePoint.text,
 EventWandererAttacksReadPageStory1TiePoint.button1,
@@ -2760,7 +2751,7 @@ EventWandererAttacksReadPageStory2.text,
 EventWandererAttacksReadPageStory2.button1,
 EventWandererAttacksReadPageStory2Display.text,
 EventWandererAttacksReadPageStory2Display.button1,
-EventWandererAttacksReadPageStory2Base.text,|||\n“I will not allow you into the basement,” he says to you. He raises a fist. ({strength};2) If you pass, you block his attack and counter with a punch of your own; the cultist suffers 1 damage. If you fail, he boxes your ears; become Stunned.\n|||
+EventWandererAttacksReadPageStory2Base.text,"\n“I will not allow you into the basement,” he says to you. He raises a fist. ({strength};2) If you pass, you block his attack and counter with a punch of your own; the cultist suffers 1 damage. If you fail, he boxes your ears; become Stunned.\n"
 EventWandererAttacksReadPageStory2Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory2TiePoint.text,
 EventWandererAttacksReadPageStory2TiePoint.button1,
@@ -2772,7 +2763,7 @@ EventWandererAttacksReadPageStory3.text,
 EventWandererAttacksReadPageStory3.button1,
 EventWandererAttacksReadPageStory3Display.text,
 EventWandererAttacksReadPageStory3Display.button1,
-EventWandererAttacksReadPageStory3Base.text,|||\n“You cannot be allowed to leave with the Master’s book.” He moves as if to grab you by the lapels. ({agility};2) If you pass, you step out of the way and push the cultist to the ground from behind. If you fail, the cultist grabs you, throws you to the ground, and pins you; become Restrained.\n|||
+EventWandererAttacksReadPageStory3Base.text,"\n“You cannot be allowed to leave with the Master’s book.” He moves as if to grab you by the lapels. ({agility};2) If you pass, you step out of the way and push the cultist to the ground from behind. If you fail, the cultist grabs you, throws you to the ground, and pins you; become Restrained.\n"
 EventWandererAttacksReadPageStory3Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory3TiePoint.text,
 EventWandererAttacksReadPageStory3TiePoint.button1,
@@ -2784,7 +2775,7 @@ EventWandererAttacksReadPageStory4.text,
 EventWandererAttacksReadPageStory4.button1,
 EventWandererAttacksReadPageStory4Display.text,
 EventWandererAttacksReadPageStory4Display.button1,
-EventWandererAttacksReadPageStory4Base.text,|||\n“Brothers! They have found what they need to explore the basement. We must stop them!” He turns and throws something to the ground. ({observation};2) If you pass, you see what he is doing and turn your head. If you fail, you watch the thing hit the ground... and a flash of light blinds you; become Dazed.\n|||
+EventWandererAttacksReadPageStory4Base.text,"\n“Brothers! They have found what they need to explore the basement. We must stop them!” He turns and throws something to the ground. ({observation};2) If you pass, you see what he is doing and turn your head. If you fail, you watch the thing hit the ground... and a flash of light blinds you; become Dazed.\n"
 EventWandererAttacksReadPageStory4Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory4TiePoint.text,
 EventWandererAttacksReadPageStory4TiePoint.button1,
@@ -2796,7 +2787,7 @@ EventWandererAttacksReadPageStory5.text,
 EventWandererAttacksReadPageStory5.button1,
 EventWandererAttacksReadPageStory5Display.text,
 EventWandererAttacksReadPageStory5Display.button1,
-EventWandererAttacksReadPageStory5Base.text,|||\nThe cultist shouts something about the basement and shakes you. Drop the {c:QItemCandles}. If you are not carrying them, become Dazed from the shaking.\n|||
+EventWandererAttacksReadPageStory5Base.text,"\nThe cultist shouts something about the basement and shakes you. Drop the {c:QItemCandles}. If you are not carrying them, become Dazed from the shaking.\n"
 EventWandererAttacksReadPageStory5Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory5TiePoint.text,
 EventWandererAttacksReadPageStory5TiePoint.button1,
@@ -2808,7 +2799,7 @@ EventWandererAttacksReadPageStory6.text,
 EventWandererAttacksReadPageStory6.button1,
 EventWandererAttacksReadPageStory6Display.text,
 EventWandererAttacksReadPageStory6Display.button1,
-EventWandererAttacksReadPageStory6Base.text,|||\nThe cultist looks around; waves of horror and anger cross his face. He raises he arms and cries, “Brothers! I have found {var:wanderersKilled} of our brethren dead. I call upon the One True Power!” Each investigator not carrying a {c:QItemFluxStabilizer} tests {will}. If you pass, you withstand the rush of evil that passes up through the house. If you fail, suffer 1 Horror ({will} negates) and become Stunned. If all investigators who rolled pass, the power of your collective wills lifts everyone’s spirits: each investigator may discard 1 horror.\n|||
+EventWandererAttacksReadPageStory6Base.text,"\nThe cultist looks around; waves of horror and anger cross his face. He raises he arms and cries, “Brothers! I have found {var:wanderersKilled} of our brethren dead. I call upon the One True Power!” Each investigator not carrying a {c:QItemFluxStabilizer} tests {will}. If you pass, you withstand the rush of evil that passes up through the house. If you fail, suffer 1 Horror ({will} negates) and become Stunned. If all investigators who rolled pass, the power of your collective wills lifts everyone’s spirits: each investigator may discard 1 horror.\n"
 EventWandererAttacksReadPageStory6Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory6TiePoint.text,
 EventWandererAttacksReadPageStory6TiePoint.button1,
@@ -2820,7 +2811,7 @@ EventWandererAttacksReadPageStory7.text,
 EventWandererAttacksReadPageStory7.button1,
 EventWandererAttacksReadPageStory7Display.text,
 EventWandererAttacksReadPageStory7Display.button1,
-EventWandererAttacksReadPageStory7Base.text,|||\n“You would destroy the Master’s house with your brutality. You must be stopped!” The cultist moves to push you. ({strength};2) If you pass, you push back hard against the cultist. If you fail, he pushes you off-balance and you fall hard to the floor; become Stunned.\n\n<i>I really should have been more careful with that gate</i>, you think to yourself.\n|||
+EventWandererAttacksReadPageStory7Base.text,"\n“You would destroy the Master’s house with your brutality. You must be stopped!” The cultist moves to push you. ({strength};2) If you pass, you push back hard against the cultist. If you fail, he pushes you off-balance and you fall hard to the floor; become Stunned.\n\n<i>I really should have been more careful with that gate</i>, you think to yourself.\n"
 EventWandererAttacksReadPageStory7Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory7TiePoint.text,
 EventWandererAttacksReadPageStory7TiePoint.button1,
@@ -2832,7 +2823,7 @@ EventWandererAttacksReadPageStory8.text,
 EventWandererAttacksReadPageStory8.button1,
 EventWandererAttacksReadPageStory8Display.text,
 EventWandererAttacksReadPageStory8Display.button1,
-EventWandererAttacksReadPageStory8Base.text,|||\n“You have killed our High Priest. You shall pay.” The cultist raises his hands, looks upward, and begins chanting. ({lore};2) If you pass, you recognize enough of the words to know what is about to happen. If you fail, you are caught off-guard as a frozen wind sweeps through you, freezing you solid for a moment; become Restrained.\n|||
+EventWandererAttacksReadPageStory8Base.text,"\n“You have killed our High Priest. You shall pay.” The cultist raises his hands, looks upward, and begins chanting. ({lore};2) If you pass, you recognize enough of the words to know what is about to happen. If you fail, you are caught off-guard as a frozen wind sweeps through you, freezing you solid for a moment; become Restrained.\n"
 EventWandererAttacksReadPageStory8Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory8TiePoint.text,
 EventWandererAttacksReadPageStory8TiePoint.button1,
@@ -2844,7 +2835,7 @@ EventWandererAttacksReadPageStory9.text,
 EventWandererAttacksReadPageStory9.button1,
 EventWandererAttacksReadPageStory9Display.text,
 EventWandererAttacksReadPageStory9Display.button1,
-EventWandererAttacksReadPageStory9Base.text,|||\n“They have found The Master’s sacred text,” the cultist wails. “They must not keep it!” The cultist raises his staff and slams the end to the floor. With a cracking sound, lightning erupts from the base of the staff. ({agility};2) If you pass, you leap toward the cultist and over the attack. If you fail, the lightning strikes you in the chest, blinding you with a flash of light; suffer 1 damage ({agility} negates), become Dazed, and drop the {c:QItemDVM} if you are carrying it.\n|||
+EventWandererAttacksReadPageStory9Base.text,"\n“They have found The Master’s sacred text,” the cultist wails. “They must not keep it!” The cultist raises his staff and slams the end to the floor. With a cracking sound, lightning erupts from the base of the staff. ({agility};2) If you pass, you leap toward the cultist and over the attack. If you fail, the lightning strikes you in the chest, blinding you with a flash of light; suffer 1 damage ({agility} negates), become Dazed, and drop the {c:QItemDVM} if you are carrying it.\n"
 EventWandererAttacksReadPageStory9Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory9TiePoint.text,
 EventWandererAttacksReadPageStory9TiePoint.button1,
@@ -2856,7 +2847,7 @@ EventWandererAttacksReadPageStory10.text,
 EventWandererAttacksReadPageStory10.button1,
 EventWandererAttacksReadPageStory10Display.text,
 EventWandererAttacksReadPageStory10Display.button1,
-EventWandererAttacksReadPageStory10Base.text,|||\n“You have found the knife, but we will take it from you,” the cultist threatens. The cultist flies at you with surprising speed, trying to knock you off your feet. ({observation};2) If you pass, at the last moment you see where the cultist will hit and twist away. If you fail, the cultist slams your chest, knocking you to the ground; suffer 1 Damage ({agility} negates), become Restrained, and drop the {c:QItemRitualDagger} if you are carrying it.\n|||
+EventWandererAttacksReadPageStory10Base.text,"\n“You have found the knife, but we will take it from you,” the cultist threatens. The cultist flies at you with surprising speed, trying to knock you off your feet. ({observation};2) If you pass, at the last moment you see where the cultist will hit and twist away. If you fail, the cultist slams your chest, knocking you to the ground; suffer 1 Damage ({agility} negates), become Restrained, and drop the {c:QItemRitualDagger} if you are carrying it.\n"
 EventWandererAttacksReadPageStory10Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory10TiePoint.text,
 EventWandererAttacksReadPageStory10TiePoint.button1,
@@ -2868,7 +2859,7 @@ EventWandererAttacksReadPageStory11.text,
 EventWandererAttacksReadPageStory11.button1,
 EventWandererAttacksReadPageStory11Display.text,
 EventWandererAttacksReadPageStory11Display.button1,
-EventWandererAttacksReadPageStory11Base.text,|||\nThe cultist rushes into the room, intent on catching up with you. “You cannot steal our most sacred chalice,” he cries.\n\nHe has nearly reached you. ({will};2) If you pass, you stand your ground, blocking his attacks as the cultist tries to pummel you. If you fail, you flinch and are unable to defend yourself as the cultist sends a quick blow to your head; become Dazed and drop the {c:QItemRitualComponents} if you are carrying them.\n|||
+EventWandererAttacksReadPageStory11Base.text,"\nThe cultist rushes into the room, intent on catching up with you. “You cannot steal our most sacred chalice,” he cries.\n\nHe has nearly reached you. ({will};2) If you pass, you stand your ground, blocking his attacks as the cultist tries to pummel you. If you fail, you flinch and are unable to defend yourself as the cultist sends a quick blow to your head; become Dazed and drop the {c:QItemRitualComponents} if you are carrying them.\n"
 EventWandererAttacksReadPageStory11Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory11TiePoint.text,
 EventWandererAttacksReadPageStory11TiePoint.button1,
@@ -2880,7 +2871,7 @@ EventWandererAttacksReadPageStory12.text,
 EventWandererAttacksReadPageStory12.button1,
 EventWandererAttacksReadPageStory12Display.text,
 EventWandererAttacksReadPageStory12Display.button1,
-EventWandererAttacksReadPageStory12Base.text,|||\nHave you stolen Brother Benjamin’s journal? He trusted you and this is how you respect that trust?” the cultist accuses. He raises his arms and begins chanting. You think you may understand what he is doing. ({lore};2) If you pass, you duck as the curse projects itself toward your head. If you fail, the power rushes through your head, overwhelming your senses. Become Dazed.\n|||
+EventWandererAttacksReadPageStory12Base.text,"\nHave you stolen Brother Benjamin’s journal? He trusted you and this is how you respect that trust?” the cultist accuses. He raises his arms and begins chanting. You think you may understand what he is doing. ({lore};2) If you pass, you duck as the curse projects itself toward your head. If you fail, the power rushes through your head, overwhelming your senses. Become Dazed.\n"
 EventWandererAttacksReadPageStory12Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory12TiePoint.text,
 EventWandererAttacksReadPageStory12TiePoint.button1,
@@ -2892,7 +2883,7 @@ EventWandererAttacksReadPageStory13.text,
 EventWandererAttacksReadPageStory13.button1,
 EventWandererAttacksReadPageStory13Display.text,
 EventWandererAttacksReadPageStory13Display.button1,
-EventWandererAttacksReadPageStory13Base.text,|||\nThe cultist calls out to the others, “Brother Benjamin tells us that if they have his journal, the Master’s plans could be foiled. The Master wasn’t... kind to Benjamin when he found out. We must stop them!”\n\nThe cultist begins chanting. The light flows out of the room and you can feel other cultists joining with him, sending a chill to your core. Each investigator in range suffers 1 Horror ({will} negates); the investigator in range holding the {c:QItemJournal} drops it.\n|||
+EventWandererAttacksReadPageStory13Base.text,"\nThe cultist calls out to the others, “Brother Benjamin tells us that if they have his journal, the Master’s plans could be foiled. The Master wasn’t... kind to Benjamin when he found out. We must stop them!”\n\nThe cultist begins chanting. The light flows out of the room and you can feel other cultists joining with him, sending a chill to your core. Each investigator in range suffers 1 Horror ({will} negates); the investigator in range holding the {c:QItemJournal} drops it.\n"
 EventWandererAttacksReadPageStory13Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory13TiePoint.text,
 EventWandererAttacksReadPageStory13TiePoint.button1,
@@ -2904,7 +2895,7 @@ EventWandererAttacksReadPageStory14.text,
 EventWandererAttacksReadPageStory14.button1,
 EventWandererAttacksReadPageStory14Display.text,
 EventWandererAttacksReadPageStory14Display.button1,
-EventWandererAttacksReadPageStory14Base.text,|||\n“The intruders,” he calls out, “have found some of the items Our Master warned us to protect. We must stop them before it is too late.”\n\nThe cultist begins chanting and you feel your energy draining. ({strength};2) If you pass, you rush the cultist and tackle him to the ground; the cultist suffers 2 Damage. If you fail, you suffer 1 Damage ({strength} negates) and 1 Horror ({will} negates).\n|||
+EventWandererAttacksReadPageStory14Base.text,"\n“The intruders,” he calls out, “have found some of the items Our Master warned us to protect. We must stop them before it is too late.”\n\nThe cultist begins chanting and you feel your energy draining. ({strength};2) If you pass, you rush the cultist and tackle him to the ground; the cultist suffers 2 Damage. If you fail, you suffer 1 Damage ({strength} negates) and 1 Horror ({will} negates).\n"
 EventWandererAttacksReadPageStory14Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory14TiePoint.text,
 EventWandererAttacksReadPageStory14TiePoint.button1,
@@ -2916,7 +2907,7 @@ EventWandererAttacksReadPageStory15.text,
 EventWandererAttacksReadPageStory15.button1,
 EventWandererAttacksReadPageStory15Display.text,
 EventWandererAttacksReadPageStory15Display.button1,
-EventWandererAttacksReadPageStory15Base.text,|||\nThe cultist enters the room and says, “You have found some of what you need, but our sacred artifacts will be kept from you.” The cultist takes a swing. ({agility};2) If you pass, you duck in time and punch back; the cultist suffers 2 Damage. If you fail, the cultist clocks you. Become stunned and drop the {c:QItemRitualComponents} if you are carrying them.\n|||
+EventWandererAttacksReadPageStory15Base.text,"\nThe cultist enters the room and says, “You have found some of what you need, but our sacred artifacts will be kept from you.” The cultist takes a swing. ({agility};2) If you pass, you duck in time and punch back; the cultist suffers 2 Damage. If you fail, the cultist clocks you. Become stunned and drop the {c:QItemRitualComponents} if you are carrying them.\n"
 EventWandererAttacksReadPageStory15Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory15TiePoint.text,
 EventWandererAttacksReadPageStory15TiePoint.button1,
@@ -2928,7 +2919,7 @@ EventWandererAttacksReadPageStory16.text,
 EventWandererAttacksReadPageStory16.button1,
 EventWandererAttacksReadPageStory16Display.text,
 EventWandererAttacksReadPageStory16Display.button1,
-EventWandererAttacksReadPageStory16Base.text,|||\n“If they can figure out how to use them, they have found everything they need. We are almost too late, Brothers! Help me!” He raises his arms and begins chanting. The whole house begins to rumble and sway while you try to catch your footing. ({agility};2) If you pass, you hold your ground and stay upright. If you fail, you fall to the ground and roll around the room, striking your head repeatedly; become Dazed.\n\nThe sudden shaking startles everyone: each investigator on the first floor of the house suffers 1 horror. ({will} negates)\n|||
+EventWandererAttacksReadPageStory16Base.text,"\n“If they can figure out how to use them, they have found everything they need. We are almost too late, Brothers! Help me!” He raises his arms and begins chanting. The whole house begins to rumble and sway while you try to catch your footing. ({agility};2) If you pass, you hold your ground and stay upright. If you fail, you fall to the ground and roll around the room, striking your head repeatedly; become Dazed.\n\nThe sudden shaking startles everyone: each investigator on the first floor of the house suffers 1 horror. ({will} negates)\n"
 EventWandererAttacksReadPageStory16Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory16TiePoint.text,
 EventWandererAttacksReadPageStory16TiePoint.button1,
@@ -2940,7 +2931,7 @@ EventWandererAttacksReadPageStory17.text,
 EventWandererAttacksReadPageStory17.button1,
 EventWandererAttacksReadPageStory17Display.text,
 EventWandererAttacksReadPageStory17Display.button1,
-EventWandererAttacksReadPageStory17Base.text,|||\n“It is time Brothers,” the cultist’s voice booms through the house. “We must get to the portal before it is too late.” Any investigators not carrying a {c:QItemFluxStabilizer} become Restrained.\n|||
+EventWandererAttacksReadPageStory17Base.text,"\n“It is time Brothers,” the cultist’s voice booms through the house. “We must get to the portal before it is too late.” Any investigators not carrying a {c:QItemFluxStabilizer} become Restrained.\n"
 EventWandererAttacksReadPageStory17Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory17TiePoint.text,
 EventWandererAttacksReadPageStory17TiePoint.button1,
@@ -2952,7 +2943,7 @@ EventWandererAttacksReadPageStory18.text,
 EventWandererAttacksReadPageStory18.button1,
 EventWandererAttacksReadPageStory18Display.text,
 EventWandererAttacksReadPageStory18Display.button1,
-EventWandererAttacksReadPageStory18Base.text,|||\nThe cultist looks at you and sneers, “You think you are ready, but you are inadequate to challenge the Master.” The cultist hurls demeaning insults while massaging a stone in his hand. You can feel the power of his words sinking into you, threatening your self-image and making you feel like you cannot go on. ({will};2) If you pass, you know these are just words. If you fail, your failings sadden and depress you; suffer 1 Horror ({will} negates).\n|||
+EventWandererAttacksReadPageStory18Base.text,"\nThe cultist looks at you and sneers, “You think you are ready, but you are inadequate to challenge the Master.” The cultist hurls demeaning insults while massaging a stone in his hand. You can feel the power of his words sinking into you, threatening your self-image and making you feel like you cannot go on. ({will};2) If you pass, you know these are just words. If you fail, your failings sadden and depress you; suffer 1 Horror ({will} negates).\n"
 EventWandererAttacksReadPageStory18Base.button1,{qst:Continue}
 EventWandererAttacksReadPageStory18TiePoint.text,
 EventWandererAttacksReadPageStory18TiePoint.button1,
@@ -2964,7 +2955,7 @@ EventWandererAttacksReadPageStrengthDamage.text,
 EventWandererAttacksReadPageStrengthDamage.button1,
 EventWandererAttacksReadPageStrengthDamageDisplay.text,
 EventWandererAttacksReadPageStrengthDamageDisplay.button1,
-EventWandererAttacksReadPageStrengthDamageBase.text,|||\nThe cultist grabs you by the collar and swings you around. You need to get away, but you aren’t sure if you can pull loose. ({strength};2) If you pass, the cultist swings but you keep your footing; you may move one space. If you fail, the cultist tosses you across the room; suffer 1 facedown Damage ({agility} negates), then move your investigator 1 space toward the Dining Room.\n|||
+EventWandererAttacksReadPageStrengthDamageBase.text,"\nThe cultist grabs you by the collar and swings you around. You need to get away, but you aren’t sure if you can pull loose. ({strength};2) If you pass, the cultist swings but you keep your footing; you may move one space. If you fail, the cultist tosses you across the room; suffer 1 facedown Damage ({agility} negates), then move your investigator 1 space toward the Dining Room.\n"
 EventWandererAttacksReadPageStrengthDamageBase.button1,{qst:Continue}
 EventWandererAttacksReadPageStrengthDamageTiePoint.text,
 EventWandererAttacksReadPageStrengthDamageTiePoint.button1,
@@ -2976,7 +2967,7 @@ EventWandererAttacksReadPageStrengthStunned.text,
 EventWandererAttacksReadPageStrengthStunned.button1,
 EventWandererAttacksReadPageStrengthStunnedDisplay.text,
 EventWandererAttacksReadPageStrengthStunnedDisplay.button1,
-EventWandererAttacksReadPageStrengthStunnedBase.text,|||\nThe cultist runs up on you with his fist cocked. This could be bad. ({strength};2) If you pass, you block the blow. If you fail, he cold-cocks you; become Stunned.\n|||
+EventWandererAttacksReadPageStrengthStunnedBase.text,"\nThe cultist runs up on you with his fist cocked. This could be bad. ({strength};2) If you pass, you block the blow. If you fail, he cold-cocks you; become Stunned.\n"
 EventWandererAttacksReadPageStrengthStunnedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageStrengthStunnedTiePoint.text,
 EventWandererAttacksReadPageStrengthStunnedTiePoint.button1,
@@ -2988,7 +2979,7 @@ EventWandererAttacksReadPageStrengthDazed.text,
 EventWandererAttacksReadPageStrengthDazed.button1,
 EventWandererAttacksReadPageStrengthDazedDisplay.text,
 EventWandererAttacksReadPageStrengthDazedDisplay.button1,
-EventWandererAttacksReadPageStrengthDazedBase.text,|||\nThe cultist looks around to find something of use. He grabs a heavy brass candlestick and raises it to strike you. ({strength};2) If you pass, you reach up and stop his downward swing. If you fail, he hits you over the head; become Dazed.\n|||
+EventWandererAttacksReadPageStrengthDazedBase.text,"\nThe cultist looks around to find something of use. He grabs a heavy brass candlestick and raises it to strike you. ({strength};2) If you pass, you reach up and stop his downward swing. If you fail, he hits you over the head; become Dazed.\n"
 EventWandererAttacksReadPageStrengthDazedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageStrengthDazedTiePoint.text,
 EventWandererAttacksReadPageStrengthDazedTiePoint.button1,
@@ -3000,7 +2991,7 @@ EventWandererAttacksReadPageStrengthRestrained.text,
 EventWandererAttacksReadPageStrengthRestrained.button1,
 EventWandererAttacksReadPageStrengthRestrainedDisplay.text,
 EventWandererAttacksReadPageStrengthRestrainedDisplay.button1,
-EventWandererAttacksReadPageStrengthRestrainedBase.text,|||\nThe cultist pulls out a whip and flicks it toward your leg. It wraps around both of them, making you unable to move. You reach down to grab the whip and pull. ({strength};2) If you pass, you pull the cultist off his feet; he suffers 1 Damage. If you fail, he yanks the whip and pulls your feet from under you; become Restrained.\n|||
+EventWandererAttacksReadPageStrengthRestrainedBase.text,"\nThe cultist pulls out a whip and flicks it toward your leg. It wraps around both of them, making you unable to move. You reach down to grab the whip and pull. ({strength};2) If you pass, you pull the cultist off his feet; he suffers 1 Damage. If you fail, he yanks the whip and pulls your feet from under you; become Restrained.\n"
 EventWandererAttacksReadPageStrengthRestrainedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageStrengthRestrainedTiePoint.text,
 EventWandererAttacksReadPageStrengthRestrainedTiePoint.button1,
@@ -3012,7 +3003,7 @@ EventWandererAttacksReadPageAgilityDamage.text,
 EventWandererAttacksReadPageAgilityDamage.button1,
 EventWandererAttacksReadPageAgilityDamageDisplay.text,
 EventWandererAttacksReadPageAgilityDamageDisplay.button1,
-EventWandererAttacksReadPageAgilityDamageBase.text,|||\nThe cultist reaches under his robes and pulls out an ornate knife. In one swift move, he slashes you. ({agility};2) If you pass, you dodge the blade. If you fail, the cultist cuts your arm; suffer 1 facedown damage ({agility} negates).\n|||
+EventWandererAttacksReadPageAgilityDamageBase.text,"\nThe cultist reaches under his robes and pulls out an ornate knife. In one swift move, he slashes you. ({agility};2) If you pass, you dodge the blade. If you fail, the cultist cuts your arm; suffer 1 facedown damage ({agility} negates).\n"
 EventWandererAttacksReadPageAgilityDamageBase.button1,{qst:Continue}
 EventWandererAttacksReadPageAgilityDamageTiePoint.text,
 EventWandererAttacksReadPageAgilityDamageTiePoint.button1,
@@ -3024,7 +3015,7 @@ EventWandererAttacksReadPageAgilityStunned.text,
 EventWandererAttacksReadPageAgilityStunned.button1,
 EventWandererAttacksReadPageAgilityStunnedDisplay.text,
 EventWandererAttacksReadPageAgilityStunnedDisplay.button1,
-EventWandererAttacksReadPageAgilityStunnedBase.text,|||\nYou see the cultist glancing at the vase on the table next to you. You try to beat him to it. ({agility};2}) If you pass, you grab the vase first; the cultist suffers 1 Damage. If you fail, the cultist cracks the vase across your left temple; become Stunned.\n|||
+EventWandererAttacksReadPageAgilityStunnedBase.text,"\nYou see the cultist glancing at the vase on the table next to you. You try to beat him to it. ({agility};2}) If you pass, you grab the vase first; the cultist suffers 1 Damage. If you fail, the cultist cracks the vase across your left temple; become Stunned.\n"
 EventWandererAttacksReadPageAgilityStunnedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageAgilityStunnedTiePoint.text,
 EventWandererAttacksReadPageAgilityStunnedTiePoint.button1,
@@ -3036,7 +3027,7 @@ EventWandererAttacksReadPageAgilityDazed.text,
 EventWandererAttacksReadPageAgilityDazed.button1,
 EventWandererAttacksReadPageAgilityDazedDisplay.text,
 EventWandererAttacksReadPageAgilityDazedDisplay.button1,
-EventWandererAttacksReadPageAgilityDazedBase.text,|||\nThe cultist grabs you and pushes you to the ground. As you fall, you try to avoid the sharp corner of the table. ({agility};2) If you pass, you twist out of the way. If you fail, you hit the table; become Dazed.\n|||
+EventWandererAttacksReadPageAgilityDazedBase.text,"\nThe cultist grabs you and pushes you to the ground. As you fall, you try to avoid the sharp corner of the table. ({agility};2) If you pass, you twist out of the way. If you fail, you hit the table; become Dazed.\n"
 EventWandererAttacksReadPageAgilityDazedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageAgilityDazedTiePoint.text,
 EventWandererAttacksReadPageAgilityDazedTiePoint.button1,
@@ -3048,7 +3039,7 @@ EventWandererAttacksReadPageAgilityRestrained.text,
 EventWandererAttacksReadPageAgilityRestrained.button1,
 EventWandererAttacksReadPageAgilityRestrainedDisplay.text,
 EventWandererAttacksReadPageAgilityRestrainedDisplay.button1,
-EventWandererAttacksReadPageAgilityRestrainedBase.text,|||\nThe cultist pulls an ugly stone carving out of his pocket, mumbles something about “intruders” and “ritual,” then begins speaking to the stone. When the cultist reaches forward to point at your feet, you jump. ({agility};2) If you pass, you jump just as the blackness swirls where your legs were. If you fail, the blackness coils around your legs; become Restrained.\n|||
+EventWandererAttacksReadPageAgilityRestrainedBase.text,"\nThe cultist pulls an ugly stone carving out of his pocket, mumbles something about “intruders” and “ritual,” then begins speaking to the stone. When the cultist reaches forward to point at your feet, you jump. ({agility};2) If you pass, you jump just as the blackness swirls where your legs were. If you fail, the blackness coils around your legs; become Restrained.\n"
 EventWandererAttacksReadPageAgilityRestrainedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageAgilityRestrainedTiePoint.text,
 EventWandererAttacksReadPageAgilityRestrainedTiePoint.button1,
@@ -3060,7 +3051,7 @@ EventWandererAttacksReadPageObservationDamaged.text,
 EventWandererAttacksReadPageObservationDamaged.button1,
 EventWandererAttacksReadPageObservationDamagedDisplay.text,
 EventWandererAttacksReadPageObservationDamagedDisplay.button1,
-EventWandererAttacksReadPageObservationDamagedBase.text,|||\nWith his hands open and raised to reassure you, the cultist starts talking to you, telling you the history of the Smythe family. As he talks, his hands slowly drop. ({observation};2) If you pass, you see him slide one of his hands under his robe, and you punch him hard; the cultist suffers 1 damage. If you fail, the cultist pulls a knife and stabs you; suffer 1 facedown damage ({agility} negates).\n|||
+EventWandererAttacksReadPageObservationDamagedBase.text,"\nWith his hands open and raised to reassure you, the cultist starts talking to you, telling you the history of the Smythe family. As he talks, his hands slowly drop. ({observation};2) If you pass, you see him slide one of his hands under his robe, and you punch him hard; the cultist suffers 1 damage. If you fail, the cultist pulls a knife and stabs you; suffer 1 facedown damage ({agility} negates).\n"
 EventWandererAttacksReadPageObservationDamagedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageObservationDamagedTiePoint.text,
 EventWandererAttacksReadPageObservationDamagedTiePoint.button1,
@@ -3072,7 +3063,7 @@ EventWandererAttacksReadPageObservationStunned.text,
 EventWandererAttacksReadPageObservationStunned.button1,
 EventWandererAttacksReadPageObservationStunnedDisplay.text,
 EventWandererAttacksReadPageObservationStunnedDisplay.button1,
-EventWandererAttacksReadPageObservationStunnedBase.text,|||\nThe cultist throws white powder at your feet and says something you cannot understand. The dust begins to rise all around you. ({observation};2) If you pass, you notice that the cultist is speaking to an ugly stone carving in his hand; you reach out, knock it from his fingers, and the dust settles. If you fail, the dust rises around your face and makes you feel... funny. Become Stunned.\n|||
+EventWandererAttacksReadPageObservationStunnedBase.text,"\nThe cultist throws white powder at your feet and says something you cannot understand. The dust begins to rise all around you. ({observation};2) If you pass, you notice that the cultist is speaking to an ugly stone carving in his hand; you reach out, knock it from his fingers, and the dust settles. If you fail, the dust rises around your face and makes you feel... funny. Become Stunned.\n"
 EventWandererAttacksReadPageObservationStunnedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageObservationStunnedTiePoint.text,
 EventWandererAttacksReadPageObservationStunnedTiePoint.button1,
@@ -3084,7 +3075,7 @@ EventWandererAttacksReadPageObservationDazed.text,
 EventWandererAttacksReadPageObservationDazed.button1,
 EventWandererAttacksReadPageObservationDazedDisplay.text,
 EventWandererAttacksReadPageObservationDazedDisplay.button1,
-EventWandererAttacksReadPageObservationDazedBase.text,|||\nThe cultist creeps into the room, watching you paw through drawers; he sneaks up on you. He gets behind you and... ({observation};2) If you pass, you swing around and find him with his arms raised and a look of surprise on his face: you punch the cultist hard in the gut; the cultist suffers 1 damage. If you fail, the cultist punches you in the back of the head; become Dazed.\n|||
+EventWandererAttacksReadPageObservationDazedBase.text,"\nThe cultist creeps into the room, watching you paw through drawers; he sneaks up on you. He gets behind you and... ({observation};2) If you pass, you swing around and find him with his arms raised and a look of surprise on his face: you punch the cultist hard in the gut; the cultist suffers 1 damage. If you fail, the cultist punches you in the back of the head; become Dazed.\n"
 EventWandererAttacksReadPageObservationDazedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageObservationDazedTiePoint.text,
 EventWandererAttacksReadPageObservationDazedTiePoint.button1,
@@ -3096,7 +3087,7 @@ EventWandererAttacksReadPageObservationRestrained.text,
 EventWandererAttacksReadPageObservationRestrained.button1,
 EventWandererAttacksReadPageObservationRestrainedDisplay.text,
 EventWandererAttacksReadPageObservationRestrainedDisplay.button1,
-EventWandererAttacksReadPageObservationRestrainedBase.text,|||\nThe cultist leans over and does something at his feet. When he stands up, he makes eye contact with you and smiles. ({observation};2) If you pass, you glance down and see a snake slithering toward you; move 1 space toward the dining room.\n\nIf you fail, the snake grows thicker as it coils around your legs; suffer 1 horror. ({will} negates) Suddenly, the snake putrifies into something sticky; become Restrained.\n|||
+EventWandererAttacksReadPageObservationRestrainedBase.text,"\nThe cultist leans over and does something at his feet. When he stands up, he makes eye contact with you and smiles. ({observation};2) If you pass, you glance down and see a snake slithering toward you; move 1 space toward the dining room.\n\nIf you fail, the snake grows thicker as it coils around your legs; suffer 1 horror. ({will} negates) Suddenly, the snake putrifies into something sticky; become Restrained.\n"
 EventWandererAttacksReadPageObservationRestrainedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageObservationRestrainedTiePoint.text,
 EventWandererAttacksReadPageObservationRestrainedTiePoint.button1,
@@ -3108,7 +3099,7 @@ EventWandererAttacksReadPageLoreDamage.text,
 EventWandererAttacksReadPageLoreDamage.button1,
 EventWandererAttacksReadPageLoreDamageDisplay.text,
 EventWandererAttacksReadPageLoreDamageDisplay.button1,
-EventWandererAttacksReadPageLoreDamageBase.text,|||\nThe cultist raises a hand to his mouth and begins speaking a language you don’t understand. As he speaks, you get the sensation that you know what is going to happen. ({lore};2) If you pass, you anticipate the small explosion and step aside. If you fail, the cultist casts his curse at your feet, making you feel a surge of debilitating electricity from floor to hat; suffer 1 damage ({agility} negates).\n|||
+EventWandererAttacksReadPageLoreDamageBase.text,"\nThe cultist raises a hand to his mouth and begins speaking a language you don’t understand. As he speaks, you get the sensation that you know what is going to happen. ({lore};2) If you pass, you anticipate the small explosion and step aside. If you fail, the cultist casts his curse at your feet, making you feel a surge of debilitating electricity from floor to hat; suffer 1 damage ({agility} negates).\n"
 EventWandererAttacksReadPageLoreDamageBase.button1,{qst:Continue}
 EventWandererAttacksReadPageLoreDamageTiePoint.text,
 EventWandererAttacksReadPageLoreDamageTiePoint.button1,
@@ -3120,7 +3111,7 @@ EventWandererAttacksReadPageLoreStunned.text,
 EventWandererAttacksReadPageLoreStunned.button1,
 EventWandererAttacksReadPageLoreStunnedDisplay.text,
 EventWandererAttacksReadPageLoreStunnedDisplay.button1,
-EventWandererAttacksReadPageLoreStunnedBase.text,|||\nThe cultist pulls something from underneath his robe; the device is making funny noises. It looks something like the {c:QItemFluxStabilizer} you found earlier, but different; maybe you know what it is. ({lore};2) If you fail, the device goes off, blinding you with a flash of light; become Stunned. If you pass, you close your eyes at the last moment.\n|||
+EventWandererAttacksReadPageLoreStunnedBase.text,"\nThe cultist pulls something from underneath his robe; the device is making funny noises. It looks something like the {c:QItemFluxStabilizer} you found earlier, but different; maybe you know what it is. ({lore};2) If you fail, the device goes off, blinding you with a flash of light; become Stunned. If you pass, you close your eyes at the last moment.\n"
 EventWandererAttacksReadPageLoreStunnedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageLoreStunnedTiePoint.text,
 EventWandererAttacksReadPageLoreStunnedTiePoint.button1,
@@ -3132,7 +3123,7 @@ EventWandererAttacksReadPageLoreDazed.text,
 EventWandererAttacksReadPageLoreDazed.button1,
 EventWandererAttacksReadPageLoreDazedDisplay.text,
 EventWandererAttacksReadPageLoreDazedDisplay.button1,
-EventWandererAttacksReadPageLoreDazedBase.text,|||\nThe cultist begins casting a curse. You might know this one. ({lore};2) If you pass, you speak the correct counter-curse. If you fail, a fog surrounds your head, then sinks in, confusing you and, for a moment, it feels as if Sarah is speaking to you in the same language as the cultist; become Dazed.\n|||
+EventWandererAttacksReadPageLoreDazedBase.text,"\nThe cultist begins casting a curse. You might know this one. ({lore};2) If you pass, you speak the correct counter-curse. If you fail, a fog surrounds your head, then sinks in, confusing you and, for a moment, it feels as if Sarah is speaking to you in the same language as the cultist; become Dazed.\n"
 EventWandererAttacksReadPageLoreDazedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageLoreDazedTiePoint.text,
 EventWandererAttacksReadPageLoreDazedTiePoint.button1,
@@ -3144,7 +3135,7 @@ EventWandererAttacksReadPageLoreRestrained.text,
 EventWandererAttacksReadPageLoreRestrained.button1,
 EventWandererAttacksReadPageLoreRestrainedDisplay.text,
 EventWandererAttacksReadPageLoreRestrainedDisplay.button1,
-EventWandererAttacksReadPageLoreRestrainedBase.text,|||\nThe cultist pours out a circle of dust and speaks in a language you do not understand, though you think you heard “David.” You close your eyes and hope for the best. ({lore};2) If you pass, the dust just sits there while the frustrated cultist continues mumbling. If you fail, the circle slides across the floor, under your feet, and up your legs where it binds you; become Restrained.\n|||
+EventWandererAttacksReadPageLoreRestrainedBase.text,"\nThe cultist pours out a circle of dust and speaks in a language you do not understand, though you think you heard “David.” You close your eyes and hope for the best. ({lore};2) If you pass, the dust just sits there while the frustrated cultist continues mumbling. If you fail, the circle slides across the floor, under your feet, and up your legs where it binds you; become Restrained.\n"
 EventWandererAttacksReadPageLoreRestrainedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageLoreRestrainedTiePoint.text,
 EventWandererAttacksReadPageLoreRestrainedTiePoint.button1,
@@ -3156,7 +3147,7 @@ EventWandererAttacksReadPageInfluenceDamaged.text,
 EventWandererAttacksReadPageInfluenceDamaged.button1,
 EventWandererAttacksReadPageInfluenceDamagedDisplay.text,
 EventWandererAttacksReadPageInfluenceDamagedDisplay.button1,
-EventWandererAttacksReadPageInfluenceDamagedBase.text,|||\nThe cultist comes at you, threatening to beat you senseless for trying to stop the Master. You compliment him on his shoes. ({influence};2) If you pass, he is thrown off guard and starts talking to you about the cobbler who made them. If you fail, he makes good on his threat; suffer 1 facedown damage ({agility} negates).\n|||
+EventWandererAttacksReadPageInfluenceDamagedBase.text,"\nThe cultist comes at you, threatening to beat you senseless for trying to stop the Master. You compliment him on his shoes. ({influence};2) If you pass, he is thrown off guard and starts talking to you about the cobbler who made them. If you fail, he makes good on his threat; suffer 1 facedown damage ({agility} negates).\n"
 EventWandererAttacksReadPageInfluenceDamagedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageInfluenceDamagedTiePoint.text,
 EventWandererAttacksReadPageInfluenceDamagedTiePoint.button1,
@@ -3168,7 +3159,7 @@ EventWandererAttacksReadPageInfluenceStunned.text,
 EventWandererAttacksReadPageInfluenceStunned.button1,
 EventWandererAttacksReadPageInfluenceStunnedDisplay.text,
 EventWandererAttacksReadPageInfluenceStunnedDisplay.button1,
-EventWandererAttacksReadPageInfluenceStunnedBase.text,|||\nThe cultist throws rope around your legs to hold you in place. You try to convince the cultist you share his goals. ({influence};2) If you pass, the cultist removes the rope as he tells you how surprised he is that you are kindred spirits. If you fail, the cultist yanks the rope, causing you to fall; become Stunned.\n|||
+EventWandererAttacksReadPageInfluenceStunnedBase.text,"\nThe cultist throws rope around your legs to hold you in place. You try to convince the cultist you share his goals. ({influence};2) If you pass, the cultist removes the rope as he tells you how surprised he is that you are kindred spirits. If you fail, the cultist yanks the rope, causing you to fall; become Stunned.\n"
 EventWandererAttacksReadPageInfluenceStunnedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageInfluenceStunnedTiePoint.text,
 EventWandererAttacksReadPageInfluenceStunnedTiePoint.button1,
@@ -3180,7 +3171,7 @@ EventWandererAttacksReadPageInfluenceDazed.text,
 EventWandererAttacksReadPageInfluenceDazed.button1,
 EventWandererAttacksReadPageInfluenceDazedDisplay.text,
 EventWandererAttacksReadPageInfluenceDazedDisplay.button1,
-EventWandererAttacksReadPageInfluenceDazedBase.text,|||\nThe cultist approaches you with a friendly smile and tries to get you to see it from his perspective. Can you keep your wits? ({influence};2) If you pass, you are not fooled. If you fail, you begin to believe in the righteousness of his cause; become Dazed.\n|||
+EventWandererAttacksReadPageInfluenceDazedBase.text,"\nThe cultist approaches you with a friendly smile and tries to get you to see it from his perspective. Can you keep your wits? ({influence};2) If you pass, you are not fooled. If you fail, you begin to believe in the righteousness of his cause; become Dazed.\n"
 EventWandererAttacksReadPageInfluenceDazedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageInfluenceDazedTiePoint.text,
 EventWandererAttacksReadPageInfluenceDazedTiePoint.button1,
@@ -3192,7 +3183,7 @@ EventWandererAttacksReadPageInfluenceRestrained.text,
 EventWandererAttacksReadPageInfluenceRestrained.button1,
 EventWandererAttacksReadPageInfluenceRestrainedDisplay.text,
 EventWandererAttacksReadPageInfluenceRestrainedDisplay.button1,
-EventWandererAttacksReadPageInfluenceRestrainedBase.text,|||\nThe cultist demands to know why you are here and why you are collecting certain items from around the house. You know you can calm him down if he’ll just listen. ({influence};2) If you pass, the cultist remembers you are here to clean. If you fail, the cultist throws something at your feet; become Restrained.\n|||
+EventWandererAttacksReadPageInfluenceRestrainedBase.text,"\nThe cultist demands to know why you are here and why you are collecting certain items from around the house. You know you can calm him down if he’ll just listen. ({influence};2) If you pass, the cultist remembers you are here to clean. If you fail, the cultist throws something at your feet; become Restrained.\n"
 EventWandererAttacksReadPageInfluenceRestrainedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageInfluenceRestrainedTiePoint.text,
 EventWandererAttacksReadPageInfluenceRestrainedTiePoint.button1,
@@ -3204,7 +3195,7 @@ EventWandererAttacksReadPageWillDamage.text,
 EventWandererAttacksReadPageWillDamage.button1,
 EventWandererAttacksReadPageWillDamageDisplay.text,
 EventWandererAttacksReadPageWillDamageDisplay.button1,
-EventWandererAttacksReadPageWillDamageBase.text,|||\nThe cultist takes a deep breath and raises his arms. As they go up, he grows taller. You know this is an illusion and that you must stand your ground. ({will};2) If you pass, you stand solid. If you fail, you turn to run and the cultist hits you from behind; suffer 1 damage ({agility} negates).\n|||
+EventWandererAttacksReadPageWillDamageBase.text,"\nThe cultist takes a deep breath and raises his arms. As they go up, he grows taller. You know this is an illusion and that you must stand your ground. ({will};2) If you pass, you stand solid. If you fail, you turn to run and the cultist hits you from behind; suffer 1 damage ({agility} negates).\n"
 EventWandererAttacksReadPageWillDamageBase.button1,{qst:Continue}
 EventWandererAttacksReadPageWillDamageTiePoint.text,
 EventWandererAttacksReadPageWillDamageTiePoint.button1,
@@ -3216,7 +3207,7 @@ EventWandererAttacksReadPageWillHorror.text,
 EventWandererAttacksReadPageWillHorror.button1,
 EventWandererAttacksReadPageWillHorrorDisplay.text,
 EventWandererAttacksReadPageWillHorrorDisplay.button1,
-EventWandererAttacksReadPageWillHorrorBase.text,|||\nThe cultist speaks words of power and you feel them creeping into you. You must be strong. ({will};2) If you pass, the energy washes harmlessly over you. If you fail, the words bind you and, for a moment, you can see the ceremony that is to come; suffer 1 facedown horror ({will} negates) and become Stunned.\n|||
+EventWandererAttacksReadPageWillHorrorBase.text,"\nThe cultist speaks words of power and you feel them creeping into you. You must be strong. ({will};2) If you pass, the energy washes harmlessly over you. If you fail, the words bind you and, for a moment, you can see the ceremony that is to come; suffer 1 facedown horror ({will} negates) and become Stunned.\n"
 EventWandererAttacksReadPageWillHorrorBase.button1,{qst:Continue}
 EventWandererAttacksReadPageWillHorrorTiePoint.text,
 EventWandererAttacksReadPageWillHorrorTiePoint.button1,
@@ -3228,7 +3219,7 @@ EventWandererAttacksReadPageWillDazed.text,
 EventWandererAttacksReadPageWillDazed.button1,
 EventWandererAttacksReadPageWillDazedDisplay.text,
 EventWandererAttacksReadPageWillDazedDisplay.button1,
-EventWandererAttacksReadPageWillDazedBase.text,|||\nThe cultist closes his eyes and begins speaking in a language you do not understand. Knowing he will try to stop you at any cost, you attempt to sneak up on him. The effort is nerve-wracking and you are starting to shake. ({will};2) If you pass, you whack the cultist as he completes his curse; the cultist suffers 1 damage. If you fail, you lose your nerve and the cultist completes the curse; become Dazed.\n|||
+EventWandererAttacksReadPageWillDazedBase.text,"\nThe cultist closes his eyes and begins speaking in a language you do not understand. Knowing he will try to stop you at any cost, you attempt to sneak up on him. The effort is nerve-wracking and you are starting to shake. ({will};2) If you pass, you whack the cultist as he completes his curse; the cultist suffers 1 damage. If you fail, you lose your nerve and the cultist completes the curse; become Dazed.\n"
 EventWandererAttacksReadPageWillDazedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageWillDazedTiePoint.text,
 EventWandererAttacksReadPageWillDazedTiePoint.button1,
@@ -3240,7 +3231,7 @@ EventWandererAttacksReadPageWillRestrained.text,
 EventWandererAttacksReadPageWillRestrained.button1,
 EventWandererAttacksReadPageWillRestrainedDisplay.text,
 EventWandererAttacksReadPageWillRestrainedDisplay.button1,
-EventWandererAttacksReadPageWillRestrainedBase.text,|||\nThe cultist raises his arms, looks up, and begins speaking in a language you do not understand. You can feel something happen to you as the cultist speaks. ({will};2) If you pass, you withstand the attack. If you fail, something changes, as if old Mr Smythe had touched you. Become Restrained.\n|||
+EventWandererAttacksReadPageWillRestrainedBase.text,"\nThe cultist raises his arms, looks up, and begins speaking in a language you do not understand. You can feel something happen to you as the cultist speaks. ({will};2) If you pass, you withstand the attack. If you fail, something changes, as if old Mr Smythe had touched you. Become Restrained.\n"
 EventWandererAttacksReadPageWillRestrainedBase.button1,{qst:Continue}
 EventWandererAttacksReadPageWillRestrainedTiePoint.text,
 EventWandererAttacksReadPageWillRestrainedTiePoint.button1,
