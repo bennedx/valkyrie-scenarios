@@ -2,6 +2,10 @@
 quest.name,Cleaning Crew
 quest.description,"\nA local family wants to sell their mansion and they need help to get it ready.  Someone from the family called a local handyman to hire him for the clean-up. The handyman a friend and you owe him a favor.  He has another job Saturday so he asked you to find a couple of others to help, meet with the family, and start cleaning their house.\n"
 quest.authors,Daniel.
+continue,Continue
+cancel,Cancel
+pass,Pass
+fail,Fail
 TokenSearchDrivewayJournal.text,"\nBenjamin dropped a book here.\n"
 TokenSearchBackdoorRandom.button1,{action} Search
 TokenExploreDiningRoomViaBackdoor.text,"\nThe door is filthy. You check the knob, but it’s locked:  you’ll need a key to get in.\n"
@@ -53,7 +57,7 @@ SpawnLibraryCultist.text,"\nWhen you walk in, a man is seated across from the do
 SpawnLibraryCultist.button1,Continue
 CustomMonsterLibraryCultist.monstername,Cultist
 CustomMonsterLibraryCultist.info,-
-TokenSearchLibraryBookcase.text,"\nThe books seem like a hodgepodge of local history, religion, and dark magic. After killing that man, you’re understandably upset. You came here to clean this house and now you’re way over your head--murder, ghosts, magic. As you ponder this, you see a book with a bright, white spine that stands out among the other, darker books.\n"
+TokenSearchLibraryBookcase.text,"\nThe books seem like a hodgepodge of local history, religion, and dark magic. After killing that man, you’re understandably upset. You came here to clean this house and now you’re in way over your head--murder, ghosts, magic. As you ponder this, you see a book with a bright, white spine that stands out among the other, darker books.\n"
 TokenSearchLibraryBookcase.button1,{action} Search
 TokenExploreLibraryBookcase.text,"\nThere is an elaborate lock on the door behind the bookcase; it has arcane markings, ones that you recognize from the spine of one of the books. An investigator with a heavy weapon might be able to bust through the door; otherwise, maybe the lock could be picked?\n"
 TokenExploreLibraryBookcase.button1,Tap to attempt the puzzle using {lore}
@@ -133,7 +137,7 @@ UIGameOverWinStopCultistsText.uitext,|||As the cultist falls to the floor you ar
 UIUIGameOverButton.button1,Continue
 TokenSearchBackdoorRandom.text,"\nA withered plant sits on a broken-down table behind the house.\n"
 TokenWallLibrary.text,"\nThis locked bookcase contains what looks like dark magic books. Maybe you should stay out of here.\n"
-TokenChapelPriestAlive.button1,|||{action} "What are <i>you</> doing here?!"|||
+TokenChapelPriestAlive.button1,|||{action} "What are <i>you</i> doing here?!"|||
 TokenExploreCryptViaChapel.text,"\nWith the information you have gathered, you figure out that there is a secret door behind the bookcase that leads to a network of underground caves and tunnels.\n\nAn investigator with the {c:QItemKey} can open this door.\n"
 CustomMonsterChapelRiot.monstername,Riot
 TokenExploreCryptNoKey.text,"\nThe door is firmly locked and looks too solid to bust down. You’ll need a key.\n"
@@ -492,7 +496,7 @@ EventPlaceChapel.button1,Continue
 EventPlaceChapelWhiskey.text,"\nThis place is a mess. You hope this isn’t part of the cleaning contract.\n\nThere’s a bottle lying on one of the pews. Place a Search token as indicated.\n"
 EventPlaceChapelLectern.text,"\nThe priest’s lectern has a large book on it. Place a Search token as indicated.\n"
 EventPlaceChapelLectern.button1,Continue
-EventPlaceChapel.text,"\nOpening the door, you step into what turns out to be a long tunnel. It’s so dark that you find yourself feeling your way along the smooth stone walls. Eventually, you come to a staircase that leads to a door on the ceiling. When you open it, you find yourself in an chapel that is old but well-maintained. In the distance, though one of the windows, you can see the house you are supposed to be cleaning. Place the {c:TileChapel} tile and trap door as indicated, then remove this Explore token.\n"
+EventPlaceChapel.text,"\nOpening the door, you step into the opening of a long tunnel. It’s so dark that you find yourself feeling your way along the smooth stone walls. Eventually, you come to a staircase that leads to a door on the ceiling. When you open it, you find yourself in an chapel that is old but well-maintained. In the distance, through one of the windows, you can see the house you are supposed to be cleaning. Place the {c:TileChapel} tile and trap door as indicated, then remove this Explore token.\n"
 EventPlaceChapelWhiskey.button1,Continue
 EventSearchChapelWhiskey.button1,Continue
 EventSearchChapelWhiskeyNoise.text,|||\nWhile you are bent over getting the bottle, you don’t notice the chapel door swing open and a priest walk in. Without looking around, he turns and heads for a door on the other side of the room. Place the White Man token as indicated.\n\nAs you stand up, pleased with your find, you catch your shirt on the pew, trip, and fall to the ground, letting out a loud, "Goddammit!"\n\nAs the priest turns, his face goes from startled to angry. "Who are you and how did you get in here?!"\n|||
@@ -505,7 +509,7 @@ EventSearchChapelWhiskeyChat.button1,Continue
 EventPlaceChapelExploreCryptWithKey.button1,Button1
 EventSearchChapelWhiskeyKill.button1,Continue
 EventSearchChapelRitualComponents.button1,Continue
-EventSearchChapelRitualComponents.text,"\nAs you walk around the altar to get a better look, you see that there is a chalice, some herbs, and even a skull! Gain the {c:QItemRitualComponents} Unique Item.\n\nThe book is the Smythe family bible. The first section lists marriages, births, and funerals going back many generations. Some of the names have a special symbol next to them:  a stylized, five-pointed star, like this:  {success}. You aren’t sure what it means, but from what you have seen and read today, it worries you. Gain 2 {clue}, then discard this Search token.\n"
+EventSearchChapelRitualComponents.text,"\nAs you walk around the altar to get a better look, you see that there is a chalice, some herbs, and even a skull. Gain the {c:QItemRitualComponents} Unique Item.\n\nThe book is the Smythe family bible. The first section lists marriages, births, and funerals going back many generations. Some of the names have a special symbol next to them:  a stylized, five-pointed star, like this:  {success}. You aren’t sure what it means, but from what you have seen and read today, it worries you. Gain 2 {clue}, then discard this Search token.\n"
 EventExploreLibraryBookcaseStrength.text,"\nYou raise your heavy weapon and swing. Roll 1 fewer die if you have suffered 3 or more Damage. ({strength};2) Deal damage equal to the weapon’s damage.\n"
 EventExploreLibraryBookcaseStrength.button1,Continue
 EventExploreLibraryBookcaseStrength.button2,Fail
@@ -605,7 +609,7 @@ EventPlaceHall2ExploreStudy.text,|||A small, tarnished brass plaque reads "Study
 EventPlaceFoyerExploreStudy.text,|||\nAnother door across the room leads farther into the house. A small plaque reads "Study." Place an Explore token as indicated.\n|||
 EventSearchStairsPass.text,"\nYou find something useful. Gain the {c:QItemBigGun} Common Item, then remove the Explore token.\n"
 EventSearchFoyerSpell.button1,Continue
-EventPlaceGallery.text,"\nThe gallery was once stately but now seems shabby. Paintings adorn the walls; all are covered in cobwebs and dust. Place the {c:TileGallery} tile as indicated, then remove all Explore tokens leading to this room.\n"
+EventPlaceGallery.text,"\nThe gallery was once stately but now seems shabby. Paintings adorn the walls and all of them are covered in cobwebs and dust. Place the {c:TileGallery} tile as indicated, then remove all Explore tokens leading to this room.\n"
 EventPlaceGallery.button1,Continue
 EventPlaceGalleryExploreFoyer.button1,Continue
 EventPlaceGalleryExploreCoatRoom.button1,Continue
@@ -1827,7 +1831,7 @@ EventDvmClosePortalLoopBack.text,
 EventDvmClosePortalLoopBack.button1,
 EventDvmClosePortalEnd.text,
 EventDvmClosePortalEnd.button1,
-EventDvmClosePortalOrderedToc1.text,"\nThis is a spell book and {c:EventChosenInvestigator} may have... abilities. Sarah is pushing to find something about closing portals.\n"
+EventDvmClosePortalOrderedToc1.text,"\nThis is a spell book and {c:EventChosenInvestigator} may have... abilities. Sarah is pushing you to find something about closing portals.\n"
 EventDvmClosePortalOrderedToc1.button1,Table of Contents
 EventDvmClosePortalOrderedToc1.button2,{action} Open the book
 EventDvmClosePortalOrderedToc1.button3,Portal

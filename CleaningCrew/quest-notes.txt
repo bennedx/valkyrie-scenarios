@@ -1,3 +1,13 @@
+DvmBooks:  Doesn't show text of Epilog
+
+PlacegalleryViaFoyer needs to be a different sequence from the other door
+PlaceFoyerViaHall:  might be missing the first search token?
+PlaceLibrary:  Where is the breeze coming from exactly?
+ExploreChapelViaStudy:  There are two cancel buttons
+PlaceDiningRoom:  If you do not have the journal, it makes you take a step into the room, then it offers you may move 1 space into the room.
+PlaceBasement:  A wall should cover the back door; there can be no other explore or sight tokens leading to this room
+DVM:  Is it DVM, or Arcane Manuscript?
+David:  This is Cousin David, not Uncle; don't use monsters for his name
 
 Hall1:  Gallery door: As you reach for the door, something catches your eye and you turn back to look at the painting. 
 SightHall2: As you try to look farther down the hall, that painting catches your eye again. Maybe you should take a closer look?
@@ -6,10 +16,7 @@ Once Sarah is found, explore/site works normally
 
 BackyardBenAfter
   - when leaving, the camera doesn't move the investigator token until hitting [continue]
-  - "I'm sorry": next toc shows "(end directive required for random/nokeep)"
   
 
 Do mythos wipe at start of mythos
 Do investigator wipe at start of investigator phase
-
-BackdoorLocked.book:  totally messed up in app

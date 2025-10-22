@@ -32,7 +32,7 @@ BOOK DvmOpenPortal ORDERED KEEP
 		// same as the prolog for DvmClosePortal.Page2
         PROLOG "
             This is a spell book and {c:EventChosenInvestigator}
-			may have... abilities. Sarah is pushing to find something
+			may have... abilities. Sarah is pushing you to find something
 			about closing portals.
         "
         
