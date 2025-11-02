@@ -357,7 +357,7 @@ TokenInteractEscape.button1,{action} Escape
 TokenDavidSmythesSonRescuable.text,The boy is curled up like a ball. His breathing
 TokenDavidSmythesSonRescuable.button1,Continue
 TokenExploreFrontDoor.button1,{action} Explore
-TokenExploreFrontDoor.text,"\nThe door seems unfazed by age. A small window purports to look out on the grounds. Maybe you can get out of this crazy house.\n"
+TokenExploreFrontDoor.text,"\nThe door seems unfazed by age. A small window purports to look out on the grounds. Maybe you can finally get out of this madhouse.\n"
 TokenExploreBackDoorLocked.button1,Button1
 EventPlaceDrivewayStart.text,"\nIt’s 3:00 and you’re on time. The man your friend spoke with on the phone--Benjamin--should be here to meet you.\n\nAs you walk up the driveway, you can see how poorly maintained the house and grounds are. The drive is paved, but cracked and pocked. Weeds grow as high as your waist on either side and you briefly wonder what might be hiding there.\n\nPlace the {c:TileDriveway} tile as indicated.\n"
 EventPlaceDrivewayInvestigators.button1,Continue
@@ -751,7 +751,7 @@ EventPlaceFoyerSearchRandom.text,"\nA small cabinet with drawers and little comp
 EventSearchFoyerRandom.text,"\nYou dig through the various compartments and eventually find something useful. Gain the {c:QItemFoyerRandom} Common Item, then discard this Search token.\n"
 EventSearchFoyerRandom.button1,Continue
 EventPlaceFoyerSearchRandom.button1,Continue
-EventExploreChapelViaCrypt.text,"\nYou carefully fit the key. It sticks at first, but eventually opens. Remove this Explore token.\n"
+EventExploreChapelViaCrypt.text,"\nYou carefully fit the key. It sticks at first, but then starts to turn. Then sticks. It will go no farther. With some effort, you wrestle the key from the lock and put it back in your pocket. Remove this Explore token.\n"
 EventPlaceBackdoorBenHappy.button1,Continue
 EventPlaceDrivewaySearchGardenTool.text,"\nThe weeds behind the house are even taller than the ones in front. Over at the corner of the drive, something under the weeds catches your eye. Place a Search token as indicated.\n"
 EventSearchDrivewayGardenTool.text,"\nYou rustle around in the weeds and find something interesting. Gain the {c:QItemGardenTool} Common Item, then discard this Search token.\n\nAs you pull it free of the weeds, a child’s doll is exposed. The clothing is ragged and the paint is chipping. You think back to the children that were found here and wonder if this doll belonged to one of them.\n\nGain 1 {clue}, then take 1 Horror ({will} negates).\n"
@@ -3241,3 +3241,10 @@ EventWandererAttacksReadPageWillRestrainedTiePoint.text,
 EventWandererAttacksReadPageWillRestrainedTiePoint.button1,
 EventWandererAttacksReadPageWillRestrainedEnd.text,
 EventWandererAttacksReadPageWillRestrainedEnd.button1,
+EventRngStart.button1,param > 1
+EventRngGetBaseRange.button1,Not done yet
+EventRngMainLoop.button1,rngI < rngk
+EventRngBuildNumber.button1,i < k
+EventTestRng.text,{var:rngResult}
+EventTestRng.button1,Continue
+EventTestRng.button2,Cancel

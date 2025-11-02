@@ -76,12 +76,35 @@ End Games
 -		Lose		xx turns expire:  summoning succeeds
 
 
-Notes					
-	To tell if whole house explored, check at the start of each mythos phase (explored... variables)
-	Convert basement door opening to a book
-	Convert study bookcase lock as book
-	
 
+
+General					
+-	To tell if whole house explored, check at the start of each mythos phase (explored... variables or
+		maybe just count the number of explorations? Check if chapel, hole, and connecting cave explored?
+
+-	Convert basement door opening to a book
+
+-	Convert study bookcase lock as book
+	
+-	Can complex explorations be restructured as books?
+
+-	how do RANDOM pages work?
+		They follow the non-RANDOM ones
+		They are processed in two different loops
+		There cannot be an epilog block; if one is needed, it will have to be done manually somehow
+		
+		The display and button parts are the same for both
+		The prologBlock checks to see if its index matches the random one
+		If not, goes to PageEventRandomFailed/PageEventDisplayRandom which loops back to RANDOM selector
+		When all random pages are read AND bool.IsLoopRandom, clear all readXxx flags
+		
+		Implement the RNG; 
+		
+		
+
+Compiler
+-	support RANDOM pages; only works for ORDERED NO KEEP
+-	test ExprRead, incl GetOrCreate()
 
 
 Hall1:  Gallery door: As you reach for the door, something catches your eye and you turn back to look at the painting. 
@@ -97,3 +120,5 @@ Do mythos wipe at start of mythos
 Do investigator wipe at start of investigator phase
 
 BackdoorLocked.book:  totally messed up in app
+
+PlaceChapelViaCrypt
