@@ -118,7 +118,7 @@ $1 == "buttons" {
 			}
 		}
 
-$1 ~ /^(add|event[0-9]+|remove|monster|inspect|itemname|side)$/ {
+$1 ~ /^(add|event[0-9]+|remove|monster|inspect|itemname|side|evadeevent|horrorevent)$/ {
             split($2, events, /[ \t]+/)
 			
             for(i = 1; i <= length(events); i++) {
@@ -181,7 +181,7 @@ END     {
 			print "==================================================================== unused sections"
             for(section in sections) {
 				if (section ~ /^(Token|QItem|UI|Spawn)/) continue
-                if (!sections[section][USED]) error("Unused", section, sections[section][FILE], sections[section][LINE], section)
+                if (!sections[section][USED]) error("Unused", section, sections[section][FILE], sections[section][LINE], "")
             }
             
             print "==================================================================== missing localization keys"
@@ -192,7 +192,7 @@ END     {
                     sections[section][KEYS][key] = found
 					if (found) localization[key][USED] = true
 					
-					if (!found && !sections[section][ISGAMEFILE]) error("Missing", key, sections[section][FILE], sections[section][LINE], section)
+					if (!found && !sections[section][ISGAMEFILE]) error("Missing", key, sections[section][FILE], sections[section][LINE], "")
                 }
             }
             
