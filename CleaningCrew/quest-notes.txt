@@ -1,13 +1,88 @@
-DvmBooks:  Doesn't show text of Epilog
+Valkyrie log cleanup:  ^NullReference.*?(\r\n\r\n)
 
-PlacegalleryViaFoyer needs to be a different sequence from the other door
-PlaceFoyerViaHall:  might be missing the first search token?
-PlaceLibrary:  Where is the breeze coming from exactly?
-ExploreChapelViaStudy:  There are two cancel buttons
-PlaceDiningRoom:  If you do not have the journal, it makes you take a step into the room, then it offers you may move 1 space into the room.
-PlaceBasement:  A wall should cover the back door; there can be no other explore or sight tokens leading to this room
-DVM:  Is it DVM, or Arcane Manuscript?
-David:  This is Cousin David, not Uncle; don't use monsters for his name
+End Games
+
+
+
+1. Open Portal
+		Goal		The portal is not open; try to stop the casting
+		
+		Trigger		All the items are found, the books are read, whole house explored
+		
+		Start-up	Sarah transports you thru the hole
+					All mansion color stuff is disabled
+					Stop wanderers, remove them from the board
+		
+		Portal		xx turns taken -or- 
+		Casting		All items are found, whole house explored, all but 2 pages read
+					"You can feel it start to happen"/woman screens
+					
+		Win			Cast succeeds
+		
+		Draw		Cast succeeds, but xx turns expired:  altar room collapses
+					but, hey, at least the monster won't kill the world
+		
+		Fail		xx turns expire
+		
+		
+		Notes
+		
+		
+		
+
+2. Feed Portal
+		Goal		Kill enough cultists that the already-open portal collapses
+		
+		Trigger		All the items are found, the hole is found, the books are read, whole house explored
+		
+		Start-up	Feel the portal open, Sarah warns about the feeding, start feeder-cultists
+					All mansion color stuff is enhanced; this is brutal
+					Stop wanderers, remove them from the board
+					Start feeder-wanderers
+		
+		Portal		xx turns expired -or-
+		Casting		All the items are found, whole house explored, all but 2 pages read		
+		
+		Win			xx cultists killed
+		
+		Draw		same number killed, but xx turns expired--exhaustion/cultists kill you
+					but, hey, at least the monster won't kill the world
+		
+		Lose		xx cultists escape thru hole -or- xx turns expire
+		
+		Notes		Is there a way to have cultists move to specific locations on each activation?
+						Like coming thru the door and automatically move toward the hole?
+
+3. Close Portal
+-		Goal		EventChosenInvestigator kills cousin, casts closing spell
+		
+-		Trigger		All items found, the hole is found, the books are read, whole house explored
+		
+-		Start-up	Sarah transports you thru the hole
+					If you go through immediately or next turn, you see the elder sign float and seat, and cousin starts summoning
+					Otherwise, your cousin seems to be casting a summoning ritual
+					All mansion color stuff is disabled
+					Stop wanderers, remove them from the board
+
+-		Portal		xx turns expired -or-
+		Casting		All the items are found, whole house explored, all but two pages read
+					Regardless, all mansion color stuff is disabled
+		
+-		Win			Cast succeeds
+		
+-		Draw		cast succeeds but xx turns expire: altar room collapses and kills you
+					but, hey, at least the monster won't kill the world
+		
+-		Lose		xx turns expire:  summoning succeeds
+
+
+Notes					
+	To tell if whole house explored, check at the start of each mythos phase (explored... variables)
+	Convert basement door opening to a book
+	Convert study bookcase lock as book
+	
+
+
 
 Hall1:  Gallery door: As you reach for the door, something catches your eye and you turn back to look at the painting. 
 SightHall2: As you try to look farther down the hall, that painting catches your eye again. Maybe you should take a closer look?
@@ -20,3 +95,5 @@ BackyardBenAfter
 
 Do mythos wipe at start of mythos
 Do investigator wipe at start of investigator phase
+
+BackdoorLocked.book:  totally messed up in app
