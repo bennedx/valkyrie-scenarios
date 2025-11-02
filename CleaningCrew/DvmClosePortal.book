@@ -30,11 +30,11 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
     PAGE Page2
         PROLOG "
             This is a spell book and {c:EventChosenInvestigator}
-			may have... abilities. Sarah is pushing to find something
+			may have... abilities. Sarah is pushing you to find something
 			about closing portals.
         "
         
-        BUTTON "Turn to page 72" AFTER "Portal"
+        BUTTON "Turn to page 72" AFTER "Portals"
 
         TEXT "
             You flip through the pages to find the <<Travel>> section on
@@ -54,7 +54,7 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
 			book, these materials seem similar to what is needed to open a
 			portal.
             
-            <i>I wonder if they actually have these already?</i> you hope to
+            <i>I wonder if they actually have these already?</i> you ask
             yourself. 
         "
     END PAGE
