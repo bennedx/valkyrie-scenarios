@@ -98,14 +98,14 @@ General
 		If not, goes to PageEventRandomFailed/PageEventDisplayRandom which loops back to RANDOM selector
 		When all random pages are read AND bool.IsLoopRandom, clear all readXxx flags
 		
-		Implement the RNG; 
+x		Implement the RNG; 
 		
 		
 
 Compiler
 -	support RANDOM pages; only works for ORDERED NO KEEP
--	test ExprRead, incl GetOrCreate()
-
+-	test #ExprRead, incl GetOrCreate()
+-	add include "" support
 
 Hall1:  Gallery door: As you reach for the door, something catches your eye and you turn back to look at the painting. 
 SightHall2: As you try to look farther down the hall, that painting catches your eye again. Maybe you should take a closer look?

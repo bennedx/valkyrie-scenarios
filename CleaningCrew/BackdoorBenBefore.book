@@ -111,9 +111,12 @@ BOOK BackdoorBenBefore RANDOM NO KEEP LOOPED
 	PAGE Why
 		BUTTON "<<Why did you wait so long to sell the house?>>"
 		
-		TEXT "<<Well, we tried right after the... trouble. No one would even come to look at it back then, but our priest, uh, told us now is the right time.>>
+		TEXT "
+			<<Well, we tried right after the... trouble. No one would even
+			come to look at it back then, but our priest, uh, told us now
+			is the right time.>>
 		
-		Gain 1 {clue}.
+			Gain 1 {clue}.
 		"
 		
 		IF NOT exploredBackyardNicely TEXT "
