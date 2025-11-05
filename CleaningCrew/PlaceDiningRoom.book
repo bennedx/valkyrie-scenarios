@@ -6,7 +6,7 @@ BOOK PlaceDiningRoom ORDERED NO KEEP LOOPED
 		TRIGGERED BY triggerDiningRoomLocked
 		
 		TEXT """
-			The door is filthy. You check the knob, but it>s locked:  you>ll need a key to get in.
+			The door is filthy. You check the knob, but it's locked:  you'll need a key to get in.
 		"""
 	END Locked
 
@@ -14,15 +14,20 @@ BOOK PlaceDiningRoom ORDERED NO KEEP LOOPED
 		TRIGGERED BY PlaceFluxStabilizer
 		
 		TEXT """
-			<<Ah! Here>s the key,>> Benjamin exclaims. He steps up to the door and unlocks it. A surprising amount of dirt falls as he pushes it open.
+			<<Ah! Here's the key,>> Benjamin exclaims. He steps up to the door and unlocks it. A surprising amount of dirt falls as he pushes it open.
 
-			You look through the door and see what looks like the servants> dining room. The room makes the yards look orderly. Heaps of rubbish and broken glassware are strewn about the room.
+			The door creaks open and you see what looks like the servants' dining room. The room makes the yards look orderly. Heaps of rubbish and broken glassware are strewn about the room.
 
 			Place the {c:TileDiningRoom} tile and door as indicated, then remove this Explore token.
 		"""
 		
 		ADD TileDiningRoom, TokenBackyardBenPassive, TokenDoorDiningRoom
 		REMOVE TokenExploreDiningRoomViaBackdoor, TokenBackyardBenBefore
+		
+		// we want a clear event name for the name of the target investigator,
+		// not some wacky constructed name
+		// we raise an event to have EventChosenInvestigator assigned
+		TRIGGER @ChooseInvestigator
 	END OpenDoor
 	
 	PAGE Kitchen

@@ -97,20 +97,20 @@ BOOK FeedPortal ORDERED NO KEEP
 	
 	LOOP RANDOM
 	
-	PAGE RunningOutOfTime RANDOM
+	PAGE RunningOutOfTime // RANDOM
 		TEXT "
 			<<Hurry,>> Sarah whispers. <<The portal is still open and we are
 			running out of time.>>
 		"
 	END RunningOutOfTime
 	
-	PAGE ItsComing RANDOM
+	PAGE ItsComing // RANDOM
 		TEXT "
 			<<Please,>> Sarah begs, <<It is almost here.>>
 		"
 	END ItsComing
 	
-	Page ItsHere RANDOM
+	Page ItsHere // RANDOM
 		TEXT "
 			<<I can feel It. It is here. We may already be too late.>>
 		"
