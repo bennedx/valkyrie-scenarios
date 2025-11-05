@@ -106,6 +106,14 @@ Compiler
 -	support RANDOM pages; only works for ORDERED NO KEEP
 -	test #ExprRead, incl GetOrCreate()
 -	add include "" support
+-	add automatic triggered-by to every book, named <book-name>Trigger; when set,
+		it starts the book at Start. This better supports the event-driven
+		approach
+-	adapt BNF to handle """..."...""" with grace
+
+ClosePortal Book:  make sure Step3 is organized correctly with repeats
+
+Add support for ClearAllMythosFlags (see BenAfter.AnythingElse)
 
 Hall1:  Gallery door: As you reach for the door, something catches your eye and you turn back to look at the painting. 
 SightHall2: As you try to look farther down the hall, that painting catches your eye again. Maybe you should take a closer look?

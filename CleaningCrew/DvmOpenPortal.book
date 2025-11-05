@@ -5,7 +5,7 @@ BOOK DvmOpenPortal ORDERED KEEP
     IF goal == goalClosePortal THEN EXIT BEFORE
 
 	// page 1 is the same as DvmClosePortal.Page1
-    PAGE Page1
+    PAGE TableOfContents
         PROLOG "The De Vermis Mysterium looks old and worn with time."
 
         BUTTON "Open the book" AFTER "Table of Contents"
@@ -26,9 +26,9 @@ BOOK DvmOpenPortal ORDERED KEEP
 
             The first time you read this page, gain 1 {clue}.
         "
-    END PAGE
+    END TableOfContents
 
-    PAGE Page2
+    PAGE Overview
 		// same as the prolog for DvmClosePortal.Page2
         PROLOG "
             This is a spell book and {c:EventChosenInvestigator}
@@ -53,10 +53,10 @@ BOOK DvmOpenPortal ORDERED KEEP
             <i>Maybe they don>t have all of these yet,</i> you hope to
             yourself.
         "
-    END PAGE
+    END Overview
 
 
-    PAGE Page3
+    PAGE Tools
         PROLOG "This ritual seems complicated."
 
         BUTTON "Read next page" AFTER "Tools"
@@ -82,9 +82,9 @@ BOOK DvmOpenPortal ORDERED KEEP
 
             {qst:FirstTimeRead}, gain 1 {clue}.
         "
-    END PAGE
+    END Tools
 
-    PAGE Page4
+    PAGE Sacrifice
         PROLOG "Opening a portal seem complicated."
 
         BUTTON "Read next page" AFTER "Sacrifice"
@@ -119,10 +119,10 @@ BOOK DvmOpenPortal ORDERED KEEP
             gain 2 {clue} if you don>t go Insane.
         "
 
-    END PAGE
+    END Sacrifice
 
 	// this is the same as DvmClosePortal.Page5
-    PAGE Page5
+    PAGE Commentary
         PROLOG "
             A look of concern and disgust on your face, you turn the page.
         "
@@ -162,7 +162,7 @@ BOOK DvmOpenPortal ORDERED KEEP
 
 		// ??? Why is this here
         // TRIGGER @FoundCellHoleViaJournal
-    END PAGE
+    END Commentary
 
 	// this is the same as DvmClosePortal.Epilog
     EPILOG
@@ -182,5 +182,5 @@ BOOK DvmOpenPortal ORDERED KEEP
             save the boy.
         "
 	END EPILOG
-END BOOK
+END DvmOpenPortal
 

@@ -31,7 +31,7 @@ BOOK Journal ORDERED KEEP LOOPED
 			Greatness from another source. I hired a local cleaning company to
 			come to the house the day of the ritual. They should protect us.
         "
-    END PAGE
+    END Page1
 
     PAGE Page2
         PROLOG "
@@ -61,7 +61,7 @@ BOOK Journal ORDERED KEEP LOOPED
 			the Master told me this morning that power is drawing into him,
 			making him stronger for Saturday.
         "
-    END PAGE
+    END Page2
 
     PAGE Page3
         PROLOG "<i>Sacrifice? His own son?!</i> These people must be stopped."
@@ -81,7 +81,7 @@ BOOK Journal ORDERED KEEP LOOPED
 
         readAboutBasementDoorToCave = TRUE
         TRIGGER @foundBasementDoorToCaveViaJournal
-    END PAGE
+    END Page3
  
     PAGE Page4
         PROLOG "There are two more entries. These people must be stopped."
@@ -108,7 +108,7 @@ BOOK Journal ORDERED KEEP LOOPED
         "
 		
 		readAboutBoy = true
-    END PAGE
+    END Page4
     
     PAGE Page5
         PROLOG "
@@ -137,7 +137,7 @@ BOOK Journal ORDERED KEEP LOOPED
         "
 
         TRIGGER @readJournal
-    END PAGE
+    END Page5
    
     EPILOG
         TEXT "
@@ -145,5 +145,5 @@ BOOK Journal ORDERED KEEP LOOPED
 			will take place. You must hurry.
 		"
     END EPILOG
-END BOOK
+END Journal
 

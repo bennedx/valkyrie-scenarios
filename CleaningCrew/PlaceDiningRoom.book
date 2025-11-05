@@ -14,15 +14,15 @@ BOOK PlaceDiningRoom ORDERED NO KEEP LOOPED
 		TRIGGERED BY PlaceFluxStabilizer
 		
 		TEXT """
-			"Ah! Here>s the key," Benjamin exclaims. He steps up to the door and unlocks it. A surprising amount of dirt falls as he pushes it open.
+			<<Ah! Here>s the key,>> Benjamin exclaims. He steps up to the door and unlocks it. A surprising amount of dirt falls as he pushes it open.
 
 			You look through the door and see what looks like the servants> dining room. The room makes the yards look orderly. Heaps of rubbish and broken glassware are strewn about the room.
 
 			Place the {c:TileDiningRoom} tile and door as indicated, then remove this Explore token.
 		"""
 		
-		ADD TileDiningRoom TokenBackyardBenPassive TokenDoorDiningRoom
-		REMOVE TokenExploreDiningRoomViaBackdoor TokenBackyardBenBefore
+		ADD TileDiningRoom, TokenBackyardBenPassive, TokenDoorDiningRoom
+		REMOVE TokenExploreDiningRoomViaBackdoor, TokenBackyardBenBefore
 	END OpenDoor
 	
 	PAGE Kitchen
@@ -30,7 +30,7 @@ BOOK PlaceDiningRoom ORDERED NO KEEP LOOPED
 			To the right, a doorway opens to the kitchen. Place an Explore token as indicated.
 		"""
 		
-		ADD TokenExploreKitchenViaDiningRoom TileDiningRoom
+		ADD TokenExploreKitchenViaDiningRoom, TileDiningRoom
 	END Kitchen
 
 	PAGE OtherExplores
@@ -38,7 +38,7 @@ BOOK PlaceDiningRoom ORDERED NO KEEP LOOPED
 			Two other doors lead farther into the house. Place Explore tokens as indicated.
 		"""
 		
-		ADD TokenExploreBasementFirst TokenExploreHall1ViaDiningRoom
+		ADD TokenExploreBasementFirst, TokenExploreHall1ViaDiningRoom
 	END OtherExplores
 	
 	PAGE FluxStabilizer
@@ -51,14 +51,14 @@ BOOK PlaceDiningRoom ORDERED NO KEEP LOOPED
 	
 	PAGE Paper
 		TEXT """
-			There>s a box in the corner that has been hastily packed. Place a Search token as indicated.
+			There's a box in the corner that has been hastily packed. Place a Search token as indicated.
 		"""
 		
 		ADD TokenSearchDiningRoomPaper
 		
 		// we do this because if they haven't found the journal,
 		// there will be another page
-		IF foundJournal THEN TRIGGER MoveAfterExplore
+		IF foundJournal THEN TRIGGER @MoveAfterExplore
 	END Paper
 	
 	PAGE Journal
@@ -68,6 +68,6 @@ BOOK PlaceDiningRoom ORDERED NO KEEP LOOPED
 			As you walk into the house, you remember the book in the driveway. You glance back toward the gate as you step inside. Move 1 space into the {c:TileDiningRoom}.
 		"""
 		
-		TRIGGER MoveAfterExplore
+		TRIGGER @MoveAfterExplore
 	END Journal
-END BOOK
+END PlaceDiningRoom

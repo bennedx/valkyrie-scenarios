@@ -3,7 +3,7 @@ DEBUG OFF
 CANCEL "Cancel"
 CONTINUE "Continue"
 
-BOOK BackyardBenBefore RANDOM NO KEEP LOOPED
+BOOK BenBefore RANDOM NO KEEP LOOPED
 	IF exploredDiningRoom THEN EXIT BEFORE
 
 	PROLOG
@@ -17,13 +17,13 @@ BOOK BackyardBenBefore RANDOM NO KEEP LOOPED
 			
 			Gain 1 {clue}.
 			
-			<<Anyway, I guess you>ll need a few hours just to look through the place and get your bearings. You>ll want to check every drawer, cabinet, and box in the house--take as much time as you need. The whole house should be cleared out and spotless by the end of next week.”
+			<<Anyway, I guess you'll need a few hours just to look through the place and get your bearings. You'll want to check every drawer, cabinet, and box in the house--take as much time as you need. The whole house should be cleared out and spotless by the end of next week.”
 		"
 
 		IF NOT exploredBackyardNicely TEXT "
 			<<Long enough,>> he snaps. <<There are numerous rooms on the ground floor, there is a basement, and there are many rooms upstairs. The place has always been too big for the family. Peter lived here with his daughter. His wife died under suspicious circumstances when the girl was three. Never explained.
 		
-			<<Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren>t you? And you won>t break anything else?>> <<I hope not,>> he mutters under his breath.
+			<<Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren't you? And you won't break anything else?>> <<I hope not,>> he mutters under his breath.
 		"
 
 		EPILOG "As he digs through his pockets, he is grumbling something about the size of the house and you catch the word... <<indolent>>?"
@@ -32,7 +32,7 @@ BOOK BackyardBenBefore RANDOM NO KEEP LOOPED
 		talkedToBenCount = talkedToBenCount + 1
 		TRIGGER @TalkedToBackyardBen AFTER 
 		IF talkedToBenCount >= 2 THEN EXIT
-	END PAGE
+	END HowLong
 
 	PAGE What
 		BUTTON "<<What do you think happened to those children?>>"
@@ -43,13 +43,13 @@ BOOK BackyardBenBefore RANDOM NO KEEP LOOPED
 			were never explained. Nasty business.
 		
 			<<Peter Smythe--the
-			girl>s father and the owner of this house--went missing that
+			girl's father and the owner of this house--went missing that
 			night. Most folks think he did something to the children and
 			then ran away. Still hiding, they think.
 		
-			<<What wasn>t reported
+			<<What wasn't reported
 			is that his brother, Henry, also disappeared that night. Folks in
-			town figured they>d run off together to avoid difficult questions.>>
+			town figured they'd run off together to avoid difficult questions.>>
 		
 			Gain 1 {clue}.
 		"
@@ -59,8 +59,8 @@ BOOK BackyardBenBefore RANDOM NO KEEP LOOPED
 			The burns on the third were never explained. Nasty business.
 			
 			<<Peter and his brother Henry both went missing that night. Most
-			folks don>t know about Henry. Left a lot of folks around town
-			wondering what really happened. But we>re not here to gossip.>>
+			folks don't know about Henry. Left a lot of folks around town
+			wondering what really happened. But we're not here to gossip.>>
 		"
 		
 		EPILOG "
@@ -72,19 +72,19 @@ BOOK BackyardBenBefore RANDOM NO KEEP LOOPED
 		talkedToBenCount = talkedToBenCount + 1
 		TRIGGER @TalkedToBackyardBen
 		IF talkedToBenCount >= 2 THEN EXIT
-	END PAGE
+	END What
 
 	PAGE Where
 		BUTTON "<<Where were those children found?>>"
 		
 		TEXT "
 			<<The children were found just over there,>> he says, pointing back
-			the way	you came. <<They were in a pile; the girl>s body was still
+			the way	you came. <<They were in a pile; the girl's body was still
 			smoking from the burns. Strangest thing: she kept smoking until the
-			next day. Coroner wasn>t able to explain it. No one was.
+			next day. Coroner wasn't able to explain it. No one was.
 		
 			<<Our family has lived here for generations--many of them in this
-			house. We>re upset to let it go, but no one lives here... or wants
+			house. We're upset to let it go, but no one lives here... or wants
 			to after what happened.>>
 		
 			Gain 1 {clue}.
@@ -94,52 +94,55 @@ BOOK BackyardBenBefore RANDOM NO KEEP LOOPED
 		
 		IF NOT exploredBackyardNicely TEXT "
 			<<The children were found just over there,>> he grumbles, pointing
-			back the way you came. <<Not sure why it matters, but I>ll tell
+			back the way you came. <<Not sure why it matters, but I'll tell
 			you:  the girl who was burnt, she kept smoldering until the next
-			day. Coroner couldn>t explain it.>> Benjamin resumes digging
+			day. Coroner couldn't explain it.>> Benjamin resumes digging
 			through his pockets, but seems a little shaken.
 		"
 		
-		EPILOG "Benjamin is still looking through his pockets, but he>s moving slower and looks upset. You wonder what his connection is to those children."
+		EPILOG "Benjamin is still looking through his pockets, but he's moving slower and looks upset. You wonder what his connection is to those children."
 		
 		talkedToBenWhere = true
 		talkedToBenCount = talkedToBenCount + 1
 		TRIGGER @TalkedToBackyardBen
 		IF talkedToBenCount >= 2 THEN EXIT
-	END PAGE
+	END Where
 
 	PAGE Why
 		BUTTON "<<Why did you wait so long to sell the house?>>"
 		
-		TEXT "<<Well, we tried right after the... trouble. No one would even come to look at it back then, but our priest, um, told us now is the right time.>>
+		TEXT "
+			<<Well, we tried right after the... trouble. No one would even
+			come to look at it back then, but our, um, priest, told us now
+			is the right time.>>
 		
-		Gain 1 {clue}.
+			Gain 1 {clue}.
 		"
 		
 		IF NOT exploredBackyardNicely TEXT "
-			<<That>s none of your concern,>> he snaps.
+			<<That's none of your concern,>> he snaps.
 			
 			You startle at his abrupt response. You and all investigators in your space suffer 1 facedown horror ({will} negates).
 		"
 		
-		EPILOG "Benjamin is looking around on the ground like maybe he dropped whatever he>s looking for. <i>Could it be a book instead of a key?</i> you wonder to yourself."
+		EPILOG "Benjamin is looking around on the ground like maybe he dropped whatever he's looking for. <i>Could it be a book instead of a key?</i> you wonder to yourself."
 		
 		talkedToBenWhy = true
 		talkedToBenCount = talkedToBenCount + 1
 		TRIGGER @TalkedToBackyardBen		
 		IF talkedToBenCount >= 2 THEN EXIT
-	END PAGE
+	END Why
 	
 	PAGE Sorry
 		IF NOT exploredBackyardNicely PAGE IS VISIBLE
 
-		BUTTON "<<I>m sorry about the gate.>>"
+		BUTTON "<<I'm sorry about the gate.>>"
 		
-		TEXT "	<<You should be more careful. The house is old and in poor repair.>> His shoulders rise for a moment, then fall as he sighs. <<No real harm done... the gate can be repaired... again.>>
+		TEXT "<<You should be more careful. The house is old and in poor repair.>> His shoulders rise for a moment, then fall as he sighs. <<No real harm done... the gate can be repaired... again.>>
 		"
 		
-		EPILOG "Benjamin still doesn>t look happy, but he doesn>t seem as angry now."
+		EPILOG "Benjamin still doesn't look happy, but he doesn't seem as angry now."
 		
 		exploredBackyardNicely = true
-	END PAGE
-END BOOK
+	END Sorry
+END BenBefore

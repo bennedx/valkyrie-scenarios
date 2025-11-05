@@ -47,7 +47,7 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 			
 			This step is complete.
         "
-    END PAGE
+    END Step1
 
     PAGE Step2
         PROLOG "
@@ -71,7 +71,7 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
         TEST QUOTA 10
             ON PASS DO NOTHING
             ON FAIL DO NOTHING
-    END PAGE
+    END Step2
 
     PAGE Step3
         PROLOG "
@@ -96,7 +96,7 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 		TEST QUOTA 4
             ON PASS DO NOTHING
             ON FAIL GOTO Step3Fail
-    END PAGE
+    END Step3
 
     PAGE Step3Fail
         PAGE IS NOT VISIBLE
@@ -111,7 +111,7 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
         "
 
         MARK Step3Repeat UNREAD
-    END PAGE
+    END Step3Fail
 
 	PAGE Step3Repeat
 		PROLOG "
@@ -129,7 +129,7 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 		TEST QUOTA 4
 			ON PASS DO NOTHING
 			ON FAIL GOTO Step3RepeatFail
-	END PAGE
+	END Step3Repeat
 
 	PAGE Step3RepeatFail
 		PAGE IS NOT VISIBLE
@@ -142,7 +142,7 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 		"
 
 		MARK Step3Repeat UNREAD
-	END PAGE
+	END Step3RepeatFail
 
     PAGE Step4
         PROLOG "
@@ -166,7 +166,7 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 	   TEST QUOTA 10
             ON PASS GOTO Step4Fail
             ON FAIL GOTO Step4Fail
-    END PAGE
+    END Step4
 
 
 	PAGE Step4Fail
@@ -182,7 +182,7 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 			causing it to... change in a way you cannot describe. It somehow
 			feels powerful, like the knife he is wielding.
 		"
-	END PAGE
+	END Step4Fail
 	
     EPILOG
         TEXT "
@@ -196,4 +196,4 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 		IF !alreadyWarnedAboutKilling THEN ADD MonsterUncleDavidToKill AFTER
 		alreadyWarnedAboutKilling = true AFTER
     END EPILOG
-END BOOK
+END OpenPortal

@@ -33,7 +33,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
     
             This step is complete.
         "
-    END PAGE
+    END Step1
 
     PAGE Step2
         PROLOG "
@@ -62,7 +62,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
         TEST QUOTA 10
             ON PASS GOTO Step2Fail
             ON FAIL GOTO Step2Fail
-    END PAGE
+    END Step2
 
     PAGE Step2Pass
         PAGE IS NOT VISIBLE
@@ -74,7 +74,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
         
             This step is complete
         "
-    END PAGE
+    END Step2Pass
 
     PAGE Step2Fail
         PAGE IS NOT VISIBLE
@@ -87,7 +87,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
         "
 
         MARK Step2Repeat UNREAD
-    END PAGE
+    END Step2Fail
 
     PAGE Step2Repeat
         PROLOG "
@@ -109,10 +109,10 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
 
         TEST QUOTA 4
             ON PASS GOTO Step2Pass
-            ON FAIL GOTO Step2FailRepeat
-    END PAGE
+            ON FAIL GOTO Step2RepeatFail
+    END Step2Repeat
 	
-    PAGE Step2FailRepeat
+    PAGE Step2RepeatFail
         PAGE IS NOT VISIBLE
 
         TEXT "
@@ -124,7 +124,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
         "
 
         MARK Step2Repeat UNREAD
-    END PAGE
+    END Step2RepeatFail
 
     PAGE Step3
         PROLOG "
@@ -152,7 +152,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
 		TEST QUOTA 10
             ON PASS GOTO Step3Fail
             ON FAIL GOTO Step3Fail
-    END PAGE
+    END Step3
 
     PAGE Step3Pass
         PAGE IS NOT VISIBLE
@@ -164,7 +164,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
 
             This step is complete.
         "
-    END PAGE
+    END Step3Pass
 
     PAGE Step3Fail
         PAGE IS NOT VISIBLE
@@ -177,7 +177,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
         "
 
         MARK Step3 UNREAD
-    END PAGE
+    END Step3Fail
 
     PAGE Step4
         PROLOG "
@@ -205,7 +205,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
 	   TEST QUOTA 10
             ON PASS GOTO Step4Fail
             ON FAIL GOTO Step4Fail
-    END PAGE
+    END Step4
 
     PAGE Step4Pass
         PAGE IS NOT VISIBLE
@@ -226,8 +226,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
         
             This step is complete.
         "
-    
-    END PAGE
+    END Step4Pass
 
     PAGE Step4Fail
         PAGE IS NOT VISIBLE
@@ -243,7 +242,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
         "
 
         MARK Step4Repeat UNREAD
-    END PAGE
+    END Step4Fail
 
     PAGE Step4Repeat
         PROLOG "
@@ -265,10 +264,10 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
         "
         
 		// even if we pass, we fail
-		TEST QUOTA 2
-            ON PASS GOTO Step4Fail
+		TEST QUOTA 4
+            ON PASS GOTO Step4Pass
             ON FAIL GOTO Step4Fail
-    END PAGE
+    END Step4Repeat
 
     PAGE Step5
         PROLOG "
@@ -301,7 +300,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
 		TEST QUOTA 10
             ON PASS GOTO Step5Fail
             ON FAIL GOTO Step5Fail
-    END PAGE
+    END Step5
 
     PAGE Step5Pass
         PAGE IS NOT VISIBLE
@@ -326,7 +325,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
 		
         result = fullWin
         GOTO EventGameOverStart
-    END PAGE
+    END Step5Pass
 
     PAGE Step5Fail
         PAGE IS NOT VISIBLE
@@ -339,7 +338,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
         "
 
         MARK Step5Repeat UNREAD
-    END PAGE
+    END Step5Fail
 
     PAGE Step5Repeat
         PAGE IS NOT VISIBLE
@@ -352,7 +351,7 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
         BUTTON "Try again"
 
         TEXT "
-            You sqeeze more blood out of your fist on to the {c:QItemElderSign}.
+            You squeeze more blood out of your fist on to the {c:QItemElderSign}.
             As it hits the trinket, the boy stops screaming.
 
             Test {lore} or {will}.
@@ -363,6 +362,6 @@ BOOK ClosePortal ORDERED NO KEEP LOOPED
         TEST QUOTA 4
             ON PASS GOTO Step5Pass
             ON FAIL GOTO Step5Fail
-    END PAGE
+    END Step5Repeat
 
-END BOOK
+END ClosePortal

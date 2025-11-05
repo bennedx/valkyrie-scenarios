@@ -1,8 +1,8 @@
 // ----------------------------------------------------------------------------------
-// use this to manage Sarah>s commentary and make it work across scenarios
+// use this to manage Sarah's commentary and make it work across scenarios
 // TOC: There are no TOC entries and this is ordered|nokeep:  this means the next page will be read each time it is opened
 // The default page text entries for goal == goalClosePortal
-// Note that the >visible> directives may change during the game, so pages with visibility rules might show out of order
+// Note that the "visible" directives may change during the game, so pages with visibility rules might show out of order
 
 LANGUAGE English
 
@@ -30,18 +30,18 @@ BOOK SarahPatter ORDERED NO KEEP
             open and close portals. You should read it to better understand
             what is happening.>>
         "
-    END PAGE
+    END Dvm
 
     Page Candles
         IF foundCandles THEN PAGE IS VISIBLE
 
         TEXT "
-            Sarah whispers to {c:EventChosenInvestigator}, <<There>s a part of
+            Sarah whispers to {c:EventChosenInvestigator}, <<There's a part of
             the house that is too dark to enter without light. The candles you
             found should help. If we move fast enough, maybe we can stop
             {c:CustomMonsterDavidSmythe} from opening the portal.>>
         "
-    END PAGE
+    END Candles
 
     PAGE ElderSign
         IF foundElderSign THEN PAGE IS VISIBLE
@@ -68,7 +68,7 @@ BOOK SarahPatter ORDERED NO KEEP
             they did.>>
         "
 
-    END PAGE
+    END ElderSign
 
     PAGE RitualComponents
         IF foundRitualComponents THEN PAGE IS VISIBLE
@@ -78,7 +78,7 @@ BOOK SarahPatter ORDERED NO KEEP
             and the men who tried to stop him brought similar items to help with
             the spells.>>
         "
-    END PAGE
+    END RitualComponents
 
     PAGE Dagger
         IF foundDagger THEN PAGE IS VISIBLE
@@ -88,7 +88,7 @@ BOOK SarahPatter ORDERED NO KEEP
             dagger,>> she starts. <<It looks like the one my father used in the
             portal ritual. With luck, they need this one and we have it.>>
         "
-    END PAGE
+    END Dagger
 
     PAGE Journal
         IF foundJournal THEN PAGE IS VISIBLE
@@ -98,7 +98,7 @@ BOOK SarahPatter ORDERED NO KEEP
             {c:QItemJournal}! The man who let you in was writing in it all
             week. You should read it carefully.>>
         "
-    END PAGE
+    END Journal
 
     PAGE MissingJournal
         IF NOT foundJournal THEN PAGE IS VISIBLE
@@ -114,13 +114,13 @@ BOOK SarahPatter ORDERED NO KEEP
             You look where Benjamyn was and
             see a book on the floor, like the one you found outside. <i>How did
             this get in here?>> you ask aloud. The other inventigators turn to
-            look. Place the {c:QItemJournal} in Benjamin>s previous space.)
+            look. Place the {c:QItemJournal} in Benjamin's previous space.)
         "
-    END PAGE
+    END MissingJournal
 
     PAGE Color1
         TEXT "
-            Sarah whispers to {c:EventChosenInvestigator}, <<You don>t remember
+            Sarah whispers to {c:EventChosenInvestigator}, <<You don't remember
             me or what happened 10 years ago. I am your little sister.
             
             <<I will tell you everything you need to know, but first I must
@@ -128,7 +128,7 @@ BOOK SarahPatter ORDERED NO KEEP
             tonight and you must stop him; if you cannot stop him, you will
             need to close that portal.>>
         "
-    END PAGE
+    END Color1
 
     PAGE Color2
         TEXT "
@@ -141,7 +141,7 @@ BOOK SarahPatter ORDERED NO KEEP
             was dead. As the portal, I could feel people and monsters
             approaching and passing through me from the other side.>>
         "
-    END PAGE
+    END Color2
 
     PAGE Color3
         TEXT "
@@ -149,10 +149,10 @@ BOOK SarahPatter ORDERED NO KEEP
             ancient one approach from the other side. Suddenly, a group of men
             broke into the altar chamber and began fighting the locals. One man
             went to the altar, killed our father, laid out some materials, and
-            spoke words I didn>t understand. He closed the portal while his
+            spoke words I didn't understand. He closed the portal while his
             friends protected him from what came through it.>>
         "
-    END PAGE
+    END Color3
 
     PAGE Color4
         TEXT "
@@ -163,44 +163,44 @@ BOOK SarahPatter ORDERED NO KEEP
             closed, I died with it. The pain of the ritual so engulfed me that
             I can still feel it.>>
         "
-    END PAGE
+    END Color4
     
     PAGE Color5
         TEXT "
             Sarah whispers to {c:EventChosenInvestigator}, <<You found out what
-            was going to happen a week before the ritual. Members of Father>s
+            was going to happen a week before the ritual. Members of Father's
             church did something to you. After that, you followed orders
             without question. You helped Father bind me during the ritual. From
             what they said at the time, you probably cannot remember anything
-            about the ritual or anything before. It>s why you don>t know who
+            about the ritual or anything before. It's why you don't know who
             you are or remember what happened that night.>>
         "
-    END PAGE
+    END Color5
 
     PAGE Color6
         TEXT "
             Sarah whispers to {c:EventChosenInvestigator}, <<The day of the
             ritual, two of my friends came to visit me. When Father told them I
-            wasn>t allowed out, they sneaked to my window and crawled in when I
-            opened it. Father was furious. I>m not sure who strangled them or
+            wasn't allowed out, they sneaked to my window and crawled in when I
+            opened it. Father was furious. I'm not sure who strangled them or
             who dragged them to the yard. I was burning alive when the portal
-            closed, then my body was dumped with my friends>. It wasn>t until
+            closed, then my body was dumped with my friends. It wasn't until
             then that I knew they were dead. I smouldered for several days,
             alive and conscious until the end.>>
         "
-    END PAGE
+    END Color6
     
     PAGE Color7
         TEXT "
-            Sarah whispers to {c:EventChosenInvestigator}, “I don>t know who
+            Sarah whispers to {c:EventChosenInvestigator}, “I don't know who
             the other men were, but the one who closed the portal was our uncle
-            Henry--Father>s brother. I think there>s something special about
-            our family; there are things only we can do. It>s why Father could
+            Henry--Father's brother. I think there's something special about
+            our family; there are things only we can do. It's why Father could
             summon the portal, and why Uncle Henry could close it.
             
             <<You probably share the family abilities. You must trust yourself
             to know what to do.>>
         "
-    END PAGE
-END BOOK
+    END Color7
+END SarahPatter
 

@@ -1,7 +1,7 @@
 LANGUAGE English
 DEBUG OFF
 
-BOOK BackyardBenAfter RANDOM NO KEEP
+BOOK BenAfter RANDOM NO KEEP
     IF exploredDiningRoom EXIT BEFORE
 
     PROLOG
@@ -25,7 +25,7 @@ BOOK BackyardBenAfter RANDOM NO KEEP
         "
 
         EPILOG "Benjamin seems surprised you asked about dirt. Odd since you were hired to clean."
-    END PAGE
+    END Dirt
     
     PAGE Footprints
         BUTTON "<<There are footprints in the dust by that door...>>"
@@ -37,7 +37,7 @@ BOOK BackyardBenAfter RANDOM NO KEEP
         "
 
         EPILOG "You notice Benjamin glancing nervously at the footprints. You are starting to wonder what's going on."
-    END PAGE
+    END Footprints
 
     PAGE AnythingElse
         BUTTON "<<Is there anything else we need to know?>>"
@@ -49,33 +49,45 @@ BOOK BackyardBenAfter RANDOM NO KEEP
     
             <<I must be going. Take your time and send someone to fetch me if you need anything.>>
         
-            Ben walks out the back door, saying, <<Everyone needs to get started.>>
-        
-            Move any investigators who are outside to the dining room. Ben shuts the door behind you.
-            <i>Was that a click?</i> Place an Explore token as indicated and remove Ben from the board.
+            Move any investigators who are outside to the {c:TileDiningRoom}.
+			
+			Ben shuts the door behind you. <i>Was that the lock turning?</i>
+			you ask yourself. Place an Explore token as indicated and remove Ben
+			from the board.
         "
     
         IF NOT exploredBackyardNicely THEN TEXT "
             <<What? Oh, here>s the key to the house. Don>t lose it.>>
         
             As he walks out, he drops the key in your direction. Place the {c:QItemBrassKey} common item
-            in Ben>s space. Once outside, Benjamin snaps, <<Everyone inside. No dawddling.>> Move all
-            investigators to the dining room and remove Ben from the board.
+            in Ben>s space. Once outside, Benjamin snaps, <<Everyone inside. No dawdling.>>
+
+			Move any investigators who are outside to the {C:TileDiningRoom}.
         
-            Ben slams the door shut behind him; place an Explore token as indicated.
+            Ben slams the door shut behind him; place an Explore token as indicated
+			and remove Ben from the board.
         "
     
-        EPILOG "[this should never be seen]"
+        NO EPILOG
     
         REMOVE TokenBackyardBenAfter
         ADD TokenExploreBackDoorLocked, TokenInvestigatorsDiningRoom
+		REMOVE TokenInvestigatorsDiningRoom AFTER
+		
+		TRIGGER @ClearAllMythosFlags
+		
+		$mythosHelp = TRUE
+		$mythosFlavor = TRUE
+		$mythosMinor = TRUE
+		$mythosIndoors = TRUE
         $MythosKey = TRUE
-        talkedToBenAnythingElse = TRUE 
+    	$mythosDiningRoom = TRUE
+			
+		talkedToBenAnythingElse = TRUE 
         talkedToBenCount = talkedToBenCount + 1
 
-        @removeDiningRoomInvestigators = TRUE
-        TRIGGER @TalkedToBackyardBen AFTER
+        TRIGGER @TalkedToBenAfter AFTER
 
         EXIT
-    END PAGE
-END BOOK
+    END AnythingElse
+END BenAfter

@@ -18,7 +18,7 @@ BOOK BackDoorLocked ORDERED NO KEEP LOOPED
 		TEST QUOTA 20
 			ON PASS DO NOTHING
 			ON FAIL DO NOTHING
-	END PAGE
+	END TurnKnob
 
 	PAGE ShakeDoor
 		PROLOG "
@@ -35,7 +35,7 @@ BOOK BackDoorLocked ORDERED NO KEEP LOOPED
 		TEST QUOTA 20
 			ON PASS DO NOTHING
 			ON FAIL DO NOTHING
-	END PAGE
+	END ShakeDoor
 	
 	PAGE HitDoor
 		PROLOG "
@@ -55,7 +55,7 @@ BOOK BackDoorLocked ORDERED NO KEEP LOOPED
 		TEST QUOTA 20
 			ON PASS DO NOTHING
 			ON FAIL DO NOTHING
-	END PAGE
+	END HitDoor
 
 	PAGE PickLock
 		PROLOG "
@@ -81,7 +81,7 @@ BOOK BackDoorLocked ORDERED NO KEEP LOOPED
 			ON FAIL DO NOTHING
 
 		pickedLock = true
-	END PAGE
+	END PickLock
 
 	PAGE UnlockDoor
 		PROLOG "
@@ -103,7 +103,7 @@ BOOK BackDoorLocked ORDERED NO KEEP LOOPED
 		TEST QUOTA 20
 			ON PASS DO NOTHING
 			ON FAIL DO NOTHING
-	END PAGE
+	END UnlockDoor
 
 	EPILOG 
 		TEXT "
@@ -111,11 +111,11 @@ BOOK BackDoorLocked ORDERED NO KEEP LOOPED
 			no matter how hard you try. You look at the key and try again.
 			And again. And again. Dejected and out of ideas, you turn away
 			from the door. <<I guess we>ll have to find another way out,>>
-			you say to no one in particular.
+			you say to no one in particular. Someone mutters, <<Yeah.>>
 		
 			Remove this explore token.
 		"
 
         REMOVE TokenExploreBackDoorLocked AFTER
 	END EPILOG
-END BOOK
+END BackDoorLocked

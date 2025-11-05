@@ -4,7 +4,7 @@ DEBUG OFF
 BOOK DvmClosePortal ORDERED KEEP LOOPED
     IF goal != goalClosePortal THEN EXIT
 
-    PAGE Page1
+    PAGE TableOfContents
         BUTTON "Open the book" AFTER "Table of Contents"
 
         PROLOG "The De Vermis Mysterium looks old and worn with time."
@@ -25,9 +25,9 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
 
             {qst:FirstTimeRead}, gain 1 {clue}.
         "
-    END PAGE
+    END TableOfContents
 
-    PAGE Page2
+    PAGE Portals
         PROLOG "
             This is a spell book and {c:EventChosenInvestigator}
 			may have... abilities. Sarah is pushing you to find something
@@ -57,9 +57,9 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
             <i>I wonder if they actually have these already?</i> you ask
             yourself. 
         "
-    END PAGE
+    END Portals
 
-    PAGE Page3
+    PAGE Tools
         PROLOG "Closing a portal is going to require a lot of work."
 
         BUTTON "Read the next page" AFTER "Tools"
@@ -86,9 +86,9 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
 
             {qst:FirstTimeRead}, gain 1 {clue}.
         "
-    END PAGE
+    END Tools
 
-    PAGE Page4
+    PAGE Sacrifice
         PROLOG "
             Each tool seems to need special attention. This will require more
             study.
@@ -124,9 +124,9 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
 
             {qst:FirstTimeRead}, suffer 1 Horror ({will} negates).
 		"
-    END PAGE
+    END Sacrifice
     
-    PAGE Page5
+    PAGE Commentary
         PROLOG "
             A look of concern and disgust on your face, you turn the page.
         "
@@ -163,10 +163,7 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
             <i>The boy must be under the house somewhere,</i> you think to
             yourself.
         "
-
-		// ??? Why is this here
-        // TRIGGER @FoundCellHoleViaJournal
-    END PAGE
+    END Commentary
     
     EPILOG
         TEXT "
@@ -185,4 +182,4 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
             save the boy.
         "
     END EPILOG
-END BOOK
+END DvmClosePortal
