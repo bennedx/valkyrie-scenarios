@@ -1,6 +1,9 @@
 LANGUAGE English
 
 BOOK PlaceDiningRoom ORDERED NO KEEP LOOPED
+	TRIGGERED BY @talkedToBen
+	IF @talkedToBenCount <2 THEN EXIT
+	
 	PAGE Locked
 		PAGE IS NOT VISIBLE
 		TRIGGERED BY triggerDiningRoomLocked

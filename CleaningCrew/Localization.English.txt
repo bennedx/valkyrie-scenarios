@@ -242,7 +242,7 @@ TokenExploreBackdoorViaDrivewaySight.text,"\nYou can see the huge mess through h
 TokenExploreBackdoorViaDrivewaySight.button1,Continue
 TokenExploreKitchenViaDiningRoom.text,"\nThe swinging door doesn’t look like it will hold up to much use, so you’ll need to be careful.\n"
 TokenSearchBackdoor2x4.button1,Continue
-TokenSearchDiningRoomFluxStabilizer.button1,Search
+TokenSearchDiningRoomFluxStabilizer.button1,{action} Search
 SpawnMythosWandererStudy.button1,Pass
 SpawnMythosWandererStudy.text,"\nOne of the locals walks into the study through a door in the back of the room. Place a cultist as indicated.\n"
 SpawnMythosWandererLibrary.button1,Pass
@@ -325,7 +325,7 @@ TokenBackyardBenBefore.button1,Continue
 TokenTestBenTrigger.button1,Continue
 TokenTestBenTrigger.text,Triggered Ben
 TokenBackyardBenPassive.button1,Continue
-TokenSearchDiningRoomFluxStabilizerPuzzle.text,"\nThe device just sits there, not doing anything. There seems to be a control panel. Maybe you can restart it?\n"
+TokenSearchDiningRoomFluxStabilizerPuzzle.text,"\nThe device just sits there, not doing anything. There seems to be a control panel. Maybe you can restart it? You reach down and start fiddling with the buttons and dials.\n\n{c:EventChosenInvestigator} may attempt the puzzle using {intellect}.\n"
 TokenSearchDiningRoomFluxStabilizerPuzzle.button1,{action} Tap to Attempt the Puzzle using...
 PuzzleDiningRoomFluxStabilizer.button1,That’s it!
 TokenBackyardBenAfter.button1,Continue
@@ -761,27 +761,12 @@ EventExploreBackdoorFailSearchJournal.text,"\nBenjamin smiles again and walks th
 EventSearchBackdoor2x4.text,"\nYou carefully pick through the mess ({agility}).\n"
 EventExploreDiningRoomViaBackdoor.text,|||\n"Ah, here they are," Benjamin exclaims, waving his keys. "Let’s go in."\n|||
 EventExploreDiningRoomViaBackdoor.button1,Continue
-EventChosenInvestigatorOld.text,"\nAs you reach for the device, it quietly whirrs on. Suddenly, {rnd:hero} is pushed back. Move {rnd:hero} 1 space away from the device.\n"
-EventSearchDiningRoomFluxStabilizer.text,|||\nThe folded paper next to the device turns out to be instructions. It’s called a "{c:QItemFluxStabilizer}," and it repels monsters. "MONSTERS!?" you erupt loudly.\n\nAs you blurt out the word, {c:EventChosenInvestigator} has a moment of <i>deja vu</i>, a sense of being home. The reverie lasts only for a moment before the reality of the house returns.\n|||
-EventSearchDiningRoomFluxStabilizer.button1,Continue
-EventSearchDiningRoomFluxStabilizerGet.text,"\nAs you reach down to pick it up, the device whirrs and all investigators--including you--are pushed 1 space away from the {c:QItemFluxStabilizer}.\n\n{c:EventChosenInvestigator} stands back up and tries walking toward the device:  it doesn’t activate. Move {c:EventChosenInvestigator} into the {c:QItemFluxStabilizer}'s space.\n\n Something about the device repels all the investigators except {c:EventChosenInvestigator}; only {c:EventChosenInvestigator} can move into its space.\n"
-EventChosenInvestigatorOld.button2,Cancel
-EventSearchDiningRoomFluxStabilizerGet.button1,Continue
-EventSearchDiningRoomFluxStabilizerFinnYes.button1,Continue
 EventStartupKateStart.button1,Button1
-EventSearchDiningRoomFluxStabilizerFinnYes.text,"\nSomething about the {c:QItemFluxStabilizer} has changed Finn Edwards. His special ability can no longer be used.\n\nHowever, as he stands up again, he pushes his hand painfully onto something metal. Finn gains the {c:QItemBrassKnuckles} Common Item. As he plays with them, they make him feel more confident. Improve Finn’s {strength}.\n"
 EventStartupKateYes.text,"\nKate is running late, so she is hurried and inattentive. She grabs her {c:QItemFluxStabilizer} and turns to put it away. She cries out as it slips from her fingers and drops heavily to the floor. It cracks open when it hits and releases blue smoke. <i>How can the universe be so cruel and unfair?!</i> Kate discards her {c:QItemFluxStabilizer}. She fumes and ruminates on the loss. That seething anger will carry with her for a while:  Kate becomes Focused. She becomes Focused whenever she is attacked.\n\nKate is ready for whatever comes.\n"
 EventStartupKateYes.button1,Continue
 EventStartupKateEnd.button1,Button1
 EventFluxStablizerInspect.button1,Continue
-EventSearchDiningRoomFluxStabilizerKate.button1,Yes
 EventFluxStablizerInspect.text,"\nOnly {c:EventChosenInvestigator} can drop or pick up this item, and cannot trade it to another investigator. When the {c:QItemFluxStabilizer} is on the floor, any investigator who moves or is moved into the space immediately moves 1 space away from the device. Move toward the {c:TileDiningRoom} if possible, or choose the direction randomly. This does not count as a movement. {c:EventChosenInvestigator} is immune to this effect.\n\nWhen {c:EventChosenInvestigator} carries this item, add 1 additional movement to their move actions.\n"
-EventSearchDiningRoomFluxStabilizerKate.button2,No
-EventSearchDiningRoomFluxStabilizerKateNo.text,"\nKate quietly seethes to herself at the unfairness:  the {c:QItemFluxStabilizer} should be hers. Kate becomes Focused.\n"
-EventSearchDiningRoomFluxStablizerKateYes.text,"\nKate is so overjoyed that she will have a {c:QItemFluxStablizer} again that she calms down and loses her focusing anger.\n\nKate no longer becomes Focused when she is attacked.\n"
-EventSearchDiningRoomFluxStablizerKateYes.button1,Continue
-EventSearchDiningRoomFluxStabilizerKate.text,"\nWill Kate pick up the {c:QItemFluxStabilizer}?\n"
-EventSearchDiningRoomFluxStabilizerKateNo.button1,Continue
 EventMythosWandererStart.button1,Continue
 EventMythosWandererStart.button3,Button3
 EventMythosWandererStart.button4,Button4
@@ -826,15 +811,12 @@ EventWandererMoveEnd.text,"\nThe cultist moves 1 space toward the nearest invest
 EventWandererHorrorCheck.button1,Continue
 EventPlaceKitchenBrassKey.text,"\nNext to you is a box that looks like it was filled in a hurry. Place a Search token as indicated.\n"
 EventPlaceKitchenBrassKey.button1,Continue
-EventChosenInvestigator.text,"\nAs Ben opens the door, {rnd:hero} has a sudden jolt of <i>deja vu</i>, a flashback to an otherwise forgotten childhood. They walk over to look through the door.\n\nMove {rnd:hero} to the same space as the door.\n\n{rnd:here} looks through the door, a puzzled and concerned look on their face.\n"
+EventChosenInvestigator.text,"\nAs Ben opens the door, {rnd:hero} has a sudden jolt of <i>deja vu</i>, a flashback to an otherwise forgotten childhood. They walk over to look through the door.\n\nMove {rnd:hero} to the same space as the door.\n\n{rnd:hero} looks through the door, a puzzled and concerned look on their face.\n"
 EventMoveAfterExploreAngryBenDeadPriest.button1,Button1
 EventMoveAfterExploreDeadPriest.button1,Continue
 EventMoveAfterExploreAngryBen.button1,Button1
 EventMoveAfterExploreGoodGuys.button1,Button1
 EventMoveAfterExploreYes.text,"\nYou may move 1 space into the explored area.\n"
-EventTestChosenInvestigatorWanderers.text,Did you smash the gate?
-EventTestChosenInvestigatorWanderers.button1,Yes
-EventTestChosenInvestigatorWanderers.button2,No
 EventTestChosenInvestigatorWandererSmashedGate.button1,Continue
 EventFoundEvidenceStart.button1,Button1
 EventFoundEvidenceEnoughYes.button1,Button1
@@ -855,7 +837,6 @@ EventPlaceBasementSearchTrapdoorViaJournal.button1,Continue
 EventSearchFoyerCandles.button1,Continue
 EventSearchFoyerCandles.text,"\nYou quickly realize what drew you to the painting:  the man’s eyes glisten and meet yours as if he were alive. He next to a woman and two children. You recognize one of the children as Sarah, so it must be {c:MosterDavidSmyth}. Still, you don’t see anything that will help you with the house. As you turn away, you notice the sconces on either side of the painting. Some of the darker areas of the house could use a little light. You reach out and take down one of the candles.\n\nGain the {c:QItemCandles} Common Item, then remove this search token.\n"
 EventSearchDiningRoomFluxStabilizerAfterPuzzleBenHappy.button1,Continue
-EventSearchDiningRoomFluxStabilizerEnd.button1,Continue
 EventSearchDiningRoomFluxStabilizerAfterPuzzleBenHappy.text,|||\nBenjamin walks through the door into the {c:TileDiningRoom}. Move the purple man token as indicated.\n\nAs he walks through the door, he says, "I heard a noise. This house can be dangerous with everything in disarray. Please be careful."\n\nHe seems to be holding something in his hand.\n|||
 EventSearchDiningRoomFluxStabilizerBenAngry.text,|||\nBenjamin walks briskly through the door, yelling, "What are you folks doing in here?! You must be careful. This house and its contents are valuable." Move the purple man token as indicated.\n\nHe seems to have something in his hand.\n|||
 EventSearchDiningRoomFluxStabilizerBenAngry.button1,Continue
@@ -1585,6 +1566,7 @@ EventBackyardBenBeforeTocTiePoint.text,
 EventBackyardBenBeforeTocTiePoint.button1,
 EventBackyardBenBeforeTocIsFinished.text,
 EventBackyardBenBeforeTocIsFinished.button1,
+EventChosenInvestigator.button1,Continue
 EventBackDoorLockedStart.text,
 EventBackDoorLockedStart.button1,
 EventBackDoorLockedInit.text,
@@ -3226,9 +3208,11 @@ EventPlaceDiningRoomReadPageOpenDoorAddRemoveBefore1.text,
 EventPlaceDiningRoomReadPageOpenDoorAddRemoveBefore1.button1,
 EventPlaceDiningRoomReadPageOpenDoorAddRemoveBefore2.text,
 EventPlaceDiningRoomReadPageOpenDoorAddRemoveBefore2.button1,
+EventPlaceDiningRoomReadPageOpenDoorTriggerBefore3.text,
+EventPlaceDiningRoomReadPageOpenDoorTriggerBefore3.button1,
 EventPlaceDiningRoomReadPageOpenDoorDisplay.text,
 EventPlaceDiningRoomReadPageOpenDoorDisplay.button1,
-EventPlaceDiningRoomReadPageOpenDoorBase.text,"\n“Ah! Here’s the key,” Benjamin exclaims. He steps up to the door and unlocks it. A surprising amount of dirt falls as he pushes it open.\n\nYou look through the door and see what looks like the servants’ dining room. The room makes the yards look orderly. Heaps of rubbish and broken glassware are strewn about the room.\n\nPlace the {c:TileDiningRoom} tile and door as indicated, then remove this Explore token.\n"
+EventPlaceDiningRoomReadPageOpenDoorBase.text,"\n“Ah! Here’s the key,” Benjamin exclaims. He steps up to the door and unlocks it. A surprising amount of dirt falls as he pushes it open.\n\nThe door creaks open and you see what looks like the servants’ dining room. The room makes the yards look orderly. Heaps of rubbish and broken glassware are strewn about the room.\n\nPlace the {c:TileDiningRoom} tile and door as indicated, then remove this Explore token.\n"
 EventPlaceDiningRoomReadPageOpenDoorBase.button1,{qst:continue}
 EventPlaceDiningRoomReadPageOpenDoorTiePoint.text,
 EventPlaceDiningRoomReadPageOpenDoorTiePoint.button1,
@@ -4066,5 +4050,3 @@ EventWandererAttacksReadPageWillRestrainedTiePoint.text,
 EventWandererAttacksReadPageWillRestrainedTiePoint.button1,
 EventWandererAttacksReadPageWillRestrainedEnd.text,
 EventWandererAttacksReadPageWillRestrainedEnd.button1,
-EventChosenInvestigatorOld.button1,{action} Search
-EventChosenInvestigator.button1,Continue

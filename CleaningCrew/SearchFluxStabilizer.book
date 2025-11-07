@@ -1,0 +1,118 @@
+LANGUAGE English
+
+BOOK SearchFluxStabilizer ORDERED NO KEEP LOOPED
+	TRIGGERED BY @SearchFluxStabilizer
+
+	PAGE Start
+		IF test THEN TRIGGER @askAboutGate
+	
+		PROLOG "A small device with gears, hoses, and lights sits on the table."
+		
+		BUTTON "Search"
+	
+		TEXT """
+			As you reach down to pick it up, the device sparks and booms,
+			generating a pressure wave that pushes all
+			investigators--including you--1 space away from the
+			{c:QItemFluxStabilizer}.
+
+			{c:EventChosenInvestigator} recovers first and stands back up. As
+			they approach the device, nothing happens. Move
+			{c:EventChosenInvestigator} into the {c:QItemFluxStabilizer}'s space.
+
+			The other investigators are wary of this device and will avoid it at
+			all costs. When it is not held by {c:EventChosenInvestigator}, no
+			other investigator can stay in its space, fear making them
+			move away immediately.
+		"""
+		
+		// wanderers are the cultist who seem to be coming from the secret
+		// passageway off the study.
+		wandererMax = #heros - exploredBackyardNicely
+		wandererFrequency = 2
+	END Start
+	
+	PAGE Finn
+		IF #HeroFinnEdwards THEN PAGE IS VISIBLE
+		
+		TEXT """
+			Finn Edwards vision comes back into focus:  he is on the ground
+			where he fell. As his vision clears, he feels different. He feels...
+			off. Finn can no longer use his special ability
+
+			As he starts to push himself up, he puts his hand down in the wrong
+			place. When he looks at what he hit, he gains the
+			{c:QItemBrassKnuckles} Common Item. As he plays
+			with them, they make him feel more confident. Improve Finn’s {strength}.
+		"""
+	END Finn
+	
+	PAGE Kate
+		IF #HeroKateWinthrop THEN PAGE IS VISIBLE
+		
+		TEXT "Will Kate pick up the {c:QItemFluxStabilizer}?"
+		
+		PASS "Yes"
+		FAIL "No"
+		
+		TEST ON PASS GOTO KatePicksUp ON FAIL GOTO KateDoesNotPickUp
+	END Kate
+
+	PAGE KatePicksUp
+		PAGE IS NOT VISIBLE
+		
+		TEXT """
+			Kate is overjoyed that she will have a {c:QItemFluxStablizer} again,
+			especially one this powerful.
+			
+			Looking at it, she calms down and loses her focusing anger. Kate no
+			longer becomes Focused when she is attacked.
+		"""
+	END KatePicksUp
+	
+	PAGE KateDoesNotPickUp
+		PAGE IS NOT VISIBLE
+		
+		TEXT """
+			Kate quietly seethes to herself at the unfairness:  the
+			{c:QItemFluxStabilizer} should be hers. Kate becomes Focused.
+		"""
+	END KateDoesNotPickUp
+
+	PAGE Paper
+		TEXT """
+			There is a piece of paper next to the device: instructions. It's called a
+			<<{c:QItemFluxStabilizer},>> and it repels monsters. "MONSTERS!?"
+			you erupt loudly.
+
+			Everyone turns to look at you.
+		"""
+		
+		EXIT
+	END Paper
+
+	PAGE Puzzle1
+		TEXT """
+			The device just sits there, not doing anything. There seems to be a
+			control panel. Maybe you can restart it? You reach down and start
+			fiddling with the buttons and dials.
+
+			{c:EventChosenInvestigator} may attempt the puzzle using {lore}.
+		"""
+		
+		TRIGGER @AttemptFluxStabilizerPuzzle
+	END Puzzle1
+
+	PAGE Puzzle2
+		TEXT """
+			Maybe if you randomly flipped a few more buttons or turned a few
+			more dials, it would do something.
+			
+			{c:EventChosenInvestigator} can attempt it again using {lore}.
+		"""
+		
+		TRIGGER @AttemptFluxStabilizerPuzzle
+		MARK UNREAD
+	END Puzzle2
+
+END SearchFluxStabilizer
