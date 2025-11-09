@@ -1,0 +1,167 @@
+LANGUAGE English
+
+BOOK Backyard ORDERED NO KEEP
+
+	PAGE Place
+		TRIGGERED BY @PlaceBackyard
+		
+		PROLOG "You can see the huge mess through the gate."
+		
+		FREE
+		
+		TEXT """
+			Boxes, broken furniture, and other trash litter the yard.
+			It's clear that when the house was shut down, it was done
+			in a hurry. Discard this Sight token.
+
+			Place the {c:TileBackyard} tile and door as indicated.
+		"""
+	
+		exploredBackyard = TRUE
+		ADD TileBackyard BEFORE
+		ADD TokenDoorBackyard
+	END Place
+
+	PAGE Place2x4
+		TEXT """
+			You see now what that crash was:  when Benjamin walked through
+			the gate, his coat caught the handyman’s scaffolding and pulled
+			it down. Now it’s just a pile of broken wood. A scrap of
+			Benjamin's coat hangs from a nail.
+
+			There might be something useful in the pile. Place a Search
+			token as indicated.
+		"""
+	
+		IF !exploredBackyardNicely THEN TEXT """
+			To your right is a pile of rubble that used to be the gate...
+			and you realize the second crash was the handyman's
+			scaffolding that collapsed onto it. Dust is still rising.
+
+			Place a Search token as indicated.
+		"""
+	
+		ADD TokenSearchBackyard2x4
+		REMOVE TokenExploreBackyardViaDrivewaySight
+	END Place2x4
+	
+	PAGE PlaceBen
+		TEXT """
+			Benjamin is at the end of the walkway near the back door of
+			the house. His coat is torn and he’s digging through his
+			pockets for something.
+
+			He glances up and smiles.
+
+			Place the Purple Man and Explore tokens as indicated.
+		"""
+		
+		IF !exploredBackyardNicely THEN TEXT """
+			As you turn from the pile of rubble, you look toward the door.
+			Benjamin has tromped down and is standing in front of it.
+
+			Place the Purple Man and Explore tokens as indicated.
+
+			Benjamin is agitated and seems to be digging in his pockets for
+			something. He looks up and catches your eye for a moment, anger
+			and disdain in his eyes.
+
+			Your friend who sent you will not be happy.
+		"""
+		
+		ADD TokenBackyardBenBefore, TokenExploreDiningRoomViaBackyard
+	END PlaceBen
+
+	PAGE PlacePlant
+		TEXT """
+			As you finish scanning the yard, a pot catches your eye. It is
+			the only one still upright and whole. It sits on a rotting,
+			wooden table while a withered plant hunches in the pot's dirt.
+
+			Place a Search token as indicated.
+		"""
+		
+		ADD TokenSearchBackyardRandom
+		EXIT
+	END PlacePlant
+	
+	PAGE SearchRandom
+		TRIGGERED BY @SearchBackyardRandom
+		
+		PROLOG "A withered plant sits on a broken-down table behind the house."
+		
+		TEXT """
+			You carefully examine the pot. You aren’t sure why this is
+			important. Maybe it’s not, but it has your attention. ({agility})
+		"""
+		
+		TEST QUOTA 2
+			ON PASS GOTO SearchRandomGood
+			ON FAIL GOTO SearchRandomBad
+	END SearchRandom
+	
+	PAGE SearchRandomGood
+		TEXT """
+			After looking at and around the plant, you bump into the pot,
+			knock it over, and break it. Exposed in the dirt, you find
+			something. Gain the {c:QItemBackdoorRandom} Common Item, then 
+			remove this Search token.
+		"""
+		
+		ADD QItemBackyardRandom
+		REMOVE TokenSearchBackyardRandom
+		
+		EXIT
+	END SearchRandomBad
+	
+	PAGE SearchRandomBad
+		TEXT """
+			After looking at and around the plant, you bump into the pot,
+			knock it over, and break it. Exposed in the dirt, you find
+			something. Gain the {c:QItemBackdoorRandom} Common Item, then 
+			remove this Search token.
+		"""
+		
+		ADD QItemBackyardRandom
+		REMOVE TokenSearchBackyardRandom
+		EXIT
+	END SearchRandomBad
+	
+	PAGE Search2x4
+		TRIGGERED BY @SearchBackyard2x4
+		
+		PROLOG """
+			A pile of rubble sits between the gate and the house. Dust is
+			still thick in the air.
+		"""
+		
+		TEXT """
+			You carefully pick through the mess ({agility}).
+		"""
+		
+		TEST QUOTA 3
+			ON PASS GOTO Search2x4Pass
+			ON FAIL GOTO Search2x4Fail
+	END Search2x4
+	
+	PAGE Search2x4Pass
+		TEXT """
+			You carefully reach into the pile and pull out a board. Gain
+			the {c:QItem2x4} Common Item and remove this Search token.
+		"""
+		
+		REMOVE TokenSearchBackyard2x4
+		EXIT
+	END Search2x4Pass
+	
+	PAGE Search2x4Fail
+		TEXT """
+			You fumble around in the rubble, cursing as nails and splinters
+			dig into your hands. Gain the {c:QItem2x4} Common Item, take 1
+			facedown Damage, and remove this Search token.
+		"""
+		
+		REMOVE TokenSearchBackyard2x4
+		EXIT
+	END Search2x4Fail
+END Backyard
