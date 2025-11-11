@@ -1,0 +1,120 @@
+LANGUAGE English
+
+BOOK Halls ORDERED NO KEEP LOOP
+
+	PAGE ExploreHall1
+		TRIGGERED BY @ExploreHall1
+		
+		PROLOG """
+			The door has a dirty push plate. When you push on it, you discover
+			it's locked. An investigator with the {c:QItemBrassKey} can open
+			this door.
+		"""
+		BUTTON "Explore"
+		
+		TEXT """
+			When you open the door, the rush of cold, stale air sends a chill
+			down your spine.
+
+			You stop for a moment and look back down at the footsteps leading
+			to this door. You wonder how the air feels so stale if this door
+			has been opened recently.
+		"""
+	
+		$mythosHall = TRUE
+		exploredHall1 = TRUE AFTER
+
+
+		exploredHall1 = TRUE AFTER
+	END ExploreHall1
+
+	PAGE PlaceHall1
+		TEXT """
+			You look through the doorway to find a hall. It is clear that it
+			was intended for the servants:  plain and dark. Place the
+			{c:TileHall1} tile, a door, and a wall as indicated.
+			
+			Move one space space into the hall.
+		"""
+						
+		REMOVE TokenExploreHallway1ViaDiningRoom
+		
+		ADD TileHall1, TokenDoorHall1, TokenWallHall1
+	END PlaceHall1
+	
+	PAGE PlaceHall1Gallery
+		TEXT """
+			To your immediate right is a door. Place an Explore token as
+			indicated.
+		"""
+		
+		ADD TokenExploreGalleryViaHall1
+	END PlaceHall1Gallery
+	
+	PAGE PlaceHall1Painting
+		TEXT """
+			On the left, a painting glows with unnatural
+			light. You can almost feel it calling to you. You shake it off
+			because paintings don't have power. Place a Search token as 
+			indicated.
+			
+			As you look away, you catch something moving in your 
+			peripheral vision. You glance back and the painting is still
+			lightly glowing, something that suddently seems more troubling.
+		"""
+		
+		ADD TokenSearchHall1Picture
+	END PlaceHall1Painting
+	
+	PAGE PlaceHall1Evidence
+		TEXT """
+			You look down. The rug on the floor is old and beautiful, if
+			dirty and poorly cared for. One corner is folded up and looks
+			like it has been that way for years. You should probably put
+			it back so you don't trip over it.
+			
+			Place a Search token as indicated.
+		"""
+		
+		ADD TokenSearchHall1Rug
+	END PlaceHall1Evidence
+	
+	PAGE PlaceHall1Sight
+		TEXT """
+			The hall stretches forward. Place a Sight token as indicated.
+			
+			As you look around, something doesn't feel right.
+			You feel like you are being watched.
+		"""
+		
+		ADD TokenSightHall2ViaHall1
+		
+		IF foundJournal THEN EXIT
+	END PlaceHall1Sight
+	
+	PAGE PlaceHall1Journal
+		TEXT """
+			<i>The book on the floor,</i> you remind yourself. You turn 
+			around and step back. Move one space into the {c:TileDiningRoom}.
+			
+			You look over, see the book, and bend down to pick it up. Gain
+			the {c:QItemJournal} unique item.
+			
+			You look at the book you picked up:  small, thin, and
+			leather-bound. You flip through the pages: 	it's a journal.
+			The first entry was scrawled last Sunday.
+
+			Maybe you should hold onto it to give back to Benjamin when you
+			see him later today. And maybe take a quick look.
+
+			Gain the {c:QItemJournal} Unique Item, then remove it's
+			Search token. An investigator holding the {c:QItemJournal}
+			can interact with it in the app.
+		"""
+		
+		REMOVE TokenSearchDiningRoomJournal
+		foundJournal = TRUE
+		
+		EXIT
+	END PlaceHall1Journal
+END Hallway

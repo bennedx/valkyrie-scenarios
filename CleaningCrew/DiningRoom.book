@@ -398,5 +398,5 @@ BOOK ExploreKitchen ORDERED NO KEEP
 		ADD TokenSearchKitchenRandom
 		TRIGGER @moveAfterExplore AFTER
 	END Box
-END BOOK
+END ExploreKitchen
 

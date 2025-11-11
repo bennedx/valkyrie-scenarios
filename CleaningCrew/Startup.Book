@@ -1,0 +1,95 @@
+LANGUAGE English
+
+BOOK Startup ORDERED NO KEEP
+
+	PAGE StartUp NO TEXT
+		TRIGGERED BY EventStart
+
+		testMode = TRUE
+		
+		roundsBeforeRitual = (5 - #heros) * 2 + 15
+				
+		//	wanderers are the cultists who keep coming through the chapel's
+		//	secret passage. These variables manage their startup
+		
+		// these determine where the next wanderer appears
+		// the farther into the house investigators have explored,
+		// the farther back toward the study they appear.
+		wandererInStudy = TRUE
+		wandererInLibrary = TRUE
+		wandererInChapel = TRUE
+		wandererInHall2 = TRUE
+		wandererInFoyer = TRUE
+		wandererInGallery = TRUE
+
+		// at most there can be only 6 cultists since that's all there
+		// are in the box
+		wandererCount = 0
+		
+		// This determines how often a wanderer appears. The fewer
+		// investigators, the less often. A single player sees a new
+		// one every 10 turns, while 5 will see one every 2 turns.
+		wandererFrequency = (5 - #heros) * 2 + 2
+		
+		// this counts down to when the next one appears
+		wandererCountdown = wandererFrequency
+		
+		// only one per
+		wandererMax = #Heros
+
+		// wanderers killed so farther
+		// wanderersKiled
+		
+		// ending flags
+		endWin = 1
+		endPartialWin = 2
+		endFail = 3
+
+		// set the goal for this run
+		goalOpenGate = 1
+		goalFeedGate = 2
+		goalCloseGate = 3
+		
+		goal = RANDOM(1, 3)
+		
+		IF NOT testMode THEN TRIGGER @SplashScreen
+		
+		EXIT
+	END Startup
+	
+	
+	PAGE SplashScreen NO TEXT
+		PAGE IS NOT VISIBLE
+		TRIGGERED BY @SplashScreen
+		
+		ADD UIStoryImage, UIStoryBackground, UIOpenText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
+	END SplashScreen
+	
+	PAGE SplashScreenClosed NO TEXT
+		TRIGGERED BY @SplashScreenClosed
+		REMOVE UIStoryImage, UIStoryBackground, UIOpenText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
+	END SplashScreenClosed
+	
+	PAGE StartScenario NO TEXT
+		IF testMode THEN PAGE IS NOT VISIBLE
+		
+		TEXT "Each investigator receives 1 {clue}.
+	END 
+	
+	PAGE Kate
+		IF #HeroKateWinthrop THEN PAGE IS VISIBLE
+		
+		TEXT """
+			Kate is running late, so she is hurried and inattentive. She grabs
+			her {c:QItemFluxStabilizer} and turns to put it away. She cries out
+			as it slips from her fingers and drops heavily to the floor.
+			It cracks open when it hits and releases blue smoke. <i>How can the
+			universe be so cruel and unfair?!</i> Kate discards her
+			{c:QItemFluxStabilizer}. She fumes and ruminates on the loss. That
+			seething anger will carry with her through the day:  Kate becomes
+			Focused. She becomes Focused before a monster attacks her.
+		"""
+		
+		TRIGGER @PlaceDriveWay
+	END Kate
+END Startup

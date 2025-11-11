@@ -1,8 +1,20 @@
 Valkyrie log cleanup:  ^NullReference.*?(\r\n\r\n)
 
-End Games
+Rooms to convert ------------------------------------------------------------------------
+Hallway1
+Hallway2
+Gallery
+Study
+Library
+Basement
+Cave
+Crypt
+Chapel
+Torture Chamber
+Cell
+Altar
 
-
+End Games -------------------------------------------------------------------------------
 
 1. Open Portal
 		Goal		The portal is not open; try to stop the casting
@@ -82,12 +94,6 @@ General
 -	To tell if whole house explored, check at the start of each mythos phase (explored... variables or
 		maybe just count the number of explorations? Check if chapel, hole, and connecting cave explored?
 
--	Convert basement door opening to a book
-
--	Convert study bookcase lock as book
-	
--	Can complex explorations be restructured as books?
-
 -	how do RANDOM pages work?
 		They follow the non-RANDOM ones
 		They are processed in two different loops
@@ -106,14 +112,15 @@ Compiler
 -	support RANDOM pages; only works for ORDERED NO KEEP
 -	test #ExprRead, incl GetOrCreate()
 -	add include "" support
--	add automatic triggered-by to every book, named <book-name>Trigger; when set,
+-	add automatic triggered-by to every book, named @<book-name>; when set,
 		it starts the book at Start. This better supports the event-driven
 		approach
 -	adapt BNF to handle """..."...""" with grace
+-	if there is a visibility expression on a page, default to NOT VISIBLE; otherwise, default to VISIBLE (does it already work this way?)
+-	allow settings (PASS FAIL CANCEL CONTINUE) in pages
+-	PAGE name NO TEXT support
 
 ClosePortal Book:  make sure Step3 is organized correctly with repeats
-
-Add support for ClearAllMythosFlags (see BenAfter.AnythingElse)
 
 Hall1:  Gallery door: As you reach for the door, something catches your eye and you turn back to look at the painting. 
 SightHall2: As you try to look farther down the hall, that painting catches your eye again. Maybe you should take a closer look?

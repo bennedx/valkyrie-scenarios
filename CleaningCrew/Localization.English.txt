@@ -6,7 +6,6 @@ continue,Continue
 cancel,Cancel
 pass,Pass
 fail,Fail
-TokenSearchDrivewayJournal.text,"\nBenjamin dropped a book here.\n"
 TokenExploreDiningRoomViaBackyard.button1,Continue
 TokenSearchBackyardRandom.button1,{action} Search
 TokenExploreGalleryViaHall1.button1,{action} Open Door
@@ -41,8 +40,7 @@ TokenSearchFoyerCandles.text,"\nThis painting is compelling. Something about it 
 TokenSearchKitchenCutlery.button1,{action} Dig through the cutlery
 TokenSearchKitchenCutlery.text,"\nOn closer inspection, the pile of cutlery is deep, like someone upended several drawers and then left.\n"
 TokenExploreKitchenViaDriveway.button1,{action} Open door
-TokenSearchHall1Picture.text,"\nThe painting glows with unnatural light.\n"
-TokenSearchHall1Picture.button1,{action} Examine painting
+TokenSearchHall1Painting.button1,{action} Examine painting
 TokenSarah.text,"\nSarah is a pretty girl in the the first blush of youth--maybe 11 or 12 years old. She has curly hair with ribbons and a bright white dress that stands out in the dingy hallway.\n"
 TokenSarah.button1,{action} Talk to Sarah
 TokenExploreLibraryViaStudy.button1,{action} Explore
@@ -181,7 +179,6 @@ TokenTestRitualPreparations.text,Take everything/find everything?
 TokenTestRitualPreparations.button1,Yes
 SpawnAltarCultists1.button1,Continue
 SpawnAltarCultists5.text,Spawn cultist 4
-TokenExploreHall1ViaDiningRoom.text,"\nThe door has a dirty push plate. When you push on it, you discover it’s locked. An investigator with the {c:QItemBrassKey} can open this door.\n"
 TokenExploreFoyerViaHall2.text,|||\nThis door has a small brass plaque that reads "Foyer."\n|||
 CustomMonsterWanderer.monstername,Cultist
 UIStoryContinue.button1,Continue
@@ -228,14 +225,12 @@ TokenSearchFoyerRandom.text,"\nAn old cabinet with a set of drawers sits next to
 TokenExploreGalleryViaFoyer.text,|||\nA small plaque on this door reads "Gallery."\n|||
 TokenTestPlaceDriveway.button1,Test
 TokenSearchDrivewayGardenTool.button1,{action} Search
-TokenSearchDrivewayGardenTool.text,"\nThe weeds along the edge of driveway are tall, thick, and long-dead. Whatever is under them has been bound tightly over the years by the vegetation.\n"
 TokenSearchDrivewayJournal.button1,{action} Search
 TokenTestPlaceBackdoorViaDriveway.button1,Test
-TokenExploreBackyardViaDriveway.button1,{action} Continue
-TokenExploreBackyardViaDriveway.button2,Fail
+TokenExploreBackyardViaDriveway.button1, Continue
 TokenExploreBackyardViaDrivewaySight.button1,Continue
 TokenExploreBackyardViaDriveway.text,"\nAn intricate wrought-iron gate is set into a stone wall. Like the rest of the house, the paint is peeling and the bars are rusting. The gate looks like it was exceptionally strong at one time.\n\nIt probably wouldn’t take much effort to push it open ({strength}).\n"
-TokenExploreDiningRoomViaBackyard.text,"\nThe door is filthy. You check the knob, but it’s locked:  you’ll need a key to get in.\n"
+TokenSearchHall1Painting.text,"\nThe painting glows with unnatural light.\n"
 TokenSearchDiningRoomFluxStabilizer.button1,{action} Search
 SpawnMythosWandererStudy.button1,Pass
 SpawnMythosWandererStudy.text,"\nOne of the locals walks into the study through a door in the back of the room. Place a cultist as indicated.\n"
@@ -318,7 +313,6 @@ TokenSearchFoyerCandles.button1,{action} Search
 TokenBackyardBenBefore.button1,Continue
 TokenTestBenTrigger.button1,Continue
 TokenTestBenTrigger.text,Triggered Ben
-TokenBackyardBenPassive.button1,Continue
 PuzzleDiningRoomFluxStabilizer.button1,That’s it!
 TokenBackyardBenAfter.button1,Continue
 TokenExploreCellGoalKillCultists.text,"\nThe door is locked. You must find a key to get in.\n\nThrough the door you hear a quiet moan from the boy.\n"
@@ -355,14 +349,10 @@ EventPlaceDrivewayStart.text,"\nIt’s 3:00 and you’re on time. The man your f
 EventPlaceDrivewayInvestigators.button1,Continue
 EventPlaceDrivewayExploreKitchen.button1,Continue
 EventPlaceDrivewaySearchGardenTool.button1,Continue
-EventExploreBackdoorPassJournal.text,"\nAs Benjamin storms away, you notice he’s dropped a small book. Place a Search token as indicated.\n"
-EventSearchDrivewayJournal.button1,Continue
 EventExploreDiningRoom.button1,Continue
 EventMoveAfterExplore.button1,Continue
 EventExploreDiningRoomKnock.button1,Continue
-EventSearchDrivewayJournal.text,"\nWhen you get closer, you see that it is small, thin, and leather-bound. You pick it up and flip through the pages:  it’s a journal. The first entry was scrawled last Sunday. You should give it back to Benjamin, but maybe you can take a quick look first.\n\n Gain the {c:QItemJournal} Unique Item, then remove this Search token. An investigator holding the {c:QItemJournal} can interact with it in the app.\n"
 EventExploreFoyerLockedDoor.text,"\nThe key doesn’t fit this lock. Remove this Explore token.\n"
-EventPlaceHall1ExploreGallery.text,"\nA door leads farther into the house. Place an Explore token as indicated.\n"
 EventExploreBasementBrainFirst.text,"\nAfter trying everything you can think of, you lose your temper and start to hit and kick the lock ({strength}).\n"
 EventExploreBasementBrawnFirst.button1,Continue
 EventExploreBasementBrawnFirst.button2,Fail
@@ -411,17 +401,10 @@ EventExploreBasementBrainSecond.text,"\nOut of breath, you rest for a minute, th
 EventPlaceGalleryExploreFoyer.text,"\nA door leads farther into the house. Place an Explore token as indicated.\n"
 EventExploreDiningRoom.text,"\nWhen you try to open the door, it sticks, so you push harder. The door splinters into pieces, a mess hanging by a hinge. If you’re here to clean this place up, this is not a good start.\n"
 EventPlaceDrivewayGate.text,"\nUp ahead, at the end of the drive, is a gate that leads around to the back of the house. Place an Explore token as indicated.\n"
-EventPlaceHall1.button1,Continue
-EventPlaceHall1Painting.text,"\nA painting glows with unnatural light. You can feel it quietly calling to you. You shake it off because paintings don’t have powers. Place a Search token as indicated.\n\nAs you look away, you catch something moving in your peripheral vision. You glance back and the painting is still lightly glowing, something that seems more troubling now.\n"
-EventPlaceHall1SearchEvidence.text,"\nThe rug on the floor is old and beautiful, if dirty and poorly cared for. One corner is folded up and looks like it has been that way for years. You should probably put it back so you don't trip over it.\n"
-EventPlaceHall1ExploreHall2.button1,Continue
-EventPlaceHall1SearchEvidence.button1,Continue
 EventPlaceFoyerExploreStudy.button1,Continue
 EventPlaceGalleryExploreHall1.text,"\nAnother door leads farther into the house. Place an Explore token as indicated.\n"
-EventPlaceHall1Flavor.button1,Continue
 EventSearchCoatRoomEvidence.button1,Continue
 EventSearchFoyerSpell.text,"\nYou go through the drawers one-by-one, finding little of interest. Finally, in the last drawer, you find a small pamphlet with arcane symbols and odd poetry. Gain the {c:QItemFoyerSpell} spell, then discard this Search token.\n"
-EventExploreBackdoorPassJournal.button1,Continue
 EventPlaceFoyerExploreCloset.text,"\nAnother door looks like a closet. Place an Explore token as indicated.\n"
 EventExploreFailure.text,There were no options to explore this room.
 EventExploreFoyerLockedDoor.button1,Continue
@@ -444,7 +427,6 @@ EventInteractSarahSpeaks1.text,|||\n"I don’t remember much about it. There was
 EventMythosRitualRestrained.button1,Continue
 EventMythosRitualRestrained.text,"\nThe closing ritual is in progress. {c:EventChosenInvestigator} takes a Restrained card.\n"
 EventInteractSarahSpeaks1.button1,Continue
-EventPlaceDrivewayExploreBackdoorSight.text,"\nYou turn back toward the gate. Looking though it, you can see what a mess it is. But if Benjamin can navigate it, so can you.\n\nPlace a Sight token as indicated.\n"
 EventPlaceLibrary.text,"\nThe door opens and a bit of fresh air surprises you. A curtain flutters as a cracked window lets in a breeze. Place a wall as indicated, then remove this Explore token.\n"
 EventPlaceLibrary.button1,Continue
 EventSearchLibraryKey.text,"\nYou reach down to pick up the keys. You’re impressed by the number and variety. Some of the keys have strange symbols on their bows while others have beautiful and intricate blades. You pocket them and wonder if you’ll need them around the house. Gain the {c:QItemKey} Unique Item, then discard this Search token.\n"
@@ -494,7 +476,6 @@ EventInvestigatorTransportStart.button1,Button1
 EventPlaceFoyer.text,"\nThe foyer is a large, nearly empty space with a front door, stairs, and other doors leading to various parts of the house. Place the {c:TileFoyer} tile as indicated, then remove all Explore tokens leading to this room.\n"
 EventPlaceFoyer.button1,Continue
 EventPlaceLibraryAfterCultist.text,"\nThe man in robes lies at your feet; blood pools on the floor and soaks into the rug. Breathing hard and wondering what just happened, you chuckle darkly at how the mess here is getting worse.\n\nWhen the man got up earlier, something fell out of his pocket. Place a Search token as indicated.\n"
-EventPlaceHall1Painting.button1,Continue
 EventPlaceHall2ExploreFoyer.button1,Continue
 EventPlaceHall2TileEnd.button1,Continue
 EventPlaceStudy.text,"\nThe door opens smoothly, like it has been used recently. Place the {c:TileStudy} tile and a door as indicated, then remove all Explore tokens leading to this room.\n"
@@ -596,7 +577,6 @@ EventPlaceFoyerExploreHall2.button1,Continue
 EventPlaceFoyerSearchSpell.button1,Continue
 EventPlaceHall2ExploreHall1.button1,Continue
 EventPlaceHall2AfterExploreTokens.button1,Continue
-EventPlaceHall1ViaDoor.text,"\nWhen you open the door, the rush of cold, stale air sends a chill down your spine. Place the {c:TileHall1} tile and a door and wall as indicated. Then remove all Sight and Explore tokens leading to this room.\n\nYou stop for a moment and look back down at the footsteps leading to this door. You wonder how the air feels so stale if this door has been opened recently.\n"
 EventPlaceGalleryExploreHall1.button1,Continue
 EventSearchGalleryDVM.button1,Continue
 EventPlaceCoatRoom.button1,Continue
@@ -626,7 +606,6 @@ EventSearchTortureChamberRestraint.text,"\nAs you hesitantly look over the rusty
 EventSearchTortureChamberRestraint.button1,Continue
 EventPlaceTortureChamberExploreCell.text,"\nA door leads to what looks like a small cell.\n"
 EventPlaceTortureChamberExploreCell.button1,Continue
-EventPlaceHall1Flavor.text,"\nAs you look around the hall, something doesn’t feel right. You feel like you are being watched.\n"
 EventMoveAfterExploreCandidate.button1,Continue
 EventMoveAfterExploreYes.button1,Continue
 EventMythosRitualWoman.text,"\nYou feel the power of the spell {c:CustomMonsterDavidSmythe} is casting. It draws you in and repulses you at the same time. A woman screams. The sound pierces the walls of the house, making the windows rattle in their frames. You feel her take a deep, gasping breath, then she screams again. And again. And again. The screaming sends a chill through you. Each investigator takes 2 Horror ({will} negates).\n"
@@ -655,8 +634,6 @@ EventMythosRitualSummonsNotPresent.text,|||\nYou can feel the house inhale again
 EventMythosRitualSummonsNotPresent.button1,Continue
 EventTestRitualPreparations.text,"#heroes:  {var:#heroes}\n\nYou found the dagger\nYou found the DVM and have read it\nYou found the pendant\nYou found the components\nYou found the cell\nYou found the healing stone"
 EventTestRitualPreparations.button1,Continue
-EventPlaceHall1ViaDoor.button1,Continue
-EventPlaceHall1ExploreHall2.text,"\nThe hall continues a bit farther. Place a Sight token as indicated.\n"
 EventPlaceHall2ExploreHall1.text,"\nThe hallway continues. Place a Sight token as indicated.\n"
 EventPlaceHall2ViaHall1.button1,Continue
 EventPlaceHall2ViaHall1.text,"\nThe hallway continues a bit farther. Things are scattered about and it is quite a mess. Place the {c:TileHall2} tile and wall as indicated, then remove all Sight and Explore tokens leading to this room.\n\n"
@@ -666,7 +643,6 @@ EventMythosRitualInProgress.button1,Button1
 EventStartupOpeningSplashStart.button1,Button1
 EventStartupEnd.button1,Button1
 EventMythosRitualYesTimeout.button1,Button1
-EventPlaceHall1ExploreGallery.button1,Continue
 EventPlaceDrivewayStart.button1,Continue
 EventPlaceDrivewayInvestigators.text,|||\nYou wonder what you were thinking when you said "yes" to your friend. Place your investigators as indicated.\n|||
 EventInvestigatorEnd.button1,Button1
@@ -721,20 +697,10 @@ EventSearchFoyerRandom.text,"\nYou dig through the various compartments and even
 EventSearchFoyerRandom.button1,Continue
 EventPlaceFoyerSearchRandom.button1,Continue
 EventExploreChapelViaCrypt.text,"\nYou carefully fit the key. It sticks at first, but then starts to turn. Then sticks. It will go no farther. With some effort, you wrestle the key from the lock and put it back in your pocket. Remove this Explore token.\n"
-EventPlaceBackdoorBenHappy.button1,Continue
 EventPlaceDrivewaySearchGardenTool.text,"\nThe weeds behind the house are even taller than the ones in front. Over at the corner of the drive, something under the weeds catches your eye. Place a Search token as indicated.\n"
-EventSearchDrivewayGardenTool.text,"\nYou rustle around in the weeds and find something interesting. Gain the {c:QItemGardenTool} Common Item, then discard this Search token.\n\nAs you pull it free of the weeds, a child’s doll is exposed. The clothing is ragged and the paint is chipping. You think back to the children that were found here and wonder if this doll belonged to one of them.\n\nGain 1 {clue}, then take 1 Horror ({will} negates).\n"
-EventSearchDrivewayGardenTool.button1,Continue
-EventPlaceBackdoorBenHappy.text,"\nBenjamin is at the end of the walkway by the back door of the house. His coat is torn and he’s digging through his pockets for something.\n\nHe glances up and smiles.\n\nPlace the Purple Man and Explore tokens as indicated.\n"
-EventPlaceBackdoor2x4Happy.button1,Continue
 EventPlaceDrivewayBen.button1,Continue
 EventPlaceDrivewayGate.button1,Continue
-EventExploreBackdoorPass.text,"\nYou give it all you’ve got... and the gate, rusty and poorly maintained, gives way with a terrible crash. As the noise echoes down the drive, an angry man storms around the corner and strides up behind you.\n\nPlace the Purple Man token as indicated; this is Benjamin Smythe, the man your friend spoke with on the phone.\n"
-EventExploreBackdoorPass.button1,Continue
-EventPlaceDrivewayExploreBackdoorSight.button1,Continue
 EventPlaceDrivewayExploreKitchen.text,"\nAfter walking around the house, you are not surprised that the door next to you is covered with mud and spiderwebs. Like the rest of the house, the paint is peeling and the door shows signs of dry rot.\n\nPlace an Explore token as indicated.\n"
-EventExploreBackdoorFail.text,|||\nAs you gently pull the gate, you find that it opens easily. Now that you’re looking, you see that someone recently cleaned the hinges and gave them some oil. You’re glad you didn’t force it.\n\nAs you’re lightly swinging the gate back and forth, Benjamin Smythe comes around the corner. You turn around to see him smile. Place the Purple Man token as indicated. "I see the handyman was able to fix the gate yesterday. That will make things easier."\n|||
-EventExploreBackdoorFail.button1,Continue
 EventExploreBackdoorFailSearchJournal.text,"\nBenjamin smiles again and walks through the now-opened gate. As soon as he is out of sight, you hear a loud crash and cursing.\n\nRemove the Purple Man token.\n\nIt looks like Benjamin dropped a book of some kind where he was introducing himself. Place a Search token as indicated.\n"
 EventExploreDiningRoomViaBackdoor.text,|||\n"Ah, here they are," Benjamin exclaims, waving his keys. "Let’s go in."\n|||
 EventExploreDiningRoomViaBackdoor.button1,Continue
@@ -752,10 +718,6 @@ EventExploreDungeonCaveViaCryptYes.button1,Button1
 EventPlaceCryptExploreDungeonCaveYes.button1,Button1
 EventPlaceDungeonCaveExploreCryptYes.text,"\nThe caves continue into the darkness. Place a Sight token as indicated.\n"
 EventPlaceDungeonCaveExploreCryptYes.button1,Continue
-EventPlaceBackdoorBenAngry.text,"\nAs you turn from the pile of rubble, you look toward the door.  Benjamin has tromped down and is standing in front of it.\n\nPlace the Purple Man and Explore tokens as indicated.\n\nBenjamin is agitated and seems to be digging in his pockets for something. He looks up and catches your eye for a moment, anger and disgust in his eyes.\n\nYour friend will not be happy with you.\n"
-EventPlaceBackdoorSearchRandom.button1,Continue
-EventExploreBackdoorFailJournal.text,|||\n"My name is Benjamin Smythe," the man says. It’s good to meet you. Are you ready to get started?" He smiles again as he walks past you through the now-open gate.\n\nRemove the Purple Man token.\n\nOut of the corner of your eye, you see that Benjamin has dropped a book where he was standing. Place a Search token as indicated.\n\nA moment later, you hear Benjamin yelp, followed by a loud crash. You quickly turn back toward the gate. Place a Sight token as indicated.\n|||
-EventExploreBackdoorFailJournal.button1,Continue
 EventStartupClueTokensYes.button1,Continue
 EventPlaceBasementConditionRubbleSearchYes.button1,Button1
 EventStartupPlaceDrivewayStart.button1,Button1
@@ -772,7 +734,6 @@ EventMythosWandererActivateStart.button1,Button1
 EventMythosWandererActivateMoveStart.button1,Button1
 EventMythosWandererActivateMove1.button1,Attack
 EventMythosWandererActivateMove1.button2,No Investigator in the space
-EventPlaceBackdoorSearchRandom.text,"\nAs you finish scanning the yard, a pot catches your eye. It is the only one still upright and whole. It sits on a rotting, wooden table while a withered plant hunches in the pot’s dirt.\n\nPlace a Search token as indicated.\n"
 EventWandererActivationStart.button1,Button1
 EventWandererMoveStart.button1,Button1
 EventWandererMove.text,"\nThe cultist moves up to {var:wandererMoveSpaces} space(s) toward the nearest investigator, then faces a random investigator in his space.\n"
@@ -811,18 +772,8 @@ EventSearchDiningRoomFluxStabilizerAfterPuzzleBenHappy.button1,Continue
 EventSearchDiningRoomFluxStabilizerAfterPuzzleBenHappy.text,|||\nBenjamin walks through the door into the {c:TileDiningRoom}. Move the purple man token as indicated.\n\nAs he walks through the door, he says, "I heard a noise. This house can be dangerous with everything in disarray. Please be careful."\n\nHe seems to be holding something in his hand.\n|||
 EventSearchDiningRoomFluxStabilizerBenAngry.text,|||\nBenjamin walks briskly through the door, yelling, "What are you folks doing in here?! You must be careful. This house and its contents are valuable." Move the purple man token as indicated.\n\nHe seems to have something in his hand.\n|||
 EventSearchDiningRoomFluxStabilizerBenAngry.button1,Continue
-EventExploreBackdoorPass2.button1,Continue
-EventPlaceBackdoor2x4Angry.button1,Continue
-EventPlaceBackdoorBenAngry.button1,Continue
-EventPlaceBackdoor.text,"\nBoxes, broken furniture, and other trash litter the yard. It’s clear that when the house was shut down, it was done in a hurry. Discard this Sight token.\n\nPlace the {c:TileBackdoor} tile and door as indicated.\n\n"
-EventPlaceBackdoor.button1,Continue
-EventPlaceBackdoor2x4Happy.text,"\nYou see now what that crash was:  when Benjamin walked through the gate, his coat caught the handyman’s scaffolding and pulled it down. Now it’s just a pile of broken wood. A scrap of Benjamin’s coat hangs from a nail.\n\nThere might be something useful in the pile. Place a Search token as indicated.\n"
-EventPlaceBackdoor2x4Angry.text,"\nTo your right is a pile of rubble that used to be the gate... and you realize the second crash was the handyman’s scaffolding that collapsed onto it. Dust is still rising.\n\nPlace a Search token as indicated.\n"
-EventExploreBackdoorPass2.text,|||\nAs you turn to look at Benjamin, you hear a second crash behind the gate.\n\n"What are you doing?! I just had that rehung yesterday!" he yells. "I hired you to help us get this house ready for sale, not destroy it. You were to meet me here; I’m not sure why you thought it was a good idea to start without me."\n\nBenjamin brushes past you with a harrumph. Remove the Purple Man token and this Explore token.\n\nYou’ve only just arrived and the client is already angry. This could turn out badly for both you and your friend’s business.\n|||
 EventSearchDiningRoomFluxStabilizerAfterPuzzle.text,"\nThe device begins humming quietly.\n\nReplace this search token with the {c:QItemFluxStabilizer} common item.\n\n{c:EventChosenInvestigator} can drop or pick up this item, but cannot trade it to another investigator. When the {c:QItemFluxStabilizer} is on the floor, any investigator who moves or is moved into the space immediately moves 1 space away from the device. Move toward the {c:TileDiningRoom} if possible, or choose the direction randomly; you do not evade monsters when moving this way. {c:EventChosenInvestigator} is immune to this effect.\n\nWhen {c:EventChosenInvestigator} holds this item, add 1 additional movement to their move actions.\n\nThis information can be reviewed in the app.\n"
 EventSearchDiningRoomFluxStabilizerAfterPuzzle.button1,Continue
-EventBackyardBenPassiveAggressive.button1,Continue
-EventBackyardBenPassiveAggressive.text,|||\nBenjamin looks up to meet your eye with contempt. You feel a first hint of dread in your gut. You’d heard about some of the folks in town. Could the rumors be true?\n\nBen drops his eyes and goes back to rummaging through is pockets while you wonder again why you said "yes."\n|||
 EventPlaceFoyerCandlesViaHall2.text,"\nNext to you is a painting that catches your eye. Place a search token as indicated.\n"
 EventPlaceFoyerCandlesViaHall2.button1,Continue
 EventPlaceFoyerCandlesViaOthers.text,"\nNext to a door across the room, a painting catches your eye. Place a search token as indicated.\n"
@@ -867,8 +818,6 @@ EventInteractEscape4.button1,Continue
 EventInteractEscape5.text,"\nYou don’t look back as you run through the door. Remove your investigator token from the board.\n"
 EventInteractEscape5.button1,Continue
 EventInteractEscapeCheckDone.button1,Button1
-EventBackyardBenPassiveHappy.button1,Continue
-EventBackyardBenPassiveHappy.text,"\nBenjamin is watching you as you walk into the house and start to look around.\n\nHe seems to be looking for something else in his pockets.\n"
 EventSearchDiningRoomFluxStabilizerAfterPuzzleBen.button1,Button1
 EventExploreFrontDoor.text,"\nYou grab and twist the knob but your hand just slides over it. No matter how you try, you cannot turn the knob. The window is so filthy that you cannot see through it.\n\nIf you were still worried about cleaning, this would be a lot of work.\n\nRemove this explore token.\n"
 EventPlaceFoyerSightFrontDoor.text,"\nThe front door looks old and disused. Place a sight token as indicated.\n"

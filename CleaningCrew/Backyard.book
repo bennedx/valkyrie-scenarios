@@ -17,7 +17,7 @@ BOOK Backyard ORDERED NO KEEP
 			Place the {c:TileBackyard} tile and door as indicated.
 		"""
 	
-		exploredBackyard = TRUE
+		exploredBackyard = TRUE AFTER
 		ADD TileBackyard BEFORE
 		ADD TokenDoorBackyard
 	END Place
@@ -25,15 +25,17 @@ BOOK Backyard ORDERED NO KEEP
 	PAGE Place2x4
 		TEXT """
 			You see now what that crash was:  when Benjamin walked through
-			the gate, his coat caught the handyman’s scaffolding and pulled
-			it down. Now it’s just a pile of broken wood. A scrap of
+			the gate, his coat caught the handyman's scaffolding and pulled
+			it down. Now it's just a pile of broken wood. A scrap of
 			Benjamin's coat hangs from a nail.
 
 			There might be something useful in the pile. Place a Search
 			token as indicated.
+			
+			Remove this Sight token.
 		"""
 	
-		IF !exploredBackyardNicely THEN TEXT """
+		IF NOT exploredBackyardNicely THEN TEXT """
 			To your right is a pile of rubble that used to be the gate...
 			and you realize the second crash was the handyman's
 			scaffolding that collapsed onto it. Dust is still rising.
@@ -42,13 +44,13 @@ BOOK Backyard ORDERED NO KEEP
 		"""
 	
 		ADD TokenSearchBackyard2x4
-		REMOVE TokenExploreBackyardViaDrivewaySight
+		REMOVE TokenExploreBackyardViaDrivewaySight AFTER
 	END Place2x4
 	
 	PAGE PlaceBen
 		TEXT """
 			Benjamin is at the end of the walkway near the back door of
-			the house. His coat is torn and he’s digging through his
+			the house. His coat is torn and he's digging through his
 			pockets for something.
 
 			He glances up and smiles.
@@ -88,11 +90,11 @@ BOOK Backyard ORDERED NO KEEP
 	PAGE SearchRandom
 		TRIGGERED BY @SearchBackyardRandom
 		
-		PROLOG "A withered plant sits on a broken-down table behind the house."
+		PROLOG "A withered plant sits on a broken-down table."
 		
 		TEXT """
 			You carefully examine the pot. You aren’t sure why this is
-			important. Maybe it’s not, but it has your attention. ({agility})
+			important. Maybe it's not, but it has your attention. ({agility})
 		"""
 		
 		TEST QUOTA 2
@@ -104,7 +106,7 @@ BOOK Backyard ORDERED NO KEEP
 		TEXT """
 			After looking at and around the plant, you bump into the pot,
 			knock it over, and break it. Exposed in the dirt, you find
-			something. Gain the {c:QItemBackdoorRandom} Common Item, then 
+			something. Gain the {c:QItemBackdoorRandom} Common Item, then
 			remove this Search token.
 		"""
 		
@@ -118,8 +120,12 @@ BOOK Backyard ORDERED NO KEEP
 		TEXT """
 			After looking at and around the plant, you bump into the pot,
 			knock it over, and break it. Exposed in the dirt, you find
-			something. Gain the {c:QItemBackdoorRandom} Common Item, then 
-			remove this Search token.
+			something. You see something in the rubble. Gain the
+			{c:QItemBackdoorRandom} Common Item. As you pick it up, a
+			shard from the pot draws blood; take one facdown Damage
+			({agility}) negates.
+			
+			Remove this Search token.
 		"""
 		
 		ADD QItemBackyardRandom
@@ -164,4 +170,13 @@ BOOK Backyard ORDERED NO KEEP
 		REMOVE TokenSearchBackyard2x4
 		EXIT
 	END Search2x4Fail
+	
+	PAGE ExploreDiningRoomViaBackyard
+		TRIGGERED BY @ExploreDiningRoomViaBackyard
+		
+		TEXT """
+			The door is filthy. You check the knob, but it’s locked:
+			you'll need a key to get in.
+		"""
+	END ExploreDiningRoomViaBackyard
 END Backyard
