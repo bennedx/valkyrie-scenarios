@@ -1,0 +1,58 @@
+LANGUAGE English
+
+BOOK Gallery
+	PAGE ExploreGallery
+		TRIGGERED BY @ExploreGallery
+		
+		PROLOG """
+			A door leads farther into the house. Strangely, the latch on the
+			door is clean and shiny, like it has been used recently.
+		"""
+
+		TEXT """
+			The {c:TileGallery} was once stately but now seems shabby.
+			Paintings adorn	the walls and all of them are covered in cobwebs
+			and dust. Place	the {c:TileGallery} tile as indicated, then remove
+			all Explore	tokens leading to this room.
+		"""
+		
+		REMOVE TokenExploreGalleryViaHall1 AFTER
+		REMOVE TokenExploreGalleryViaFoyer AFTER
+	END ExploreGallery
+		
+	PAGE PlaceGalleryExploreFoyer
+		IF exploredGalleryViaHall1 AND NOT exploredFoyer THEN PAGE IS VISIBLE
+		
+		TEXT """
+			Across the room, a door leads farther into the house. Place an
+			Explore token as indicated.
+		"""
+		
+		ADD TokenExploreFoyerViaGallery
+	END PlaceExploreFoyerViaGallery
+	
+	PAGE PlaceGalleryCoatRoom
+		TEXT """
+			A coat room sits in the corner across from you. Place an Explore
+			token as indicated.
+		"""
+		
+		ADD TokenExploreCoatRoom
+	END PlaceCoatCloset
+		
+	PAGE PlaceGalleryDVM
+		TEXT """
+			The two divans are upholstered with once-beautiful cloth... but now
+			they are dirty and moth-eaten. A pile of junk sits on a small table
+			between them. Place a Search token as indicated.
+		"""
+		
+		ADD TokenSearchGalleryDVM
+		TRIGGER @MoveAfterExplore
+		EXIT
+	END PAGE
+
+
+
+
+END Gallery

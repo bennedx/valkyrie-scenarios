@@ -29,7 +29,6 @@ TokenExploreHall2ViaHall1.text,"\nThe hall seems to continue on a bit farther. A
 TokenSearchHall1Rug.button1,{action} Search
 TokenExploreGalleryViaHall1.text,"\nA door leads farther into the house. Strangely, the latch on the door is clean and shiny, like it has been used recently.\n"
 TokenSearchDiningRoomFluxStabilizer.text,"\n"
-TokenSearchHall1Rug.text,The corner of the rug is folded over.
 TokenWallHall1.button1,Continue
 TokenTestPlaceHall2ViaHall1.button1,Test
 TokenSearchFoyerSpell.button1,{action} Search
@@ -40,8 +39,7 @@ TokenSearchFoyerCandles.text,"\nThis painting is compelling. Something about it 
 TokenSearchKitchenCutlery.button1,{action} Dig through the cutlery
 TokenSearchKitchenCutlery.text,"\nOn closer inspection, the pile of cutlery is deep, like someone upended several drawers and then left.\n"
 TokenExploreKitchenViaDriveway.button1,{action} Open door
-TokenSearchHall1Painting.button1,{action} Examine painting
-TokenSarah.text,"\nSarah is a pretty girl in the the first blush of youth--maybe 11 or 12 years old. She has curly hair with ribbons and a bright white dress that stands out in the dingy hallway.\n"
+TokenSearchHall1Painting.button1,Continue
 TokenSarah.button1,{action} Talk to Sarah
 TokenExploreLibraryViaStudy.button1,{action} Explore
 TokenExploreHall2ViaStudy.text,"\nA door leads farther into the house.\n"
@@ -230,7 +228,7 @@ TokenTestPlaceBackdoorViaDriveway.button1,Test
 TokenExploreBackyardViaDriveway.button1, Continue
 TokenExploreBackyardViaDrivewaySight.button1,Continue
 TokenExploreBackyardViaDriveway.text,"\nAn intricate wrought-iron gate is set into a stone wall. Like the rest of the house, the paint is peeling and the bars are rusting. The gate looks like it was exceptionally strong at one time.\n\nIt probably wouldn’t take much effort to push it open ({strength}).\n"
-TokenSearchHall1Painting.text,"\nThe painting glows with unnatural light.\n"
+TokenSearchHall1Painting.text,"\n"
 TokenSearchDiningRoomFluxStabilizer.button1,{action} Search
 SpawnMythosWandererStudy.button1,Pass
 SpawnMythosWandererStudy.text,"\nOne of the locals walks into the study through a door in the back of the room. Place a cultist as indicated.\n"
@@ -313,7 +311,6 @@ TokenSearchFoyerCandles.button1,{action} Search
 TokenBackyardBenBefore.button1,Continue
 TokenTestBenTrigger.button1,Continue
 TokenTestBenTrigger.text,Triggered Ben
-PuzzleDiningRoomFluxStabilizer.button1,That’s it!
 TokenBackyardBenAfter.button1,Continue
 TokenExploreCellGoalKillCultists.text,"\nThe door is locked. You must find a key to get in.\n\nThrough the door you hear a quiet moan from the boy.\n"
 TokenExploreCellGoalKillCultists.button1,Continue
@@ -414,15 +411,6 @@ EventSearchKitchenCutlery.button1,Continue
 EventSearchKitchenRandom.button1,Continue
 EventExploreKitchenViaDriveway.button1,Continue
 EventExploreBackdoorFailSearchJournal.button1,Continue
-EventSearchHall1Picture.button1,Continue
-EventSearchHall1Picture2.text,"\nAs you turn around, you notice two shadows on the wall, yours and... you quickly look back at the painting. The girl is not there. Startled, you turn to run back to the {c:TileDiningRoom} and are brought up short when the girl from the painting is standing in front of you.\n\nPlace the Green Girl token as indicated. Shocked, you take 1 Horror ({will} negates).\n"
-EventSearchHall1Picture.text,"\nThe painting is a girl, maybe 12 or 13 years old. The work is stunning and the girl looks so lifelike, it’s as if she could just step through the frame. She’s wearing a white dress and looks serious.\n\nWhen you blink, you think the painting has moved but you know that cannot happen. You also notice that there is no dust anywhere on the painting or the frame. You feel like there’s something else you’ve missed, but you dismiss it and turn away. Gain 1 {clue}, then remove this Search token.\n"
-EventSearchHall1Picture2.button1,Continue
-EventTalkToSarahFirstTime.button2,Cancel
-EventTalkToSarahFirstTime.button1,Speak with Her
-EventTalkToSarahFirstTime.text,"\nSarah looks at you expectantly. She looks like she wants to say something, but is holding back. She still looks serious, but also concerned and maybe a little afraid. You notice that she seems to be glowing, and maybe a bit transparent.\n\nShe will only speak with {c:EventChosenInvestigator}.\n"
-EventTalkToSarahHall1.text,|||\nSarah brightens up. "It’s so good to see you again. I thought you had forgotten me after that night. I’ve missed you."\n\nYou are surprised at what she said. <i>Who is this girl? Why does she think she knows you?</i>\n\nThe girl walks over and turns to stand next to you, then looks up at you expectantly.\n\nMove the Green Girl token to {c:EventChosenInvestigator}’s card. She will follow you to whatever ends you meet in this house.\n|||
-EventTalkToSarahHall1.button1,Continue
 EventInteractSarahSpeaks1.text,|||\n"I don’t remember much about it. There was a lot of noise and light. I remember Father holding knife and reading from a book. There was blood, and a cup... and many, many men fighting."\n|||
 EventMythosRitualRestrained.button1,Continue
 EventMythosRitualRestrained.text,"\nThe closing ritual is in progress. {c:EventChosenInvestigator} takes a Restrained card.\n"
@@ -542,8 +530,6 @@ EventKillDavidSmythe.button1,Continue
 EventKillDavidSmythe.text,|||\n{c:CustomMonsterDavidSmythe} gets a look of surprise as you make the killing blow. He looks at you, then looks back at the portal one last time before he dies. You look at the portal and can feel whatever is on the other side getting closer. Sarah says, "He’s dead now but the portal is open. You don’t want to see what he summoned. You must perform the counter ritual. Use the {c:QItemDVM} to perform it."\n\nAn investigator with the {c:QItemDVM} can interact with it in the app.\n|||
 EventGameOverStart.button1,Button1
 EventTest.button1,Continue
-EventSearchHall1Rug.text,"\nYou lean down to straighten the rug. You play with it for a bit, but have trouble getting it to stay flat--the fold has been there too long. You lift the rug a little more to try to flatten the corner. There’s a piece of paper under the rug. You pick it up to find it has a diagram of a tabletop with arcane symbols. Maybe it’s part of some ritual? You’ve heard the people in this town have some funny beliefs. Gain the {c:QItemEvidenceHall1} Unique Item and 1 {clue}. Then discard this Search token.\n"
-EventSearchHall1Rug.button1,Continue
 EventPlaceLibraryAfterCultistSearchBookcase.text,"\nA bookcase on the far wall is filled from floor to ceiling with books. Maybe one of them can help you understand what is happening? Place a Search token as indicated.\n"
 EventPlaceLibraryAfterCultistSearchBookcase.button1,Continue
 EventKillChapelRiot.text,"\nYou kill the lot of them, leaving their bodies scattered on the floor.\n\nThe priest is still clutching the knife he tried to kill you with. You reach down to pry it from him. Gain the {c:QItemRitualDagger} Common Item.\n\nYou should get out of here before someone else shows up.\n"
@@ -743,7 +729,7 @@ EventWandererMoveEnd.button1,Continue
 EventWandererHorrorCheck.text,"\nThese cultists are just townsfolk. They’re trying to stop you but, aside from their attitude, there’s nothing terrifying about them. Still, the look in this one’s eyes is unsettling. Take 1 Horror ({will} negates).\n"
 EventWandererMoveEnd.text,"\nThe cultist moves 1 space toward the nearest investigator.\n"
 EventWandererHorrorCheck.button1,Continue
-EventChosenInvestigator.text,"\nAs Ben opens the door, {rnd:hero} has a sudden jolt of <i>deja vu</i>, a flashback to an otherwise forgotten childhood. They walk over to look through the door.\n\nMove {rnd:hero} to the same space as the door.\n\n{rnd:hero} looks through the door, a puzzled and concerned look on their face.\n"
+EventChosenInvestigator.text,"\nAs Ben opens the door, {rnd:hero} has a sudden jolt of <i>deja vu</i>, a flashback to an otherwise forgotten childhood. They walk over to look through the door.\n\nMove {rnd:hero} next to Benjamin."
 EventMoveAfterExploreAngryBenDeadPriest.button1,Button1
 EventMoveAfterExploreDeadPriest.button1,Continue
 EventMoveAfterExploreAngryBen.button1,Button1
@@ -830,10 +816,8 @@ EventExploreFoyerClosetOpen.text,|||\nAs you grab the knob, you hear something s
 TokenTestBackdoorLocked.text,Test BackdoorLocked
 TokenTestBackdoorLocked.button1,Continue
 quest.authors_short,Daniel.
-EventSearchHall1RugJournal.button1,Continue
 EventSearchHall1RugJournal2.text,"\nUnder the box is a piece of paper that you reach down to grab. It is sprinkled with arcane symbols and is maybe instructions for... something. <i>Maybe it’s part of some ritual?</i> The paper reminds you that the people in this town have some funny beliefs.\n\nGain the {c:QItemEvidenceHall1} Unique Item and 1 {clue}. Then discard this Search token.\n"
 EventSearchHall1RugJournal2.button1,Continue
-EventSearchHall1RugJournal.text,"\nWhen you lift up the rug, one of the floorboards shakes a little. You pry it up with your nails and find a book under it. <i>Wait, isn't that the book Ben ???Whathisname??? dropped in the driveway?!</i>\n\n A little shaken, you fish out the book. Gain the {c:QItemJournal} unique item. Your nerves might be getting the better of you:  take 1 horror.\n"
 UI0.uitext,fsdfsdfs
 UI0.text,sdfsdfsdf
 UI0.button1,Continue
@@ -3970,3 +3954,6 @@ EventWandererAttacksReadPageWillRestrainedTiePoint.text,
 EventWandererAttacksReadPageWillRestrainedTiePoint.button1,
 EventWandererAttacksReadPageWillRestrainedEnd.text,
 EventWandererAttacksReadPageWillRestrainedEnd.button1,
+TokenBackyardBenPassive.text,Benjamin has gone back to searching his pockets.
+TokenBackyardBenPassive.button1,Continue
+PuzzleFluxStabilizer.button1,That’s it!

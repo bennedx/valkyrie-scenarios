@@ -36,20 +36,23 @@ BOOK BenAfter RANDOM NO KEEP
             <<Then you should sweep it up. That>s what you>re here for, not to complain about dirt.>>
         "
 
-        EPILOG "You notice Benjamin glancing nervously at the footprints. You are starting to wonder what's going on."
+        EPILOG """
+			You notice Benjamin glancing nervously at the footprints. <i>Is something going
+			on?" you wonder.
+		"""
     END Footprints
 
     PAGE AnythingElse
         BUTTON "<<Is there anything else we need to know?>>"
     
         TEXT "
-            <<Oh, my, yes. Here>s the key you>ll need to open doors throughout the house.>>
+            <<Oh, my, yes. Here's the key you'll need to open doors throughout the house.>>
     
             Gain the {c:QItemBrassKey} common item.
     
             <<I must be going. Take your time and send someone to fetch me if you need anything.>>
         
-            Move any investigators who are outside to the {c:TileDiningRoom}.
+            Move any investigators who are outside one space into the {c:TileDiningRoom}.
 			
 			Ben shuts the door behind you. <i>Was that the lock turning?</i>
 			you ask yourself. Place an Explore token as indicated and remove Ben
@@ -57,18 +60,17 @@ BOOK BenAfter RANDOM NO KEEP
         "
     
         IF NOT exploredBackyardNicely THEN TEXT "
-            <<What? Oh, here>s the key to the house. Don>t lose it.>>
+            <<What?>> he growls. <<Oh, here's the key to the house. Don't lose it.>>
         
-            As he walks out, he drops the key in your direction. Place the {c:QItemBrassKey} common item
-            in Ben>s space. Once outside, Benjamin snaps, <<Everyone inside. No dawdling.>>
+            As he turns to walk out, he drops the key in your direction. Place the {c:QItemBrassKey} common item
+            in Ben's space. Once outside, Benjamin barks, <<Everyone inside. No dawdling.>>
 
-			Move any investigators who are outside to the {C:TileDiningRoom}.
+			Move any investigators who are outside one space into the {C:TileDiningRoom}.
         
-            Ben slams the door shut behind him; place an Explore token as indicated
+            Ben slams the door shut behind him. <i>Was that the lock turning?<i> you 
+			ask yourself. Place an Explore token as indicated
 			and remove Ben from the board.
         "
-    
-        NO EPILOG
     
         REMOVE TokenBackyardBenAfter
         ADD TokenExploreBackDoorLocked, TokenInvestigatorsDiningRoom
@@ -88,6 +90,18 @@ BOOK BenAfter RANDOM NO KEEP
 
         TRIGGER @TalkedToBenAfter AFTER
 
-        EXIT
+        IF foundJournal THEN EXIT
+		GOTO AnythingElse AFTER
     END AnythingElse
+	
+	PAGE AnythingElseJournal
+		TEXT """
+			At your feet you see a book that looks identical to the one Benjamin dropped outside.
+			He seems to have dropped it again. <i>How is that possible?>> you ask yourself. Place
+			a Search token as indicated.
+			
+			Something here doesn't feel right.
+		"""
+		EXIT
+	END AnythingElseJournal
 END BenAfter

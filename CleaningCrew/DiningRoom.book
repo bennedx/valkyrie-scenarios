@@ -5,16 +5,17 @@ BOOK PlaceDiningRoom ORDERED NO KEEP LOOPED
 	IF @talkedToBenCount <2 THEN EXIT
 	
 	PAGE Locked
-		PAGE IS NOT VISIBLE
-		TRIGGERED BY triggerDiningRoomLocked
+		TRIGGERED BY @ExploreHall1ViaDiningRoomLocked
 		
 		TEXT """
 			The door is filthy. You check the knob, but it's locked:  you'll need a key to get in.
 		"""
+		
+		MARK UNREAD AFTER
+		EXIT
 	END Locked
 
 	PAGE OpenDoor
-		PAGE IS NOT VISIBLE
 		TRIGGERED BY @TalkToBackyardBen WHEN @TalkToBenCount >= 2
 		
 		TEXT """
@@ -49,6 +50,7 @@ BOOK PlaceDiningRoom ORDERED NO KEEP LOOPED
 			Two other doors lead farther into the house. Place Explore tokens as indicated.
 		"""
 		
+		REMOVE TokenExploreHall1ViaDiningRoomLocked
 		ADD TokenExploreBasementFirst, TokenExploreHall1ViaDiningRoom
 	END OtherExplores
 	
@@ -68,7 +70,7 @@ BOOK PlaceDiningRoom ORDERED NO KEEP LOOPED
 		ADD TokenSearchDiningRoomPaper
 		
 		// we do this because if they haven't found the journal,
-		// there will be another page
+		// there will be another page after this one
 		IF foundJournal THEN TRIGGER @MoveAfterExplore
 	END Paper
 	
@@ -83,9 +85,9 @@ END PlaceDiningRoom
 
 BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 
-	PAGE Start
-		TRIGGERED BY @SearchFluxStabilizer WHEN PAGE IS NOT ALREADY READ
-		IF test THEN TRIGGER @askAboutGate
+	PAGE StartFluxStabilizer
+		TRIGGERED BY @SearchFluxStabilizer WHEN NOT ALREADY READ
+		IF test THEN TRIGGER @AskAboutGate
 	
 		PROLOG "A small device with gears, hoses, and lights sits on the table."
 		
@@ -110,19 +112,21 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 		// wanderers are the cultists who seem to be coming from the secret
 		// passageway off the study.
 		wandererMax = #heros - exploredBackyardNicely
+		IF wandererMax == 0 THEN wandererMax = 1
+		
 		wandererFrequency = 2
-	END Start
+	END StartFluxStabilizer
 	
 	PAGE Finn
 		IF #HeroFinnEdwards THEN PAGE IS VISIBLE
 		
 		TEXT """
-			Finn Edwards start to come to, not sure at first where he is:  he is on the ground
+			Finn Edwards starts to come to, not sure at first where he is:  he is on the ground
 			where he fell. As his vision clears, he feels different. He feels...
 			off. Finn can no longer use his special ability
 
 			As he starts to push himself up, he puts his hand down in the wrong
-			place. Hard. When he looks at what he hit, he gains the
+			place. Hard. Pain. When he looks at what he hit, he gains the
 			{c:QItemBrassKnuckles} Common Item. As he plays
 			with them, they make him feel more confident. Improve Finn’s {strength}.
 		"""
@@ -140,8 +144,6 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 	END Kate
 
 	PAGE KatePicksUp
-		PAGE IS NOT VISIBLE
-		
 		TEXT """
 			Kate is overjoyed that she will have a {c:QItemFluxStablizer} again,
 			especially one this powerful.
@@ -149,22 +151,23 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 			Looking at it, she calms down and loses her focusing anger. Kate no
 			longer becomes Focused when she is attacked.
 			
-			Kate says, <<This device can repel monsters.>>
+			Kate says to the others, <<This device can repel monsters.>> [laughter]
+			<<I don't expect I'll need it here, but mine broke this morning
+			and I didn't know how I'd get another.>>
 		"""
+		
+		MARK Paper READ
+		kateHasFluxStabilizer = TRUE
+		EXIT
 	END KatePicksUp
 	
 	PAGE KateDoesNotPickUp
-		PAGE IS NOT VISIBLE
-		
 		TEXT """
 			Kate quietly seethes to herself at the unfairness:  <i>That
 			thing should be mine.</i>
 			
 			Kate becomes Focused.
 		"""
-		
-		MARK Paper READ
-		EXIT
 	END KateDoesNotPickUp
 
 	PAGE Paper
@@ -181,24 +184,24 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 
 	PAGE Puzzle1
 		PAGE IS NOT VISIBLE
-		TRIGGERED BY @SearchFluxStabilizer WHEN NOT ALREADY READ
+		TRIGGERED BY @SearchFluxStabilizer WHEN NOT ALREADY READ AND StartFluxStabilizer IS READ
 
 		PROLOG """
 			There seems to be a
-			control panel. Maybe you can restart it? You reach down and start
-			fiddling with the buttons and dials.
+			control panel. Maybe you can restart it? You reach down and begin
+			to fiddle with the buttons and dials.
 
 			{c:EventChosenInvestigator} may attempt the puzzle using {lore}.
 		"""
+		BUTTON "Attempt puzzle"
 		
 		NO TEXT
 		
-		PUZZLE PuzzleFluxStabilizer AFTER
+		TRIGGER @PuzzleFluxStabilizer AFTER
 		EXIT
 	END Puzzle1
 
 	PAGE Puzzle2
-		PAGE IS NOT VISIBLE
 		TRIGGERED BY @SearchFluxStabilizer WHEN Puzzle1 IS ALREADY READ
 		
 		TEXT """
@@ -208,13 +211,14 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 			{c:EventChosenInvestigator} can attempt it again using {lore}.
 		"""
 		
-		PUZZLE PuzzleFluxStabilizer
+		MARK UNREAD
+		TRIGGER @PuzzleFluxStabilizer AFTER
+		EXIT
 	END Puzzle2
 
 
 	PAGE PaperInBox
-		PAGE IS NOT VISIBLE
-		TRIGGERD BY @SearchDiningRoomPaper
+		TRIGGERED BY @SearchDiningRoomPaper
 		
 		PROLOG "There's a yellowed scrap of paper in the box."
 		
@@ -229,7 +233,7 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 
 			<<Blood will... chapel... altar>>
 
-			Gain the {c:QItemEvidenceDiningRoom} Unique Item, gain 2 {clue}, and discard this Search token.
+			Gain the {c:QItemEvidenceDiningRoom} Unique Item, gain 2 {clue}, and remove this Search token.
 		"""
 		
 		ADD QItemEvidenceDiningRoom
@@ -274,10 +278,10 @@ BOOK ExploreBackDoorLocked ORDERED NO KEEP LOOPED
 	
 	PAGE HitDoor
 		PROLOG "
-			No matter how hard you shake it, the door doesn>t budge.
+			No matter how hard you shake it, the door doesn't budge.
 			And you might have pulled something in your right arm.
 			Maybe you can knock it down? You also begin to wonder
-			if you shouldn>t move on. Or just knock it down.
+			if you shouldn't move on. Or just knock it down.
 		"
 
 		TEXT "
@@ -342,10 +346,10 @@ BOOK ExploreBackDoorLocked ORDERED NO KEEP LOOPED
 
 	EPILOG 
 		TEXT "
-			Well, you try to put the key into the lock but it doesn>t fit,
+			Well, you try to put the key into the lock but it doesn't fit,
 			no matter how hard you try. You look at the key and try again.
 			And again. And again. Dejected and out of ideas, you turn away
-			from the door. <<I guess we>ll have to find another way out,>>
+			from the door. <<I guess we'll have to find another way out,>>
 			you say to no one in particular. Someone mutters, <<Yeah.>>
 		
 			Remove this explore token.

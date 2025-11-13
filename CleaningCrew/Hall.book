@@ -23,9 +23,6 @@ BOOK Halls ORDERED NO KEEP LOOP
 	
 		$mythosHall = TRUE
 		exploredHall1 = TRUE AFTER
-
-
-		exploredHall1 = TRUE AFTER
 	END ExploreHall1
 
 	PAGE PlaceHall1
@@ -60,7 +57,7 @@ BOOK Halls ORDERED NO KEEP LOOP
 			
 			As you look away, you catch something moving in your 
 			peripheral vision. You glance back and the painting is still
-			lightly glowing, something that suddently seems more troubling.
+			lightly glowing, something that suddenly seems more troubling.
 		"""
 		
 		ADD TokenSearchHall1Picture
@@ -105,9 +102,9 @@ BOOK Halls ORDERED NO KEEP LOOP
 			The first entry was scrawled last Sunday.
 
 			Maybe you should hold onto it to give back to Benjamin when you
-			see him later today. And maybe take a quick look.
+			see him later today. And maybe take a quick look yourself.
 
-			Gain the {c:QItemJournal} Unique Item, then remove it's
+			Gain the {c:QItemJournal} Unique Item, then remove its
 			Search token. An investigator holding the {c:QItemJournal}
 			can interact with it in the app.
 		"""
@@ -117,4 +114,137 @@ BOOK Halls ORDERED NO KEEP LOOP
 		
 		EXIT
 	END PlaceHall1Journal
+	
+	
+	PAGE SearchRug
+		TRIGGERED BY @SearchHall1Rug
+	
+		PROLOG "The corner of the rug is folder over."
+		BUTTON "Search"
+		
+		TEXT """
+			You lean down to straighten the rug. You play with it for a bit,
+			but have trouble getting it to stay flat--the fold has been there
+			too long. You lift the rug a little more to try to flatten the
+			corner. There's a piece of paper under the rug. You pick it up to
+			find it has a diagram of a tabletop with arcane symbols. Maybe
+			it's part of some ritual? You’ve heard the people in this town have
+			some funny beliefs.
+
+			Gain the {c:QItemEvidenceHall1} Unique Item and
+			1 {clue}, then discard this Search token.
+		"""
+		
+		ADD QItemEvidenceHall1
+		REMOVE TokenSearchHall1Rug AFTER
+		
+		EXIT
+	END SearchRug
+	
+	PAGE SearchPainting
+		TRIGGERED BY @SearchHall1Painting
+		
+		PROLOG "The painting glows with unnatural light."
+		BUTTON "Search"
+		
+		TEXT """
+			The painting is a girl, maybe 12 or 13 years old. The work is
+			stunning and the girl looks so lifelike, it’s as if she could just
+			step through the frame. She’s wearing a white dress and looks
+			serious.
+
+			When you blink, you think the painting has moved but you know that
+			cannot happen. You also notice that there is no dust anywhere on
+			the painting or the frame. You feel like there’s something else
+			you've missed, but you dismiss it and turn away. Gain 1 {clue},
+			then remove this Search token.
+		"""
+		
+		REMOVE TokenSearchHall1Painting AFTER
+	END SearchPainting
+
+	PAGE SearchPainting2
+		TEXT """
+			As you turn around, you notice two shadows on the wall, yours
+			and... you quickly look back at the painting. The girl is not
+			there. Startled, you turn to run back to the {c:TileDiningRoom} and
+			are brought up short when the girl from the painting is standing in
+			front of you.
+
+			Place the Green Girl token as indicated. Shocked, you take 1 Horror
+			({will} negates).
+		"""
+		
+		ADD TokenSarah
+	END SearchPainting3
+	
+	
+	PAGE TalkSarah
+		TRIGGERED BY @TalkToSarah WHEN UNREAD
+		
+		TEXT """
+			She is a pretty girl in the the first blush of youth--maybe 11 or
+			12 years old. She has curly hair with ribbons and a bright white 
+			dress that stands out in the dingy hallway.
+		"""
+	END TalkSarah
+	
+	PAGE TalkSarah2
+		TRIGGERED BY @TalkToSarah WHEN UNREAD AND TalkSarah IS UNREAD
+		
+		PROLOG """
+			She looks at you expectantly. She looks like she wants to say
+			something, but is holding back. She still looks serious, but also
+			concerned and maybe a little afraid. You notice that she seems
+			to be glowing. And maybe a bit transparent.
+
+			She will only speak with {c:EventChosenInvestigator}.		
+		"""
+		BUTTON "Talk to her"
+		
+		TEXT """
+			She brightens up. <<It's so good to see you again. I thought you
+			had forgotten me after that night. I’ve missed you.>>
+
+			You are surprised at what she says. <i>Who is this girl? Why does
+			she think she knows me?</i>
+
+			The girl walks over and turns to stand next to you, then looks up 
+			at you expectantly.
+
+			Move the Green Girl token to your investigator card.
+			She will follow you to whatever ends you meet in this house.
+		"""
+		
+		REMOVE TokenSarah AFTER
+		sarah = TRUE AFTER
+		EXIT
+	END TalkSarah2
+	
+
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 END Hallway
