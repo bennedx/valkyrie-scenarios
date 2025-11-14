@@ -1,36 +1,42 @@
 LANGUAGE English
 
-BOOK Gallery
-	PAGE ExploreGallery
-		TRIGGERED BY @ExploreGallery
-		
-		PROLOG """
-			A door leads farther into the house. Strangely, the latch on the
-			door is clean and shiny, like it has been used recently.
-		"""
-
+BOOK Gallery ORDERED NO KEEP LOOPED
+	PAGE PlaceGallery
+		TRIGGERED BY @PlaceGallery
+	
 		TEXT """
-			The {c:TileGallery} was once stately but now seems shabby.
-			Paintings adorn	the walls and all of them are covered in cobwebs
-			and dust. Place	the {c:TileGallery} tile as indicated, then remove
-			all Explore	tokens leading to this room.
+			As the door opens, dust slowly drifts to the floor. Lots of
+			it. If you were still concerned about cleaning, you'd be horrified
+			at the amount of work ahead of you.
+			
+			The room behind the door once lived up its expectations. The room
+			is--or was--stately, with high ceilings, beautiful
+			paintings, and furniture and rugs that look both rich and
+			comfortable. Dim light from the windows reflects off the dust,
+			giving the room an unearthly quality. The glowing dust make the
+			room feel more rundown that it actually is.
+			
+			Place the {c:TileGallery} tile, then remove all
+			Explore tokens leading to this room.
 		"""
-		
+	
 		REMOVE TokenExploreGalleryViaHall1 AFTER
 		REMOVE TokenExploreGalleryViaFoyer AFTER
-	END ExploreGallery
-		
-	PAGE PlaceGalleryExploreFoyer
-		IF exploredGalleryViaHall1 AND NOT exploredFoyer THEN PAGE IS VISIBLE
-		
+		ADD TileFoyer
+		exploredGallery = TRUE
+	END PlaceGallery
+
+	PAGE PlaceGalleryViaHall1
+		IF exploredGalleryViaHall1 THEN PAGE IS VISIBLE
+
 		TEXT """
-			Across the room, a door leads farther into the house. Place an
-			Explore token as indicated.
+			Across the room is another door. Place an Explore token as
+			indicated.
 		"""
 		
 		ADD TokenExploreFoyerViaGallery
-	END PlaceExploreFoyerViaGallery
-	
+	END PlaceGalleryViaHall1
+
 	PAGE PlaceGalleryCoatRoom
 		TEXT """
 			A coat room sits in the corner across from you. Place an Explore
@@ -38,7 +44,7 @@ BOOK Gallery
 		"""
 		
 		ADD TokenExploreCoatRoom
-	END PlaceCoatCloset
+	END PlaceGalleryCoatRoom
 		
 	PAGE PlaceGalleryDVM
 		TEXT """
@@ -50,9 +56,62 @@ BOOK Gallery
 		ADD TokenSearchGalleryDVM
 		TRIGGER @MoveAfterExplore
 		EXIT
-	END PAGE
+	END PlaceGalleryDVM
 
+	PAGE PlaceCoatRoom
+		TRIGGERED BY @PlaceCoatRoom
+		
+		TEXT """
+			The coat room still has a number of coats hung neatly on one side.
+			Shoes and hangers are scattered on the floor. Remove this Explore
+			token.
 
+			A half-filled box sits in one of the corners. Place a Search token as
+			indicated.
+		"""
+		
+		REMOVE TokenExploreCoatRoom
+		ADD TokenSearchCoatRoomEvidence
+		TRIGGER @MoveAfterExplore
+		EXIT
+	END PlaceCoatRoom
 
+	PAGE SearchDVM
+		TRIGGERED BY @SearchGalleryDVM
+		
+		PROLOG "A pile of junk sits on the table between the divans."
+		
+		TEXT """
+			Among the tools, handkerchiefs, and ashtrays are a number of small
+			books. One of them... <i>feels</i> different than the others. It is
+			old and worn, but you get the sense it possesses great power.
 
+			Gain the {c:QItemDVM} Common Item, then discard this Search token.
+			An investigator with the {c:QItemDVM} can interact with it in the
+			app.
+		"""
+		
+		REMOVE TokenSearchGalleryDVM
+		foundDVM = TRUE AFTER
+	END SearchDVM
+	
+	PAGE SearchCoatRoomEvidence
+		TRIGGERED BY @SearchCoatRoomEvidence
+		PROLOG "
+			This box is half-full of things you might find in a coat room:
+			brushes, shoe polish, and...
+		"""
+	
+		TEXT """
+			Among other items, you find a pair of shoes caked with mud and a
+			bloody handkerchief. Looking closer, you see that the handkerchief
+			was used to wipe blood from the shoes.
+
+			Gain the {c:QItemEvidenceCoatRoom} Unique Item, then discard this
+			Search token.
+		"""
+		
+		REMOVE TokenSearchCoatRoomEvidence
+		EXIT
+	END SearchCoatRoomBox
 END Gallery

@@ -179,7 +179,7 @@ BOOK Halls ORDERED NO KEEP LOOP
 	END SearchPainting3
 	
 	
-	PAGE TalkSarah
+	PAGE SearchPaintingSarah
 		TRIGGERED BY @TalkToSarah WHEN UNREAD
 		
 		TEXT """
@@ -187,10 +187,10 @@ BOOK Halls ORDERED NO KEEP LOOP
 			12 years old. She has curly hair with ribbons and a bright white 
 			dress that stands out in the dingy hallway.
 		"""
-	END TalkSarah
+	END TalktoSarah
 	
-	PAGE TalkSarah2
-		TRIGGERED BY @TalkToSarah WHEN UNREAD AND TalkSarah IS UNREAD
+	PAGE TalktoSarah2
+		TRIGGERED BY @TalkToSarah
 		
 		PROLOG """
 			She looks at you expectantly. She looks like she wants to say
@@ -203,13 +203,13 @@ BOOK Halls ORDERED NO KEEP LOOP
 		BUTTON "Talk to her"
 		
 		TEXT """
-			She brightens up. <<It's so good to see you again. I thought you
-			had forgotten me after that night. I’ve missed you.>>
+			She brightens up. <<It's good to see you again. I thought you
+			had forgotten me after that night. I've missed you.>>
 
 			You are surprised at what she says. <i>Who is this girl? Why does
 			she think she knows me?</i>
 
-			The girl walks over and turns to stand next to you, then looks up 
+			The girl walks over and turns to face you. She looks up 
 			at you expectantly.
 
 			Move the Green Girl token to your investigator card.
@@ -217,7 +217,7 @@ BOOK Halls ORDERED NO KEEP LOOP
 		"""
 		
 		REMOVE TokenSarah AFTER
-		sarah = TRUE AFTER
+		foundSarah = TRUE AFTER
 		EXIT
 	END TalkSarah2
 	
