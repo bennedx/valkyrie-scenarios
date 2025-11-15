@@ -1,6 +1,6 @@
 LANGUAGE English
 
-BOOK Halls ORDERED NO KEEP LOOP
+BOOK Hall1 ORDERED NO KEEP LOOP
 
 	PAGE ExploreHall1
 		TRIGGERED BY @ExploreHall1
@@ -220,7 +220,7 @@ BOOK Halls ORDERED NO KEEP LOOP
 		foundSarah = TRUE AFTER
 		EXIT
 	END TalkSarah2
-	
+END Hall1
 
 	
 	
