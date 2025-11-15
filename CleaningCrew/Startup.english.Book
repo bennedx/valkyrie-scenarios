@@ -73,7 +73,7 @@ BOOK Startup ORDERED NO KEEP
 	PAGE StartScenario NO TEXT
 		IF testMode THEN PAGE IS NOT VISIBLE
 		
-		TEXT "Each investigator receives 1 {clue}.
+		TEXT "Each investigator receives 1 {clue}."
 	END 
 	
 	PAGE Kate
@@ -87,7 +87,7 @@ BOOK Startup ORDERED NO KEEP
 			universe be so cruel and unfair?!</i> Kate discards her
 			{c:QItemFluxStabilizer}. She fumes and ruminates on the loss. That
 			seething anger will carry with her through the day:  Kate becomes
-			Focused. She becomes Focused before a monster attacks her.
+			Focused. She becomes Focused before any monster attacks her.
 		"""
 		
 		TRIGGER @PlaceDriveWay

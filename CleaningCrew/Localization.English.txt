@@ -25,16 +25,13 @@ TokenExploreBasementThird.text,"\n...\n"
 TokenExploreBasementFirst.button1,{action} Use brawn
 TokenExploreChapelViaCrypt.button1,Continue
 TokenTestBasementViaDiningRoomSight.button1,Continue
-TokenExploreHall2ViaHall1.text,"\nThe hall seems to continue on a bit farther. An investigator in the same space as the Sight token can look down the hall.\n"
 TokenSearchHall1Rug.button1,{action} Search
-TokenExploreGalleryViaHall1.text,"\nA door leads farther into the house. Strangely, the latch on the door is clean and shiny, like it has been used recently.\n"
 TokenSearchDiningRoomFluxStabilizer.text,"\n"
 TokenWallHall1.button1,Continue
 TokenTestPlaceHall2ViaHall1.button1,Test
 TokenSearchFoyerSpell.button1,{action} Search
 TokenChapelTrapdoorToLibrary.button1,Continue
 TokenExploreFoyerViaHall2.button1,{action} Explore
-TokenExploreFoyerCloset.button1,{action} Explore
 TokenSearchFoyerCandles.text,"\nThis painting is compelling. Something about it makes you want to have a closer look.\n"
 TokenSearchKitchenCutlery.button1,{action} Dig through the cutlery
 TokenSearchKitchenCutlery.text,"\nOn closer inspection, the pile of cutlery is deep, like someone upended several drawers and then left.\n"
@@ -42,7 +39,6 @@ TokenExploreKitchenViaDriveway.button1,{action} Open door
 TokenSearchHall1Painting.button1,Continue
 TokenSarah.button1,{action} Talk to Sarah
 TokenExploreLibraryViaStudy.button1,{action} Explore
-TokenExploreHall2ViaStudy.text,"\nA door leads farther into the house.\n"
 TokenSearchLibraryKey.text,"\nIt looks like the man dropped his key ring.\n"
 SpawnSpawnCultist1.button1,Continue
 TokenSearchChapelRitualComponents.text,"\nYou walk over to the altar and see a large book set out on it.\n"
@@ -115,7 +111,6 @@ CustomMonsterDavidSmythe.monstername,Cousin David
 SpawnAltarCultists4.button1,Button1
 TokenExploreCell.text,"\nWhen you look through the bars, it’s dark inside. You think that you hear something..n"
 TokenExploreCell.button1,{action} Open Door
-TokenExploreFoyerViaGallery.text,|||\nUp close, you can see how beautiful the door is:  ornate carvings and beautiful hardware. This door has a small plaque that reads "Foyer."\n|||
 CustomMonsterCellLloiger.info,-
 CustomMonsterCellLloiger.monstername,Lloigor
 SpawnCellStartRitualMonster.text,"\nA monster squeezes through the hole in the wall. It smells you and wants blood. Place a {c:CustomMonsterCellLloiger} as indicated. This monster’s awareness is high:  you cannot evade it. If you are in the same space, you can only attack or pass. Something about this monster is different; the investigator holding the {c:QItemElderSignPendant} must either attack or pass when in the same space, like any other investigator.\n\nIf you have not already done so, place a trapdoor as indicated.\n\n{c:EventChosenInvestigator} tries to repel the monster with the {c:QItemFluxStabilizer}. The monster is too large and the device fizzles, falters, and fails. Discard the {c:QItemFluxStabilizer}.\n"
@@ -135,23 +130,15 @@ CustomMonsterChapelRiot.monstername,Riot
 TokenExploreCryptNoKey.text,"\nThe door is firmly locked and looks too solid to bust down. You’ll need a key.\n"
 TokenExploreCryptNoKey.button1,Continue
 TokenExploreCryptViaChapel.button1,{action} Continue
-TokenExploreStudyViaHall2.text,|||\nA small brass plaque reads "Study."\n|||
-TokenExploreFoyerViaStudy.button1,{action} Explore
 TokenExploreFoyerViaGallery.button1,{action} Explore
-TokenExploreFoyerCloset.text,"\nLike most of the doors in this house, this one is ornate... and covered in dust.\n"
 TokenSearchFoyerRandom.button1,{action} Search
 TokenExploreChapelViaCrypt.text,"\nThere is no keyhole on the crypt side of the door. An investigator in the chapel who has the {c:QItemKey} can explore.\n"
 TokenExploreCoatRoom.text,"\nThis door leads to the coat room. The door is ajar and you can tell that most of its contents were removed.\n"
 TokenSearchGalleryDVM.button1,{action} Continue
 TokenExploreGalleryViaFoyer.button1,{action} Explore
-TokenExploreHall2ViaFoyer.text,"\nThis door leads farther into the house.\n"
-TokenSearchFoyerSpell.text,"\nThe table has several drawers.\n"
 TokenTestPlaceGalleryViaFoyer.button1,Test
-TokenExploreHall2ViaHall1.button1,Look
 TokenTestPlaceFoyerViaGallery.button1,Test
-TokenSearchCoatRoomEvidence.text,"\nThis box is half-full of old junk.\n"
 TokenSearchCoatRoomEvidence.button1,{action} Search
-TokenExploreHall2ViaStudy.button1,{action} Explore
 TokenSearchBasementRubble.button1,Continue
 TokenSearchBasementRubble.text,"\nThere is a lot of refuse here.\n"
 TokenSearchCryptElderSignPendant.text,"\nSomething shiny catches your eye in the stone coffin.\n"
@@ -179,7 +166,6 @@ SpawnAltarCultists5.text,Spawn cultist 4
 TokenExploreFoyerViaHall2.text,|||\nThis door has a small brass plaque that reads "Foyer."\n|||
 CustomMonsterWanderer.monstername,Cultist
 UIStoryContinue.button1,Continue
-TokenExploreHall2ViaFoyer.button1,{action} Explore
 TokenChapelTrapdoorToLibrary.text,"\nThis door leads to the library.\n"
 TokenCellHoleInTheWall.button1,Continue
 TokenCellHoleInTheWall.text,"\nWhen you look through the hole, you see an altar and a man next to it. He’s moving but you cannot see what he is doing. His voice echoes through the hole, but you cannot make out the words.\n"
@@ -214,12 +200,7 @@ TokenDoorStudy.text,"\nThis door leads farther into the house.\n"
 TokenWallLibrary.button1,Continue
 TokenSearchLibraryKey.button1,{action} Pick up keys
 TokenExploreStudyViaFoyer.text,|||\nA small plaque on the door reads "Study."\n|||
-TokenExploreFoyerViaStudy.text,"\nThis door leads farther into the house.\n"
-TokenSearchHall2Evidence.button1,{action} Search
-TokenExploreStudyViaHall2.button1,{action} Explore
 TokenExploreLibraryViaStudy.text,|||\nThis door has a small brass plaque that reads "Library."\n|||
-TokenSearchFoyerRandom.text,"\nAn old cabinet with a set of drawers sits next to the door. It looks unlocked.\n"
-TokenExploreGalleryViaFoyer.text,|||\n			The door you are standing in front of looks both strong and\n inviting, like it was meant to tell visitors where they should\n start. An ornate plaque reads "Gallery."\n|||
 TokenTestPlaceDriveway.button1,Test
 TokenSearchDrivewayGardenTool.button1,{action} Search
 TokenSearchDrivewayJournal.button1,{action} Search
@@ -253,7 +234,6 @@ TokenTestPlaceBasementViaDungeonCave.button1,Test
 TokenExploreBasementViaDungeonCave.text,"\nThis door looks well-maintained and well-used.\n"
 TokenTestPlaceHall1ViaDiningRoom.text,PlaceHall1ViaDiningRoom
 TokenTestPlaceHall1ViaDiningRoom.button2,Cancel
-TokenSearchHall2Evidence.text,"\nThe upended table has spilled its contents across the floor.\n"
 TokenTestPlaceBackdoorViaDriveway.text,"\nEventExploreBackdoorPass\n(You break the gate)\n"
 TokenTestPlaceBasementViaDungeonCave.text,PlaceBasementViaDungeonCave
 TokenTestPlaceBasementViaDungeonCave.button2,Cancel
@@ -341,10 +321,6 @@ TokenDavidSmythesSonRescuable.button1,Continue
 TokenExploreFrontDoor.button1,{action} Explore
 TokenExploreFrontDoor.text,"\nThe door seems unfazed by age. A small window purports to look out on the grounds. Maybe you can finally get out of this madhouse.\n"
 TokenExploreBackDoorLocked.button1,Button1
-EventPlaceDrivewayStart.text,"\nIt’s 3:00 and you’re on time. The man your friend spoke with on the phone--Benjamin--should be here to meet you.\n\nAs you walk up the driveway, you can see how poorly maintained the house and grounds are. The drive is paved, but cracked and pocked. Weeds grow as high as your waist on either side and you briefly wonder what might be hiding there.\n\nPlace the {c:TileDriveway} tile as indicated.\n"
-EventPlaceDrivewayInvestigators.button1,Continue
-EventPlaceDrivewayExploreKitchen.button1,Continue
-EventPlaceDrivewaySearchGardenTool.button1,Continue
 EventExploreDiningRoom.button1,Continue
 EventMoveAfterExplore.button1,Continue
 EventExploreDiningRoomKnock.button1,Continue
@@ -395,13 +371,7 @@ EventExploreBasementBrawnSecondFail.text,"\nYour hand hurts from the effort and 
 EventExploreBasementBrawnSecondPass.button1,Continue
 EventExploreBasementBrainSecond.text,"\nOut of breath, you rest for a minute, then try again ({lore}).\n"
 EventExploreDiningRoom.text,"\nWhen you try to open the door, it sticks, so you push harder. The door splinters into pieces, a mess hanging by a hinge. If you’re here to clean this place up, this is not a good start.\n"
-EventPlaceDrivewayGate.text,"\nUp ahead, at the end of the drive, is a gate that leads around to the back of the house. Place an Explore token as indicated.\n"
-EventPlaceFoyerExploreStudy.button1,Continue
-EventSearchFoyerSpell.text,"\nYou go through the drawers one-by-one, finding little of interest. Finally, in the last drawer, you find a small pamphlet with arcane symbols and odd poetry. Gain the {c:QItemFoyerSpell} spell, then discard this Search token.\n"
-EventPlaceFoyerExploreCloset.text,"\nAnother door looks like a closet. Place an Explore token as indicated.\n"
-EventExploreFailure.text,There were no options to explore this room.
 EventExploreFoyerLockedDoor.button1,Continue
-EventExploreFoyerClosetOpen.button1,Continue
 EventSearchKitchenCutlery.text,"\nOuch! You cut yourself and a few drops of blood fall onto the floor. Take 1 facedown Damage from the cut. Additionally, take 1 facedown Horror ({will} negates) when you see the blood.\n\nAs you’re looking at the blood, you notice something pushed under the counter where you’ve been looking. Gain the {c:QItemCutlery} Common Item, then remove this Search token.\n"
 EventSearchKitchenCutlery.button1,Continue
 EventSearchKitchenRandom.button1,Continue
@@ -415,7 +385,6 @@ EventPlaceLibrary.text,"\nThe door opens and a bit of fresh air surprises you. A
 EventPlaceLibrary.button1,Continue
 EventSearchLibraryKey.text,"\nYou reach down to pick up the keys. You’re impressed by the number and variety. Some of the keys have strange symbols on their bows while others have beautiful and intricate blades. You pocket them and wonder if you’ll need them around the house. Gain the {c:QItemKey} Unique Item, then discard this Search token.\n"
 EventPlaceLibraryAfterCultist.button1,Continue
-EventPlaceDrivewayBen.text,"\nThe man you were supposed to meet comes walking around the corner. When you’d spoken with him earlier in the week, he seemed in a hurry to have the house cleaned. Place the Purple Man token as indicated. This is Benjamin Smythe, a member of the family that owns this estate.\n"
 EventPlaceChapelExploreCryptWithNoKey.text,"\nA small wooden door leads out of the room to the right. Place an Explore token as indicated.\n"
 EventSearchLibraryBook.text,"\nYou reach up to get the book but it doesn’t move. You reach directly in front of you and try another and it comes right out. You decide to try a little harder ({strength}).\n"
 EventSearchLibraryBook.button1,Continue
@@ -439,7 +408,6 @@ EventSearchChapelWhiskeyNoise.text,|||\nWhile you are bent over getting the bott
 EventSearchChapelWhiskey.text,"\nYou bend down to pick up and smell the bottle. Man, that is some good whiskey! Gain the {c:QItemWhiskey} Common Item. Then discard this Search token.\n"
 EventSearchChapelWhiskeyNoise.button1,Continue
 EventSearchChapelWhiskeyKill.text,|||\nYou cock your arm to punch the priest and he raises his arms in defense. As he does, a knife falls out of his robe. Place the {c:QItemRitualDagger} Common Item in the priest’s space.\n\nYou punch hard through his waving arms and strike him in the temple. The man falls back, hitting his head on the corner of a pew. He collapses, seizes for a moment, and then goes still. He’s dead. Take 1 facedown Horror.\n\n"A haunted house, triple-murder, and now a local cult is involved," you mutter to yourself. "I should get out of here before someone finds his body."\n\nRemove the White Man token.\n|||
-EventStartupClueTokensYes.text,Each investigator gains 1 {clue}.
 EventSearchChapelWhiskeyChat.text,|||\n"Oh," the priest brightens. "Benjamin told me you’d be here today. I’m not sure how you found this place, but you should head back to the house and get to work. We need that place cleaned up. I’ll try to remind the boys that you’re here at Benjamin’s request." The priest turns and walks out of the room, leaving you puzzled at all of this. As you ponder, you look down and see that the priest has dropped something.\n\nWrapped in cloth is an ornate knife. Gain the {c:QItemRitualDagger} Common Item. then remove the White Man token.\n\n<"Haunted house, those murdered kids, and now what looks like some local cult," you mutter to yourself.\n|||
 EventSearchChapelWhiskeyChat.button1,Continue
 EventPlaceChapelExploreCryptWithKey.button1,Button1
@@ -457,13 +425,7 @@ EventGameDoneWin.button1,Button1
 EventSearchBasementTrapdoor.text,"\nAs you dig through the junk, you realize it is hiding something. You sweep it away and find a door under it. Remove this Search token and the wall.\n"
 EventMythosHealingStoneYesEarly.text,"\nThe ugly stone carving in your pocket grows warm and begins to hum quietly. When you take it out of your pocket, you suddenly feel more hopeful.\n\nThe investigator who holds the {c:QItemHealingStone} may do one of the following.\n\n1. If you have no Damage or Horror, improve 1 skill, become focused, or gain 1 {clue}.\n2. Turn 1 Damage or Horror facedown\n3. Discard 1 facedown Damage or Horror\n"
 EventInvestigatorTransportStart.button1,Button1
-EventPlaceFoyer.text,"\nThe foyer is a large, nearly empty space with a front door, stairs, and other doors leading to various parts of the house. Place the {c:TileFoyer} tile as indicated, then remove all Explore tokens leading to this room.\n"
-EventPlaceFoyer.button1,Continue
 EventPlaceLibraryAfterCultist.text,"\nThe man in robes lies at your feet; blood pools on the floor and soaks into the rug. Breathing hard and wondering what just happened, you chuckle darkly at how the mess here is getting worse.\n\nWhen the man got up earlier, something fell out of his pocket. Place a Search token as indicated.\n"
-EventPlaceHall2ExploreFoyer.button1,Continue
-EventPlaceHall2TileEnd.button1,Continue
-EventPlaceStudy.text,"\nThe door opens smoothly, like it has been used recently. Place the {c:TileStudy} tile and a door as indicated, then remove all Explore tokens leading to this room.\n"
-EventPlaceStudy.button1,Continue
 EventExploreCaveViaDungeonCaveOpen.text,"\nYou push the door open. Remove this Explore token.\n"
 EventPlaceAltarPortal.text,"\nA boy floats in the air. He is surrounded by a kaleidoscope of color that shimmers like oil on water. You realize that he is the portal. He does not speak or move; it is clear that fear, pain, and arcane power have overwhelmed and paralyzed him.\n\nPlace the Orange Boy token as indicated; this is both the portal and {c:CustomMonsterDavidSmythe}’s son.\n"
 EventPlaceCryptElderSignPendant.button1,Continue
@@ -524,35 +486,13 @@ EventMythosRitualStart.button1,Button1
 EventKillDavidSmythe.button1,Continue
 EventKillDavidSmythe.text,|||\n{c:CustomMonsterDavidSmythe} gets a look of surprise as you make the killing blow. He looks at you, then looks back at the portal one last time before he dies. You look at the portal and can feel whatever is on the other side getting closer. Sarah says, "He’s dead now but the portal is open. You don’t want to see what he summoned. You must perform the counter ritual. Use the {c:QItemDVM} to perform it."\n\nAn investigator with the {c:QItemDVM} can interact with it in the app.\n|||
 EventGameOverStart.button1,Button1
-EventTest.button1,Continue
 EventPlaceLibraryAfterCultistSearchBookcase.text,"\nA bookcase on the far wall is filled from floor to ceiling with books. Maybe one of them can help you understand what is happening? Place a Search token as indicated.\n"
 EventPlaceLibraryAfterCultistSearchBookcase.button1,Continue
 EventKillChapelRiot.text,"\nYou kill the lot of them, leaving their bodies scattered on the floor.\n\nThe priest is still clutching the knife he tried to kill you with. You reach down to pry it from him. Gain the {c:QItemRitualDagger} Common Item.\n\nYou should get out of here before someone else shows up.\n"
 EventKillChapelRiot.button1,Continue
 EventPlaceChapelExploreCryptWithKey.text,"A small wooden door leads out of the room to the right. Place an Explore token as indicated.\n"
-EventPlaceStudyBook.text,"\nThe desk has a book and some notes strewn about. You are surprised by the fresh paper and how neat and clean the room seems to be. Place a Search token as indicated.\n"
-EventPlaceStudyBook.button1,Continue
-EventPlaceStudyExploreLibrary.text,|||\nA door on the back wall has a small brass plaque that reads "Library." Place an Explore token as indicated.\n|||
-EventPlaceStudyExploreLibrary.button1,Continue
-EventExploreFailure.button1,Continue
-EventPlaceHall2.button1,Continue
-EventPlaceHall2ExploreStudy.text,|||A small, tarnished brass plaque reads "Study." Place an Explore token as indicated.\n|||
-EventPlaceFoyerExploreStudy.text,|||\nAnother door across the room leads farther into the house. A small plaque reads "Study." Place an Explore token as indicated.\n|||
 EventSearchStairsPass.text,"\nYou find something useful. Gain the {c:QItemBigGun} Common Item, then remove the Explore token.\n"
-EventSearchFoyerSpell.button1,Continue
-EventPlaceHall2ExploreFoyer.text,"\nThis door leads farther into the house. Place an Explore token as indicated.\n"
-EventSearchHall2Evidence.button1,Continue
-EventPlaceHall2ExploreStudy.button1,Continue
-EventPlaceFoyerExploreGallery.text,"\nAcross the room, a door leads farther into the house. Place an Explore token as indicated.\n"
-EventPlaceFoyerExploreGallery.button1,Continue
-EventPlaceFoyerExploreHall2.text,"\nA door in one corner leads farther into the house. Place an Explore token as indicated.\n"
-EventPlaceFoyerExploreHall2.button1,Continue
-EventPlaceFoyerSearchSpell.button1,Continue
-EventPlaceHall2ExploreHall1.button1,Continue
-EventPlaceHall2AfterExploreTokens.button1,Continue
 EventExploreChapelViaCrypt.button1,Continue
-EventStartupClueTokensEnd.button1,Button1
-EventPlaceHall2ViaFoyer.text,"\nYou’ve found a servants’ hallway. It is cold and stale like other parts of the house. While there isn’t much in this room, what is there is quite a mess. Place the {c:TileHall2} tile and wall as indicated, then remove all Sight and Explore tokens leading to this room.\n"
 EventPlaceBasementTrapdoor.text,"\nA pile of trash sits in the corner. From here, it looks like it was recently dumped. Place a Search token as indicated.\n"
 EventPlaceBasementTrapdoor.button1,Continue
 EventPlaceBasementDarkness.text,"\nEven with a candle, it is dark in the basement. Place darkness in each space of the basement. Investigators can only move into the basement when a Light Source is present. The darkness feeds on your light:  your Light Source does not cancel the effects of darkness, but at least you can see across the room.\n"
@@ -604,19 +544,11 @@ EventMythosRitualSummonsNotPresent.text,|||\nYou can feel the house inhale again
 EventMythosRitualSummonsNotPresent.button1,Continue
 EventTestRitualPreparations.text,"#heroes:  {var:#heroes}\n\nYou found the dagger\nYou found the DVM and have read it\nYou found the pendant\nYou found the components\nYou found the cell\nYou found the healing stone"
 EventTestRitualPreparations.button1,Continue
-EventPlaceHall2ExploreHall1.text,"\nThe hallway continues. Place a Sight token as indicated.\n"
-EventPlaceHall2ViaHall1.button1,Continue
-EventPlaceHall2ViaHall1.text,"\nThe hallway continues a bit farther. Things are scattered about and it is quite a mess. Place the {c:TileHall2} tile and wall as indicated, then remove all Sight and Explore tokens leading to this room.\n\n"
-EventPlaceHall2AfterExploreTokens.text,"\nA table is overturned in the corner and all its holdings are scattered on the floor. Place a Search token as indicated.\n"
 EventInvestigatorStart.button1,Button1
 EventMythosRitualInProgress.button1,Button1
 EventStartupOpeningSplashStart.button1,Button1
-EventStartupEnd.button1,Button1
 EventMythosRitualYesTimeout.button1,Button1
-EventPlaceDrivewayStart.button1,Continue
-EventPlaceDrivewayInvestigators.text,|||\nYou wonder what you were thinking when you said "yes" to your friend. Place your investigators as indicated.\n|||
 EventInvestigatorEnd.button1,Button1
-EventPlaceDrivewayEnd.button1,Button1
 EventMythosWandererStart.button2,Button2
 EventStartupOpeningSplashEnd.button1,Button1
 EventStartupOpeningSplashStartYes.button1,Continue
@@ -640,43 +572,17 @@ EventTestPlaceDungeonCellYes.button1,Button1
 EventPlaceCellRitualRunning.button1,Button1
 EventTestRitualFinishedYes.text,ritual = 
 EventTestRitualFinishedYes.button1,Continue
-EventStartupInitializeEnd.button1,Button1
 EventKillWanderer.button1,Button1
-EventStartupStart.button1,Button1
-EventStartupInitializeStart.button1,Continue
 EventPlaceBasementConditionStart0.button1,Button1
 EventPlaceBasementConditionConfirm.button2,No
 EventPlaceBasementConditionConfirm.text,"\nDo you have a light source?\n"
 EventPlaceBasementConditionConfirm.button1,Yes
-EventPlaceStudyExploreFoyerYes.text,"\nA door to the right leads farther into the house. Place an Explore token as indicated.\n"
-EventSearchStudyHealingStone.text,"\nYou find an ugly stone carving amongst the detritus on the desk. You aren’t sure why, but you must have it. Gain the {c:QItemHealingStone} Unique Item, then discard this Search token.\n"
-EventSearchStudyHealingStone.button1,Continue
 EventPlaceStudyExploreHall2Yes.button1,Button1
-EventPlaceStudyHealingStone.text,"\nA large oak desk sits in the middle of the room. A dead plant and a mess of papers covers it. Place a Search token as indicated.\n"
-EventPlaceStudyHealingStone.button1,Continue
-EventPlaceStudyExploreFoyerYes.button1,Continue
 EventSearchLibraryKey.button1,Continue
-EventPlaceHall2ViaFoyer.button1,Continue
-EventPlaceHall2ViaStudy.text,"\nThe servants’ hall is cold and stale, like it hasn’t been opened in years. There isn’t much here, but what is here is quite a mess. Place the {c:TileHall2} tile and wall as indicated, then remove all Sight and Explore tokens leading to this room.\n"
-EventPlaceHall2ViaStudy.button1,Continue
-EventSearchHall2Evidence.text,|||\nThere is a dead plant and many scraps of paper tossed around. One of the scraps catches your eye:  it is spattered in dried blood. The note talks about preparations for a ritual and mentions something about a chapel and crypt that you don’t understand. The author of the note wants to stop the ritual and it is clear he will do what he can. The note is signed "Henry Smythe."\n\nGain the {c:QItemEvidenceHall2} Unique Item, then discard this Search token.\n|||
-EventPlaceFoyerSearchSpell.text,"\nA small table sits to one side of the stairs. Place a Search token as indicated.\n"
-EventPlaceFoyerSearchRandom.text,"\nA small cabinet with drawers and little compartments sits next to the door. Place a Search token as indicated.\n"
-EventSearchFoyerRandom.text,"\nYou dig through the various compartments and eventually find something useful. Gain the {c:QItemFoyerRandom} Common Item, then discard this Search token.\n"
-EventSearchFoyerRandom.button1,Continue
-EventPlaceFoyerSearchRandom.button1,Continue
 EventExploreChapelViaCrypt.text,"\nYou carefully fit the key. It sticks at first, but then starts to turn. Then sticks. It will go no farther. With some effort, you wrestle the key from the lock and put it back in your pocket. Remove this Explore token.\n"
-EventPlaceDrivewaySearchGardenTool.text,"\nThe weeds behind the house are even taller than the ones in front. Over at the corner of the drive, something under the weeds catches your eye. Place a Search token as indicated.\n"
-EventPlaceDrivewayBen.button1,Continue
-EventPlaceDrivewayGate.button1,Continue
-EventPlaceDrivewayExploreKitchen.text,"\nAfter walking around the house, you are not surprised that the door next to you is covered with mud and spiderwebs. Like the rest of the house, the paint is peeling and the door shows signs of dry rot.\n\nPlace an Explore token as indicated.\n"
 EventExploreBackdoorFailSearchJournal.text,"\nBenjamin smiles again and walks through the now-opened gate. As soon as he is out of sight, you hear a loud crash and cursing.\n\nRemove the Purple Man token.\n\nIt looks like Benjamin dropped a book of some kind where he was introducing himself. Place a Search token as indicated.\n"
 EventExploreDiningRoomViaBackdoor.text,|||\n"Ah, here they are," Benjamin exclaims, waving his keys. "Let’s go in."\n|||
 EventExploreDiningRoomViaBackdoor.button1,Continue
-EventStartupKateStart.button1,Button1
-EventStartupKateYes.text,"\nKate is running late, so she is hurried and inattentive. She grabs her {c:QItemFluxStabilizer} and turns to put it away. She cries out as it slips from her fingers and drops heavily to the floor. It cracks open when it hits and releases blue smoke. <i>How can the universe be so cruel and unfair?!</i> Kate discards her {c:QItemFluxStabilizer}. She fumes and ruminates on the loss. That seething anger will carry with her for a while:  Kate becomes Focused. She becomes Focused whenever she is attacked.\n\nKate is ready for whatever comes.\n"
-EventStartupKateYes.button1,Continue
-EventStartupKateEnd.button1,Button1
 EventFluxStablizerInspect.button1,Continue
 EventFluxStablizerInspect.text,"\nOnly {c:EventChosenInvestigator} can drop or pick up this item, and cannot trade it to another investigator. When the {c:QItemFluxStabilizer} is on the floor, any investigator who moves or is moved into the space immediately moves 1 space away from the device. Move toward the {c:TileDiningRoom} if possible, or choose the direction randomly. This does not count as a movement. {c:EventChosenInvestigator} is immune to this effect.\n\nWhen {c:EventChosenInvestigator} carries this item, add 1 additional movement to their move actions.\n"
 EventMythosWandererStart.button1,Continue
@@ -687,15 +593,7 @@ EventExploreDungeonCaveViaCryptYes.button1,Button1
 EventPlaceCryptExploreDungeonCaveYes.button1,Button1
 EventPlaceDungeonCaveExploreCryptYes.text,"\nThe caves continue into the darkness. Place a Sight token as indicated.\n"
 EventPlaceDungeonCaveExploreCryptYes.button1,Continue
-EventStartupClueTokensYes.button1,Continue
 EventPlaceBasementConditionRubbleSearchYes.button1,Button1
-EventStartupPlaceDrivewayStart.button1,Button1
-EventStartupPlaceDrivewayYes.button1,Button1
-EventStartupPlaceDrivewayEnd.button1,Button1
-EventPlaceDrivewayWendy.button1,Button1
-EventPlaceDrivewayWendyYes.text,"\nAs she walks up the drive, Wendy Adams trips and falls. She twists her ankle and skins her knees. When she looks up, she sees something in the weeds. Wendy gains the {c:QItemWendyGun}.\n\nWhen she finally stands up, she doesn’t feel as agile as usual. In this scenario, Wendy can become Restrained.\n"
-EventPlaceDrivewayWendyYes.button1,Continue
-EventPlaceDrivewayWendyEnd.button1,Button1
 EventMythosWandererEnd.button1,Continue
 EventMythosWandererNotPlaced.button1,Button1
 EventMythosWandererActivateMove1.text,"\nThe cultist moves 2 spaces toward the nearest investigator, then attacks a random investigator in its space.\n"
@@ -743,14 +641,7 @@ EventSearchDiningRoomFluxStabilizerBenAngry.text,|||\nBenjamin walks briskly thr
 EventSearchDiningRoomFluxStabilizerBenAngry.button1,Continue
 EventSearchDiningRoomFluxStabilizerAfterPuzzle.text,"\nThe device begins humming quietly.\n\nReplace this search token with the {c:QItemFluxStabilizer} common item.\n\n{c:EventChosenInvestigator} can drop or pick up this item, but cannot trade it to another investigator. When the {c:QItemFluxStabilizer} is on the floor, any investigator who moves or is moved into the space immediately moves 1 space away from the device. Move toward the {c:TileDiningRoom} if possible, or choose the direction randomly; you do not evade monsters when moving this way. {c:EventChosenInvestigator} is immune to this effect.\n\nWhen {c:EventChosenInvestigator} holds this item, add 1 additional movement to their move actions.\n\nThis information can be reviewed in the app.\n"
 EventSearchDiningRoomFluxStabilizerAfterPuzzle.button1,Continue
-EventPlaceFoyerCandlesViaHall2.text,"\nNext to you is a painting that catches your eye. Place a search token as indicated.\n"
-EventPlaceFoyerCandlesViaHall2.button1,Continue
-EventPlaceFoyerCandlesViaOthers.text,"\nNext to a door across the room, a painting catches your eye. Place a search token as indicated.\n"
-EventPlaceFoyerCandlesViaOthers.button1,Continue
-EventPlaceFoyerCandlesEnd.button1,Continue
 EventMythosSarahPatterGo.button1,Button1
-EventStartupGoalEnd.button1,Button1
-EventStartupGoalStart.button1,Button1
 EventStartupGoalStopCultists.button1,Button1
 EventStartupGoalStartBranch.button1,Button1
 EventPlaceTortureChamberExploreCellStopCultists.button1,Continue
@@ -761,10 +652,8 @@ EventTriggerFoundElderSign.text,"\nThe {c:QItemElderSign}! Now that you have it 
 EventTriggerFoundElderSign.button1,Continue
 EventTriggerJournalRead.text,"\nYou cannot believe anyone could be so evil. But you have the {c:QItemElderSign} he needs. Now you’ll need to find a way to limit the number of townspeople he can use to hold the portal open for his god.\n"
 EventTriggerJournalRead.button1,Continue
-EventStartupGoalBranch.button1,Button1
 EventStartupGoalStopRitual.button1,Button1
 EventStartupGoalRescueBoy.button1,Button1
-EventTest.text,"Test mode\nClues trigger the doors"
 EventPlaceChapel2.button1,Button1
 EventPlaceChapelEscape.text,"\nAcross the room is a door to the outside. Place an explore token as indicated.\n"
 EventPlaceChapelEscape.button1,Continue
@@ -791,16 +680,10 @@ EventSearchDiningRoomFluxStabilizerAfterPuzzleBen.button1,Button1
 EventExploreFrontDoor.text,"\nYou grab and twist the knob but your hand just slides over it. No matter how you try, you cannot turn the knob. The window is so filthy that you cannot see through it.\n\nIf you were still worried about cleaning, this would be a lot of work.\n\nRemove this explore token.\n"
 EventPlaceFoyerSightFrontDoor.text,"\nThe front door looks old and disused. Place a sight token as indicated.\n"
 EventPlaceFoyerSightFrontDoor.button1,Continue
-EventPlaceFoyerExploreFrontdoor.button1,Continue
 EventExploreFrontDoor.button1,Continue
-EventPlaceFoyerExploreFrontdoor.text,"\nThe front door seems to be in good repair, but glass set into it is as filthy as that door off the driveway. Place an Explore token as indicated.\n"
-EventPlaceFoyerExploreCloset.button1,Continue
-EventExploreFoyerClosetOpen.text,|||\nAs you grab the knob, you hear something shift inside. When you pull back on the door, something thumps hard against it and knocks it lightly across your nose.  Take 1 injury ({agility} negates). A cloud of dust and a child’s small, red ball rolls out. You sneeze loudly. \n\nOnce the dust clears, you can see that it's a closet, filled to the top with junk. It looks like the foyer was "cleaned" years ago by moving all its trash into this closet. A broken oil can at the top of the pile teeters, slides down a 2"x4", and lands at your feet. You're startled. Take 1 horror ({will} negates). \n\nOn the floor next to the oil can is something that makes you feel a lot better. Take the {c:QItemBigGun} common item and remove this explore token.\n|||
 TokenTestBackdoorLocked.text,Test BackdoorLocked
 TokenTestBackdoorLocked.button1,Continue
 quest.authors_short,Daniel.
-EventSearchHall1RugJournal2.text,"\nUnder the box is a piece of paper that you reach down to grab. It is sprinkled with arcane symbols and is maybe instructions for... something. <i>Maybe it’s part of some ritual?</i> The paper reminds you that the people in this town have some funny beliefs.\n\nGain the {c:QItemEvidenceHall1} Unique Item and 1 {clue}. Then discard this Search token.\n"
-EventSearchHall1RugJournal2.button1,Continue
 UI0.uitext,fsdfsdfs
 UI0.text,sdfsdfsdf
 UI0.button1,Continue
@@ -3059,8 +2942,6 @@ EventOpenPortalExpr10.button1,
 EventOpenPortalExpr7.text,
 EventOpenPortalExpr7.button1,
 quest.UncleDavid,Uncle David
-EventPlaceDiningRoomStart.text,
-EventPlaceDiningRoomStart.button1,
 EventPlaceDiningRoomInit.text,
 EventPlaceDiningRoomInit.button1,
 EventPlaceDiningRoomFirstTimeInitializer.text,

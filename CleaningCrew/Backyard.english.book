@@ -19,7 +19,7 @@ BOOK Backyard ORDERED NO KEEP
 	
 		exploredBackyard = TRUE AFTER
 		ADD TileBackyard BEFORE
-		ADD TokenDoorBackyard
+		ADD TokenDoorBackyard!
 	END Place
 
 	PAGE Place2x4
@@ -43,7 +43,7 @@ BOOK Backyard ORDERED NO KEEP
 			Place a Search token as indicated.
 		"""
 	
-		ADD TokenSearchBackyard2x4
+		ADD TokenSearchBackyard2x4!
 		REMOVE TokenExploreBackyardViaDrivewaySight AFTER
 	END Place2x4
 	
@@ -71,7 +71,7 @@ BOOK Backyard ORDERED NO KEEP
 			Your friend who sent you will not be happy.
 		"""
 		
-		ADD TokenBackyardBenBefore, TokenExploreDiningRoomViaBackyard
+		ADD TokenBackyardBenBefore!, TokenExploreDiningRoomViaBackyard!
 	END PlaceBen
 
 	PAGE PlacePlant
@@ -83,7 +83,7 @@ BOOK Backyard ORDERED NO KEEP
 			Place a Search token as indicated.
 		"""
 		
-		ADD TokenSearchBackyardRandom
+		ADD TokenSearchBackyardRandom!
 		EXIT
 	END PlacePlant
 	
@@ -122,7 +122,7 @@ BOOK Backyard ORDERED NO KEEP
 			knock it over, and break it. Exposed in the dirt, you find
 			something. You see something in the rubble. Gain the
 			{c:QItemBackdoorRandom} Common Item. As you pick it up, a
-			shard from the pot draws blood; take one facdown Damage
+			shard from the pot draws blood; take one facedown Damage
 			({agility}) negates.
 			
 			Remove this Search token.

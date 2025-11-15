@@ -22,7 +22,7 @@ BOOK Hall2
 		"""
 		
 		REMOVE SightHall2ViaHall1, SightHall2ViaFoyer, SightHall2ViaStudy
-		ADD TileHall2
+		ADD TileHall2, TokenWallHall2!
 		
 		exploredHall2ViaHall1 = TRUE
 		
@@ -48,7 +48,7 @@ BOOK Hall2
 		"""
 
 		REMOVE SightHall2ViaHall1, SightHall2ViaFoyer, SightHall2ViaStudy
-		ADD TileHall2
+		ADD TileHall2, TokenWallHall2!
 		
 		exploreHall2ViaVoyer = TRUE
 		
@@ -72,7 +72,7 @@ BOOK Hall2
 		"""
 
 		REMOVE SightHall2ViaHall1, SightHall2ViaFoyer, SightHall2ViaStudy
-		ADD TileHall2
+		ADD TileHall2, TokenWallHall2!
 		
 		exploredHall2ViaStudy = TRUE
 	END
@@ -109,7 +109,7 @@ BOOK Hall2
 			Explore token as indicated.
 		"""
 		
-		ADD TokenExploreStudyViaHall2
+		ADD TokenExploreStudyViaHall2!
 		EXIT
 	END PlaceHall2ExploreStudy
 	

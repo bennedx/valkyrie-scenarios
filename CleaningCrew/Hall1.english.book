@@ -36,7 +36,7 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 						
 		REMOVE TokenExploreHallway1ViaDiningRoom
 		
-		ADD TileHall1, TokenDoorHall1, TokenWallHall1
+		ADD TileHall1, TokenDoorHall1!, TokenWallHall1!
 	END PlaceHall1
 	
 	PAGE PlaceHall1Gallery
@@ -45,7 +45,7 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 			indicated.
 		"""
 		
-		ADD TokenExploreGalleryViaHall1
+		ADD TokenExploreGalleryViaHall1!
 	END PlaceHall1Gallery
 	
 	PAGE PlaceHall1Painting
@@ -60,7 +60,7 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 			lightly glowing, something that suddenly seems more troubling.
 		"""
 		
-		ADD TokenSearchHall1Picture
+		ADD TokenSearchHall1Picture!
 	END PlaceHall1Painting
 	
 	PAGE PlaceHall1Evidence
@@ -73,7 +73,7 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 			Place a Search token as indicated.
 		"""
 		
-		ADD TokenSearchHall1Rug
+		ADD TokenSearchHall1Rug!
 	END PlaceHall1Evidence
 	
 	PAGE PlaceHall1Sight
@@ -84,7 +84,7 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 			You feel like you are being watched.
 		"""
 		
-		ADD TokenSightHall2ViaHall1
+		ADD TokenSightHall2ViaHall1!
 		
 		IF foundJournal THEN EXIT
 	END PlaceHall1Sight
@@ -175,7 +175,7 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 			({will} negates).
 		"""
 		
-		ADD TokenSarah
+		ADD TokenSarah!
 	END SearchPainting3
 	
 	

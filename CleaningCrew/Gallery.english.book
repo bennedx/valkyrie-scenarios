@@ -1,40 +1,63 @@
 LANGUAGE English
 
 BOOK Gallery ORDERED NO KEEP LOOPED
-	PAGE PlaceGallery
-		TRIGGERED BY @PlaceGallery
+
+	PAGE ExploreGalleryViaHall1
+		TRIGGERED BY @ExploreGalleryViaHall1
+		
+		NO TEXT
+		
+		exploredGalleryViaHall1 = TRUE
+		exploredGalleryViaFoyer = FALSE
+		GOTO ExploreGallery
+	END ExploreGalleryViaHall1
 	
+	PAGE ExploreGalleryViaFoyer
+		TRIGGERED BY @ExploreGalleryViaFoyer
+		
+		NO TEXT
+		
+		exploredGalleryViaFoyer = TRUE
+		exploredGalleryViaHall1  = FALSE
+		GOTO ExploreGallery
+	END ExploreGalleryViaFoyer
+
+	PAGE ExploreGallery
+		PROLOG """
+			You approach the door. It has a small brass plaque that reads
+			<<Gallery.>> The door handle catches your eye because light is
+			glinting off it. Unlike everything else here, it is clean...
+			like it has been used recently.
+		"""
+		
 		TEXT """
-			As the door opens, dust slowly drifts to the floor. Lots of
+			As the door opens, dust drifts slowly to the floor. Lots of
 			it. If you were still concerned about cleaning, you'd be horrified
 			at the amount of work ahead of you.
 			
-			The room behind the door once lived up its expectations. The room
-			is--or was--stately, with high ceilings, beautiful
-			paintings, and furniture and rugs that look both rich and
+			The room behind the door is--or was--stately, with high ceilings,
+			beautiful paintings, and furniture and rugs that look both rich and
 			comfortable. Dim light from the windows reflects off the dust,
-			giving the room an unearthly quality. The glowing dust make the
+			giving the room an unearthly quality. The glowing dust makes the
 			room feel more rundown that it actually is.
 			
-			Place the {c:TileGallery} tile, then remove all
+			Place the {c:TileGallery} tile, then discard all
 			Explore tokens leading to this room.
 		"""
-	
-		REMOVE TokenExploreGalleryViaHall1 AFTER
-		REMOVE TokenExploreGalleryViaFoyer AFTER
-		ADD TileFoyer
-		exploredGallery = TRUE
-	END PlaceGallery
+		
+		ADD TileGallery
+		REMOVE TokenExploreGalleryViaHall1, TokenExploreGalleryViaFoyer
+	END ExploreGalleryViaFoyer
 
-	PAGE PlaceGalleryViaHall1
-		IF exploredGalleryViaHall1 THEN PAGE IS VISIBLE
+	PAGE PlaceExploreFoyerViaGallery
+		IF NOT exploredFoyer THEN PAGE IS VISIBLE
 
 		TEXT """
 			Across the room is another door. Place an Explore token as
 			indicated.
 		"""
 		
-		ADD TokenExploreFoyerViaGallery
+		ADD TokenExploreFoyerViaGallery!
 	END PlaceGalleryViaHall1
 
 	PAGE PlaceGalleryCoatRoom
@@ -43,7 +66,7 @@ BOOK Gallery ORDERED NO KEEP LOOPED
 			token as indicated.
 		"""
 		
-		ADD TokenExploreCoatRoom
+		ADD TokenExploreCoatRoom!
 	END PlaceGalleryCoatRoom
 		
 	PAGE PlaceGalleryDVM
@@ -53,9 +76,7 @@ BOOK Gallery ORDERED NO KEEP LOOPED
 			between them. Place a Search token as indicated.
 		"""
 		
-		ADD TokenSearchGalleryDVM
-		TRIGGER @MoveAfterExplore
-		EXIT
+		ADD TokenSearchGalleryDVM!
 	END PlaceGalleryDVM
 
 	PAGE PlaceCoatRoom
@@ -71,7 +92,7 @@ BOOK Gallery ORDERED NO KEEP LOOPED
 		"""
 		
 		REMOVE TokenExploreCoatRoom
-		ADD TokenSearchCoatRoomEvidence
+		ADD TokenSearchCoatRoomEvidence!
 		TRIGGER @MoveAfterExplore
 		EXIT
 	END PlaceCoatRoom
@@ -97,6 +118,7 @@ BOOK Gallery ORDERED NO KEEP LOOPED
 	
 	PAGE SearchCoatRoomEvidence
 		TRIGGERED BY @SearchCoatRoomEvidence
+		
 		PROLOG "
 			This box is half-full of things you might find in a coat room:
 			brushes, shoe polish, and...

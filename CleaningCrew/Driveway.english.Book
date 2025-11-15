@@ -34,7 +34,7 @@ BOOK Driveway ORDERED NO KEEP
 			Place an Explore token as indicated.
 		"""
 	
-		ADD TokenExploreKitchenViaDriveway
+		ADD TokenExploreKitchenViaDriveway!
 	END PlaceExploreKitchenViaDriveway
 	
 	PAGE PlaceGate
@@ -52,7 +52,7 @@ BOOK Driveway ORDERED NO KEEP
 			your eye. Place a Search token as indicated.	
 		"""
 		
-		ADD TokenSearchDrivewayGardenTool
+		ADD TokenSearchDrivewayGardenTool!
 		initialized = TRUE
 	END PlaceGardenTool
 	
@@ -194,7 +194,7 @@ BOOK Driveway ORDERED NO KEEP
 		"""
 		
 		exploredBackyardNicely = FALSE
-		ADD TokenDriveWayBen
+		ADD TokenDriveWayBen!
 		REMOVE TokenExploreBackyardViaDriveway
 	END ExploreNotNice
 	
@@ -224,7 +224,7 @@ BOOK Driveway ORDERED NO KEEP
 		TEXT """
 			A moment later, you hear Benjamin yelp. After a beat,
 			you look back... as you do you see a book lying on
-			the ground where Benajamin had been standing. Place
+			the ground where Benjamin had been standing. Place
 			a Search token where indicated.
 			
 			You turn back to the gate, take a breath and...
@@ -232,7 +232,7 @@ BOOK Driveway ORDERED NO KEEP
 			Place a Sight token as indicated.
 		"""
 		
-		ADD TokenExploreBackyardViaDrivewaySight
+		ADD TokenExploreBackyardViaDrivewaySight!
 		EXIT
 	END ExploreNotNiceJournal
 	
@@ -251,7 +251,7 @@ BOOK Driveway ORDERED NO KEEP
 			Place the Purple Man token as indicated.
 		"""
 		
-		ADD TokenDrivewayBen
+		ADD TokenDrivewayBen!
 		REMOVE TokenExploreBackyardViaDriveway AFTER
 		exploredBackyardNicely = TRUE
 	END ExploreNice
@@ -281,7 +281,7 @@ BOOK Driveway ORDERED NO KEEP
 			indicated.
 		"""
 	
-		ADD TokenSearchDrivewayJournal
+		ADD TokenSearchDrivewayJournal!
 		EXIT
 	END ExploreJournal
 		

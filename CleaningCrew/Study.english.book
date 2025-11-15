@@ -1,0 +1,84 @@
+LANGUAGE English
+
+BOOK Study
+	PAGE ExploreStudyViaHall2
+		TRIGGERED BY @ExploreStudyViaHall2
+		NO TEXT
+		
+		exploredStudyViaHall2 = TRUE
+		exploredStudyViaFoyer = FALSE
+		GOTO ExploreStudy
+	END ExploreStudyViaHall2
+
+	PAGE ExploreStudyViaFoyer
+		TRIGGERED BY @ExploreStudyViaFoyer
+		NO TEXT
+		
+		exploredStudyViaHall2 = TRUE
+		exploredStudyViaFoyer = FALSE	
+		GOTO ExploreStudy		
+	END ExploreStudyViaFoyer
+
+	PAGE ExploreStudy
+		PROLOG """
+			A small plaque on the door reads <<Study.>>
+		"""
+		
+		TEXT """
+			The door opens smoothly, like it has been used recently. Behind it,
+			you find a well-appointed study.
+
+			Discard all Explore tokens leading to this room. Place the 
+			{c:TileStudy} tile and a door as indicated.
+		"""
+	
+		exploredStudy = TRUE AFTER
+	END ExploreStudy
+
+	PAGE PlaceExploreHall2
+		IF exploredHall2 != exploredFoyer THEN PAGE IS VISIBLE
+		
+		TEXT """
+			A door next to you leads farther into the house. Place an Explore
+			token as indicated.
+		"""
+		
+		IF NOT exploredHall2 ADD TokenExploreHall2ViaStudy
+		IF NOT exploredFoyer ADD TokenExploreFoyerViaStudy
+	END PlaceExploreHall2
+
+	PAGE PlaceExploreLibrary
+		TEXT """
+			A door in the far corner has a small brass plaque that reads
+			<<Library.>> Place an Explore token as indicated.
+		"""
+		
+		ADD TokenExploreLibraryViaStudy!
+	END PlaceExploreLibrary
+	
+	PAGE PlaceHealingStone
+		TEXT """
+			A large oak desk sits in the middle of the room. A dead plant and a
+			mess of papers covers it. Place a Search token as indicated.
+		"""
+		
+		ADD TokenStudyHealingStone!
+	PlaceHealingStone
+	
+	PAGE SearchHealingStone
+		TRIGGERED BY @SearchStudyHealingStone
+		
+		PROLOG """
+			The desk is covered in loose papers, books, and what look like
+			several ancient artifacts.
+		"""
+			
+		TEXT """
+			You find an ugly stone carving among the detritus on the desk.
+			You aren't sure why, but you must have it. Gain the
+			{c:QItemHealingStone} Unique Item, then discard this Search token.
+		"""
+		
+		foundHealingStone = TRUE AFTER
+		EXIT
+END Study

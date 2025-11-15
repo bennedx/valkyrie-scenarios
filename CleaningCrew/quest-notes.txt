@@ -119,6 +119,30 @@ Compiler
 -	if there is a visibility expression on a page, default to NOT VISIBLE; otherwise, default to VISIBLE (does it already work this way?)
 -	allow settings (PASS FAIL CANCEL CONTINUE) in pages
 -	PAGE name NO TEXT support
+-	add support for token highlighting when an "!" it put after its name on ADD or REMOVE
+-	change ADD/REMOVE to PLACE/DISCARD
+-	add linting tool
+
+-	add tool allows translations to be done without full structure, like
+
+		MACROS
+			... = ...-
+		
+
+
+		BOOK Hall2
+			PAGE PlaceHall2
+				PROLOG "..."
+				BUTTON "..." AFTER "..."
+				TEXT "..."
+			[no END needed]
+		]
+
+		The "LANGUAGE name" directive changes to "LANGUAGE FILE name"
+
+		add tool that generates a set of files for a language by extracting the names from the .book files
+		Call these, like, Hall2.spanish.book
+
 
 ClosePortal Book:  make sure Step3 is organized correctly with repeats
 

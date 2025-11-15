@@ -1,0 +1,200 @@
+LANGUAGE English
+
+BOOK Foyer
+	PAGE ExploreFoyerViaGallery
+		TRIGGERED BY @ExploreFoyerViaGallery
+		
+		PROLOG """
+			Up close, you can see how beautiful the door is:  ornate carvings
+			and beautiful hardware. This door has a small plaque that reads
+			<<Foyer.>>
+		"""
+		BUTTON "Explore"
+		
+		NO TEXT
+		
+		ADD TileFoyer
+		
+		exploredFoyerViaGallery = TRUE AFTER
+		GOTO PlaceFoyer
+	END ExploreFoyerViaGallery
+	
+	PAGE ExploreFoyerViaHall2
+		TRIGGERED BY @ExploreFoyerViaHall2
+
+		
+		PROLOG "This door has a small brass plaque that reads <<Foyer.>>"
+		BUTTON "Explore"
+		
+		NO TEXT
+		
+		ADD TileFoyer
+
+		exploredFoyerViaHall2 = TRUE AFTER
+		GOTO PlaceFoyer
+	END ExploreFoyerViaHall2
+	
+	PAGE ExploreFoyerViaStudy
+		TRIGGERED BY @ExploreFoyerViaStudy
+		
+		PROLOG "This door leads farther into the house."
+		BUTTON "Explore"
+		
+		NO TEXT
+		
+		ADD TileFoyer
+
+		exploredFoyerViaStudy = TRUE AFTER
+		GOTO PlaceFoyer
+	END ExploreFoyerViaStudy
+	
+	PAGE PlaceFoyer
+		TEXT """
+			The foyer is a large, nearly empty space with a front door, stairs,
+			and other doors leading to various parts of the house. Place the
+			{c:TileFoyer} tile then remove all Explore tokens leading to this
+			room.
+		"""
+		
+		REMOVE TokenExploreFoyerViaGallery, TokenExploreFoyerViaHall2, TokenExploreFoyerViaStudy
+		ADD TileFoyer
+		exploredFoyer = TRUE
+	END PlaceFoyer
+
+	PAGE PlaceFoyerExploreGallery
+		IF NOT exploredGallery THEN PAGE IS VISIBLE
+		
+		// assume ViaHall2
+		TEXT """
+			To your right, a door leads farther into the house. Place an
+			Explore token as indicated.
+		"""
+		
+		IF exploredFoyerViaStudy THEN TEXT """
+			Across the room, a door leads farther into the house. Place
+			an Explore token as indicated.
+		"""
+		
+		ADD TokenExploreGalleryViaFoyer!
+	END PlaceFoyerExploreGallery
+
+	PAGE PlaceFoyerExploreStudy
+		IF NOT exploredStudy THEN PAGE IS VISIBLE
+		
+		// Assume ViaHall2
+		TEXT """
+			Down and up the stairs is another door leading farther into the
+			house. Place an Explore token as indicated.
+		"""
+		
+		IF exploredFoyerViaGallery THEN TEXT """
+			Across the room and up some stairs, a door leads father into the
+			house. Place an Explore token as indicated.
+		"""
+		
+		ADD TokenExploreStudyViaFoyer!
+	END PlaceFoyerExploreStudy
+	
+	PAGE PlaceFoyerExploreHall2
+		IF NOT exploredHall2 THEN PAGE IS VISIBLE
+		
+		// assume ViaGallery
+		TEXT """
+			Up the stairs and to your left, a door leads farther into the
+			house. Place an Explore token as indicated.
+		"""
+		
+		IF exploredFoyerViaStudy THEN TEXT """
+			Down and up the stairs to your right is another door. Place an
+			Explore token as indicated.
+		"""
+		
+		ADD TokenExploreHall2ViaFoyer
+	END PlaceFoyerExploreHall2
+	
+	PAGE PlaceFoyerCandles
+	
+		// assume via Hall2
+		TEXT """
+			Next to you is a painting that catches your eye. Place a Search
+			token as indicated.
+		"""
+		
+		IF NOT exploredFoyerViaHall2 THEN TEXT """
+			Next to a door across the room, a painting catches your eye. Place
+			a Search token as indicated.
+		"""
+		
+		ADD TokenFoyerSearchCandles!
+	END PlaceFoyerCandles
+	
+	PAGE PlaceFoyerSearchRandom
+		TEXT """
+			A small cabinet with drawers and little compartments sits next to
+			the front door. Place a Search token as indicated.
+		"""
+		
+		ADD TokenSearchFoyerRandom!
+	END PlaceFoyerSearchRandom
+	
+	PAGE PlaceFoyerExploreFrontDoor
+		TEXT """
+			The front door seems to be in good repair, but the glass set into
+			it is as filthy as that door off the driveway. Place an Explore
+			token as indicated.
+		"""
+		
+		ADD TokenFoyerExploreFrontDoor!
+		TRIGGER @MoveAfterExplore
+		EXIT
+	END PlaceFoyerExploreFrontDoor
+	
+
+	PAGE SearchRandom
+		TRIGGERED BY @SearchFoyerRandom
+		
+		PROLOG """
+			An old cabinet with a set of drawers sits next to the door. It
+			looks unlocked.
+		"""
+		BUTTON "Search"
+		
+		TEXT """
+			You dig through the various compartments and eventually find
+			something useful. Gain the {c:QItemFoyerRandom} Common Item, then
+			discard this Search token.
+		"""
+		
+		EXIT
+	PAGE SearchRandom
+	
+	PAGE SearchSpell
+		TRIGGERRED BY @SearchFoyerSpell
+		
+		PROLOG "The table has several drawers."
+		BUTTON "Search"
+		
+		TEXT """
+			You go through the drawers one-by-one, finding little of interest.
+			Finally, in the last drawer, you find a small pamphlet with arcane 
+			symbols and odd poetry. Gain the {c:QItemFoyerSpell} spell, then
+			discard this Search token.
+		"""
+		
+		EXIT
+	END SearchSpell
+	
+	PAGE SearchCloset
+		TRIGGERED BY @SearchFoyerCloset
+		
+		PROLOG """
+			Like most of the doors in this house, this one is ornate... and
+			covered in dust.
+		"""
+		
+		TEXT """
+		"""
+		
+		EXIT
+	END SearchCloset
+END Foyer
