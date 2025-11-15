@@ -38,20 +38,15 @@ TokenSearchKitchenCutlery.text,"\nOn closer inspection, the pile of cutlery is d
 TokenExploreKitchenViaDriveway.button1,{action} Open door
 TokenSearchHall1Painting.button1,Continue
 TokenSarah.button1,{action} Talk to Sarah
-TokenExploreLibraryViaStudy.button1,{action} Explore
-TokenSearchLibraryKey.text,"\nIt looks like the man dropped his key ring.\n"
 SpawnSpawnCultist1.button1,Continue
 TokenSearchChapelRitualComponents.text,"\nYou walk over to the altar and see a large book set out on it.\n"
-SpawnLibraryCultist.text,"\nWhen you walk in, a man is seated across from the door. He is wearing robes, like someone from a religious order. He looks familiar... maybe one of the townspeople who welcomed you a few weeks ago. Startled, the man gets up, scowls, then moves toward you aggressively. Spawn a cultist as indicated.\n"
-SpawnLibraryCultist.button1,Continue
 CustomMonsterLibraryCultist.monstername,Cultist
 CustomMonsterLibraryCultist.info,-
-TokenSearchLibraryBookcase.text,"\nThe books seem like a hodgepodge of local history, religion, and dark magic. After killing that man, you’re understandably upset. You came here to clean this house and now you’re in way over your head--murder, ghosts, magic. As you ponder this, you see a book with a bright, white spine that stands out among the other, darker books.\n"
+TokenSearchLibraryBookcase.text,"\n\n"
 TokenSearchLibraryBookcase.button1,{action} Search
-TokenExploreLibraryBookcase.text,"\nThere is an elaborate lock on the door behind the bookcase; it has arcane markings, ones that you recognize from the spine of one of the books. An investigator with a heavy weapon might be able to bust through the door; otherwise, maybe the lock could be picked?\n"
-TokenExploreLibraryBookcase.button1,Tap to attempt the puzzle using {lore}
-TokenExploreLibraryBookcase.button2,Smash the door with a heavy weapon
-TokenExploreLibraryBookcase.button3,Cancel
+TokenExploreChapelViaLibrary.button1,Tap to attempt the puzzle using {lore}
+TokenExploreChapelViaLibrary.button2,Smash the door with a heavy weapon
+TokenExploreChapelViaLibrary.button3,Cancel
 PuzzleExploreLibraryBookcase.button1,Got it!
 TokenSearchChapelWhiskey.text,"\nThere’s a liquor bottle here. Someone has picked at the edges of the label. It’s about half-full.\n"
 TokenSearchChapelWhiskey.button1,{action} Search
@@ -198,9 +193,7 @@ TokenSearchStudyHealingStone.text,"\nThe desk is covered in loose papers, books,
 TokenExploreStudyViaFoyer.button1,{action} Explore
 TokenDoorStudy.text,"\nThis door leads farther into the house.\n"
 TokenWallLibrary.button1,Continue
-TokenSearchLibraryKey.button1,{action} Pick up keys
 TokenExploreStudyViaFoyer.text,|||\nA small plaque on the door reads "Study."\n|||
-TokenExploreLibraryViaStudy.text,|||\nThis door has a small brass plaque that reads "Library."\n|||
 TokenTestPlaceDriveway.button1,Test
 TokenSearchDrivewayGardenTool.button1,{action} Search
 TokenSearchDrivewayJournal.button1,{action} Search
@@ -381,20 +374,8 @@ EventInteractSarahSpeaks1.text,|||\n"I don’t remember much about it. There was
 EventMythosRitualRestrained.button1,Continue
 EventMythosRitualRestrained.text,"\nThe closing ritual is in progress. {c:EventChosenInvestigator} takes a Restrained card.\n"
 EventInteractSarahSpeaks1.button1,Continue
-EventPlaceLibrary.text,"\nThe door opens and a bit of fresh air surprises you. A curtain flutters as a cracked window lets in a breeze. Place a wall as indicated, then remove this Explore token.\n"
-EventPlaceLibrary.button1,Continue
-EventSearchLibraryKey.text,"\nYou reach down to pick up the keys. You’re impressed by the number and variety. Some of the keys have strange symbols on their bows while others have beautiful and intricate blades. You pocket them and wonder if you’ll need them around the house. Gain the {c:QItemKey} Unique Item, then discard this Search token.\n"
-EventPlaceLibraryAfterCultist.button1,Continue
 EventPlaceChapelExploreCryptWithNoKey.text,"\nA small wooden door leads out of the room to the right. Place an Explore token as indicated.\n"
-EventSearchLibraryBook.text,"\nYou reach up to get the book but it doesn’t move. You reach directly in front of you and try another and it comes right out. You decide to try a little harder ({strength}).\n"
-EventSearchLibraryBook.button1,Continue
-EventSearchLibraryBook.button2,Fail
-EventSearchLibraryBookPass.text,"\nThe book rains dust onto you when it finally comes loose. It still doesn’t come out all the way, but you realize it is part of a lock for a secret door. Remove this Search token.\n"
-EventSearchLibraryBookPass.button1,Continue
-EventSearchLibraryBookFail.text,"\nIt just won’t budge. Maybe if you try a little harder.\n"
-EventSearchLibraryBookFail.button1,Continue
-EventSearchLibraryBookcaseExplore.text,"\nYou pull on the bookcase and it swings out with a creak. Behind it is a door with an elaborate lock. What was old Mr Smythe up to? You’re here to clean this place. Do you really want to keep going?\n\nPlace trap door and Explore tokens as indicated.\n"
-EventSearchLibraryBookcaseExplore.button1,Continue
+TokenExploreChapelViaLibrary.text,"\nThere is an elaborate lock on the door behind the bookcase; it has arcane markings, ones that you recognize from the spine of one of the books. An investigator with a heavy weapon might be able to bust through the door; otherwise, maybe the lock could be picked?\n"
 EventExploreLibraryBookcaseLorePass.text,"\nAfter much fiddling, the lock springs loose and the door opens.\n"
 EventExploreLibraryBookcaseLorePass.button1,Continue
 EventPlaceChapel.button1,Continue
@@ -425,7 +406,6 @@ EventGameDoneWin.button1,Button1
 EventSearchBasementTrapdoor.text,"\nAs you dig through the junk, you realize it is hiding something. You sweep it away and find a door under it. Remove this Search token and the wall.\n"
 EventMythosHealingStoneYesEarly.text,"\nThe ugly stone carving in your pocket grows warm and begins to hum quietly. When you take it out of your pocket, you suddenly feel more hopeful.\n\nThe investigator who holds the {c:QItemHealingStone} may do one of the following.\n\n1. If you have no Damage or Horror, improve 1 skill, become focused, or gain 1 {clue}.\n2. Turn 1 Damage or Horror facedown\n3. Discard 1 facedown Damage or Horror\n"
 EventInvestigatorTransportStart.button1,Button1
-EventPlaceLibraryAfterCultist.text,"\nThe man in robes lies at your feet; blood pools on the floor and soaks into the rug. Breathing hard and wondering what just happened, you chuckle darkly at how the mess here is getting worse.\n\nWhen the man got up earlier, something fell out of his pocket. Place a Search token as indicated.\n"
 EventExploreCaveViaDungeonCaveOpen.text,"\nYou push the door open. Remove this Explore token.\n"
 EventPlaceAltarPortal.text,"\nA boy floats in the air. He is surrounded by a kaleidoscope of color that shimmers like oil on water. You realize that he is the portal. He does not speak or move; it is clear that fear, pain, and arcane power have overwhelmed and paralyzed him.\n\nPlace the Orange Boy token as indicated; this is both the portal and {c:CustomMonsterDavidSmythe}’s son.\n"
 EventPlaceCryptElderSignPendant.button1,Continue
@@ -486,8 +466,6 @@ EventMythosRitualStart.button1,Button1
 EventKillDavidSmythe.button1,Continue
 EventKillDavidSmythe.text,|||\n{c:CustomMonsterDavidSmythe} gets a look of surprise as you make the killing blow. He looks at you, then looks back at the portal one last time before he dies. You look at the portal and can feel whatever is on the other side getting closer. Sarah says, "He’s dead now but the portal is open. You don’t want to see what he summoned. You must perform the counter ritual. Use the {c:QItemDVM} to perform it."\n\nAn investigator with the {c:QItemDVM} can interact with it in the app.\n|||
 EventGameOverStart.button1,Button1
-EventPlaceLibraryAfterCultistSearchBookcase.text,"\nA bookcase on the far wall is filled from floor to ceiling with books. Maybe one of them can help you understand what is happening? Place a Search token as indicated.\n"
-EventPlaceLibraryAfterCultistSearchBookcase.button1,Continue
 EventKillChapelRiot.text,"\nYou kill the lot of them, leaving their bodies scattered on the floor.\n\nThe priest is still clutching the knife he tried to kill you with. You reach down to pry it from him. Gain the {c:QItemRitualDagger} Common Item.\n\nYou should get out of here before someone else shows up.\n"
 EventKillChapelRiot.button1,Continue
 EventPlaceChapelExploreCryptWithKey.text,"A small wooden door leads out of the room to the right. Place an Explore token as indicated.\n"
@@ -578,7 +556,6 @@ EventPlaceBasementConditionConfirm.button2,No
 EventPlaceBasementConditionConfirm.text,"\nDo you have a light source?\n"
 EventPlaceBasementConditionConfirm.button1,Yes
 EventPlaceStudyExploreHall2Yes.button1,Button1
-EventSearchLibraryKey.button1,Continue
 EventExploreChapelViaCrypt.text,"\nYou carefully fit the key. It sticks at first, but then starts to turn. Then sticks. It will go no farther. With some effort, you wrestle the key from the lock and put it back in your pocket. Remove this Explore token.\n"
 EventExploreBackdoorFailSearchJournal.text,"\nBenjamin smiles again and walks through the now-opened gate. As soon as he is out of sight, you hear a loud crash and cursing.\n\nRemove the Purple Man token.\n\nIt looks like Benjamin dropped a book of some kind where he was introducing himself. Place a Search token as indicated.\n"
 EventExploreDiningRoomViaBackdoor.text,|||\n"Ah, here they are," Benjamin exclaims, waving his keys. "Let’s go in."\n|||

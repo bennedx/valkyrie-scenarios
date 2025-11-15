@@ -122,7 +122,9 @@ Compiler
 -	add support for token highlighting when an "!" it put after its name on ADD or REMOVE
 -	change ADD/REMOVE to PLACE/DISCARD
 -	add linting tool
-
+-	add SPAWN support:  create an event as part of the book that is triggered and goes to the SpawnXxx
+		No text is needed anywhere because, after the spawn, flow returns to where we triggered
+		
 -	add tool allows translations to be done without full structure, like
 
 		MACROS
