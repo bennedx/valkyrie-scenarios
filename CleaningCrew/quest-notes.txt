@@ -111,21 +111,14 @@ x		Implement the RNG;
 Compiler
 -	support RANDOM pages; only works for ORDERED NO KEEP
 -	test #ExprRead, incl GetOrCreate()
--	add include "" support
--	add automatic triggered-by to every book, named @<book-name>; when set,
-		it starts the book at Start. This better supports the event-driven
-		approach
--	adapt BNF to handle """..."...""" with grace
 -	if there is a visibility expression on a page, default to NOT VISIBLE; otherwise, default to VISIBLE (does it already work this way?)
--	allow settings (PASS FAIL CANCEL CONTINUE) in pages
 -	PAGE name NO TEXT support
 -	add support for token highlighting when an "!" it put after its name on ADD or REMOVE
--	change ADD/REMOVE to PLACE/DISCARD
 -	add linting tool
 -	add SPAWN support:  create an event as part of the book that is triggered and goes to the SpawnXxx
 		No text is needed anywhere because, after the spawn, flow returns to where we triggered
 		
--	add tool allows translations to be done without full structure, like
+-	add tool THAT allows translations to be done without full structure, like
 
 		MACROS
 			... = ...-
@@ -144,6 +137,8 @@ Compiler
 
 		add tool that generates a set of files for a language by extracting the names from the .book files
 		Call these, like, Hall2.spanish.book
+
+-	Add {Macro} support to strings
 
 
 ClosePortal Book:  make sure Step3 is organized correctly with repeats
