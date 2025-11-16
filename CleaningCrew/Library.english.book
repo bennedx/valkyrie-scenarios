@@ -8,23 +8,24 @@ BOOK Library
 		PROLOG "This door has a small brass plaque that reads "Library."
 		BUTTON "Explore"
 		
+		ADD TokenWallLibrary
+		REMOVE TokenExploreLibraryViaStudy
+
 		TEXT """
 			The door opens and a bit of fresh air surprises you. You feel a
 			draft, but cannot tell where it is coming from. Place a wall as
 			indicated, then discard this Explore token.
 		"""
 		
-		ADD TokenWallLibrary
-		REMOVE TokenExploreLibraryViaStudy
 		
-		exploredLibary = TRUE AFTER
-		exploredLibraryViaStudy = TRUE AFTER
-		$mythosLibrary = TRUE AFTER
-		wandererInStudy = FALSE AFTER
-	END ExploreLibrary
+		exploredLibary = TRUE
+		exploredLibraryViaStudy = TRUE
+		$mythosLibrary = TRUE 
+		wandererInStudy = FALSE
+	END PAGE ExploreLibrary
 
 	PAGE SpawnCultist
-		SPAWN SpawnLibraryCultist BEFORE
+		SPAWN SpawnLibraryCultist
 		
 		TEXT """
 			When you walk in, a man is seated across from the door. He is
@@ -33,11 +34,14 @@ BOOK Library
 			weeks ago. Startled, the man gets up, scowls, then moves toward you
 			aggressively. Spawn a cultist as indicated.
 		"""
-	END SpawnCultist
+		EXIT
+	END PAGE SpawnCultist
 	
 	PAGE PlaceKey
 		TRIGGERED BY DefeatedCustomMonsterLibraryCultist
 		
+		ADD TokenSearchLibraryKey!
+
 		TEXT """
 			The man in robes lies at your feet; blood pools on the floor and
 			soaks into the rug. Breathing hard and wondering what just
@@ -47,22 +51,25 @@ BOOK Library
 			Place a Search token as indicated.
 		"""
 		
-		ADD TokenSearchLibraryKey!
-	END PlaceLibraryKey
+	END PAGE PlaceLibraryKey
 	
 	PAGE PlaceSearchBookCase
+		ADD TokenSearchLibraryBookcase!
+
 		TEXT """
 			A bookcase on the far wall is filled from floor to ceiling with
 			books. Maybe one of them can help you understand what is happening?
 			Place a Search token as indicated.
 		"""
 		
-		ADD TokenSearchLibraryBookcase!
 		EXIT
-	END PlaceSearchBookCase
+	END PAGE PlaceSearchBookCase
 	
 	PAGE SearchKey
 		TRIGGERED BY @SearchLibraryKey
+		
+		ADD QItemKey
+		REMOVE TokenSearchLibraryKey
 		
 		PROLOG "It looks like the man dropped his key ring."
 		BUTTON "Pick up keys"
@@ -75,11 +82,8 @@ BOOK Library
 			then discard this Search token.
 		"""
 		
-		ADD QItemKey
-		REMOVE TokenSearchLibraryKey
-		
-		foundKey = TRUE AFTER
-	END SearchKey
+		foundKey = TRUE
+	END PAGE SearchKey
 	
 	PAGE SearchBookcase
 		TRIGGERED BY @SearchLibraryBookcase WHEN NOT READ
@@ -102,12 +106,12 @@ BOOK Library
 		TEST
 			ON PASS GOTO SearchBookcasePass
 			ON FAIL DO NOTHING
-	PAGE SearchBookcase
+	END PAGE SearchBookcase
 	
 	PAGE SearchBookcaseFail
 		TEXT "It just won't budge. Maybe if you try a little harder."
 		EXIT
-	END SearchBookcaseFail
+	END PAGE SearchBookcaseFail
 	
 	PAGE SearchBookcaseAgain
 		TRIGGERED BY @SearchLibraryBookcase WHEN SearchBookcase IS READ
@@ -122,20 +126,22 @@ BOOK Library
 		TEST
 			ON PASS DO NOTHING
 			ON FAIL GOTO SearchBookcaseFail
-	END SearchBookcaseAgain
+	END PAGE SearchBookcaseAgain
 	
 	PAGE SearchBookcasePass
-	
+		REMOVE TokenSearchLibraryBookcase
+
 		TEXT """
 			The book rains dust onto you when it finally comes loose. It still
 			doesn't come out all the way, but you realize it is part of a lock
 			for a secret door. Discard this Search token.
 		"""
 		
-		REMOVE TokenSearchLibraryBookcase
-	END SearchBookcasePass
+	END PAGE SearchBookcasePass
 		
 	PAGE PlaceBookcaseExplore
+		ADD TokenLibraryTrapDoor, TokenExploreLibraryBookcase
+
 		TEXT """
 			You pull on the bookcase and it swings out with a creak. Behind it
 			is a door with an elaborate lock. What was old Mr Smythe up to?
@@ -143,9 +149,8 @@ BOOK Library
 			Place trap door and Explore tokens as indicated.
 		"""
 	
-		ADD TokenLibraryTrapDoor, TokenExploreLibraryBookcase
 		EXIT
-	END PlaceBookcaseExplore
+	END PAGE PlaceBookcaseExplore
 	
 	PAGE ExploreChapelViaBookcase
 		TRIGGERED BY @ExploreChapelViaBookcase WHEN UNREAD
@@ -156,14 +161,23 @@ BOOK Library
 			the books. An investigator with a heavy weapon might be able to
 			bust through the door; otherwise, maybe the lock could be picked?
 		"""
-		BUTTON "Tap to attempt the puzzle using {lore}" DO NOTHING
-		BUTTON "Smash the door with a heavy weapon" GOTO Smash
-	END ExploreChapelViaBookcase
+		
+		PASS "Tap to attempt the puzzle using {lore}"
+		FAIL "Smash the door with a heavy weapon"
+		
+		TEST
+			ON PASS DO NOTHING
+			ON FAIL GOTO ExploreChapleViaBookcaseSmash
+
+		FREE
+		
+		NO TEXT
+	END PAGE ExploreChapelViaBookcase
+	
+	PAGE ExploreChapelViaBookcasePuzzle
 	
 	
-	
-	
-	PAGE Smash
+	PAGE ExploreChapleViaBookcaseSmash
 		TEXT """
 			You raise your heavy weapon and swing. Roll 1 fewer die if you have
 			suffered 3 or more Damage. ({strength};2) Deal damage equal to the
@@ -173,9 +187,9 @@ BOOK Library
 		TEST QUOTA 5
 			ON PASS GOTO SmashPass
 			ON FAIL GOTO SmashFail
-	END Smash
+	END PAGE Smash
 	
 	PAGE SmashFail
 		
 	
-END Library	
+END BOOK Library	

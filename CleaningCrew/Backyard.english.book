@@ -6,8 +6,10 @@ BOOK Backyard ORDERED NO KEEP
 		TRIGGERED BY @PlaceBackyard
 		
 		PROLOG "You can see the huge mess through the gate."
-		
+		BUTTON "Explore"
 		FREE
+		
+		ADD TileBackyard, TokenDoorBackyard!
 		
 		TEXT """
 			Boxes, broken furniture, and other trash litter the yard.
@@ -17,12 +19,12 @@ BOOK Backyard ORDERED NO KEEP
 			Place the {c:TileBackyard} tile and door as indicated.
 		"""
 	
-		exploredBackyard = TRUE AFTER
-		ADD TileBackyard BEFORE
-		ADD TokenDoorBackyard!
-	END Place
+		exploredBackyard = TRUE
+	END PAGE Place
 
 	PAGE Place2x4
+		ADD TokenSearchBackyard2x4!
+
 		TEXT """
 			You see now what that crash was:  when Benjamin walked through
 			the gate, his coat caught the handyman's scaffolding and pulled
@@ -43,11 +45,12 @@ BOOK Backyard ORDERED NO KEEP
 			Place a Search token as indicated.
 		"""
 	
-		ADD TokenSearchBackyard2x4!
-		REMOVE TokenExploreBackyardViaDrivewaySight AFTER
-	END Place2x4
+		REMOVE TokenExploreBackyardViaDrivewaySight
+	END PAGE Place2x4
 	
 	PAGE PlaceBen
+		ADD TokenBackyardBenBefore!, TokenExploreDiningRoomViaBackyard!
+
 		TEXT """
 			Benjamin is at the end of the walkway near the back door of
 			the house. His coat is torn and he's digging through his
@@ -71,10 +74,11 @@ BOOK Backyard ORDERED NO KEEP
 			Your friend who sent you will not be happy.
 		"""
 		
-		ADD TokenBackyardBenBefore!, TokenExploreDiningRoomViaBackyard!
-	END PlaceBen
+	END PAGE PlaceBen
 
 	PAGE PlacePlant
+		ADD TokenSearchBackyardRandom!
+
 		TEXT """
 			As you finish scanning the yard, a pot catches your eye. It is
 			the only one still upright and whole. It sits on a rotting,
@@ -83,9 +87,8 @@ BOOK Backyard ORDERED NO KEEP
 			Place a Search token as indicated.
 		"""
 		
-		ADD TokenSearchBackyardRandom!
 		EXIT
-	END PlacePlant
+	END PAGE PlacePlant
 	
 	PAGE SearchRandom
 		TRIGGERED BY @SearchBackyardRandom
@@ -100,9 +103,11 @@ BOOK Backyard ORDERED NO KEEP
 		TEST QUOTA 2
 			ON PASS GOTO SearchRandomGood
 			ON FAIL GOTO SearchRandomBad
-	END SearchRandom
+	END PAGE SearchRandom
 	
 	PAGE SearchRandomGood
+		ADD QItemBackyardRandom
+
 		TEXT """
 			After looking at and around the plant, you bump into the pot,
 			knock it over, and break it. Exposed in the dirt, you find
@@ -110,13 +115,14 @@ BOOK Backyard ORDERED NO KEEP
 			remove this Search token.
 		"""
 		
-		ADD QItemBackyardRandom
 		REMOVE TokenSearchBackyardRandom
 		
 		EXIT
 	END SearchRandomBad
 	
 	PAGE SearchRandomBad
+		ADD QItemBackyardRandom
+
 		TEXT """
 			After looking at and around the plant, you bump into the pot,
 			knock it over, and break it. Exposed in the dirt, you find
@@ -128,10 +134,9 @@ BOOK Backyard ORDERED NO KEEP
 			Remove this Search token.
 		"""
 		
-		ADD QItemBackyardRandom
 		REMOVE TokenSearchBackyardRandom
 		EXIT
-	END SearchRandomBad
+	END PAGE SearchRandomBad
 	
 	PAGE Search2x4
 		TRIGGERED BY @SearchBackyard2x4
@@ -148,7 +153,7 @@ BOOK Backyard ORDERED NO KEEP
 		TEST QUOTA 3
 			ON PASS GOTO Search2x4Pass
 			ON FAIL GOTO Search2x4Fail
-	END Search2x4
+	END PAGE Search2x4
 	
 	PAGE Search2x4Pass
 		TEXT """
@@ -158,7 +163,7 @@ BOOK Backyard ORDERED NO KEEP
 		
 		REMOVE TokenSearchBackyard2x4
 		EXIT
-	END Search2x4Pass
+	END PAGE Search2x4Pass
 	
 	PAGE Search2x4Fail
 		TEXT """
@@ -169,7 +174,7 @@ BOOK Backyard ORDERED NO KEEP
 		
 		REMOVE TokenSearchBackyard2x4
 		EXIT
-	END Search2x4Fail
+	END PAGE Search2x4Fail
 	
 	PAGE ExploreDiningRoomViaBackyard
 		TRIGGERED BY @ExploreDiningRoomViaBackyard
@@ -178,5 +183,5 @@ BOOK Backyard ORDERED NO KEEP
 			The door is filthy. You check the knob, but it’s locked:
 			you'll need a key to get in.
 		"""
-	END ExploreDiningRoomViaBackyard
-END Backyard
+	END PAGE ExploreDiningRoomViaBackyard
+END BOOK Backyard
