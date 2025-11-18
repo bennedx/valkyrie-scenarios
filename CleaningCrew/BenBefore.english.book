@@ -8,7 +8,7 @@ BOOK BenBefore RANDOM NO KEEP LOOPED
 
 	PROLOG
 		TEXT "Benjamin is digging around in his pockets. You think you hear him mutter something about a key."
-	END PROLOG
+	END PAGE PROLOG
 
 	PAGE HowLong
 		BUTTON "<<How long will it take us to look through the house?>>"
@@ -30,9 +30,9 @@ BOOK BenBefore RANDOM NO KEEP LOOPED
 		
 		talkedToBenHowLong = true
 		talkedToBenCount = talkedToBenCount + 1
-		TRIGGER @TalkedToBackyardBen AFTER 
+		TRIGGER @TalkedToBackyardBen
 		IF talkedToBenCount >= 2 THEN EXIT
-	END HowLong
+	END PAGE HowLong
 
 	PAGE What
 		BUTTON "<<What do you think happened to those children?>>"
@@ -72,7 +72,7 @@ BOOK BenBefore RANDOM NO KEEP LOOPED
 		talkedToBenCount = talkedToBenCount + 1
 		TRIGGER @TalkedToBackyardBen
 		IF talkedToBenCount >= 2 THEN EXIT
-	END What
+	END PAGE What
 
 	PAGE Where
 		BUTTON "<<Where were those children found?>>"
@@ -106,7 +106,7 @@ BOOK BenBefore RANDOM NO KEEP LOOPED
 		talkedToBenCount = talkedToBenCount + 1
 		TRIGGER @TalkedToBackyardBen
 		IF talkedToBenCount >= 2 THEN EXIT
-	END Where
+	END PAGE Where
 
 	PAGE Why
 		BUTTON "<<Why did you wait so long to sell the house?>>"
@@ -131,7 +131,7 @@ BOOK BenBefore RANDOM NO KEEP LOOPED
 		talkedToBenCount = talkedToBenCount + 1
 		TRIGGER @TalkedToBackyardBen		
 		IF talkedToBenCount >= 2 THEN EXIT
-	END Why
+	END PAGE Why
 	
 	PAGE Sorry
 		IF NOT exploredBackyardNicely PAGE IS VISIBLE
@@ -144,5 +144,5 @@ BOOK BenBefore RANDOM NO KEEP LOOPED
 		EPILOG "Benjamin still doesn't look happy, but he doesn't seem as angry now."
 		
 		exploredBackyardNicely = true
-	END Sorry
+	END PAGE Sorry
 END BenBefore

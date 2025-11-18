@@ -283,7 +283,6 @@ TokenSearchFoyerCandles.button1,{action} Search
 TokenBackyardBenBefore.button1,Continue
 TokenTestBenTrigger.button1,Continue
 TokenTestBenTrigger.text,Triggered Ben
-TokenBackyardBenAfter.button1,Continue
 TokenExploreCellGoalKillCultists.text,"\nThe door is locked. You must find a key to get in.\n\nThrough the door you hear a quiet moan from the boy.\n"
 TokenExploreCellGoalKillCultists.button1,Continue
 UIGameOverHalfWinRescueBoyText.uitext,|||The cultists surround you and your companions as you fight to protect the boy. "Run!" you yell, and the boy disappears out the door of the room. A cultist starts to follow, but you trip him as he passes and he falls hard.\n\nYou may not have escaped, but perhaps the boy will. It is small comfort to think of the world being safe when you won’t be in it.\n\nAs the cultists close in around you, Sarah quickly whispers, "I will make sure the boy gets away. Thank you for this. It will be years before these fools can try to open the portal again and I will wait for them here."\n\nThe cultists close in and start killing your companions. The knife slips easily into your chest too. White pain is the last thing you feel as the world goes black.\n\nThe investigation is complete... but not for you.|||
@@ -612,12 +611,6 @@ EventPlaceBasementSearchTrapdoorViaJournal.text,"\nThat door must be behind that
 EventPlaceBasementSearchTrapdoorViaJournal.button1,Continue
 EventSearchFoyerCandles.button1,Continue
 EventSearchFoyerCandles.text,"\nYou quickly realize what drew you to the painting:  the man’s eyes glisten and meet yours as if he were alive. He next to a woman and two children. You recognize one of the children as Sarah, so it must be {c:MosterDavidSmyth}. Still, you don’t see anything that will help you with the house. As you turn away, you notice the sconces on either side of the painting. Some of the darker areas of the house could use a little light. You reach out and take down one of the candles.\n\nGain the {c:QItemCandles} Common Item, then remove this search token.\n"
-EventSearchDiningRoomFluxStabilizerAfterPuzzleBenHappy.button1,Continue
-EventSearchDiningRoomFluxStabilizerAfterPuzzleBenHappy.text,|||\nBenjamin walks through the door into the {c:TileDiningRoom}. Move the purple man token as indicated.\n\nAs he walks through the door, he says, "I heard a noise. This house can be dangerous with everything in disarray. Please be careful."\n\nHe seems to be holding something in his hand.\n|||
-EventSearchDiningRoomFluxStabilizerBenAngry.text,|||\nBenjamin walks briskly through the door, yelling, "What are you folks doing in here?! You must be careful. This house and its contents are valuable." Move the purple man token as indicated.\n\nHe seems to have something in his hand.\n|||
-EventSearchDiningRoomFluxStabilizerBenAngry.button1,Continue
-EventSearchDiningRoomFluxStabilizerAfterPuzzle.text,"\nThe device begins humming quietly.\n\nReplace this search token with the {c:QItemFluxStabilizer} common item.\n\n{c:EventChosenInvestigator} can drop or pick up this item, but cannot trade it to another investigator. When the {c:QItemFluxStabilizer} is on the floor, any investigator who moves or is moved into the space immediately moves 1 space away from the device. Move toward the {c:TileDiningRoom} if possible, or choose the direction randomly; you do not evade monsters when moving this way. {c:EventChosenInvestigator} is immune to this effect.\n\nWhen {c:EventChosenInvestigator} holds this item, add 1 additional movement to their move actions.\n\nThis information can be reviewed in the app.\n"
-EventSearchDiningRoomFluxStabilizerAfterPuzzle.button1,Continue
 EventMythosSarahPatterGo.button1,Button1
 EventStartupGoalStopCultists.button1,Button1
 EventStartupGoalStartBranch.button1,Button1
@@ -653,7 +646,6 @@ EventInteractEscape4.button1,Continue
 EventInteractEscape5.text,"\nYou don’t look back as you run through the door. Remove your investigator token from the board.\n"
 EventInteractEscape5.button1,Continue
 EventInteractEscapeCheckDone.button1,Button1
-EventSearchDiningRoomFluxStabilizerAfterPuzzleBen.button1,Button1
 EventExploreFrontDoor.text,"\nYou grab and twist the knob but your hand just slides over it. No matter how you try, you cannot turn the knob. The window is so filthy that you cannot see through it.\n\nIf you were still worried about cleaning, this would be a lot of work.\n\nRemove this explore token.\n"
 EventPlaceFoyerSightFrontDoor.text,"\nThe front door looks old and disused. Place a sight token as indicated.\n"
 EventPlaceFoyerSightFrontDoor.button1,Continue

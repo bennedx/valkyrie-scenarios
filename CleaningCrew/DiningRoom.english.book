@@ -2,7 +2,7 @@ LANGUAGE English
 
 BOOK PlaceDiningRoom ORDERED NO KEEP LOOPED
 	TRIGGERED BY @talkedToBen
-	IF @talkedToBenCount <2 THEN EXIT
+	IF @talkedToBenCount < 2 THEN EXIT
 	
 	PAGE Locked
 		TRIGGERED BY @ExploreHall1ViaDiningRoomLocked
@@ -18,6 +18,9 @@ BOOK PlaceDiningRoom ORDERED NO KEEP LOOPED
 	PAGE OpenDoor
 		TRIGGERED BY @TalkToBackyardBen WHEN @TalkToBenCount >= 2
 		
+		ADD TileDiningRoom, TokenBackyardBenPassive, TokenDoorDiningRoom!
+		REMOVE TokenExploreDiningRoomViaBackdoor, TokenBackyardBenBefore
+
 		TEXT """
 			<<Ah! Here's the key,>> Benjamin exclaims. He steps up to the door and unlocks it. A surprising amount of dirt falls as he pushes it open.
 
@@ -26,62 +29,59 @@ BOOK PlaceDiningRoom ORDERED NO KEEP LOOPED
 			Place the {c:TileDiningRoom} tile and door as indicated, then remove this Explore token.
 		"""
 		
-		ADD TileDiningRoom, TokenBackyardBenPassive, TokenDoorDiningRoom
-		REMOVE TokenExploreDiningRoomViaBackdoor, TokenBackyardBenBefore
-		
-		exploredDiningRoom = true AFTER
+		exploredDiningRoom = true
 		
 		// we want a clear event name for the name of the target investigator,
 		// not some wacky constructed name
 		// we raise an event to have EventChosenInvestigator assigned
 		TRIGGER @ChooseInvestigator
-	END OpenDoor
+	END PAGE OpenDoor
 	
 	PAGE Kitchen
+		ADD TokenExploreKitchenViaDiningRoom!
+		
 		TEXT """
 			To the right, a doorway opens to the kitchen. Place an Explore token as indicated.
 		"""
 		
-		ADD TokenExploreKitchenViaDiningRoom
-	END Kitchen
+	END PAGE Kitchen
 
 	PAGE OtherExplores
+		ADD TokenExploreBasementFirst!, TokenExploreHall1ViaDiningRoomLocked!
+
 		TEXT """
 			Two other doors lead farther into the house. Place Explore tokens as indicated.
 		"""
-		
-		REMOVE TokenExploreHall1ViaDiningRoomLocked
-		ADD TokenExploreBasementFirst, TokenExploreHall1ViaDiningRoom
 	END OtherExplores
 	
 	PAGE FluxStabilizer
+		ADD TokenSearchDiningRoomFluxStabilizer
+
 		TEXT """
 			An odd-looking device sits on the table. Place a Search token as indicated.
 		"""
-		
-		ADD TokenSearchDiningRoomFluxStabilizer
-	END FluxStabilizer
+	END PAGE FluxStabilizer
 	
 	PAGE Paper
+		ADD TokenSearchDiningRoomPaper!
+		
 		TEXT """
 			There's a box in the corner that was packed carelessly. Place a Search token as indicated.
 		"""
 		
-		ADD TokenSearchDiningRoomPaper
-		
 		// we do this because if they haven't found the journal,
 		// there will be another page after this one
 		IF foundJournal THEN TRIGGER @MoveAfterExplore
-	END Paper
+	END PAGE Paper
 	
 	PAGE Journal
-		IF !foundJournal THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF NOT foundJournal
 		
 		TEXT """
 			As you walk into the house, you remember the book in the driveway. You glance back toward the gate as you step inside. Move 1 space into the {c:TileDiningRoom}.
 		"""
 	END Journal
-END PlaceDiningRoom
+END PAGE PlaceDiningRoom
 
 BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 
@@ -90,7 +90,6 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 		IF test THEN TRIGGER @AskAboutGate
 	
 		PROLOG "A small device with gears, hoses, and lights sits on the table."
-		
 		BUTTON "Search"
 	
 		TEXT """
@@ -112,13 +111,13 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 		// wanderers are the cultists who seem to be coming from the secret
 		// passageway off the study.
 		wandererMax = #heros - exploredBackyardNicely
-		IF wandererMax == 0 THEN wandererMax = 1
+		IF wandererMax < 1 THEN wandererMax = 1
 		
 		wandererFrequency = 2
-	END StartFluxStabilizer
+	END PAGE StartFluxStabilizer
 	
 	PAGE Finn
-		IF #HeroFinnEdwards THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF #HeroFinnEdwards
 		
 		TEXT """
 			Finn Edwards starts to come to, not sure at first where he is:  he is on the ground
@@ -127,13 +126,13 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 
 			As he starts to push himself up, he puts his hand down in the wrong
 			place. Hard. Pain. When he looks at what he hit, he gains the
-			{c:QItemBrassKnuckles} Common Item. As he plays
-			with them, they make him feel more confident. Improve Finn’s {strength}.
+			{c:QItemBrassKnuckles} Common Item. As he plays with them, they make
+			him feel more confident. Improve Finn's {strength}.
 		"""
-	END Finn
+	END PAGE Finn
 	
 	PAGE Kate
-		IF #HeroKateWinthrop THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF #HeroKateWinthrop
 		
 		TEXT "Will Kate pick up the {c:QItemFluxStabilizer}?"
 		
@@ -141,7 +140,7 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 		FAIL "No"
 		
 		TEST ON PASS GOTO KatePicksUp ON FAIL GOTO KateDoesNotPickUp
-	END Kate
+	END PAGE Kate
 
 	PAGE KatePicksUp
 		TEXT """
@@ -151,15 +150,15 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 			Looking at it, she calms down and loses her focusing anger. Kate no
 			longer becomes Focused when she is attacked.
 			
-			Kate says to the others, <<This device can repel monsters.>> [laughter]
-			<<I don't expect I'll need it here, but mine broke this morning
-			and I didn't know how I'd get another.>>
+			Kate says to the others, <<This device can repel monsters. I don't
+			expect I'll need it here, but mine broke this morning
+			and I didn't know how I'd find another.>>
 		"""
 		
 		MARK Paper READ
 		kateHasFluxStabilizer = TRUE
 		EXIT
-	END KatePicksUp
+	END PAGE KatePicksUp
 	
 	PAGE KateDoesNotPickUp
 		TEXT """
@@ -168,23 +167,23 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 			
 			Kate becomes Focused.
 		"""
-	END KateDoesNotPickUp
+	END PAGE KateDoesNotPickUp
 
 	PAGE Paper
 		TEXT """
-			There is a piece of paper next to the device: instructions. It's called a
-			<<{c:QItemFluxStabilizer},>> and it repels monsters. "MONSTERS!?"
-			you erupt loudly.
+			There is a piece of paper next to the device: instructions. It's
+			called a <<{c:QItemFluxStabilizer},>> and it repels monsters.
+			<<MONSTERS!?>> you erupt loudly.
 
 			Everyone turns to look at you.
 		"""
 		
 		EXIT
-	END Paper
+	END PAGE Paper
 
 	PAGE Puzzle1
 		PAGE IS NOT VISIBLE
-		TRIGGERED BY @SearchFluxStabilizer WHEN NOT ALREADY READ AND StartFluxStabilizer IS READ
+		TRIGGERED BY @SearchFluxStabilizer WHEN NOT READ AND StartFluxStabilizer IS READ
 
 		PROLOG """
 			There seems to be a
@@ -197,24 +196,80 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 		
 		NO TEXT
 		
-		TRIGGER @PuzzleFluxStabilizer AFTER
-		EXIT
-	END Puzzle1
+		TEST PUZZLE PuzzleFluxStabilizer
+			ON PASS GOTO GetFluxStabilizer
+			ON FAIL GOTO DontGetFluxStabilizer
+	END PAGE Puzzle1
 
 	PAGE Puzzle2
 		TRIGGERED BY @SearchFluxStabilizer WHEN Puzzle1 IS ALREADY READ
 		
 		TEXT """
 			Maybe if you randomly flipped a few more buttons or turned a few
-			more dials, it would do something.
+			more dials, it will do something.
 			
 			{c:EventChosenInvestigator} can attempt it again using {lore}.
 		"""
 		
 		MARK UNREAD
-		TRIGGER @PuzzleFluxStabilizer AFTER
-		EXIT
+		TEST PUZZLE PuzzleFluxStabilizer
+			ON PASS GOTO GetFluxStabilizer
+			ON FAIL GOTO DontGetFluxStabilizer
 	END Puzzle2
+
+	PAGE DontGetFluxStabilizer
+		TEXT """
+			It still just sits there. Doing nothing. The hoses aren't moving,
+			the lights are off, and 
+		"""
+		EXIT
+	END PAGE DontGetFluxStabilizer
+
+	PAGE GetFluxStabilizer
+		TEXT """
+			The device begins humming quietly.
+
+			Discard this search token, then place the {c:QItemFluxStabilizer}
+			common item.
+
+			{c:EventChosenInvestigator} can drop or pick up this item, but
+			cannot trade it to another investigator. When the
+			{c:QItemFluxStabilizer} is on the floor, any investigator who moves
+			or is moved into its space immediately moves 1 space away from the
+			device. Move toward the {c:TileDiningRoom} if possible; you do not
+			evade monsters when moving this way. {c:EventChosenInvestigator} is
+			immune to this effect.
+
+			When {c:EventChosenInvestigator} holds this item, add 1 additional
+			movement to their move actions.
+
+			This information can be reviewed in the app.
+		"""
+
+		EXIT
+	END PAGE GetFluxStabilizer
+
+	PAGE GetFluxStabilizer
+		ADD TokenBackyardBenAfter!
+		REMOVE TokenBackyardBenPassive
+	
+		TEXT """
+			Benjamin walks through the door into the {c:TileDiningRoom}. Move
+			the purple man token as indicated.
+
+			As he walks in he says, <<I heard a noise. This house
+			can be dangerous with everything in disarray. Please be careful.>>
+
+			He seems to be holding something in his hand.
+		"""
+		
+		IF NOT exploredBackyardNicely THEN TEXT """
+			Benjamin walks briskly through the door snapping, <<What are you
+			folks doing in here?!>> Move the purple man token as indicated.
+
+			He seems to have something in his hand.
+		"""
+	END PAGE GetFluxStabilizer
 
 
 	PAGE PaperInBox
@@ -225,7 +280,8 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 		BUTTON "Search"
 		
 		TEXT """
-			The paper is old, yellowed, and dry. When you pick it up, a corner breaks off. The writing is faded but you can make out a few phrases.
+			The paper is old, yellowed, and dry. When you pick it up, a corner
+			breaks off. The writing is faded but you can make out a few phrases.
 
 			<<... this Saturday, the children will...>>
 
@@ -233,13 +289,14 @@ BOOK SearchDiningRoom ORDERED NO KEEP LOOPED
 
 			<<Blood will... chapel... altar>>
 
-			Gain the {c:QItemEvidenceDiningRoom} Unique Item, gain 2 {clue}, and remove this Search token.
+			Gain the {c:QItemEvidenceDiningRoom} Unique Item, gain 2 {clue}, and
+			discard this Search token.
 		"""
 		
 		ADD QItemEvidenceDiningRoom
 		REMOVE TokenSearchDiningRoomPaper
 	END PaperInbox
-END SearchFluxStabilizer
+END SearchDiningRoom
 
 
 BOOK ExploreBackDoorLocked ORDERED NO KEEP LOOPED
@@ -260,16 +317,18 @@ BOOK ExploreBackDoorLocked ORDERED NO KEEP LOOPED
 	END TurnKnob
 
 	PAGE ShakeDoor
-		PROLOG "
+		PROLOG """
 			No matter how hard you try, the knob just won>t turn.
 			Looking closer, you see a light peeking between the door
 			and its jam. <i>Maybe I can shake it open?<i> you think
 			to yourself.
-		"
-	
-		TEXT "You grab the knob again and begin shaking it violently. Test {strength} or {will}."
-	
+		"""
 		BUTTON "Shake door"
+	
+		TEXT """
+			You grab the knob again and begin shaking it violently. Test
+			{strength} or {will}.
+		"""
 	
 		TEST QUOTA 20
 			ON PASS DO NOTHING
@@ -281,15 +340,14 @@ BOOK ExploreBackDoorLocked ORDERED NO KEEP LOOPED
 			No matter how hard you shake it, the door doesn't budge.
 			And you might have pulled something in your right arm.
 			Maybe you can knock it down? You also begin to wonder
-			if you shouldn't move on. Or just knock it down.
+			if you should move on. Or knock it down.
 		"
+		BUTTON "Break it down"
 
 		TEXT "
 			You muster up your strength and prepare to break the door down
 			with your shoulder. Test {strength} or {lore}.
 		"
-
-		BUTTON "Break it down"
 
 		TEST QUOTA 20
 			ON PASS DO NOTHING
@@ -307,14 +365,13 @@ BOOK ExploreBackDoorLocked ORDERED NO KEEP LOOPED
 			<<Hey, is this a hairpin?>> you ask out loud. One of the other
 			investigators turns to look at you.
 		"
+		BUTTON "Pick lock"
 
-		TEXT "			
+		TEXT """		
 			As you work the hairpin into the lock, you wonder
 			why it was in your pocket. Test {agility} or {influence}.
-		"
+		"""
 
-		BUTTON "Pick lock"
-	
 		TEST QUOTA 20
 			ON PASS DO NOTHING
 			ON FAIL DO NOTHING
@@ -323,19 +380,19 @@ BOOK ExploreBackDoorLocked ORDERED NO KEEP LOOPED
 	END PickLock
 
 	PAGE UnlockDoor
-		PROLOG "
+		PROLOG """
 			You can feel the tumblers, but nothing moves. Eventually, the
 			hairpin bends too much to be of use. <i>Maybe this really is
 			a waste of time,</i> you consider. <i>Wait, I have that key.</i>
 
 			If you have the	{c:QItemBrassKey}, ...
-		"
+		"""
 
-		TEXT "
+		TEXT """
 			You pull out the key and look at it for a moment before putting
 			it into the lock...
 			Test {strength} or {observation}.
-		"
+		"""
 	
 		BUTTON "Unlock door"
 
@@ -345,7 +402,7 @@ BOOK ExploreBackDoorLocked ORDERED NO KEEP LOOPED
 	END UnlockDoor
 
 	EPILOG 
-		TEXT "
+		TEXT """
 			Well, you try to put the key into the lock but it doesn't fit,
 			no matter how hard you try. You look at the key and try again.
 			And again. And again. Dejected and out of ideas, you turn away
@@ -353,7 +410,7 @@ BOOK ExploreBackDoorLocked ORDERED NO KEEP LOOPED
 			you say to no one in particular. Someone mutters, <<Yeah.>>
 		
 			Remove this explore token.
-		"
+		"""
 
         REMOVE TokenExploreBackDoorLocked AFTER
 	END EPILOG
@@ -362,7 +419,11 @@ END BackDoorLocked
 
 BOOK ExploreKitchen ORDERED NO KEEP
 	PAGE Start
-		PROLOG "The swinging door doesn't look like it will hold up to much use, so you'll need to be careful."
+		PROLOG """
+			The swinging door doesn't look like it will hold up to much use, so
+			you'll need to be careful.
+		"""
+		
 		BUTTON "Push through door"
 		
 		TEXT """
@@ -394,13 +455,15 @@ BOOK ExploreKitchen ORDERED NO KEEP
 	END Cutlery
 	
 	PAGE Box
+		ADD TokenSearchKitchenRandom!
+
 		TEXT """
 			Next to you is a box that looks like it was filled in a
 			hurry. Place a Search token as indicated.
 		"""
 		
-		ADD TokenSearchKitchenRandom
 		TRIGGER @moveAfterExplore AFTER
+		EXIT
 	END Box
 END ExploreKitchen
 

@@ -3,7 +3,7 @@ LANGUAGE English
 BOOK WandererAttacks ORDERED NO KEEP
 
 	PAGE Story1
-		IF exploredBasement THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF exploredBasement
 
 		TEXT """
 			In a voice that reverberates through the house, the cultist cries out,
@@ -11,10 +11,10 @@ BOOK WandererAttacks ORDERED NO KEEP
 			Each investigator on the ground floor of the house suffers 1 Horror
 			({will} negates).
 		"""
-	END Story1
+	END PAGE Story1
 
 	PAGE Story2
-		IF exploredBasementViaDiningRoom AND !exploredBasement THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF exploredBasementViaDiningRoom AND !exploredBasement
 
 		TEXT """
 			<<I will not allow you into the basement,>> he says to you. He raises a
@@ -22,10 +22,10 @@ BOOK WandererAttacks ORDERED NO KEEP
 			a punch of your own; the cultist suffers 1 damage. If you fail, he
 			boxes your ears; become Stunned.
 		"""
-	END Story2
+	END PAGE Story2
 
 	PAGE Story3
-		IF foundDWM THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF foundDWM
 
 		TEXT """
 			<<You cannot be allowed to leave with the Master's book.>> He moves as
@@ -34,10 +34,10 @@ BOOK WandererAttacks ORDERED NO KEEP
 			the cultist grabs you, throws you to the ground, and pins you; become
 			Restrained.
 		"""
-	END Story3
+	END PAGE Story3
 
 	PAGE Story4
-		IF foundCandles AND exploredBasementViaDiningRoom AND !exploredBasement THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF foundCandles AND exploredBasementViaDiningRoom AND !exploredBasement
 
 		TEXT """
 			<<Brothers! They have found what they need to explore the basement. We
@@ -46,20 +46,20 @@ BOOK WandererAttacks ORDERED NO KEEP
 			head. If you fail, you watch the thing hit the ground... and a flash of
 			light blinds you; become Dazed.
 		"""
-	END Story4
+	END PAGE Story4
 
 	PAGE Story5
-		IF foundCandles THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF foundCandles
 
 		TEXT """
 			The cultist shouts something about the basement and shakes you. Drop
 			the {c:QItemCandles}. If you are not carrying them, become Dazed from
 			the shaking.
 		"""
-	END Story5
+	END PAGE Story5
 
 	PAGE Story6
-		IF wanderersKilled > 5 THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF wanderersKilled > 5
 
 		TEXT """
 			The cultist looks around; waves of horror and anger cross his face. He
@@ -72,10 +72,10 @@ BOOK WandererAttacks ORDERED NO KEEP
 			collective wills lifts everyone's spirits:  each investigator may
 			discard 1 horror.
 		"""
-	END Story6
+	END PAGE Story6
 
 	PAGE Story7
-		IF !exploredGateNicely THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF !exploredGateNicely
 
 		TEXT """
 			<<You would destroy the Master's house with your brutality. You must be
@@ -86,10 +86,10 @@ BOOK WandererAttacks ORDERED NO KEEP
 			<i>I really should have been more careful with that gate</i>, you think
 			to yourself.
 		"""
-	END Story7
+	END PAGE Story7
 
 	PAGE Story8
-		IF chapelPriestDead THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF chapelPriestDead
 
 		TEXT """
 			<<You have killed our High Priest. You shall pay.>> The cultist raises
@@ -98,10 +98,10 @@ BOOK WandererAttacks ORDERED NO KEEP
 			you fail, you are caught off-guard as a frozen wind sweeps through you,
 			freezing you solid for a moment; become Restrained.
 		"""
-	END Story8
+	END PAGE Story8
 
 	PAGE Story9
-		IF foundDWM THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF foundDWM
 
 		TEXT """
 			<<They have found The Master's sacred text,>> the cultist wails. <<They
@@ -113,10 +113,10 @@ BOOK WandererAttacks ORDERED NO KEEP
 			negates), become Dazed, and drop the {c:QItemDVM} if you are carrying
 			it.
 		"""
-	END Story9
+	END PAGE Story9
 
 	PAGE Story10
-		IF foundRitualKnife THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF foundRitualKnife
 
 		TEXT """
 			<<You have found the knife, but we will take it from you,>> the cultist
@@ -127,10 +127,10 @@ BOOK WandererAttacks ORDERED NO KEEP
 			Damage ({agility} negates), become Restrained, and drop the
 			{c:QItemRitualDagger} if you are carrying it.
 		"""
-	END Story10
+	END PAGE Story10
 
 	PAGE Story11
-		IF foundRitualComponents THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF foundRitualComponents
 
 		TEXT """
 			The cultist rushes into the room, intent on catching up with you.
@@ -142,10 +142,10 @@ BOOK WandererAttacks ORDERED NO KEEP
 			cultist sends a quick blow to your head; become Dazed and drop
 			the {c:QItemRitualComponents} if you are carrying them.
 		"""
-	END Story11
+	END PAGE Story11
 
 	PAGE Story12
-		IF foundJournal THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF foundJournal
 
 		TEXT """
 			Have you stolen Brother Benjamin's journal? He trusted you and this is
@@ -155,10 +155,10 @@ BOOK WandererAttacks ORDERED NO KEEP
 			your head. If you fail, the power rushes through your head,
 			overwhelming your senses. Become Dazed.
 		"""
-	END Story12
+	END PAGE Story12
 
 	PAGE Story13
-		IF foundJournal THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF foundJournal
 
 		TEXT """
 			The cultist calls out to the others, <<Brother Benjamin tells us that
@@ -171,10 +171,10 @@ BOOK WandererAttacks ORDERED NO KEEP
 			Each investigator in range suffers 1 Horror ({will} negates); the
 			investigator in range holding the {c:QItemJournal} drops it.
 		"""
-	END Story13
+	END PAGE Story13
 
 	PAGE Story14
-		IF foundDWM AND foundRitualKnife THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF foundDWM AND foundRitualKnife
 
 		TEXT """
 			<<The intruders,>> he calls out, <<have found some of the items Our
@@ -186,10 +186,10 @@ BOOK WandererAttacks ORDERED NO KEEP
 			ground; the cultist suffers 2 Damage. If you fail, you suffer 1 Damage
 			({strength} negates) and 1 Horror ({will} negates).
 		"""
-	END Story14
+	END PAGE Story14
 
 	PAGE Story15
-		IF foundDWM AND foundRitualComponents THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF foundDWM AND foundRitualComponents
 
 		TEXT """
 			The cultist enters the room and says, <<You have found some of what you
@@ -199,10 +199,10 @@ BOOK WandererAttacks ORDERED NO KEEP
 			you. Become stunned and drop the {c:QItemRitualComponents} if you are
 			carrying them.
 		"""
-	END Story15
+	END PAGE Story15
 
 	PAGE Story16
-		IF foundDWM AND foundRitualComponents AND foundRitualKnife THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF foundDWM AND foundRitualComponents AND foundRitualKnife
 
 		TEXT """
 			<<If they can figure out how to use them, they have found everything
@@ -215,20 +215,20 @@ BOOK WandererAttacks ORDERED NO KEEP
 			The sudden shaking startles everyone: each investigator on the first
 			floor of the house suffers 1 horror. ({will} negates)
 		"""
-	END Story16
+	END PAGE Story16
 
 	PAGE Story17
-		IF foundDWM AND foundRitualComponents AND foundRitualKnife AND ritualDone AND dwmReadPage6 THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF foundDWM AND foundRitualComponents AND foundRitualKnife AND ritualDone AND dwmReadPage6
 
 		TEXT """
 			<<It is time Brothers,>> the cultist's voice booms through the house.
 			<<We must get to the portal before it is too late.>> Any investigators
 			not carrying a {c:QItemFluxStabilizer} become Restrained.
 		"""
-	END Story17
+	END PAGE Story17
 
 	PAGE Story18
-		IF foundDWM AND foundRitualComponents AND foundRitualKnife AND ritual AND dwmReadPage6 AND journalReadPage6 THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF foundDWM AND foundRitualComponents AND foundRitualKnife AND ritual AND dwmReadPage6 AND journalReadPage6
 
 		TEXT """
 			The cultist looks at you and sneers, <<You think you are ready, but you
@@ -239,7 +239,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			just words. If you fail, your failings sadden and depress you; suffer
 			1 Horror ({will} negates).
 		"""
-	END Story18
+	END PAGE Story18
 
 	// ------------------------------------------------------------------------
 	// the rest of these are shown at random; LOOP RANDOM means to clear the
@@ -260,7 +260,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			1 facedown Damage ({agility} negates), then move your investigator 1
 			space toward the Dining Room.
 		"""
-	END StrengthDamage
+	END PAGE StrengthDamage
 
 	PAGE StrengthStunned RANDOM
 		TEXT """
@@ -268,7 +268,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			({strength};2) If you pass, you block the blow. If you fail, he
 			cold-cocks you; become Stunned.
 		"""
-	END StrengthStunned
+	END PAGE StrengthStunned
 
 	PAGE StrengthDazed RANDOM
 		TEXT """
@@ -277,7 +277,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			pass, you reach up and stop his downward swing. If you fail, he hits
 			you over the head; become Dazed.
 		"""
-	END StrengthDazed
+	END PAGE StrengthDazed
 
 	PAGE StrengthRestrained RANDOM
 		TEXT """
@@ -287,7 +287,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			his feet; he suffers 1 Damage. If you fail, he yanks the whip and pulls
 			your feet from under you; become Restrained.
 		"""
-	END StrengthRestrained
+	END PAGE StrengthRestrained
 
 	PAGE AgilityDamage RANDOM
 		TEXT """
@@ -296,7 +296,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			the blade. If you fail, the cultist cuts your arm; suffer 1 facedown
 			damage ({agility} negates).
 		"""
-	END AgilityDamage
+	END PAGE AgilityDamage
 
 	PAGE AgilityStunned RANDOM
 		TEXT """
@@ -305,7 +305,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			first; the cultist suffers 1 Damage. If you fail, the cultist cracks
 			the vase across your left temple; become Stunned.
 		"""
-	END AgilityStunned
+	END PAGE AgilityStunned
 
 	PAGE AgilityDazed RANDOM
 		TEXT """
@@ -313,7 +313,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			try to avoid the sharp corner of the table. ({agility};2) If you pass,
 			you twist out of the way. If you fail, you hit the table; become Dazed.
 		"""
-	END AgilityDazed
+	END PAGE AgilityDazed
 
 	PAGE AgilityRestrained RANDOM
 		TEXT """
@@ -324,7 +324,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			where your legs were. If you fail, the blackness coils around your
 			legs; become Restrained.
 		"""
-	END AgilityRestrained
+	END PAGE AgilityRestrained
 
 	PAGE ObservationDamaged
 		TEXT """
@@ -335,7 +335,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			cultist suffers 1 damage. If you fail, the cultist pulls a knife and
 			stabs you; suffer 1 facedown damage ({agility} negates).
 		"""
-	END ObservationDamaged
+	END PAGE ObservationDamaged
 
 	PAGE ObservationStunned RANDOM
 		TEXT """
@@ -346,7 +346,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			fingers, and the dust settles. If you fail, the dust rises around your
 			face and makes you feel... funny. Become Stunned.
 		"""
-	END ObservationStunned
+	END PAGE ObservationStunned
 
 	PAGE ObservationDazed RANDOM
 		TEXT """
@@ -357,7 +357,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			cultist suffers 1 damage. If you fail, the cultist punches you in the
 			back of the head; become Dazed.
 		"""
-	END ObservationDazed
+	END PAGE ObservationDazed
 
 	PAGE ObservationRestrained RANDOM
 		TEXt """
@@ -370,7 +370,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			suffer 1 horror. ({will} negates) Suddenly, the snake putrifies into
 			something sticky; become Restrained. 
 		"""
-	END ObservationRestrained
+	END PAGE ObservationRestrained
 
 	PAGE LoreDamage RANDOM
 		TEXT """
@@ -381,7 +381,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			curse at your feet, making you feel a surge of debilitating
 			electricity from floor to hat; suffer 1 damage ({agility} negates).
 		"""
-	END LoreDamage
+	END PAGE LoreDamage
 
 	PAGE LoreStunned RANDOM
 		TEXT """
@@ -392,7 +392,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			you with a flash of light; become Stunned. If you pass, you close your
 			eyes at the last moment.
 		"""
-	END LoreStunned
+	END PAGE LoreStunned
 
 	PAGE LoreDazed RANDOM
 		TEXT """
@@ -402,7 +402,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			feels as if Sarah is speaking to you in the same language as the
 			cultist; become Dazed.
 		"""
-	END LoreDazed
+	END PAGE LoreDazed
 
 	PAGE LoreRestrained RANDOM
 		TEXT """
@@ -413,7 +413,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			circle slides across the floor, under your feet, and up your legs where
 			it binds you; become Restrained.
 		"""
-	END LoreRestrained
+	END PAGE LoreRestrained
 
 	PAGE InfluenceDamaged RANDOM
 		TEXT """
@@ -423,7 +423,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			cobbler who made them. If you fail, he makes good on his threat; suffer
 			1 facedown damage ({agility} negates).
 		"""
-	END InfluenceDamaged
+	END PAGE InfluenceDamaged
 
 	PAGE InfluenceStunned RANDOM
 		TEXT """
@@ -433,7 +433,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			that you are kindred spirits. If you fail, the cultist yanks the rope,
 			causing you to fall; become Stunned.
 		"""
-	END InfluenceStunned
+	END PAGE InfluenceStunned
 
 	PAGE InfluenceDazed RANDOM
 		TEXT """
@@ -442,7 +442,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			If you pass, you are not fooled. If you fail, you begin to believe in
 			the righteousness of his cause; become Dazed.
 		"""
-	END InfluenceDazed
+	END PAGE InfluenceDazed
 
 	PAGE InfluenceRestrained RANDOM
 		TEXT """
@@ -452,7 +452,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			you are here to clean. If you fail, the cultist throws something at
 			your feet; become Restrained.
 		"""
-	END InfluenceRestrained
+	END PAGE InfluenceRestrained
 
 	PAGE WillDamage RANDOM
 		TEXT """
@@ -462,7 +462,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			to run and the cultist hits you from behind; suffer 1 damage ({agility}
 			negates).
 		"""
-	END WillDamage
+	END PAGE WillDamage
 
 	PAGE WillHorror RANDOM
 		TEXT """
@@ -472,7 +472,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			you can see the ceremony that is to come; suffer 1 facedown horror
 			({will} negates) and become Stunned.
 		"""
-	END WillHorror
+	END PAGE WillHorror
 
 	PAGE WillDazed RANDOM
 		TEXT """
@@ -483,7 +483,7 @@ BOOK WandererAttacks ORDERED NO KEEP
 			completes his curse; the cultist suffers 1 damage. If you fail, you
 			lose your nerve and the cultist completes the curse; become Dazed.
 		"""
-	END WillDazed
+	END PAGE WillDazed
 
 	PAGE WillRestrained RANDOM
 		TEXT """
@@ -493,6 +493,6 @@ BOOK WandererAttacks ORDERED NO KEEP
 			attack. If you fail, something changes, as if old Mr Smythe had
 			touched you. Become Restrained.
 		"""
-	END WillRestrained
+	END PAGE WillRestrained
 
-END WandererAttacks
+END BOOK WandererAttacks

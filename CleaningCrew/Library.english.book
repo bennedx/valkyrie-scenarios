@@ -8,7 +8,7 @@ BOOK Library
 		PROLOG "This door has a small brass plaque that reads "Library."
 		BUTTON "Explore"
 		
-		ADD TokenWallLibrary
+		ADD TokenWallLibrary!
 		REMOVE TokenExploreLibraryViaStudy
 
 		TEXT """
@@ -68,12 +68,12 @@ BOOK Library
 	PAGE SearchKey
 		TRIGGERED BY @SearchLibraryKey
 		
-		ADD QItemKey
-		REMOVE TokenSearchLibraryKey
-		
 		PROLOG "It looks like the man dropped his key ring."
 		BUTTON "Pick up keys"
 		
+		ADD QItemKey
+		REMOVE TokenSearchLibraryKey
+
 		TEXT """
 			You reach down to pick up the keys. You’re impressed by the number
 			and variety. Some of the keys have strange symbols on their bows
@@ -136,7 +136,6 @@ BOOK Library
 			doesn't come out all the way, but you realize it is part of a lock
 			for a secret door. Discard this Search token.
 		"""
-		
 	END PAGE SearchBookcasePass
 		
 	PAGE PlaceBookcaseExplore
@@ -190,6 +189,10 @@ BOOK Library
 	END PAGE Smash
 	
 	PAGE SmashFail
-		
+		EXIT
+	END PAGE SmashFail
 	
+	PAGE SmashPass
+		EXIT
+	END PAGE SmashPass	
 END BOOK Library	

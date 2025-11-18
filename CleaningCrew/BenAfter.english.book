@@ -2,11 +2,11 @@ LANGUAGE English
 DEBUG OFF
 
 BOOK BenAfter RANDOM NO KEEP
-    IF exploredDiningRoom EXIT BEFORE
+    IF exploredDiningRoom EXIT
 
     PROLOG
         TEXT "Benjamin looks around the room, like is he trying to figure out what you are doing."
-    END PROLOG
+    END PAGE PROLOG
 
     PAGE Dirt
         BUTTON "<<Is the whole house this dirty?>>"
@@ -25,7 +25,7 @@ BOOK BenAfter RANDOM NO KEEP
         "
 
         EPILOG "Benjamin seems surprised you asked about dirt. Odd since you were hired to clean."
-    END Dirt
+    END PAGE Dirt
     
     PAGE Footprints
         BUTTON "<<There are footprints in the dust by that door...>>"
@@ -40,12 +40,15 @@ BOOK BenAfter RANDOM NO KEEP
 			You notice Benjamin glancing nervously at the footprints. <i>Is something going
 			on?" you wonder.
 		"""
-    END Footprints
+    END PAGE Footprints
 
     PAGE AnythingElse
         BUTTON "<<Is there anything else we need to know?>>"
     
-        TEXT "
+        REMOVE TokenBackyardBenAfter
+        ADD TokenExploreBackDoorLocked!, TokenInvestigatorsDiningRoom
+        
+		TEXT "
             <<Oh, my, yes. Here's the key you'll need to open doors throughout the house.>>
     
             Gain the {c:QItemBrassKey} common item.
@@ -72,8 +75,6 @@ BOOK BenAfter RANDOM NO KEEP
 			and remove Ben from the board.
         "
     
-        REMOVE TokenBackyardBenAfter
-        ADD TokenExploreBackDoorLocked, TokenInvestigatorsDiningRoom
 		REMOVE TokenInvestigatorsDiningRoom AFTER
 		
 		TRIGGER @ClearAllMythosFlags
@@ -89,12 +90,13 @@ BOOK BenAfter RANDOM NO KEEP
         talkedToBenCount = talkedToBenCount + 1
 
         TRIGGER @TalkedToBenAfter AFTER
-
-        IF foundJournal THEN EXIT
-		GOTO AnythingElse AFTER
-    END AnythingElse
+    END PAGE AnythingElse
 	
 	PAGE AnythingElseJournal
+		PAGE IS VISIBILE IF NOT foundJournal
+		
+		ADD TokenDiningRoomJournal!
+		
 		TEXT """
 			At your feet you see a book that looks identical to the one Benjamin dropped outside.
 			He seems to have dropped it again. <i>How is that possible?>> you ask yourself. Place
@@ -103,5 +105,5 @@ BOOK BenAfter RANDOM NO KEEP
 			Something here doesn't feel right.
 		"""
 		EXIT
-	END AnythingElseJournal
-END BenAfter
+	 END PAGE AnythingElseJournal
+ END BOOK BenAfter

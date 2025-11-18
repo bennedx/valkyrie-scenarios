@@ -126,12 +126,11 @@ BOOK Backyard ORDERED NO KEEP
 		TEXT """
 			After looking at and around the plant, you bump into the pot,
 			knock it over, and break it. Exposed in the dirt, you find
-			something. You see something in the rubble. Gain the
-			{c:QItemBackdoorRandom} Common Item. As you pick it up, a
-			shard from the pot draws blood; take one facedown Damage
-			({agility}) negates.
+			something in the rubble. Gain the {c:QItemBackdoorRandom} Common
+			Item. As you pick it up, a shard from the pot draws blood; take one
+			facedown Damage ({agility}) negates.
 			
-			Remove this Search token.
+			Discard this Search token.
 		"""
 		
 		REMOVE TokenSearchBackyardRandom
@@ -142,8 +141,8 @@ BOOK Backyard ORDERED NO KEEP
 		TRIGGERED BY @SearchBackyard2x4
 		
 		PROLOG """
-			A pile of rubble sits between the gate and the house. Dust is
-			still thick in the air.
+			A pile of rubble sits between the gate and the house. Dust still
+			thickens in the air.
 		"""
 		
 		TEXT """
@@ -157,8 +156,9 @@ BOOK Backyard ORDERED NO KEEP
 	
 	PAGE Search2x4Pass
 		TEXT """
-			You carefully reach into the pile and pull out a board. Gain
-			the {c:QItem2x4} Common Item and remove this Search token.
+			You carefully reach into the pile and pull out a sturdy piece
+			of wood. Gain the {c:QItem2x4} Common Item and remove this Search
+			token.
 		"""
 		
 		REMOVE TokenSearchBackyard2x4
@@ -169,7 +169,7 @@ BOOK Backyard ORDERED NO KEEP
 		TEXT """
 			You fumble around in the rubble, cursing as nails and splinters
 			dig into your hands. Gain the {c:QItem2x4} Common Item, take 1
-			facedown Damage, and remove this Search token.
+			facedown Damage, and discard this Search token.
 		"""
 		
 		REMOVE TokenSearchBackyard2x4

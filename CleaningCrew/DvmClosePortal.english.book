@@ -5,11 +5,10 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
     IF goal != goalClosePortal THEN EXIT
 
     PAGE TableOfContents
+        PROLOG "The {c:QItemDVM} looks old and worn with time."
         BUTTON "Open the book" AFTER "Table of Contents"
 
-        PROLOG "The De Vermis Mysterium looks old and worn with time."
-
-        TEXT "
+        TEXT """
             Table of Contents
 
             You open the book. On the inside
@@ -24,19 +23,18 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
 			<<Travel, page 72>>?
 
             {qst:FirstTimeRead}, gain 1 {clue}.
-        "
-    END TableOfContents
+        """
+    END PAGE TableOfContents
 
     PAGE Portals
-        PROLOG "
+        PROLOG """
             This is a spell book and {c:EventChosenInvestigator}
 			may have... abilities. Sarah is pushing you to find something
 			about closing portals.
-        "
-        
+        """
         BUTTON "Turn to page 72" AFTER "Portals"
 
-        TEXT "
+        TEXT """
             You flip through the pages to find the <<Travel>> section on
             page 72. The first entry is for portals.
 
@@ -56,15 +54,14 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
             
             <i>I wonder if they actually have these already?</i> you ask
             yourself. 
-        "
-    END Portals
+        """
+    END PAGE Portals
 
     PAGE Tools
         PROLOG "Closing a portal is going to require a lot of work."
-
         BUTTON "Read the next page" AFTER "Tools"
     
-        TEXT "
+        TEXT """
             Dagger
         
             You flip the page. Here the book goes into detail about the
@@ -85,18 +82,17 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
 			another incantation you cannot understand or even sound out.
 
             {qst:FirstTimeRead}, gain 1 {clue}.
-        "
-    END Tools
+        """
+    END PAGE Tools
 
     PAGE Sacrifice
         PROLOG "
             Each tool seems to need special attention. This will require more
             study.
         "
-        
         BUTTON "Read the next page" AFTER "Sacrifice"
     
-        TEXT "
+        TEXT """
             Sacrifice
 
             The next page delves into the importance of personal sacrifice.
@@ -108,9 +104,9 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
 			You wonder who they might choose.
 
             {qst:FirstTimeRead}, suffer 1 Horror ({will} negates).
-        "
+        """
 		
-		IF readJournalPage5 THEN TEXT "
+		IF readJournalPage5 THEN TEXT """
             Sacrifice
 
             The next page delves into the importance of personal sacrifice.
@@ -123,17 +119,16 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
 			when you hear your own voice.
 
             {qst:FirstTimeRead}, suffer 1 Horror ({will} negates).
-		"
-    END Sacrifice
+		"""
+    END PAGE Sacrifice
     
     PAGE Commentary
-        PROLOG "
+        PROLOG """
             A look of concern and disgust on your face, you turn the page.
-        "
-
+        """
         BUTTON "Read the next page" AFTER "Commentary"
 
-        TEXT "
+        TEXT """
             Commentary
 
             Finally, there is commentary and advice. One section discusses ley
@@ -145,9 +140,9 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
             with a ley line; there is also a list of years that would be good
             for the ritual, and specific dates that are the best. Today is on
             the list.
-        "
+        """
 
-        IF readAboutBoy THEN TEXT "
+        IF readAboutBoy THEN TEXT """
             Commentary
 
             Finally, there is commentary and advice. One section discusses ley
@@ -162,24 +157,24 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
 
             <i>The boy must be under the house somewhere,</i> you think to
             yourself.
-        "
-    END Commentary
+        """
+    END PAGE PAGE Commentary
     
     EPILOG
-        TEXT "
+        TEXT """
             <i>Maybe I need to explore a bit more to figure out what I need to
             do to stop this madness,</i> you think to yourself.
-        "
+        """
     
-        IF exploredTortureChamber THEN TEXT "
+        IF exploredTortureChamber THEN TEXT """
             Now you know where the ritual will be performed and what is needed.
             You must stop your uncle!
-        "
+        """
 
-        IF readJournalPage4 THEN TEXT "
+        IF readJournalPage4 THEN TEXT """
             You cannot allow a child to be sacrificed for this evil. You must
             find the artifacts before they start the ritual and, if you can, 
             save the boy.
-        "
-    END EPILOG
-END DvmClosePortal
+        """
+    END PAGE EPILOG
+END BOOK DvmClosePortal

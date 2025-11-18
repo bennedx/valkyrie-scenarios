@@ -13,11 +13,9 @@ BOOK Foyer
 		
 		NO TEXT
 		
-		ADD TileFoyer
-		
-		exploredFoyerViaGallery = TRUE AFTER
+		exploredFoyerViaGallery = TRUE
 		GOTO PlaceFoyer
-	END ExploreFoyerViaGallery
+	END PAGE ExploreFoyerViaGallery
 	
 	PAGE ExploreFoyerViaHall2
 		TRIGGERED BY @ExploreFoyerViaHall2
@@ -27,8 +25,6 @@ BOOK Foyer
 		BUTTON "Explore"
 		
 		NO TEXT
-		
-		ADD TileFoyer
 
 		exploredFoyerViaHall2 = TRUE AFTER
 		GOTO PlaceFoyer
@@ -41,14 +37,15 @@ BOOK Foyer
 		BUTTON "Explore"
 		
 		NO TEXT
-		
-		ADD TileFoyer
 
 		exploredFoyerViaStudy = TRUE AFTER
 		GOTO PlaceFoyer
 	END ExploreFoyerViaStudy
 	
 	PAGE PlaceFoyer
+		REMOVE TokenExploreFoyerViaGallery, TokenExploreFoyerViaHall2, TokenExploreFoyerViaStudy
+		ADD TileFoyer
+		
 		TEXT """
 			The foyer is a large, nearly empty space with a front door, stairs,
 			and other doors leading to various parts of the house. Place the
@@ -56,14 +53,14 @@ BOOK Foyer
 			room.
 		"""
 		
-		REMOVE TokenExploreFoyerViaGallery, TokenExploreFoyerViaHall2, TokenExploreFoyerViaStudy
-		ADD TileFoyer
 		exploredFoyer = TRUE
-	END PlaceFoyer
+	END PAGE PlaceFoyer
 
 	PAGE PlaceFoyerExploreGallery
-		IF NOT exploredGallery THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF NOT exploredGallery
 		
+		ADD TokenExploreGalleryViaFoyer!
+
 		// assume ViaHall2
 		TEXT """
 			To your right, a door leads farther into the house. Place an
@@ -75,11 +72,12 @@ BOOK Foyer
 			an Explore token as indicated.
 		"""
 		
-		ADD TokenExploreGalleryViaFoyer!
-	END PlaceFoyerExploreGallery
+	END PAGE PlaceFoyerExploreGallery
 
 	PAGE PlaceFoyerExploreStudy
 		IF NOT exploredStudy THEN PAGE IS VISIBLE
+		
+		ADD TokenExploreStudyViaFoyer!
 		
 		// Assume ViaHall2
 		TEXT """
@@ -91,13 +89,13 @@ BOOK Foyer
 			Across the room and up some stairs, a door leads father into the
 			house. Place an Explore token as indicated.
 		"""
-		
-		ADD TokenExploreStudyViaFoyer!
-	END PlaceFoyerExploreStudy
+	END PAGE PlaceFoyerExploreStudy
 	
 	PAGE PlaceFoyerExploreHall2
 		IF NOT exploredHall2 THEN PAGE IS VISIBLE
 		
+		ADD TokenExploreHall2ViaFoyer!
+
 		// assume ViaGallery
 		TEXT """
 			Up the stairs and to your left, a door leads farther into the
@@ -108,12 +106,11 @@ BOOK Foyer
 			Down and up the stairs to your right is another door. Place an
 			Explore token as indicated.
 		"""
-		
-		ADD TokenExploreHall2ViaFoyer
-	END PlaceFoyerExploreHall2
+	END PAGE PlaceFoyerExploreHall2
 	
 	PAGE PlaceFoyerCandles
-	
+		ADD TokenFoyerSearchCandles!
+
 		// assume via Hall2
 		TEXT """
 			Next to you is a painting that catches your eye. Place a Search
@@ -124,30 +121,29 @@ BOOK Foyer
 			Next to a door across the room, a painting catches your eye. Place
 			a Search token as indicated.
 		"""
-		
-		ADD TokenFoyerSearchCandles!
-	END PlaceFoyerCandles
+	END PAGE PlaceFoyerCandles
 	
 	PAGE PlaceFoyerSearchRandom
+		ADD TokenSearchFoyerRandom!
+
 		TEXT """
 			A small cabinet with drawers and little compartments sits next to
 			the front door. Place a Search token as indicated.
 		"""
-		
-		ADD TokenSearchFoyerRandom!
 	END PlaceFoyerSearchRandom
 	
 	PAGE PlaceFoyerExploreFrontDoor
+		ADD TokenFoyerExploreFrontDoor!
+
 		TEXT """
 			The front door seems to be in good repair, but the glass set into
 			it is as filthy as that door off the driveway. Place an Explore
 			token as indicated.
 		"""
 		
-		ADD TokenFoyerExploreFrontDoor!
 		TRIGGER @MoveAfterExplore
 		EXIT
-	END PlaceFoyerExploreFrontDoor
+	END PAGE PlaceFoyerExploreFrontDoor
 	
 
 	PAGE SearchRandom
@@ -166,7 +162,7 @@ BOOK Foyer
 		"""
 		
 		EXIT
-	PAGE SearchRandom
+	PAGE PAGE SearchRandom
 	
 	PAGE SearchSpell
 		TRIGGERRED BY @SearchFoyerSpell
@@ -182,19 +178,5 @@ BOOK Foyer
 		"""
 		
 		EXIT
-	END SearchSpell
-	
-	PAGE SearchCloset
-		TRIGGERED BY @SearchFoyerCloset
-		
-		PROLOG """
-			Like most of the doors in this house, this one is ornate... and
-			covered in dust.
-		"""
-		
-		TEXT """
-		"""
-		
-		EXIT
-	END SearchCloset
-END Foyer
+	END PAGE SearchSpell
+END BOOK Foyer

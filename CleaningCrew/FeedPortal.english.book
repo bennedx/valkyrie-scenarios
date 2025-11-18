@@ -7,30 +7,30 @@ BOOK FeedPortal ORDERED NO KEEP
 	IF goal != goalFeedPortal THEN EXIT
 	
 	PAGE RitualBegins
-		TEXT "
-			You freeze as something... <i>happens</> to the house. You aren>t
+		TEXT """
+			You freeze as something... <i>happens</> to the house. You aren't
 			sure what it is, but fear clutches your gut as the feeling washes
 			over you.
 			
 			Then, from deep in the house, you hear a boy scream in pain and
 			terror. He stops abruptly and you feel something in the air, like
-			electricity. The house shudders and everything goes quiet. Sarah>s
-			eyes widen and she whispers to {c:EventChosenInvestigator}, <<He>s
+			electricity. The house shudders and everything goes quiet. Sarah's
+			eyes widen and she whispers to {c:EventChosenInvestigator}, <<He's
 			started. The ritual has started. We have to get to the
 			{c:TileAltar} and stop your cousin David.>>
 			
 			As she finishes speaking, someone in cult robes runs by you,
 			heading toward the cell.
-		"
+		"""
 	END RitualBegins
 
 	PAGE PortalOpens
-		TEXT "
-			The woman>s screaming stops and, for a moment, the house is silent
+		TEXT """
+			The woman's screaming stops and, for a moment, the house is silent
 			again... as if the house were taking a breath. Then, though you
 			cannot see it, you can feel the portal spring into being. You
 			hear... <i>something</> moan in pain, reverberating through the
-			wall, an unearthly sound. You know in your gut it>s David>s son.
+			wall, an unearthly sound. You know in your gut it's David's son.
 			
 			The feeling of power grows stronger; it radiates through the
 			floorboards and moves through the walls. Sarah whispers, <<The
@@ -45,15 +45,15 @@ BOOK FeedPortal ORDERED NO KEEP
 
 			<<You must kill them,>> she says loudly. Everyone in the room turns
 			to look at her. <<You must kill them all.>>
-		"
+		"""
 		
 		feedPortalKillCount = 0
 		feedPortalKillGoal = 2 * #investigator + 2 + !exploredGateNicely * #investigator
 		feedPortalKillCount = 0
-	END PortalOpens
+	END PAGE PortalOpens
 		
 	PAGE Sacrifice
-		TEXT "
+		TEXT """
 			The house pulses with power, overwhelming you for a moment. You
 			snap back to awareness as a cultist approaches. You steady yourself
 			for another attack.
@@ -61,58 +61,58 @@ BOOK FeedPortal ORDERED NO KEEP
 			The power you feel sputters with instability. With these cultists
 			as sacrifice, the portal will remain open; without them, it will
 			collapse.
-		"
-	END Sacrifice
+		"""
+	END PAGE Sacrifice
 	
 	PAGE Hurry
-		TEXT "
+		TEXT """
 			Sarah whispers, <<We must hurry. He is summoning his god. I can
 			feel it.>>
 			
 			The house continues to vibrate with what you assume is the energy
 			of the portal. What should be a stable hum continues its uneven
 			popping.
-		"
-	END Hurry
+		"""
+	END PAGE Hurry
 	
 	PAGE Ponder
-		TEXT "
+		TEXT """
 			You stop for a moment and wonder, <i>How many cultists do we have
-			to kill? We’ve already killed {feedPortalKillCount}.</i> Out of
-			the corner of your eye you see another one coming. It>s time to get
+			to kill? We've already killed {feedPortalKillCount}.</i> Out of
+			the corner of your eye you see another one coming. It's time to get
 			back to work.
-		"
-	END Ponder
+		"""
+	END PAGE Ponder
 	
 	PAGE KeepGoing 
-		TEXT "
+		TEXT """
 			The house stops vibrating for a moment. When it starts again, it
 			is weaker, but still powerful.
 			
 			<<What you are doing is working,>> Sarah whispers. <<Keep going. I
-			think we>re close.>>
-		"
-	END KeepGoing
+			think we're close.>>
+		"""
+	END PAGE KeepGoing
 	
 	
 	LOOP RANDOM
 	
 	PAGE RunningOutOfTime // RANDOM
-		TEXT "
+		TEXT """
 			<<Hurry,>> Sarah whispers. <<The portal is still open and we are
 			running out of time.>>
-		"
-	END RunningOutOfTime
+		"""
+	END PAGE RunningOutOfTime
 	
 	PAGE ItsComing // RANDOM
-		TEXT "
+		TEXT """
 			<<Please,>> Sarah begs, <<It is almost here.>>
-		"
-	END ItsComing
+		"""
+	END PAGE ItsComing
 	
 	Page ItsHere // RANDOM
-		TEXT "
+		TEXT """
 			<<I can feel It. It is here. We may already be too late.>>
-		"
-	END ItsHere
+		"""
+	END PAGE ItsHere
 END FeedPortal

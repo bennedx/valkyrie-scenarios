@@ -5,6 +5,8 @@ BOOK Driveway ORDERED NO KEEP
 	PAGE Place 
 		TRIGGERED BY @PlaceDriveway WHEN NOT testMod
 		
+		ADD TileDriveway
+
 		TEXT """
 			It's 3:00 and you're on time. The man your friend spoke with on the
 			phone--Benjamin--should be here to meet you.
@@ -17,48 +19,54 @@ BOOK Driveway ORDERED NO KEEP
 			Place the {c:TileDriveway} tile as indicated.
 		"""
 		
-		ADD TileDriveway
-	END Place
+	END PAGE Place
 	
 	PAGE PlaceInvestigators
 		TEXT """
 			You wonder what you were thinking when you said <<yes>> to your
 			friend. Place your investigators as indicated.
 		"""
-	END Investigators
+	END PAGE Investigators
 	
 	PAGE PlaceExploreKitchenViaDriveway
+		ADD TokenExploreKitchenViaDriveway!
+
 		TEXT """
-			After walking around the house, you are not surprised that the door next to you is covered with mud and spiderwebs. Like the rest of the house, the paint is peeling and the door shows signs of dry rot.
+			After walking around the house, you are not surprised that the door
+			next to you is covered with mud and spiderwebs. Like the rest of the
+			house, the paint is peeling and the door shows signs of dry rot.
 
 			Place an Explore token as indicated.
 		"""
 	
-		ADD TokenExploreKitchenViaDriveway!
-	END PlaceExploreKitchenViaDriveway
+	END PAGE PlaceExploreKitchenViaDriveway
 	
 	PAGE PlaceGate
-
+		ADD TokenExploreBackyardViaDriveway!
+		
 		TEXT """
 			Up ahead, at the end of the drive, is a gate that leads around to
 			the back of the house. Place an Explore token as indicated.
 		"""
-	END PlaceGate
+	END PAGE PlaceGate
 	
 	PAGE PlaceGardenTool
+		ADD TokenSearchDrivewayGardenTool!
+
 		TEXT """
 			The weeds behind the house are even taller than the ones in front.
 			Over at the corner of the drive, something under the weeds catches
 			your eye. Place a Search token as indicated.	
 		"""
 		
-		ADD TokenSearchDrivewayGardenTool!
 		initialized = TRUE
-	END PlaceGardenTool
+	END PAGE PlaceGardenTool
 	
 	PAGE PlaceWendy
-		IF #HeroWendyAdams THEN PAGE IS VISIBLE
+		PAGE IS VISIBLE IF #HeroWendyAdams
 		
+		ADD QItemWendyGun
+
 		TEXT """
 			As she walks up the drive, Wendy Adams trips and falls. She twists
 			her ankle and skins her knees. When she looks up, she sees
@@ -67,12 +75,12 @@ BOOK Driveway ORDERED NO KEEP
 			When she finally stands up, she doesn’t feel as agile as usual. In
 			this scenario, Wendy can become Restrained.
 		"""
-		
-		ADD QItemWendyGun
-	END PlaceGardenTool
+	END PAGE PlaceGardenTool
 	
-	PAGE PlaceTest NO TEXT
-		IF testMode THEN PAGE IS VISIBLE
+	PAGE PlaceTest
+		PAGE IS VISIBLE IF testMode
+		
+		NO TEXT
 		
 		ADD TokenTestPlaceDriveway TokenTestTakeBooks TokenTestStartRitual
 		ADD TokenTestRitualPreparations TokenTestRitualFinished
@@ -101,9 +109,10 @@ BOOK Driveway ORDERED NO KEEP
 		EXIT
 	END Test
 	
-	PAGE PlaceEnd NO TEXT
+	PAGE PlaceEnd
+		NO TEXT
 		EXIT
-	END PlaceEnd
+	END PAGE PlaceEnd
 	
 	
 	PAGE SearchGardenTool
@@ -116,6 +125,8 @@ BOOK Driveway ORDERED NO KEEP
 		"""
 		BUTTON "Search"
 		
+		ADD QItemGardenTool!
+
 		TEXT """
 			You rustle around in the weeds and find something interesting.
 			Gain the {c:QItemGardenTool} Common Item, then discard this
@@ -129,12 +140,10 @@ BOOK Driveway ORDERED NO KEEP
 			Gain 1 {clue}, then take 1 Horror ({will} negates).
 		"""
 		
-		ADD QItemGardenTool BEFORE
 		REMOVE TokenSearchDrivewayGardenTool
-		foundGardenTool = TRUE AFTER
-		
+		foundGardenTool = TRUE		
 		EXIT
-	END SearchGardenTool
+	END PAGE SearchGardenTool
 	
 	PAGE SearchJournal
 		TRIGGERED BY @FindJournalInDriveway
@@ -154,11 +163,9 @@ BOOK Driveway ORDERED NO KEEP
 			can interact with it in the app.
 		"""
 	
-		ADD QItemJournal
-		REMOVE TokenSearchDrivewayJournal AFTER
-		
+		REMOVE TokenSearchDrivewayJournal
 		EXIT
-	END SearchJournal
+	END PAGE SearchJournal
 	
 	
 	PAGE ExploreBackyardViaDriveway
@@ -177,9 +184,11 @@ BOOK Driveway ORDERED NO KEEP
 		TEST QUOTA 3
 			ON PASS GOTO ExploreNotNice
 			ON PAS GOTO ExploreNice
-	END ExploreBackyardViaDriveway
+	END PAGE ExploreBackyardViaDriveway
 	
 	PAGE ExploreNotNice
+		ADD TokenDriveWayBen!
+
 		TEXT """
 			You give it all you’ve got... and the gate, seemingly
 			rusty and poorly maintained, gives way with a terrible
@@ -194,9 +203,8 @@ BOOK Driveway ORDERED NO KEEP
 		"""
 		
 		exploredBackyardNicely = FALSE
-		ADD TokenDriveWayBen!
 		REMOVE TokenExploreBackyardViaDriveway
-	END ExploreNotNice
+	END PAGE ExploreNotNice
 	
 	PAGE ExploreNotNiceBen
 		TEXT """
@@ -210,33 +218,36 @@ BOOK Driveway ORDERED NO KEEP
 			without me.>>
 
 			Benjamin brushes past you with a harrumph. Remove the
-			Purple Man token and this Explore token.
+			Purple Man token.
 
 			You’ve only just arrived and the client is already angry.
 			This could turn out badly for both you and your friend's
 			business.
 		"""
 		
-		REMOVE TokenDrivewayBen AFTER
-	END ExploreNotNiceBen
+		REMOVE TokenDrivewayBen
+	END PAGE ExploreNotNiceBen
 	
 	PAGE ExploreNotNiceJournal
+		ADD TokenExploreBackyardViaDrivewaySight!
+
 		TEXT """
 			A moment later, you hear Benjamin yelp. After a beat,
 			you look back... as you do you see a book lying on
 			the ground where Benjamin had been standing. Place
-			a Search token where indicated.
+			a Search token as indicated.
 			
 			You turn back to the gate, take a breath and...
 			
 			Place a Sight token as indicated.
 		"""
 		
-		ADD TokenExploreBackyardViaDrivewaySight!
 		EXIT
-	END ExploreNotNiceJournal
+	END PAGE ExploreNotNiceJournal
 	
 	PAGE ExploreNice
+		ADD TokenDrivewayBen!
+
 		TEXT """
 			As you gently pull the gate, you find that it opens easily.
 			Now that you're looking, you see that someone recently
@@ -251,10 +262,9 @@ BOOK Driveway ORDERED NO KEEP
 			Place the Purple Man token as indicated.
 		"""
 		
-		ADD TokenDrivewayBen!
-		REMOVE TokenExploreBackyardViaDriveway AFTER
+		REMOVE TokenExploreBackyardViaDriveway
 		exploredBackyardNicely = TRUE
-	END ExploreNice
+	END PAGE ExploreNice
 	
 	PAGE ExploreNiceBen
 		TEXT """
@@ -269,9 +279,11 @@ BOOK Driveway ORDERED NO KEEP
 		"""
 	
 		REMOVE TokenDrivewayBen
-	END ExploreNiceBen
+	END PAGE ExploreNiceBen
 	
 	PAGE ExploreNiceJournal
+		ADD TokenSearchDrivewayJournal!
+
 		TEXT """
 			You turn to look back and see a book Benjamin must have
 			dropped. Place a Search token as indicated.
@@ -281,9 +293,8 @@ BOOK Driveway ORDERED NO KEEP
 			indicated.
 		"""
 	
-		ADD TokenSearchDrivewayJournal!
 		EXIT
-	END ExploreJournal
+	END PAGE ExploreJournal
 		
 	PAGE SearchJournal
 		TRIGGERED BY @SearchOutsideJournal
@@ -304,11 +315,10 @@ BOOK Driveway ORDERED NO KEEP
 			Remove this Search token.
 		"""
 		
-		foundJournal = TRUE AFTER
+		foundJournal = TRUE
 		REMOVE TokenSearchDrivewayJournal
-		ADD QItemJournal
 		EXIT
-	END SearchJournal
+	END PAGE SearchJournal
 	
 	PAGE SearchGardenTool
 		PROLOG """
@@ -329,10 +339,9 @@ BOOK Driveway ORDERED NO KEEP
 			
 			Remove this Search token.
 		"""
-		
-		
-		foundGardenTool = TRUE AFTER
+				
+		foundGardenTool = TRUE
 		REMOVE TokenSearchDrivewayGardenTool
 		EXIT		
-	END SearchGardenTool
-END Driveway
+	END PAGE SearchGardenTool
+END BOOK Driveway
