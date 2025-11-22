@@ -86,7 +86,7 @@ Book Library Ordered No Keep Looped
 	End Page SearchKey
 	
 	Page SearchBookcase
-		Triggered By @SearchLibraryBookcase If Not Already Read
+		Triggered By @SearchLibraryBookcase When Unread
 		
 		Prolog """
 			The books seem like a hodgepodge of local history, religion, and
@@ -114,7 +114,7 @@ Book Library Ordered No Keep Looped
 	End Page SearchBookcaseFail
 	
 	Page SearchBookcaseAgain
-		Triggered By @SearchLibraryBookcase If SearchBookcase Is Read
+		Triggered By @SearchLibraryBookcase When SearchBookcase Is Read
 		
 		Prolog "The book wouldn't move, but it will this time..."
 		
@@ -152,7 +152,7 @@ Book Library Ordered No Keep Looped
 	End Page PlaceBookcaseExplore
 	
 	Page ExploreChapelViaBookcase
-		Triggered By @ExploreChapelViaBookcase If Not Already Read
+		Triggered By @ExploreChapelViaBookcase When Unread
 		
 		Prolog """
 			There is an elaborate lock on the door behind the bookcase; it has
@@ -161,14 +161,14 @@ Book Library Ordered No Keep Looped
 			bust through the door; otherwise, maybe the lock could be picked?
 		"""
 		
-		Pass = "Tap to attempt the puzzle using {lore}"
-		Fail = "Smash the door with a heavy weapon"
+		Text Pass = "Tap to attempt the puzzle using {lore}"
+		Text Fail = "Smash the door with a heavy weapon"
 		
 		Test
 			On Pass Do Nothing
 			On Fail Goto ExploreChapleViaBookcaseSmash
 
-		FREE
+		Free
 		
 		No Text
 	End Page ExploreChapelViaBookcase

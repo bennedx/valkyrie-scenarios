@@ -34,7 +34,7 @@ Book Study Ordered No Keep Looped
 	End Page ExploreStudy
 
 	Page PlaceExploreHall2
-		Page Is Visible If exploredHall2 != exploredFoyer
+		Page Is Visible When exploredHall2 != exploredFoyer
 		
 		Text """
 			A door next to you leads farther into the house. Place an Explore

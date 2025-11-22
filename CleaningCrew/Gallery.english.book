@@ -51,7 +51,7 @@ Book Gallery Ordered No Keep Looped
 	End Page ExploreGallery
 
 	Page PlaceExploreFoyerViaGallery
-		Page Is Not Visible If exploredFoyer
+		Page Is Not Visible When exploredFoyer
 
 		Add TokenExploreFoyerViaGallery!
 

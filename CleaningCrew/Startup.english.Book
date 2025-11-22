@@ -71,13 +71,13 @@ Book Startup Ordered No Keep
 	End Page SplashScreenClosed
 	
 	Page StartScenario No Text
-		Page Is Not Visible If testMode
+		Page Is Not Visible When testMode
 		
 		Text "Each investigator receives 1 {clue}."
 	End Page StartScenario
 	
 	Page Kate
-		If #HeroKateWinthrop Then Page Is Visible
+		Page Is Visible WHEN #HeroKateWinthrop
 		
 		Text """
 			Kate is running late, so she is hurried and inattentive. She grabs

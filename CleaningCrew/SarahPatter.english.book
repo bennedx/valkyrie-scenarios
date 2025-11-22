@@ -9,7 +9,7 @@ Language English
 BOOK SarahPatter Ordered No Keep
 
     Page Dvm
-        Page Is Visible If foundDvm
+        Page Is Visible When foundDvm
 
         Text """
             Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDVM} is
@@ -33,7 +33,7 @@ BOOK SarahPatter Ordered No Keep
     End Page Dvm
 
     Page Candles
-        Page Is Visible If foundCandles
+        Page Is Visible When foundCandles
 
         Text """
             Sarah whispers to {c:EventChosenInvestigator}, <<There's a part of
@@ -44,7 +44,7 @@ BOOK SarahPatter Ordered No Keep
     End Page Candles
 
     Page ElderSign
-        Page Is Visible If foundElderSign
+        Page Is Visible When foundElderSign
 
         Text """
             Sarah whispers to {c:EventChosenInvestigator}, <<The
@@ -71,7 +71,7 @@ BOOK SarahPatter Ordered No Keep
     End Page ElderSign
 
     Page RitualComponents
-        Page Is Visible If foundRitualComponents
+        Page Is Visible When foundRitualComponents
 		
         Text """
             Sarah reaches out as if to touch the {c:QItemRitualComponents}. <<I
@@ -82,7 +82,7 @@ BOOK SarahPatter Ordered No Keep
     End Page RitualComponents
 
     Page Dagger
-        Page Is Visible If foundDagger
+        Page Is Visible When foundDagger
 
         Text """
             Sarah reaches toward the {c:QItemRitualDagger}. <<I recognize this
@@ -92,7 +92,7 @@ BOOK SarahPatter Ordered No Keep
     End Page Dagger
 
     Page Journal
-        Page Is Visible If foundJournal
+        Page Is Visible When foundJournal
         
         Text """
             Sarah looks down and sees you holding the {c:QItemJournal}. <<The

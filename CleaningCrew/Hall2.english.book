@@ -92,7 +92,7 @@ Book Hall2 Ordered No Keep Looped
 	
 	
 	Page PlaceExploreFoyerViaHall2
-		Page Is Not Visible If exploredFoyer
+		Page Is Not Visible When exploredFoyer
 		
 		Add TokenExploreFoyerViaHall2!
 

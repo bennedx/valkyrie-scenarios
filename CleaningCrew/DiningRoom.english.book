@@ -1,10 +1,10 @@
 Language English
 
 Book PlaceDiningRoom Ordered No Keep Looped
-	Triggered By @talkedToBen If @talkedToBenCount >= 2
+	Triggered By @talkedToBen When @talkedToBenCount >= 2
 	
 	Page Locked
-		Triggered By@ExploreHall1ViaDiningRoomLocked
+		Triggered By @ExploreHall1ViaDiningRoomLocked
 		
 		Text """
 			The door is filthy. You check the knob, but it's locked:  you'll need a key to get in.
@@ -15,7 +15,7 @@ Book PlaceDiningRoom Ordered No Keep Looped
 	End Page Locked
 
 	Page OpenDoor
-		Triggered By@TalkToBackyardBen If @TalkToBenCount >= 2
+		Triggered By @TalkToBackyardBen When @TalkToBenCount >= 2
 		
 		Add TileDiningRoom, TokenBackyardBenPassive, TokenDoorDiningRoom!
 		Remove TokenExploreDiningRoomViaBackdoor, TokenBackyardBenBefore
@@ -82,7 +82,7 @@ Book PlaceDiningRoom Ordered No Keep Looped
 	End Page Paper
 	
 	Page Journal
-		Page Is Visible If Not foundJournal
+		Page Is Visible When Not foundJournal
 		
 		Text """
 			As you walk into the house, you remember the book in the driveway. You glance back toward the gate as you step inside. Move 1 space into the {c:TileDiningRoom}.
@@ -93,8 +93,8 @@ End Book PlaceDiningRoom
 Book SearchDiningRoom Ordered No Keep Looped
 
 	Page StartFluxStabilizer
-		Triggered By@SearchFluxStabilizer If Not Already Read
-		If test Then Trigger @AskAboutGate
+		Triggered By @SearchFluxStabilizer When Unread
+		If testMode Then Trigger @AskAboutGate
 	
 		Prolog "A small device with gears, hoses, and lights sits on the table."
 		Button "Search"
@@ -124,7 +124,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 	End Page StartFluxStabilizer
 	
 	Page Finn
-		Page Is VIsIBLE If #HeroFinnEdwards
+		Page Is Visible When #HeroFinnEdwards
 		
 		Text """
 			Finn Edwards starts to come to, not sure at first where he is:  he
@@ -140,12 +140,12 @@ Book SearchDiningRoom Ordered No Keep Looped
 	End Page Finn
 	
 	Page Kate
-		Page Is VIsIBLE If #HeroKateWinthrop
+		Page Is Visible When #HeroKateWinthrop
 		
 		Text "Will Kate pick up the {c:QItemFluxStabilizer}?"
 		
-		Pass = "Yes"
-		Fail = "No"
+		Text Pass = "Yes"
+		Text Fail = "No"
 		
 		Test On Pass Goto KatePicksUp On Fail Goto KateDoesNotPickUp
 	End Page Kate
@@ -191,7 +191,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 
 	Page Puzzle1
 		Page Is Not Visible
-		Triggered By @SearchFluxStabilizer If Not Already Read AND StartFluxStabilizer Is Already Read
+		Triggered By @SearchFluxStabilizer When Unread And StartFluxStabilizer Is Read
 
 		Prolog """
 			There seems to be a
@@ -210,7 +210,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 	End Page Puzzle1
 
 	Page Puzzle2
-		Triggered By @SearchFluxStabilizer If Puzzle1 Is Already Read
+		Triggered By @SearchFluxStabilizer When Puzzle1 Is Read
 		
 		Text """
 			Maybe if you randomly flipped a few more buttons or turned a few
@@ -258,7 +258,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 		Exit
 	End Page GetFluxStabilizer
 
-	Page GetFluxStabilizer
+	Page GetFluxStabilizer2
 		Add TokenBackyardBenAfter!
 		Remove TokenBackyardBenPassive
 	
@@ -278,11 +278,10 @@ Book SearchDiningRoom Ordered No Keep Looped
 
 			He seems to have something in his hand.
 		"""
-	End Page GetFluxStabilizer
-
+	End Page GetFluxStabilizer2
 
 	Page PaperInBox
-		Triggered By@SearchDiningRoomPaper
+		Triggered By @SearchDiningRoomPaper
 		
 		Prolog "There's a yellowed scrap of paper in the box."
 		Button "Search"

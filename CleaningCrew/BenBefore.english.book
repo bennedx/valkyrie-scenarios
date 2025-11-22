@@ -154,7 +154,7 @@ Book BenBefore Random No Keep Looped
 	End Page Why
 	
 	Page Sorry
-		Page Is Not Visible If exploredBackyardNicely
+		Page Is Not Visible When exploredBackyardNicely
 
 		Button "<<I'm sorry about the gate.>>"
 		

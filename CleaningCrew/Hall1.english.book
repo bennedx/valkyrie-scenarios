@@ -176,21 +176,21 @@ Book Hall1 Ordered No Keep Looped
 		"""
 		
 		Add TokenSarah!
-	End Page SearchPainting3
+	End Page SearchPainting2
 	
 	
 	Page TalkToSarah
-		Triggered By @TalkToSarah If Not Already Read
+		Triggered By @TalkToSarah When Unread
 		
 		Text """
 			She is a pretty girl in the the first blush of youth--maybe 11 or
 			12 years old. She has curly hair with ribbons and a bright white 
 			dress that stands out in the dingy hallway.
 		"""
-	End Page TalktoSarah
+	End Page TalkToSarah
 	
-	Page TalktoSarah2
-		Triggered By @TalkToSarah If TalkToSarah Is Already Read
+	Page TalkToSarah2
+		Triggered By @TalkToSarah When TalkToSarah Is Read
 		
 		Prolog """
 			She looks at you expectantly. She looks like she wants to say
@@ -219,5 +219,5 @@ Book Hall1 Ordered No Keep Looped
 		Remove TokenSarah
 		foundSarah = true
 		Exit
-	End Page TalkSarah2
+	End Page TalkToSarah2
 End Book Hall1

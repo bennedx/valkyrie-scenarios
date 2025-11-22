@@ -3,7 +3,7 @@ LANGUAGE English
 Book Driveway Ordered No Keep
 	
 	Page Place 
-		Triggered By @PlaceDriveway If Not testMod
+		Triggered By @PlaceDriveway When Not testMod
 		
 		Add TileDriveway
 
@@ -67,7 +67,7 @@ Book Driveway Ordered No Keep
 	End Page PlaceGardenTool
 	
 	Page PlaceWendy
-		Page IS Visible If #HeroWendyAdams
+		Page IS Visible When #HeroWendyAdams
 		
 		Add QItemWendyGun
 
@@ -82,7 +82,7 @@ Book Driveway Ordered No Keep
 	End Page PlaceWendy
 	
 	Page PlaceTest No Text
-		Page IS Visible If testMode
+		Page IS Visible When testMode
 		
 		Add TokenTestPlaceDriveway, TokenTestTakeBooks, TokenTestStartRitual
 		Add TokenTestRitualPreparations, TokenTestRitualFinished
@@ -131,8 +131,8 @@ Book Driveway Ordered No Keep
 			Search token.
 
 			As you pull it free of the weeds, a child's doll is exposed.
-			The clothing is ragged and the paint is chipping. You think
-			back to the children that were found here and wonder if this
+			The clothing is ragged and the paint is chipped. You think
+			back to the children who were found here and wonder if this
 			doll belonged to one of them.
 
 			Gain 1 {clue}, then take 1 facedown Horror ({will} negates).
@@ -291,30 +291,4 @@ Book Driveway Ordered No Keep
 	
 		Exit
 	End Page ExploreNiceJournal
-	
-	Page SearchGardenTool
-		Prolog """
-			The weeds along the edge of driveway are tall, thick, and
-			long-dead. Whatever is under them has been bound tightly over
-			the years.
-		"""
-		Button "Search"
-		
-		Remove TokenSearchDrivewayGardenTool
-
-		Text """
-			You rustle around in the weeds and find something interesting.
-			Gain the {c:QItemGardenTool} Common Item. As you pull it free
-			of the weeds, a child's doll is exposed. The clothing is ragged
-			and the paint is chipped. You think back to the children that
-			were found here and wonder if this doll belonged to one of them.
-			
-			Gain 1 {clue}, then take 1 Horror ({will} negates).
-			
-			Remove this Search token.
-		"""
-				
-		foundGardenTool = true
-		Exit		
-	End Page SearchGardenTool
 End Book Driveway
