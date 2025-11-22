@@ -1,40 +1,40 @@
 LANGUAGE English
 DEBUG OFF
 
-BOOK DvmClosePortal ORDERED KEEP LOOPED
-    IF goal != goalClosePortal THEN EXIT
+Book DvmClosePortal Ordered Keep Looped
+    If goal != goalClosePortal Then Exit
 
-    PAGE TableOfContents
-        PROLOG "The {c:QItemDVM} looks old and worn with time."
-        BUTTON "Open the book" AFTER "Table of Contents"
+    Page TableOfContents
+        Prolog "The {c:QItemDVM} looks old and worn with time."
+        Button "Open the book" After "Table of Contents"
 
-        TEXT """
+        Text """
             Table of Contents
 
             You open the book. On the inside
-            cover, someone--probably {c:EventChosenInvestigator}>s father--
+            cover, someone--probably {c:EventChosenInvestigator}'s father--
             scrawled a note that reads, <<Only my descendants will be able to
             read this book, and only at the appointed hour. I have seen to
             this.>> 
 			
 			You puzzle over this for a moment, then turn to the first page.
-			It>s a table of contents. The book seems to be full of spells and
+			It's a table of contents. The book seems to be full of spells and
 			rituals. You scan down to find something about portals. Maybe
 			<<Travel, page 72>>?
 
             {qst:FirstTimeRead}, gain 1 {clue}.
         """
-    END PAGE TableOfContents
+    End Page TableOfContents
 
-    PAGE Portals
-        PROLOG """
+    Page Portals
+        Prolog """
             This is a spell book and {c:EventChosenInvestigator}
 			may have... abilities. Sarah is pushing you to find something
 			about closing portals.
         """
-        BUTTON "Turn to page 72" AFTER "Portals"
+        Button "Turn to page 72" After "Portals"
 
-        TEXT """
+        Text """
             You flip through the pages to find the <<Travel>> section on
             page 72. The first entry is for portals.
 
@@ -47,21 +47,21 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
             
             There is a list of materials and artifacts needed.
             The list includes a dagger, chalice, human skull, and
-            various herbs. There>s also mention of an <<elder sign>>
-            but you aren>t sure what that is. From what you saw earlier in the
+            various herbs. There's also mention of an <<elder sign>>
+            but you aren't sure what that is. From what you saw earlier in the
 			book, these materials seem similar to what is needed to open a
 			portal.
             
             <i>I wonder if they actually have these already?</i> you ask
             yourself. 
         """
-    END PAGE Portals
+    End Page Portals
 
-    PAGE Tools
-        PROLOG "Closing a portal is going to require a lot of work."
-        BUTTON "Read the next page" AFTER "Tools"
+    Page Tools
+        Prolog "Closing a portal is going to require a lot of work."
+        Button "Read the next page" After "Tools"
     
-        TEXT """
+        Text """
             Dagger
         
             You flip the page. Here the book goes into detail about the
@@ -83,16 +83,16 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
 
             {qst:FirstTimeRead}, gain 1 {clue}.
         """
-    END PAGE Tools
+    End Page Tools
 
-    PAGE Sacrifice
-        PROLOG "
+    Page Sacrifice
+        Prolog "
             Each tool seems to need special attention. This will require more
             study.
         "
-        BUTTON "Read the next page" AFTER "Sacrifice"
+        Button "Read the next page" After "Sacrifice"
     
-        TEXT """
+        Text """
             Sacrifice
 
             The next page delves into the importance of personal sacrifice.
@@ -106,7 +106,7 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
             {qst:FirstTimeRead}, suffer 1 Horror ({will} negates).
         """
 		
-		IF readJournalPage5 THEN TEXT """
+		If readJournalPage5 Then Text """
             Sacrifice
 
             The next page delves into the importance of personal sacrifice.
@@ -120,15 +120,15 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
 
             {qst:FirstTimeRead}, suffer 1 Horror ({will} negates).
 		"""
-    END PAGE Sacrifice
+    End Page Sacrifice
     
-    PAGE Commentary
-        PROLOG """
+    Page Commentary
+        Prolog """
             A look of concern and disgust on your face, you turn the page.
         """
-        BUTTON "Read the next page" AFTER "Commentary"
+        Button "Read the next page" After "Commentary"
 
-        TEXT """
+        Text """
             Commentary
 
             Finally, there is commentary and advice. One section discusses ley
@@ -142,7 +142,7 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
             the list.
         """
 
-        IF readAboutBoy THEN TEXT """
+        If readAboutBoy Then Text """
             Commentary
 
             Finally, there is commentary and advice. One section discusses ley
@@ -158,23 +158,23 @@ BOOK DvmClosePortal ORDERED KEEP LOOPED
             <i>The boy must be under the house somewhere,</i> you think to
             yourself.
         """
-    END PAGE PAGE Commentary
+    End Page Commentary
     
-    EPILOG
-        TEXT """
+    Epilog
+        Text """
             <i>Maybe I need to explore a bit more to figure out what I need to
             do to stop this madness,</i> you think to yourself.
         """
     
-        IF exploredTortureChamber THEN TEXT """
+        If exploredTortureChamber Then Text """
             Now you know where the ritual will be performed and what is needed.
             You must stop your uncle!
         """
 
-        IF readJournalPage4 THEN TEXT """
+        If readJournalPage4 Then Text """
             You cannot allow a child to be sacrificed for this evil. You must
             find the artifacts before they start the ritual and, if you can, 
             save the boy.
         """
-    END PAGE EPILOG
-END BOOK DvmClosePortal
+    End Epilog
+End Book DvmClosePortal

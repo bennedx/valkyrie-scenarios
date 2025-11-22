@@ -1,15 +1,12 @@
-LANGUAGE English
+Language English
 
-TEXT UncleDavid = "Uncle David"
+Book OpenPortal Ordered No Keep Looped
+    If goal != goalOpenPortal Then Exit
 
+	Mark Step3Repeat Read
 
-BOOK OpenPortal ORDERED NO KEEP LOOPED
-    IF goal != goalOpenPortal THEN EXIT
-
-	MARK Step3Repeat READ
-
-    PAGE Step1
-        PROLOG "
+    Page Step1
+        Prolog """
 			David stands at the alter, arms raised, speaking
 			a language you cannot understand. You can see on the altar the
 			various tools and materials needed for the ritual.
@@ -26,11 +23,11 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 			David.
         
             Are you ready?
-        "
+        """
 
-        BUTTON "Speak the words"
+        Button "Speak the words"
 
-        TEXT "
+        Text """
 			When you get close to the altar, you see that
 			David does not have an {c:QItemElderSign}. That
 			means he will need blood to keep the portal open. You must stop him
@@ -38,7 +35,7 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 			
 			You think back to the counter-spell you memorized earlier. You hold
 			the {c:QItemRitualKnife} and chalice above your head and speak the
-			words. {c:UncleDavid} snaps his head toward you, as though seeing
+			words. David snaps his head toward you, as though seeing
 			you here for the first time. Your eyes lock and you see a 
 			determined but haunted look in his eyes.
 			
@@ -46,18 +43,18 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 			out of his mouth and he looks back at you.
 			
 			This step is complete.
-        "
-    END Step1
+        """
+    End Page Step1
 
-    PAGE Step2
-        PROLOG "
-            {c:UncleDavid} lowers his eyes to the dagger he holds. While no
+    Page Step2
+        Prolog """
+            You cousin lowers his eyes to the dagger he holds. While no
 			sound comes out, you see him moving his lips.
-        "
+        """
 
-        BUTTON "Stab David"
+        Button "Stab David"
 
-        TEXT "
+        Text """
 			You choose your moment and lunge at him with your knife. At the
 			last moment, he steps to the left and your knife glances off of his
 			robed arm without doing any damage.
@@ -65,24 +62,24 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 			You think you can turn and make a more direct hit. Test {agility}.
 			
 			For each Unique Item you have, you may roll 1 extra die.
-        "
+        """
 		
 		// even if we pass, we fail
-        TEST QUOTA 10
-            ON PASS DO NOTHING
-            ON FAIL DO NOTHING
-    END Step2
+        Test Quota 10
+            On Pass Do Nothing
+            On Fail Do Nothing
+    End Page Step2
 
-    PAGE Step3
-        PROLOG "
+    Page Step3
+        Prolog """
 			He steps away again and you stumble, bumping into him and knocking
 			the {c:QItemRitualDagger} from his hand. It clatters onto the altar
 			and you step back.
-        "
+        """
 
-		BUTTON "Speak the words"
+		Button "Speak the words"
 
-        TEXT "
+        Text """
 			David grabs the knife and begins speaking the
 			incantation again, his voice booming with power. The knife begins
 			glowing and lightly, slowly pulsing.
@@ -90,69 +87,69 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 			You speak the words again. Test {will}.
 			
 			For each Unique Item you have, you may roll 1 extra die.
-        "
+        """
 
         // even if we pass, we fail
-		TEST QUOTA 4
-            ON PASS DO NOTHING
-            ON FAIL GOTO Step3Fail
-    END Step3
+		Test Quota 4
+            On Pass Do Nothing
+            On Fail Goto Step3Fail
+    End Page Step3
 
-    PAGE Step3Fail
-        PAGE IS NOT VISIBLE
+    Page Step3Fail
+        Page Is Not Visible
 		
-        TEXT "
+        Text """
             You fumble the words and nothing happens. David
 			ignores you and slides the blade across his palm.
         
             Suffer 2 Horror ({will} negates).
 			
 			You must stop him.
-        "
+        """
 
-        MARK Step3Repeat UNREAD
-    END Step3Fail
+        Mark Step3Repeat Unread
+    End Page Step3Fail
 
-	PAGE Step3Repeat
-		PROLOG "
-			Suprised that the spell didn>t work, you raise your arms again.
-		"
+	Page Step3Repeat
+		Prolog """
+			Suprised that the spell didn't work, you raise your arms again.
+		"""
 		
-		BUTTON "Speak the words"
+		Button "Speak the words"
 		
-		TEXT "
+		Text """
 			You begin speaking, hoping to block his voice again. Test {will}.
 			
 			For each Unique Item you have, you may roll 1 extra die.
-		"
+		"""
 		
-		TEST QUOTA 4
-			ON PASS DO NOTHING
-			ON FAIL GOTO Step3RepeatFail
-	END Step3Repeat
+		Test Quota 4
+			On Pass Do Nothing
+			On Fail Goto Step3RepeatFail
+	End Page Step3Repeat
 
-	PAGE Step3RepeatFail
-		PAGE IS NOT VISIBLE
+	Page Step3RepeatFail
+		Page Is Not Visible
 				
-		TEXT "
+		Text """
 			David seems unphased as blood wells up from the 
 			cut in his palm. You look at the dagger and chalice raised in your
 			hands and wonder why nothing is happening. You take a deep breath,
 			determined to stop this madness.
-		"
+		"""
 
-		MARK Step3Repeat UNREAD
-	END Step3RepeatFail
+		Mark Step3Repeat Unread
+	End Page Step3RepeatFail
 
-    PAGE Step4
-        PROLOG "
+    Page Step4
+        Prolog """
             As David squeezes blood from his fist into the
 			chalice, the spell takes hold and... he loses his voice again.
-        "
+        """
 
-        BUTTON "Make your move"
+        Button "Make your move"
 
-        TEXT "
+        Text """
 			With David distracted and frustrated, you reach
 			out to grab the skull. If only you can reach it before he... does
 			something.
@@ -160,19 +157,19 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 			Test {agility}.
 			
 			For each Unique Item you have, you may roll 1 extra die.
-       "
+       """
    
        // even if we pass, we fail
-	   TEST QUOTA 10
-            ON PASS GOTO Step4Fail
-            ON FAIL GOTO Step4Fail
-    END Step4
+	   Test Quota 10
+            On Pass Goto Step4Fail
+            On Fail Goto Step4Fail
+    End Page Step4
 
 
-	PAGE Step4Fail
-		PAGE IS NOT VISIBLE
+	Page Step4Fail
+		Page Is Not Visible
 		
-		TEXT "
+		Text """
 			David swings his arm at you, dagger flashing in the low
 			light. It catches your arm, causing you to drop the dagger.
 			
@@ -181,19 +178,19 @@ BOOK OpenPortal ORDERED NO KEEP LOOPED
 			David squeezes more of his blood into the chalice, 
 			causing it to... change in a way you cannot describe. It somehow
 			feels powerful, like the knife he is wielding.
-		"
-	END Step4Fail
+		"""
+	End Page Step4Fail
 	
-    EPILOG
-        TEXT "
+    Epilog
+        Text """
             The futility of trying to stop your uncle from completing this
 			ritual sinks in. You're going to have to kill him.
-        "
+        """
 	
 		// we need to replace unattackable monster with one we can attack
 		
-		IF !alreadyWarnedAboutKilling THEN REMOVE MonsterUncleDavidAltar AFTER
-		IF !alreadyWarnedAboutKilling THEN ADD MonsterUncleDavidToKill AFTER
-		alreadyWarnedAboutKilling = true AFTER
-    END EPILOG
-END OpenPortal
+		If !alreadyWarnedAboutKilling Then Remove MonsterUncleDavidAltar
+		If !alreadyWarnedAboutKilling Then Spawn MonsterUncleDavidToKill
+		alreadyWarnedAboutKilling = true
+    End Epilog
+End Book OpenPortal

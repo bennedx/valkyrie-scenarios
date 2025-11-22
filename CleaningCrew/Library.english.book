@@ -1,17 +1,17 @@
 LANGUAGE English
 
-BOOK Library
+Book Library Ordered No Keep Looped
 
-	PAGE ExploreLibrary
-		TRIGGERED BY @ExploreLibrary
+	Page ExploreLibrary
+		Triggered By @ExploreLibrary
 		
-		PROLOG "This door has a small brass plaque that reads "Library."
-		BUTTON "Explore"
+		Prolog "This door has a small brass plaque that reads <<Library.>>"
+		Button "Explore"
 		
-		ADD TokenWallLibrary!
-		REMOVE TokenExploreLibraryViaStudy
+		Add TokenWallLibrary!
+		Remove TokenExploreLibraryViaStudy
 
-		TEXT """
+		Text """
 			The door opens and a bit of fresh air surprises you. You feel a
 			draft, but cannot tell where it is coming from. Place a wall as
 			indicated, then discard this Explore token.
@@ -22,27 +22,27 @@ BOOK Library
 		exploredLibraryViaStudy = TRUE
 		$mythosLibrary = TRUE 
 		wandererInStudy = FALSE
-	END PAGE ExploreLibrary
+	End Page ExploreLibrary
 
-	PAGE SpawnCultist
-		SPAWN SpawnLibraryCultist
+	Page SpawnCultist
+		Spawn SpawnLibraryCultist
 		
-		TEXT """
+		Text """
 			When you walk in, a man is seated across from the door. He is
 			wearing robes, like someone from a religious order. He looks
 			familiar... maybe one of the townspeople who welcomed you a few
 			weeks ago. Startled, the man gets up, scowls, then moves toward you
 			aggressively. Spawn a cultist as indicated.
 		"""
-		EXIT
-	END PAGE SpawnCultist
+		Exit
+	End Page SpawnCultist
 	
-	PAGE PlaceKey
-		TRIGGERED BY DefeatedCustomMonsterLibraryCultist
+	Page PlaceKey
+		Triggered By DefeatedCustomMonsterLibraryCultist
 		
-		ADD TokenSearchLibraryKey!
+		Add TokenSearchLibraryKey!
 
-		TEXT """
+		Text """
 			The man in robes lies at your feet; blood pools on the floor and
 			soaks into the rug. Breathing hard and wondering what just
 			happened, you chuckle darkly at how the mess here is getting worse.
@@ -51,30 +51,30 @@ BOOK Library
 			Place a Search token as indicated.
 		"""
 		
-	END PAGE PlaceLibraryKey
+	End Page PlaceLibraryKey
 	
-	PAGE PlaceSearchBookCase
-		ADD TokenSearchLibraryBookcase!
+	Page PlaceSearchBookCase
+		Add TokenSearchLibraryBookcase!
 
-		TEXT """
+		Text """
 			A bookcase on the far wall is filled from floor to ceiling with
 			books. Maybe one of them can help you understand what is happening?
 			Place a Search token as indicated.
 		"""
 		
-		EXIT
-	END PAGE PlaceSearchBookCase
+		Exit
+	End Page PlaceSearchBookCase
 	
-	PAGE SearchKey
-		TRIGGERED BY @SearchLibraryKey
+	Page SearchKey
+		Triggered By @SearchLibraryKey
 		
-		PROLOG "It looks like the man dropped his key ring."
-		BUTTON "Pick up keys"
+		Prolog "It looks like the man dropped his key ring."
+		Button "Pick up keys"
 		
-		ADD QItemKey
-		REMOVE TokenSearchLibraryKey
+		Add QItemKey
+		Remove TokenSearchLibraryKey
 
-		TEXT """
+		Text """
 			You reach down to pick up the keys. You’re impressed by the number
 			and variety. Some of the keys have strange symbols on their bows
 			while others have beautiful and intricate blades. You pocket them
@@ -83,12 +83,12 @@ BOOK Library
 		"""
 		
 		foundKey = TRUE
-	END PAGE SearchKey
+	End Page SearchKey
 	
-	PAGE SearchBookcase
-		TRIGGERED BY @SearchLibraryBookcase WHEN NOT READ
+	Page SearchBookcase
+		Triggered By @SearchLibraryBookcase If Not Already Read
 		
-		PROLOG """
+		Prolog """
 			The books seem like a hodgepodge of local history, religion, and
 			dark magic. After killing that man, you're understandably upset.
 			You came here to clean this house and now you're in way over your
@@ -97,102 +97,103 @@ BOOK Library
 			books.
 		"""
 		
-		TEXT """
+		Text """
 			You reach up to get the book but it doesn't move. You reach
 			directly in front of you and try another and it comes right out.
 			You decide to try a little harder ({strength};2).
 		"""
 		
-		TEST
-			ON PASS GOTO SearchBookcasePass
-			ON FAIL DO NOTHING
-	END PAGE SearchBookcase
+		Test
+			On Pass Goto SearchBookcasePass
+			On Fail Do Nothing
+	End Page SearchBookcase
 	
-	PAGE SearchBookcaseFail
-		TEXT "It just won't budge. Maybe if you try a little harder."
-		EXIT
-	END PAGE SearchBookcaseFail
+	Page SearchBookcaseFail
+		Text "It just won't budge. Maybe if you try a little harder."
+		Exit
+	End Page SearchBookcaseFail
 	
-	PAGE SearchBookcaseAgain
-		TRIGGERED BY @SearchLibraryBookcase WHEN SearchBookcase IS READ
+	Page SearchBookcaseAgain
+		Triggered By @SearchLibraryBookcase If SearchBookcase Is Read
 		
-		PROLOG "The book wouldn't move, but it will this time..."
+		Prolog "The book wouldn't move, but it will this time..."
 		
-		TEXT """
-			You reach up again, grab the pull and pull as hard as
+		Text """
+			You reach up again, grab the book and pull as hard as
 			you can ({stregth}).
 		"""
 		
-		TEST
-			ON PASS DO NOTHING
-			ON FAIL GOTO SearchBookcaseFail
-	END PAGE SearchBookcaseAgain
+		Test
+			On Pass Do Nothing
+			On Fail Goto SearchBookcaseFail
+	End Page SearchBookcaseAgain
 	
-	PAGE SearchBookcasePass
-		REMOVE TokenSearchLibraryBookcase
+	Page SearchBookcasePass
+		Remove TokenSearchLibraryBookcase
 
-		TEXT """
+		Text """
 			The book rains dust onto you when it finally comes loose. It still
 			doesn't come out all the way, but you realize it is part of a lock
 			for a secret door. Discard this Search token.
 		"""
-	END PAGE SearchBookcasePass
+	End Page SearchBookcasePass
 		
-	PAGE PlaceBookcaseExplore
-		ADD TokenLibraryTrapDoor, TokenExploreLibraryBookcase
+	Page PlaceBookcaseExplore
+		Add TokenLibraryTrapDoor, TokenExploreLibraryBookcase
 
-		TEXT """
+		Text """
 			You pull on the bookcase and it swings out with a creak. Behind it
 			is a door with an elaborate lock. What was old Mr Smythe up to?
 
 			Place trap door and Explore tokens as indicated.
 		"""
 	
-		EXIT
-	END PAGE PlaceBookcaseExplore
+		Exit
+	End Page PlaceBookcaseExplore
 	
-	PAGE ExploreChapelViaBookcase
-		TRIGGERED BY @ExploreChapelViaBookcase WHEN UNREAD
+	Page ExploreChapelViaBookcase
+		Triggered By @ExploreChapelViaBookcase If Not Already Read
 		
-		PROLOG """
+		Prolog """
 			There is an elaborate lock on the door behind the bookcase; it has
 			arcane markings, ones that you recognize from the spine of one of
 			the books. An investigator with a heavy weapon might be able to
 			bust through the door; otherwise, maybe the lock could be picked?
 		"""
 		
-		PASS "Tap to attempt the puzzle using {lore}"
-		FAIL "Smash the door with a heavy weapon"
+		Pass = "Tap to attempt the puzzle using {lore}"
+		Fail = "Smash the door with a heavy weapon"
 		
-		TEST
-			ON PASS DO NOTHING
-			ON FAIL GOTO ExploreChapleViaBookcaseSmash
+		Test
+			On Pass Do Nothing
+			On Fail Goto ExploreChapleViaBookcaseSmash
 
 		FREE
 		
-		NO TEXT
-	END PAGE ExploreChapelViaBookcase
+		No Text
+	End Page ExploreChapelViaBookcase
 	
-	PAGE ExploreChapelViaBookcasePuzzle
+	Page ExploreChapelViaBookcasePuzzle
 	
 	
-	PAGE ExploreChapleViaBookcaseSmash
-		TEXT """
+	Page ExploreChapleViaBookcaseSmash
+		Text """
 			You raise your heavy weapon and swing. Roll 1 fewer die if you have
 			suffered 3 or more Damage. ({strength};2) Deal damage equal to the
 			weapon's damage.
 		"""
 		
-		TEST QUOTA 5
-			ON PASS GOTO SmashPass
-			ON FAIL GOTO SmashFail
-	END PAGE Smash
+		Test Quota 5
+			On Pass Goto SmashPass
+			On Fail Goto SmashFail
+	End Page Smash
 	
-	PAGE SmashFail
-		EXIT
-	END PAGE SmashFail
+	Page SmashFail
+		Text "No done"
+		Exit
+	End Page SmashFail
 	
-	PAGE SmashPass
-		EXIT
-	END PAGE SmashPass	
-END BOOK Library	
+	Page SmashPass
+		Exit "Not done (2)"
+	End Page SmashPass	
+End Book Library	

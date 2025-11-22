@@ -1,13 +1,13 @@
-LANGUAGE English
+Language English
 
 // this is run during the Mythos phase while they
 // are killing cultists
 
-BOOK FeedPortal ORDERED NO KEEP
-	IF goal != goalFeedPortal THEN EXIT
+Book FeedPortal Ordered No Keep
+	If goal != goalFeedPortal Then EXIT
 	
-	PAGE RitualBegins
-		TEXT """
+	Page RitualBegins
+		Text """
 			You freeze as something... <i>happens</> to the house. You aren't
 			sure what it is, but fear clutches your gut as the feeling washes
 			over you.
@@ -22,10 +22,10 @@ BOOK FeedPortal ORDERED NO KEEP
 			As she finishes speaking, someone in cult robes runs by you,
 			heading toward the cell.
 		"""
-	END RitualBegins
+	End Page RitualBegins
 
-	PAGE PortalOpens
-		TEXT """
+	Page PortalOpens
+		Text """
 			The woman's screaming stops and, for a moment, the house is silent
 			again... as if the house were taking a breath. Then, though you
 			cannot see it, you can feel the portal spring into being. You
@@ -50,10 +50,10 @@ BOOK FeedPortal ORDERED NO KEEP
 		feedPortalKillCount = 0
 		feedPortalKillGoal = 2 * #investigator + 2 + !exploredGateNicely * #investigator
 		feedPortalKillCount = 0
-	END PAGE PortalOpens
+	End Page PortalOpens
 		
-	PAGE Sacrifice
-		TEXT """
+	Page Sacrifice
+		Text """
 			The house pulses with power, overwhelming you for a moment. You
 			snap back to awareness as a cultist approaches. You steady yourself
 			for another attack.
@@ -62,10 +62,10 @@ BOOK FeedPortal ORDERED NO KEEP
 			as sacrifice, the portal will remain open; without them, it will
 			collapse.
 		"""
-	END PAGE Sacrifice
+	End Page Sacrifice
 	
-	PAGE Hurry
-		TEXT """
+	Page Hurry
+		Text """
 			Sarah whispers, <<We must hurry. He is summoning his god. I can
 			feel it.>>
 			
@@ -73,46 +73,46 @@ BOOK FeedPortal ORDERED NO KEEP
 			of the portal. What should be a stable hum continues its uneven
 			popping.
 		"""
-	END PAGE Hurry
+	End Page Hurry
 	
-	PAGE Ponder
-		TEXT """
+	Page Ponder
+		Text """
 			You stop for a moment and wonder, <i>How many cultists do we have
 			to kill? We've already killed {feedPortalKillCount}.</i> Out of
 			the corner of your eye you see another one coming. It's time to get
 			back to work.
 		"""
-	END PAGE Ponder
+	End Page Ponder
 	
-	PAGE KeepGoing 
-		TEXT """
+	Page KeepGoing 
+		Text """
 			The house stops vibrating for a moment. When it starts again, it
 			is weaker, but still powerful.
 			
 			<<What you are doing is working,>> Sarah whispers. <<Keep going. I
 			think we're close.>>
 		"""
-	END PAGE KeepGoing
+	End Page KeepGoing
 	
 	
-	LOOP RANDOM
+	Loop Random
 	
-	PAGE RunningOutOfTime // RANDOM
-		TEXT """
+	Page RunningOutOfTime Random
+		Text """
 			<<Hurry,>> Sarah whispers. <<The portal is still open and we are
 			running out of time.>>
 		"""
-	END PAGE RunningOutOfTime
+	End Page RunningOutOfTime
 	
-	PAGE ItsComing // RANDOM
-		TEXT """
+	Page ItsComing Random
+		Text """
 			<<Please,>> Sarah begs, <<It is almost here.>>
 		"""
-	END PAGE ItsComing
+	End Page ItsComing
 	
-	Page ItsHere // RANDOM
-		TEXT """
+	Page ItsHere Random
+		Text """
 			<<I can feel It. It is here. We may already be too late.>>
 		"""
-	END PAGE ItsHere
-END FeedPortal
+	End Page ItsHere
+End Book FeedPortal

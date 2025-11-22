@@ -1,109 +1,127 @@
-LANGUAGE English
-DEBUG OFF
+Language English
+Debug Off
 
-BOOK BenAfter RANDOM NO KEEP
-    IF exploredDiningRoom EXIT
+Book BenAfter Random No Keep Looped
+    If exploredDiningRoom Then Exit
 
-    PROLOG
-        TEXT "Benjamin looks around the room, like is he trying to figure out what you are doing."
-    END PAGE PROLOG
+    Prolog
+        Text """
+			Benjamin looks around the room, like is he trying to figure out
+			what you are doing.
+		"""
+    End Prolog
 
-    PAGE Dirt
-        BUTTON "<<Is the whole house this dirty?>>"
+    Page Dirt
+        Button "<<Is the whole house this dirty?>>"
 
-        TEXT "
-            <<Well,>> he starts, <<10 years ago the house was packed quickly and then close up. There has
-            been no one here since then, so expect the worst.>>
+        Text """
+            <<Well,>> he starts, <<10 years ago the house was packed quickly and
+			then close up. There has been no one here since then, so expect the
+			worst.>>
     
             You are not encouraged.
-        "
+        """
 
-        IF NOT exploredBackyardNicely THEN TEXT "
-            <<Well,>> he snaps, <<the house sat unused these last 10 years. You were hired to clean, not criticize.>>
+        If Not exploredBackyardNicely Then Text """
+            <<Well,>> he snaps, <<the house sat unused these last 10 years. You
+			were hired to clean, not criticize.>>
         
             This man clearly does not like you.
-        "
+        """
 
-        EPILOG "Benjamin seems surprised you asked about dirt. Odd since you were hired to clean."
-    END PAGE Dirt
-    
-    PAGE Footprints
-        BUTTON "<<There are footprints in the dust by that door...>>"
-        
-        TEXT "<<I think the handyman was in the house yesterday. They must be his.>>"
-        
-        IF NOT exploredBackyardNicely THEN TEXT "
-            <<Then you should sweep it up. That>s what you>re here for, not to complain about dirt.>>
-        "
-
-        EPILOG """
-			You notice Benjamin glancing nervously at the footprints. <i>Is something going
-			on?" you wonder.
+        Epilog """
+			Benjamin seems surprised you asked about dirt. Odd since you
+			were hired to clean.
 		"""
-    END PAGE Footprints
-
-    PAGE AnythingElse
-        BUTTON "<<Is there anything else we need to know?>>"
+    End Page Dirt
     
-        REMOVE TokenBackyardBenAfter
-        ADD TokenExploreBackDoorLocked!, TokenInvestigatorsDiningRoom
+    Page Footprints
+        Button "<<There are footprints in the dust by that door...>>"
         
-		TEXT "
-            <<Oh, my, yes. Here's the key you'll need to open doors throughout the house.>>
+        Text """
+			<<I think the handyman was in the house yesterday. They must be
+			his.>>
+		"""
+        
+        If Not exploredBackyardNicely Then Text """
+            <<Then you should sweep it up. That>s what you>re here for, not to 
+			complain about dirt.>>
+        """
+
+        Epilog """
+			You notice Benjamin glancing nervously at the footprints. <i>Is
+			something going on?</> you wonder.
+		"""
+    End Page Footprints
+
+    Page AnythingElse
+        Button "<<Is there anything else we need to know?>>"
+    
+        Remove TokenBackyardBenAfter
+        Add TokenExploreBackDoorLocked!, TokenInvestigatorsDiningRoom
+        
+		Text """
+            <<Oh, my, yes. Here's the key you'll need to open doors throughout
+			the house.>>
     
             Gain the {c:QItemBrassKey} common item.
     
-            <<I must be going. Take your time and send someone to fetch me if you need anything.>>
+            <<I must be going. Take your time and send someone to fetch me if
+			you need anything.>>
         
-            Move any investigators who are outside one space into the {c:TileDiningRoom}.
+            Move any investigators who are outside one space into the
+			{c:TileDiningRoom}.
 			
 			Ben shuts the door behind you. <i>Was that the lock turning?</i>
 			you ask yourself. Place an Explore token as indicated and remove Ben
 			from the board.
-        "
+        """
     
-        IF NOT exploredBackyardNicely THEN TEXT "
-            <<What?>> he growls. <<Oh, here's the key to the house. Don't lose it.>>
+        If Not exploredBackyardNicely Then Text """
+            <<What?>> he growls. <<Oh, here's the key to the house. Don't lose
+			it.>>
         
-            As he turns to walk out, he drops the key in your direction. Place the {c:QItemBrassKey} common item
-            in Ben's space. Once outside, Benjamin barks, <<Everyone inside. No dawdling.>>
+            As he turns to walk out, he drops the key in your direction. Place
+			the {c:QItemBrassKey} common item in Ben's space. Once outside,
+			Benjamin barks, <<Everyone inside. No dawdling.>>
 
-			Move any investigators who are outside one space into the {C:TileDiningRoom}.
+			Move any investigators who are outside one space into the
+			{C:TileDiningRoom}.
         
-            Ben slams the door shut behind him. <i>Was that the lock turning?<i> you 
-			ask yourself. Place an Explore token as indicated
+            Ben slams the door shut behind him. <i>Was that the lock
+			turning?</i> you ask yourself. Place an Explore token as indicated
 			and remove Ben from the board.
-        "
+        """
     
-		REMOVE TokenInvestigatorsDiningRoom AFTER
+		Remove TokenInvestigatorsDiningRoom, TokenBackyardBenAfter
 		
-		TRIGGER @ClearAllMythosFlags
+		Trigger @ClearAllMythosFlags
 		
-		$mythosHelp = TRUE
-		$mythosFlavor = TRUE
-		$mythosMinor = TRUE
-		$mythosIndoors = TRUE
-        $MythosKey = TRUE
-    	$mythosDiningRoom = TRUE
+		$mythosHelp = true
+		$mythosFlavor = true
+		$mythosMinor = true
+		$mythosIndoors = true
+        $MythosKey = true
+    	$mythosDiningRoom = true
 			
-		talkedToBenAnythingElse = TRUE 
+		talkedToBenAnythingElse = true 
         talkedToBenCount = talkedToBenCount + 1
 
-        TRIGGER @TalkedToBenAfter AFTER
-    END PAGE AnythingElse
+        Trigger @TalkedToBenAfter
+    End Page AnythingElse
 	
-	PAGE AnythingElseJournal
-		PAGE IS VISIBILE IF NOT foundJournal
+	Page AnythingElseJournal
+		Page Is Visible If Not foundJournal
 		
-		ADD TokenDiningRoomJournal!
+		Add TokenDiningRoomJournal!
 		
-		TEXT """
-			At your feet you see a book that looks identical to the one Benjamin dropped outside.
-			He seems to have dropped it again. <i>How is that possible?>> you ask yourself. Place
-			a Search token as indicated.
+		Text """
+			At your feet you see a book that looks identical to the one Benjamin
+			dropped outside. He seems to have dropped it again. <i>How is that
+			possible?>> you ask yourself. Place a Search token as indicated.
 			
 			Something here doesn't feel right.
 		"""
-		EXIT
-	 END PAGE AnythingElseJournal
- END BOOK BenAfter
+		Exit
+	 End Page AnythingElseJournal
+ End Book BenAfter

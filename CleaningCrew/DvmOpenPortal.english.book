@@ -1,15 +1,15 @@
 LANGUAGE English
 
 // use this for both goalOpenPortal and goalFeedPortal
-BOOK DvmOpenPortal ORDERED KEEP
-    IF goal == goalClosePortal THEN EXIT BEFORE
+Book DvmOpenPortal Ordered Keep
+    If goal == goalClosePortal Then Exit
 
 	// page 1 is the same as DvmClosePortal.Page1
-    PAGE TableOfContents
-        PROLOG "The De Vermis Mysterium looks old and worn with time."
-        BUTTON "Open the book" AFTER "Table of Contents"
+    Page TableOfContents
+        Prolog "The De Vermis Mysterium looks old and worn with time."
+        Button "Open the book" After "Table of Contents"
 
-        TEXT """
+        Text """
             Table of Contents
 
             You open the book. On the inside
@@ -25,24 +25,24 @@ BOOK DvmOpenPortal ORDERED KEEP
 
             The first time you read this page, gain 1 {clue}.
         """
-    END PAGE TableOfContents
+    End Page TableOfContents
 
-    PAGE Overview
+    Page Overview
 		// same as the prolog for DvmClosePortal.Page2
-        PROLOG """
+        Prolog """
             This is a spell book and {c:EventChosenInvestigator}
 			may have... abilities. Sarah is pushing you to find something
 			about closing portals.
         """
-        BUTTON "Turn to page 72" AFTER "Overview"
+        Button "Turn to page 72" After "Overview"
 
-        TEXT """
+        Text """
             You read through an overview of the opening ritual and how to
 			perform it.
             There is a list of materials and artifacts needed.
             The list includes a dagger, chalice, human skull, and
             various herbs. There>s also mention of an <<elder sign>>
-            but you aren>t sure what that is.
+            but you aren't sure what that is.
 
             You must look for the dagger,
             various ritual components, and
@@ -51,13 +51,13 @@ BOOK DvmOpenPortal ORDERED KEEP
             <i>Maybe they don>t have all of these yet,</i> you hope to
             yourself.
         """
-    END PAGE Overview
+    End Page Overview
 
-    PAGE Tools
-        PROLOG "This ritual seems complicated."
-        BUTTON "Read next page" AFTER "Tools"
+    Page Tools
+        Prolog "This ritual seems complicated."
+        Button "Read next page" After "Tools"
 
-        TEXT """
+        Text """
             Dagger
         
             You flip the page. Here the book goes into detail about the
@@ -78,13 +78,13 @@ BOOK DvmOpenPortal ORDERED KEEP
 
             {qst:FirstTimeRead}, gain 1 {clue}.
         """
-    END PAGE Tools
+    End Page Tools
 
-    PAGE Sacrifice
-        PROLOG "Opening a portal seem complicated."
-        BUTTON "Read next page" AFTER "Sacrifice"
+    Page Sacrifice
+        Prolog "Opening a portal seem complicated."
+        Button "Read next page" After "Sacrifice"
 
-        TEXT """
+        Text """
 			The Sacrifice
 			
 			
@@ -98,7 +98,7 @@ BOOK DvmOpenPortal ORDERED KEEP
             gain 2 {clue} if you don’t go Insane.
         """
         
-        IF journalReadPage4 THEN TEXT """
+        If journalReadPage4 Then Text """
             The Sacrifice
         
             The next page delves into the importance of personal sacrifice.
@@ -112,16 +112,16 @@ BOOK DvmOpenPortal ORDERED KEEP
             {qst:FirstTimeRead}, suffer 1 Horror ({will} negates), then
             gain 2 {clue} if you don>t go Insane.
         """
-    END PAGE Sacrifice
+    End Page Sacrifice
 
 	// this is the same as DvmClosePortal.Page5
-    PAGE Commentary
-        PROLOG """
+    Page Commentary
+        Prolog """
             A look of concern and disgust on your face, you turn the page.
         """
-        BUTTON "Read the next page" AFTER "Commentary"
+        Button "Read the next page" After "Commentary"
 
-        TEXT """
+        Text """
             Commentary
 
             Finally, there is commentary and advice. One section discusses ley
@@ -135,7 +135,7 @@ BOOK DvmOpenPortal ORDERED KEEP
             the list.
         """
 
-        IF readAboutBoy THEN TEXT """
+        If readAboutBoy Then Text """
             Commentary
 
             Finally, there is commentary and advice. One section discusses ley
@@ -153,26 +153,26 @@ BOOK DvmOpenPortal ORDERED KEEP
         """
 
 		// ??? Why is this here
-        // TRIGGER @FoundCellHoleViaJournal
-    END Commentary
+        // Trigger @FoundCellHoleViaJournal
+    End Page Commentary
 
 	// this is the same as DvmClosePortal.Epilog
-    EPILOG
-        TEXT """
+    Epilog
+        Text """
             <i>Maybe I need to explore a bit more to figure out what I need to
             do to stop this madness,</i> you think to yourself.
         """
     
-        IF exploredTortureChamber THEN TEXT "
+        If exploredTortureChamber Then Text """
             Now you know where the ritual will be performed and what is needed.
             You must stop your uncle!
         """
 
-        IF readJournalPage4 THEN TEXT "
+        If readJournalPage4 Then Text """
             You cannot allow a child to be sacrificed for this evil. You must
             find the artifacts before they start the ritual and, if you can, 
             save the boy.
         """
-	END EPILOG
-END DvmOpenPortal
+	End Epilog
+End Book DvmOpenPortal
 

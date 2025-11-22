@@ -1,13 +1,13 @@
 LANGUAGE English
 
-BOOK Driveway ORDERED NO KEEP
+Book Driveway Ordered No Keep
 	
-	PAGE Place 
-		TRIGGERED BY @PlaceDriveway WHEN NOT testMod
+	Page Place 
+		Triggered By @PlaceDriveway If Not testMod
 		
-		ADD TileDriveway
+		Add TileDriveway
 
-		TEXT """
+		Text """
 			It's 3:00 and you're on time. The man your friend spoke with on the
 			phone--Benjamin--should be here to meet you.
 
@@ -19,19 +19,23 @@ BOOK Driveway ORDERED NO KEEP
 			Place the {c:TileDriveway} tile as indicated.
 		"""
 		
-	END PAGE Place
+	End Page Place
 	
-	PAGE PlaceInvestigators
-		TEXT """
+	Page PlaceInvestigators
+		Add TokenDrivewayInvestigators
+		
+		Text """
 			You wonder what you were thinking when you said <<yes>> to your
 			friend. Place your investigators as indicated.
 		"""
-	END PAGE Investigators
+		
+		Remove TokenDrivewayInvestigators
+	End Page PlaceInvestigators
 	
-	PAGE PlaceExploreKitchenViaDriveway
-		ADD TokenExploreKitchenViaDriveway!
+	Page PlaceExploreKitchenViaDriveway
+		Add TokenExploreKitchenViaDriveway!
 
-		TEXT """
+		Text """
 			After walking around the house, you are not surprised that the door
 			next to you is covered with mud and spiderwebs. Like the rest of the
 			house, the paint is peeling and the door shows signs of dry rot.
@@ -39,35 +43,35 @@ BOOK Driveway ORDERED NO KEEP
 			Place an Explore token as indicated.
 		"""
 	
-	END PAGE PlaceExploreKitchenViaDriveway
+	End Page PlaceExploreKitchenViaDriveway
 	
-	PAGE PlaceGate
-		ADD TokenExploreBackyardViaDriveway!
+	Page PlaceGate
+		Add TokenExploreBackyardViaDriveway!
 		
-		TEXT """
+		Text """
 			Up ahead, at the end of the drive, is a gate that leads around to
 			the back of the house. Place an Explore token as indicated.
 		"""
-	END PAGE PlaceGate
+	End Page PlaceGate
 	
-	PAGE PlaceGardenTool
-		ADD TokenSearchDrivewayGardenTool!
+	Page PlaceGardenTool
+		Add TokenSearchDrivewayGardenTool!
 
-		TEXT """
+		Text """
 			The weeds behind the house are even taller than the ones in front.
 			Over at the corner of the drive, something under the weeds catches
 			your eye. Place a Search token as indicated.	
 		"""
 		
-		initialized = TRUE
-	END PAGE PlaceGardenTool
+		initialized = true
+	End Page PlaceGardenTool
 	
-	PAGE PlaceWendy
-		PAGE IS VISIBLE IF #HeroWendyAdams
+	Page PlaceWendy
+		Page IS Visible If #HeroWendyAdams
 		
-		ADD QItemWendyGun
+		Add QItemWendyGun
 
-		TEXT """
+		Text """
 			As she walks up the drive, Wendy Adams trips and falls. She twists
 			her ankle and skins her knees. When she looks up, she sees
 			something in the weeds. Wendy gains the {c:QItemWendyGun}.
@@ -75,122 +79,116 @@ BOOK Driveway ORDERED NO KEEP
 			When she finally stands up, she doesn’t feel as agile as usual. In
 			this scenario, Wendy can become Restrained.
 		"""
-	END PAGE PlaceGardenTool
+	End Page PlaceWendy
 	
-	PAGE PlaceTest
-		PAGE IS VISIBLE IF testMode
+	Page PlaceTest No Text
+		Page IS Visible If testMode
 		
-		NO TEXT
+		Add TokenTestPlaceDriveway, TokenTestTakeBooks, TokenTestStartRitual
+		Add TokenTestRitualPreparations, TokenTestRitualFinished
+		Add TokenTestPlaceTortureChamber, TokenTestPlaceLibraryViaStudy
+		Add TokenTestPlaceLibraryAfterCultists, TokenTestPlaceChapelViaLibrary
+		Add TokenTestPlaceKitchenViaDiningRoom, TokenTestPlaceStudyViaHall2
+		Add TokenTestPlaceHall2ViaHall1, TokenTestPlaceStudyViaFoyer
+		Add TokenTestPlaceDungeonCell, TokenTestPlaceCryptViaDungeonCave
+		Add TokenTestPlaceDiningRoomViaBackdoor, TokenTestPlaceCryptViaChapel
+		Add TokenTestPlaceCoatRoomViaGallery, TokenTestPlaceAltar
+		Add TokenTestInitChosenInvestigator, TokenTestPlaceDriveway
+		Add TokenTestBasementViaDiningRoomSight, TileStudy, TileHall2
+		Add TileGallery, TileFoyer, TileDriveway, TileDiningRoom, TileCrypt,
+		Add TileChapel, TileBasement, TileBackyard, TileAltar
+		Add TokenTestPlaceHall1ViaDiningRoom, TokenTestPlaceFoyerViaGallery
+		Add TokenTestPlaceGalleryViaFoyer, TokenExploreHall2ViaFoyer
+		Add TokenTestPlaceFoyerViaHall2, TokenTestPlaceStudyViaFoyer
+		Add TokenTestPlaceStudyViaHall2, TokenTestPlaceFoyerViaStudy
+		Add TokenTestPlaceHall2ViaFoyer, TokenTestPlaceDungeonCaveViaBasement
+		Add TokenTestPlaceDungeonCaveViaCrypt, TokenTestPlaceHall1ViaHall2
+		Add TokenTestPlaceBackdoorViaDriveway, TokenTestPlaceGalleryViaHall1
+		Add TokenTestJournal2, TokenTestBenTrigger, TileHall1
+		Add TileTortureChamber, TokenBackyardBenBefore, TokenBackyardBenAfter
+		Add TokenBackyardBenPassive, TokenTestBackdoorLocked
 		
-		ADD TokenTestPlaceDriveway TokenTestTakeBooks TokenTestStartRitual
-		ADD TokenTestRitualPreparations TokenTestRitualFinished
-		ADD TokenTestPlaceTortureChamber TokenTestPlaceLibraryViaStudy
-		ADD TokenTestPlaceLibraryAfterCultists TokenTestPlaceChapelViaLibrary
-		ADD TokenTestPlaceKitchenViaDiningRoom TokenTestPlaceStudyViaHall2
-		ADD TokenTestPlaceHall2ViaHall1 TokenTestPlaceStudyViaFoyer
-		ADD TokenTestPlaceDungeonCell TokenTestPlaceCryptViaDungeonCave
-		ADD TokenTestPlaceDiningRoomViaBackdoor TokenTestPlaceCryptViaChapel
-		ADD TokenTestPlaceCoatRoomViaGallery TokenTestPlaceAltar
-		ADD TokenTestInitChosenInvestigator TokenTestPlaceDriveway
-		ADD TokenTestBasementViaDiningRoomSight TileStudy TileHall2
-		ADD TileGallery TileFoyer TileDriveway TileDiningRoom TileCrypt
-		ADD TileChapel TileBasement TileBackyard TileAltar
-		ADD TokenTestPlaceHall1ViaDiningRoom TokenTestPlaceFoyerViaGallery
-		ADD TokenTestPlaceGalleryViaFoyer TokenExploreHall2ViaFoyer
-		ADD TokenTestPlaceFoyerViaHall2 TokenTestPlaceStudyViaFoyer
-		ADD TokenTestPlaceStudyViaHall2 TokenTestPlaceFoyerViaStudy
-		ADD TokenTestPlaceHall2ViaFoyer TokenTestPlaceDungeonCaveViaBasement
-		ADD TokenTestPlaceDungeonCaveViaCrypt TokenTestPlaceHall1ViaHall2
-		ADD TokenTestPlaceBackdoorViaDriveway TokenTestPlaceGalleryViaHall1
-		ADD TokenTestJournal2 TokenTestBenTrigger TileHall1
-		ADD TileTortureChamber TokenBackyardBenBefore TokenBackyardBenAfter
-		ADD TokenBackyardBenPassive TokenTestBackdoorLocked
-		
-		EXIT
-	END Test
-	
-	PAGE PlaceEnd
-		NO TEXT
-		EXIT
-	END PAGE PlaceEnd
+		Exit
+	End Page PlaceTest
 	
 	
-	PAGE SearchGardenTool
-		TRIGGERED BY @SearchGardenTool
+	Page SearchGardenTool
+		Triggered By @SearchDrivewayGardenTool
 		
-		PROLOG """
+		Prolog """
 			The weeds along the edge of driveway are tall, thick, and
 			long-dead. Whatever is under them has been bound tightly over
-			the years by the vegetation.
+			the years.
 		"""
-		BUTTON "Search"
+		Button "Search"
 		
-		ADD QItemGardenTool!
+		Add QItemGardenTool
+		Remove TokenSearchDrivewayGardenTool
 
-		TEXT """
+		Text """
 			You rustle around in the weeds and find something interesting.
 			Gain the {c:QItemGardenTool} Common Item, then discard this
 			Search token.
 
-			As you pull it free of the weeds, a child’s doll is exposed.
+			As you pull it free of the weeds, a child's doll is exposed.
 			The clothing is ragged and the paint is chipping. You think
 			back to the children that were found here and wonder if this
 			doll belonged to one of them.
 
-			Gain 1 {clue}, then take 1 Horror ({will} negates).
+			Gain 1 {clue}, then take 1 facedown Horror ({will} negates).
 		"""
 		
-		REMOVE TokenSearchDrivewayGardenTool
-		foundGardenTool = TRUE		
-		EXIT
-	END PAGE SearchGardenTool
+		foundGardenTool = true		
+		Exit
+	End Page SearchGardenTool
 	
-	PAGE SearchJournal
-		TRIGGERED BY @FindJournalInDriveway
+	Page SearchJournal
+		Triggered By @SearchOutsideJournal
 		
-		PROLOG "Benjamin dropped a book here."
-		BUTTON "Search"
+		Prolog "Benjamin dropped a book here."
+		Button "Search"
 		
-		TEXT """
-			When you get closer, you see that it is small, thin, and
-			leather-bound. You pick it up and flip through the pages:
-			it's a journal. The first entry was scrawled last Sunday.
-			You should give it back to Benjamin, but maybe you can
-			take a quick look first.
+		Remove TokenSearchDrivewayJournal
 
-			Gain the {c:QItemJournal} Unique Item, then remove this
-			Search token. An investigator holding the {c:QItemJournal}
-			can interact with it in the app.
+		Text """
+			Up close you can see that it is thin and leather-bound. You
+			pick it up and flip through the pages:  it's a journal. The
+			first entry was scrawled last Sunday. You should give it back
+			to Benjamin, but maybe you can take a quick look first.
+
+			Gain the {c:QItemJournal} Unique Item, then discard this Search
+			token. An investigator holding the {c:QItemJournal} can
+			interact with it in the app.
 		"""
-	
-		REMOVE TokenSearchDrivewayJournal
-		EXIT
-	END PAGE SearchJournal
-	
-	
-	PAGE ExploreBackyardViaDriveway
-		TRIGGERED BY @ExploreBackyardViaDriveway
 		
-		TEXT """
+		foundJournal = true
+		Exit
+	End Page SearchJournal	
+	
+	Page ExploreBackyardViaDriveway
+		Triggered By @ExploreBackyardViaDriveway
+		
+		Text """
 			An intricate wrought-iron gate is set into a stone wall.
 			Like the rest of the house, the paint is peeling and the
 			bars are rusting. The gate looks like it was
-			exceptionally strong at one time.
+			exceptionally strong at one time, but maybe not now.
 
-			It probably wouldn’t take much effort to push it open 
+			It probably wouldn't take much effort to push it open 
 			({strength}).
 		"""
 		
-		TEST QUOTA 3
-			ON PASS GOTO ExploreNotNice
-			ON PAS GOTO ExploreNice
-	END PAGE ExploreBackyardViaDriveway
+		Test Quota 3
+			On Pass Goto ExploreNotNice
+			On Fail Goto ExploreNice
+	End Page ExploreBackyardViaDriveway
 	
-	PAGE ExploreNotNice
-		ADD TokenDriveWayBen!
+	Page ExploreNotNice
+		Add TokenDriveWayBen!
+		Remove TokenExploreBackyardViaDriveway
 
-		TEXT """
-			You give it all you’ve got... and the gate, seemingly
+		Text """
+			You give it all you've got... and the gate, seemingly
 			rusty and poorly maintained, gives way with a terrible
 			crash. As the noise echoes down the drive, an angry
 			man storms around the corner and strides up behind you.
@@ -199,15 +197,14 @@ BOOK Driveway ORDERED NO KEEP
 			Benjamin Smythe, the man your friend spoke with on the
 			phone.
 			
-			Remove this Explore token.
+			Discard this Explore token.
 		"""
 		
-		exploredBackyardNicely = FALSE
-		REMOVE TokenExploreBackyardViaDriveway
-	END PAGE ExploreNotNice
+		exploredBackyardNicely = false
+	End Page ExploreNotNice
 	
-	PAGE ExploreNotNiceBen
-		TEXT """
+	Page ExploreNotNiceBen
+		Text """
 			As you turn to look at Benjamin, you hear a second crash
 			behind the gate.
 
@@ -217,7 +214,7 @@ BOOK Driveway ORDERED NO KEEP
 			not sure why you thought it was a good idea to start
 			without me.>>
 
-			Benjamin brushes past you with a harrumph. Remove the
+			Benjamin brushes past you with a harrumph. Discard the
 			Purple Man token.
 
 			You’ve only just arrived and the client is already angry.
@@ -225,50 +222,49 @@ BOOK Driveway ORDERED NO KEEP
 			business.
 		"""
 		
-		REMOVE TokenDrivewayBen
-	END PAGE ExploreNotNiceBen
+		Remove TokenDrivewayBen
+	End Page ExploreNotNiceBen
 	
-	PAGE ExploreNotNiceJournal
-		ADD TokenExploreBackyardViaDrivewaySight!
-
-		TEXT """
-			A moment later, you hear Benjamin yelp. After a beat,
-			you look back... as you do you see a book lying on
-			the ground where Benjamin had been standing. Place
-			a Search token as indicated.
+	Page ExploreNotNiceJournal
+		Add TokenSearchDrivewayJournal!, TokenExploreBackyardViaDrivewaySight!
+		
+		Text """
+			You look down and shake your head. As you do, you see a book lying
+			on the ground where Benjamin had been standing. Place a Search token
+			as indicated.
 			
 			You turn back to the gate, take a breath and...
 			
 			Place a Sight token as indicated.
 		"""
 		
-		EXIT
-	END PAGE ExploreNotNiceJournal
+		Exit
+	End Page ExploreNotNiceJournal
 	
-	PAGE ExploreNice
-		ADD TokenDrivewayBen!
+	Page ExploreNice
+		Remove TokenExploreBackyardViaDriveway
+		Add TokenDrivewayBen!
 
-		TEXT """
+		Text """
 			As you gently pull the gate, you find that it opens easily.
 			Now that you're looking, you see that someone recently
-			cleaned the hinges and gave them some oil. You’re glad you
+			cleaned the hinges and gave them some oil. You're glad you
 			didn't force it. Remove this explore token.
 
 			
 			<<I see the handyman was able to fix the gate yesterday.
 			That will make things easier.>> You start, not having
-			heard him walk up behind you.
+			heard the man walk up behind you.
 			
 			Place the Purple Man token as indicated.
 		"""
 		
-		REMOVE TokenExploreBackyardViaDriveway
-		exploredBackyardNicely = TRUE
-	END PAGE ExploreNice
+		exploredBackyardNicely = true
+	End Page ExploreNice
 	
-	PAGE ExploreNiceBen
-		TEXT """
-			You turn to meet the eyes of an aging but viorous man. He
+	Page ExploreNiceBen
+		Text """
+			You turn to meet the eyes of an aging but vigorous man. He
 			introduces himself as Benjamin Smythe, the man whom your
 			friend spoke with. <<You'll want to follow me so we can
 			get started.>>
@@ -278,13 +274,13 @@ BOOK Driveway ORDERED NO KEEP
 			Remove the Purple Man token from the board.
 		"""
 	
-		REMOVE TokenDrivewayBen
-	END PAGE ExploreNiceBen
+		Remove TokenDrivewayBen
+	End Page ExploreNiceBen
 	
-	PAGE ExploreNiceJournal
-		ADD TokenSearchDrivewayJournal!
+	Page ExploreNiceJournal
+		Add TokenSearchDrivewayJournal!, TokenExploreBackyardViaDrivewaySight!
 
-		TEXT """
+		Text """
 			You turn to look back and see a book Benjamin must have
 			dropped. Place a Search token as indicated.
 
@@ -293,42 +289,20 @@ BOOK Driveway ORDERED NO KEEP
 			indicated.
 		"""
 	
-		EXIT
-	END PAGE ExploreJournal
-		
-	PAGE SearchJournal
-		TRIGGERED BY @SearchOutsideJournal
-		
-		PROLOG "You walk over the journal and stoop down to pick it up."
-		BUTTON "Search"
-		
-		TEXT """
-			"Up close you can see that it is thin and leather-bound. You
-			pick it up and flip through the pages:  it's a journal. The
-			first entry was scrawled last Sunday. You should give it back
-			to Benjamin, but maybe you can take a quick look first.
-
-			Gain the {c:QItemJournal} Unique Item, then remove this Search
-			token. An investigator holding the {c:QItemJournal} can
-			interact with it in the app.
-			
-			Remove this Search token.
-		"""
-		
-		foundJournal = TRUE
-		REMOVE TokenSearchDrivewayJournal
-		EXIT
-	END PAGE SearchJournal
+		Exit
+	End Page ExploreNiceJournal
 	
-	PAGE SearchGardenTool
-		PROLOG """
+	Page SearchGardenTool
+		Prolog """
 			The weeds along the edge of driveway are tall, thick, and
 			long-dead. Whatever is under them has been bound tightly over
-			the years by the vegetation.
+			the years.
 		"""
-		BUTTON "Search"
+		Button "Search"
 		
-		TEXT """
+		Remove TokenSearchDrivewayGardenTool
+
+		Text """
 			You rustle around in the weeds and find something interesting.
 			Gain the {c:QItemGardenTool} Common Item. As you pull it free
 			of the weeds, a child's doll is exposed. The clothing is ragged
@@ -340,8 +314,7 @@ BOOK Driveway ORDERED NO KEEP
 			Remove this Search token.
 		"""
 				
-		foundGardenTool = TRUE
-		REMOVE TokenSearchDrivewayGardenTool
-		EXIT		
-	END PAGE SearchGardenTool
-END BOOK Driveway
+		foundGardenTool = true
+		Exit		
+	End Page SearchGardenTool
+End Book Driveway

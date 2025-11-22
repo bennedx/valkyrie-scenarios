@@ -1,22 +1,22 @@
-LANGUAGE English
+Language English
 
-BOOK Hall2
+Book Hall2 Ordered No Keep Looped
 
 	// Hall2 can be explored from Hall1, the Foyer, or the Study
 
-	PAGE ExploreHall2ViaHall1
-		TRIGGERED BY @ExploreHall2ViaHall1
+	Page ExploreHall2ViaHall1
+		Triggered By @ExploreHall2ViaHall1
 		
-		PROLOG """
+		Prolog """
 			The hall seems to continue on a bit farther. An investigator in the
 			same space as the Sight token can look down the hall.
 		"""
-		BUTTON "Look down the hall"
+		Button "Look down the hall"
 		
-		REMOVE SightHall2ViaHall1, SightHall2ViaFoyer, SightHall2ViaStudy
-		ADD TileHall2, TokenWallHall2!
+		Remove SightHall2ViaHall1, SightHall2ViaFoyer, SightHall2ViaStudy
+		Add TileHall2, TokenWallHall2!
 
-		TEXT """
+		Text """
 			With the dining room door so far from this end of the hall, you
 			have to take a step forward to see what is there. Place the
 			{c:TileHall2} tile and a wall as indicated. Discard all Sight and
@@ -25,23 +25,24 @@ BOOK Hall2
 			Move 1 space into the explored area.
 		"""
 		
-		exploredHall2ViaHall1 = TRUE
-		GOTO PlaceHall2
-	END ExploreHall2ViaHall1
+		exploredHall2ViaHall1 = true
+		Trigger @MoveAfterExplore
+		Goto PlaceHall2
+	End Page ExploreHall2ViaHall1
 	
-	PAGE ExploreHall2ViaFoyer
-		TRIGGERED BY @ExploreHall2ViaFoyer
+	Page ExploreHall2ViaFoyer
+		Triggered By @ExploreHall2ViaFoyer
 		
-		PROLOG """
+		Prolog """
 			This door painted to blend. A casual visitor might not even notice
 			it there.
 		"""
-		BUTTON "Explore"
+		Button "Explore"
 		
-		REMOVE SightHall2ViaHall1, SightHall2ViaFoyer, SightHall2ViaStudy
-		ADD TileHall2, TokenWallHall2!
+		Remove SightHall2ViaHall1, SightHall2ViaFoyer, SightHall2ViaStudy
+		Add TileHall2, TokenWallHall2!
 
-		TEXT """
+		Text """
 			You realize this connects with the hallway you used to enter the
 			gallery. Light from the foyer, even as dim as it, allows you to
 			see into the room.
@@ -50,22 +51,22 @@ BOOK Hall2
 			Sight and Explore tokens leading to this room.
 		"""
 		
-		exploreHall2ViaVoyer = TRUE
-		GOTO PlaceHall2
-	END ExploreHall2ViaFoyer
+		exploreHall2ViaVoyer = true
+		Goto PlaceHall2
+	End Page ExploreHall2ViaFoyer
 	
-	PAGE ExploreHall2ViaStudy
-		TRIGGERED BY @ExploreHall2ViaStudy
+	Page ExploreHall2ViaStudy
+		Triggered By @ExploreHall2ViaStudy
 		
-		PROLOG """
+		Prolog """
 			This door is not labeled.
 		"""
-		BUTTON "Explore"
+		Button "Explore"
 		
-		REMOVE SightHall2ViaHall1, SightHall2ViaFoyer, SightHall2ViaStudy
-		ADD TileHall2, TokenWallHall2!
+		Remove SightHall2ViaHall1, SightHall2ViaFoyer, SightHall2ViaStudy
+		Add TileHall2, TokenWallHall2!
 
-		TEXT """
+		Text """
 			Light from the study spills into the darkness. <<Oh,>> you say out
 			loud, <<this leads back to the dining room.>> Place the
 			{c:TileHall} and a door as indicated.
@@ -73,65 +74,65 @@ BOOK Hall2
 			Discard all Sight and Explore tokens leading to this room.
 		"""
 
-		exploredHall2ViaStudy = TRUE
-	END
+		exploredHall2ViaStudy = true
+	End Page ExploreHall2ViaStudy
 	
-	PAGE PlaceHall2
-		TEXT """
+	Page PlaceHall2
+		Text """
 			A table has been knocked over, scattering its contents across the
 			room. <i>That broken lamp on the floor would help navigate this 
 			room,</i> you think to yourself. Place a Search token as indicated.
 		"""
 		
-		IF exploredHall2ViaFoyer OR exploredHall2ViaStudy THEN TRIGGER @MoveAfterExplore
-		exploredHall2 = TRUE
+		If exploredHall2ViaFoyer Or exploredHall2ViaStudy Then Trigger @MoveAfterExplore
+		exploredHall2 = true
 
-		IF exploredFoyer OR exploredStudy THEN EXIT
-	End PlaceHall2
+		If exploredFoyer Or exploredStudy Then Exit
+	End Page PlaceHall2
 	
 	
-	PAGE PlaceHall2ExploreFoyer
-		PAGE IS NOT VISIBLE IF exploredFoyer
+	Page PlaceExploreFoyerViaHall2
+		Page Is Not Visible If exploredFoyer
 		
-		ADD TokenExploreFoyerViaHall2!
+		Add TokenExploreFoyerViaHall2!
 
-		TEXT """
+		Text """
 			Another door leads farther into the house. It has a small brass 
 			plate that reads <<Foyer.>> Place an Explore token as indicated.
 		"""	
 		
-		IF exploredStudy THEN EXIT
-	END PlaceHall2Explore
+		If exploredStudy Then Exit
+	End Page PlaceExploreFoyerViaHall2
 
-	PAGE PlaceHall2ExploreStudy
-		ADD TokenExploreStudyViaHall2!
+	Page PlaceHall2ExploreStudy
+		Add TokenExploreStudyViaHall2!
 
-		TEXT """
+		Text """
 			Another door has a name plate that reads <<Study.>> Place an
 			Explore token as indicated.
 		"""
 		
-		EXIT
-	END PlaceHall2ExploreStudy
+		Exit
+	End Page PlaceHall2ExploreStudy
 	
-	PAGE SearchEvidence
-		TRIGGERED BY SearchHall2Evidence
+	Page SearchEvidence
+		Triggered By SearchHall2Evidence
 		
-		PROLOG "The upended table has spilled its contents across the floor."
+		Prolog "The upended table has spilled its contents across the floor."
 		
-		TEXT """
+		Text """
 			There is a dead plant and many scraps of paper tossed around. One
 			of the scraps catches your eye:  it is spattered in dried blood.
 			The note talks about preparations for a ritual and mentions
 			something about a chapel and crypt that you don’t understand. The
 			author of the note wants to stop the ritual and it is clear he will
-			do what he can. The note is signed "Henry Smythe."
+			do what he can. The note is signed <<Henry Smythe.>>
 
 			Gain the {c:QItemEvidenceHall2} Unique Item, then discard this
 			Search token.
 		"""
 
-		EXIT
-	END SearchEvidence
+		Exit
+	End Page SearchEvidence
 
-END Hall2
+End Book Hall2

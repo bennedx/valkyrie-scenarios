@@ -1,18 +1,18 @@
-LANGUAGE English
+Language English
 
-BOOK Hall1 ORDERED NO KEEP LOOP
+Book Hall1 Ordered No Keep Looped
 
-	PAGE ExploreHall1
-		TRIGGERED BY @ExploreHall1
+	Page ExploreHall1
+		Triggered By @ExploreHall1
 		
-		PROLOG """
+		Prolog """
 			The door has a dirty push plate. When you push on it, you discover
 			it's locked. An investigator with the {c:QItemBrassKey} can open
 			this door.
 		"""
-		BUTTON "Explore"
+		Button "Explore"
 		
-		TEXT """
+		Text """
 			When you open the door, the rush of cold, stale air sends a chill
 			down your spine.
 
@@ -21,12 +21,12 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 			has been opened recently.
 		"""
 	
-		$mythosHall = TRUE
-		exploredHall1 = TRUE AFTER
-	END ExploreHall1
+		$mythosHall = true
+		exploredHall1 = true
+	End Page ExploreHall1
 
-	PAGE PlaceHall1
-		TEXT """
+	Page PlaceHall1
+		Text """
 			You look through the doorway to find a hall. It is clear that it
 			was intended for the servants:  plain and dark. Place the
 			{c:TileHall1} tile, a door, and a wall as indicated.
@@ -34,22 +34,22 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 			Move one space space into the hall.
 		"""
 						
-		REMOVE TokenExploreHallway1ViaDiningRoom
+		Remove TokenExploreHallway1ViaDiningRoom
 		
-		ADD TileHall1, TokenDoorHall1!, TokenWallHall1!
-	END PlaceHall1
+		Add TileHall1, TokenDoorHall1!, TokenWallHall1!
+	End Page PlaceHall1
 	
-	PAGE PlaceHall1Gallery
-		TEXT """
+	Page PlaceHall1Gallery
+		Text """
 			To your immediate right is a door. Place an Explore token as
 			indicated.
 		"""
 		
-		ADD TokenExploreGalleryViaHall1!
-	END PlaceHall1Gallery
+		Add TokenExploreGalleryViaHall1!
+	End Page PlaceHall1Gallery
 	
-	PAGE PlaceHall1Painting
-		TEXT """
+	Page PlaceHall1Painting
+		Text """
 			On the left, a painting glows with unnatural
 			light. You can almost feel it calling to you. You shake it off
 			because paintings don't have power. Place a Search token as 
@@ -60,11 +60,11 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 			lightly glowing, something that suddenly seems more troubling.
 		"""
 		
-		ADD TokenSearchHall1Picture!
-	END PlaceHall1Painting
+		Add TokenSearchHall1Picture!
+	End Page PlaceHall1Painting
 	
-	PAGE PlaceHall1Evidence
-		TEXT """
+	Page PlaceHall1Evidence
+		Text """
 			You look down. The rug on the floor is old and beautiful, if
 			dirty and poorly cared for. One corner is folded up and looks
 			like it has been that way for years. You should probably put
@@ -73,24 +73,24 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 			Place a Search token as indicated.
 		"""
 		
-		ADD TokenSearchHall1Rug!
-	END PlaceHall1Evidence
+		Add TokenSearchHall1Rug!
+	End Page PlaceHall1Evidence
 	
-	PAGE PlaceHall1Sight
-		TEXT """
+	Page PlaceHall1Sight
+		Text """
 			The hall stretches forward. Place a Sight token as indicated.
 			
 			As you look around, something doesn't feel right.
 			You feel like you are being watched.
 		"""
 		
-		ADD TokenSightHall2ViaHall1!
+		Add TokenSightHall2ViaHall1!
 		
-		IF foundJournal THEN EXIT
-	END PlaceHall1Sight
+		If foundJournal Then Exit
+	End Page PlaceHall1Sight
 	
-	PAGE PlaceHall1Journal
-		TEXT """
+	Page PlaceHall1Journal
+		Text """
 			<i>The book on the floor,</i> you remind yourself. You turn 
 			around and step back. Move one space into the {c:TileDiningRoom}.
 			
@@ -109,20 +109,20 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 			can interact with it in the app.
 		"""
 		
-		REMOVE TokenSearchDiningRoomJournal
-		foundJournal = TRUE
+		Remove TokenSearchDiningRoomJournal
+		foundJournal = true
 		
-		EXIT
-	END PlaceHall1Journal
+		Exit
+	End Page PlaceHall1Journal
 	
 	
-	PAGE SearchRug
-		TRIGGERED BY @SearchHall1Rug
+	Page SearchRug
+		Triggered By @SearchHall1Rug
 	
-		PROLOG "The corner of the rug is folder over."
-		BUTTON "Search"
+		Prolog "The corner of the rug is folder over."
+		Button "Search"
 		
-		TEXT """
+		Text """
 			You lean down to straighten the rug. You play with it for a bit,
 			but have trouble getting it to stay flat--the fold has been there
 			too long. You lift the rug a little more to try to flatten the
@@ -135,19 +135,19 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 			1 {clue}, then discard this Search token.
 		"""
 		
-		ADD QItemEvidenceHall1
-		REMOVE TokenSearchHall1Rug AFTER
+		Add QItemEvidenceHall1
+		Remove TokenSearchHall1Rug
 		
-		EXIT
-	END SearchRug
+		Exit
+	End Page SearchRug
 	
-	PAGE SearchPainting
-		TRIGGERED BY @SearchHall1Painting
+	Page SearchPainting
+		Triggered By @SearchHall1Painting
 		
-		PROLOG "The painting glows with unnatural light."
-		BUTTON "Search"
+		Prolog "The painting glows with unnatural light."
+		Button "Search"
 		
-		TEXT """
+		Text """
 			The painting is a girl, maybe 12 or 13 years old. The work is
 			stunning and the girl looks so lifelike, it’s as if she could just
 			step through the frame. She’s wearing a white dress and looks
@@ -160,11 +160,11 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 			then remove this Search token.
 		"""
 		
-		REMOVE TokenSearchHall1Painting AFTER
-	END SearchPainting
+		Remove TokenSearchHall1Painting
+	End Page SearchPainting
 
-	PAGE SearchPainting2
-		TEXT """
+	Page SearchPainting2
+		Text """
 			As you turn around, you notice two shadows on the wall, yours
 			and... you quickly look back at the painting. The girl is not
 			there. Startled, you turn to run back to the {c:TileDiningRoom} and
@@ -175,24 +175,24 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 			({will} negates).
 		"""
 		
-		ADD TokenSarah!
-	END SearchPainting3
+		Add TokenSarah!
+	End Page SearchPainting3
 	
 	
-	PAGE SearchPaintingSarah
-		TRIGGERED BY @TalkToSarah WHEN UNREAD
+	Page TalkToSarah
+		Triggered By @TalkToSarah If Not Already Read
 		
-		TEXT """
+		Text """
 			She is a pretty girl in the the first blush of youth--maybe 11 or
 			12 years old. She has curly hair with ribbons and a bright white 
 			dress that stands out in the dingy hallway.
 		"""
-	END TalktoSarah
+	End Page TalktoSarah
 	
-	PAGE TalktoSarah2
-		TRIGGERED BY @TalkToSarah
+	Page TalktoSarah2
+		Triggered By @TalkToSarah If TalkToSarah Is Already Read
 		
-		PROLOG """
+		Prolog """
 			She looks at you expectantly. She looks like she wants to say
 			something, but is holding back. She still looks serious, but also
 			concerned and maybe a little afraid. You notice that she seems
@@ -200,9 +200,9 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 
 			She will only speak with {c:EventChosenInvestigator}.		
 		"""
-		BUTTON "Talk to her"
+		Button "Talk to her"
 		
-		TEXT """
+		Text """
 			She brightens up. <<It's good to see you again. I thought you
 			had forgotten me after that night. I've missed you.>>
 
@@ -216,35 +216,8 @@ BOOK Hall1 ORDERED NO KEEP LOOP
 			She will follow you to whatever ends you meet in this house.
 		"""
 		
-		REMOVE TokenSarah AFTER
-		foundSarah = TRUE AFTER
-		EXIT
-	END TalkSarah2
-END Hall1
-
-	
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-END Hallway
+		Remove TokenSarah
+		foundSarah = true
+		Exit
+	End Page TalkSarah2
+End Book Hall1

@@ -4,14 +4,14 @@
 // The default page text entries for goal == goalClosePortal
 // Note that the "visible" directives may change during the game, so pages with visibility rules might show out of order
 
-LANGUAGE English
+Language English
 
-BOOK SarahPatter ORDERED NO KEEP
+BOOK SarahPatter Ordered No Keep
 
-    PAGE Dvm
-        IF foundDvm THEN PAGE IS VISIBLE
+    Page Dvm
+        Page Is Visible If foundDvm
 
-        TEXT "
+        Text """
             Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDVM} is
             a spell book. It contains many powerful spells, including how to
             open and close portals, and how to interrupt a ritual that has been
@@ -22,116 +22,99 @@ BOOK SarahPatter ORDERED NO KEEP
             than opening them but it takes time. With the portal open, many
             horrors could come through while you are trying to close it. You
             must be prepared. Read the book carefully and read it soon.>>
-        "
+        """
 
-        IF goal == goalFeedPortal OR goal == goalClosePortal THEN TEXT "
+        If goal == goalFeedPortal Or goal == goalClosePortal Then Text """
             Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDVM} is
             a spell book. It contains many powerful spells, including how to
             open and close portals. You should read it to better understand
             what is happening.>>
-        "
-    END Dvm
+        """
+    End Page Dvm
 
     Page Candles
-        IF foundCandles THEN PAGE IS VISIBLE
+        Page Is Visible If foundCandles
 
-        TEXT "
+        Text """
             Sarah whispers to {c:EventChosenInvestigator}, <<There's a part of
             the house that is too dark to enter without light. The candles you
             found should help. If we move fast enough, maybe we can stop
             {c:CustomMonsterDavidSmythe} from opening the portal.>>
-        "
-    END Candles
+        """
+    End Page Candles
 
-    PAGE ElderSign
-        IF foundElderSign THEN PAGE IS VISIBLE
+    Page ElderSign
+        Page Is Visible If foundElderSign
 
-        TEXT "
+        Text """
             Sarah whispers to {c:EventChosenInvestigator}, <<The
             {c:QItemElderSign} is a powerful protective symbol. It can be used
             to ward off evil creatures and protect people from harm. If you
             have it, you should keep it with you at all times.>>
-        "
+        """
 
-        IF goal == goalClosePortal THEN TEXT "
+        If goal == goalClosePortal Then Text """
             Sarah whispers to {c:EventChosenInvestigator}, <<The
             {c:QItemElderSign} is an important part of the closing ritual. It
             seals the portal permanently. When the closing ritual was
             performed 10 years ago, our Uncle Henry was able to close the
             portal, but he died before he could seal it.>>
-        "
+        """
 
-        IF goal == goalOpenPortal THEN TEXT "
+        If goal == goalOpenPortal Then Text """
             Sarah whispers to {c:EventChosenInvestigator}, <<The
             {c:QItemElderSign} is important for their plans tonight. It is used
             to either secure or seal a portal. It is good we found it before
             they did.>>
-        "
+        """
 
-    END ElderSign
+    End Page ElderSign
 
-    PAGE RitualComponents
-        IF foundRitualComponents THEN PAGE IS VISIBLE
-        TEXT "
+    Page RitualComponents
+        Page Is Visible If foundRitualComponents
+		
+        Text """
             Sarah reaches out as if to touch the {c:QItemRitualComponents}. <<I
             recognize some of these items from the portal ritual. Both my father
             and the men who tried to stop him brought similar items to help with
             the spells.>>
-        "
-    END RitualComponents
+        """
+    End Page RitualComponents
 
-    PAGE Dagger
-        IF foundDagger THEN PAGE IS VISIBLE
+    Page Dagger
+        Page Is Visible If foundDagger
 
-        TEXT "
+        Text """
             Sarah reaches toward the {c:QItemRitualDagger}. <<I recognize this
             dagger,>> she starts. <<It looks like the one my father used in the
             portal ritual. With luck, they need this one and we have it.>>
-        "
-    END Dagger
+        """
+    End Page Dagger
 
-    PAGE Journal
-        IF foundJournal THEN PAGE IS VISIBLE
+    Page Journal
+        Page Is Visible If foundJournal
         
-        TEXT "
+        Text """
             Sarah looks down and sees you holding the {c:QItemJournal}. <<The
             {c:QItemJournal}! The man who let you in was writing in it all
             week. You should read it carefully.>>
-        "
-    END Journal
+        """
+    End Page Journal
 
-    PAGE MissingJournal
-        IF NOT foundJournal THEN PAGE IS VISIBLE
-		
-        TEXT "
-            Sarah whispers to {c:EventChosenInvestigator}, <<That man who let you
-            in, he has a book with him. He was writing in it all week. If you can
-            find it, it may help you understand what is happening.>>
-            
-            (The journal cannot be reached because by the time we find Sarah, we
-            cannot go outside. Do this after BackyardBenAfter disappears:
-            
-            You look where Benjamyn was and
-            see a book on the floor, like the one you found outside. <i>How did
-            this get in here?>> you ask aloud. The other inventigators turn to
-            look. Place the {c:QItemJournal} in Benjamin's previous space.)
-        "
-    END MissingJournal
-
-    PAGE Color1
-        TEXT "
+    Page Color1
+        Text """
             Sarah whispers to {c:EventChosenInvestigator}, <<You don't remember
             me or what happened 10 years ago. I am your little sister.
             
             <<I will tell you everything you need to know, but first I must
-            tell you that {c:CustomMonsterDavidSmythe} will open a portal
+            tell you that David will open a portal
             tonight and you must stop him; if you cannot stop him, you will
             need to close that portal.>>
-        "
-    END Color1
+        """
+    End Page Color1
 
-    PAGE Color2
-        TEXT "
+    Page Color2
+        Text """
             Sarah whispers to {c:EventChosenInvestigator}, <<The people in this
             town worship a darker god than most. They want to bring their god
             to Earth. 10 years ago, my father cast a ritual to summon It. He
@@ -140,33 +123,33 @@ BOOK SarahPatter ORDERED NO KEEP
             townsfolk through the portal to protect his casting, even after he
             was dead. As the portal, I could feel people and monsters
             approaching and passing through me from the other side.>>
-        "
-    END Color2
+        """
+    End Page Color2
 
-    PAGE Color3
-        TEXT "
+    Page Color3
+        Text """
             Sarah whispers to {c:EventChosenInvestigator}, <<I could feel the
             ancient one approach from the other side. Suddenly, a group of men
             broke into the altar chamber and began fighting the locals. One man
             went to the altar, killed our father, laid out some materials, and
             spoke words I didn't understand. He closed the portal while his
             friends protected him from what came through it.>>
-        "
-    END Color3
+        """
+    End Page Color3
 
-    PAGE Color4
-        TEXT "
+    Page Color4
+        Text """
             Sarah whispers to {c:EventChosenInvestigator},
             <<Our father believed that personal sacrifice was the most powerful
             magic. The portal is created by binding power to the body of a
             loved one. Father used me to summon the portal. When the portal
             closed, I died with it. The pain of the ritual so engulfed me that
             I can still feel it.>>
-        "
-    END Color4
+        """
+    End Page Color4
     
-    PAGE Color5
-        TEXT "
+    Page Color5
+        Text """
             Sarah whispers to {c:EventChosenInvestigator}, <<You found out what
             was going to happen a week before the ritual. Members of Father's
             church did something to you. After that, you followed orders
@@ -174,24 +157,24 @@ BOOK SarahPatter ORDERED NO KEEP
             what they said at the time, you probably cannot remember anything
             about the ritual or anything before. It's why you don't know who
             you are or remember what happened that night.>>
-        "
-    END Color5
+        """
+    End Page Color5
 
-    PAGE Color6
-        TEXT "
+    Page Color6
+        Text """
             Sarah whispers to {c:EventChosenInvestigator}, <<The day of the
             ritual, two of my friends came to visit me. When Father told them I
             wasn't allowed out, they sneaked to my window and crawled in when I
             opened it. Father was furious. I'm not sure who strangled them or
             who dragged them to the yard. I was burning alive when the portal
             closed, then my body was dumped with my friends. It wasn't until
-            then that I knew they were dead. I smouldered for several days,
+            then that I knew they were dead. I smoldered for several days,
             alive and conscious until the end.>>
-        "
-    END Color6
+        """
+    End Page Color6
     
-    PAGE Color7
-        TEXT "
+    Page Color7
+        Text """
             Sarah whispers to {c:EventChosenInvestigator}, “I don't know who
             the other men were, but the one who closed the portal was our uncle
             Henry--Father's brother. I think there's something special about
@@ -200,7 +183,7 @@ BOOK SarahPatter ORDERED NO KEEP
             
             <<You probably share the family abilities. You must trust yourself
             to know what to do.>>
-        "
-    END Color7
-END SarahPatter
+        """
+    End Page Color7
+End Book SarahPatter
 

@@ -1,36 +1,39 @@
-LANGUAGE English
+Language English
 
-BOOK Gallery ORDERED NO KEEP LOOPED
+Book Gallery Ordered No Keep Looped
 
-	PAGE ExploreGalleryViaHall1
-		TRIGGERED BY @ExploreGalleryViaHall1
+	Page ExploreGalleryViaHall1
+		Triggered By @ExploreGalleryViaHall1
 		
-		NO TEXT
+		No Text
 		
-		exploredGalleryViaHall1 = TRUE
-		exploredGalleryViaFoyer = FALSE
-		GOTO ExploreGallery
-	END ExploreGalleryViaHall1
+		exploredGalleryViaHall1 = true
+		exploredGalleryViaFoyer = false
+		Goto ExploreGallery
+	End Page ExploreGalleryViaHall1
 	
-	PAGE ExploreGalleryViaFoyer
-		TRIGGERED BY @ExploreGalleryViaFoyer
+	Page ExploreGalleryViaFoyer
+		Triggered By @ExploreGalleryViaFoyer
 		
-		NO TEXT
+		No Text
 		
-		exploredGalleryViaFoyer = TRUE
-		exploredGalleryViaHall1  = FALSE
-		GOTO ExploreGallery
-	END ExploreGalleryViaFoyer
+		exploredGalleryViaFoyer = true
+		exploredGalleryViaHall1  = false
+		Goto ExploreGallery
+	End Page ExploreGalleryViaFoyer
 
-	PAGE ExploreGallery
+	Page ExploreGallery
 		PROLOG """
 			You approach the door. It has a small brass plaque that reads
 			<<Gallery.>> The door handle catches your eye because light is
 			glinting off it. Unlike everything else here, it is clean...
 			like it has been used recently.
 		"""
+
+		Add TileGallery
+		Remove TokenExploreGalleryViaHall1, TokenExploreGalleryViaFoyer
 		
-		TEXT """
+		Text """
 			As the door opens, dust drifts slowly to the floor. Lots of
 			it. If you were still concerned about cleaning, you'd be horrified
 			at the amount of work ahead of you.
@@ -45,44 +48,46 @@ BOOK Gallery ORDERED NO KEEP LOOPED
 			Explore tokens leading to this room.
 		"""
 		
-		ADD TileGallery
-		REMOVE TokenExploreGalleryViaHall1, TokenExploreGalleryViaFoyer
-	END ExploreGalleryViaFoyer
+	End Page ExploreGallery
 
-	PAGE PlaceExploreFoyerViaGallery
-		IF NOT exploredFoyer THEN PAGE IS VISIBLE
+	Page PlaceExploreFoyerViaGallery
+		Page Is Not Visible If exploredFoyer
 
-		TEXT """
+		Add TokenExploreFoyerViaGallery!
+
+		Text """
 			Across the room is another door. Place an Explore token as
 			indicated.
 		"""
-		
-		ADD TokenExploreFoyerViaGallery!
-	END PlaceGalleryViaHall1
+	End Page PlaceExploreFoyerViaGallery
 
-	PAGE PlaceGalleryCoatRoom
-		TEXT """
+	Page PlaceGalleryCoatRoom
+		Add TokenExploreCoatRoom!
+
+		Text """
 			A coat room sits in the corner across from you. Place an Explore
 			token as indicated.
 		"""
 		
-		ADD TokenExploreCoatRoom!
-	END PlaceGalleryCoatRoom
+	End Page PlaceGalleryCoatRoom
 		
-	PAGE PlaceGalleryDVM
-		TEXT """
+	Page PlaceGalleryDvm
+		Add TokenSearchGalleryDvm!
+
+		Text """
 			The two divans are upholstered with once-beautiful cloth... but now
 			they are dirty and moth-eaten. A pile of junk sits on a small table
 			between them. Place a Search token as indicated.
 		"""
-		
-		ADD TokenSearchGalleryDVM!
-	END PlaceGalleryDVM
+	End Page PlaceGalleryDvm
 
-	PAGE PlaceCoatRoom
-		TRIGGERED BY @PlaceCoatRoom
+	Page PlaceCoatRoom
+		Triggered By @PlaceCoatRoom
 		
-		TEXT """
+		Remove TokenExploreCoatRoom
+		Add TokenSearchCoatRoomEvidence!
+
+		Text """
 			The coat room still has a number of coats hung neatly on one side.
 			Shoes and hangers are scattered on the floor. Remove this Explore
 			token.
@@ -91,40 +96,41 @@ BOOK Gallery ORDERED NO KEEP LOOPED
 			indicated.
 		"""
 		
-		REMOVE TokenExploreCoatRoom
-		ADD TokenSearchCoatRoomEvidence!
-		TRIGGER @MoveAfterExplore
-		EXIT
-	END PlaceCoatRoom
+		Trigger @MoveAfterExplore
+		Exit
+	End Page PlaceCoatRoom
 
-	PAGE SearchDVM
-		TRIGGERED BY @SearchGalleryDVM
+	Page SearchDvm
+		Triggered By @SearchGalleryDvm
 		
 		PROLOG "A pile of junk sits on the table between the divans."
 		
-		TEXT """
+		Remove TokenSearchGalleryDvm
+
+		Text """
 			Among the tools, handkerchiefs, and ashtrays are a number of small
 			books. One of them... <i>feels</i> different than the others. It is
 			old and worn, but you get the sense it possesses great power.
 
-			Gain the {c:QItemDVM} Common Item, then discard this Search token.
-			An investigator with the {c:QItemDVM} can interact with it in the
+			Gain the {c:QItemDvm} Common Item, then discard this Search token.
+			An investigator with the {c:QItemDvm} can interact with it in the
 			app.
 		"""
 		
-		REMOVE TokenSearchGalleryDVM
-		foundDVM = TRUE AFTER
-	END SearchDVM
+		foundDvm = true
+	End Page SearchDvm
 	
-	PAGE SearchCoatRoomEvidence
-		TRIGGERED BY @SearchCoatRoomEvidence
+	Page SearchCoatRoomEvidence
+		Triggered By @SearchCoatRoomEvidence
 		
-		PROLOG "
+		PROLOG """
 			This box is half-full of things you might find in a coat room:
 			brushes, shoe polish, and...
 		"""
 	
-		TEXT """
+		Remove TokenSearchCoatRoomEvidence
+
+		Text """
 			Among other items, you find a pair of shoes caked with mud and a
 			bloody handkerchief. Looking closer, you see that the handkerchief
 			was used to wipe blood from the shoes.
@@ -133,7 +139,6 @@ BOOK Gallery ORDERED NO KEEP LOOPED
 			Search token.
 		"""
 		
-		REMOVE TokenSearchCoatRoomEvidence
-		EXIT
-	END SearchCoatRoomBox
-END Gallery
+		Exit
+	End Page SearchCoatRoomEvidence
+End Book Gallery

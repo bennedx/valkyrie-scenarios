@@ -1,11 +1,11 @@
-LANGUAGE English
+Language English
 
-BOOK Startup ORDERED NO KEEP
+Book Startup Ordered No Keep
 
-	PAGE StartUp NO TEXT
-		TRIGGERED BY EventStart
+	Page StartUp No Text
+		Triggered By EventStart
 
-		testMode = TRUE
+		testMode = true
 		
 		roundsBeforeRitual = (5 - #heros) * 2 + 15
 				
@@ -15,12 +15,12 @@ BOOK Startup ORDERED NO KEEP
 		// these determine where the next wanderer appears
 		// the farther into the house investigators have explored,
 		// the farther back toward the study they appear.
-		wandererInStudy = TRUE
-		wandererInLibrary = TRUE
-		wandererInChapel = TRUE
-		wandererInHall2 = TRUE
-		wandererInFoyer = TRUE
-		wandererInGallery = TRUE
+		wandererInStudy = true
+		wandererInLibrary = true
+		wandererInChapel = true
+		wandererInHall2 = true
+		wandererInFoyer = true
+		wandererInGallery = true
 
 		// at most there can be only 6 cultists since that's all there
 		// are in the box
@@ -52,34 +52,34 @@ BOOK Startup ORDERED NO KEEP
 		
 		goal = RANDOM(1, 3)
 		
-		IF NOT testMode THEN TRIGGER @SplashScreen
+		If Not testMode Then Trigger @SplashScreen
 		
-		EXIT
-	END Startup
+		Exit
+	End Page Startup
 	
 	
-	PAGE SplashScreen NO TEXT
-		PAGE IS NOT VISIBLE
-		TRIGGERED BY @SplashScreen
+	Page SplashScreen No Text
+		Page Is Not Visible
+		Triggered By @SplashScreen
 		
-		ADD UIStoryImage, UIStoryBackground, UIOpenText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
-	END SplashScreen
+		Add UIStoryImage, UIStoryBackground, UIOpenText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
+	End Page SplashScreen
 	
-	PAGE SplashScreenClosed NO TEXT
-		TRIGGERED BY @SplashScreenClosed
-		REMOVE UIStoryImage, UIStoryBackground, UIOpenText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
-	END SplashScreenClosed
+	Page SplashScreenClosed No Text
+		Triggered By @SplashScreenClosed
+		Remove UIStoryImage, UIStoryBackground, UIOpenText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
+	End Page SplashScreenClosed
 	
-	PAGE StartScenario NO TEXT
-		IF testMode THEN PAGE IS NOT VISIBLE
+	Page StartScenario No Text
+		Page Is Not Visible If testMode
 		
-		TEXT "Each investigator receives 1 {clue}."
-	END 
+		Text "Each investigator receives 1 {clue}."
+	End Page StartScenario
 	
-	PAGE Kate
-		IF #HeroKateWinthrop THEN PAGE IS VISIBLE
+	Page Kate
+		If #HeroKateWinthrop Then Page Is Visible
 		
-		TEXT """
+		Text """
 			Kate is running late, so she is hurried and inattentive. She grabs
 			her {c:QItemFluxStabilizer} and turns to put it away. She cries out
 			as it slips from her fingers and drops heavily to the floor.
@@ -90,6 +90,6 @@ BOOK Startup ORDERED NO KEEP
 			Focused. She becomes Focused before any monster attacks her.
 		"""
 		
-		TRIGGER @PlaceDriveWay
-	END Kate
-END Startup
+		Trigger @PlaceDriveWay
+	End Page Kate
+End Book Startup
