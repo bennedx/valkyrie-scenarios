@@ -303,7 +303,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 			discard this Search token.
 		"""
 		
-	End Page PaperInbox
+	End Page PaperInBox
 End Book SearchDiningRoom
 
 
@@ -420,7 +420,7 @@ Book ExploreBackDoorLocked Ordered No Keep Looped
 			Discard this explore token.
 		"""
 	End Epilog
-End BackDoorLocked
+End Book ExploreBackDoorLocked
 
 
 Book ExploreKitchen Ordered No Keep Looped

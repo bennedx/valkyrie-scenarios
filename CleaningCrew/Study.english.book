@@ -78,6 +78,6 @@ Book Study Ordered No Keep Looped
 		"""
 		
 		foundHealingStone = true
-		EXIT
-	End Page Study
+		Exit
+	End Page SearchHealingStone
 End Book Study

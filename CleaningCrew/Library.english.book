@@ -51,7 +51,7 @@ Book Library Ordered No Keep Looped
 			Place a Search token as indicated.
 		"""
 		
-	End Page PlaceLibraryKey
+	End Page PlaceKey
 	
 	Page PlaceSearchBookCase
 		Add TokenSearchLibraryBookcase!
@@ -174,7 +174,7 @@ Book Library Ordered No Keep Looped
 	End Page ExploreChapelViaBookcase
 	
 	Page ExploreChapelViaBookcasePuzzle
-	
+	End Page
 	
 	Page ExploreChapleViaBookcaseSmash
 		Text """
@@ -186,7 +186,7 @@ Book Library Ordered No Keep Looped
 		Test Quota 5
 			On Pass Goto SmashPass
 			On Fail Goto SmashFail
-	End Page Smash
+	End Page ExploreChapleViaBookcaseSmash
 	
 	Page SmashFail
 		Text "No done"
@@ -194,6 +194,7 @@ Book Library Ordered No Keep Looped
 	End Page SmashFail
 	
 	Page SmashPass
-		Exit "Not done (2)"
+		Text "Not done (2)"
+		Exit
 	End Page SmashPass	
 End Book Library	

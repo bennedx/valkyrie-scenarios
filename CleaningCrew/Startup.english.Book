@@ -3,9 +3,9 @@ Language English
 Book Startup Ordered No Keep
 
 	Page StartUp No Text
-		Triggered By EventStart
+		Triggered By @EventStart
 
-		testMode = true
+		testMode = false
 		
 		roundsBeforeRitual = (5 - #heros) * 2 + 15
 				
@@ -50,12 +50,12 @@ Book Startup Ordered No Keep
 		goalFeedGate = 2
 		goalCloseGate = 3
 		
-		goal = RANDOM(1, 3)
+		goal = RANDOM(3)
 		
 		If Not testMode Then Trigger @SplashScreen
 		
 		Exit
-	End Page Startup
+	End Page StartUp
 	
 	
 	Page SplashScreen No Text
