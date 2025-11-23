@@ -35,7 +35,7 @@ Book Startup Ordered No Keep
 		wandererCountdown = wandererFrequency
 		
 		// only one per
-		wandererMax = #Heros
+		wandererMax = #heros
 
 		// wanderers killed so farther
 		// wanderersKiled
