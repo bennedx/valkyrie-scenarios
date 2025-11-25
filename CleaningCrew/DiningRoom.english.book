@@ -144,9 +144,6 @@ Book SearchDiningRoom Ordered No Keep Looped
 		
 		Text "Will Kate pick up the {c:QItemFluxStabilizer}?"
 		
-		Text Pass = "Yes"
-		Text Fail = "No"
-		
 		Test "Yes" Or "No" Set katePicksUp
 		If katePicksUp Then Goto KatePicksUp
 		Goto KateDoesNotPickUp
@@ -212,7 +209,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 	Page Puzzle2
 		Triggered By @SearchFluxStabilizer When Puzzle1 Is Read
 		
-		Text """
+		Prolog """
 			Maybe if you randomly flipped a few more buttons or turned a few
 			more dials, it will do something.
 			

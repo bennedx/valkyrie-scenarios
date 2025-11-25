@@ -174,9 +174,9 @@ Book Library Ordered No Keep Looped
 			weapon's damage.
 		"""
 		
-		Test Quota 5
-			On Pass Goto SmashPass
-			On Fail Goto SmashFail
+		Test Quota 5 Set passSmashBookcase
+		If passSmashBookcase Then Goto SmashPass
+		Goto SmashFail
 	End Page ExploreChapleViaBookcaseSmash
 	
 	Page SmashFail
