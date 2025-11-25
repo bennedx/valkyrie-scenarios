@@ -1,4 +1,4 @@
-LANGUAGE English
+Language English
 
 Book Library Ordered No Keep Looped
 
@@ -38,7 +38,7 @@ Book Library Ordered No Keep Looped
 	End Page SpawnCultist
 	
 	Page PlaceKey
-		Triggered By DefeatedCustomMonsterLibraryCultist
+		Triggered By @DefeatedCustomMonsterLibraryCultist
 		
 		Add TokenSearchLibraryKey!
 

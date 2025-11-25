@@ -1,5 +1,7 @@
 Language English
 
+Debug On
+
 Book Startup Ordered No Keep
 
 	Page StartUp No Text
@@ -57,6 +59,35 @@ Book Startup Ordered No Keep
 		Exit
 	End Page StartUp
 	
+	Page ShowEverything No Text
+		Page Is Visible When testMode
+		
+		Add TokenTestPlaceDriveway, TokenTestTakeBooks, TokenTestStartRitual
+		Add TokenTestRitualPreparations, TokenTestRitualFinished
+		Add TokenTestPlaceTortureChamber, TokenTestPlaceLibraryViaStudy
+		Add TokenTestPlaceLibraryAfterCultists, TokenTestPlaceChapelViaLibrary
+		Add TokenTestPlaceKitchenViaDiningRoom, TokenTestPlaceStudyViaHall2
+		Add TokenTestPlaceHall2ViaHall1, TokenTestPlaceStudyViaFoyer
+		Add TokenTestPlaceDungeonCell, TokenTestPlaceCryptViaDungeonCave
+		Add TokenTestPlaceDiningRoomViaBackdoor, TokenTestPlaceCryptViaChapel
+		Add TokenTestPlaceCoatRoomViaGallery, TokenTestPlaceAltar
+		Add TokenTestInitChosenInvestigator, TokenTestPlaceDriveway
+		Add TokenTestBasementViaDiningRoomSight, TileStudy, TileHall2
+		Add TileGallery, TileFoyer, TileDriveway, TileDiningRoom, TileCrypt,
+		Add TileChapel, TileBasement, TileBackyard, TileAltar
+		Add TokenTestPlaceHall1ViaDiningRoom, TokenTestPlaceFoyerViaGallery
+		Add TokenTestPlaceGalleryViaFoyer, TokenExploreHall2ViaFoyer
+		Add TokenTestPlaceFoyerViaHall2, TokenTestPlaceStudyViaFoyer
+		Add TokenTestPlaceStudyViaHall2, TokenTestPlaceFoyerViaStudy
+		Add TokenTestPlaceHall2ViaFoyer, TokenTestPlaceDungeonCaveViaBasement
+		Add TokenTestPlaceDungeonCaveViaCrypt, TokenTestPlaceHall1ViaHall2
+		Add TokenTestPlaceBackdoorViaDriveway, TokenTestPlaceGalleryViaHall1
+		Add TokenTestJournal2, TokenTestBenTrigger, TileHall1
+		Add TileTortureChamber, TokenBackyardBenBefore, TokenBackyardBenAfter
+		Add TokenBackyardBenPassive, TokenTestBackdoorLocked
+		
+		Exit
+	End Page ShowEverything
 	
 	Page SplashScreen No Text
 		Page Is Not Visible

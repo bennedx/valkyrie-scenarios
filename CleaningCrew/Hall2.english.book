@@ -116,7 +116,7 @@ Book Hall2 Ordered No Keep Looped
 	End Page PlaceHall2ExploreStudy
 	
 	Page SearchEvidence
-		Triggered By SearchHall2Evidence
+		Triggered By @SearchHall2Evidence
 		
 		Prolog "The upended table has spilled its contents across the floor."
 		
