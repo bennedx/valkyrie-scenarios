@@ -178,9 +178,9 @@ Book Driveway Ordered No Keep
 			({strength}).
 		"""
 		
-		Test Quota 3
-			On Pass Goto ExploreNotNice
-			On Fail Goto ExploreNice
+		Test Quota 3 Set exploredBackyardNotNicely
+		If exploredBackyardNotNicely Then Goto ExploreNotNice
+		Goto ExploreNice
 	End Page ExploreBackyardViaDriveway
 	
 	Page ExploreNotNice

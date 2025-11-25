@@ -65,9 +65,7 @@ Book OpenPortal Ordered No Keep Looped
         """
 		
 		// even if we pass, we fail
-        Test Quota 10
-            On Pass Do Nothing
-            On Fail Do Nothing
+        Test Quota 10 Set passWhoCares
     End Page Step2
 
     Page Step3
@@ -90,14 +88,10 @@ Book OpenPortal Ordered No Keep Looped
         """
 
         // even if we pass, we fail
-		Test Quota 4
-            On Pass Do Nothing
-            On Fail Goto Step3Fail
+		Test Quota 4 Set passWhoCares
     End Page Step3
 
     Page Step3Fail
-        Page Is Not Visible
-		
         Text """
             You fumble the words and nothing happens. David
 			ignores you and slides the blade across his palm.
@@ -123,14 +117,11 @@ Book OpenPortal Ordered No Keep Looped
 			For each Unique Item you have, you may roll 1 extra die.
 		"""
 		
-		Test Quota 4
-			On Pass Do Nothing
-			On Fail Goto Step3RepeatFail
+		Test Quota 4 Set passOpenPortalStep3
+		If passOpenPortalStep3 Then Goto Step4
 	End Page Step3Repeat
 
 	Page Step3RepeatFail
-		Page Is Not Visible
-				
 		Text """
 			David seems unphased as blood wells up from the 
 			cut in his palm. You look at the dagger and chalice raised in your
@@ -138,6 +129,7 @@ Book OpenPortal Ordered No Keep Looped
 			determined to stop this madness.
 		"""
 
+		Mark Unread
 		Mark Step3Repeat Unread
 	End Page Step3RepeatFail
 
@@ -160,15 +152,10 @@ Book OpenPortal Ordered No Keep Looped
        """
    
        // even if we pass, we fail
-	   Test Quota 10
-            On Pass Goto Step4Fail
-            On Fail Goto Step4Fail
+	   Test Quota 10 Set passWhoCares
     End Page Step4
 
-
 	Page Step4Fail
-		Page Is Not Visible
-		
 		Text """
 			David swings his arm at you, dagger flashing in the low
 			light. It catches your arm, causing you to drop the dagger.
@@ -181,7 +168,7 @@ Book OpenPortal Ordered No Keep Looped
 		"""
 	End Page Step4Fail
 	
-    Epilog
+    Page KillHim
         Text """
             The futility of trying to stop your uncle from completing this
 			ritual sinks in. You're going to have to kill him.
@@ -189,8 +176,17 @@ Book OpenPortal Ordered No Keep Looped
 	
 		// we need to replace unattackable monster with one we can attack
 		
-		If !alreadyWarnedAboutKilling Then Remove MonsterUncleDavidAltar
-		If !alreadyWarnedAboutKilling Then Spawn MonsterUncleDavidToKill
-		alreadyWarnedAboutKilling = true
-    End Epilog
+		Remove MonsterUncleDavidAltar
+		Spawn MonsterUncleDavidToKill
+		
+		// does this make the DVM go away?
+		Remove QItemDvm
+    End Page KillHim
+	
+	Epilog
+		Page Is Not Visible
+		
+		No Prolog
+		No Text
+	End Epilog
 End Book OpenPortal

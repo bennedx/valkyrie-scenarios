@@ -100,9 +100,10 @@ Book Backyard Ordered No Keep
 			important. Maybe it's not, but it has your attention. ({agility})
 		"""
 		
-		Test Quota 2
-			On Pass Goto SearchRandomGood
-			On Fail Goto SearchRandomBad
+		Test Quota 2 Set passSearchBackyardRandom
+		
+		If passSearchBackyardRandom Then Goto SearchRandomGood
+		Goto SearchRandomBad
 	End Page SearchRandom
 	
 	Page SearchRandomGood
@@ -149,9 +150,9 @@ Book Backyard Ordered No Keep
 			You carefully pick through the mess ({agility}).
 		"""
 		
-		Test Quota 3
-			On Pass Goto Search2x4Pass
-			On Fail Goto Search2x4Fail
+		Test Quota 3 Set passSearch2x4
+		If passSearch2x4 Then Goto Search2x4Pass
+		Goto Search2x4Fail
 	End Page Search2x4
 	
 	Page Search2x4Pass
@@ -185,5 +186,7 @@ Book Backyard Ordered No Keep
 			The door is filthy. You check the knob, but it’s locked:
 			you'll need a key to get in.
 		"""
+		
+		Exit
 	End Page ExploreDiningRoomViaBackyard
 End Book Backyard

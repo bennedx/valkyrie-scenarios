@@ -59,9 +59,9 @@ Book ClosePortal ORDERED NO Keep Looped
         """
 		
 		// even if we pass, we fail
-        Test Quota 10
-            On Pass Goto Step2Fail
-            On Fail Goto Step2Fail
+        Test Quota 10 set passClosePortalStep2
+        If passClosePortalStep2 Then Goto Step2Fail
+        Goto Step2Fail
     End Page Step2
 
     Page Step2Pass
@@ -107,9 +107,9 @@ Book ClosePortal ORDERED NO Keep Looped
 			{will} and hope for the best.
         """
 
-        Test Quota 4
-            On Pass Goto Step2Pass
-            On Fail Goto Step2RepeatFail
+        Test Quota 4 Set passClosePortalStep2
+        If passClosePortalStep2 Then Goto Step2Pass
+        Goto Step2RepeatFail
     End Page Step2Repeat
 	
     Page Step2RepeatFail
@@ -149,9 +149,9 @@ Book ClosePortal ORDERED NO Keep Looped
         """
 
         // even if we pass, we fail
-		Test Quota 10
-            On Pass Goto Step3Fail
-            On Fail Goto Step3Fail
+		Test Quota 10 Set passClosePortalStep3
+        If passClosePortalStep3 Then Goto Step3Fail
+        Goto Step3Fail
     End Page Step3
 
     Page Step3Pass
@@ -202,9 +202,9 @@ Book ClosePortal ORDERED NO Keep Looped
        """
    
        // even if we pass, we fail
-	   Test Quota 10
-            On Pass Goto Step4Fail
-            On Fail Goto Step4Fail
+	   Test Quota 10 Set passClosePortalStep4
+       If passClosePortalStep4 Then Goto Step4Fail
+       Goto Step4Fail
     End Page Step4
 
     Page Step4Pass
@@ -264,9 +264,9 @@ Book ClosePortal ORDERED NO Keep Looped
         """
         
 		// even if we pass, we fail
-		Test Quota 4
-            On Pass Goto Step4Pass
-            On Fail Goto Step4Fail
+		Test Quota 4 Set passClosePortalStep4
+        if passClosePortalStep4 Then Goto Step4Pass
+        Goto Step4Fail
     End Page Step4Repeat
 
     Page Step5
@@ -297,9 +297,9 @@ Book ClosePortal ORDERED NO Keep Looped
         """
 
         // even if we pass, we fail
-		Test Quota 10
-            On Pass Goto Step5Fail
-            On Fail Goto Step5Fail
+		Test Quota 10 Set passClosePortalStep5
+        If passClosePortalStep5 Then Goto Step5Fail
+        Goto Step5Fail
     End Page Step5
 
     Page Step5Pass
@@ -359,9 +359,9 @@ Book ClosePortal ORDERED NO Keep Looped
             For each Unique Item you have, you may roll 1 extra die.
         """
 
-        Test Quota 4
-            On Pass Goto Step5Pass
-            On Fail Goto Step5Fail
+        Test Quota 4 Set passClosePortalStep5
+        If passClosePortalStep5 Then Goto Step5Pass
+        Goto Step5Fail
     End Page Step5Repeat
 
 End ClosePortal

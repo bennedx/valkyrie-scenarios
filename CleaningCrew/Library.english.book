@@ -103,9 +103,8 @@ Book Library Ordered No Keep Looped
 			You decide to try a little harder ({strength};2).
 		"""
 		
-		Test
-			On Pass Goto SearchBookcasePass
-			On Fail Do Nothing
+		Test "Pass" Or "Fail" Set passSearchBookcase
+		If passSearchBookcase Then Goto SearchBookcasePass
 	End Page SearchBookcase
 	
 	Page SearchBookcaseFail
@@ -123,9 +122,8 @@ Book Library Ordered No Keep Looped
 			you can ({stregth}).
 		"""
 		
-		Test
-			On Pass Do Nothing
-			On Fail Goto SearchBookcaseFail
+		Test "Pass" Or "Fail" Set passSearchBookcase
+		If Not passSearchBookcase Then Goto SearchBookcaseFail
 	End Page SearchBookcaseAgain
 	
 	Page SearchBookcasePass
@@ -154,26 +152,19 @@ Book Library Ordered No Keep Looped
 	Page ExploreChapelViaBookcase
 		Triggered By @ExploreChapelViaBookcase When Unread
 		
-		Prolog """
+		Text """
 			There is an elaborate lock on the door behind the bookcase; it has
 			arcane markings, ones that you recognize from the spine of one of
 			the books. An investigator with a heavy weapon might be able to
 			bust through the door; otherwise, maybe the lock could be picked?
 		"""
-		
-		Text Pass = "Tap to attempt the puzzle using {lore}"
-		Text Fail = "Smash the door with a heavy weapon"
-		
-		Test
-			On Pass Do Nothing
-			On Fail Goto ExploreChapleViaBookcaseSmash
 
-		Free
-		
-		No Text
+		Test "Tap to attempt the puzzle using {lore}" Or "Smash the door with a heavy weapon" Set puzzleForBookcase
+		If Not puzzleForBookcase Then Goto ExploreChapleViaBookcaseSmash
 	End Page ExploreChapelViaBookcase
 	
 	Page ExploreChapelViaBookcasePuzzle
+		Puzzle PuzzleBookcaseLock Set completedBookcasePuzzle
 	End Page
 	
 	Page ExploreChapleViaBookcaseSmash
