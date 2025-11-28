@@ -1,0 +1,33 @@
+Language English
+
+Book TortureChamber Ordered No Keep Looped
+
+	Page Explore
+		Triggered By @ExploreTortureChamberViaDungeonCave
+		
+		Prolog """
+			Looking through the bars in this door's window, you see things you'd
+			hoped you'd never see.
+		"""
+		Button "Explore"
+		
+	
+		Text """
+			This is a torture chamber. Along the walls are various devices for
+			stretching, beating, burning, and cutting. You gulp thinking about
+			what might have been done here. You and all investigators in your
+			space take 2 facedown Horror ({will} negates).
+		"""
+
+		exploredTortureChamber = true
+	End Page Explore
+
+	Page Place
+
+		Remove TokenExploreTortureChamherViaDungeonCave		
+
+		Text """
+	
+	End Page Place
+	
+End Book TortureChamber

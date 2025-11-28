@@ -1,0 +1,115 @@
+Language English
+
+Book Basement Ordered No Keep Looped
+
+	Page Place
+		Triggered By @PlaceBasement
+		
+		Prolog """
+			The basement is so dark you cannot see your hand when you put it 
+			through the doorway. An investigator with a light source can go
+			into the basement.
+		"""
+		Button "Enter basement"
+		
+		Remove TokenExploreBasementViaDiningRoomSight
+		Add TileBasement, TokenBasementWall!
+		
+		TEXT """
+			The basement is dark, even with your light. Place the
+			{c:TileBasement} tile and wall as indicated, then remove all Sight
+			and Explore tokens leading to this room.
+		"""
+		
+		exploredBasement = true
+	End Page Place
+
+	Page PlaceDarkness
+		Add TokenBasementDarkness1!
+		Add TokenBasementDarkness2!
+		Add TokenBasementDarkness3!
+		Add TokenBasementDarkness4!
+		
+		TEXT """
+			Even with a candle, it is dark in the basement. Place Darkness in
+			each space of the basement. Investigators can only move into the
+			basement when a Light Source is present. The darkness feeds on your
+			light:  your Light Source does not cancel the effects of darkness,
+			but at least you can see into the room.
+		"""
+	End Page PlaceDarkness
+
+	Page PlaceTrapdoor
+		Visible When readAboutBasementDoorToCave
+		
+		Add TokenSearchBasementTrapdoor!
+		
+		Text """
+			A pile of trash sits in the corner. From here, it looks like it was
+			recently dumped. Place a Search token as indicated.
+		"""
+	End Page Place Trapdoor
+	
+	Page PlaceEvidence
+		Add TokenSearchBasementEvidence!
+		
+		Text """
+			There is more junk in one of the corners. Place a Search token as
+			indicated.
+		"""
+		
+		Trigger @MoveAfterExplore
+		Exit
+	End Page PlaceEvidence
+	
+	Page SearchEvidence
+		Triggered By @SearchBasementEvidence
+		
+		Prolog """There is a lot of refuse here."
+		
+		Add QItemEvidenceBasementEvidence
+		Remove TokenSearchBasementEvidence
+		
+		Text """
+			You fish through the rubbish. While you don't find anything of use,
+			you do find several old pictures and a damaged necklace. One of the
+			pictures shows an open door with a man walking through it. The door
+			looks familiar.
+
+			Gain the {c:QItemEvidenceBasementRubble} Unique Item, then discard
+			this Search token.
+		"""
+	
+		foundEvidenceBasement = true
+		foundEvidenceCount = foundEvidenceCount + 1
+		Exit
+	End Page SearchEvidence
+	
+	Page SearchTrapdoor
+		Triggered By @SearchBasementTrapdoor
+		
+		Prolog """
+			The trash here is piled deep. There are footprints all around it.
+		"""
+		Button "Search"
+		
+		Remove TokenBasementWall, TokenSearchBasementTrapdoor
+		
+		Text """
+			As you dig through the junk, you realize it is hiding something.
+			You sweep it away and find a door under it. Remove this Search token
+			and the wall.
+		"""
+	End Page SearchTrapdoor
+		
+	Page SearchTrapdoorExplore
+		Add TokenExploreDungeonCaveViaBasement!
+		
+		Text """
+			The door looks like it goes farther underground. Place an Explore
+			token as indicated.
+		"""
+		
+		Exit		
+	End Page SearchTrapdoorExplore
+End Book Basement
