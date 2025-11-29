@@ -67,7 +67,7 @@ Book Driveway Ordered No Keep
 	End Page PlaceGardenTool
 	
 	Page PlaceWendy
-		Page IS Visible When #HeroWendyAdams
+		Visible When #HeroWendyAdams
 		
 		Add QItemWendyGun
 

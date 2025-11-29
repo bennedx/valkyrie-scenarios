@@ -184,7 +184,7 @@ Book OpenPortal Ordered No Keep Looped
     End Page KillHim
 	
 	Epilog
-		Page Is Not Visible
+		Not Visible
 		
 		No Prolog
 		No Text

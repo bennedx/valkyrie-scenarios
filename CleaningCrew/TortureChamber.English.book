@@ -10,24 +10,53 @@ Book TortureChamber Ordered No Keep Looped
 			hoped you'd never see.
 		"""
 		Button "Explore"
-		
-	
+
+		Remove TokenExploreTortureChamberViaDungeonCave
+
 		Text """
 			This is a torture chamber. Along the walls are various devices for
 			stretching, beating, burning, and cutting. You gulp thinking about
 			what might have been done here. You and all investigators in your
 			space take 2 facedown Horror ({will} negates).
+			
+			Discard this Explore token.
 		"""
 
 		exploredTortureChamber = true
 	End Page Explore
 
-	Page Place
-
-		Remove TokenExploreTortureChamherViaDungeonCave		
-
+	Page PlaceRandom
+		Add TokenSearchTortureChamberRandom!
+		
 		Text """
-	
+			One of the devices looks recently used. Place a Search token as
+			indicated.
+		"""
+	End Page PlaceRandom
+
+	Page PlaceExploreCell
+		Add TokenExploreCellViaTortureChamber!
+		
+		Text "A door leads to what looks like a small cell."
+		
+		Trigger @MoveAfterExplore
+		Exit
 	End Page Place
 	
+	Page SearchRandom
+		Triggered By @SearchTortureChamberRandom
+		
+		Prolog "An old restraint device seems to have been used recently."
+		Button "Search"
+		
+		Remove TokenSearchTortureChamberRandom
+		
+		Text """
+			As you hesitantly look over the rusty chains and ancient tools, you
+			find something left behind. Gain the {c:QItemRandomEquipment} Common
+			Item, then discard this Search token.
+		"""
+		
+		Exit
+	End Page SearchRandom	
 End Book TortureChamber

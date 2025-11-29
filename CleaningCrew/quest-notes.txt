@@ -158,3 +158,9 @@ Do investigator wipe at start of investigator phase
 BackdoorLocked.book:  totally messed up in app
 
 PlaceChapelViaCrypt
+
+ExploreAltarViaCell--this needs work around ritual and such
+
+How does ritual start? What effect does that have on cell and altar?
+
+- Put something important in the basement to make sure they go through it

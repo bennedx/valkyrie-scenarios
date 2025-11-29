@@ -60,7 +60,7 @@ Book Startup Ordered No Keep
 	End Page StartUp
 	
 	Page ShowEverything No Text
-		Page Is Visible When testMode
+		Visible When testMode
 		
 		Add TokenTestPlaceDriveway, TokenTestTakeBooks, TokenTestStartRitual
 		Add TokenTestRitualPreparations, TokenTestRitualFinished
@@ -90,7 +90,7 @@ Book Startup Ordered No Keep
 	End Page ShowEverything
 	
 	Page SplashScreen No Text
-		Page Is Not Visible
+		Not Visible
 		Triggered By @SplashScreen
 		
 		Add UIStoryImage, UIStoryBackground, UIOpenText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
@@ -102,13 +102,13 @@ Book Startup Ordered No Keep
 	End Page SplashScreenClosed
 	
 	Page StartScenario No Text
-		Page Is Not Visible When testMode
+		Not Visible When testMode
 		
 		Text "Each investigator receives 1 {clue}."
 	End Page StartScenario
 	
 	Page Kate
-		Page Is Visible WHEN #HeroKateWinthrop
+		Visible WHEN #HeroKateWinthrop
 		
 		Text """
 			Kate is running late, so she is hurried and inattentive. She grabs

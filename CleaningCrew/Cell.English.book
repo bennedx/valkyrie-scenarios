@@ -1,0 +1,103 @@
+Language English
+
+Book Cell Ordered No Keep Looped
+
+	Page Explore
+		Triggered By @ExploreCellViaTortureChamber
+		
+		Prolog """
+			When you look through the bars, it's dark inside. You think that you
+			hear something.
+		"""
+		Button "Open door"
+		
+		Remove TokenExploreCellViaTortureChamber
+		
+		Text """
+			The cell is no brighter than it was before you opened the door, but
+			now you can see the bloodstains. Take 1 facedown Horror ({will} 
+			negates), then discard this Explore token.
+		"""
+		
+		exploredCell = true
+	End Page Explore
+	
+	Page PlaceHoleInWall
+		Visible When readAboutBoy
+		
+		Add TokenCellHoleInWall!
+		
+		Text """
+			A ray of light coming from the middle of a solid wall catches your
+			eye. Place a Sight token as indicated. This must be the hole you
+			read about in the journal.
+			
+			Place a Trapdoor as indicated.
+		"""
+		
+		cellHoleFound = true
+	End Page PlaceHoleInWall
+	
+	Page PlaceExploreAltarViaCell
+		Visible When readAboutBoy
+	
+		Add TokenExploreAltarViaCell!
+		
+		Text "Place a Sight token as indicated."
+	End Page PlaceExploreAltarViaCell
+	
+	Page PlaceDavidsSon
+		Visible When Not ritual
+		
+		Add TokenSearchCellDavidsSon!
+		
+		Text """
+			A boy lies on the floor of the cell, moaning quietly. Place a Person
+			token as indicated. This is David's son.
+		"""
+	End Page Place
+	
+	Page PlaceExit No Text
+		Exit
+	End Page PlaceExit
+	
+	Page SearchBoy
+		Text """
+			The boy is mesmerized. He doesn’t respond to you, no matter what you
+			do.
+		"""
+		Exit
+	End Page SearchBoy
+	
+	Page PlaceCellHoleInWall
+		Triggered by @PlaceExploreAltarViaCell When Not cellHoleFound
+		
+		Add TokenCellHoleInWall!
+		
+		Text """
+			<i>A hole in the wall? That must be in the room where we found the
+			boy,<i> you think.
+			
+			Place a Trapdoor as indicated.
+		"""
+		
+		If ritual Then Text """
+			<i>A hole in the wall? That must be in the cell you found earlier,
+			<i> you think to yourself.
+		"""
+	End Page
+	
+	Page PlaceExploreAltarViaCell
+		Visible When Not ritual
+		
+		Add TokenExploreAltarViaCell!
+		
+		Text "Place a Sight token as indicated"
+		
+		cellHoleFound = true
+	End Page
+	
+	Page PlaceExploreAltarViaCellExit No Text
+		Exit
+	End Page PlaceExploreAltarViaCellExit
+End Book Cell

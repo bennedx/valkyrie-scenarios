@@ -111,7 +111,7 @@ Book BenAfter Random No Keep Looped
     End Page AnythingElse
 	
 	Page AnythingElseJournal
-		Page Is Visible When Not foundJournal
+		Visible When Not foundJournal
 		
 		Add TokenDiningRoomJournal!
 		

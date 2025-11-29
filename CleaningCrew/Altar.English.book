@@ -1,0 +1,16 @@
+Language English
+
+Book Altar Ordered No Keep Looped
+
+	Page Explore
+		Prolog "You lean down to look through the hole."
+		Button "Look"
+		
+		Text ""
+	End Page Explore
+	
+	Page Place
+	
+	End Page Place
+
+End Book Altar

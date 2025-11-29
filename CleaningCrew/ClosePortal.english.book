@@ -65,7 +65,7 @@ Book ClosePortal ORDERED NO Keep Looped
     End Page Step2
 
     Page Step2Pass
-        Page Is Not Visible
+        Not Visible
 
         Text """
             As you finish the incantation, the blade becomes heavier and
@@ -77,7 +77,7 @@ Book ClosePortal ORDERED NO Keep Looped
     End Page Step2Pass
 
     Page Step2Fail
-        Page Is Not Visible
+        Not Visible
 
         Text """
             You finish the incantation but nothing seems to have happened.
@@ -113,7 +113,7 @@ Book ClosePortal ORDERED NO Keep Looped
     End Page Step2Repeat
 	
     Page Step2RepeatFail
-        Page Is Not Visible
+        Not Visible
 
         Text """
             You finish again and... nothing. You take a breath to calm your
@@ -155,7 +155,7 @@ Book ClosePortal ORDERED NO Keep Looped
     End Page Step3
 
     Page Step3Pass
-        Page Is Not Visible
+        Not Visible
 
         Text """
             You squeeze your hand into a tight fist and blood drips into the
@@ -167,7 +167,7 @@ Book ClosePortal ORDERED NO Keep Looped
     End Page Step3Pass
 
     Page Step3Fail
-        Page Is Not Visible
+        Not Visible
 
         Text """
             A drop of blood spatters when it hits the cup. And another. Nothing
@@ -208,7 +208,7 @@ Book ClosePortal ORDERED NO Keep Looped
     End Page Step4
 
     Page Step4Pass
-        Page Is Not Visible
+        Not Visible
 
         Text """
             You feel a welling of power as you speak the last word. The feeling
@@ -229,7 +229,7 @@ Book ClosePortal ORDERED NO Keep Looped
     End Page Step4Pass
 
     Page Step4Fail
-        Page Is Not Visible
+        Not Visible
 
         Text """
             You can feel something happen inside but it is not very strong. The
@@ -303,7 +303,7 @@ Book ClosePortal ORDERED NO Keep Looped
     End Page Step5
 
     Page Step5Pass
-        Page Is Not Visible
+        Not Visible
 
         Text """
             You squeeze your hand into a tight fist over the trinket. As your
@@ -329,7 +329,7 @@ Book ClosePortal ORDERED NO Keep Looped
     End Page Step5Pass
 
     Page Step5Fail
-        Page Is Not Visible
+        Not Visible
 
         Text """
             You finish the incantation, but the {c:QItemElderSign} just lies
@@ -342,7 +342,7 @@ Book ClosePortal ORDERED NO Keep Looped
     End Page Step5Fail
 
     Page Step5Repeat
-        Page Is Not Visible
+        Not Visible
 
         Prolog """
             You lift your hand over the altar again and prepare to speak again.

@@ -14,7 +14,7 @@ Book Journal Ordered Keep Looped
         Text """
             Sunday the 25th of October 1925
         
-            I>ve decided to record what happens this week. After three
+            I've decided to record what happens this week. After three
 			generations of Smythes making the attempt, I think the Master will
 			finally bring Our God into this world. This time, there will be no
 			mistakes. His uncle failed 10 years ago, but the Master will not.
@@ -56,7 +56,7 @@ Book Journal Ordered Keep Looped
 			The Master says his son’s fear will provide the power needed to
 			create the portal.
     
-            The boy>s screaming kept me awake last night. It hurts to hear, but
+            The boy's screaming kept me awake last night. It hurts to hear, but
 			the Master told me this morning that power is drawing into him,
 			making him stronger for Saturday.
         """
@@ -91,22 +91,23 @@ Book Journal Ordered Keep Looped
             Friday the 30th of October 1925
     
             The cleaning crew will be here tomorrow. Everything is prepared
-			for the ritual; I can feel the fear and excitement building in
+			for the ritual; I can feel the excitement and fear building in
 			all of us. Soon the world will belong to the One True God.
     
-            The Master>s son continues to plead for his life during the day,
-			then screams in the night. The Master told me in confidence that
-			he yearns to stop, but that he must keep his commitment and see
-			this through.
+            The Master's son continues to plead for his life during the day,
+			then screams in the night, though we don't know how he knows which
+			is which. The Master told me in confidence that he yearns to stop,
+			but that he must keep his commitment and see this through.
             
             The boy has been moved to the dungeon outside the altar room.
-			There is a hole in the wall that he stares through when he>s not
+			There is a hole in the wall that he stares through when he's not
 			begging or screaming. The altar is visible through the hole;
 			looking at it terrifies the boy. I can no longer hear him, but I
 			can still feel his fear, even across town. I will be strong.
         """
 		
 		readAboutBoy = true
+		Trigger @PlaceExploreAltarViaCell
     End Page Page4
     
     Page Page5
@@ -124,12 +125,12 @@ Book Journal Ordered Keep Looped
 			this world.
         
             Earlier, the Master told me that something is bothering him,
-			but he isn>t sure what. He said something has changed, like there
+			but he isn't sure what. He said something has changed, like there
             is another power in the house. The brethren searched by can find
 			nothing.
         
             The woman who lost the stone is already at the altar. Her husband
-			pleaded with me to help him find the stone; I>m going to search the
+			pleaded with me to help him find the stone; I'm going to search the
 			chapel one more time. For his sake, I hope I find it.
         
             The cleaning crew should be there soon. It is time.

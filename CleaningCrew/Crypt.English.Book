@@ -1,0 +1,91 @@
+Language English
+
+Book Crypt
+	Page Explore
+		Triggered By @ExploreCryptViaDungeonCave
+		
+		Prolog "The cave continues into the darkness."
+		Button "Look"
+		
+		Add TileCrypt
+		Remove TokenExploreCryptViaDungeonCave
+		
+		Text """
+			You walk forward a bit and realize the other part of the cave
+			is a crypt containing above-ground vaults. The air is different, 
+			even from the cave you have been in.
+			
+			Place the {c:TileCrypt} tile and discard this Sight token.
+		"""
+	End Page Explore
+	
+	Page PlaceSearchPendant
+		Add TokenSearchCryptPendant!
+		
+		Text """
+			One of the vaults is open. You aren't sure you want to look inside.
+			Place a Search token as indicated.
+		"""
+	End Page PlaceSearchPendant
+
+	Page PlaceExploreChapelViaCrypt
+		Visible When Not exploredChapel
+		
+		Add TokenExploreChapelViaCrypt!
+		
+		Text """
+			A door at the other end of the crypt leads... somewhere. Place an
+			ExploreTokenAsIndicated.
+		"""
+	End Page PlaceExploreChapelViaCrypt
+	
+	Page PlaceExit
+		Exit
+	End Page PlaceExit
+	
+	Page ExploreChapelViaCrypt
+		Triggered By ExploreChapelViaCrypt
+		
+		Prolog """
+			An investigator in the crypt can try to open this door.
+		"""
+		Button "Open door"
+		
+		Text """
+			As you reach for the door, you trip over something lying on the
+			floor. A piece of wood has been stuck into the crack between the 
+			door and its jam. You knock the wood out of the way and reach again
+			for the door. You grab the handle and pull. It seems to be locked
+			from the other side.
+		"""
+	End Page ExploreChapelViaCrypt
+	
+	Page PlaceExploreCryptViaChapel No Text
+		Add TokenExploreCryptViaChapel
+		Remove TokenExploreChapelViaCrypt
+		Exit
+	End Page
+	
+	Page SearchPendant
+		Triggered By @SearchCryptPendant
+		
+		Prolog """
+			The casket inside the vault is also open. You wonder what might have
+			been interred with the body. And whether there is anything left
+			after whatever descecration left the casket open.
+		"""
+		Button "Search"
+		
+		Remove TokenSearchCryptPendant
+		
+		Text """
+			Mixed in with the bones, tattered clothing, and cobwebs are several
+			pieces of junk jewelry, tarnished and of no value. But there is one
+			piece that looks like it might be worth something. Gain the
+			{c:QItemElderSignPendant} Common Item, then discard this Search
+			token.
+		"""
+		
+		Exit
+	End Page SearchPendant
+End Book Crypt

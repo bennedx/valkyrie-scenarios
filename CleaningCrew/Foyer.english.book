@@ -57,7 +57,7 @@ Book Foyer Ordered No Keep Looped
 	End Page PlaceFoyer
 
 	Page PlaceFoyerExploreGallery
-		Page Is Not Visible When exploredGallery
+		Not Visible When exploredGallery
 		
 		Add TokenExploreGalleryViaFoyer!
 
@@ -75,7 +75,7 @@ Book Foyer Ordered No Keep Looped
 	End Page PlaceFoyerExploreGallery
 
 	Page PlaceFoyerExploreStudy
-		Page Is Not Visible When exploredStudy
+		Not Visible When exploredStudy
 		
 		Add TokenExploreStudyViaFoyer!
 		
@@ -92,7 +92,7 @@ Book Foyer Ordered No Keep Looped
 	End Page PlaceFoyerExploreStudy
 	
 	Page PlaceFoyerExploreHall2
-		Page Is Not Visible When exploredHall2
+		Not Visible When exploredHall2
 		
 		Add TokenExploreHall2ViaFoyer!
 

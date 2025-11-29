@@ -3,7 +3,7 @@ Language English
 Book WandererAttacks Ordered No Keep
 
 	Page Story1
-		Page Is Visible When exploredBasement
+		Visible When exploredBasement
 
 		TEXT """
 			In a voice that reverberates through the house, the cultist cries out,
@@ -14,7 +14,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story1
 
 	Page Story2
-		Page Is Visible When exploredBasementViaDiningRoom AND !exploredBasement
+		Visible When exploredBasementViaDiningRoom AND !exploredBasement
 
 		TEXT """
 			<<I will not allow you into the basement,>> he says to you. He raises a
@@ -25,7 +25,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story2
 
 	Page Story3
-		Page Is Visible When foundDWM
+		Visible When foundDWM
 
 		TEXT """
 			<<You cannot be allowed to leave with the Master's book.>> He moves as
@@ -37,7 +37,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story3
 
 	Page Story4
-		Page Is Visible When foundCandles AND exploredBasementViaDiningRoom AND !exploredBasement
+		Visible When foundCandles AND exploredBasementViaDiningRoom AND !exploredBasement
 
 		TEXT """
 			<<Brothers! They have found what they need to explore the basement. We
@@ -49,7 +49,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story4
 
 	Page Story5
-		Page Is Visible When foundCandles
+		Visible When foundCandles
 
 		TEXT """
 			The cultist shouts something about the basement and shakes you. Drop
@@ -59,7 +59,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story5
 
 	Page Story6
-		Page Is Visible When wanderersKilled > 5
+		Visible When wanderersKilled > 5
 
 		TEXT """
 			The cultist looks around; waves of horror and anger cross his face. He
@@ -75,7 +75,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story6
 
 	Page Story7
-		Page Is Visible When !exploredGateNicely
+		Visible When !exploredGateNicely
 
 		TEXT """
 			<<You would destroy the Master's house with your brutality. You must be
@@ -89,7 +89,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story7
 
 	Page Story8
-		Page Is Visible When chapelPriestDead
+		Visible When chapelPriestDead
 
 		TEXT """
 			<<You have killed our High Priest. You shall pay.>> The cultist raises
@@ -101,7 +101,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story8
 
 	Page Story9
-		Page Is Visible When foundDWM
+		Visible When foundDWM
 
 		TEXT """
 			<<They have found The Master's sacred text,>> the cultist wails. <<They
@@ -116,7 +116,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story9
 
 	Page Story10
-		Page Is Visible When foundRitualKnife
+		Visible When foundRitualKnife
 
 		TEXT """
 			<<You have found the knife, but we will take it from you,>> the cultist
@@ -130,7 +130,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story10
 
 	Page Story11
-		Page Is Visible When foundRitualComponents
+		Visible When foundRitualComponents
 
 		TEXT """
 			The cultist rushes into the room, intent on catching up with you.
@@ -145,7 +145,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story11
 
 	Page Story12
-		Page Is Visible When foundJournal
+		Visible When foundJournal
 
 		TEXT """
 			Have you stolen Brother Benjamin's journal? He trusted you and this is
@@ -158,7 +158,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story12
 
 	Page Story13
-		Page Is Visible When foundJournal
+		Visible When foundJournal
 
 		TEXT """
 			The cultist calls out to the others, <<Brother Benjamin tells us that
@@ -174,7 +174,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story13
 
 	Page Story14
-		Page Is Visible When foundDWM AND foundRitualKnife
+		Visible When foundDWM AND foundRitualKnife
 
 		TEXT """
 			<<The intruders,>> he calls out, <<have found some of the items Our
@@ -189,7 +189,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story14
 
 	Page Story15
-		Page Is Visible When foundDWM AND foundRitualComponents
+		Visible When foundDWM AND foundRitualComponents
 
 		TEXT """
 			The cultist enters the room and says, <<You have found some of what you
@@ -202,7 +202,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story15
 
 	Page Story16
-		Page Is Visible When foundDWM AND foundRitualComponents AND foundRitualKnife
+		Visible When foundDWM AND foundRitualComponents AND foundRitualKnife
 
 		TEXT """
 			<<If they can figure out how to use them, they have found everything
@@ -218,7 +218,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story16
 
 	Page Story17
-		Page Is Visible When foundDWM AND foundRitualComponents AND foundRitualKnife AND ritualDone AND dwmReadPage6
+		Visible When foundDWM AND foundRitualComponents AND foundRitualKnife AND ritualDone AND dwmReadPage6
 
 		TEXT """
 			<<It is time Brothers,>> the cultist's voice booms through the house.
@@ -228,7 +228,7 @@ Book WandererAttacks Ordered No Keep
 	End Page Story17
 
 	Page Story18
-		Page Is Visible When foundDWM AND foundRitualComponents AND foundRitualKnife AND ritual AND dwmReadPage6 AND journalReadPage6
+		Visible When foundDWM AND foundRitualComponents AND foundRitualKnife AND ritual AND dwmReadPage6 AND journalReadPage6
 
 		TEXT """
 			The cultist looks at you and sneers, <<You think you are ready, but you
