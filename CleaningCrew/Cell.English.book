@@ -55,7 +55,7 @@ Book Cell Ordered No Keep Looped
 			A boy lies on the floor of the cell, moaning quietly. Place a Person
 			token as indicated. This is David's son.
 		"""
-	End Page Place
+	End Page PlaceDavidsSon
 	
 	Page PlaceExit No Text
 		Exit
@@ -87,6 +87,7 @@ Book Cell Ordered No Keep Looped
 		"""
 	End Page
 	
+	/*
 	Page PlaceExploreAltarViaCell
 		Visible When Not ritual
 		
@@ -95,7 +96,8 @@ Book Cell Ordered No Keep Looped
 		Text "Place a Sight token as indicated"
 		
 		cellHoleFound = true
-	End Page
+	End Page PlaceExploreAltarViaCell
+	*/
 	
 	Page PlaceExploreAltarViaCellExit No Text
 		Exit

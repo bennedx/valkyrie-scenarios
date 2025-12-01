@@ -48,7 +48,7 @@ Book Basement Ordered No Keep Looped
 			A pile of trash sits in the corner. From here, it looks like it was
 			recently dumped. Place a Search token as indicated.
 		"""
-	End Page Place Trapdoor
+	End Page PlaceTrapdoor
 	
 	Page PlaceEvidence
 		Add TokenSearchBasementEvidence!
@@ -65,7 +65,7 @@ Book Basement Ordered No Keep Looped
 	Page SearchEvidence
 		Triggered By @SearchBasementEvidence
 		
-		Prolog """There is a lot of refuse here."
+		Prolog "There is a lot of refuse here."
 		
 		Add QItemEvidenceBasementEvidence
 		Remove TokenSearchBasementEvidence

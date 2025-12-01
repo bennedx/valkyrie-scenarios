@@ -41,7 +41,7 @@ Book TortureChamber Ordered No Keep Looped
 		
 		Trigger @MoveAfterExplore
 		Exit
-	End Page Place
+	End Page PlaceExploreCell
 	
 	Page SearchRandom
 		Triggered By @SearchTortureChamberRandom

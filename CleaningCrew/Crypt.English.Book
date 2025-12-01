@@ -1,6 +1,6 @@
 Language English
 
-Book Crypt
+Book Crypt Ordered No Keep Looped
 	Page Explore
 		Triggered By @ExploreCryptViaDungeonCave
 		
@@ -44,7 +44,7 @@ Book Crypt
 	End Page PlaceExit
 	
 	Page ExploreChapelViaCrypt
-		Triggered By ExploreChapelViaCrypt
+		Triggered By @ExploreChapelViaCrypt
 		
 		Prolog """
 			An investigator in the crypt can try to open this door.

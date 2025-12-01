@@ -70,7 +70,7 @@ Book Chapel Ordered No Keep Looped
 			A ceremonial table sits at the front of the room. There is a
 			large book and various religousm icons and implements. Place a
 			Search token as indicated.
-		""
+		"""
 	
 		Trigger @MoveAfterExplore
 	End Page PlaceSearchRitualComponents
@@ -87,7 +87,7 @@ Book Chapel Ordered No Keep Looped
 		"""
 		
 		Exit
-	End Page ExploreChapelEscepLocked
+	End Page ExploreChapelEscapeLocked
 	
 	Page SearchRitualComponents
 		Triggered By @SearchChapelRitualComponents
@@ -125,8 +125,8 @@ Book Chapel Ordered No Keep Looped
 		Triggered By @SearchChapelWhiskey
 		
 		Prolog """
-			There’s a liquor bottle here. Someone has picked at the edges of the
-			label. It’s about half-full.
+			There's a liquor bottle here. Someone has picked at the edges of the
+			label. It's about half-full.
 		"""
 		Button "Pick it up"
 		
@@ -145,7 +145,7 @@ Book Chapel Ordered No Keep Looped
 		Add TokenChapelPriestAlive!
 		
 		Text """
-			While you are bent over getting the bottle, you don’t notice the
+			While you are bent over getting the bottle, you don't notice the
 			chapel door swing open and a priest walk in. Without looking around,
 			he turns and heads for a door on the other side of the room. 
 
@@ -153,8 +153,8 @@ Book Chapel Ordered No Keep Looped
 			pew, trip, and fall to the ground. When you hit the floor, you 
 			let out a loud curse.
 
-			The priest turns, his face turning from startled to angry. "Who are
-			you and how did you get in here?"
+			The priest turns, his face turning from startled to angry. <<Who are
+			you and how did you get in here?>>
 			
 			Place the White Man token as indicated.
 		"""
@@ -163,9 +163,9 @@ Book Chapel Ordered No Keep Looped
 	End Page SearchWhiskeyNoise
 	
 	Page TalkToPriest
-		@Triggered By @TalkToChapelPriest
+		Triggered By @TalkToChapelPriest
 		
-		Prolog "The priest glares at you expectantly. You reply..."
+		Prolog "The priest is glaring at you expectantly. You say, ..."
 		
 		Button "<<What are <i>you</i> doing here?!" Set response
 		Button "<<I'm with a cleaning service and I got lost." Set response
@@ -175,10 +175,10 @@ Book Chapel Ordered No Keep Looped
 	Page ChallengePriest
 		Visible When response = 1
 		Remove TokenChapelPriestAlive
-		Spawn CustomMonsterChapelRiot!
+		Spawn CustomMonsterChapelRiot
 		
 		Text """
-			<<What am <i>I</i> doing here? I’m a priest; this is my chapel. It’s
+			<<What am <i>I</i> doing here? I'm a priest; this is my chapel. It's
 			not a place for impertinent criminals.>> He turns toward the door
 			and yells, <<Boys!>> Several men in robes run through the door.
 			<<They do not belong here. Take care of them.>> The men turn toward
@@ -196,10 +196,10 @@ Book Chapel Ordered No Keep Looped
 		Remove TokenChapelPriest
 		
 		Text """
-			<<Oh,>> the priest brightens. <<Benjamin told me you’d be here
-			today. I’m not sure how you found this place, but you should head
+			<<Oh,>> the priest brightens. <<Benjamin told me you'd be here
+			today. I'm not sure how you found this place, but you should head
 			back to the house and get to work. We need that place cleaned up.
-			I’ll remind the boys that you’re here at Benjamin’s request.>> The
+			I'll remind the boys that you're here at Benjamin's request.>> The
 			priest turns and walks out of the room, leaving you puzzled at all
 			of this.
 			
@@ -210,7 +210,7 @@ Book Chapel Ordered No Keep Looped
 			{c:QItemRitualDagger} Common Item.
 
 			<<Haunted house, murdered kids, and now what looks like some local
-			cult," you mutter to yourself. <<What have I gotten myself into?>>		
+			cult,>> you mutter to yourself. <<What have I gotten myself into?>>		
 		"""
 		
 		wandererFrequency = wandererFrequency + 2
@@ -228,11 +228,11 @@ Book Chapel Ordered No Keep Looped
 		Text """
 			You cock your arm to punch the priest and he raises his arms in
 			defense. As he does, a knife falls out of his robe. Place the
-			{c:QItemRitualDagger} Common Item in the priest’s space.
+			{c:QItemRitualDagger} Common Item in the priest's space.
 
 			You punch hard through his waving arms and strike him in the temple.
 			The man falls back, hitting his head on the corner of a pew. He 
-			collapses, seizes for a moment, and then goes still. He’s dead.
+			collapses, seizes for a moment, and then goes still. He's dead.
 			Take 1 facedown Horror.
 
 			<<A haunted house, dead kids, and now a local cult,>> you mutter to
@@ -262,7 +262,7 @@ Book Chapel Ordered No Keep Looped
 	End Page
 	
 	Page DefeatRiot
-		Trigged By @DefeatCustomMonsterChapelRiot
+		Triggered By @DefeatCustomMonsterChapelRiot
 		
 		Add TokenSearchRitualDagger!
 		
