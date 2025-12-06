@@ -2,7 +2,7 @@ Language English
 Debug Off
 
 Book BenAfter Random No Keep Looped
-    If exploredDiningRoom Then Exit
+    Triggered By @BenAfter When exploredDiningRoomen
 
     Prolog
         Text """

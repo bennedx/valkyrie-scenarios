@@ -3,7 +3,7 @@ LANGUAGE English
 Book Driveway Ordered No Keep
 	
 	Page Place 
-		Triggered By @PlaceDriveway When Not testMod
+		Triggered By @PlaceDriveway
 		
 		Add TileDriveway
 
