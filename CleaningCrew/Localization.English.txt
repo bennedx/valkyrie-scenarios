@@ -6107,288 +6107,306 @@ EventSarahPatterReadPageColor7TiePoint.text,
 EventSarahPatterReadPageColor7TiePoint.button1,
 EventSarahPatterReadPageColor7End.text,
 EventSarahPatterReadPageColor7End.button1,
-EventDrivewayStart.text,
+<<<<<<< HEAD
+=======
+>>>>>>> bf1eaed215c0401e309a5bdd31ac2c109c5cb26e
+<<<<<<< HEAD
+=======
+>>>>>>> bf1eaed215c0401e309a5bdd31ac2c109c5cb26e
+<<<<<<< HEAD
+=======
+>>>>>>> bf1eaed215c0401e309a5bdd31ac2c109c5cb26e
+<<<<<<< HEAD
+=======
+>>>>>>> bf1eaed215c0401e309a5bdd31ac2c109c5cb26e
+<<<<<<< HEAD
+=======
+>>>>>>> bf1eaed215c0401e309a5bdd31ac2c109c5cb26e
+<<<<<<< HEAD
+=======
+>>>>>>> bf1eaed215c0401e309a5bdd31ac2c109c5cb26e
+EventDrivewayStart.text,|||\nEventDrivewayStart @(-1,-1)\n\n\n\n\n|||
 EventDrivewayStart.button1,
-EventDrivewayInit.text,
+EventDrivewayInit.text,|||\nEventDrivewayInit @(-1,-1)\n\n\n\n\n|||
 EventDrivewayInit.button1,
-EventDrivewayFirstTimeInitializer.text,
+EventDrivewayFirstTimeInitializer.text,|||\nEventDrivewayFirstTimeInitializer @(-1,-1)\n\n\n\n\n|||
 EventDrivewayFirstTimeInitializer.button1,
-EventDrivewayPageSelector.text,
+EventDrivewayPageSelector.text,|||\nEventDrivewayPageSelector @(-1,-1)\n\n\n\n\n|||
 EventDrivewayPageSelector.button1,
-EventDrivewayReadPagePlaceXferIfTriggered.text,
+EventDrivewayReadPagePlaceXferIfTriggered.text,|||\nEventDrivewayReadPagePlaceXferIfTriggered @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceXferIfTriggered.button1,
-EventDrivewayReadPagePlace.text,
+EventDrivewayReadPagePlace.text,|||\nEventDrivewayReadPagePlace @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlace.button1,
-EventDrivewayReadPagePlaceBeforeAddRemove1.text,
+EventDrivewayReadPagePlaceBeforeAddRemove1.text,|||\nEventDrivewayReadPagePlaceBeforeAddRemove1 @(9,2)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceBeforeAddRemove1.button1,
-EventDrivewayReadPagePlaceDisplay.text,
+EventDrivewayReadPagePlaceDisplay.text,|||\nEventDrivewayReadPagePlaceDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceDisplay.button1,
-EventDrivewayReadPagePlaceBase.text,"\nIt’s 3:00 and you’re on time. The man your friend spoke with on the phone–Benjamin–should be here to meet you.\n\nAs you walk up the driveway, you can see how poorly maintained the house and grounds are. The drive is paved, but cracked and pocked. Weeds grow as high as your waist on either side and you briefly wonder what might be hiding there.\n\nPlace the {c:TileDriveway} tile as indicated.\n"
+EventDrivewayReadPagePlaceBase.text,|||\nEventDrivewayReadPagePlaceBase @(-1,-1)\n\nIt’s 3:00 and you’re on time. The man your friend spoke with on the phone–Benjamin–should be here to meet you.\n\nAs you walk up the driveway, you can see how poorly maintained the house and grounds are. The drive is paved, but cracked and pocked. Weeds grow as high as your waist on either side and you briefly wonder what might be hiding there.\n\nPlace the {c:TileDriveway} tile as indicated.\n\n\n|||
 EventDrivewayReadPagePlaceBase.button1,{qst:continue}
-EventDrivewayReadPagePlaceTiePoint.text,
+EventDrivewayReadPagePlaceTiePoint.text,|||\nEventDrivewayReadPagePlaceTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceTiePoint.button1,
-EventDrivewayReadPagePlaceEnd.text,
+EventDrivewayReadPagePlaceEnd.text,|||\nEventDrivewayReadPagePlaceEnd @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceEnd.button1,
-EventDrivewayTiePoint.text,
+EventDrivewayTiePoint.text,|||\nEventDrivewayTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTiePoint.button1,
-EventDrivewayToc.text,
+EventDrivewayToc.text,|||\nEventDrivewayToc @(-1,-1)\n\n\n\n\n|||
 EventDrivewayToc.button1,
-EventDrivewayTocSelector.text,
+EventDrivewayTocSelector.text,|||\nEventDrivewayTocSelector @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocSelector.button1,
-EventDrivewayTocPrologPlace.text,
+EventDrivewayTocPrologPlace.text,|||\nEventDrivewayTocPrologPlace @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocPrologPlace.button1,
-EventDrivewayTocPrologPlaceInvestigators.text,
+EventDrivewayTocPrologPlaceInvestigators.text,|||\nEventDrivewayTocPrologPlaceInvestigators @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocPrologPlaceInvestigators.button1,
-EventDrivewayReadPagePlaceInvestigators.text,
+EventDrivewayReadPagePlaceInvestigators.text,|||\nEventDrivewayReadPagePlaceInvestigators @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceInvestigators.button1,
-EventDrivewayReadPagePlaceInvestigatorsBeforeAddRemove1.text,
+EventDrivewayReadPagePlaceInvestigatorsBeforeAddRemove1.text,|||\nEventDrivewayReadPagePlaceInvestigatorsBeforeAddRemove1 @(26,2)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceInvestigatorsBeforeAddRemove1.button1,
-EventDrivewayReadPagePlaceInvestigatorsDisplay.text,
+EventDrivewayReadPagePlaceInvestigatorsDisplay.text,|||\nEventDrivewayReadPagePlaceInvestigatorsDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceInvestigatorsDisplay.button1,
-EventDrivewayReadPagePlaceInvestigatorsBase.text,"\nYou wonder what you were thinking when you said “yes” to your friend. Place your investigators as indicated.\n"
+EventDrivewayReadPagePlaceInvestigatorsBase.text,|||\nEventDrivewayReadPagePlaceInvestigatorsBase @(-1,-1)\n\nYou wonder what you were thinking when you said “yes” to your friend. Place your investigators as indicated.\n\n\n|||
 EventDrivewayReadPagePlaceInvestigatorsBase.button1,{qst:continue}
-EventDrivewayReadPagePlaceInvestigatorsTiePoint.text,
+EventDrivewayReadPagePlaceInvestigatorsTiePoint.text,|||\nEventDrivewayReadPagePlaceInvestigatorsTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceInvestigatorsTiePoint.button1,
-EventDrivewayReadPagePlaceInvestigatorsAfterAddRemove1.text,
+EventDrivewayReadPagePlaceInvestigatorsAfterAddRemove1.text,|||\nEventDrivewayReadPagePlaceInvestigatorsAfterAddRemove1 @(33,2)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceInvestigatorsAfterAddRemove1.button1,
-EventDrivewayReadPagePlaceInvestigatorsEnd.text,
+EventDrivewayReadPagePlaceInvestigatorsEnd.text,|||\nEventDrivewayReadPagePlaceInvestigatorsEnd @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceInvestigatorsEnd.button1,
-EventDrivewayTocPrologPlaceExploreKitchenViaDriveway.text,
+EventDrivewayTocPrologPlaceExploreKitchenViaDriveway.text,|||\nEventDrivewayTocPrologPlaceExploreKitchenViaDriveway @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocPrologPlaceExploreKitchenViaDriveway.button1,
-EventDrivewayReadPagePlaceExploreKitchenViaDriveway.text,
+EventDrivewayReadPagePlaceExploreKitchenViaDriveway.text,|||\nEventDrivewayReadPagePlaceExploreKitchenViaDriveway @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceExploreKitchenViaDriveway.button1,
-EventDrivewayReadPagePlaceExploreKitchenViaDrivewayBeforeAddRemove1.text,
+EventDrivewayReadPagePlaceExploreKitchenViaDrivewayBeforeAddRemove1.text,|||\nEventDrivewayReadPagePlaceExploreKitchenViaDrivewayBeforeAddRemove1 @(37,2)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceExploreKitchenViaDrivewayBeforeAddRemove1.button1,
-EventDrivewayReadPagePlaceExploreKitchenViaDrivewayDisplay.text,
+EventDrivewayReadPagePlaceExploreKitchenViaDrivewayDisplay.text,|||\nEventDrivewayReadPagePlaceExploreKitchenViaDrivewayDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceExploreKitchenViaDrivewayDisplay.button1,
-EventDrivewayReadPagePlaceExploreKitchenViaDrivewayBase.text,"\nAfter walking around the house, you are not surprised that the door next to you is covered with mud and spiderwebs. Like the rest of the house, the paint is peeling and the door shows signs of dry rot.\n\nPlace an Explore token as indicated.\n"
+EventDrivewayReadPagePlaceExploreKitchenViaDrivewayBase.text,|||\nEventDrivewayReadPagePlaceExploreKitchenViaDrivewayBase @(-1,-1)\n\nAfter walking around the house, you are not surprised that the door next to you is covered with mud and spiderwebs. Like the rest of the house, the paint is peeling and the door shows signs of dry rot.\n\nPlace an Explore token as indicated.\n\n\n|||
 EventDrivewayReadPagePlaceExploreKitchenViaDrivewayBase.button1,{qst:continue}
-EventDrivewayReadPagePlaceExploreKitchenViaDrivewayTiePoint.text,
+EventDrivewayReadPagePlaceExploreKitchenViaDrivewayTiePoint.text,|||\nEventDrivewayReadPagePlaceExploreKitchenViaDrivewayTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceExploreKitchenViaDrivewayTiePoint.button1,
-EventDrivewayReadPagePlaceExploreKitchenViaDrivewayEnd.text,
+EventDrivewayReadPagePlaceExploreKitchenViaDrivewayEnd.text,|||\nEventDrivewayReadPagePlaceExploreKitchenViaDrivewayEnd @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceExploreKitchenViaDrivewayEnd.button1,
-EventDrivewayTocPrologPlaceGate.text,
+EventDrivewayTocPrologPlaceGate.text,|||\nEventDrivewayTocPrologPlaceGate @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocPrologPlaceGate.button1,
-EventDrivewayReadPagePlaceGate.text,
+EventDrivewayReadPagePlaceGate.text,|||\nEventDrivewayReadPagePlaceGate @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceGate.button1,
-EventDrivewayReadPagePlaceGateBeforeAddRemove1.text,
+EventDrivewayReadPagePlaceGateBeforeAddRemove1.text,|||\nEventDrivewayReadPagePlaceGateBeforeAddRemove1 @(50,2)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceGateBeforeAddRemove1.button1,
-EventDrivewayReadPagePlaceGateDisplay.text,
+EventDrivewayReadPagePlaceGateDisplay.text,|||\nEventDrivewayReadPagePlaceGateDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceGateDisplay.button1,
-EventDrivewayReadPagePlaceGateBase.text,"\nUp ahead, at the end of the drive, is a gate that leads around to the back of the house. Place an Explore token as indicated.\n"
+EventDrivewayReadPagePlaceGateBase.text,|||\nEventDrivewayReadPagePlaceGateBase @(-1,-1)\n\nUp ahead, at the end of the drive, is a gate that leads around to the back of the house. Place an Explore token as indicated.\n\n\n|||
 EventDrivewayReadPagePlaceGateBase.button1,{qst:continue}
-EventDrivewayReadPagePlaceGateTiePoint.text,
+EventDrivewayReadPagePlaceGateTiePoint.text,|||\nEventDrivewayReadPagePlaceGateTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceGateTiePoint.button1,
-EventDrivewayReadPagePlaceGateEnd.text,
+EventDrivewayReadPagePlaceGateEnd.text,|||\nEventDrivewayReadPagePlaceGateEnd @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceGateEnd.button1,
-EventDrivewayTocPrologPlaceGardenTool.text,
+EventDrivewayTocPrologPlaceGardenTool.text,|||\nEventDrivewayTocPrologPlaceGardenTool @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocPrologPlaceGardenTool.button1,
-EventDrivewayReadPagePlaceGardenTool.text,
+EventDrivewayReadPagePlaceGardenTool.text,|||\nEventDrivewayReadPagePlaceGardenTool @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceGardenTool.button1,
-EventDrivewayReadPagePlaceGardenToolBeforeAddRemove1.text,
+EventDrivewayReadPagePlaceGardenToolBeforeAddRemove1.text,|||\nEventDrivewayReadPagePlaceGardenToolBeforeAddRemove1 @(59,2)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceGardenToolBeforeAddRemove1.button1,
-EventDrivewayReadPagePlaceGardenToolDisplay.text,
+EventDrivewayReadPagePlaceGardenToolDisplay.text,|||\nEventDrivewayReadPagePlaceGardenToolDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceGardenToolDisplay.button1,
-EventDrivewayReadPagePlaceGardenToolBase.text,"\nThe weeds behind the house are even taller than the ones in front. Over at the corner of the drive, something under the weeds catches your eye. Place a Search token as indicated.\n"
+EventDrivewayReadPagePlaceGardenToolBase.text,|||\nEventDrivewayReadPagePlaceGardenToolBase @(-1,-1)\n\nThe weeds behind the house are even taller than the ones in front. Over at the corner of the drive, something under the weeds catches your eye. Place a Search token as indicated.\n\n\n|||
 EventDrivewayReadPagePlaceGardenToolBase.button1,{qst:continue}
-EventDrivewayReadPagePlaceGardenToolTiePoint.text,
+EventDrivewayReadPagePlaceGardenToolTiePoint.text,|||\nEventDrivewayReadPagePlaceGardenToolTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceGardenToolTiePoint.button1,
-EventDrivewayExpr1.text,
+EventDrivewayExpr1.text,|||\nEventDrivewayExpr1 @(67,16)\n\n\n\n\n|||
 EventDrivewayExpr1.button1,
-EventDrivewayReadPagePlaceGardenToolAfterLet1.text,
+EventDrivewayReadPagePlaceGardenToolAfterLet1.text,|||\nEventDrivewayReadPagePlaceGardenToolAfterLet1 @(67,2)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceGardenToolAfterLet1.button1,
-EventDrivewayReadPagePlaceGardenToolEnd.text,
+EventDrivewayReadPagePlaceGardenToolEnd.text,|||\nEventDrivewayReadPagePlaceGardenToolEnd @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceGardenToolEnd.button1,
-EventDrivewayTocPrologPlaceWendy.text,
+EventDrivewayTocPrologPlaceWendy.text,|||\nEventDrivewayTocPrologPlaceWendy @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocPrologPlaceWendy.button1,
-EventDrivewayReadPagePlaceWendy.text,
+EventDrivewayReadPagePlaceWendy.text,|||\nEventDrivewayReadPagePlaceWendy @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceWendy.button1,
-EventDrivewayReadPagePlaceWendyBeforeAddRemove1.text,
+EventDrivewayReadPagePlaceWendyBeforeAddRemove1.text,|||\nEventDrivewayReadPagePlaceWendyBeforeAddRemove1 @(73,2)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceWendyBeforeAddRemove1.button1,
-EventDrivewayReadPagePlaceWendyDisplay.text,
+EventDrivewayReadPagePlaceWendyDisplay.text,|||\nEventDrivewayReadPagePlaceWendyDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceWendyDisplay.button1,
-EventDrivewayReadPagePlaceWendyBase.text,"\nAs she walks up the drive, Wendy Adams trips and falls. She twists her ankle and skins her knees. When she looks up, she sees something in the weeds. Wendy gains the {c:QItemWendyGun}.\n\nWhen she finally stands up, she doesn’t feel as agile as usual. In this scenario, Wendy can become Restrained.\n"
+EventDrivewayReadPagePlaceWendyBase.text,|||\nEventDrivewayReadPagePlaceWendyBase @(-1,-1)\n\nAs she walks up the drive, Wendy Adams trips and falls. She twists her ankle and skins her knees. When she looks up, she sees something in the weeds. Wendy gains the {c:QItemWendyGun}.\n\nWhen she finally stands up, she doesn’t feel as agile as usual. In this scenario, Wendy can become Restrained.\n\n\n|||
 EventDrivewayReadPagePlaceWendyBase.button1,{qst:continue}
-EventDrivewayReadPagePlaceWendyTiePoint.text,
+EventDrivewayReadPagePlaceWendyTiePoint.text,|||\nEventDrivewayReadPagePlaceWendyTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceWendyTiePoint.button1,
-EventDrivewayReadPagePlaceWendyEnd.text,
+EventDrivewayReadPagePlaceWendyEnd.text,|||\nEventDrivewayReadPagePlaceWendyEnd @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceWendyEnd.button1,
-EventDrivewayTocPrologEndPlace.text,
+EventDrivewayTocPrologEndPlace.text,|||\nEventDrivewayTocPrologEndPlace @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocPrologEndPlace.button1,
-EventDrivewayReadPageEndPlace.text,
+EventDrivewayReadPageEndPlace.text,|||\nEventDrivewayReadPageEndPlace @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageEndPlace.button1,
-EventDrivewayReadPageEndPlaceBeforeGoto1.text,
+EventDrivewayReadPageEndPlaceBeforeGoto1.text,|||\nEventDrivewayReadPageEndPlaceBeforeGoto1 @(86,2)\n\n\n\n\n|||
 EventDrivewayReadPageEndPlaceBeforeGoto1.button1,
-EventDrivewayEnd.text,
+EventDrivewayEnd.text,|||\nEventDrivewayEnd @(-1,-1)\n\n\n\n\n|||
 EventDrivewayEnd.button1,
-EventDrivewayTocPrologSearchGardenTool.text,"\nThe weeds along the edge of driveway are tall, thick, and long-dead. Whatever is under them has been bound tightly over the years.\n"
+EventDrivewayTocPrologSearchGardenTool.text,|||\nEventDrivewayTocPrologSearchGardenTool @(-1,-1)\n\nThe weeds along the edge of driveway are tall, thick, and long-dead. Whatever is under them has been bound tightly over the years.\n\n\n|||
 EventDrivewayTocPrologSearchGardenTool.button1,{action} Search
 EventDrivewayTocPrologSearchGardenTool.button2,{qst:cancel}
-EventDrivewayReadPageSearchGardenTool.text,
+EventDrivewayReadPageSearchGardenTool.text,|||\nEventDrivewayReadPageSearchGardenTool @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageSearchGardenTool.button1,
-EventDrivewayReadPageSearchGardenToolBeforeAddRemove1.text,
+EventDrivewayReadPageSearchGardenToolBeforeAddRemove1.text,|||\nEventDrivewayReadPageSearchGardenToolBeforeAddRemove1 @(99,2)\n\n\n\n\n|||
 EventDrivewayReadPageSearchGardenToolBeforeAddRemove1.button1,
-EventDrivewayReadPageSearchGardenToolBeforeAddRemove2.text,
+EventDrivewayReadPageSearchGardenToolBeforeAddRemove2.text,|||\nEventDrivewayReadPageSearchGardenToolBeforeAddRemove2 @(100,2)\n\n\n\n\n|||
 EventDrivewayReadPageSearchGardenToolBeforeAddRemove2.button1,
-EventDrivewayReadPageSearchGardenToolDisplay.text,
+EventDrivewayReadPageSearchGardenToolDisplay.text,|||\nEventDrivewayReadPageSearchGardenToolDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageSearchGardenToolDisplay.button1,
-EventDrivewayReadPageSearchGardenToolBase.text,"\nYou rustle around in the weeds and find something interesting. Gain the {c:QItemGardenTool} Common Item, then discard this Search token.\n\nAs you pull it free of the weeds, a child’s doll is exposed. The clothing is ragged and the paint is chipped. You think back to the children who were found here and wonder if this doll belonged to one of them.\n\nGain 1 {clue}, then take 1 facedown Horror ({will} negates).\n"
+EventDrivewayReadPageSearchGardenToolBase.text,|||\nEventDrivewayReadPageSearchGardenToolBase @(-1,-1)\n\nYou rustle around in the weeds and find something interesting. Gain the {c:QItemGardenTool} Common Item, then discard this Search token.\n\nAs you pull it free of the weeds, a child’s doll is exposed. The clothing is ragged and the paint is chipped. You think back to the children who were found here and wonder if this doll belonged to one of them.\n\nGain 1 {clue}, then take 1 facedown Horror ({will} negates).\n\n\n|||
 EventDrivewayReadPageSearchGardenToolBase.button1,{qst:continue}
-EventDrivewayReadPageSearchGardenToolTiePoint.text,
+EventDrivewayReadPageSearchGardenToolTiePoint.text,|||\nEventDrivewayReadPageSearchGardenToolTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageSearchGardenToolTiePoint.button1,
-EventDrivewayExpr2.text,
+EventDrivewayExpr2.text,|||\nEventDrivewayExpr2 @(115,20)\n\n\n\n\n|||
 EventDrivewayExpr2.button1,
-EventDrivewayReadPageSearchGardenToolAfterLet1.text,
+EventDrivewayReadPageSearchGardenToolAfterLet1.text,|||\nEventDrivewayReadPageSearchGardenToolAfterLet1 @(115,2)\n\n\n\n\n|||
 EventDrivewayReadPageSearchGardenToolAfterLet1.button1,
-EventDrivewayReadPageSearchGardenToolAfterGoto2.text,
+EventDrivewayReadPageSearchGardenToolAfterGoto2.text,|||\nEventDrivewayReadPageSearchGardenToolAfterGoto2 @(116,2)\n\n\n\n\n|||
 EventDrivewayReadPageSearchGardenToolAfterGoto2.button1,
-EventDrivewayTocPrologSearchJournal.text,"\nBenjamin dropped a book here.\n"
+EventDrivewayTocPrologSearchJournal.text,|||\nEventDrivewayTocPrologSearchJournal @(-1,-1)\n\nBenjamin dropped a book here.\n\n\n|||
 EventDrivewayTocPrologSearchJournal.button1,{action} Search
 EventDrivewayTocPrologSearchJournal.button2,{qst:cancel}
-EventDrivewayReadPageSearchJournal.text,
+EventDrivewayReadPageSearchJournal.text,|||\nEventDrivewayReadPageSearchJournal @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageSearchJournal.button1,
-EventDrivewayReadPageSearchJournalBeforeAddRemove1.text,
+EventDrivewayReadPageSearchJournalBeforeAddRemove1.text,|||\nEventDrivewayReadPageSearchJournalBeforeAddRemove1 @(125,2)\n\n\n\n\n|||
 EventDrivewayReadPageSearchJournalBeforeAddRemove1.button1,
-EventDrivewayReadPageSearchJournalDisplay.text,
+EventDrivewayReadPageSearchJournalDisplay.text,|||\nEventDrivewayReadPageSearchJournalDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageSearchJournalDisplay.button1,
-EventDrivewayReadPageSearchJournalBase.text,"\nUp close you can see that it is thin and leather-bound. You pick it up and flip through the pages: it’s a journal. The first entry was scrawled last Sunday. You should give it back to Benjamin, but maybe you can take a quick look first.\n\nGain the {c:QItemJournal} Unique Item, then discard this Search token. An investigator holding the {c:QItemJournal} can interact with it in the app.\n"
+EventDrivewayReadPageSearchJournalBase.text,|||\nEventDrivewayReadPageSearchJournalBase @(-1,-1)\n\nUp close you can see that it is thin and leather-bound. You pick it up and flip through the pages: it’s a journal. The first entry was scrawled last Sunday. You should give it back to Benjamin, but maybe you can take a quick look first.\n\nGain the {c:QItemJournal} Unique Item, then discard this Search token. An investigator holding the {c:QItemJournal} can interact with it in the app.\n\n\n|||
 EventDrivewayReadPageSearchJournalBase.button1,{qst:continue}
-EventDrivewayReadPageSearchJournalTiePoint.text,
+EventDrivewayReadPageSearchJournalTiePoint.text,|||\nEventDrivewayReadPageSearchJournalTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageSearchJournalTiePoint.button1,
-EventDrivewayExpr3.text,
+EventDrivewayExpr3.text,|||\nEventDrivewayExpr3 @(138,17)\n\n\n\n\n|||
 EventDrivewayExpr3.button1,
-EventDrivewayReadPageSearchJournalAfterLet1.text,
+EventDrivewayReadPageSearchJournalAfterLet1.text,|||\nEventDrivewayReadPageSearchJournalAfterLet1 @(138,2)\n\n\n\n\n|||
 EventDrivewayReadPageSearchJournalAfterLet1.button1,
-EventDrivewayReadPageSearchJournalAfterGoto3.text,
+EventDrivewayReadPageSearchJournalAfterGoto3.text,|||\nEventDrivewayReadPageSearchJournalAfterGoto3 @(139,2)\n\n\n\n\n|||
 EventDrivewayReadPageSearchJournalAfterGoto3.button1,
-EventDrivewayTocPrologExploreBackyardViaDriveway.text,
+EventDrivewayTocPrologExploreBackyardViaDriveway.text,|||\nEventDrivewayTocPrologExploreBackyardViaDriveway @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocPrologExploreBackyardViaDriveway.button1,
-EventDrivewayReadPageExploreBackyardViaDriveway.text,
+EventDrivewayReadPageExploreBackyardViaDriveway.text,|||\nEventDrivewayReadPageExploreBackyardViaDriveway @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreBackyardViaDriveway.button1,
-EventDrivewayReadPageExploreBackyardViaDrivewayDisplay.text,
+EventDrivewayReadPageExploreBackyardViaDrivewayDisplay.text,|||\nEventDrivewayReadPageExploreBackyardViaDrivewayDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreBackyardViaDrivewayDisplay.button1,
-EventDrivewayReadPageExploreBackyardViaDrivewayBase.text,"\nAn intricate wrought-iron gate is set into a stone wall. Like the rest of the house, the paint is peeling and the bars are rusting. The gate looks like it was exceptionally strong at one time, but maybe not now.\n\nIt probably wouldn’t take much effort to push it open ({strength}).\n"
+EventDrivewayReadPageExploreBackyardViaDrivewayBase.text,|||\nEventDrivewayReadPageExploreBackyardViaDrivewayBase @(-1,-1)\n\nAn intricate wrought-iron gate is set into a stone wall. Like the rest of the house, the paint is peeling and the bars are rusting. The gate looks like it was exceptionally strong at one time, but maybe not now.\n\nIt probably wouldn’t take much effort to push it open ({strength}).\n\n\n|||
 EventDrivewayReadPageExploreBackyardViaDrivewayBase.button1,{qst:continue}
 EventDrivewayReadPageExploreBackyardViaDrivewayBase.button2,Fail
-EventDrivewayReadPageExploreBackyardViaDrivewayBasePass.text,
+EventDrivewayReadPageExploreBackyardViaDrivewayBasePass.text,|||\nEventDrivewayReadPageExploreBackyardViaDrivewayBasePass @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreBackyardViaDrivewayBasePass.button1,
-EventDrivewayReadPageExploreBackyardViaDrivewayBaseButtonsTiePoint.text,
+EventDrivewayReadPageExploreBackyardViaDrivewayBaseButtonsTiePoint.text,|||\nEventDrivewayReadPageExploreBackyardViaDrivewayBaseButtonsTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreBackyardViaDrivewayBaseButtonsTiePoint.button1,
-EventDrivewayReadPageExploreBackyardViaDrivewayTiePoint.text,
+EventDrivewayReadPageExploreBackyardViaDrivewayTiePoint.text,|||\nEventDrivewayReadPageExploreBackyardViaDrivewayTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreBackyardViaDrivewayTiePoint.button1,
-EventDrivewayReadPageExploreBackyardViaDrivewayAfterGoto4.text,
+EventDrivewayReadPageExploreBackyardViaDrivewayAfterGoto4.text,|||\nEventDrivewayReadPageExploreBackyardViaDrivewayAfterGoto4 @(156,36)\n\n\n\n\n|||
 EventDrivewayReadPageExploreBackyardViaDrivewayAfterGoto4.button1,
-EventDrivewayReadPageExploreBackyardViaDrivewayBaseFail.text,
+EventDrivewayReadPageExploreBackyardViaDrivewayBaseFail.text,|||\nEventDrivewayReadPageExploreBackyardViaDrivewayBaseFail @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreBackyardViaDrivewayBaseFail.button1,
-EventDrivewayTocPrologExploreNotNice.text,
+EventDrivewayTocPrologExploreNotNice.text,|||\nEventDrivewayTocPrologExploreNotNice @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocPrologExploreNotNice.button1,
-EventDrivewayReadPageExploreNotNice.text,
+EventDrivewayReadPageExploreNotNice.text,|||\nEventDrivewayReadPageExploreNotNice @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNice.button1,
-EventDrivewayReadPageExploreNotNiceBeforeAddRemove1.text,
+EventDrivewayReadPageExploreNotNiceBeforeAddRemove1.text,|||\nEventDrivewayReadPageExploreNotNiceBeforeAddRemove1 @(161,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceBeforeAddRemove1.button1,
-EventDrivewayReadPageExploreNotNiceBeforeAddRemove2.text,
+EventDrivewayReadPageExploreNotNiceBeforeAddRemove2.text,|||\nEventDrivewayReadPageExploreNotNiceBeforeAddRemove2 @(162,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceBeforeAddRemove2.button1,
-EventDrivewayReadPageExploreNotNiceDisplay.text,
+EventDrivewayReadPageExploreNotNiceDisplay.text,|||\nEventDrivewayReadPageExploreNotNiceDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceDisplay.button1,
-EventDrivewayReadPageExploreNotNiceBase.text,"\nYou give it all you’ve got... and the gate, seemingly rusty and poorly maintained, gives way with a terrible crash. As the noise echoes down the drive, an angry man storms around the corner and strides up behind you.\n\nPlace the Purple Man token as indicated; this is Benjamin Smythe, the man your friend spoke with on the phone.\n\nDiscard this Explore token.\n"
+EventDrivewayReadPageExploreNotNiceBase.text,|||\nEventDrivewayReadPageExploreNotNiceBase @(-1,-1)\n\nYou give it all you’ve got... and the gate, seemingly rusty and poorly maintained, gives way with a terrible crash. As the noise echoes down the drive, an angry man storms around the corner and strides up behind you.\n\nPlace the Purple Man token as indicated; this is Benjamin Smythe, the man your friend spoke with on the phone.\n\nDiscard this Explore token.\n\n\n|||
 EventDrivewayReadPageExploreNotNiceBase.button1,{qst:continue}
-EventDrivewayReadPageExploreNotNiceTiePoint.text,
+EventDrivewayReadPageExploreNotNiceTiePoint.text,|||\nEventDrivewayReadPageExploreNotNiceTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceTiePoint.button1,
-EventDrivewayExpr5.text,
+EventDrivewayExpr5.text,|||\nEventDrivewayExpr5 @(177,27)\n\n\n\n\n|||
 EventDrivewayExpr5.button1,
-EventDrivewayReadPageExploreNotNiceAfterLet1.text,
+EventDrivewayReadPageExploreNotNiceAfterLet1.text,|||\nEventDrivewayReadPageExploreNotNiceAfterLet1 @(177,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceAfterLet1.button1,
-EventDrivewayReadPageExploreNotNiceEnd.text,
+EventDrivewayReadPageExploreNotNiceEnd.text,|||\nEventDrivewayReadPageExploreNotNiceEnd @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceEnd.button1,
-EventDrivewayTocPrologExploreNotNiceBen.text,
+EventDrivewayTocPrologExploreNotNiceBen.text,|||\nEventDrivewayTocPrologExploreNotNiceBen @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocPrologExploreNotNiceBen.button1,
-EventDrivewayReadPageExploreNotNiceBen.text,
+EventDrivewayReadPageExploreNotNiceBen.text,|||\nEventDrivewayReadPageExploreNotNiceBen @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceBen.button1,
-EventDrivewayReadPageExploreNotNiceBenDisplay.text,
+EventDrivewayReadPageExploreNotNiceBenDisplay.text,|||\nEventDrivewayReadPageExploreNotNiceBenDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceBenDisplay.button1,
-EventDrivewayReadPageExploreNotNiceBenBase.text,"\nAs you turn to look at Benjamin, you hear a second crash behind the gate.\n\n“What are you doing?! I just had that rehung yesterday!” he yells. “I hired you to help us get this house ready for sale, not destroy it. You were to meet me here; I’m not sure why you thought it was a good idea to start without me.”\n\nBenjamin brushes past you with a harrumph. Discard the Purple Man token.\n\nYou’ve only just arrived and the client is already angry. This could turn out badly for both you and your friend’s business.\n"
+EventDrivewayReadPageExploreNotNiceBenBase.text,|||\nEventDrivewayReadPageExploreNotNiceBenBase @(-1,-1)\n\nAs you turn to look at Benjamin, you hear a second crash behind the gate.\n\n“What are you doing?! I just had that rehung yesterday!” he yells. “I hired you to help us get this house ready for sale, not destroy it. You were to meet me here; I’m not sure why you thought it was a good idea to start without me.”\n\nBenjamin brushes past you with a harrumph. Discard the Purple Man token.\n\nYou’ve only just arrived and the client is already angry. This could turn out badly for both you and your friend’s business.\n\n\n|||
 EventDrivewayReadPageExploreNotNiceBenBase.button1,{qst:continue}
-EventDrivewayReadPageExploreNotNiceBenTiePoint.text,
+EventDrivewayReadPageExploreNotNiceBenTiePoint.text,|||\nEventDrivewayReadPageExploreNotNiceBenTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceBenTiePoint.button1,
-EventDrivewayReadPageExploreNotNiceBenAfterAddRemove1.text,
+EventDrivewayReadPageExploreNotNiceBenAfterAddRemove1.text,|||\nEventDrivewayReadPageExploreNotNiceBenAfterAddRemove1 @(199,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceBenAfterAddRemove1.button1,
-EventDrivewayReadPageExploreNotNiceBenEnd.text,
+EventDrivewayReadPageExploreNotNiceBenEnd.text,|||\nEventDrivewayReadPageExploreNotNiceBenEnd @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceBenEnd.button1,
-EventDrivewayTocPrologExploreNotNiceJournal.text,
+EventDrivewayTocPrologExploreNotNiceJournal.text,|||\nEventDrivewayTocPrologExploreNotNiceJournal @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocPrologExploreNotNiceJournal.button1,
-EventDrivewayReadPageExploreNotNiceJournal.text,
+EventDrivewayReadPageExploreNotNiceJournal.text,|||\nEventDrivewayReadPageExploreNotNiceJournal @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceJournal.button1,
-EventDrivewayReadPageExploreNotNiceJournalBeforeAddRemove1.text,
+EventDrivewayReadPageExploreNotNiceJournalBeforeAddRemove1.text,|||\nEventDrivewayReadPageExploreNotNiceJournalBeforeAddRemove1 @(203,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceJournalBeforeAddRemove1.button1,
-EventDrivewayReadPageExploreNotNiceJournalDisplay.text,
+EventDrivewayReadPageExploreNotNiceJournalDisplay.text,|||\nEventDrivewayReadPageExploreNotNiceJournalDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceJournalDisplay.button1,
-EventDrivewayReadPageExploreNotNiceJournalBase.text,"\nYou look down and shake your head. As you do, you see a book lying on the ground where Benjamin had been standing. Place a Search token as indicated.\n\nYou turn back to the gate, take a breath and...\n\nPlace a Sight token as indicated.\n"
+EventDrivewayReadPageExploreNotNiceJournalBase.text,|||\nEventDrivewayReadPageExploreNotNiceJournalBase @(-1,-1)\n\nYou look down and shake your head. As you do, you see a book lying on the ground where Benjamin had been standing. Place a Search token as indicated.\n\nYou turn back to the gate, take a breath and...\n\nPlace a Sight token as indicated.\n\n\n|||
 EventDrivewayReadPageExploreNotNiceJournalBase.button1,{qst:continue}
-EventDrivewayReadPageExploreNotNiceJournalTiePoint.text,
+EventDrivewayReadPageExploreNotNiceJournalTiePoint.text,|||\nEventDrivewayReadPageExploreNotNiceJournalTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceJournalTiePoint.button1,
-EventDrivewayReadPageExploreNotNiceJournalAfterGoto6.text,
+EventDrivewayReadPageExploreNotNiceJournalAfterGoto6.text,|||\nEventDrivewayReadPageExploreNotNiceJournalAfterGoto6 @(215,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceJournalAfterGoto6.button1,
-EventDrivewayTocPrologExploreNice.text,
+EventDrivewayTocPrologExploreNice.text,|||\nEventDrivewayTocPrologExploreNice @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocPrologExploreNice.button1,
-EventDrivewayReadPageExploreNice.text,
+EventDrivewayReadPageExploreNice.text,|||\nEventDrivewayReadPageExploreNice @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNice.button1,
-EventDrivewayReadPageExploreNiceBeforeAddRemove1.text,
+EventDrivewayReadPageExploreNiceBeforeAddRemove1.text,|||\nEventDrivewayReadPageExploreNiceBeforeAddRemove1 @(219,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceBeforeAddRemove1.button1,
-EventDrivewayReadPageExploreNiceBeforeAddRemove2.text,
+EventDrivewayReadPageExploreNiceBeforeAddRemove2.text,|||\nEventDrivewayReadPageExploreNiceBeforeAddRemove2 @(220,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceBeforeAddRemove2.button1,
-EventDrivewayReadPageExploreNiceDisplay.text,
+EventDrivewayReadPageExploreNiceDisplay.text,|||\nEventDrivewayReadPageExploreNiceDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceDisplay.button1,
-EventDrivewayReadPageExploreNiceBase.text,"\nAs you gently pull the gate, you find that it opens easily. Now that you’re looking, you see that someone recently cleaned the hinges and gave them some oil. You’re glad you didn’t force it. Remove this explore token.\n\n\n“I see the handyman was able to fix the gate yesterday. That will make things easier.” You start, not having heard the man walk up behind you.\n\nPlace the Purple Man token as indicated.\n"
+EventDrivewayReadPageExploreNiceBase.text,|||\nEventDrivewayReadPageExploreNiceBase @(-1,-1)\n\nAs you gently pull the gate, you find that it opens easily. Now that you’re looking, you see that someone recently cleaned the hinges and gave them some oil. You’re glad you didn’t force it. Remove this explore token.\n\n\n“I see the handyman was able to fix the gate yesterday. That will make things easier.” You start, not having heard the man walk up behind you.\n\nPlace the Purple Man token as indicated.\n\n\n|||
 EventDrivewayReadPageExploreNiceBase.button1,{qst:continue}
-EventDrivewayReadPageExploreNiceTiePoint.text,
+EventDrivewayReadPageExploreNiceTiePoint.text,|||\nEventDrivewayReadPageExploreNiceTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceTiePoint.button1,
-EventDrivewayExpr6.text,
+EventDrivewayExpr6.text,|||\nEventDrivewayExpr6 @(236,27)\n\n\n\n\n|||
 EventDrivewayExpr6.button1,
-EventDrivewayReadPageExploreNiceAfterLet1.text,
+EventDrivewayReadPageExploreNiceAfterLet1.text,|||\nEventDrivewayReadPageExploreNiceAfterLet1 @(236,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceAfterLet1.button1,
-EventDrivewayReadPageExploreNiceEnd.text,
+EventDrivewayReadPageExploreNiceEnd.text,|||\nEventDrivewayReadPageExploreNiceEnd @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceEnd.button1,
-EventDrivewayTocPrologExploreNiceBen.text,
+EventDrivewayTocPrologExploreNiceBen.text,|||\nEventDrivewayTocPrologExploreNiceBen @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocPrologExploreNiceBen.button1,
-EventDrivewayReadPageExploreNiceBen.text,
+EventDrivewayReadPageExploreNiceBen.text,|||\nEventDrivewayReadPageExploreNiceBen @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceBen.button1,
-EventDrivewayReadPageExploreNiceBenDisplay.text,
+EventDrivewayReadPageExploreNiceBenDisplay.text,|||\nEventDrivewayReadPageExploreNiceBenDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceBenDisplay.button1,
-EventDrivewayReadPageExploreNiceBenBase.text,"\nYou turn to meet the eyes of an aging but vigorous man. He introduces himself as Benjamin Smythe, the man whom your friend spoke with. “You’ll want to follow me so we can get started.”\n\nBenjamin turns and walks through the now-open gate.\n\nRemove the Purple Man token from the board.\n"
+EventDrivewayReadPageExploreNiceBenBase.text,|||\nEventDrivewayReadPageExploreNiceBenBase @(-1,-1)\n\nYou turn to meet the eyes of an aging but vigorous man. He introduces himself as Benjamin Smythe, the man whom your friend spoke with. “You’ll want to follow me so we can get started.”\n\nBenjamin turns and walks through the now-open gate.\n\nRemove the Purple Man token from the board.\n\n\n|||
 EventDrivewayReadPageExploreNiceBenBase.button1,{qst:continue}
-EventDrivewayReadPageExploreNiceBenTiePoint.text,
+EventDrivewayReadPageExploreNiceBenTiePoint.text,|||\nEventDrivewayReadPageExploreNiceBenTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceBenTiePoint.button1,
-EventDrivewayReadPageExploreNiceBenAfterAddRemove1.text,
+EventDrivewayReadPageExploreNiceBenAfterAddRemove1.text,|||\nEventDrivewayReadPageExploreNiceBenAfterAddRemove1 @(251,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceBenAfterAddRemove1.button1,
-EventDrivewayReadPageExploreNiceBenEnd.text,
+EventDrivewayReadPageExploreNiceBenEnd.text,|||\nEventDrivewayReadPageExploreNiceBenEnd @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceBenEnd.button1,
-EventDrivewayTocPrologExploreNiceJournal.text,
+EventDrivewayTocPrologExploreNiceJournal.text,|||\nEventDrivewayTocPrologExploreNiceJournal @(-1,-1)\n\n\n\n\n|||
 EventDrivewayTocPrologExploreNiceJournal.button1,
-EventDrivewayReadPageExploreNiceJournal.text,
+EventDrivewayReadPageExploreNiceJournal.text,|||\nEventDrivewayReadPageExploreNiceJournal @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceJournal.button1,
-EventDrivewayReadPageExploreNiceJournalBeforeAddRemove1.text,
+EventDrivewayReadPageExploreNiceJournalBeforeAddRemove1.text,|||\nEventDrivewayReadPageExploreNiceJournalBeforeAddRemove1 @(255,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceJournalBeforeAddRemove1.button1,
-EventDrivewayReadPageExploreNiceJournalDisplay.text,
+EventDrivewayReadPageExploreNiceJournalDisplay.text,|||\nEventDrivewayReadPageExploreNiceJournalDisplay @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceJournalDisplay.button1,
-EventDrivewayReadPageExploreNiceJournalBase.text,"\nYou turn to look back and see a book Benjamin must have dropped. Place a Search token as indicated.\n\nA moment later, you hear Benjamin yelp, followed by a loud crash. You quickly turn back toward the gate. Place a Sight token as indicated.\n"
+EventDrivewayReadPageExploreNiceJournalBase.text,|||\nEventDrivewayReadPageExploreNiceJournalBase @(-1,-1)\n\nYou turn to look back and see a book Benjamin must have dropped. Place a Search token as indicated.\n\nA moment later, you hear Benjamin yelp, followed by a loud crash. You quickly turn back toward the gate. Place a Sight token as indicated.\n\n\n|||
 EventDrivewayReadPageExploreNiceJournalBase.button1,{qst:continue}
-EventDrivewayReadPageExploreNiceJournalTiePoint.text,
+EventDrivewayReadPageExploreNiceJournalTiePoint.text,|||\nEventDrivewayReadPageExploreNiceJournalTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceJournalTiePoint.button1,
-EventDrivewayReadPageExploreNiceJournalAfterGoto7.text,
+EventDrivewayReadPageExploreNiceJournalAfterGoto7.text,|||\nEventDrivewayReadPageExploreNiceJournalAfterGoto7 @(266,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceJournalAfterGoto7.button1,
-EventDrivewayReadPageSearchGardenToolXferIfTriggered.text,
+EventDrivewayReadPageSearchGardenToolXferIfTriggered.text,|||\nEventDrivewayReadPageSearchGardenToolXferIfTriggered @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageSearchGardenToolXferIfTriggered.button1,
-EventDrivewayReadPageSearchJournalXferIfTriggered.text,
+EventDrivewayReadPageSearchJournalXferIfTriggered.text,|||\nEventDrivewayReadPageSearchJournalXferIfTriggered @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageSearchJournalXferIfTriggered.button1,
-EventDrivewayReadPageExploreBackyardViaDrivewayXferIfTriggered.text,
+EventDrivewayReadPageExploreBackyardViaDrivewayXferIfTriggered.text,|||\nEventDrivewayReadPageExploreBackyardViaDrivewayXferIfTriggered @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreBackyardViaDrivewayXferIfTriggered.button1,
-EventDrivewayReadPagePlaceTrigger.text,
+EventDrivewayReadPagePlaceTrigger.text,|||\nEventDrivewayReadPagePlaceTrigger @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceTrigger.button1,
-EventDrivewayReadPageSearchGardenToolTrigger.text,
+EventDrivewayReadPageSearchGardenToolTrigger.text,|||\nEventDrivewayReadPageSearchGardenToolTrigger @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageSearchGardenToolTrigger.button1,
-EventDrivewayReadPageSearchJournalTrigger.text,
+EventDrivewayReadPageSearchJournalTrigger.text,|||\nEventDrivewayReadPageSearchJournalTrigger @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageSearchJournalTrigger.button1,
-EventDrivewayReadPageExploreBackyardViaDrivewayTrigger.text,
+EventDrivewayReadPageExploreBackyardViaDrivewayTrigger.text,|||\nEventDrivewayReadPageExploreBackyardViaDrivewayTrigger @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreBackyardViaDrivewayTrigger.button1,
 EventStartupStart.text,
 EventStartupStart.button1,
@@ -6608,7 +6626,7 @@ EventStartupReadPageStartScenario.text,
 EventStartupReadPageStartScenario.button1,
 EventStartupReadPageStartScenarioDisplay.text,
 EventStartupReadPageStartScenarioDisplay.button1,
-EventStartupReadPageStartScenarioBase.text,"\nEach investigator receives 1 {clue}.\n"
+EventStartupReadPageStartScenarioBase.text,|||\nEach investigator receives 1 {clue}.\n|||
 EventStartupReadPageStartScenarioBase.button1,{qst:continue}
 EventStartupReadPageStartScenarioTiePoint.text,
 EventStartupReadPageStartScenarioTiePoint.button1,
@@ -6620,7 +6638,7 @@ EventStartupReadPageKate.text,
 EventStartupReadPageKate.button1,
 EventStartupReadPageKateDisplay.text,
 EventStartupReadPageKateDisplay.button1,
-EventStartupReadPageKateBase.text,"\nKate is running late, so she is hurried and inattentive. She grabs her {c:QItemFluxStabilizer} and turns to put it away. She cries out as it slips from her fingers and drops heavily to the floor. It cracks open when it hits and releases blue smoke. <i>How can the universe be so cruel and unfair?!</i> Kate discards her {c:QItemFluxStabilizer}. She fumes and ruminates on the loss. That seething anger will carry with her through the day: Kate becomes Focused. She becomes Focused before any monster attacks her.\n"
+EventStartupReadPageKateBase.text,|||\nKate is running late, so she is hurried and inattentive. She grabs her {c:QItemFluxStabilizer} and turns to put it away. She cries out as it slips from her fingers and drops heavily to the floor. It cracks open when it hits and releases blue smoke. <i>How can the universe be so cruel and unfair?!</i> Kate discards her {c:QItemFluxStabilizer}. She fumes and ruminates on the loss. That seething anger will carry with her through the day: Kate becomes Focused. She becomes Focused before any monster attacks her.\n|||
 EventStartupReadPageKateBase.button1,{qst:continue}
 EventStartupReadPageKateTiePoint.text,
 EventStartupReadPageKateTiePoint.button1,
