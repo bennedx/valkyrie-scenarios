@@ -81,6 +81,10 @@ Book Driveway Ordered No Keep
 		"""
 	End Page PlaceWendy
 	
+	Page EndPlace No Text
+		Exit
+	End Page EndPlace
+	
 	Page SearchGardenTool
 		Triggered By @SearchDrivewayGardenTool
 		

@@ -111,7 +111,6 @@ x		Implement the RNG;
 Compiler
 -	support RANDOM pages; only works for ORDERED NO KEEP
 -	test #ExprRead, incl GetOrCreate()
--	if there is a visibility expression on a page, default to NOT VISIBLE; otherwise, default to VISIBLE (does it already work this way?)
 x	PAGE name NO TEXT support
 -	add support for token highlighting when an "!" it put after its name on ADD or REMOVE
 -	add linting tool
