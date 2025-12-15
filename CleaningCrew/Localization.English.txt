@@ -6131,8 +6131,8 @@ EventDrivewayInit.text,|||\nEventDrivewayInit @(-1,-1)\n\n\n\n\n|||
 EventDrivewayInit.button1,
 EventDrivewayFirstTimeInitializer.text,|||\nEventDrivewayFirstTimeInitializer @(-1,-1)\n\n\n\n\n|||
 EventDrivewayFirstTimeInitializer.button1,
-EventDrivewayPageSelector.text,|||\nEventDrivewayPageSelector @(-1,-1)\n\n\n\n\n|||
-EventDrivewayPageSelector.button1,
+EventDrivewayTriggerSelector.text,|||\nEventDrivewayTriggerSelector @(-1,-1)\n\n\n\n\n|||
+EventDrivewayTriggerSelector.button1,
 EventDrivewayReadPagePlaceXferIfTriggered.text,|||\nEventDrivewayReadPagePlaceXferIfTriggered @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceXferIfTriggered.button1,
 EventDrivewayReadPagePlace.text,|||\nEventDrivewayReadPagePlace @(-1,-1)\n\n\n\n\n|||
@@ -6254,8 +6254,8 @@ EventDrivewayReadPageSearchGardenToolBase.text,|||\nEventDrivewayReadPageSearchG
 EventDrivewayReadPageSearchGardenToolBase.button1,{qst:continue}
 EventDrivewayReadPageSearchGardenToolTiePoint.text,|||\nEventDrivewayReadPageSearchGardenToolTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageSearchGardenToolTiePoint.button1,
-EventDrivewayExpr2.text,|||\nEventDrivewayExpr2 @(115,20)\n\n\n\n\n|||
-EventDrivewayExpr2.button1,
+EventDrivewayExpr3.text,|||\nEventDrivewayExpr3 @(115,20)\n\n\n\n\n|||
+EventDrivewayExpr3.button1,
 EventDrivewayReadPageSearchGardenToolAfterLet1.text,|||\nEventDrivewayReadPageSearchGardenToolAfterLet1 @(115,2)\n\n\n\n\n|||
 EventDrivewayReadPageSearchGardenToolAfterLet1.button1,
 EventDrivewayReadPageSearchGardenToolAfterGoto2.text,|||\nEventDrivewayReadPageSearchGardenToolAfterGoto2 @(116,2)\n\n\n\n\n|||
@@ -6273,8 +6273,8 @@ EventDrivewayReadPageSearchJournalBase.text,|||\nEventDrivewayReadPageSearchJour
 EventDrivewayReadPageSearchJournalBase.button1,{qst:continue}
 EventDrivewayReadPageSearchJournalTiePoint.text,|||\nEventDrivewayReadPageSearchJournalTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageSearchJournalTiePoint.button1,
-EventDrivewayExpr3.text,|||\nEventDrivewayExpr3 @(138,17)\n\n\n\n\n|||
-EventDrivewayExpr3.button1,
+EventDrivewayExpr4.text,|||\nEventDrivewayExpr4 @(138,17)\n\n\n\n\n|||
+EventDrivewayExpr4.button1,
 EventDrivewayReadPageSearchJournalAfterLet1.text,|||\nEventDrivewayReadPageSearchJournalAfterLet1 @(138,2)\n\n\n\n\n|||
 EventDrivewayReadPageSearchJournalAfterLet1.button1,
 EventDrivewayReadPageSearchJournalAfterGoto3.text,|||\nEventDrivewayReadPageSearchJournalAfterGoto3 @(139,2)\n\n\n\n\n|||
@@ -6312,8 +6312,8 @@ EventDrivewayReadPageExploreNotNiceBase.text,|||\nEventDrivewayReadPageExploreNo
 EventDrivewayReadPageExploreNotNiceBase.button1,{qst:continue}
 EventDrivewayReadPageExploreNotNiceTiePoint.text,|||\nEventDrivewayReadPageExploreNotNiceTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceTiePoint.button1,
-EventDrivewayExpr5.text,|||\nEventDrivewayExpr5 @(177,27)\n\n\n\n\n|||
-EventDrivewayExpr5.button1,
+EventDrivewayExpr6.text,|||\nEventDrivewayExpr6 @(177,27)\n\n\n\n\n|||
+EventDrivewayExpr6.button1,
 EventDrivewayReadPageExploreNotNiceAfterLet1.text,|||\nEventDrivewayReadPageExploreNotNiceAfterLet1 @(177,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNotNiceAfterLet1.button1,
 EventDrivewayReadPageExploreNotNiceEnd.text,|||\nEventDrivewayReadPageExploreNotNiceEnd @(-1,-1)\n\n\n\n\n|||
@@ -6360,8 +6360,8 @@ EventDrivewayReadPageExploreNiceBase.text,|||\nEventDrivewayReadPageExploreNiceB
 EventDrivewayReadPageExploreNiceBase.button1,{qst:continue}
 EventDrivewayReadPageExploreNiceTiePoint.text,|||\nEventDrivewayReadPageExploreNiceTiePoint @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceTiePoint.button1,
-EventDrivewayExpr6.text,|||\nEventDrivewayExpr6 @(236,27)\n\n\n\n\n|||
-EventDrivewayExpr6.button1,
+EventDrivewayExpr7.text,|||\nEventDrivewayExpr7 @(236,27)\n\n\n\n\n|||
+EventDrivewayExpr7.button1,
 EventDrivewayReadPageExploreNiceAfterLet1.text,|||\nEventDrivewayReadPageExploreNiceAfterLet1 @(236,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceAfterLet1.button1,
 EventDrivewayReadPageExploreNiceEnd.text,|||\nEventDrivewayReadPageExploreNiceEnd @(-1,-1)\n\n\n\n\n|||
@@ -6394,12 +6394,36 @@ EventDrivewayReadPageExploreNiceJournalTiePoint.text,|||\nEventDrivewayReadPageE
 EventDrivewayReadPageExploreNiceJournalTiePoint.button1,
 EventDrivewayReadPageExploreNiceJournalAfterGoto7.text,|||\nEventDrivewayReadPageExploreNiceJournalAfterGoto7 @(266,2)\n\n\n\n\n|||
 EventDrivewayReadPageExploreNiceJournalAfterGoto7.button1,
+EventDrivewayReadPagePlaceInvestigatorsXferIfTriggered.text,|||\nEventDrivewayReadPagePlaceInvestigatorsXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDrivewayReadPagePlaceInvestigatorsXferIfTriggered.button1,
+EventDrivewayReadPagePlaceExploreKitchenViaDrivewayXferIfTriggered.text,|||\nEventDrivewayReadPagePlaceExploreKitchenViaDrivewayXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDrivewayReadPagePlaceExploreKitchenViaDrivewayXferIfTriggered.button1,
+EventDrivewayReadPagePlaceGateXferIfTriggered.text,|||\nEventDrivewayReadPagePlaceGateXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDrivewayReadPagePlaceGateXferIfTriggered.button1,
+EventDrivewayReadPagePlaceGardenToolXferIfTriggered.text,|||\nEventDrivewayReadPagePlaceGardenToolXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDrivewayReadPagePlaceGardenToolXferIfTriggered.button1,
+EventDrivewayReadPagePlaceWendyXferIfTriggered.text,|||\nEventDrivewayReadPagePlaceWendyXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDrivewayReadPagePlaceWendyXferIfTriggered.button1,
+EventDrivewayReadPageEndPlaceXferIfTriggered.text,|||\nEventDrivewayReadPageEndPlaceXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDrivewayReadPageEndPlaceXferIfTriggered.button1,
 EventDrivewayReadPageSearchGardenToolXferIfTriggered.text,|||\nEventDrivewayReadPageSearchGardenToolXferIfTriggered @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageSearchGardenToolXferIfTriggered.button1,
 EventDrivewayReadPageSearchJournalXferIfTriggered.text,|||\nEventDrivewayReadPageSearchJournalXferIfTriggered @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageSearchJournalXferIfTriggered.button1,
 EventDrivewayReadPageExploreBackyardViaDrivewayXferIfTriggered.text,|||\nEventDrivewayReadPageExploreBackyardViaDrivewayXferIfTriggered @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreBackyardViaDrivewayXferIfTriggered.button1,
+EventDrivewayReadPageExploreNotNiceXferIfTriggered.text,|||\nEventDrivewayReadPageExploreNotNiceXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDrivewayReadPageExploreNotNiceXferIfTriggered.button1,
+EventDrivewayReadPageExploreNotNiceBenXferIfTriggered.text,|||\nEventDrivewayReadPageExploreNotNiceBenXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDrivewayReadPageExploreNotNiceBenXferIfTriggered.button1,
+EventDrivewayReadPageExploreNotNiceJournalXferIfTriggered.text,|||\nEventDrivewayReadPageExploreNotNiceJournalXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDrivewayReadPageExploreNotNiceJournalXferIfTriggered.button1,
+EventDrivewayReadPageExploreNiceXferIfTriggered.text,|||\nEventDrivewayReadPageExploreNiceXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDrivewayReadPageExploreNiceXferIfTriggered.button1,
+EventDrivewayReadPageExploreNiceBenXferIfTriggered.text,|||\nEventDrivewayReadPageExploreNiceBenXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDrivewayReadPageExploreNiceBenXferIfTriggered.button1,
+EventDrivewayReadPageExploreNiceJournalXferIfTriggered.text,|||\nEventDrivewayReadPageExploreNiceJournalXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDrivewayReadPageExploreNiceJournalXferIfTriggered.button1,
 EventDrivewayReadPagePlaceTrigger.text,|||\nEventDrivewayReadPagePlaceTrigger @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPagePlaceTrigger.button1,
 EventDrivewayReadPageSearchGardenToolTrigger.text,|||\nEventDrivewayReadPageSearchGardenToolTrigger @(-1,-1)\n\n\n\n\n|||
@@ -6408,251 +6432,257 @@ EventDrivewayReadPageSearchJournalTrigger.text,|||\nEventDrivewayReadPageSearchJ
 EventDrivewayReadPageSearchJournalTrigger.button1,
 EventDrivewayReadPageExploreBackyardViaDrivewayTrigger.text,|||\nEventDrivewayReadPageExploreBackyardViaDrivewayTrigger @(-1,-1)\n\n\n\n\n|||
 EventDrivewayReadPageExploreBackyardViaDrivewayTrigger.button1,
-EventStartupStart.text,
+EventStartupStart.text,|||\nEventStartupStart @(-1,-1)\n\n\n\n\n|||
 EventStartupStart.button1,
-EventStartupInit.text,
+EventStartupInit.text,|||\nEventStartupInit @(-1,-1)\n\n\n\n\n|||
 EventStartupInit.button1,
-EventStartupFirstTimeInitializer.text,
+EventStartupFirstTimeInitializer.text,|||\nEventStartupFirstTimeInitializer @(-1,-1)\n\n\n\n\n|||
 EventStartupFirstTimeInitializer.button1,
-EventStartupPageSelector.text,
-EventStartupPageSelector.button1,
-EventStartupReadPageStartUpXferIfTriggered.text,
+EventStartupTriggerSelector.text,|||\nEventStartupTriggerSelector @(-1,-1)\n\n\n\n\n|||
+EventStartupTriggerSelector.button1,
+EventStartupReadPageStartUpXferIfTriggered.text,|||\nEventStartupReadPageStartUpXferIfTriggered @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageStartUpXferIfTriggered.button1,
-EventStartupReadPageStartUp.text,
+EventStartupReadPageStartUp.text,|||\nEventStartupReadPageStartUp @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageStartUp.button1,
-EventStartupExpr1.text,
+EventStartupExpr1.text,|||\nEventStartupExpr1 @(9,13)\n\n\n\n\n|||
 EventStartupExpr1.button1,
-EventStartupReadPageStartUpBeforeLet1.text,
+EventStartupReadPageStartUpBeforeLet1.text,|||\nEventStartupReadPageStartUpBeforeLet1 @(9,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet1.button1,
-EventStartupExpr2.text,
+EventStartupExpr2.text,|||\nEventStartupExpr2 @(11,24)\n\n\n\n\n|||
 EventStartupExpr2.button1,
-EventStartupExpr3.text,
+EventStartupExpr3.text,|||\nEventStartupExpr3 @(11,28)\n\n\n\n\n|||
 EventStartupExpr3.button1,
-EventStartupExpr4.text,
+EventStartupExpr4.text,|||\nEventStartupExpr4 @(11,24)\n\n\n\n\n|||
 EventStartupExpr4.button1,
-EventStartupExpr5.text,
+EventStartupExpr5.text,|||\nEventStartupExpr5 @(11,38)\n\n\n\n\n|||
 EventStartupExpr5.button1,
-EventStartupExpr6.text,
+EventStartupExpr6.text,|||\nEventStartupExpr6 @(11,23)\n\n\n\n\n|||
 EventStartupExpr6.button1,
-EventStartupExpr7.text,
+EventStartupExpr7.text,|||\nEventStartupExpr7 @(11,42)\n\n\n\n\n|||
 EventStartupExpr7.button1,
-EventStartupExpr8.text,
+EventStartupExpr8.text,|||\nEventStartupExpr8 @(11,23)\n\n\n\n\n|||
 EventStartupExpr8.button1,
-EventStartupReadPageStartUpBeforeLet2.text,
+EventStartupReadPageStartUpBeforeLet2.text,|||\nEventStartupReadPageStartUpBeforeLet2 @(11,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet2.button1,
-EventStartupExpr9.text,
+EventStartupExpr9.text,|||\nEventStartupExpr9 @(19,20)\n\n\n\n\n|||
 EventStartupExpr9.button1,
-EventStartupReadPageStartUpBeforeLet3.text,
+EventStartupReadPageStartUpBeforeLet3.text,|||\nEventStartupReadPageStartUpBeforeLet3 @(19,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet3.button1,
-EventStartupExpr10.text,
+EventStartupExpr10.text,|||\nEventStartupExpr10 @(20,22)\n\n\n\n\n|||
 EventStartupExpr10.button1,
-EventStartupReadPageStartUpBeforeLet4.text,
+EventStartupReadPageStartUpBeforeLet4.text,|||\nEventStartupReadPageStartUpBeforeLet4 @(20,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet4.button1,
-EventStartupExpr11.text,
+EventStartupExpr11.text,|||\nEventStartupExpr11 @(21,21)\n\n\n\n\n|||
 EventStartupExpr11.button1,
-EventStartupReadPageStartUpBeforeLet5.text,
+EventStartupReadPageStartUpBeforeLet5.text,|||\nEventStartupReadPageStartUpBeforeLet5 @(21,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet5.button1,
-EventStartupExpr12.text,
+EventStartupExpr12.text,|||\nEventStartupExpr12 @(22,20)\n\n\n\n\n|||
 EventStartupExpr12.button1,
-EventStartupReadPageStartUpBeforeLet6.text,
+EventStartupReadPageStartUpBeforeLet6.text,|||\nEventStartupReadPageStartUpBeforeLet6 @(22,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet6.button1,
-EventStartupExpr13.text,
+EventStartupExpr13.text,|||\nEventStartupExpr13 @(23,20)\n\n\n\n\n|||
 EventStartupExpr13.button1,
-EventStartupReadPageStartUpBeforeLet7.text,
+EventStartupReadPageStartUpBeforeLet7.text,|||\nEventStartupReadPageStartUpBeforeLet7 @(23,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet7.button1,
-EventStartupExpr14.text,
+EventStartupExpr14.text,|||\nEventStartupExpr14 @(24,22)\n\n\n\n\n|||
 EventStartupExpr14.button1,
-EventStartupReadPageStartUpBeforeLet8.text,
+EventStartupReadPageStartUpBeforeLet8.text,|||\nEventStartupReadPageStartUpBeforeLet8 @(24,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet8.button1,
-EventStartupExpr15.text,
+EventStartupExpr15.text,|||\nEventStartupExpr15 @(28,18)\n\n\n\n\n|||
 EventStartupExpr15.button1,
-EventStartupReadPageStartUpBeforeLet9.text,
+EventStartupReadPageStartUpBeforeLet9.text,|||\nEventStartupReadPageStartUpBeforeLet9 @(28,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet9.button1,
-EventStartupExpr16.text,
+EventStartupExpr16.text,|||\nEventStartupExpr16 @(33,23)\n\n\n\n\n|||
 EventStartupExpr16.button1,
-EventStartupExpr17.text,
+EventStartupExpr17.text,|||\nEventStartupExpr17 @(33,27)\n\n\n\n\n|||
 EventStartupExpr17.button1,
-EventStartupExpr18.text,
+EventStartupExpr18.text,|||\nEventStartupExpr18 @(33,23)\n\n\n\n\n|||
 EventStartupExpr18.button1,
-EventStartupExpr19.text,
+EventStartupExpr19.text,|||\nEventStartupExpr19 @(33,37)\n\n\n\n\n|||
 EventStartupExpr19.button1,
-EventStartupExpr20.text,
+EventStartupExpr20.text,|||\nEventStartupExpr20 @(33,22)\n\n\n\n\n|||
 EventStartupExpr20.button1,
-EventStartupExpr21.text,
+EventStartupExpr21.text,|||\nEventStartupExpr21 @(33,41)\n\n\n\n\n|||
 EventStartupExpr21.button1,
-EventStartupExpr22.text,
+EventStartupExpr22.text,|||\nEventStartupExpr22 @(33,22)\n\n\n\n\n|||
 EventStartupExpr22.button1,
-EventStartupReadPageStartUpBeforeLet10.text,
+EventStartupReadPageStartUpBeforeLet10.text,|||\nEventStartupReadPageStartUpBeforeLet10 @(33,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet10.button1,
-EventStartupExpr23.text,
+EventStartupExpr23.text,|||\nEventStartupExpr23 @(36,22)\n\n\n\n\n|||
 EventStartupExpr23.button1,
-EventStartupReadPageStartUpBeforeLet11.text,
+EventStartupReadPageStartUpBeforeLet11.text,|||\nEventStartupReadPageStartUpBeforeLet11 @(36,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet11.button1,
-EventStartupExpr24.text,
+EventStartupExpr24.text,|||\nEventStartupExpr24 @(39,16)\n\n\n\n\n|||
 EventStartupExpr24.button1,
-EventStartupReadPageStartUpBeforeLet12.text,
+EventStartupReadPageStartUpBeforeLet12.text,|||\nEventStartupReadPageStartUpBeforeLet12 @(39,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet12.button1,
-EventStartupExpr25.text,
+EventStartupExpr25.text,|||\nEventStartupExpr25 @(45,11)\n\n\n\n\n|||
 EventStartupExpr25.button1,
-EventStartupReadPageStartUpBeforeLet13.text,
+EventStartupReadPageStartUpBeforeLet13.text,|||\nEventStartupReadPageStartUpBeforeLet13 @(45,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet13.button1,
-EventStartupExpr26.text,
+EventStartupExpr26.text,|||\nEventStartupExpr26 @(46,18)\n\n\n\n\n|||
 EventStartupExpr26.button1,
-EventStartupReadPageStartUpBeforeLet14.text,
+EventStartupReadPageStartUpBeforeLet14.text,|||\nEventStartupReadPageStartUpBeforeLet14 @(46,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet14.button1,
-EventStartupExpr27.text,
+EventStartupExpr27.text,|||\nEventStartupExpr27 @(47,12)\n\n\n\n\n|||
 EventStartupExpr27.button1,
-EventStartupReadPageStartUpBeforeLet15.text,
+EventStartupReadPageStartUpBeforeLet15.text,|||\nEventStartupReadPageStartUpBeforeLet15 @(47,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet15.button1,
-EventStartupExpr28.text,
+EventStartupExpr28.text,|||\nEventStartupExpr28 @(50,17)\n\n\n\n\n|||
 EventStartupExpr28.button1,
-EventStartupReadPageStartUpBeforeLet16.text,
+EventStartupReadPageStartUpBeforeLet16.text,|||\nEventStartupReadPageStartUpBeforeLet16 @(50,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet16.button1,
-EventStartupExpr29.text,
+EventStartupExpr29.text,|||\nEventStartupExpr29 @(51,17)\n\n\n\n\n|||
 EventStartupExpr29.button1,
-EventStartupReadPageStartUpBeforeLet17.text,
+EventStartupReadPageStartUpBeforeLet17.text,|||\nEventStartupReadPageStartUpBeforeLet17 @(51,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet17.button1,
-EventStartupExpr30.text,
+EventStartupExpr30.text,|||\nEventStartupExpr30 @(52,18)\n\n\n\n\n|||
 EventStartupExpr30.button1,
-EventStartupReadPageStartUpBeforeLet18.text,
+EventStartupReadPageStartUpBeforeLet18.text,|||\nEventStartupReadPageStartUpBeforeLet18 @(52,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet18.button1,
-EventStartupExpr31.text,
+EventStartupExpr31.text,|||\nEventStartupExpr31 @(54,16)\n\n\n\n\n|||
 EventStartupExpr31.button1,
-EventStartupReadPageStartUpBeforeLet19.text,
+EventStartupReadPageStartUpBeforeLet19.text,|||\nEventStartupReadPageStartUpBeforeLet19 @(54,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeLet19.button1,
-EventStartupExpr32.text,
+EventStartupExpr32.text,|||\nEventStartupExpr32 @(56,9)\n\n\n\n\n|||
 EventStartupExpr32.button1,
-EventStartupExpr33.text,
+EventStartupExpr33.text,|||\nEventStartupExpr33 @(56,5)\n\n\n\n\n|||
 EventStartupExpr33.button1,
-EventStartupReadPageStartUpBeforeTrigger20.text,
+EventStartupReadPageStartUpBeforeTrigger20.text,|||\nEventStartupReadPageStartUpBeforeTrigger20 @(56,23)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeTrigger20.button1,
-EventStartupReadPageStartUpBeforeGoto8.text,
+EventStartupReadPageStartUpBeforeGoto8.text,|||\nEventStartupReadPageStartUpBeforeGoto8 @(58,2)\n\n\n\n\n|||
 EventStartupReadPageStartUpBeforeGoto8.button1,
-EventStartupEnd.text,
+EventStartupEnd.text,|||\nEventStartupEnd @(-1,-1)\n\n\n\n\n|||
 EventStartupEnd.button1,
-EventStartupExpr34.text,
+EventStartupExpr34.text,|||\nEventStartupExpr34 @(56,5)\n\n\n\n\n|||
 EventStartupExpr34.button1,
-EventStartupTiePoint.text,
+EventStartupTiePoint.text,|||\nEventStartupTiePoint @(-1,-1)\n\n\n\n\n|||
 EventStartupTiePoint.button1,
-EventStartupToc.text,
+EventStartupToc.text,|||\nEventStartupToc @(-1,-1)\n\n\n\n\n|||
 EventStartupToc.button1,
-EventStartupTocSelector.text,
+EventStartupTocSelector.text,|||\nEventStartupTocSelector @(-1,-1)\n\n\n\n\n|||
 EventStartupTocSelector.button1,
-EventStartupTocPrologStartUp.text,
+EventStartupTocPrologStartUp.text,|||\nEventStartupTocPrologStartUp @(-1,-1)\n\n\n\n\n|||
 EventStartupTocPrologStartUp.button1,
-EventStartupTocPrologShowEverything.text,
+EventStartupTocPrologShowEverything.text,|||\nEventStartupTocPrologShowEverything @(-1,-1)\n\n\n\n\n|||
 EventStartupTocPrologShowEverything.button1,
-EventStartupReadPageShowEverything.text,
+EventStartupReadPageShowEverything.text,|||\nEventStartupReadPageShowEverything @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageShowEverything.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove1.text,
+EventStartupReadPageShowEverythingBeforeAddRemove1.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove1 @(64,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove1.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove2.text,
+EventStartupReadPageShowEverythingBeforeAddRemove2.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove2 @(65,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove2.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove3.text,
+EventStartupReadPageShowEverythingBeforeAddRemove3.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove3 @(66,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove3.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove4.text,
+EventStartupReadPageShowEverythingBeforeAddRemove4.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove4 @(67,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove4.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove5.text,
+EventStartupReadPageShowEverythingBeforeAddRemove5.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove5 @(68,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove5.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove6.text,
+EventStartupReadPageShowEverythingBeforeAddRemove6.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove6 @(69,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove6.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove7.text,
+EventStartupReadPageShowEverythingBeforeAddRemove7.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove7 @(70,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove7.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove8.text,
+EventStartupReadPageShowEverythingBeforeAddRemove8.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove8 @(71,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove8.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove9.text,
+EventStartupReadPageShowEverythingBeforeAddRemove9.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove9 @(72,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove9.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove10.text,
+EventStartupReadPageShowEverythingBeforeAddRemove10.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove10 @(73,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove10.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove11.text,
+EventStartupReadPageShowEverythingBeforeAddRemove11.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove11 @(74,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove11.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove12.text,
+EventStartupReadPageShowEverythingBeforeAddRemove12.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove12 @(75,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove12.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove13.text,
+EventStartupReadPageShowEverythingBeforeAddRemove13.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove13 @(76,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove13.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove14.text,
+EventStartupReadPageShowEverythingBeforeAddRemove14.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove14 @(77,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove14.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove15.text,
+EventStartupReadPageShowEverythingBeforeAddRemove15.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove15 @(78,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove15.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove16.text,
+EventStartupReadPageShowEverythingBeforeAddRemove16.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove16 @(79,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove16.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove17.text,
+EventStartupReadPageShowEverythingBeforeAddRemove17.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove17 @(80,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove17.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove18.text,
+EventStartupReadPageShowEverythingBeforeAddRemove18.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove18 @(81,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove18.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove19.text,
+EventStartupReadPageShowEverythingBeforeAddRemove19.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove19 @(82,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove19.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove20.text,
+EventStartupReadPageShowEverythingBeforeAddRemove20.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove20 @(83,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove20.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove21.text,
+EventStartupReadPageShowEverythingBeforeAddRemove21.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove21 @(84,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove21.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove22.text,
+EventStartupReadPageShowEverythingBeforeAddRemove22.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove22 @(85,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove22.button1,
-EventStartupReadPageShowEverythingBeforeAddRemove23.text,
+EventStartupReadPageShowEverythingBeforeAddRemove23.text,|||\nEventStartupReadPageShowEverythingBeforeAddRemove23 @(86,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeAddRemove23.button1,
-EventStartupReadPageShowEverythingBeforeGoto9.text,
+EventStartupReadPageShowEverythingBeforeGoto9.text,|||\nEventStartupReadPageShowEverythingBeforeGoto9 @(88,2)\n\n\n\n\n|||
 EventStartupReadPageShowEverythingBeforeGoto9.button1,
-EventStartupTocPrologSplashScreen.text,
+EventStartupTocPrologSplashScreen.text,|||\nEventStartupTocPrologSplashScreen @(-1,-1)\n\n\n\n\n|||
 EventStartupTocPrologSplashScreen.button1,
-EventStartupReadPageSplashScreen.text,
+EventStartupReadPageSplashScreen.text,|||\nEventStartupReadPageSplashScreen @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageSplashScreen.button1,
-EventStartupReadPageSplashScreenBeforeAddRemove1.text,
+EventStartupReadPageSplashScreenBeforeAddRemove1.text,|||\nEventStartupReadPageSplashScreenBeforeAddRemove1 @(95,2)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenBeforeAddRemove1.button1,
-EventStartupReadPageSplashScreenDisplay.text,
+EventStartupReadPageSplashScreenDisplay.text,|||\nEventStartupReadPageSplashScreenDisplay @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenDisplay.button1,
-EventStartupReadPageSplashScreenBase.text,
+EventStartupReadPageSplashScreenBase.text,|||\nEventStartupReadPageSplashScreenBase @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenBase.button1,{qst:continue}
-EventStartupReadPageSplashScreenTiePoint.text,
+EventStartupReadPageSplashScreenTiePoint.text,|||\nEventStartupReadPageSplashScreenTiePoint @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenTiePoint.button1,
-EventStartupReadPageSplashScreenEnd.text,
+EventStartupReadPageSplashScreenEnd.text,|||\nEventStartupReadPageSplashScreenEnd @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenEnd.button1,
-EventStartupTocPrologSplashScreenClosed.text,
+EventStartupTocPrologSplashScreenClosed.text,|||\nEventStartupTocPrologSplashScreenClosed @(-1,-1)\n\n\n\n\n|||
 EventStartupTocPrologSplashScreenClosed.button1,
-EventStartupReadPageSplashScreenClosed.text,
+EventStartupReadPageSplashScreenClosed.text,|||\nEventStartupReadPageSplashScreenClosed @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenClosed.button1,
-EventStartupReadPageSplashScreenClosedBeforeAddRemove1.text,
+EventStartupReadPageSplashScreenClosedBeforeAddRemove1.text,|||\nEventStartupReadPageSplashScreenClosedBeforeAddRemove1 @(100,2)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenClosedBeforeAddRemove1.button1,
-EventStartupReadPageSplashScreenClosedDisplay.text,
+EventStartupReadPageSplashScreenClosedDisplay.text,|||\nEventStartupReadPageSplashScreenClosedDisplay @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenClosedDisplay.button1,
-EventStartupReadPageSplashScreenClosedBase.text,
+EventStartupReadPageSplashScreenClosedBase.text,|||\nEventStartupReadPageSplashScreenClosedBase @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenClosedBase.button1,{qst:continue}
-EventStartupReadPageSplashScreenClosedTiePoint.text,
+EventStartupReadPageSplashScreenClosedTiePoint.text,|||\nEventStartupReadPageSplashScreenClosedTiePoint @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenClosedTiePoint.button1,
-EventStartupReadPageSplashScreenClosedEnd.text,
+EventStartupReadPageSplashScreenClosedEnd.text,|||\nEventStartupReadPageSplashScreenClosedEnd @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenClosedEnd.button1,
-EventStartupTocPrologStartScenario.text,
+EventStartupTocPrologStartScenario.text,|||\nEventStartupTocPrologStartScenario @(-1,-1)\n\n\n\n\n|||
 EventStartupTocPrologStartScenario.button1,
-EventStartupReadPageStartScenario.text,
+EventStartupReadPageStartScenario.text,|||\nEventStartupReadPageStartScenario @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageStartScenario.button1,
-EventStartupReadPageStartScenarioDisplay.text,
+EventStartupReadPageStartScenarioDisplay.text,|||\nEventStartupReadPageStartScenarioDisplay @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageStartScenarioDisplay.button1,
-EventStartupReadPageStartScenarioBase.text,|||\nEach investigator receives 1 {clue}.\n|||
+EventStartupReadPageStartScenarioBase.text,|||\nEventStartupReadPageStartScenarioBase @(-1,-1)\n\nEach investigator receives 1 {clue}.\n\n\n|||
 EventStartupReadPageStartScenarioBase.button1,{qst:continue}
-EventStartupReadPageStartScenarioTiePoint.text,
+EventStartupReadPageStartScenarioTiePoint.text,|||\nEventStartupReadPageStartScenarioTiePoint @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageStartScenarioTiePoint.button1,
-EventStartupReadPageStartScenarioEnd.text,
+EventStartupReadPageStartScenarioEnd.text,|||\nEventStartupReadPageStartScenarioEnd @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageStartScenarioEnd.button1,
-EventStartupTocPrologKate.text,
+EventStartupTocPrologKate.text,|||\nEventStartupTocPrologKate @(-1,-1)\n\n\n\n\n|||
 EventStartupTocPrologKate.button1,
-EventStartupReadPageKate.text,
+EventStartupReadPageKate.text,|||\nEventStartupReadPageKate @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageKate.button1,
-EventStartupReadPageKateDisplay.text,
+EventStartupReadPageKateDisplay.text,|||\nEventStartupReadPageKateDisplay @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageKateDisplay.button1,
-EventStartupReadPageKateBase.text,|||\nKate is running late, so she is hurried and inattentive. She grabs her {c:QItemFluxStabilizer} and turns to put it away. She cries out as it slips from her fingers and drops heavily to the floor. It cracks open when it hits and releases blue smoke. <i>How can the universe be so cruel and unfair?!</i> Kate discards her {c:QItemFluxStabilizer}. She fumes and ruminates on the loss. That seething anger will carry with her through the day: Kate becomes Focused. She becomes Focused before any monster attacks her.\n|||
+EventStartupReadPageKateBase.text,|||\nEventStartupReadPageKateBase @(-1,-1)\n\nKate is running late, so she is hurried and inattentive. She grabs her {c:QItemFluxStabilizer} and turns to put it away. She cries out as it slips from her fingers and drops heavily to the floor. It cracks open when it hits and releases blue smoke. <i>How can the universe be so cruel and unfair?!</i> Kate discards her {c:QItemFluxStabilizer}. She fumes and ruminates on the loss. That seething anger will carry with her through the day: Kate becomes Focused. She becomes Focused before any monster attacks her.\n\n\n|||
 EventStartupReadPageKateBase.button1,{qst:continue}
-EventStartupReadPageKateTiePoint.text,
+EventStartupReadPageKateTiePoint.text,|||\nEventStartupReadPageKateTiePoint @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageKateTiePoint.button1,
-EventStartupReadPageKateAfterTrigger1.text,
+EventStartupReadPageKateAfterTrigger1.text,|||\nEventStartupReadPageKateAfterTrigger1 @(123,2)\n\n\n\n\n|||
 EventStartupReadPageKateAfterTrigger1.button1,
-EventStartupReadPageKateEnd.text,
+EventStartupReadPageKateEnd.text,|||\nEventStartupReadPageKateEnd @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageKateEnd.button1,
-EventStartupReadPageSplashScreenXferIfTriggered.text,
+EventStartupReadPageShowEverythingXferIfTriggered.text,|||\nEventStartupReadPageShowEverythingXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventStartupReadPageShowEverythingXferIfTriggered.button1,
+EventStartupReadPageSplashScreenXferIfTriggered.text,|||\nEventStartupReadPageSplashScreenXferIfTriggered @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenXferIfTriggered.button1,
-EventStartupReadPageSplashScreenClosedXferIfTriggered.text,
+EventStartupReadPageSplashScreenClosedXferIfTriggered.text,|||\nEventStartupReadPageSplashScreenClosedXferIfTriggered @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenClosedXferIfTriggered.button1,
-EventStartupReadPageStartUpTrigger.text,
+EventStartupReadPageStartScenarioXferIfTriggered.text,|||\nEventStartupReadPageStartScenarioXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventStartupReadPageStartScenarioXferIfTriggered.button1,
+EventStartupReadPageKateXferIfTriggered.text,|||\nEventStartupReadPageKateXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventStartupReadPageKateXferIfTriggered.button1,
+EventStartupReadPageStartUpTrigger.text,|||\nEventStartupReadPageStartUpTrigger @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageStartUpTrigger.button1,
-EventStartupReadPageSplashScreenTrigger.text,
+EventStartupReadPageSplashScreenTrigger.text,|||\nEventStartupReadPageSplashScreenTrigger @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenTrigger.button1,
-EventStartupReadPageSplashScreenClosedTrigger.text,
+EventStartupReadPageSplashScreenClosedTrigger.text,|||\nEventStartupReadPageSplashScreenClosedTrigger @(-1,-1)\n\n\n\n\n|||
 EventStartupReadPageSplashScreenClosedTrigger.button1,
