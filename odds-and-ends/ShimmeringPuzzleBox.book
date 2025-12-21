@@ -1,0 +1,61 @@
+Language English
+
+
+/* This puzzle is for the Puzzle Box. 
+
+	There are three seperate but identical puzzles. We randomly select the one
+	they will try this time. Eventually they will solve one of the three.
+*/
+
+
+Book ShimmeringPuzzleBox Ordered No Keep
+
+
+Repeat Random
+
+Page PuzzleBox1 Random
+
+	Prolog """
+		The puzzle on top of the box shimmers and shifts every few seconds.
+		
+		Roll four dice and count successes. You may take that many puzzle
+		actions this turn. You may always take at least one.
+	"""
+	
+	Puzzle PuzzleBox1
+
+	Mark Unread
+End Page PuzzleBox
+
+Page PuzzleBox2 Random
+
+	Prolog """
+		The puzzle on top of the box shimmers and shifts every few seconds.
+		
+		Roll four dice and count successes. You may take that many puzzle
+		actions this turn. You may always take at least one.
+	"""
+	
+	Puzzle PuzzleBox2
+
+	Mark Unread
+End Page PuzzleBox
+
+Page PuzzleBox3 Random
+
+	Prolog """
+		The puzzle on top of the box shimmers and shifts every few seconds.
+		
+		Roll four dice and count successes. You may take that many puzzle
+		actions this turn. You may always take at least one.
+	"""
+	
+	Puzzle PuzzleBox3
+
+	Mark Unread
+End Page PuzzleBox
+
+
+
+
+End Book ShimmeringPuzzleBox
