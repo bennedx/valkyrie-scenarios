@@ -1,9 +1,10 @@
 Language English
-Debug On
+Debug Off
 
-Book Startup Ordered No Keep
+Book Startup Ordered No Keep Looped
 
 	Page StartUp No Text
+		Not Visible
 		Triggered By @EventStart
 
 		testMode = false
@@ -54,8 +55,7 @@ Book Startup Ordered No Keep
 		goal = RANDOM(3)
 		
 		If Not testMode Then Trigger @SplashScreen
-		
-		Exit
+		if Not testMode Then Exit
 	End Page StartUp
 	
 	Page ShowEverything No Text
@@ -92,22 +92,23 @@ Book Startup Ordered No Keep
 		Not Visible
 		Triggered By @SplashScreen
 		
-		Add UIStoryImage, UIStoryBackground, UIOpenText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
+		Add UIStoryImage, UIStoryBackground, UIOpeningText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
+		Exit
 	End Page SplashScreen
 	
 	Page SplashScreenClosed No Text
+		Not Visible
 		Triggered By @SplashScreenClosed
-		Remove UIStoryImage, UIStoryBackground, UIOpenText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
+		Remove UIStoryImage, UIStoryBackground, UIOpeningText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
 	End Page SplashScreenClosed
 	
-	Page StartScenario No Text
-		Not Visible When testMode
-		
+	Page StartScenario
+	    Not Visible When testMode
 		Text "Each investigator receives 1 {clue}."
 	End Page StartScenario
 	
 	Page Kate
-		Visible WHEN #HeroKateWinthrop
+		Visible When #HeroKateWinthrop And Not testMode
 		
 		Text """
 			Kate is running late, so she is hurried and inattentive. She grabs
@@ -115,11 +116,14 @@ Book Startup Ordered No Keep
 			as it slips from her fingers and drops heavily to the floor.
 			It cracks open when it hits and releases blue smoke. <i>How can the
 			universe be so cruel and unfair?!</i> Kate discards her
-			{c:QItemFluxStabilizer}. She fumes and ruminates on the loss. That
+			{c:QItemFluxStabilizer}. She angrily ruminates on the loss. That
 			seething anger will carry with her through the day:  Kate becomes
 			Focused. She becomes Focused before any monster attacks her.
 		"""
-		
-		Trigger @PlaceDriveWay
 	End Page Kate
+	
+	Page PlaceDriveway No Text
+		Not Visible When testMode
+		Trigger @PlaceDriveway
+	End Page PlaceDriveway
 End Book Startup

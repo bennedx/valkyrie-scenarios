@@ -1,7 +1,7 @@
 Language English
-Debug On
+Debug Off
 
-Book Driveway Ordered No Keep
+Book Driveway Ordered No Keep Looped
 	
 	Page Place 
 		Triggered By @PlaceDriveway
@@ -14,8 +14,8 @@ Book Driveway Ordered No Keep
 
 			As you walk up the driveway, you can see how poorly maintained the
 			house and grounds are. The drive is paved, but cracked and pocked.
-			Weeds grow as high as your waist on either side and you briefly
-			wonder what might be hiding there.
+			Weeds grow as high as your waist on either side and you wonder
+			briefly what might be hiding there.
 
 			Place the {c:TileDriveway} tile as indicated.
 		"""
@@ -70,9 +70,7 @@ Book Driveway Ordered No Keep
 	Page PlaceWendy
 		Visible When #HeroWendyAdams
 		
-		Add QItemWendyGun
-
-		Text """
+		Text QItemWendyGun """
 			As she walks up the drive, Wendy Adams trips and falls. She twists
 			her ankle and skins her knees. When she looks up, she sees
 			something in the weeds. Wendy gains the {c:QItemWendyGun}.
@@ -87,6 +85,7 @@ Book Driveway Ordered No Keep
 	End Page EndPlace
 	
 	Page SearchGardenTool
+		Not Visible
 		Triggered By @SearchDrivewayGardenTool
 		
 		Prolog """
@@ -96,10 +95,9 @@ Book Driveway Ordered No Keep
 		"""
 		Button "Search"
 		
-		Add QItemGardenTool
 		Remove TokenSearchDrivewayGardenTool
 
-		Text """
+		Text QItemGardenTool """
 			You rustle around in the weeds and find something interesting.
 			Gain the {c:QItemGardenTool} Common Item, then discard this
 			Search token.
@@ -117,6 +115,7 @@ Book Driveway Ordered No Keep
 	End Page SearchGardenTool
 	
 	Page SearchJournal
+		Not Visible
 		Triggered By @SearchOutsideJournal
 		
 		Prolog "Benjamin dropped a book here."
@@ -124,7 +123,7 @@ Book Driveway Ordered No Keep
 		
 		Remove TokenSearchDrivewayJournal
 
-		Text """
+		Text QItemJournal """
 			Up close you can see that it is thin and leather-bound. You
 			pick it up and flip through the pages:  it's a journal. The
 			first entry was scrawled last Sunday. You should give it back
@@ -140,6 +139,7 @@ Book Driveway Ordered No Keep
 	End Page SearchJournal	
 	
 	Page ExploreBackyardViaDriveway
+		Not Visible
 		Triggered By @ExploreBackyardViaDriveway
 		
 		Text """
@@ -158,6 +158,7 @@ Book Driveway Ordered No Keep
 	End Page ExploreBackyardViaDriveway
 	
 	Page ExploreNotNice
+		Not Visible
 		Add TokenDriveWayBen!
 		Remove TokenExploreBackyardViaDriveway
 
@@ -175,9 +176,11 @@ Book Driveway Ordered No Keep
 		"""
 		
 		exploredBackyardNicely = false
+		Goto ExploreNotNiceBen
 	End Page ExploreNotNice
 	
 	Page ExploreNotNiceBen
+		Not Visible
 		Text """
 			As you turn to look at Benjamin, you hear a second crash
 			behind the gate.
@@ -197,9 +200,11 @@ Book Driveway Ordered No Keep
 		"""
 		
 		Remove TokenDrivewayBen
+		Goto ExploreNotNiceJournal
 	End Page ExploreNotNiceBen
 	
 	Page ExploreNotNiceJournal
+		Not Visible
 		Add TokenSearchDrivewayJournal!, TokenExploreBackyardViaDrivewaySight!
 		
 		Text """
@@ -234,6 +239,7 @@ Book Driveway Ordered No Keep
 		"""
 		
 		exploredBackyardNicely = true
+		Goto ExploreNiceBen
 	End Page ExploreNice
 	
 	Page ExploreNiceBen
@@ -249,6 +255,7 @@ Book Driveway Ordered No Keep
 		"""
 	
 		Remove TokenDrivewayBen
+		Goto ExploreNiceJournal
 	End Page ExploreNiceBen
 	
 	Page ExploreNiceJournal
