@@ -1,12 +1,13 @@
-LANGUAGE English
+Language English
+Debug Off
 
-Book Backyard Ordered No Keep
+Book Backyard Ordered No Keep Looped
 
 	Page Place
 		Triggered By @PlaceBackyard
 		
 		Prolog "You can see the huge mess through the gate."
-		BUTTON "Explore"
+		BUTTON "Look"
 		FREE
 		
 		Add TileBackyard, TokenDoorBackyard!
@@ -107,12 +108,11 @@ Book Backyard Ordered No Keep
 	End Page SearchRandom
 	
 	Page SearchRandomGood
-		Add QItemBackyardRandom
 
-		Text """
+		Text QItemBackyardRandom """
 			After looking at and around the plant, you bump into the pot,
 			knock it over, and break it. Exposed in the dirt, you find
-			something. Gain the {c:QItemBackdoorRandom} Common Item, then
+			something. Gain the {c:QItemBackyardRandom} Common Item, then
 			remove this Search token.
 		"""
 		
@@ -122,10 +122,9 @@ Book Backyard Ordered No Keep
 	End Page SearchRandomGood
 	
 	Page SearchRandomBad
-		Add QItemBackyardRandom
 		Remove TokenSearchBackyardRandom
 
-		Text """
+		Text QItemBackyardRandom """
 			After looking at and around the plant, you bump into the pot,
 			knock it over, and break it. Exposed in the dirt, you find
 			something. Gain the {c:QItemBackdoorRandom} Common
@@ -158,7 +157,7 @@ Book Backyard Ordered No Keep
 	Page Search2x4Pass
 		Remove TokenSearchBackyard2x4
 
-		Text """
+		Text QItem2x4 """
 			You carefully reach into the pile and pull out a sturdy piece
 			of wood. Gain the {c:QItem2x4} Common Item and discard this Search
 			token.
@@ -170,7 +169,7 @@ Book Backyard Ordered No Keep
 	Page Search2x4Fail
 		Remove TokenSearchBackyard2x4
 
-		Text """
+		Text QItem2x4 """
 			You fumble around in the rubble, cursing as nails and splinters
 			dig into your hands. Gain the {c:QItem2x4} Common Item, take 1
 			facedown Damage, and discard this Search token.
