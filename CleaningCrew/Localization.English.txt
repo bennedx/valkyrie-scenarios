@@ -5620,7 +5620,7 @@ EventBackyardReadPagePlaceBeforeAddRemove1.button1,
 EventBackyardReadPagePlaceDisplay.text,
 EventBackyardReadPagePlaceDisplay.button1,
 EventBackyardReadPagePlaceBase.text,|||\nBoxes, broken furniture, and other trash litter the yard. It’s clear that when the house was shut down, it was done in a hurry. Discard this Sight token.\n\nPlace the {c:TileBackyard} tile and door as indicated.\n|||
-EventBackyardReadPagePlaceBase.button1,Look
+EventBackyardReadPagePlaceBase.button1,{qst:continue}
 EventBackyardReadPagePlaceTiePoint.text,
 EventBackyardReadPagePlaceTiePoint.button1,
 EventBackyardExpr1.text,
@@ -5779,7 +5779,7 @@ EventBackyardExpr7.text,
 EventBackyardExpr7.button1,
 EventBackyardReadPagePlaceBenDisplay.text,
 EventBackyardReadPagePlaceBenDisplay.button1,
-EventBackyardReadPagePlaceBenOverload1.text,|||\nAs you turn from the pile of rubble, you look toward the door. Benjamin has tromped down and is standing in front of it.\n\nPlace the Purple Man and Explore tokens as indicated.\n\nBenjamin is agitated and seems to be digging in his pockets for something. He looks up and catches your eye, anger and disdain darkening his features.\n\nYour friend who sent you will not be happy.\n|||
+EventBackyardReadPagePlaceBenOverload1.text,|||\nAs you turn from the pile of rubble, your eyes follow the cobblestone walkway to the back door. Benjamin has tromped down and is standing in front of it.\n\nPlace the Purple Man and Explore tokens as indicated.\n\nBenjamin is agitated and seems to be digging in his pockets for something. He looks up and catches your eye, anger and disdain darkening his features.\n\nYour friend who sent you will not be happy.\n|||
 EventBackyardReadPagePlaceBenOverload1.button1,{qst:continue}
 EventBackyardReadPagePlaceBenTiePoint.text,
 EventBackyardReadPagePlaceBenTiePoint.button1,
@@ -5879,296 +5879,303 @@ EventBackyardReadPageSearch2x4Trigger.text,
 EventBackyardReadPageSearch2x4Trigger.button1,
 EventBackyardReadPageExploreDiningRoomViaBackyardTrigger.text,
 EventBackyardReadPageExploreDiningRoomViaBackyardTrigger.button1,
-EventBenBeforeStart.text,
+EventBenBeforeStart.text,|||\nEventBenBeforeStart @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeStart.button1,
-EventBenBeforeInit.text,
+EventBenBeforeInit.text,|||\nEventBenBeforeInit @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeInit.button1,
-EventBenBeforeFirstTimeInitializer.text,
+EventBenBeforeFirstTimeInitializer.text,|||\nEventBenBeforeFirstTimeInitializer @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeFirstTimeInitializer.button1,
-EventBenBeforeExpr49.text,
+EventBenBeforeExpr49.text,|||\nEventBenBeforeExpr49 @(165,19)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr49.button1,
-EventBenBeforeExpr52.text,
+EventBenBeforeExpr52.text,|||\nEventBenBeforeExpr52 @(165,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr52.button1,
-EventBenBeforeExpr51.text,
+EventBenBeforeExpr51.text,|||\nEventBenBeforeExpr51 @(165,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr51.button1,
-EventBenBeforeExpr54.text,
+EventBenBeforeExpr54.text,|||\nEventBenBeforeExpr54 @(165,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr54.button1,
-EventBenBeforeTriggerPrologSelector.text,
+EventBenBeforeTriggerPrologSelector.text,|||\nEventBenBeforeTriggerPrologSelector @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeTriggerPrologSelector.button1,
-EventBenBeforeTriggerSelector.text,
+EventBenBeforeTriggerSelector.text,|||\nEventBenBeforeTriggerSelector @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeTriggerSelector.button1,
-EventBenBeforeReadPageHowLongXferIfTriggered.text,
+EventBenBeforeReadPageHowLongXferIfTriggered.text,|||\nEventBenBeforeReadPageHowLongXferIfTriggered @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageHowLongXferIfTriggered.button1,
-EventBenBeforeReadPageHowLong.text,
+EventBenBeforeReadPageHowLong.text,|||\nEventBenBeforeReadPageHowLong @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageHowLong.button1,
-EventBenBeforeReadPageHowLongTestFinished.text,
+EventBenBeforeReadPageHowLongTestFinished.text,|||\nEventBenBeforeReadPageHowLongTestFinished @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageHowLongTestFinished.button1,
-EventBenBeforeExpr1.text,
+EventBenBeforeExpr1.text,|||\nEventBenBeforeExpr1 @(32,9)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr1.button1,
-EventBenBeforeExpr3.text,
+EventBenBeforeExpr3.text,|||\nEventBenBeforeExpr3 @(32,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr3.button1,
-EventBenBeforeExpr2.text,
+EventBenBeforeExpr2.text,|||\nEventBenBeforeExpr2 @(32,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr2.button1,
-EventBenBeforeReadPageHowLongDisplay.text,
+EventBenBeforeReadPageHowLongDisplay.text,|||\nEventBenBeforeReadPageHowLongDisplay @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageHowLongDisplay.button1,
-EventBenBeforeReadPageHowLongOverload1.text,|||\n“Long enough,” he snaps. “There are numerous rooms on the ground floor, there is a basement, and there are many rooms upstairs. The place has always been too big for the family. Peter lived here with his daughter. His wife died under suspicious circumstances when the girl was three. Never explained.\n\n“Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren’t you? And you won’t break anything else?” “I hope not,” he mutters under his breath.\n|||
-EventBenBeforeReadPageHowLongOverload1.button1,“How long will it take us to look through the house?”
-EventBenBeforeReadPageHowLongTiePoint.text,
+EventBenBeforeReadPageHowLongOverload1.text,|||\nEventBenBeforeReadPageHowLongOverload1 @(-1,-1)\n\n“Long enough,” he snaps. “There are numerous rooms on the ground floor, there is a basement, and there are many rooms upstairs. The place has always been too big for the family. Peter lived here with his daughter. His wife died under suspicious circumstances when the girl was three. Never explained.\n\n“Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren’t you? And you won’t break anything else?” “I hope not,” he mutters under his breath.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageHowLongOverload1.button1,{qst:continue}
+EventBenBeforeReadPageHowLongTiePoint.text,|||\nEventBenBeforeReadPageHowLongTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageHowLongTiePoint.button1,
-EventBenBeforeExpr5.text,
+EventBenBeforeExpr5.text,|||\nEventBenBeforeExpr5 @(50,23)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr5.button1,
-EventBenBeforeReadPageHowLongAfterLet1.text,
+EventBenBeforeReadPageHowLongAfterLet1.text,|||\nEventBenBeforeReadPageHowLongAfterLet1 @(50,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageHowLongAfterLet1.button1,
-EventBenBeforeExpr6.text,
+EventBenBeforeExpr6.text,|||\nEventBenBeforeExpr6 @(51,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr6.button1,
-EventBenBeforeExpr7.text,
+EventBenBeforeExpr7.text,|||\nEventBenBeforeExpr7 @(51,40)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr7.button1,
-EventBenBeforeExpr8.text,
+EventBenBeforeExpr8.text,|||\nEventBenBeforeExpr8 @(51,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr8.button1,
-EventBenBeforeReadPageHowLongAfterLet2.text,
+EventBenBeforeReadPageHowLongAfterLet2.text,|||\nEventBenBeforeReadPageHowLongAfterLet2 @(51,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageHowLongAfterLet2.button1,
-EventBenBeforeReadPageHowLongAfterTrigger3.text,
+EventBenBeforeReadPageHowLongAfterTrigger3.text,|||\nEventBenBeforeReadPageHowLongAfterTrigger3 @(52,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageHowLongAfterTrigger3.button1,
-EventBenBeforeExpr9.text,
+EventBenBeforeExpr9.text,|||\nEventBenBeforeExpr9 @(53,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr9.button1,
-EventBenBeforeExpr10.text,
+EventBenBeforeExpr10.text,|||\nEventBenBeforeExpr10 @(53,25)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr10.button1,
-EventBenBeforeExpr11.text,
+EventBenBeforeExpr11.text,|||\nEventBenBeforeExpr11 @(53,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr11.button1,
-EventBenBeforeReadPageHowLongAfterGoto11.text,
+EventBenBeforeReadPageHowLongAfterGoto11.text,|||\nEventBenBeforeReadPageHowLongAfterGoto11 @(53,32)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageHowLongAfterGoto11.button1,
-EventBenBeforeEnd.text,
+EventBenBeforeEnd.text,|||\nEventBenBeforeEnd @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeEnd.button1,
-EventBenBeforeReadPageHowLongEnd.text,
+EventBenBeforeReadPageHowLongEnd.text,|||\nEventBenBeforeReadPageHowLongEnd @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageHowLongEnd.button1,
-EventBenBeforeTiePoint.text,
+EventBenBeforeTiePoint.text,|||\nEventBenBeforeTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeTiePoint.button1,
-EventBenBeforeLoopBack.text,
+EventBenBeforeLoopBack.text,|||\nEventBenBeforeLoopBack @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeLoopBack.button1,
-EventBenBeforeExpr12.text,
+EventBenBeforeExpr12.text,|||\nEventBenBeforeExpr12 @(53,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr12.button1,
-EventBenBeforeReadPageHowLongBase.text,|||\n“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Peter lived here with his daughter. The wife died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I guess you’ll need a few hours just to look through the place and get your bearings. You’ll want to check every drawer, cabinet, and box in the house–take as much time as you need. The whole house should be cleared out and spotless by the end of next week.”\n|||
-EventBenBeforeReadPageHowLongBase.button1,“How long will it take us to look through the house?”
-EventBenBeforeExpr4.text,
+EventBenBeforeReadPageHowLongBase.text,|||\nEventBenBeforeReadPageHowLongBase @(-1,-1)\n\n“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Peter lived here with his daughter. The wife died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I guess you’ll need a few hours just to look through the place and get your bearings. You’ll want to check every drawer, cabinet, and box in the house–take as much time as you need. The whole house should be cleared out and spotless by the end of next week.”\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageHowLongBase.button1,{qst:continue}
+EventBenBeforeExpr4.text,|||\nEventBenBeforeExpr4 @(32,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr4.button1,
-EventBenBeforeReadPageWhatXferIfTriggered.text,
+EventBenBeforeReadPageWhatXferIfTriggered.text,|||\nEventBenBeforeReadPageWhatXferIfTriggered @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhatXferIfTriggered.button1,
-EventBenBeforeReadPageWhat.text,
+EventBenBeforeReadPageWhat.text,|||\nEventBenBeforeReadPageWhat @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhat.button1,
-EventBenBeforeReadPageWhatTestFinished.text,
+EventBenBeforeReadPageWhatTestFinished.text,|||\nEventBenBeforeReadPageWhatTestFinished @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhatTestFinished.button1,
-EventBenBeforeExpr13.text,
+EventBenBeforeExpr13.text,|||\nEventBenBeforeExpr13 @(76,9)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr13.button1,
-EventBenBeforeExpr15.text,
+EventBenBeforeExpr15.text,|||\nEventBenBeforeExpr15 @(76,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr15.button1,
-EventBenBeforeExpr14.text,
+EventBenBeforeExpr14.text,|||\nEventBenBeforeExpr14 @(76,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr14.button1,
-EventBenBeforeReadPageWhatDisplay.text,
+EventBenBeforeReadPageWhatDisplay.text,|||\nEventBenBeforeReadPageWhatDisplay @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhatDisplay.button1,
-EventBenBeforeReadPageWhatOverload1.text,|||\n“The children? Two were strangled. Parts of them were... missing. The burns on the third were never explained. Nasty business.\n\n“Peter and his brother Henry both went missing that night. Most folks don’t know about Henry. Left a lot of folks around town wondering what really happened. But we’re not here to gossip.”\n|||
-EventBenBeforeReadPageWhatOverload1.button1,“What do you think happened to those children?”
-EventBenBeforeReadPageWhatTiePoint.text,
+EventBenBeforeReadPageWhatOverload1.text,|||\nEventBenBeforeReadPageWhatOverload1 @(-1,-1)\n\n“The children? Two were strangled. Parts of them were... missing. The burns on the third were never explained. Nasty business.\n\n“Peter and his brother Henry both went missing that night. Most folks don’t know about Henry. Left a lot of folks around town wondering what really happened. But we’re not here to gossip.”\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageWhatOverload1.button1,{qst:continue}
+EventBenBeforeReadPageWhatTiePoint.text,|||\nEventBenBeforeReadPageWhatTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhatTiePoint.button1,
-EventBenBeforeExpr17.text,
+EventBenBeforeExpr17.text,|||\nEventBenBeforeExpr17 @(90,24)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr17.button1,
-EventBenBeforeReadPageWhatAfterLet1.text,
+EventBenBeforeReadPageWhatAfterLet1.text,|||\nEventBenBeforeReadPageWhatAfterLet1 @(90,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhatAfterLet1.button1,
-EventBenBeforeExpr18.text,
+EventBenBeforeExpr18.text,|||\nEventBenBeforeExpr18 @(91,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr18.button1,
-EventBenBeforeExpr19.text,
+EventBenBeforeExpr19.text,|||\nEventBenBeforeExpr19 @(91,40)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr19.button1,
-EventBenBeforeExpr20.text,
+EventBenBeforeExpr20.text,|||\nEventBenBeforeExpr20 @(91,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr20.button1,
-EventBenBeforeReadPageWhatAfterLet2.text,
+EventBenBeforeReadPageWhatAfterLet2.text,|||\nEventBenBeforeReadPageWhatAfterLet2 @(91,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhatAfterLet2.button1,
-EventBenBeforeReadPageWhatAfterTrigger3.text,
+EventBenBeforeReadPageWhatAfterTrigger3.text,|||\nEventBenBeforeReadPageWhatAfterTrigger3 @(92,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhatAfterTrigger3.button1,
-EventBenBeforeExpr21.text,
+EventBenBeforeExpr21.text,|||\nEventBenBeforeExpr21 @(93,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr21.button1,
-EventBenBeforeExpr22.text,
+EventBenBeforeExpr22.text,|||\nEventBenBeforeExpr22 @(93,25)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr22.button1,
-EventBenBeforeExpr23.text,
+EventBenBeforeExpr23.text,|||\nEventBenBeforeExpr23 @(93,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr23.button1,
-EventBenBeforeReadPageWhatAfterGoto12.text,
+EventBenBeforeReadPageWhatAfterGoto12.text,|||\nEventBenBeforeReadPageWhatAfterGoto12 @(93,32)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhatAfterGoto12.button1,
-EventBenBeforeReadPageWhatEnd.text,
+EventBenBeforeReadPageWhatEnd.text,|||\nEventBenBeforeReadPageWhatEnd @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhatEnd.button1,
-EventBenBeforeExpr24.text,
+EventBenBeforeExpr24.text,|||\nEventBenBeforeExpr24 @(93,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr24.button1,
-EventBenBeforeReadPageWhatBase.text,|||\n“The children? One of them was burned from head-to-toe. The other two were strangled and parts were... taken. The burns were never explained. Nasty business.\n\n“Peter Smythe–the girl’s father and the owner of this house–went missing that night. Most folks think he did something to the children and then ran away. Still hiding, they think.\n\n“What wasn’t reported is that his brother, Henry, also disappeared that night. Folks in town figured they’d run off together to avoid difficult questions.”\n\nGain 1 {clue}.\n|||
-EventBenBeforeReadPageWhatBase.button1,“What do you think happened to those children?”
-EventBenBeforeExpr16.text,
+EventBenBeforeReadPageWhatBase.text,|||\nEventBenBeforeReadPageWhatBase @(-1,-1)\n\n“The children? One of them was burned from head-to-toe. The other two were strangled and parts were... taken. The burns were never explained. Nasty business.\n\n“Peter Smythe–the girl’s father and the owner of this house–went missing that night. Most folks think he did something to the children and then ran away. Still hiding, they think.\n\n“What wasn’t reported is that his brother, Henry, also disappeared that night. Folks in town figured they’d run off together to avoid difficult questions.”\n\nGain 1 {clue}.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageWhatBase.button1,{qst:continue}
+EventBenBeforeExpr16.text,|||\nEventBenBeforeExpr16 @(76,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr16.button1,
-EventBenBeforeReadPageWhereXferIfTriggered.text,
+EventBenBeforeReadPageWhereXferIfTriggered.text,|||\nEventBenBeforeReadPageWhereXferIfTriggered @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhereXferIfTriggered.button1,
-EventBenBeforeReadPageWhere.text,
+EventBenBeforeReadPageWhere.text,|||\nEventBenBeforeReadPageWhere @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhere.button1,
-EventBenBeforeReadPageWhereTestFinished.text,
+EventBenBeforeReadPageWhereTestFinished.text,|||\nEventBenBeforeReadPageWhereTestFinished @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhereTestFinished.button1,
-EventBenBeforeExpr25.text,
+EventBenBeforeExpr25.text,|||\nEventBenBeforeExpr25 @(114,9)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr25.button1,
-EventBenBeforeExpr27.text,
+EventBenBeforeExpr27.text,|||\nEventBenBeforeExpr27 @(114,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr27.button1,
-EventBenBeforeExpr26.text,
+EventBenBeforeExpr26.text,|||\nEventBenBeforeExpr26 @(114,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr26.button1,
-EventBenBeforeReadPageWhereDisplay.text,
+EventBenBeforeReadPageWhereDisplay.text,|||\nEventBenBeforeReadPageWhereDisplay @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhereDisplay.button1,
-EventBenBeforeReadPageWhereOverload1.text,|||\n“The children were found just over there,” he grumbles, pointing back the way you came. “Not sure why it matters, but I’ll tell you: the girl who was burnt, she kept smoldering until the next day. Coroner couldn’t explain it.” Benjamin resumes digging through his pockets, but seems a little shaken.\n|||
-EventBenBeforeReadPageWhereOverload1.button1,“Where were those children found?”
-EventBenBeforeReadPageWhereTiePoint.text,
+EventBenBeforeReadPageWhereOverload1.text,|||\nEventBenBeforeReadPageWhereOverload1 @(-1,-1)\n\n“The children were found just over there,” he grumbles, pointing back the way you came. “Not sure why it matters, but I’ll tell you: the girl who was burnt, she kept smoldering until the next day. Coroner couldn’t explain it.” Benjamin resumes digging through his pockets, but seems a little shaken.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageWhereOverload1.button1,{qst:continue}
+EventBenBeforeReadPageWhereTiePoint.text,|||\nEventBenBeforeReadPageWhereTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhereTiePoint.button1,
-EventBenBeforeExpr29.text,
+EventBenBeforeExpr29.text,|||\nEventBenBeforeExpr29 @(128,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr29.button1,
-EventBenBeforeReadPageWhereAfterLet1.text,
+EventBenBeforeReadPageWhereAfterLet1.text,|||\nEventBenBeforeReadPageWhereAfterLet1 @(128,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhereAfterLet1.button1,
-EventBenBeforeExpr30.text,
+EventBenBeforeExpr30.text,|||\nEventBenBeforeExpr30 @(129,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr30.button1,
-EventBenBeforeExpr31.text,
+EventBenBeforeExpr31.text,|||\nEventBenBeforeExpr31 @(129,40)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr31.button1,
-EventBenBeforeExpr32.text,
+EventBenBeforeExpr32.text,|||\nEventBenBeforeExpr32 @(129,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr32.button1,
-EventBenBeforeReadPageWhereAfterLet2.text,
+EventBenBeforeReadPageWhereAfterLet2.text,|||\nEventBenBeforeReadPageWhereAfterLet2 @(129,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhereAfterLet2.button1,
-EventBenBeforeReadPageWhereAfterTrigger3.text,
+EventBenBeforeReadPageWhereAfterTrigger3.text,|||\nEventBenBeforeReadPageWhereAfterTrigger3 @(130,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhereAfterTrigger3.button1,
-EventBenBeforeExpr33.text,
+EventBenBeforeExpr33.text,|||\nEventBenBeforeExpr33 @(131,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr33.button1,
-EventBenBeforeExpr34.text,
+EventBenBeforeExpr34.text,|||\nEventBenBeforeExpr34 @(131,25)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr34.button1,
-EventBenBeforeExpr35.text,
+EventBenBeforeExpr35.text,|||\nEventBenBeforeExpr35 @(131,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr35.button1,
-EventBenBeforeReadPageWhereAfterGoto13.text,
+EventBenBeforeReadPageWhereAfterGoto13.text,|||\nEventBenBeforeReadPageWhereAfterGoto13 @(131,32)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhereAfterGoto13.button1,
-EventBenBeforeReadPageWhereEnd.text,
+EventBenBeforeReadPageWhereEnd.text,|||\nEventBenBeforeReadPageWhereEnd @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhereEnd.button1,
-EventBenBeforeExpr36.text,
+EventBenBeforeExpr36.text,|||\nEventBenBeforeExpr36 @(131,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr36.button1,
-EventBenBeforeReadPageWhereBase.text,|||\n“The children were found just over there,” he says, pointing back the way you came. “They were in a pile; the girl’s body was still smoking from the burns. Strangest thing: she kept smoking until the next day. Coroner wasn’t able to explain it. No one was.\n\n“Our family has lived here for generations–many of them in this house. We’re upset to let it go, but no one lives here... or wants to after what happened.”\n\nGain 1 {clue}.\n\nBenjamin resumes searching his pockets, but seems a little shaken.\n|||
-EventBenBeforeReadPageWhereBase.button1,“Where were those children found?”
-EventBenBeforeExpr28.text,
+EventBenBeforeReadPageWhereBase.text,|||\nEventBenBeforeReadPageWhereBase @(-1,-1)\n\n“The children were found just over there,” he says, pointing back the way you came. “They were in a pile; the girl’s body was still smoking from the burns. Strangest thing: she kept smoking until the next day. Coroner wasn’t able to explain it. No one was.\n\n“Our family has lived here for generations–many of them in this house. We’re upset to let it go, but no one lives here... or wants to after what happened.”\n\nGain 1 {clue}.\n\nBenjamin resumes searching his pockets, but seems a little shaken.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageWhereBase.button1,{qst:continue}
+EventBenBeforeExpr28.text,|||\nEventBenBeforeExpr28 @(114,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr28.button1,
-EventBenBeforeReadPageWhyXferIfTriggered.text,
+EventBenBeforeReadPageWhyXferIfTriggered.text,|||\nEventBenBeforeReadPageWhyXferIfTriggered @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhyXferIfTriggered.button1,
-EventBenBeforeReadPageWhy.text,
+EventBenBeforeReadPageWhy.text,|||\nEventBenBeforeReadPageWhy @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhy.button1,
-EventBenBeforeReadPageWhyTestFinished.text,
+EventBenBeforeReadPageWhyTestFinished.text,|||\nEventBenBeforeReadPageWhyTestFinished @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhyTestFinished.button1,
-EventBenBeforeExpr37.text,
+EventBenBeforeExpr37.text,|||\nEventBenBeforeExpr37 @(145,9)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr37.button1,
-EventBenBeforeExpr39.text,
+EventBenBeforeExpr39.text,|||\nEventBenBeforeExpr39 @(145,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr39.button1,
-EventBenBeforeExpr38.text,
+EventBenBeforeExpr38.text,|||\nEventBenBeforeExpr38 @(145,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr38.button1,
-EventBenBeforeReadPageWhyDisplay.text,
+EventBenBeforeReadPageWhyDisplay.text,|||\nEventBenBeforeReadPageWhyDisplay @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhyDisplay.button1,
-EventBenBeforeReadPageWhyOverload1.text,|||\n“That’s none of your concern,” he snaps.\n\nYou startle at his abrupt response. You and all investigators in your space suffer 1 facedown horror ({will} negates).\n|||
-EventBenBeforeReadPageWhyOverload1.button1,“Why did you wait so long to sell the house?”
-EventBenBeforeReadPageWhyTiePoint.text,
+EventBenBeforeReadPageWhyOverload1.text,|||\nEventBenBeforeReadPageWhyOverload1 @(-1,-1)\n\n“That’s none of your concern,” he snaps.\n\nYou startle at his abrupt response. You and all investigators in your space suffer 1 facedown horror ({will} negates).\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageWhyOverload1.button1,{qst:continue}
+EventBenBeforeReadPageWhyTiePoint.text,|||\nEventBenBeforeReadPageWhyTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhyTiePoint.button1,
-EventBenBeforeExpr41.text,
+EventBenBeforeExpr41.text,|||\nEventBenBeforeExpr41 @(158,19)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr41.button1,
-EventBenBeforeReadPageWhyAfterLet1.text,
+EventBenBeforeReadPageWhyAfterLet1.text,|||\nEventBenBeforeReadPageWhyAfterLet1 @(158,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhyAfterLet1.button1,
-EventBenBeforeExpr42.text,
+EventBenBeforeExpr42.text,|||\nEventBenBeforeExpr42 @(159,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr42.button1,
-EventBenBeforeExpr43.text,
+EventBenBeforeExpr43.text,|||\nEventBenBeforeExpr43 @(159,40)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr43.button1,
-EventBenBeforeExpr44.text,
+EventBenBeforeExpr44.text,|||\nEventBenBeforeExpr44 @(159,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr44.button1,
-EventBenBeforeReadPageWhyAfterLet2.text,
+EventBenBeforeReadPageWhyAfterLet2.text,|||\nEventBenBeforeReadPageWhyAfterLet2 @(159,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhyAfterLet2.button1,
-EventBenBeforeReadPageWhyAfterTrigger3.text,
+EventBenBeforeReadPageWhyAfterTrigger3.text,|||\nEventBenBeforeReadPageWhyAfterTrigger3 @(160,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhyAfterTrigger3.button1,
-EventBenBeforeExpr45.text,
+EventBenBeforeExpr45.text,|||\nEventBenBeforeExpr45 @(161,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr45.button1,
-EventBenBeforeExpr46.text,
+EventBenBeforeExpr46.text,|||\nEventBenBeforeExpr46 @(161,25)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr46.button1,
-EventBenBeforeExpr47.text,
+EventBenBeforeExpr47.text,|||\nEventBenBeforeExpr47 @(161,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr47.button1,
-EventBenBeforeReadPageWhyAfterGoto14.text,
+EventBenBeforeReadPageWhyAfterGoto14.text,|||\nEventBenBeforeReadPageWhyAfterGoto14 @(161,32)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhyAfterGoto14.button1,
-EventBenBeforeReadPageWhyEnd.text,
+EventBenBeforeReadPageWhyEnd.text,|||\nEventBenBeforeReadPageWhyEnd @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageWhyEnd.button1,
-EventBenBeforeExpr48.text,
+EventBenBeforeExpr48.text,|||\nEventBenBeforeExpr48 @(161,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr48.button1,
-EventBenBeforeReadPageWhyBase.text,|||\n“Well, we tried right after the... trouble. No one would even come to look at it back then, but our, um, priest, told us now is the right time.”\n\nGain 1 {clue}.\n|||
-EventBenBeforeReadPageWhyBase.button1,“Why did you wait so long to sell the house?”
-EventBenBeforeExpr40.text,
+EventBenBeforeReadPageWhyBase.text,|||\nEventBenBeforeReadPageWhyBase @(-1,-1)\n\n“Well, we tried right after the... trouble. No one would even come to look at it back then, but our, um, priest, told us now is the right time.”\n\nGain 1 {clue}.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageWhyBase.button1,{qst:continue}
+EventBenBeforeExpr40.text,|||\nEventBenBeforeExpr40 @(145,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr40.button1,
-EventBenBeforeReadPageSorryXferIfTriggered.text,
+EventBenBeforeReadPageSorryXferIfTriggered.text,|||\nEventBenBeforeReadPageSorryXferIfTriggered @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageSorryXferIfTriggered.button1,
-EventBenBeforeReadPageSorry.text,
+EventBenBeforeReadPageSorry.text,|||\nEventBenBeforeReadPageSorry @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageSorry.button1,
-EventBenBeforeReadPageSorryTestFinished.text,
+EventBenBeforeReadPageSorryTestFinished.text,|||\nEventBenBeforeReadPageSorryTestFinished @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageSorryTestFinished.button1,
-EventBenBeforeReadPageSorryDisplay.text,
+EventBenBeforeReadPageSorryDisplay.text,|||\nEventBenBeforeReadPageSorryDisplay @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageSorryDisplay.button1,
-EventBenBeforeReadPageSorryBase.text,|||\n“You should be more careful. The house is old and in poor repair.” His shoulders rise for a moment, then fall as he sighs. “No real harm done... the gate can be repaired... again.”\n|||
-EventBenBeforeReadPageSorryBase.button1,“I’m sorry about the gate.”
-EventBenBeforeReadPageSorryTiePoint.text,
+EventBenBeforeReadPageSorryBase.text,|||\nEventBenBeforeReadPageSorryBase @(-1,-1)\n\n“You should be more careful. The house is old and in poor repair.” His shoulders rise for a moment, then fall as he sighs. “No real harm done... the gate can be repaired... again.”\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageSorryBase.button1,{qst:continue}
+EventBenBeforeReadPageSorryTiePoint.text,|||\nEventBenBeforeReadPageSorryTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageSorryTiePoint.button1,
-EventBenBeforeExpr50.text,
+EventBenBeforeExpr50.text,|||\nEventBenBeforeExpr50 @(179,27)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr50.button1,
-EventBenBeforeReadPageSorryAfterLet1.text,
+EventBenBeforeReadPageSorryAfterLet1.text,|||\nEventBenBeforeReadPageSorryAfterLet1 @(179,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageSorryAfterLet1.button1,
-EventBenBeforeReadPageSorryEnd.text,
+EventBenBeforeReadPageSorryEnd.text,|||\nEventBenBeforeReadPageSorryEnd @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageSorryEnd.button1,
-EventBenBeforeToc.text,
+EventBenBeforeToc.text,|||\nEventBenBeforeToc @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeToc.button1,
-EventBenBeforeTocSelector.text,
+EventBenBeforeTocSelector.text,|||\nEventBenBeforeTocSelector @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeTocSelector.button1,
-EventBenBeforeToc0.text,|||\n“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Peter lived here with his daughter. The wife died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I guess you’ll need a few hours just to look through the place and get your bearings. You’ll want to check every drawer, cabinet, and box in the house–take as much time as you need. The whole house should be cleared out and spotless by the end of next week.”\n|||
+EventBenBeforeToc0.text,|||\nEventBenBeforeToc0 @(-1,-1)\n\nBenjamin is digging around in his pockets. You think you hear him mutter something about a key.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeToc0.button1,{action} “How long will it take us to look through the house?”
 EventBenBeforeToc0.button2,{action} “What do you think happened to those children?”
 EventBenBeforeToc0.button3,{action} “Where were those children found?”
 EventBenBeforeToc0.button4,{action} “Why did you wait so long to sell the house?”
 EventBenBeforeToc0.button5,{action} “I’m sorry about the gate.”
 EventBenBeforeToc0.button6,{qst:cancel}
-EventBenBeforeToc1.text,|||\nBenjamin is still digging through his pockets. You hear him mutter about paying attention and minding your own business.\n|||
+EventBenBeforeToc1.text,|||\nEventBenBeforeToc1 @(-1,-1)\n\nAs he digs through his pockets, he is grumbling something about the size of the house and you catch the word... “indolent”?\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeToc1.button1,{action} “How long will it take us to look through the house?”
 EventBenBeforeToc1.button2,{action} “What do you think happened to those children?”
 EventBenBeforeToc1.button3,{action} “Where were those children found?”
 EventBenBeforeToc1.button4,{action} “Why did you wait so long to sell the house?”
 EventBenBeforeToc1.button5,{action} “I’m sorry about the gate.”
 EventBenBeforeToc1.button6,{qst:cancel}
-EventBenBeforeToc2.text,|||\nBenjamin is still looking through his pockets, but he’s moving slower and looks upset. You wonder what his connection is to those children.\n|||
+EventBenBeforeToc2.text,|||\nEventBenBeforeToc2 @(-1,-1)\n\nBenjamin is still digging through his pockets. You hear him mutter about paying attention and minding your own business.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeToc2.button1,{action} “How long will it take us to look through the house?”
 EventBenBeforeToc2.button2,{action} “What do you think happened to those children?”
 EventBenBeforeToc2.button3,{action} “Where were those children found?”
 EventBenBeforeToc2.button4,{action} “Why did you wait so long to sell the house?”
 EventBenBeforeToc2.button5,{action} “I’m sorry about the gate.”
 EventBenBeforeToc2.button6,{qst:cancel}
-EventBenBeforeToc3.text,|||\nBenjamin is looking around on the ground like maybe he dropped whatever he’s looking for. <i>Could it be a book instead of a key?</i> you wonder to yourself.\n|||
+EventBenBeforeToc3.text,|||\nEventBenBeforeToc3 @(-1,-1)\n\nBenjamin is still looking through his pockets, but he’s moving slower and looks upset. You wonder what his connection is to those children.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeToc3.button1,{action} “How long will it take us to look through the house?”
 EventBenBeforeToc3.button2,{action} “What do you think happened to those children?”
 EventBenBeforeToc3.button3,{action} “Where were those children found?”
 EventBenBeforeToc3.button4,{action} “Why did you wait so long to sell the house?”
 EventBenBeforeToc3.button5,{action} “I’m sorry about the gate.”
 EventBenBeforeToc3.button6,{qst:cancel}
-EventBenBeforeToc4.text,|||\nBenjamin still doesn’t look happy, but he doesn’t seem as angry now.\n|||
+EventBenBeforeToc4.text,|||\nEventBenBeforeToc4 @(-1,-1)\n\nBenjamin is looking around on the ground like maybe he dropped whatever he’s looking for. <i>Could it be a book instead of a key?</i> you wonder to yourself.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeToc4.button1,{action} “How long will it take us to look through the house?”
 EventBenBeforeToc4.button2,{action} “What do you think happened to those children?”
 EventBenBeforeToc4.button3,{action} “Where were those children found?”
 EventBenBeforeToc4.button4,{action} “Why did you wait so long to sell the house?”
 EventBenBeforeToc4.button5,{action} “I’m sorry about the gate.”
 EventBenBeforeToc4.button6,{qst:cancel}
-EventBenBeforeTocTiePoint.text,
+EventBenBeforeToc5.text,|||\nEventBenBeforeToc5 @(-1,-1)\n\nBenjamin still doesn’t look happy, but he doesn’t seem as angry now.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeToc5.button1,{action} “How long will it take us to look through the house?”
+EventBenBeforeToc5.button2,{action} “What do you think happened to those children?”
+EventBenBeforeToc5.button3,{action} “Where were those children found?”
+EventBenBeforeToc5.button4,{action} “Why did you wait so long to sell the house?”
+EventBenBeforeToc5.button5,{action} “I’m sorry about the gate.”
+EventBenBeforeToc5.button6,{qst:cancel}
+EventBenBeforeTocTiePoint.text,|||\nEventBenBeforeTocTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeTocTiePoint.button1,
-EventBenBeforeTocIsFinished.text,
+EventBenBeforeTocIsFinished.text,|||\nEventBenBeforeTocIsFinished @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeTocIsFinished.button1,
-EventBenBeforeExpr53.text,
+EventBenBeforeExpr53.text,|||\nEventBenBeforeExpr53 @(165,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeExpr53.button1,
-EventBenBeforeReadPageProlog.text,
+EventBenBeforeReadPageProlog.text,|||\nEventBenBeforeReadPageProlog @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPageProlog.button1,
-EventBenBeforeReadPagePrologTestFinished.text,
+EventBenBeforeReadPagePrologTestFinished.text,|||\nEventBenBeforeReadPagePrologTestFinished @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPagePrologTestFinished.button1,
-EventBenBeforeReadPagePrologDisplay.text,
+EventBenBeforeReadPagePrologDisplay.text,|||\nEventBenBeforeReadPagePrologDisplay @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPagePrologDisplay.button1,
-EventBenBeforeReadPagePrologBase.text,|||\nBenjamin is digging around in his pockets. You think you hear him mutter something about a key.\n|||
+EventBenBeforeReadPagePrologBase.text,|||\nEventBenBeforeReadPagePrologBase @(-1,-1)\n\nBenjamin is digging around in his pockets. You think you hear him mutter something about a key.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPagePrologBase.button1,{qst:continue}
-EventBenBeforeReadPagePrologTiePoint.text,
+EventBenBeforeReadPagePrologTiePoint.text,|||\nEventBenBeforeReadPagePrologTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPagePrologTiePoint.button1,
-EventBenBeforeReadPagePrologEnd.text,
+EventBenBeforeReadPagePrologEnd.text,|||\nEventBenBeforeReadPagePrologEnd @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
 EventBenBeforeReadPagePrologEnd.button1,
 EventDrivewayStart.text,
 EventDrivewayStart.button1,
@@ -6218,7 +6225,7 @@ EventDrivewayReadPageSearchGardenToolBeforeAddRemove1.button1,
 EventDrivewayReadPageSearchGardenToolDisplay.text,
 EventDrivewayReadPageSearchGardenToolDisplay.button1,
 EventDrivewayReadPageSearchGardenToolBase.text,|||\nYou rustle around in the weeds and find something interesting. Gain the {c:QItemGardenTool} Common Item, then discard this Search token.\n\nAs you pull it free of the weeds, a child’s doll is exposed. The clothing is ragged and the paint is chipped. You think back to the children who were found here and wonder if this doll belonged to one of them.\n\nGain 1 {clue}, then take 1 facedown Horror ({will} negates).\n|||
-EventDrivewayReadPageSearchGardenToolBase.button1,Search
+EventDrivewayReadPageSearchGardenToolBase.button1,{qst:continue}
 EventDrivewayReadPageSearchGardenToolTiePoint.text,
 EventDrivewayReadPageSearchGardenToolTiePoint.button1,
 EventDrivewayExpr3.text,
@@ -6241,7 +6248,7 @@ EventDrivewayReadPageSearchJournalBeforeAddRemove1.button1,
 EventDrivewayReadPageSearchJournalDisplay.text,
 EventDrivewayReadPageSearchJournalDisplay.button1,
 EventDrivewayReadPageSearchJournalBase.text,|||\nUp close you can see that it is thin and leather-bound. You pick it up and flip through the pages: it’s a journal. The first entry was scrawled last Sunday. You should give it back to Benjamin, but maybe you can take a quick look first.\n\nGain the {c:QItemJournal} Unique Item, then discard this Search token. An investigator holding the {c:QItemJournal} can interact with it in the app.\n|||
-EventDrivewayReadPageSearchJournalBase.button1,Search
+EventDrivewayReadPageSearchJournalBase.button1,{qst:continue}
 EventDrivewayReadPageSearchJournalTiePoint.text,
 EventDrivewayReadPageSearchJournalTiePoint.button1,
 EventDrivewayExpr4.text,

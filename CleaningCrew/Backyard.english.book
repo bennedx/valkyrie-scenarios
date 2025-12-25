@@ -7,8 +7,8 @@ Book Backyard Ordered No Keep Looped
 		Triggered By @PlaceBackyard
 		
 		Prolog "You can see the huge mess through the gate."
-		BUTTON "Look"
-		FREE
+		Button "Look"
+		Free
 		
 		Add TileBackyard, TokenDoorBackyard!
 		
@@ -63,8 +63,9 @@ Book Backyard Ordered No Keep Looped
 		"""
 		
 		If !exploredBackyardNicely Then Text """
-			As you turn from the pile of rubble, you look toward the door.
-			Benjamin has tromped down and is standing in front of it.
+			As you turn from the pile of rubble, your eyes follow the
+			cobblestone walkway to the back door. Benjamin has tromped down and
+			is standing in front of it.
 
 			Place the Purple Man and Explore tokens as indicated.
 

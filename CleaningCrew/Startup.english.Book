@@ -7,7 +7,7 @@ Book Startup Ordered No Keep Looped
 		Not Visible
 		Triggered By @EventStart
 
-		testMode = false
+		testMode = true
 		
 		roundsBeforeRitual = (5 - #heros) * 2 + 15
 				
