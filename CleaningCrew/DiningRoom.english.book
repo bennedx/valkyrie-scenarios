@@ -1,9 +1,10 @@
 Language English
+Debug Off
 
 Book PlaceDiningRoom Ordered No Keep Looped
-	Triggered By @talkedToBen When @talkedToBenCount >= 2
 	
 	Page Locked
+		Not Visible
 		Triggered By @ExploreHall1ViaDiningRoomLocked
 		
 		Text """
@@ -15,7 +16,7 @@ Book PlaceDiningRoom Ordered No Keep Looped
 	End Page Locked
 
 	Page OpenDoor
-		Triggered By @TalkToBackyardBen When @TalkToBenCount >= 2
+		Triggered By @TalkedToBackyardBen When talkedToBenCount >= 2
 		
 		Add TileDiningRoom, TokenBackyardBenPassive, TokenDoorDiningRoom!
 		Remove TokenExploreDiningRoomViaBackdoor, TokenBackyardBenBefore
@@ -85,7 +86,10 @@ Book PlaceDiningRoom Ordered No Keep Looped
 		Visible When Not foundJournal
 		
 		Text """
-			As you walk into the house, you remember the book in the driveway. You glance back toward the gate as you step inside. Move 1 space into the {c:TileDiningRoom}.
+			As you walk into the house, you remember the book in the driveway
+			and glance back toward the gate as you step inside. 
+			{c:EventChosenInvesigator} moves 1 space into the
+			{c:TileDiningRoom}.
 		"""
 	End Page Journal
 End Book PlaceDiningRoom
@@ -93,6 +97,7 @@ End Book PlaceDiningRoom
 Book SearchDiningRoom Ordered No Keep Looped
 
 	Page StartFluxStabilizer
+		Not Visible
 		Triggered By @SearchFluxStabilizer When Unread
 		If testMode Then Trigger @AskAboutGate
 	
@@ -150,6 +155,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 	End Page Kate
 
 	Page KatePicksUp
+		Not Visible
 		Text """
 			Kate is overjoyed that she will have a {c:QItemFluxStablizer} again,
 			especially one this powerful.
@@ -168,19 +174,24 @@ Book SearchDiningRoom Ordered No Keep Looped
 	End Page KatePicksUp
 	
 	Page KateDoesNotPickUp
+		Not Visible
 		Text """
 			Kate quietly seethes to herself at the unfairness:  <i>That
 			thing should be mine.</i>
 			
 			Kate becomes Focused.
 		"""
+		
+		kateHasFluxStabilizer = false
+		Exit
 	End Page KateDoesNotPickUp
 
 	Page Paper
+		Not Visible
 		Text """
 			There is a piece of paper next to the device: instructions. It's
 			called a <<{c:QItemFluxStabilizer},>> and it repels monsters.
-			<<MOnSTERS!?>> you erupt loudly.
+			<<MONSTERS!?>> you erupt loudly.
 
 			Everyone turns to look at you.
 		"""
@@ -193,20 +204,22 @@ Book SearchDiningRoom Ordered No Keep Looped
 		Triggered By @SearchFluxStabilizer When Unread And StartFluxStabilizer Is Read
 
 		Prolog """
-			There seems to be a
-			control panel. Maybe you can restart it? You reach down and begin
-			to fiddle with the buttons and dials.
+			There seems to be a control panel. Maybe you can restart it? You
+			reach down and begin to fiddle with the buttons and dials.
 
 			{c:EventChosenInvestigator} may attempt the puzzle using {lore}.
 		"""
 		Button "Attempt puzzle"
 		
-		Puzzle PuzzleFluxStabilizer Set passFluxStabilizerPuzzle
-		If passFluxStabilizerPuzzle Then Goto GetFluxStabilizer
+		No Text
+		
+		Trigger @AttemptFluxStabilizerPuzzle
+		If puzzleFluxStabilizerSolved Then Goto GetFluxStabilizer
 		Goto DontGetFluxStabilizer
 	End Page Puzzle1
 
 	Page Puzzle2
+		Not Visible
 		Triggered By @SearchFluxStabilizer When Puzzle1 Is Read
 		
 		Prolog """
@@ -216,22 +229,25 @@ Book SearchDiningRoom Ordered No Keep Looped
 			{c:EventChosenInvestigator} can attempt it again using {lore}.
 		"""
 		
-		Puzzle PuzzleFluxStabilizer Set passFluxStabilizerPuzzle
-		If passFluxStabilizerPuzzle Then Goto GetFluxStabilizer
+		Trigger @AttemptFluxStabilizerPuzzle
+		If puzzleFluxStabilizerSolved Then Goto GetFluxStabilizer
 
 		Mark Unread
 		Goto DontGetFluxStabilizer
 	End Page Puzzle2
 
 	Page DontGetFluxStabilizer
+		Not Visible
 		Text """
 			It still just sits there. Doing nothing. The hoses aren't moving,
-			the lights are off, and 
+			the lights are off, and it makes no noise.
 		"""
 		Exit
 	End Page DontGetFluxStabilizer
 
 	Page GetFluxStabilizer
+		Not Visible
+		
 		Text """
 			The device begins humming quietly.
 
@@ -252,11 +268,13 @@ Book SearchDiningRoom Ordered No Keep Looped
 			This information can be reviewed in the app.
 		"""
 
-		Exit
+		Goto GetFluxStabilizer2
 	End Page GetFluxStabilizer
 
 	Page GetFluxStabilizer2
-		Add TokenBackyardBenAfter!
+		Not Visible
+		
+		Add TokenDiningRoomBen!
 		Remove TokenBackyardBenPassive
 	
 		Text """
@@ -275,9 +293,12 @@ Book SearchDiningRoom Ordered No Keep Looped
 
 			He seems to have something in his hand.
 		"""
+		
+		Exit
 	End Page GetFluxStabilizer2
 
 	Page PaperInBox
+		Not Visible
 		Triggered By @SearchDiningRoomPaper
 		
 		Prolog "There's a yellowed scrap of paper in the box."
@@ -303,115 +324,10 @@ Book SearchDiningRoom Ordered No Keep Looped
 	End Page PaperInBox
 End Book SearchDiningRoom
 
-
-Book ExploreBackDoorLocked Ordered No Keep Looped
-
-	Page TurnKnob
-		Prolog "
-			The door that closed behind you looks larger and more
-			solid from inside.
-		"	
-
-		Button "Open door"
-
-		Text "You reach for the knob. Test {strength} or {agility}."
-
-		Test Quota 20 Set passWhoCares
-	End Page TurnKnob
-
-	Page ShakeDoor
-		Prolog """
-			No matter how hard you try, the knob just won>t turn.
-			Looking closer, you see a light peeking between the door
-			and its jam. <i>Maybe I can shake it open?<i> you think
-			to yourself.
-		"""
-		Button "Shake door"
-	
-		Text """
-			You grab the knob again and begin shaking it violently. Test
-			{strength} or {will}.
-		"""
-	
-		Test Quota 20 Set passWhoCares
-	End Page ShakeDoor
-	
-	Page HitDoor
-		Prolog "
-			No matter how hard you shake it, the door doesn't budge.
-			And you might have pulled something in your right arm.
-			Maybe you can knock it down? You also begin to wonder
-			if you should move on. Or knock it down.
-		"
-		Button "Break it down"
-
-		Text "
-			You muster up your strength and prepare to break the door down
-			with your shoulder. Test {strength} or {lore}.
-		"
-
-		Test Quota 20 Set passWhoCares
-	End Page HitDoor
-
-	Page PickLock
-		Prolog "
-			The third or fourth time you hit door, something in your
-			shoulder pops and it hurts. Bad. You feel the panic setting in.
-			<i>Why won>t this door open?</i> you ask yourself.
-			
-			Take 1 facedown damage ({strength} negates).
-
-			<<Hey, is this a hairpin?>> you ask out loud. One of the other
-			investigators turns to look at you.
-		"
-		Button "Pick lock"
-
-		Text """		
-			As you work the hairpin into the lock, you wonder
-			why it was in your pocket. Test {agility} or {influence}.
-		"""
-
-		Test Quota 20 Set passWhoCares
-	End Page PickLock
-
-	Page UnlockDoor
-		Prolog """
-			You can feel the tumblers, but nothing moves. Eventually, the
-			hairpin bends too much to be of use. <i>Maybe this really is
-			a waste of time,</i> you consider. <i>Wait, I have that key.</i>
-
-			If you have the	{c:QItemBrassKey}, ...
-		"""
-
-		Text """
-			You pull out the key and look at it for a moment before putting
-			it into the lock...
-			Test {strength} or {observation}.
-		"""
-	
-		Button "Unlock door"
-
-		Test Quota 20 Set passWhoCares
-	End Page UnlockDoor
-
-	Epilog 
-        Remove TokenExploreBackDoorLocked
-
-		Text """
-			Well, you try to put the key into the lock but it doesn't fit,
-			no matter how hard you try. You look at the key and try again.
-			And again. And again. Dejected and out of ideas, you turn away
-			from the door. <<I guess we'll have to find another way out,>>
-			you say to no one in particular. Someone mutters, <<Yeah.>>
-		
-			Discard this explore token.
-		"""
-	End Epilog
-End Book ExploreBackDoorLocked
-
-
 Book ExploreKitchen Ordered No Keep Looped
 	Page Start
+		Triggered By @ExploreKitchenViaDiningRoom
+		
 		Prolog """
 			The swinging door doesn't look like it will hold up to much use, so
 			you'll need to be careful.

@@ -272,7 +272,6 @@ TokenDavidSmythesSonRescuable.text,The boy is curled up like a ball. His breathi
 TokenDavidSmythesSonRescuable.button1,Continue
 TokenExploreFrontDoor.button1,{action} Explore
 TokenExploreFrontDoor.text,"\nThe door seems unfazed by age. A small window purports to look out on the grounds. Maybe you can finally get out of this madhouse.\n"
-TokenExploreBackDoorLocked.button1,Button1
 EventExploreDiningRoom.button1,Continue
 EventMoveAfterExplore.button1,Continue
 EventExploreDiningRoomKnock.button1,Continue
@@ -506,7 +505,7 @@ EventWandererMoveEnd.button1,Continue
 EventWandererHorrorCheck.text,"\nThese cultists are just townsfolk. They’re trying to stop you but, aside from their attitude, there’s nothing terrifying about them. Still, the look in this one’s eyes is unsettling. Take 1 Horror ({will} negates).\n"
 EventWandererMoveEnd.text,"\nThe cultist moves 1 space toward the nearest investigator.\n"
 EventWandererHorrorCheck.button1,Continue
-EventChosenInvestigator.text,"\nAs Ben opens the door, {rnd:hero} has a sudden jolt of <i>deja vu</i>, a flashback to an otherwise forgotten childhood. They walk over to look through the door.\n\nMove {rnd:hero} next to Benjamin."
+EventChosenInvestigator.text,"\nAs Ben opens the door, {rnd:hero} has a sudden jolt of <i>deja vu</i>, a flashback to a forgotten childhood. They walk over to look through the door.\n\nMove {rnd:hero} next to Benjamin.\n"
 EventMoveAfterExploreAngryBenDeadPriest.button1,Button1
 EventMoveAfterExploreDeadPriest.button1,Continue
 EventMoveAfterExploreAngryBen.button1,Button1
@@ -1969,188 +1968,6 @@ EventBasementReadPageSearchEvidenceTrigger.text,
 EventBasementReadPageSearchEvidenceTrigger.button1,
 EventBasementReadPageSearchTrapdoorTrigger.text,
 EventBasementReadPageSearchTrapdoorTrigger.button1,
-EventBenAfterStart.text,
-EventBenAfterStart.button1,
-EventBenAfterInit.text,
-EventBenAfterInit.button1,
-EventBenAfterFirstTimeInitializer.text,
-EventBenAfterFirstTimeInitializer.button1,
-EventBenAfterExpr1.text,
-EventBenAfterExpr1.button1,
-EventBenAfterBeforeGoto14.text,
-EventBenAfterBeforeGoto14.button1,
-EventBenAfterToc.text,
-EventBenAfterToc.button1,
-EventBenAfterTocSelector.text,
-EventBenAfterTocSelector.button1,
-EventBenAfterToc0.text,"\n“Well,” he starts, “10 years ago the house was packed quickly and then close up. There has been no one here since then, so expect the worst.”\n\nYou are not encouraged.\n"
-EventBenAfterToc0.button1,{action} “Is the whole house this dirty?”
-EventBenAfterToc0.button2,{action} “There are footprints in the dust by that door...”
-EventBenAfterToc0.button3,{action} “Is there anything else we need to know?”
-EventBenAfterToc0.button4,{action} 
-EventBenAfterToc0.button5,{qst:cancel}
-EventBenAfterReadPageDirt.text,
-EventBenAfterReadPageDirt.button1,
-EventBenAfterReadPageDirtTestFinished.text,
-EventBenAfterReadPageDirtTestFinished.button1,
-EventBenAfterExpr2.text,
-EventBenAfterExpr2.button1,
-EventBenAfterExpr3.text,
-EventBenAfterExpr3.button1,
-EventBenAfterReadPageDirtDisplay.text,
-EventBenAfterReadPageDirtDisplay.button1,
-EventBenAfterReadPageDirtOverload1.text,"\n“Well,” he snaps, “the house sat unused these last 10 years. You were hired to clean, not criticize.”\n\nThis man clearly does not like you.\n"
-EventBenAfterReadPageDirtOverload1.button1,{qst:continue}
-EventBenAfterReadPageDirtTiePoint.text,
-EventBenAfterReadPageDirtTiePoint.button1,
-EventBenAfterReadPageDirtEnd.text,
-EventBenAfterReadPageDirtEnd.button1,
-EventBenAfterTiePoint.text,
-EventBenAfterTiePoint.button1,
-EventBenAfterGotoAfter14.text,
-EventBenAfterGotoAfter14.button1,
-EventBenAfterEnd.text,
-EventBenAfterEnd.button1,
-EventBenAfterReadPageDirtBase.text,"\n“Well,” he starts, “10 years ago the house was packed quickly and then close up. There has been no one here since then, so expect the worst.”\n\nYou are not encouraged.\n"
-EventBenAfterReadPageDirtBase.button1,{qst:continue}
-EventBenAfterExpr4.text,
-EventBenAfterExpr4.button1,
-EventBenAfterReadPageFootprints.text,
-EventBenAfterReadPageFootprints.button1,
-EventBenAfterReadPageFootprintsTestFinished.text,
-EventBenAfterReadPageFootprintsTestFinished.button1,
-EventBenAfterExpr5.text,
-EventBenAfterExpr5.button1,
-EventBenAfterExpr6.text,
-EventBenAfterExpr6.button1,
-EventBenAfterReadPageFootprintsDisplay.text,
-EventBenAfterReadPageFootprintsDisplay.button1,
-EventBenAfterReadPageFootprintsOverload1.text,"\n“Then you should sweep it up. That’s what you’re here for, not to complain about dirt.”\n"
-EventBenAfterReadPageFootprintsOverload1.button1,{qst:continue}
-EventBenAfterReadPageFootprintsTiePoint.text,
-EventBenAfterReadPageFootprintsTiePoint.button1,
-EventBenAfterReadPageFootprintsEnd.text,
-EventBenAfterReadPageFootprintsEnd.button1,
-EventBenAfterReadPageFootprintsBase.text,"\n“I think the handyman was in the house yesterday. They must be his.”\n"
-EventBenAfterReadPageFootprintsBase.button1,{qst:continue}
-EventBenAfterExpr7.text,
-EventBenAfterExpr7.button1,
-EventBenAfterReadPageAnythingElse.text,
-EventBenAfterReadPageAnythingElse.button1,
-EventBenAfterReadPageAnythingElseTestFinished.text,
-EventBenAfterReadPageAnythingElseTestFinished.button1,
-EventBenAfterReadPageAnythingElseBeforeAddRemove1.text,
-EventBenAfterReadPageAnythingElseBeforeAddRemove1.button1,
-EventBenAfterReadPageAnythingElseBeforeAddRemove2.text,
-EventBenAfterReadPageAnythingElseBeforeAddRemove2.button1,
-EventBenAfterExpr8.text,
-EventBenAfterExpr8.button1,
-EventBenAfterExpr9.text,
-EventBenAfterExpr9.button1,
-EventBenAfterReadPageAnythingElseDisplay.text,
-EventBenAfterReadPageAnythingElseDisplay.button1,
-EventBenAfterReadPageAnythingElseOverload1.text,"\n“What?” he growls. “Oh, here’s the key to the house. Don’t lose it.”\n\nAs he turns to walk out, he drops the key in your direction. Place the {c:QItemBrassKey} common item in Ben’s space. Once outside, Benjamin barks, “Everyone inside. No dawdling.”\n\nMove any investigators who are outside one space into the {C:TileDiningRoom}.\n\nBen slams the door shut behind him. <i>Was that the lock turning?</i> you ask yourself. Place an Explore token as indicated and remove Ben from the board.\n"
-EventBenAfterReadPageAnythingElseOverload1.button1,{qst:continue}
-EventBenAfterReadPageAnythingElseTiePoint.text,
-EventBenAfterReadPageAnythingElseTiePoint.button1,
-EventBenAfterReadPageAnythingElseAfterAddRemove1.text,
-EventBenAfterReadPageAnythingElseAfterAddRemove1.button1,
-EventBenAfterReadPageAnythingElseAfterTrigger2.text,
-EventBenAfterReadPageAnythingElseAfterTrigger2.button1,
-EventBenAfterExpr11.text,
-EventBenAfterExpr11.button1,
-EventBenAfterReadPageAnythingElseAfterLet3.text,
-EventBenAfterReadPageAnythingElseAfterLet3.button1,
-EventBenAfterExpr12.text,
-EventBenAfterExpr12.button1,
-EventBenAfterReadPageAnythingElseAfterLet4.text,
-EventBenAfterReadPageAnythingElseAfterLet4.button1,
-EventBenAfterExpr13.text,
-EventBenAfterExpr13.button1,
-EventBenAfterReadPageAnythingElseAfterLet5.text,
-EventBenAfterReadPageAnythingElseAfterLet5.button1,
-EventBenAfterExpr14.text,
-EventBenAfterExpr14.button1,
-EventBenAfterReadPageAnythingElseAfterLet6.text,
-EventBenAfterReadPageAnythingElseAfterLet6.button1,
-EventBenAfterExpr15.text,
-EventBenAfterExpr15.button1,
-EventBenAfterReadPageAnythingElseAfterLet7.text,
-EventBenAfterReadPageAnythingElseAfterLet7.button1,
-EventBenAfterExpr16.text,
-EventBenAfterExpr16.button1,
-EventBenAfterReadPageAnythingElseAfterLet8.text,
-EventBenAfterReadPageAnythingElseAfterLet8.button1,
-EventBenAfterExpr17.text,
-EventBenAfterExpr17.button1,
-EventBenAfterReadPageAnythingElseAfterLet9.text,
-EventBenAfterReadPageAnythingElseAfterLet9.button1,
-EventBenAfterExpr18.text,
-EventBenAfterExpr18.button1,
-EventBenAfterExpr19.text,
-EventBenAfterExpr19.button1,
-EventBenAfterExpr20.text,
-EventBenAfterExpr20.button1,
-EventBenAfterReadPageAnythingElseAfterLet10.text,
-EventBenAfterReadPageAnythingElseAfterLet10.button1,
-EventBenAfterReadPageAnythingElseAfterTrigger11.text,
-EventBenAfterReadPageAnythingElseAfterTrigger11.button1,
-EventBenAfterReadPageAnythingElseEnd.text,
-EventBenAfterReadPageAnythingElseEnd.button1,
-EventBenAfterReadPageAnythingElseBase.text,"\n“Oh, my, yes. Here’s the key you’ll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I must be going. Take your time and send someone to fetch me if you need anything.”\n\nMove any investigators who are outside one space into the {c:TileDiningRoom}.\n\nBen shuts the door behind you. <i>Was that the lock turning?</i> you ask yourself. Place an Explore token as indicated and remove Ben from the board.\n"
-EventBenAfterReadPageAnythingElseBase.button1,{qst:continue}
-EventBenAfterExpr10.text,
-EventBenAfterExpr10.button1,
-EventBenAfterReadPageAnythingElseJournal.text,
-EventBenAfterReadPageAnythingElseJournal.button1,
-EventBenAfterReadPageAnythingElseJournalTestFinished.text,
-EventBenAfterReadPageAnythingElseJournalTestFinished.button1,
-EventBenAfterReadPageAnythingElseJournalBeforeAddRemove1.text,
-EventBenAfterReadPageAnythingElseJournalBeforeAddRemove1.button1,
-EventBenAfterReadPageAnythingElseJournalDisplay.text,
-EventBenAfterReadPageAnythingElseJournalDisplay.button1,
-EventBenAfterReadPageAnythingElseJournalBase.text,"\nAt your feet you see a book that looks identical to the one Benjamin dropped outside. He seems to have dropped it again. <i>How is that possible?” you ask yourself. Place a Search token as indicated.\n\nSomething here doesn’t feel right.\n"
-EventBenAfterReadPageAnythingElseJournalBase.button1,{qst:continue}
-EventBenAfterReadPageAnythingElseJournalTiePoint.text,
-EventBenAfterReadPageAnythingElseJournalTiePoint.button1,
-EventBenAfterReadPageAnythingElseJournalAfterGoto15.text,
-EventBenAfterReadPageAnythingElseJournalAfterGoto15.button1,
-EventBenAfterReadPageAnythingElseJournalEnd.text,
-EventBenAfterReadPageAnythingElseJournalEnd.button1,
-EventBenAfterToc1.text,"\nYou notice Benjamin glancing nervously at the footprints. <i>Is something going on?‘/’ you wonder.\n"
-EventBenAfterToc1.button1,{action} “Is the whole house this dirty?”
-EventBenAfterToc1.button2,{action} “There are footprints in the dust by that door...”
-EventBenAfterToc1.button3,{action} “Is there anything else we need to know?”
-EventBenAfterToc1.button4,{action} 
-EventBenAfterToc1.button5,{qst:cancel}
-EventBenAfterToc2.text,
-EventBenAfterToc2.button1,{action} “Is the whole house this dirty?”
-EventBenAfterToc2.button2,{action} “There are footprints in the dust by that door...”
-EventBenAfterToc2.button3,{action} “Is there anything else we need to know?”
-EventBenAfterToc2.button4,{action} 
-EventBenAfterToc2.button5,{qst:cancel}
-EventBenAfterToc3.text,
-EventBenAfterToc3.button1,{action} “Is the whole house this dirty?”
-EventBenAfterToc3.button2,{action} “There are footprints in the dust by that door...”
-EventBenAfterToc3.button3,{action} “Is there anything else we need to know?”
-EventBenAfterToc3.button4,{action} 
-EventBenAfterToc3.button5,{qst:cancel}
-EventBenAfterTocTiePoint.text,
-EventBenAfterTocTiePoint.button1,
-EventBenAfterTocIsFinished.text,
-EventBenAfterTocIsFinished.button1,
-EventBenAfterReadPageProlog.text,
-EventBenAfterReadPageProlog.button1,
-EventBenAfterReadPagePrologTestFinished.text,
-EventBenAfterReadPagePrologTestFinished.button1,
-EventBenAfterReadPagePrologDisplay.text,
-EventBenAfterReadPagePrologDisplay.button1,
-EventBenAfterReadPagePrologBase.text,"\nBenjamin looks around the room, like is he trying to figure out what you are doing.\n"
-EventBenAfterReadPagePrologBase.button1,{qst:continue}
-EventBenAfterReadPagePrologTiePoint.text,
-EventBenAfterReadPagePrologTiePoint.button1,
-EventBenAfterReadPagePrologEnd.text,
-EventBenAfterReadPagePrologEnd.button1,
 EventCellStart.text,
 EventCellStart.button1,
 EventCellInit.text,
@@ -3239,77 +3056,6 @@ EventCryptReadPageExploreChapelViaCryptTrigger.text,
 EventCryptReadPageExploreChapelViaCryptTrigger.button1,
 EventCryptReadPageSearchPendantTrigger.text,
 EventCryptReadPageSearchPendantTrigger.button1,
-EventExploreKitchenStart.text,
-EventExploreKitchenStart.button1,
-EventExploreKitchenInit.text,
-EventExploreKitchenInit.button1,
-EventExploreKitchenFirstTimeInitializer.text,
-EventExploreKitchenFirstTimeInitializer.button1,
-EventExploreKitchenToc.text,
-EventExploreKitchenToc.button1,
-EventExploreKitchenTocSelector.text,
-EventExploreKitchenTocSelector.button1,
-EventExploreKitchenTocPrologStart.text,"\nThe swinging door doesn’t look like it will hold up to much use, so you’ll need to be careful.\n"
-EventExploreKitchenTocPrologStart.button1,{action} Push through door
-EventExploreKitchenTocPrologStart.button2,{qst:cancel}
-EventExploreKitchenReadPageStart.text,
-EventExploreKitchenReadPageStart.button1,
-EventExploreKitchenReadPageStartBeforeAddRemove1.text,
-EventExploreKitchenReadPageStartBeforeAddRemove1.button1,
-EventExploreKitchenReadPageStartDisplay.text,
-EventExploreKitchenReadPageStartDisplay.button1,
-EventExploreKitchenReadPageStartBase.text,"\nCompared to the dining room, the kitchen looks clean. The cupboards are empty. A couple of barrels of wine and a half-packed box have been left behind. Maybe the rest of the house will be as easy to clean as this room.\n\n<i>Still, cleaning is in the details</i>, you think to yourself. <i>And there are lot of details here.</i>\n\nRemove this Explore token.\n"
-EventExploreKitchenReadPageStartBase.button1,{qst:continue}
-EventExploreKitchenReadPageStartTiePoint.text,
-EventExploreKitchenReadPageStartTiePoint.button1,
-EventExploreKitchenExpr1.text,
-EventExploreKitchenExpr1.button1,
-EventExploreKitchenReadPageStartAfterLet1.text,
-EventExploreKitchenReadPageStartAfterLet1.button1,
-EventExploreKitchenExpr2.text,
-EventExploreKitchenExpr2.button1,
-EventExploreKitchenReadPageStartAfterLet2.text,
-EventExploreKitchenReadPageStartAfterLet2.button1,
-EventExploreKitchenReadPageStartEnd.text,
-EventExploreKitchenReadPageStartEnd.button1,
-EventExploreKitchenTiePoint.text,
-EventExploreKitchenTiePoint.button1,
-EventExploreKitchenGotoAfter62.text,
-EventExploreKitchenGotoAfter62.button1,
-EventExploreKitchenEnd.text,
-EventExploreKitchenEnd.button1,
-EventExploreKitchenTocPrologCutlery.text,
-EventExploreKitchenTocPrologCutlery.button1,
-EventExploreKitchenReadPageCutlery.text,
-EventExploreKitchenReadPageCutlery.button1,
-EventExploreKitchenReadPageCutleryBeforeAddRemove1.text,
-EventExploreKitchenReadPageCutleryBeforeAddRemove1.button1,
-EventExploreKitchenReadPageCutleryDisplay.text,
-EventExploreKitchenReadPageCutleryDisplay.button1,
-EventExploreKitchenReadPageCutleryBase.text,"\nYou notice a few pieces of cutlery have been left on the counter; place a Search token as indicated.\n"
-EventExploreKitchenReadPageCutleryBase.button1,{qst:continue}
-EventExploreKitchenReadPageCutleryTiePoint.text,
-EventExploreKitchenReadPageCutleryTiePoint.button1,
-EventExploreKitchenReadPageCutleryEnd.text,
-EventExploreKitchenReadPageCutleryEnd.button1,
-EventExploreKitchenTocPrologBox.text,
-EventExploreKitchenTocPrologBox.button1,
-EventExploreKitchenReadPageBox.text,
-EventExploreKitchenReadPageBox.button1,
-EventExploreKitchenReadPageBoxBeforeAddRemove1.text,
-EventExploreKitchenReadPageBoxBeforeAddRemove1.button1,
-EventExploreKitchenReadPageBoxDisplay.text,
-EventExploreKitchenReadPageBoxDisplay.button1,
-EventExploreKitchenReadPageBoxBase.text,"\nNext to you is a box that looks like it was filled in a hurry. Place a Search token as indicated.\n"
-EventExploreKitchenReadPageBoxBase.button1,{qst:continue}
-EventExploreKitchenReadPageBoxTiePoint.text,
-EventExploreKitchenReadPageBoxTiePoint.button1,
-EventExploreKitchenReadPageBoxAfterTrigger1.text,
-EventExploreKitchenReadPageBoxAfterTrigger1.button1,
-EventExploreKitchenReadPageBoxAfterGoto62.text,
-EventExploreKitchenReadPageBoxAfterGoto62.button1,
-EventExploreKitchenReadPageBoxEnd.text,
-EventExploreKitchenReadPageBoxEnd.button1,
 EventDungeonCaveStart.text,
 EventDungeonCaveStart.button1,
 EventDungeonCaveInit.text,
@@ -4293,240 +4039,6 @@ EventGalleryReadPageSearchDvmTrigger.text,
 EventGalleryReadPageSearchDvmTrigger.button1,
 EventGalleryReadPageSearchCoatRoomEvidenceTrigger.text,
 EventGalleryReadPageSearchCoatRoomEvidenceTrigger.button1,
-EventHall1Start.text,
-EventHall1Start.button1,
-EventHall1Init.text,
-EventHall1Init.button1,
-EventHall1FirstTimeInitializer.text,
-EventHall1FirstTimeInitializer.button1,
-EventHall1PageSelector.text,
-EventHall1PageSelector.button1,
-EventHall1ReadPageExploreHall1XferIfTriggered.text,
-EventHall1ReadPageExploreHall1XferIfTriggered.button1,
-EventHall1ReadPageExploreHall1.text,
-EventHall1ReadPageExploreHall1.button1,
-EventHall1ReadPageExploreHall1Display.text,
-EventHall1ReadPageExploreHall1Display.button1,
-EventHall1ReadPageExploreHall1Base.text,"\nWhen you open the door, the rush of cold, stale air sends a chill down your spine.\n\nYou stop for a moment and look back down at the footsteps leading to this door. You wonder how the air feels so stale if this door has been opened recently.\n"
-EventHall1ReadPageExploreHall1Base.button1,{qst:continue}
-EventHall1ReadPageExploreHall1TiePoint.text,
-EventHall1ReadPageExploreHall1TiePoint.button1,
-EventHall1Expr1.text,
-EventHall1Expr1.button1,
-EventHall1ReadPageExploreHall1AfterLet1.text,
-EventHall1ReadPageExploreHall1AfterLet1.button1,
-EventHall1Expr2.text,
-EventHall1Expr2.button1,
-EventHall1ReadPageExploreHall1AfterLet2.text,
-EventHall1ReadPageExploreHall1AfterLet2.button1,
-EventHall1ReadPageExploreHall1End.text,
-EventHall1ReadPageExploreHall1End.button1,
-EventHall1TiePoint.text,
-EventHall1TiePoint.button1,
-EventHall1Toc.text,
-EventHall1Toc.button1,
-EventHall1TocSelector.text,
-EventHall1TocSelector.button1,
-EventHall1TocPrologExploreHall1.text,"\nThe door has a dirty push plate. When you push on it, you discover it’s locked. An investigator with the {c:QItemBrassKey} can open this door.\n"
-EventHall1TocPrologExploreHall1.button1,{action} Explore
-EventHall1TocPrologExploreHall1.button2,{qst:cancel}
-EventHall1End.text,
-EventHall1End.button1,
-EventHall1TocPrologPlaceHall1.text,
-EventHall1TocPrologPlaceHall1.button1,
-EventHall1ReadPagePlaceHall1.text,
-EventHall1ReadPagePlaceHall1.button1,
-EventHall1ReadPagePlaceHall1Display.text,
-EventHall1ReadPagePlaceHall1Display.button1,
-EventHall1ReadPagePlaceHall1Base.text,"\nYou look through the doorway to find a hall. It is clear that it was intended for the servants: plain and dark. Place the {c:TileHall1} tile, a door, and a wall as indicated.\n\nMove one space space into the hall.\n"
-EventHall1ReadPagePlaceHall1Base.button1,{qst:continue}
-EventHall1ReadPagePlaceHall1TiePoint.text,
-EventHall1ReadPagePlaceHall1TiePoint.button1,
-EventHall1ReadPagePlaceHall1AfterAddRemove1.text,
-EventHall1ReadPagePlaceHall1AfterAddRemove1.button1,
-EventHall1ReadPagePlaceHall1AfterAddRemove2.text,
-EventHall1ReadPagePlaceHall1AfterAddRemove2.button1,
-EventHall1ReadPagePlaceHall1End.text,
-EventHall1ReadPagePlaceHall1End.button1,
-EventHall1TocPrologPlaceHall1Gallery.text,
-EventHall1TocPrologPlaceHall1Gallery.button1,
-EventHall1ReadPagePlaceHall1Gallery.text,
-EventHall1ReadPagePlaceHall1Gallery.button1,
-EventHall1ReadPagePlaceHall1GalleryDisplay.text,
-EventHall1ReadPagePlaceHall1GalleryDisplay.button1,
-EventHall1ReadPagePlaceHall1GalleryBase.text,"\nTo your immediate right is a door. Place an Explore token as indicated.\n"
-EventHall1ReadPagePlaceHall1GalleryBase.button1,{qst:continue}
-EventHall1ReadPagePlaceHall1GalleryTiePoint.text,
-EventHall1ReadPagePlaceHall1GalleryTiePoint.button1,
-EventHall1ReadPagePlaceHall1GalleryAfterAddRemove1.text,
-EventHall1ReadPagePlaceHall1GalleryAfterAddRemove1.button1,
-EventHall1ReadPagePlaceHall1GalleryEnd.text,
-EventHall1ReadPagePlaceHall1GalleryEnd.button1,
-EventHall1TocPrologPlaceHall1Painting.text,
-EventHall1TocPrologPlaceHall1Painting.button1,
-EventHall1ReadPagePlaceHall1Painting.text,
-EventHall1ReadPagePlaceHall1Painting.button1,
-EventHall1ReadPagePlaceHall1PaintingDisplay.text,
-EventHall1ReadPagePlaceHall1PaintingDisplay.button1,
-EventHall1ReadPagePlaceHall1PaintingBase.text,"\nOn the left, a painting glows with unnatural light. You can almost feel it calling to you. You shake it off because paintings don’t have power. Place a Search token as indicated.\n\nAs you look away, you catch something moving in your peripheral vision. You glance back and the painting is still lightly glowing, something that suddenly seems more troubling.\n"
-EventHall1ReadPagePlaceHall1PaintingBase.button1,{qst:continue}
-EventHall1ReadPagePlaceHall1PaintingTiePoint.text,
-EventHall1ReadPagePlaceHall1PaintingTiePoint.button1,
-EventHall1ReadPagePlaceHall1PaintingAfterAddRemove1.text,
-EventHall1ReadPagePlaceHall1PaintingAfterAddRemove1.button1,
-EventHall1ReadPagePlaceHall1PaintingEnd.text,
-EventHall1ReadPagePlaceHall1PaintingEnd.button1,
-EventHall1TocPrologPlaceHall1Evidence.text,
-EventHall1TocPrologPlaceHall1Evidence.button1,
-EventHall1ReadPagePlaceHall1Evidence.text,
-EventHall1ReadPagePlaceHall1Evidence.button1,
-EventHall1ReadPagePlaceHall1EvidenceDisplay.text,
-EventHall1ReadPagePlaceHall1EvidenceDisplay.button1,
-EventHall1ReadPagePlaceHall1EvidenceBase.text,"\nYou look down. The rug on the floor is old and beautiful, if dirty and poorly cared for. One corner is folded up and looks like it has been that way for years. You should probably put it back so you don’t trip over it.\n\nPlace a Search token as indicated.\n"
-EventHall1ReadPagePlaceHall1EvidenceBase.button1,{qst:continue}
-EventHall1ReadPagePlaceHall1EvidenceTiePoint.text,
-EventHall1ReadPagePlaceHall1EvidenceTiePoint.button1,
-EventHall1ReadPagePlaceHall1EvidenceAfterAddRemove1.text,
-EventHall1ReadPagePlaceHall1EvidenceAfterAddRemove1.button1,
-EventHall1ReadPagePlaceHall1EvidenceEnd.text,
-EventHall1ReadPagePlaceHall1EvidenceEnd.button1,
-EventHall1TocPrologPlaceHall1Sight.text,
-EventHall1TocPrologPlaceHall1Sight.button1,
-EventHall1ReadPagePlaceHall1Sight.text,
-EventHall1ReadPagePlaceHall1Sight.button1,
-EventHall1ReadPagePlaceHall1SightDisplay.text,
-EventHall1ReadPagePlaceHall1SightDisplay.button1,
-EventHall1ReadPagePlaceHall1SightBase.text,"\nThe hall stretches forward. Place a Sight token as indicated.\n\nAs you look around, something doesn’t feel right. You feel like you are being watched.\n"
-EventHall1ReadPagePlaceHall1SightBase.button1,{qst:continue}
-EventHall1ReadPagePlaceHall1SightTiePoint.text,
-EventHall1ReadPagePlaceHall1SightTiePoint.button1,
-EventHall1ReadPagePlaceHall1SightAfterAddRemove1.text,
-EventHall1ReadPagePlaceHall1SightAfterAddRemove1.button1,
-EventHall1Expr3.text,
-EventHall1Expr3.button1,
-EventHall1ReadPagePlaceHall1SightAfterGoto83.text,
-EventHall1ReadPagePlaceHall1SightAfterGoto83.button1,
-EventHall1ReadPagePlaceHall1SightEnd.text,
-EventHall1ReadPagePlaceHall1SightEnd.button1,
-EventHall1TocPrologPlaceHall1Journal.text,
-EventHall1TocPrologPlaceHall1Journal.button1,
-EventHall1ReadPagePlaceHall1Journal.text,
-EventHall1ReadPagePlaceHall1Journal.button1,
-EventHall1ReadPagePlaceHall1JournalDisplay.text,
-EventHall1ReadPagePlaceHall1JournalDisplay.button1,
-EventHall1ReadPagePlaceHall1JournalBase.text,"\n<i>The book on the floor,</i> you remind yourself. You turn around and step back. Move one space into the {c:TileDiningRoom}.\n\nYou look over, see the book, and bend down to pick it up. Gain the {c:QItemJournal} unique item.\n\nYou look at the book you picked up: small, thin, and leather-bound. You flip through the pages: it’s a journal. The first entry was scrawled last Sunday.\n\nMaybe you should hold onto it to give back to Benjamin when you see him later today. And maybe take a quick look yourself.\n\nGain the {c:QItemJournal} Unique Item, then remove its Search token. An investigator holding the {c:QItemJournal} can interact with it in the app.\n"
-EventHall1ReadPagePlaceHall1JournalBase.button1,{qst:continue}
-EventHall1ReadPagePlaceHall1JournalTiePoint.text,
-EventHall1ReadPagePlaceHall1JournalTiePoint.button1,
-EventHall1ReadPagePlaceHall1JournalAfterAddRemove1.text,
-EventHall1ReadPagePlaceHall1JournalAfterAddRemove1.button1,
-EventHall1Expr4.text,
-EventHall1Expr4.button1,
-EventHall1ReadPagePlaceHall1JournalAfterLet2.text,
-EventHall1ReadPagePlaceHall1JournalAfterLet2.button1,
-EventHall1ReadPagePlaceHall1JournalAfterGoto84.text,
-EventHall1ReadPagePlaceHall1JournalAfterGoto84.button1,
-EventHall1ReadPagePlaceHall1JournalEnd.text,
-EventHall1ReadPagePlaceHall1JournalEnd.button1,
-EventHall1TocPrologSearchRug.text,"\nThe corner of the rug is folder over.\n"
-EventHall1TocPrologSearchRug.button1,{action} Search
-EventHall1TocPrologSearchRug.button2,{qst:cancel}
-EventHall1ReadPageSearchRug.text,
-EventHall1ReadPageSearchRug.button1,
-EventHall1ReadPageSearchRugDisplay.text,
-EventHall1ReadPageSearchRugDisplay.button1,
-EventHall1ReadPageSearchRugBase.text,"\nYou lean down to straighten the rug. You play with it for a bit, but have trouble getting it to stay flat–the fold has been there too long. You lift the rug a little more to try to flatten the corner. There’s a piece of paper under the rug. You pick it up to find it has a diagram of a tabletop with arcane symbols. Maybe it’s part of some ritual? You’ve heard the people in this town have some funny beliefs.\n\nGain the {c:QItemEvidenceHall1} Unique Item and 1 {clue}, then discard this Search token.\n"
-EventHall1ReadPageSearchRugBase.button1,{qst:continue}
-EventHall1ReadPageSearchRugTiePoint.text,
-EventHall1ReadPageSearchRugTiePoint.button1,
-EventHall1ReadPageSearchRugAfterAddRemove1.text,
-EventHall1ReadPageSearchRugAfterAddRemove1.button1,
-EventHall1ReadPageSearchRugAfterAddRemove2.text,
-EventHall1ReadPageSearchRugAfterAddRemove2.button1,
-EventHall1ReadPageSearchRugAfterGoto85.text,
-EventHall1ReadPageSearchRugAfterGoto85.button1,
-EventHall1ReadPageSearchRugEnd.text,
-EventHall1ReadPageSearchRugEnd.button1,
-EventHall1TocPrologSearchPainting.text,"\nThe painting glows with unnatural light.\n"
-EventHall1TocPrologSearchPainting.button1,{action} Search
-EventHall1TocPrologSearchPainting.button2,{qst:cancel}
-EventHall1ReadPageSearchPainting.text,
-EventHall1ReadPageSearchPainting.button1,
-EventHall1ReadPageSearchPaintingDisplay.text,
-EventHall1ReadPageSearchPaintingDisplay.button1,
-EventHall1ReadPageSearchPaintingBase.text,"\nThe painting is a girl, maybe 12 or 13 years old. The work is stunning and the girl looks so lifelike, it’s as if she could just step through the frame. She’s wearing a white dress and looks serious.\n\nWhen you blink, you think the painting has moved but you know that cannot happen. You also notice that there is no dust anywhere on the painting or the frame. You feel like there’s something else you’ve missed, but you dismiss it and turn away. Gain 1 {clue}, then remove this Search token.\n"
-EventHall1ReadPageSearchPaintingBase.button1,{qst:continue}
-EventHall1ReadPageSearchPaintingTiePoint.text,
-EventHall1ReadPageSearchPaintingTiePoint.button1,
-EventHall1ReadPageSearchPaintingAfterAddRemove1.text,
-EventHall1ReadPageSearchPaintingAfterAddRemove1.button1,
-EventHall1ReadPageSearchPaintingEnd.text,
-EventHall1ReadPageSearchPaintingEnd.button1,
-EventHall1TocPrologSearchPainting2.text,
-EventHall1TocPrologSearchPainting2.button1,
-EventHall1ReadPageSearchPainting2.text,
-EventHall1ReadPageSearchPainting2.button1,
-EventHall1ReadPageSearchPainting2Display.text,
-EventHall1ReadPageSearchPainting2Display.button1,
-EventHall1ReadPageSearchPainting2Base.text,"\nAs you turn around, you notice two shadows on the wall, yours and... you quickly look back at the painting. The girl is not there. Startled, you turn to run back to the {c:TileDiningRoom} and are brought up short when the girl from the painting is standing in front of you.\n\nPlace the Green Girl token as indicated. Shocked, you take 1 Horror ({will} negates).\n"
-EventHall1ReadPageSearchPainting2Base.button1,{qst:continue}
-EventHall1ReadPageSearchPainting2TiePoint.text,
-EventHall1ReadPageSearchPainting2TiePoint.button1,
-EventHall1ReadPageSearchPainting2AfterAddRemove1.text,
-EventHall1ReadPageSearchPainting2AfterAddRemove1.button1,
-EventHall1ReadPageSearchPainting2End.text,
-EventHall1ReadPageSearchPainting2End.button1,
-EventHall1TocPrologTalkToSarah.text,
-EventHall1TocPrologTalkToSarah.button1,
-EventHall1ReadPageTalkToSarah.text,
-EventHall1ReadPageTalkToSarah.button1,
-EventHall1ReadPageTalkToSarahDisplay.text,
-EventHall1ReadPageTalkToSarahDisplay.button1,
-EventHall1ReadPageTalkToSarahBase.text,"\nShe is a pretty girl in the the first blush of youth–maybe 11 or 12 years old. She has curly hair with ribbons and a bright white dress that stands out in the dingy hallway.\n"
-EventHall1ReadPageTalkToSarahBase.button1,{qst:continue}
-EventHall1ReadPageTalkToSarahTiePoint.text,
-EventHall1ReadPageTalkToSarahTiePoint.button1,
-EventHall1ReadPageTalkToSarahEnd.text,
-EventHall1ReadPageTalkToSarahEnd.button1,
-EventHall1TocPrologTalkToSarah2.text,"\nShe looks at you expectantly. She looks like she wants to say something, but is holding back. She still looks serious, but also concerned and maybe a little afraid. You notice that she seems to be glowing. And maybe a bit transparent.\n\nShe will only speak with {c:EventChosenInvestigator}.\n"
-EventHall1TocPrologTalkToSarah2.button1,{action} Talk to her
-EventHall1TocPrologTalkToSarah2.button2,{qst:cancel}
-EventHall1ReadPageTalkToSarah2.text,
-EventHall1ReadPageTalkToSarah2.button1,
-EventHall1ReadPageTalkToSarah2Display.text,
-EventHall1ReadPageTalkToSarah2Display.button1,
-EventHall1ReadPageTalkToSarah2Base.text,"\nShe brightens up. “It’s good to see you again. I thought you had forgotten me after that night. I’ve missed you.”\n\nYou are surprised at what she says. <i>Who is this girl? Why does she think she knows me?</i>\n\nThe girl walks over and turns to face you. She looks up at you expectantly.\n\nMove the Green Girl token to your investigator card. She will follow you to whatever ends you meet in this house.\n"
-EventHall1ReadPageTalkToSarah2Base.button1,{qst:continue}
-EventHall1ReadPageTalkToSarah2TiePoint.text,
-EventHall1ReadPageTalkToSarah2TiePoint.button1,
-EventHall1ReadPageTalkToSarah2AfterAddRemove1.text,
-EventHall1ReadPageTalkToSarah2AfterAddRemove1.button1,
-EventHall1Expr5.text,
-EventHall1Expr5.button1,
-EventHall1ReadPageTalkToSarah2AfterLet2.text,
-EventHall1ReadPageTalkToSarah2AfterLet2.button1,
-EventHall1ReadPageTalkToSarah2AfterGoto86.text,
-EventHall1ReadPageTalkToSarah2AfterGoto86.button1,
-EventHall1ReadPageTalkToSarah2End.text,
-EventHall1ReadPageTalkToSarah2End.button1,
-EventHall1ReadPageSearchRugXferIfTriggered.text,
-EventHall1ReadPageSearchRugXferIfTriggered.button1,
-EventHall1ReadPageSearchPaintingXferIfTriggered.text,
-EventHall1ReadPageSearchPaintingXferIfTriggered.button1,
-EventHall1ReadPageTalkToSarahXferIfTriggered.text,
-EventHall1ReadPageTalkToSarahXferIfTriggered.button1,
-EventHall1ReadPageTalkToSarah2XferIfTriggered.text,
-EventHall1ReadPageTalkToSarah2XferIfTriggered.button1,
-EventHall1ReadPageExploreHall1Trigger.text,
-EventHall1ReadPageExploreHall1Trigger.button1,
-EventHall1ReadPageSearchRugTrigger.text,
-EventHall1ReadPageSearchRugTrigger.button1,
-EventHall1ReadPageSearchPaintingTrigger.text,
-EventHall1ReadPageSearchPaintingTrigger.button1,
-EventHall1ReadPageTalkToSarahTrigger.text,
-EventHall1ReadPageTalkToSarahTrigger.button1,
-EventHall1ReadPageTalkToSarah2Trigger.text,
-EventHall1ReadPageTalkToSarah2Trigger.button1,
 EventHall2Start.text,
 EventHall2Start.button1,
 EventHall2Init.text,
@@ -5600,6 +5112,175 @@ UIGameOverButton.button1,Continue
 quest.QItemWendyGun,"As she walks up the drive, Wendy Adams trips and falls. She twists her ankle and skins her knees. When she looks up, she sees something in the weeds. Wendy gains the {c:QItemWendyGun}.\n\nWhen she finally stands up, she doesn’t feel as agile as usual. In this scenario, Wendy can become Restrained."
 quest.QItemGardenTool,"You rustle around in the weeds and find something interesting. Gain the {c:QItemGardenTool} Common Item, then discard this Search token.\n\nAs you pull it free of the weeds, a child’s doll is exposed. The clothing is ragged and the paint is chipped. You think back to the children who were found here and wonder if this doll belonged to one of them.\n\nGain 1 {clue}, then take 1 facedown Horror ({will} negates)."
 quest.QItemJournal,"Up close you can see that it is thin and leather-bound. You pick it up and flip through the pages: it’s a journal. The first entry was scrawled last Sunday. You should give it back to Benjamin, but maybe you can take a quick look first.\n\nGain the {c:QItemJournal} Unique Item, then discard this Search token. An investigator holding the {c:QItemJournal} can interact with it in the app."
+Token0.button1,Set
+Token0.text,"Puzzle:  1 2 3 4 \n\n{var:puzzleFluxStabilizerSolved}"
+TokenTestSearchFluxStabilizer.button1,Continue
+TokenTestSearchFluxStabilizer.text,SearchFluxStabilizer
+EventExploreBackDoorLockedStart.text,
+EventExploreBackDoorLockedStart.button1,
+EventExploreBackDoorLockedInit.text,
+EventExploreBackDoorLockedInit.button1,
+EventExploreBackDoorLockedFirstTimeInitializer.text,
+EventExploreBackDoorLockedFirstTimeInitializer.button1,
+EventExploreBackDoorLockedTriggerPrologSelector.text,
+EventExploreBackDoorLockedTriggerPrologSelector.button1,
+EventExploreBackDoorLockedTriggerSelector.text,
+EventExploreBackDoorLockedTriggerSelector.button1,
+EventExploreBackDoorLockedReadPageTurnKnobXferIfTriggered.text,
+EventExploreBackDoorLockedReadPageTurnKnobXferIfTriggered.button1,
+EventExploreBackDoorLockedReadPageTurnKnob.text,
+EventExploreBackDoorLockedReadPageTurnKnob.button1,
+EventExploreBackDoorLockedReadPageTurnKnobDisplay.text,
+EventExploreBackDoorLockedReadPageTurnKnobDisplay.button1,
+EventExploreBackDoorLockedReadPageTurnKnobBase.text,"\nYou reach for the knob. Test {strength} or {agility}.\n"
+EventExploreBackDoorLockedReadPageTurnKnobBase.button1,{qst:continue}
+EventExploreBackDoorLockedReadPageTurnKnobBase.button2,Fail
+EventExploreBackDoorLockedReadPageTurnKnobBasePass.text,
+EventExploreBackDoorLockedReadPageTurnKnobBasePass.button1,
+EventExploreBackDoorLockedReadPageTurnKnobBaseButtonsTiePoint.text,
+EventExploreBackDoorLockedReadPageTurnKnobBaseButtonsTiePoint.button1,
+EventExploreBackDoorLockedReadPageTurnKnobTiePoint.text,
+EventExploreBackDoorLockedReadPageTurnKnobTiePoint.button1,
+EventExploreBackDoorLockedReadPageTurnKnobEnd.text,
+EventExploreBackDoorLockedReadPageTurnKnobEnd.button1,
+EventExploreBackDoorLockedTiePoint.text,
+EventExploreBackDoorLockedTiePoint.button1,
+EventExploreBackDoorLockedLoopBack.text,
+EventExploreBackDoorLockedLoopBack.button1,
+EventExploreBackDoorLockedEnd.text,
+EventExploreBackDoorLockedEnd.button1,
+EventExploreBackDoorLockedReadPageTurnKnobBaseFail.text,
+EventExploreBackDoorLockedReadPageTurnKnobBaseFail.button1,
+EventExploreBackDoorLockedReadPageShakeDoorXferIfTriggered.text,
+EventExploreBackDoorLockedReadPageShakeDoorXferIfTriggered.button1,
+EventExploreBackDoorLockedReadPageShakeDoor.text,
+EventExploreBackDoorLockedReadPageShakeDoor.button1,
+EventExploreBackDoorLockedReadPageShakeDoorDisplay.text,
+EventExploreBackDoorLockedReadPageShakeDoorDisplay.button1,
+EventExploreBackDoorLockedReadPageShakeDoorBase.text,"\nYou grab the knob again and begin shaking it violently. Test {strength} or {will}.\n"
+EventExploreBackDoorLockedReadPageShakeDoorBase.button1,{qst:continue}
+EventExploreBackDoorLockedReadPageShakeDoorBase.button2,Fail
+EventExploreBackDoorLockedReadPageShakeDoorBasePass.text,
+EventExploreBackDoorLockedReadPageShakeDoorBasePass.button1,
+EventExploreBackDoorLockedReadPageShakeDoorBaseButtonsTiePoint.text,
+EventExploreBackDoorLockedReadPageShakeDoorBaseButtonsTiePoint.button1,
+EventExploreBackDoorLockedReadPageShakeDoorTiePoint.text,
+EventExploreBackDoorLockedReadPageShakeDoorTiePoint.button1,
+EventExploreBackDoorLockedReadPageShakeDoorEnd.text,
+EventExploreBackDoorLockedReadPageShakeDoorEnd.button1,
+EventExploreBackDoorLockedReadPageShakeDoorBaseFail.text,
+EventExploreBackDoorLockedReadPageShakeDoorBaseFail.button1,
+EventExploreBackDoorLockedReadPageHitDoorXferIfTriggered.text,
+EventExploreBackDoorLockedReadPageHitDoorXferIfTriggered.button1,
+EventExploreBackDoorLockedReadPageHitDoor.text,
+EventExploreBackDoorLockedReadPageHitDoor.button1,
+EventExploreBackDoorLockedReadPageHitDoorDisplay.text,
+EventExploreBackDoorLockedReadPageHitDoorDisplay.button1,
+EventExploreBackDoorLockedReadPageHitDoorBase.text,"\nYou muster up your strength and prepare to break the door down with your shoulder. Test {strength} or {lore}.\n"
+EventExploreBackDoorLockedReadPageHitDoorBase.button1,{qst:continue}
+EventExploreBackDoorLockedReadPageHitDoorBase.button2,Fail
+EventExploreBackDoorLockedReadPageHitDoorBasePass.text,
+EventExploreBackDoorLockedReadPageHitDoorBasePass.button1,
+EventExploreBackDoorLockedReadPageHitDoorBaseButtonsTiePoint.text,
+EventExploreBackDoorLockedReadPageHitDoorBaseButtonsTiePoint.button1,
+EventExploreBackDoorLockedReadPageHitDoorTiePoint.text,
+EventExploreBackDoorLockedReadPageHitDoorTiePoint.button1,
+EventExploreBackDoorLockedReadPageHitDoorEnd.text,
+EventExploreBackDoorLockedReadPageHitDoorEnd.button1,
+EventExploreBackDoorLockedReadPageHitDoorBaseFail.text,
+EventExploreBackDoorLockedReadPageHitDoorBaseFail.button1,
+EventExploreBackDoorLockedReadPagePickLockXferIfTriggered.text,
+EventExploreBackDoorLockedReadPagePickLockXferIfTriggered.button1,
+EventExploreBackDoorLockedReadPagePickLock.text,
+EventExploreBackDoorLockedReadPagePickLock.button1,
+EventExploreBackDoorLockedReadPagePickLockDisplay.text,
+EventExploreBackDoorLockedReadPagePickLockDisplay.button1,
+EventExploreBackDoorLockedReadPagePickLockBase.text,"\nAs you work the hairpin into the lock, you wonder why it was in your pocket. Test {agility} or {influence}.\n"
+EventExploreBackDoorLockedReadPagePickLockBase.button1,{qst:continue}
+EventExploreBackDoorLockedReadPagePickLockBase.button2,Fail
+EventExploreBackDoorLockedReadPagePickLockBasePass.text,
+EventExploreBackDoorLockedReadPagePickLockBasePass.button1,
+EventExploreBackDoorLockedReadPagePickLockBaseButtonsTiePoint.text,
+EventExploreBackDoorLockedReadPagePickLockBaseButtonsTiePoint.button1,
+EventExploreBackDoorLockedReadPagePickLockTiePoint.text,
+EventExploreBackDoorLockedReadPagePickLockTiePoint.button1,
+EventExploreBackDoorLockedReadPagePickLockEnd.text,
+EventExploreBackDoorLockedReadPagePickLockEnd.button1,
+EventExploreBackDoorLockedReadPagePickLockBaseFail.text,
+EventExploreBackDoorLockedReadPagePickLockBaseFail.button1,
+EventExploreBackDoorLockedReadPageUnlockDoorXferIfTriggered.text,
+EventExploreBackDoorLockedReadPageUnlockDoorXferIfTriggered.button1,
+EventExploreBackDoorLockedReadPageUnlockDoor.text,
+EventExploreBackDoorLockedReadPageUnlockDoor.button1,
+EventExploreBackDoorLockedReadPageUnlockDoorDisplay.text,
+EventExploreBackDoorLockedReadPageUnlockDoorDisplay.button1,
+EventExploreBackDoorLockedReadPageUnlockDoorBase.text,"\nYou pull out the key and look at it for a moment before putting it into the lock... Test {strength} or {observation}.\n"
+EventExploreBackDoorLockedReadPageUnlockDoorBase.button1,{qst:continue}
+EventExploreBackDoorLockedReadPageUnlockDoorBase.button2,Fail
+EventExploreBackDoorLockedReadPageUnlockDoorBasePass.text,
+EventExploreBackDoorLockedReadPageUnlockDoorBasePass.button1,
+EventExploreBackDoorLockedReadPageUnlockDoorBaseButtonsTiePoint.text,
+EventExploreBackDoorLockedReadPageUnlockDoorBaseButtonsTiePoint.button1,
+EventExploreBackDoorLockedReadPageUnlockDoorTiePoint.text,
+EventExploreBackDoorLockedReadPageUnlockDoorTiePoint.button1,
+EventExploreBackDoorLockedReadPageUnlockDoorEnd.text,
+EventExploreBackDoorLockedReadPageUnlockDoorEnd.button1,
+EventExploreBackDoorLockedReadPageUnlockDoorBaseFail.text,
+EventExploreBackDoorLockedReadPageUnlockDoorBaseFail.button1,
+EventExploreBackDoorLockedToc.text,
+EventExploreBackDoorLockedToc.button1,
+EventExploreBackDoorLockedTocBeforeAddRemove1.text,
+EventExploreBackDoorLockedTocBeforeAddRemove1.button1,
+EventExploreBackDoorLockedTocDisplay.text,
+EventExploreBackDoorLockedTocDisplay.button1,
+EventExploreBackDoorLockedTocBase.text,"\nWell, you try to put the key into the lock but it doesn’t fit, no matter how hard you try. You look at the key and try again. And again. And again. Dejected and out of ideas, you turn away from the door. “I guess we’ll have to find another way out,” you say to no one in particular. Someone mutters, “Yeah.”\n\nDiscard this explore token.\n"
+EventExploreBackDoorLockedTocBase.button1,{qst:continue}
+EventExploreBackDoorLockedTocTiePoint.text,
+EventExploreBackDoorLockedTocTiePoint.button1,
+EventExploreBackDoorLockedTocEnd.text,
+EventExploreBackDoorLockedTocEnd.button1,
+EventExploreBackDoorLockedTocSelector.text,
+EventExploreBackDoorLockedTocSelector.button1,
+EventExploreBackDoorLockedTocPrologProxyTurnKnob.text,
+EventExploreBackDoorLockedTocPrologProxyTurnKnob.button1,
+EventExploreBackDoorLockedTocPrologTurnKnob.text,"\nThe door that closed behind you looks larger and more solid from inside.\n"
+EventExploreBackDoorLockedTocPrologTurnKnob.button1,{action} Open door
+EventExploreBackDoorLockedTocPrologTurnKnob.button2,{qst:cancel}
+EventExploreBackDoorLockedTocPrologProxyShakeDoor.text,
+EventExploreBackDoorLockedTocPrologProxyShakeDoor.button1,
+EventExploreBackDoorLockedTocPrologShakeDoor.text,"\nNo matter how hard you try, the knob just won’t turn. Looking closer, you see a light peeking between the door and its jam. <i>Maybe I can shake it open?<i> you think to yourself.\n"
+EventExploreBackDoorLockedTocPrologShakeDoor.button1,{action} Shake door
+EventExploreBackDoorLockedTocPrologShakeDoor.button2,{qst:cancel}
+EventExploreBackDoorLockedTocPrologProxyHitDoor.text,
+EventExploreBackDoorLockedTocPrologProxyHitDoor.button1,
+EventExploreBackDoorLockedTocPrologHitDoor.text,"\nNo matter how hard you shake it, the door doesn’t budge. And you might have pulled something in your right arm. Maybe you can knock it down? You also begin to wonder if you should move on. Or knock it down.\n"
+EventExploreBackDoorLockedTocPrologHitDoor.button1,{action} Break it down
+EventExploreBackDoorLockedTocPrologHitDoor.button2,{qst:cancel}
+EventExploreBackDoorLockedTocPrologProxyPickLock.text,
+EventExploreBackDoorLockedTocPrologProxyPickLock.button1,
+EventExploreBackDoorLockedTocPrologPickLock.text,"\nThe third or fourth time you hit door, something in your shoulder pops and it hurts. Bad. You feel the panic setting in. <i>Why won’t this door open?</i> you ask yourself.\n\nTake 1 facedown damage ({strength} negates).\n\n“Hey, is this a hairpin?” you ask out loud. One of the other investigators turns to look at you.\n"
+EventExploreBackDoorLockedTocPrologPickLock.button1,{action} Pick lock
+EventExploreBackDoorLockedTocPrologPickLock.button2,{qst:cancel}
+EventExploreBackDoorLockedTocPrologProxyUnlockDoor.text,
+EventExploreBackDoorLockedTocPrologProxyUnlockDoor.button1,
+EventExploreBackDoorLockedTocPrologUnlockDoor.text,"\nYou can feel the tumblers, but nothing moves. Eventually, the hairpin bends too much to be of use. <i>Maybe this really is a waste of time,</i> you consider. <i>Wait, I have that key.</i>\n\nIf you have the {c:QItemBrassKey}, ...\n"
+EventExploreBackDoorLockedTocPrologUnlockDoor.button1,{action} Unlock door
+EventExploreBackDoorLockedTocPrologUnlockDoor.button2,{qst:cancel}
+EventExploreBackDoorLockedTocNoPagesAvailable.text,
+EventExploreBackDoorLockedTocNoPagesAvailable.button1,
+EventExploreBackDoorLockedReadPageEpilog.text,
+EventExploreBackDoorLockedReadPageEpilog.button1,
+EventExploreBackDoorLockedReadPageEpilogBeforeAddRemove1.text,
+EventExploreBackDoorLockedReadPageEpilogBeforeAddRemove1.button1,
+EventExploreBackDoorLockedReadPageEpilogDisplay.text,
+EventExploreBackDoorLockedReadPageEpilogDisplay.button1,
+EventExploreBackDoorLockedReadPageEpilogBase.text,"\nWell, you try to put the key into the lock but it doesn’t fit, no matter how hard you try. You look at the key and try again. And again. And again. Dejected and out of ideas, you turn away from the door. “I guess we’ll have to find another way out,” you say to no one in particular. Someone mutters, “Yeah.”\n\nDiscard this explore token.\n"
+EventExploreBackDoorLockedReadPageEpilogBase.button1,{qst:continue}
+EventExploreBackDoorLockedReadPageEpilogTiePoint.text,
+EventExploreBackDoorLockedReadPageEpilogTiePoint.button1,
+EventExploreBackDoorLockedReadPageEpilogEnd.text,
+EventExploreBackDoorLockedReadPageEpilogEnd.button1,
+TokenDiningRoomBen.button1,Button1
 EventBackyardStart.text,
 EventBackyardStart.button1,
 EventBackyardInit.text,
@@ -5638,7 +5319,7 @@ EventBackyardEnd.button1,
 EventBackyardReadPageSearchRandomTriggeredPrologTarget.text,
 EventBackyardReadPageSearchRandomTriggeredPrologTarget.button1,
 EventBackyardTocPrologSearchRandom.text,|||\nA withered plant sits on a broken-down table.\n|||
-EventBackyardTocPrologSearchRandom.button1,{action} 
+EventBackyardTocPrologSearchRandom.button1,{action} {qst:continue}
 EventBackyardTocPrologSearchRandom.button2,{qst:cancel}
 EventBackyardReadPageSearchRandom.text,
 EventBackyardReadPageSearchRandom.button1,
@@ -5688,7 +5369,7 @@ EventBackyardReadPageSearchRandomBaseFail.button1,
 EventBackyardReadPageSearch2x4TriggeredPrologTarget.text,
 EventBackyardReadPageSearch2x4TriggeredPrologTarget.button1,
 EventBackyardTocPrologSearch2x4.text,|||\nA pile of rubble sits between the gate and the house. Dust still thickens the air.\n|||
-EventBackyardTocPrologSearch2x4.button1,{action} 
+EventBackyardTocPrologSearch2x4.button1,{action} {qst:continue}
 EventBackyardTocPrologSearch2x4.button2,{qst:cancel}
 EventBackyardReadPageSearch2x4.text,
 EventBackyardReadPageSearch2x4.button1,
@@ -5879,304 +5560,1188 @@ EventBackyardReadPageSearch2x4Trigger.text,
 EventBackyardReadPageSearch2x4Trigger.button1,
 EventBackyardReadPageExploreDiningRoomViaBackyardTrigger.text,
 EventBackyardReadPageExploreDiningRoomViaBackyardTrigger.button1,
-EventBenBeforeStart.text,|||\nEventBenBeforeStart @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenAfterStart.text,
+EventBenAfterStart.button1,
+EventBenAfterInit.text,
+EventBenAfterInit.button1,
+EventBenAfterFirstTimeInitializer.text,
+EventBenAfterFirstTimeInitializer.button1,
+EventBenAfterExpr27.text,
+EventBenAfterExpr27.button1,
+EventBenAfterExpr28.text,
+EventBenAfterExpr28.button1,
+EventBenAfterTriggerPrologSelector.text,
+EventBenAfterTriggerPrologSelector.button1,
+EventBenAfterTriggerSelector.text,
+EventBenAfterTriggerSelector.button1,
+EventBenAfterReadPageDirtXferIfTriggered.text,
+EventBenAfterReadPageDirtXferIfTriggered.button1,
+EventBenAfterReadPageDirt.text,
+EventBenAfterReadPageDirt.button1,
+EventBenAfterReadPageDirtTestFinished.text,
+EventBenAfterReadPageDirtTestFinished.button1,
+EventBenAfterExpr1.text,
+EventBenAfterExpr1.button1,
+EventBenAfterExpr3.text,
+EventBenAfterExpr3.button1,
+EventBenAfterExpr2.text,
+EventBenAfterExpr2.button1,
+EventBenAfterReadPageDirtDisplay.text,
+EventBenAfterReadPageDirtDisplay.button1,
+EventBenAfterReadPageDirtOverload1.text,|||\n“Well,” he snaps, “the house sat unused these last 10 years. You were hired to clean, not criticize.”\n\nThis man clearly does not like you.\n|||
+EventBenAfterReadPageDirtOverload1.button1,{qst:continue}
+EventBenAfterReadPageDirtTiePoint.text,
+EventBenAfterReadPageDirtTiePoint.button1,
+EventBenAfterReadPageDirtEnd.text,
+EventBenAfterReadPageDirtEnd.button1,
+EventBenAfterTiePoint.text,
+EventBenAfterTiePoint.button1,
+EventBenAfterLoopBack.text,
+EventBenAfterLoopBack.button1,
+EventBenAfterEnd.text,
+EventBenAfterEnd.button1,
+EventBenAfterReadPageDirtBase.text,|||\n“Well,” he starts, “10 years ago the house was packed quickly and then close up. There has been no one here since then, so expect the worst.”\n\nYou are not encouraged.\n|||
+EventBenAfterReadPageDirtBase.button1,{qst:continue}
+EventBenAfterExpr4.text,
+EventBenAfterExpr4.button1,
+EventBenAfterReadPageFootprintsXferIfTriggered.text,
+EventBenAfterReadPageFootprintsXferIfTriggered.button1,
+EventBenAfterReadPageFootprints.text,
+EventBenAfterReadPageFootprints.button1,
+EventBenAfterReadPageFootprintsTestFinished.text,
+EventBenAfterReadPageFootprintsTestFinished.button1,
+EventBenAfterExpr5.text,
+EventBenAfterExpr5.button1,
+EventBenAfterExpr7.text,
+EventBenAfterExpr7.button1,
+EventBenAfterExpr6.text,
+EventBenAfterExpr6.button1,
+EventBenAfterReadPageFootprintsDisplay.text,
+EventBenAfterReadPageFootprintsDisplay.button1,
+EventBenAfterReadPageFootprintsOverload1.text,|||\n“Then you should sweep it up. That’s what you’re here for, not to complain about dirt.”\n|||
+EventBenAfterReadPageFootprintsOverload1.button1,{qst:continue}
+EventBenAfterReadPageFootprintsTiePoint.text,
+EventBenAfterReadPageFootprintsTiePoint.button1,
+EventBenAfterReadPageFootprintsEnd.text,
+EventBenAfterReadPageFootprintsEnd.button1,
+EventBenAfterReadPageFootprintsBase.text,|||\n“I think the handyman was in the house yesterday. They must be his.”\n|||
+EventBenAfterReadPageFootprintsBase.button1,{qst:continue}
+EventBenAfterExpr8.text,
+EventBenAfterExpr8.button1,
+EventBenAfterReadPageAnythingElseXferIfTriggered.text,
+EventBenAfterReadPageAnythingElseXferIfTriggered.button1,
+EventBenAfterReadPageAnythingElse.text,
+EventBenAfterReadPageAnythingElse.button1,
+EventBenAfterReadPageAnythingElseTestFinished.text,
+EventBenAfterReadPageAnythingElseTestFinished.button1,
+EventBenAfterReadPageAnythingElseBeforeAddRemove1.text,
+EventBenAfterReadPageAnythingElseBeforeAddRemove1.button1,
+EventBenAfterExpr9.text,
+EventBenAfterExpr9.button1,
+EventBenAfterExpr11.text,
+EventBenAfterExpr11.button1,
+EventBenAfterExpr10.text,
+EventBenAfterExpr10.button1,
+EventBenAfterReadPageAnythingElseDisplay.text,
+EventBenAfterReadPageAnythingElseDisplay.button1,
+EventBenAfterReadPageAnythingElseOverload1.text,|||\n“What?” he growls. “Oh, here’s the key to the house. Don’t lose it.”\n\nAs he turns to walk out, he drops the key in your direction. Place the {c:QItemBrassKey} common item in Ben’s space. Once outside, Benjamin barks, “Everyone inside. No dawdling.”\n\nMove any investigators who are outside one space into the {C:TileDiningRoom}.\n\nBen slams the door shut behind him. <i>Was that the lock turning?</i> you ask yourself. Discard the purple man.\n|||
+EventBenAfterReadPageAnythingElseOverload1.button1,{qst:continue}
+EventBenAfterReadPageAnythingElseTiePoint.text,
+EventBenAfterReadPageAnythingElseTiePoint.button1,
+EventBenAfterReadPageAnythingElseAfterAddRemove1.text,
+EventBenAfterReadPageAnythingElseAfterAddRemove1.button1,
+EventBenAfterReadPageAnythingElseAfterTrigger2.text,
+EventBenAfterReadPageAnythingElseAfterTrigger2.button1,
+EventBenAfterExpr13.text,
+EventBenAfterExpr13.button1,
+EventBenAfterReadPageAnythingElseAfterLet3.text,
+EventBenAfterReadPageAnythingElseAfterLet3.button1,
+EventBenAfterExpr14.text,
+EventBenAfterExpr14.button1,
+EventBenAfterReadPageAnythingElseAfterLet4.text,
+EventBenAfterReadPageAnythingElseAfterLet4.button1,
+EventBenAfterExpr15.text,
+EventBenAfterExpr15.button1,
+EventBenAfterReadPageAnythingElseAfterLet5.text,
+EventBenAfterReadPageAnythingElseAfterLet5.button1,
+EventBenAfterExpr16.text,
+EventBenAfterExpr16.button1,
+EventBenAfterReadPageAnythingElseAfterLet6.text,
+EventBenAfterReadPageAnythingElseAfterLet6.button1,
+EventBenAfterExpr17.text,
+EventBenAfterExpr17.button1,
+EventBenAfterReadPageAnythingElseAfterLet7.text,
+EventBenAfterReadPageAnythingElseAfterLet7.button1,
+EventBenAfterExpr18.text,
+EventBenAfterExpr18.button1,
+EventBenAfterReadPageAnythingElseAfterLet8.text,
+EventBenAfterReadPageAnythingElseAfterLet8.button1,
+EventBenAfterExpr19.text,
+EventBenAfterExpr19.button1,
+EventBenAfterReadPageAnythingElseAfterLet9.text,
+EventBenAfterReadPageAnythingElseAfterLet9.button1,
+EventBenAfterExpr20.text,
+EventBenAfterExpr20.button1,
+EventBenAfterExpr21.text,
+EventBenAfterExpr21.button1,
+EventBenAfterExpr22.text,
+EventBenAfterExpr22.button1,
+EventBenAfterReadPageAnythingElseAfterLet10.text,
+EventBenAfterReadPageAnythingElseAfterLet10.button1,
+EventBenAfterReadPageAnythingElseAfterTrigger11.text,
+EventBenAfterReadPageAnythingElseAfterTrigger11.button1,
+EventBenAfterReadPageAnythingElseAfterGoto11.text,
+EventBenAfterReadPageAnythingElseAfterGoto11.button1,
+EventBenAfterReadPageAnythingElseBase.text,|||\n“Oh, my, yes. Here’s the key you’ll need to open doors throughout the house.”\n\nGain the {c:QItemBrassKey} common item.\n\n“I must be going. Take your time and send someone to fetch me if you need anything.”\n\nMove any investigators who are outside one space into the {c:TileDiningRoom}.\n\nBen shuts the door behind you. <i>Was that the lock turning?</i> you ask yourself. Discard the purple man.\n|||
+EventBenAfterReadPageAnythingElseBase.button1,{qst:continue}
+EventBenAfterExpr12.text,
+EventBenAfterExpr12.button1,
+EventBenAfterReadPageAnythingElseJournalXferIfTriggered.text,
+EventBenAfterReadPageAnythingElseJournalXferIfTriggered.button1,
+EventBenAfterReadPageAnythingElseJournal.text,
+EventBenAfterReadPageAnythingElseJournal.button1,
+EventBenAfterReadPageAnythingElseJournalTestFinished.text,
+EventBenAfterReadPageAnythingElseJournalTestFinished.button1,
+EventBenAfterReadPageAnythingElseJournalDisplay.text,
+EventBenAfterReadPageAnythingElseJournalDisplay.button1,
+EventBenAfterReadPageAnythingElseJournalBase.text,|||\nAt your feet you see a book that looks identical to the one Benjamin dropped outside. He seems to have dropped it again. <i>How is that possible?</i> you ask yourself.\n\nSomething here doesn’t feel right.\n|||
+EventBenAfterReadPageAnythingElseJournalBase.button1,{qst:continue}
+EventBenAfterReadPageAnythingElseJournalTiePoint.text,
+EventBenAfterReadPageAnythingElseJournalTiePoint.button1,
+EventBenAfterReadPageAnythingElseJournalAfterGoto12.text,
+EventBenAfterReadPageAnythingElseJournalAfterGoto12.button1,
+EventBenAfterToc.text,
+EventBenAfterToc.button1,
+EventBenAfterTocSelector.text,
+EventBenAfterTocSelector.button1,
+EventBenAfterToc0.text,|||\nBenjamin looks around the room, like is he trying to figure out what you are doing.\n|||
+EventBenAfterToc0.button1,{action} “Is the whole house this dirty?”
+EventBenAfterToc0.button2,{action} “There are footprints in the dust by that door...”
+EventBenAfterToc0.button3,{action} “Is there anything else we need to know?”
+EventBenAfterToc0.button4,{action} {qst:continue}
+EventBenAfterToc0.button5,{qst:cancel}
+EventBenAfterToc1.text,|||\nBenjamin seems surprised you asked about dirt. Odd since you were hired to clean.\n|||
+EventBenAfterToc1.button1,{action} “Is the whole house this dirty?”
+EventBenAfterToc1.button2,{action} “There are footprints in the dust by that door...”
+EventBenAfterToc1.button3,{action} “Is there anything else we need to know?”
+EventBenAfterToc1.button4,{action} {qst:continue}
+EventBenAfterToc1.button5,{qst:cancel}
+EventBenAfterToc2.text,|||\nYou notice Benjamin glancing nervously at the footprints. <i>Is something going on?‘/’ you wonder.\n|||
+EventBenAfterToc2.button1,{action} “Is the whole house this dirty?”
+EventBenAfterToc2.button2,{action} “There are footprints in the dust by that door...”
+EventBenAfterToc2.button3,{action} “Is there anything else we need to know?”
+EventBenAfterToc2.button4,{action} {qst:continue}
+EventBenAfterToc2.button5,{qst:cancel}
+EventBenAfterToc3.text,
+EventBenAfterToc3.button1,{action} “Is the whole house this dirty?”
+EventBenAfterToc3.button2,{action} “There are footprints in the dust by that door...”
+EventBenAfterToc3.button3,{action} “Is there anything else we need to know?”
+EventBenAfterToc3.button4,{action} {qst:continue}
+EventBenAfterToc3.button5,{qst:cancel}
+EventBenAfterToc4.text,
+EventBenAfterToc4.button1,{action} “Is the whole house this dirty?”
+EventBenAfterToc4.button2,{action} “There are footprints in the dust by that door...”
+EventBenAfterToc4.button3,{action} “Is there anything else we need to know?”
+EventBenAfterToc4.button4,{action} {qst:continue}
+EventBenAfterToc4.button5,{qst:cancel}
+EventBenAfterTocTiePoint.text,
+EventBenAfterTocTiePoint.button1,
+EventBenAfterTocIsFinished.text,
+EventBenAfterTocIsFinished.button1,
+EventBenAfterReadPageAnythingElseJournalTrigger.text,
+EventBenAfterReadPageAnythingElseJournalTrigger.button1,
+EventBenAfterExpr23.text,
+EventBenAfterExpr23.button1,
+EventBenAfterExpr25.text,
+EventBenAfterExpr25.button1,
+EventBenAfterExpr24.text,
+EventBenAfterExpr24.button1,
+EventBenAfterReadPageAnythingElseJournalTriggerFail.text,
+EventBenAfterReadPageAnythingElseJournalTriggerFail.button1,
+EventBenAfterExpr26.text,
+EventBenAfterExpr26.button1,
+EventBenAfterReadPageProlog.text,
+EventBenAfterReadPageProlog.button1,
+EventBenAfterReadPagePrologTestFinished.text,
+EventBenAfterReadPagePrologTestFinished.button1,
+EventBenAfterReadPagePrologDisplay.text,
+EventBenAfterReadPagePrologDisplay.button1,
+EventBenAfterReadPagePrologBase.text,|||\nBenjamin looks around the room, like is he trying to figure out what you are doing.\n|||
+EventBenAfterReadPagePrologBase.button1,{qst:continue}
+EventBenAfterReadPagePrologTiePoint.text,
+EventBenAfterReadPagePrologTiePoint.button1,
+EventBenAfterReadPagePrologEnd.text,
+EventBenAfterReadPagePrologEnd.button1,
+EventBenBeforeStart.text,
 EventBenBeforeStart.button1,
-EventBenBeforeInit.text,|||\nEventBenBeforeInit @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeInit.text,
 EventBenBeforeInit.button1,
-EventBenBeforeFirstTimeInitializer.text,|||\nEventBenBeforeFirstTimeInitializer @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeFirstTimeInitializer.text,
 EventBenBeforeFirstTimeInitializer.button1,
-EventBenBeforeExpr49.text,|||\nEventBenBeforeExpr49 @(165,19)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr49.button1,
-EventBenBeforeExpr52.text,|||\nEventBenBeforeExpr52 @(165,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr52.button1,
-EventBenBeforeExpr51.text,|||\nEventBenBeforeExpr51 @(165,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr51.button1,
-EventBenBeforeExpr54.text,|||\nEventBenBeforeExpr54 @(165,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr54.button1,
-EventBenBeforeTriggerPrologSelector.text,|||\nEventBenBeforeTriggerPrologSelector @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr53.text,
+EventBenBeforeExpr53.button1,
+EventBenBeforeExpr56.text,
+EventBenBeforeExpr56.button1,
+EventBenBeforeExpr55.text,
+EventBenBeforeExpr55.button1,
+EventBenBeforeExpr58.text,
+EventBenBeforeExpr58.button1,
+EventBenBeforeTriggerPrologSelector.text,
 EventBenBeforeTriggerPrologSelector.button1,
-EventBenBeforeTriggerSelector.text,|||\nEventBenBeforeTriggerSelector @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeTriggerSelector.text,
 EventBenBeforeTriggerSelector.button1,
-EventBenBeforeReadPageHowLongXferIfTriggered.text,|||\nEventBenBeforeReadPageHowLongXferIfTriggered @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageHowLongXferIfTriggered.text,
 EventBenBeforeReadPageHowLongXferIfTriggered.button1,
-EventBenBeforeReadPageHowLong.text,|||\nEventBenBeforeReadPageHowLong @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageHowLong.text,
 EventBenBeforeReadPageHowLong.button1,
-EventBenBeforeReadPageHowLongTestFinished.text,|||\nEventBenBeforeReadPageHowLongTestFinished @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageHowLongTestFinished.text,
 EventBenBeforeReadPageHowLongTestFinished.button1,
-EventBenBeforeExpr1.text,|||\nEventBenBeforeExpr1 @(32,9)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr1.text,
 EventBenBeforeExpr1.button1,
-EventBenBeforeExpr3.text,|||\nEventBenBeforeExpr3 @(32,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr3.text,
 EventBenBeforeExpr3.button1,
-EventBenBeforeExpr2.text,|||\nEventBenBeforeExpr2 @(32,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr2.text,
 EventBenBeforeExpr2.button1,
-EventBenBeforeReadPageHowLongDisplay.text,|||\nEventBenBeforeReadPageHowLongDisplay @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageHowLongDisplay.text,
 EventBenBeforeReadPageHowLongDisplay.button1,
-EventBenBeforeReadPageHowLongOverload1.text,|||\nEventBenBeforeReadPageHowLongOverload1 @(-1,-1)\n\n“Long enough,” he snaps. “There are numerous rooms on the ground floor, there is a basement, and there are many rooms upstairs. The place has always been too big for the family. Peter lived here with his daughter. His wife died under suspicious circumstances when the girl was three. Never explained.\n\n“Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren’t you? And you won’t break anything else?” “I hope not,” he mutters under his breath.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageHowLongOverload1.text,|||\n“Long enough,” he snaps. “There are numerous rooms on the ground floor, there is a basement, and there are many rooms upstairs. The place has always been too big for the family. Peter lived here with his daughter. His wife died under suspicious circumstances when the girl was three. Never explained.\n\n“Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren’t you? And you won’t break anything else?” “I hope not,” he mutters under his breath.\n|||
 EventBenBeforeReadPageHowLongOverload1.button1,{qst:continue}
-EventBenBeforeReadPageHowLongTiePoint.text,|||\nEventBenBeforeReadPageHowLongTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageHowLongTiePoint.text,
 EventBenBeforeReadPageHowLongTiePoint.button1,
-EventBenBeforeExpr5.text,|||\nEventBenBeforeExpr5 @(50,23)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr5.text,
 EventBenBeforeExpr5.button1,
-EventBenBeforeReadPageHowLongAfterLet1.text,|||\nEventBenBeforeReadPageHowLongAfterLet1 @(50,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageHowLongAfterLet1.text,
 EventBenBeforeReadPageHowLongAfterLet1.button1,
-EventBenBeforeExpr6.text,|||\nEventBenBeforeExpr6 @(51,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr6.text,
 EventBenBeforeExpr6.button1,
-EventBenBeforeExpr7.text,|||\nEventBenBeforeExpr7 @(51,40)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr7.text,
 EventBenBeforeExpr7.button1,
-EventBenBeforeExpr8.text,|||\nEventBenBeforeExpr8 @(51,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr8.text,
 EventBenBeforeExpr8.button1,
-EventBenBeforeReadPageHowLongAfterLet2.text,|||\nEventBenBeforeReadPageHowLongAfterLet2 @(51,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageHowLongAfterLet2.text,
 EventBenBeforeReadPageHowLongAfterLet2.button1,
-EventBenBeforeReadPageHowLongAfterTrigger3.text,|||\nEventBenBeforeReadPageHowLongAfterTrigger3 @(52,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageHowLongAfterTrigger3.text,
 EventBenBeforeReadPageHowLongAfterTrigger3.button1,
-EventBenBeforeExpr9.text,|||\nEventBenBeforeExpr9 @(53,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr9.text,
 EventBenBeforeExpr9.button1,
-EventBenBeforeExpr10.text,|||\nEventBenBeforeExpr10 @(53,25)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr10.text,
 EventBenBeforeExpr10.button1,
-EventBenBeforeExpr11.text,|||\nEventBenBeforeExpr11 @(53,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr11.button1,
-EventBenBeforeReadPageHowLongAfterGoto11.text,|||\nEventBenBeforeReadPageHowLongAfterGoto11 @(53,32)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageHowLongAfterGoto11.button1,
-EventBenBeforeEnd.text,|||\nEventBenBeforeEnd @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeEnd.button1,
-EventBenBeforeReadPageHowLongEnd.text,|||\nEventBenBeforeReadPageHowLongEnd @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageHowLongEnd.button1,
-EventBenBeforeTiePoint.text,|||\nEventBenBeforeTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeTiePoint.button1,
-EventBenBeforeLoopBack.text,|||\nEventBenBeforeLoopBack @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeLoopBack.button1,
-EventBenBeforeExpr12.text,|||\nEventBenBeforeExpr12 @(53,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr12.text,
 EventBenBeforeExpr12.button1,
-EventBenBeforeReadPageHowLongBase.text,|||\nEventBenBeforeReadPageHowLongBase @(-1,-1)\n\n“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Peter lived here with his daughter. The wife died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I guess you’ll need a few hours just to look through the place and get your bearings. You’ll want to check every drawer, cabinet, and box in the house–take as much time as you need. The whole house should be cleared out and spotless by the end of next week.”\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageHowLongBase.button1,{qst:continue}
-EventBenBeforeExpr4.text,|||\nEventBenBeforeExpr4 @(32,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr4.button1,
-EventBenBeforeReadPageWhatXferIfTriggered.text,|||\nEventBenBeforeReadPageWhatXferIfTriggered @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhatXferIfTriggered.button1,
-EventBenBeforeReadPageWhat.text,|||\nEventBenBeforeReadPageWhat @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhat.button1,
-EventBenBeforeReadPageWhatTestFinished.text,|||\nEventBenBeforeReadPageWhatTestFinished @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhatTestFinished.button1,
-EventBenBeforeExpr13.text,|||\nEventBenBeforeExpr13 @(76,9)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr11.text,
+EventBenBeforeExpr11.button1,
+EventBenBeforeReadPageHowLongAfterGoto13.text,
+EventBenBeforeReadPageHowLongAfterGoto13.button1,
+EventBenBeforeEnd.text,
+EventBenBeforeEnd.button1,
+EventBenBeforeReadPageHowLongEnd.text,
+EventBenBeforeReadPageHowLongEnd.button1,
+EventBenBeforeTiePoint.text,
+EventBenBeforeTiePoint.button1,
+EventBenBeforeLoopBack.text,
+EventBenBeforeLoopBack.button1,
+EventBenBeforeExpr13.text,
 EventBenBeforeExpr13.button1,
-EventBenBeforeExpr15.text,|||\nEventBenBeforeExpr15 @(76,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr15.button1,
-EventBenBeforeExpr14.text,|||\nEventBenBeforeExpr14 @(76,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageHowLongBase.text,|||\n“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Peter lived here with his daughter. The wife died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I guess you’ll need a few hours just to look through the place and get your bearings. You’ll want to check every drawer, cabinet, and box in the house–take as much time as you need. The whole house should be cleared out and spotless by the end of next week.”\n|||
+EventBenBeforeReadPageHowLongBase.button1,{qst:continue}
+EventBenBeforeExpr4.text,
+EventBenBeforeExpr4.button1,
+EventBenBeforeReadPageWhatXferIfTriggered.text,
+EventBenBeforeReadPageWhatXferIfTriggered.button1,
+EventBenBeforeReadPageWhat.text,
+EventBenBeforeReadPageWhat.button1,
+EventBenBeforeReadPageWhatTestFinished.text,
+EventBenBeforeReadPageWhatTestFinished.button1,
+EventBenBeforeExpr14.text,
 EventBenBeforeExpr14.button1,
-EventBenBeforeReadPageWhatDisplay.text,|||\nEventBenBeforeReadPageWhatDisplay @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhatDisplay.button1,
-EventBenBeforeReadPageWhatOverload1.text,|||\nEventBenBeforeReadPageWhatOverload1 @(-1,-1)\n\n“The children? Two were strangled. Parts of them were... missing. The burns on the third were never explained. Nasty business.\n\n“Peter and his brother Henry both went missing that night. Most folks don’t know about Henry. Left a lot of folks around town wondering what really happened. But we’re not here to gossip.”\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhatOverload1.button1,{qst:continue}
-EventBenBeforeReadPageWhatTiePoint.text,|||\nEventBenBeforeReadPageWhatTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhatTiePoint.button1,
-EventBenBeforeExpr17.text,|||\nEventBenBeforeExpr17 @(90,24)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr17.button1,
-EventBenBeforeReadPageWhatAfterLet1.text,|||\nEventBenBeforeReadPageWhatAfterLet1 @(90,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhatAfterLet1.button1,
-EventBenBeforeExpr18.text,|||\nEventBenBeforeExpr18 @(91,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr18.button1,
-EventBenBeforeExpr19.text,|||\nEventBenBeforeExpr19 @(91,40)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr19.button1,
-EventBenBeforeExpr20.text,|||\nEventBenBeforeExpr20 @(91,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr20.button1,
-EventBenBeforeReadPageWhatAfterLet2.text,|||\nEventBenBeforeReadPageWhatAfterLet2 @(91,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhatAfterLet2.button1,
-EventBenBeforeReadPageWhatAfterTrigger3.text,|||\nEventBenBeforeReadPageWhatAfterTrigger3 @(92,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhatAfterTrigger3.button1,
-EventBenBeforeExpr21.text,|||\nEventBenBeforeExpr21 @(93,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr21.button1,
-EventBenBeforeExpr22.text,|||\nEventBenBeforeExpr22 @(93,25)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr22.button1,
-EventBenBeforeExpr23.text,|||\nEventBenBeforeExpr23 @(93,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr23.button1,
-EventBenBeforeReadPageWhatAfterGoto12.text,|||\nEventBenBeforeReadPageWhatAfterGoto12 @(93,32)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhatAfterGoto12.button1,
-EventBenBeforeReadPageWhatEnd.text,|||\nEventBenBeforeReadPageWhatEnd @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhatEnd.button1,
-EventBenBeforeExpr24.text,|||\nEventBenBeforeExpr24 @(93,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr24.button1,
-EventBenBeforeReadPageWhatBase.text,|||\nEventBenBeforeReadPageWhatBase @(-1,-1)\n\n“The children? One of them was burned from head-to-toe. The other two were strangled and parts were... taken. The burns were never explained. Nasty business.\n\n“Peter Smythe–the girl’s father and the owner of this house–went missing that night. Most folks think he did something to the children and then ran away. Still hiding, they think.\n\n“What wasn’t reported is that his brother, Henry, also disappeared that night. Folks in town figured they’d run off together to avoid difficult questions.”\n\nGain 1 {clue}.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhatBase.button1,{qst:continue}
-EventBenBeforeExpr16.text,|||\nEventBenBeforeExpr16 @(76,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr16.text,
 EventBenBeforeExpr16.button1,
-EventBenBeforeReadPageWhereXferIfTriggered.text,|||\nEventBenBeforeReadPageWhereXferIfTriggered @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhereXferIfTriggered.button1,
-EventBenBeforeReadPageWhere.text,|||\nEventBenBeforeReadPageWhere @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhere.button1,
-EventBenBeforeReadPageWhereTestFinished.text,|||\nEventBenBeforeReadPageWhereTestFinished @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhereTestFinished.button1,
-EventBenBeforeExpr25.text,|||\nEventBenBeforeExpr25 @(114,9)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr15.text,
+EventBenBeforeExpr15.button1,
+EventBenBeforeReadPageWhatDisplay.text,
+EventBenBeforeReadPageWhatDisplay.button1,
+EventBenBeforeReadPageWhatOverload1.text,|||\n“The children? Two were strangled. Parts of them were... missing. The burns on the third were never explained. Nasty business.\n\n“Peter and his brother Henry both went missing that night. Most folks don’t know about Henry. Left a lot of folks around town wondering what really happened. But we’re not here to gossip.”\n|||
+EventBenBeforeReadPageWhatOverload1.button1,{qst:continue}
+EventBenBeforeReadPageWhatTiePoint.text,
+EventBenBeforeReadPageWhatTiePoint.button1,
+EventBenBeforeExpr18.text,
+EventBenBeforeExpr18.button1,
+EventBenBeforeReadPageWhatAfterLet1.text,
+EventBenBeforeReadPageWhatAfterLet1.button1,
+EventBenBeforeExpr19.text,
+EventBenBeforeExpr19.button1,
+EventBenBeforeExpr20.text,
+EventBenBeforeExpr20.button1,
+EventBenBeforeExpr21.text,
+EventBenBeforeExpr21.button1,
+EventBenBeforeReadPageWhatAfterLet2.text,
+EventBenBeforeReadPageWhatAfterLet2.button1,
+EventBenBeforeReadPageWhatAfterTrigger3.text,
+EventBenBeforeReadPageWhatAfterTrigger3.button1,
+EventBenBeforeExpr22.text,
+EventBenBeforeExpr22.button1,
+EventBenBeforeExpr23.text,
+EventBenBeforeExpr23.button1,
+EventBenBeforeExpr25.text,
 EventBenBeforeExpr25.button1,
-EventBenBeforeExpr27.text,|||\nEventBenBeforeExpr27 @(114,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr27.button1,
-EventBenBeforeExpr26.text,|||\nEventBenBeforeExpr26 @(114,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr24.text,
+EventBenBeforeExpr24.button1,
+EventBenBeforeReadPageWhatAfterGoto14.text,
+EventBenBeforeReadPageWhatAfterGoto14.button1,
+EventBenBeforeReadPageWhatEnd.text,
+EventBenBeforeReadPageWhatEnd.button1,
+EventBenBeforeExpr26.text,
 EventBenBeforeExpr26.button1,
-EventBenBeforeReadPageWhereDisplay.text,|||\nEventBenBeforeReadPageWhereDisplay @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhereDisplay.button1,
-EventBenBeforeReadPageWhereOverload1.text,|||\nEventBenBeforeReadPageWhereOverload1 @(-1,-1)\n\n“The children were found just over there,” he grumbles, pointing back the way you came. “Not sure why it matters, but I’ll tell you: the girl who was burnt, she kept smoldering until the next day. Coroner couldn’t explain it.” Benjamin resumes digging through his pockets, but seems a little shaken.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhereOverload1.button1,{qst:continue}
-EventBenBeforeReadPageWhereTiePoint.text,|||\nEventBenBeforeReadPageWhereTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhereTiePoint.button1,
-EventBenBeforeExpr29.text,|||\nEventBenBeforeExpr29 @(128,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageWhatBase.text,|||\n“The children? One of them was burned from head-to-toe. The other two were strangled and parts were... taken. The burns were never explained. Nasty business.\n\n“Peter Smythe–the girl’s father and the owner of this house–went missing that night. Most folks think he did something to the children and then ran away. Still hiding, they think.\n\n“What wasn’t reported is that his brother, Henry, also disappeared that night. Folks in town figured they’d run off together to avoid difficult questions.”\n\nGain 1 {clue}.\n|||
+EventBenBeforeReadPageWhatBase.button1,{qst:continue}
+EventBenBeforeExpr17.text,
+EventBenBeforeExpr17.button1,
+EventBenBeforeReadPageWhereXferIfTriggered.text,
+EventBenBeforeReadPageWhereXferIfTriggered.button1,
+EventBenBeforeReadPageWhere.text,
+EventBenBeforeReadPageWhere.button1,
+EventBenBeforeReadPageWhereTestFinished.text,
+EventBenBeforeReadPageWhereTestFinished.button1,
+EventBenBeforeExpr27.text,
+EventBenBeforeExpr27.button1,
+EventBenBeforeExpr29.text,
 EventBenBeforeExpr29.button1,
-EventBenBeforeReadPageWhereAfterLet1.text,|||\nEventBenBeforeReadPageWhereAfterLet1 @(128,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhereAfterLet1.button1,
-EventBenBeforeExpr30.text,|||\nEventBenBeforeExpr30 @(129,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr30.button1,
-EventBenBeforeExpr31.text,|||\nEventBenBeforeExpr31 @(129,40)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr31.button1,
-EventBenBeforeExpr32.text,|||\nEventBenBeforeExpr32 @(129,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr32.button1,
-EventBenBeforeReadPageWhereAfterLet2.text,|||\nEventBenBeforeReadPageWhereAfterLet2 @(129,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhereAfterLet2.button1,
-EventBenBeforeReadPageWhereAfterTrigger3.text,|||\nEventBenBeforeReadPageWhereAfterTrigger3 @(130,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhereAfterTrigger3.button1,
-EventBenBeforeExpr33.text,|||\nEventBenBeforeExpr33 @(131,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr33.button1,
-EventBenBeforeExpr34.text,|||\nEventBenBeforeExpr34 @(131,25)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr34.button1,
-EventBenBeforeExpr35.text,|||\nEventBenBeforeExpr35 @(131,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr35.button1,
-EventBenBeforeReadPageWhereAfterGoto13.text,|||\nEventBenBeforeReadPageWhereAfterGoto13 @(131,32)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhereAfterGoto13.button1,
-EventBenBeforeReadPageWhereEnd.text,|||\nEventBenBeforeReadPageWhereEnd @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhereEnd.button1,
-EventBenBeforeExpr36.text,|||\nEventBenBeforeExpr36 @(131,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr36.button1,
-EventBenBeforeReadPageWhereBase.text,|||\nEventBenBeforeReadPageWhereBase @(-1,-1)\n\n“The children were found just over there,” he says, pointing back the way you came. “They were in a pile; the girl’s body was still smoking from the burns. Strangest thing: she kept smoking until the next day. Coroner wasn’t able to explain it. No one was.\n\n“Our family has lived here for generations–many of them in this house. We’re upset to let it go, but no one lives here... or wants to after what happened.”\n\nGain 1 {clue}.\n\nBenjamin resumes searching his pockets, but seems a little shaken.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhereBase.button1,{qst:continue}
-EventBenBeforeExpr28.text,|||\nEventBenBeforeExpr28 @(114,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr28.text,
 EventBenBeforeExpr28.button1,
-EventBenBeforeReadPageWhyXferIfTriggered.text,|||\nEventBenBeforeReadPageWhyXferIfTriggered @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhyXferIfTriggered.button1,
-EventBenBeforeReadPageWhy.text,|||\nEventBenBeforeReadPageWhy @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhy.button1,
-EventBenBeforeReadPageWhyTestFinished.text,|||\nEventBenBeforeReadPageWhyTestFinished @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhyTestFinished.button1,
-EventBenBeforeExpr37.text,|||\nEventBenBeforeExpr37 @(145,9)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr37.button1,
-EventBenBeforeExpr39.text,|||\nEventBenBeforeExpr39 @(145,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr39.button1,
-EventBenBeforeExpr38.text,|||\nEventBenBeforeExpr38 @(145,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageWhereDisplay.text,
+EventBenBeforeReadPageWhereDisplay.button1,
+EventBenBeforeReadPageWhereOverload1.text,|||\n“The children were found just over there,” he grumbles, pointing back the way you came. “Not sure why it matters, but I’ll tell you: the girl who was burnt, she kept smoldering until the next day. Coroner couldn’t explain it.” Benjamin resumes digging through his pockets, but seems a little shaken.\n|||
+EventBenBeforeReadPageWhereOverload1.button1,{qst:continue}
+EventBenBeforeReadPageWhereTiePoint.text,
+EventBenBeforeReadPageWhereTiePoint.button1,
+EventBenBeforeExpr31.text,
+EventBenBeforeExpr31.button1,
+EventBenBeforeReadPageWhereAfterLet1.text,
+EventBenBeforeReadPageWhereAfterLet1.button1,
+EventBenBeforeExpr32.text,
+EventBenBeforeExpr32.button1,
+EventBenBeforeExpr33.text,
+EventBenBeforeExpr33.button1,
+EventBenBeforeExpr34.text,
+EventBenBeforeExpr34.button1,
+EventBenBeforeReadPageWhereAfterLet2.text,
+EventBenBeforeReadPageWhereAfterLet2.button1,
+EventBenBeforeReadPageWhereAfterTrigger3.text,
+EventBenBeforeReadPageWhereAfterTrigger3.button1,
+EventBenBeforeExpr35.text,
+EventBenBeforeExpr35.button1,
+EventBenBeforeExpr36.text,
+EventBenBeforeExpr36.button1,
+EventBenBeforeExpr38.text,
 EventBenBeforeExpr38.button1,
-EventBenBeforeReadPageWhyDisplay.text,|||\nEventBenBeforeReadPageWhyDisplay @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhyDisplay.button1,
-EventBenBeforeReadPageWhyOverload1.text,|||\nEventBenBeforeReadPageWhyOverload1 @(-1,-1)\n\n“That’s none of your concern,” he snaps.\n\nYou startle at his abrupt response. You and all investigators in your space suffer 1 facedown horror ({will} negates).\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhyOverload1.button1,{qst:continue}
-EventBenBeforeReadPageWhyTiePoint.text,|||\nEventBenBeforeReadPageWhyTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhyTiePoint.button1,
-EventBenBeforeExpr41.text,|||\nEventBenBeforeExpr41 @(158,19)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr41.button1,
-EventBenBeforeReadPageWhyAfterLet1.text,|||\nEventBenBeforeReadPageWhyAfterLet1 @(158,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhyAfterLet1.button1,
-EventBenBeforeExpr42.text,|||\nEventBenBeforeExpr42 @(159,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr42.button1,
-EventBenBeforeExpr43.text,|||\nEventBenBeforeExpr43 @(159,40)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr43.button1,
-EventBenBeforeExpr44.text,|||\nEventBenBeforeExpr44 @(159,21)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr44.button1,
-EventBenBeforeReadPageWhyAfterLet2.text,|||\nEventBenBeforeReadPageWhyAfterLet2 @(159,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhyAfterLet2.button1,
-EventBenBeforeReadPageWhyAfterTrigger3.text,|||\nEventBenBeforeReadPageWhyAfterTrigger3 @(160,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhyAfterTrigger3.button1,
-EventBenBeforeExpr45.text,|||\nEventBenBeforeExpr45 @(161,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr45.button1,
-EventBenBeforeExpr46.text,|||\nEventBenBeforeExpr46 @(161,25)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr46.button1,
-EventBenBeforeExpr47.text,|||\nEventBenBeforeExpr47 @(161,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr47.button1,
-EventBenBeforeReadPageWhyAfterGoto14.text,|||\nEventBenBeforeReadPageWhyAfterGoto14 @(161,32)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhyAfterGoto14.button1,
-EventBenBeforeReadPageWhyEnd.text,|||\nEventBenBeforeReadPageWhyEnd @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhyEnd.button1,
-EventBenBeforeExpr48.text,|||\nEventBenBeforeExpr48 @(161,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr48.button1,
-EventBenBeforeReadPageWhyBase.text,|||\nEventBenBeforeReadPageWhyBase @(-1,-1)\n\n“Well, we tried right after the... trouble. No one would even come to look at it back then, but our, um, priest, told us now is the right time.”\n\nGain 1 {clue}.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageWhyBase.button1,{qst:continue}
-EventBenBeforeExpr40.text,|||\nEventBenBeforeExpr40 @(145,5)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr37.text,
+EventBenBeforeExpr37.button1,
+EventBenBeforeReadPageWhereAfterGoto15.text,
+EventBenBeforeReadPageWhereAfterGoto15.button1,
+EventBenBeforeReadPageWhereEnd.text,
+EventBenBeforeReadPageWhereEnd.button1,
+EventBenBeforeExpr39.text,
+EventBenBeforeExpr39.button1,
+EventBenBeforeReadPageWhereBase.text,|||\n“The children were found just over there,” he says, pointing back the way you came. “They were in a pile; the girl’s body was still smoking from the burns. Strangest thing: she kept smoking until the next day. Coroner wasn’t able to explain it. No one was.\n\n“Our family has lived here for generations–many of them in this house. We’re upset to let it go, but no one lives here... or wants to after what happened.”\n\nGain 1 {clue}.\n\nBenjamin resumes searching his pockets, but seems a little shaken.\n|||
+EventBenBeforeReadPageWhereBase.button1,{qst:continue}
+EventBenBeforeExpr30.text,
+EventBenBeforeExpr30.button1,
+EventBenBeforeReadPageWhyXferIfTriggered.text,
+EventBenBeforeReadPageWhyXferIfTriggered.button1,
+EventBenBeforeReadPageWhy.text,
+EventBenBeforeReadPageWhy.button1,
+EventBenBeforeReadPageWhyTestFinished.text,
+EventBenBeforeReadPageWhyTestFinished.button1,
+EventBenBeforeExpr40.text,
 EventBenBeforeExpr40.button1,
-EventBenBeforeReadPageSorryXferIfTriggered.text,|||\nEventBenBeforeReadPageSorryXferIfTriggered @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageSorryXferIfTriggered.button1,
-EventBenBeforeReadPageSorry.text,|||\nEventBenBeforeReadPageSorry @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageSorry.button1,
-EventBenBeforeReadPageSorryTestFinished.text,|||\nEventBenBeforeReadPageSorryTestFinished @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageSorryTestFinished.button1,
-EventBenBeforeReadPageSorryDisplay.text,|||\nEventBenBeforeReadPageSorryDisplay @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageSorryDisplay.button1,
-EventBenBeforeReadPageSorryBase.text,|||\nEventBenBeforeReadPageSorryBase @(-1,-1)\n\n“You should be more careful. The house is old and in poor repair.” His shoulders rise for a moment, then fall as he sighs. “No real harm done... the gate can be repaired... again.”\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageSorryBase.button1,{qst:continue}
-EventBenBeforeReadPageSorryTiePoint.text,|||\nEventBenBeforeReadPageSorryTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeReadPageSorryTiePoint.button1,
-EventBenBeforeExpr50.text,|||\nEventBenBeforeExpr50 @(179,27)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr42.text,
+EventBenBeforeExpr42.button1,
+EventBenBeforeExpr41.text,
+EventBenBeforeExpr41.button1,
+EventBenBeforeReadPageWhyDisplay.text,
+EventBenBeforeReadPageWhyDisplay.button1,
+EventBenBeforeReadPageWhyOverload1.text,|||\n“That’s none of your concern,” he snaps.\n\nYou startle at his abrupt response. You and all investigators in your space suffer 1 facedown horror ({will} negates).\n|||
+EventBenBeforeReadPageWhyOverload1.button1,{qst:continue}
+EventBenBeforeReadPageWhyTiePoint.text,
+EventBenBeforeReadPageWhyTiePoint.button1,
+EventBenBeforeExpr44.text,
+EventBenBeforeExpr44.button1,
+EventBenBeforeReadPageWhyAfterLet1.text,
+EventBenBeforeReadPageWhyAfterLet1.button1,
+EventBenBeforeExpr45.text,
+EventBenBeforeExpr45.button1,
+EventBenBeforeExpr46.text,
+EventBenBeforeExpr46.button1,
+EventBenBeforeExpr47.text,
+EventBenBeforeExpr47.button1,
+EventBenBeforeReadPageWhyAfterLet2.text,
+EventBenBeforeReadPageWhyAfterLet2.button1,
+EventBenBeforeReadPageWhyAfterTrigger3.text,
+EventBenBeforeReadPageWhyAfterTrigger3.button1,
+EventBenBeforeExpr48.text,
+EventBenBeforeExpr48.button1,
+EventBenBeforeExpr49.text,
+EventBenBeforeExpr49.button1,
+EventBenBeforeExpr51.text,
+EventBenBeforeExpr51.button1,
+EventBenBeforeExpr50.text,
 EventBenBeforeExpr50.button1,
-EventBenBeforeReadPageSorryAfterLet1.text,|||\nEventBenBeforeReadPageSorryAfterLet1 @(179,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageWhyAfterGoto16.text,
+EventBenBeforeReadPageWhyAfterGoto16.button1,
+EventBenBeforeReadPageWhyEnd.text,
+EventBenBeforeReadPageWhyEnd.button1,
+EventBenBeforeExpr52.text,
+EventBenBeforeExpr52.button1,
+EventBenBeforeReadPageWhyBase.text,|||\n“Well, we tried right after the... trouble. No one would even come to look at it back then, but our, um, priest, told us now is the right time.”\n\nGain 1 {clue}.\n|||
+EventBenBeforeReadPageWhyBase.button1,{qst:continue}
+EventBenBeforeExpr43.text,
+EventBenBeforeExpr43.button1,
+EventBenBeforeReadPageSorryXferIfTriggered.text,
+EventBenBeforeReadPageSorryXferIfTriggered.button1,
+EventBenBeforeReadPageSorry.text,
+EventBenBeforeReadPageSorry.button1,
+EventBenBeforeReadPageSorryTestFinished.text,
+EventBenBeforeReadPageSorryTestFinished.button1,
+EventBenBeforeReadPageSorryDisplay.text,
+EventBenBeforeReadPageSorryDisplay.button1,
+EventBenBeforeReadPageSorryBase.text,|||\n“You should be more careful. The house is old and in poor repair.” His shoulders rise for a moment, then fall as he sighs. “No real harm done... the gate can be repaired... again.”\n|||
+EventBenBeforeReadPageSorryBase.button1,{qst:continue}
+EventBenBeforeReadPageSorryTiePoint.text,
+EventBenBeforeReadPageSorryTiePoint.button1,
+EventBenBeforeExpr54.text,
+EventBenBeforeExpr54.button1,
+EventBenBeforeReadPageSorryAfterLet1.text,
 EventBenBeforeReadPageSorryAfterLet1.button1,
-EventBenBeforeReadPageSorryEnd.text,|||\nEventBenBeforeReadPageSorryEnd @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPageSorryEnd.text,
 EventBenBeforeReadPageSorryEnd.button1,
-EventBenBeforeToc.text,|||\nEventBenBeforeToc @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeToc.text,
 EventBenBeforeToc.button1,
-EventBenBeforeTocSelector.text,|||\nEventBenBeforeTocSelector @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeTocSelector.text,
 EventBenBeforeTocSelector.button1,
-EventBenBeforeToc0.text,|||\nEventBenBeforeToc0 @(-1,-1)\n\nBenjamin is digging around in his pockets. You think you hear him mutter something about a key.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeToc0.text,|||\nBenjamin is digging around in his pockets. You think you hear him mutter something about a key.\n|||
 EventBenBeforeToc0.button1,{action} “How long will it take us to look through the house?”
 EventBenBeforeToc0.button2,{action} “What do you think happened to those children?”
 EventBenBeforeToc0.button3,{action} “Where were those children found?”
 EventBenBeforeToc0.button4,{action} “Why did you wait so long to sell the house?”
 EventBenBeforeToc0.button5,{action} “I’m sorry about the gate.”
 EventBenBeforeToc0.button6,{qst:cancel}
-EventBenBeforeToc1.text,|||\nEventBenBeforeToc1 @(-1,-1)\n\nAs he digs through his pockets, he is grumbling something about the size of the house and you catch the word... “indolent”?\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeToc1.text,|||\nAs he digs through his pockets, he is grumbling something about the size of the house and you catch the word... “indolent”?\n|||
 EventBenBeforeToc1.button1,{action} “How long will it take us to look through the house?”
 EventBenBeforeToc1.button2,{action} “What do you think happened to those children?”
 EventBenBeforeToc1.button3,{action} “Where were those children found?”
 EventBenBeforeToc1.button4,{action} “Why did you wait so long to sell the house?”
 EventBenBeforeToc1.button5,{action} “I’m sorry about the gate.”
 EventBenBeforeToc1.button6,{qst:cancel}
-EventBenBeforeToc2.text,|||\nEventBenBeforeToc2 @(-1,-1)\n\nBenjamin is still digging through his pockets. You hear him mutter about paying attention and minding your own business.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeToc2.text,|||\nBenjamin is still digging through his pockets. You hear him mutter about paying attention and minding your own business.\n|||
 EventBenBeforeToc2.button1,{action} “How long will it take us to look through the house?”
 EventBenBeforeToc2.button2,{action} “What do you think happened to those children?”
 EventBenBeforeToc2.button3,{action} “Where were those children found?”
 EventBenBeforeToc2.button4,{action} “Why did you wait so long to sell the house?”
 EventBenBeforeToc2.button5,{action} “I’m sorry about the gate.”
 EventBenBeforeToc2.button6,{qst:cancel}
-EventBenBeforeToc3.text,|||\nEventBenBeforeToc3 @(-1,-1)\n\nBenjamin is still looking through his pockets, but he’s moving slower and looks upset. You wonder what his connection is to those children.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeToc3.text,|||\nBenjamin is still looking through his pockets, but he’s moving slower and looks upset. You wonder what his connection is to those children.\n|||
 EventBenBeforeToc3.button1,{action} “How long will it take us to look through the house?”
 EventBenBeforeToc3.button2,{action} “What do you think happened to those children?”
 EventBenBeforeToc3.button3,{action} “Where were those children found?”
 EventBenBeforeToc3.button4,{action} “Why did you wait so long to sell the house?”
 EventBenBeforeToc3.button5,{action} “I’m sorry about the gate.”
 EventBenBeforeToc3.button6,{qst:cancel}
-EventBenBeforeToc4.text,|||\nEventBenBeforeToc4 @(-1,-1)\n\nBenjamin is looking around on the ground like maybe he dropped whatever he’s looking for. <i>Could it be a book instead of a key?</i> you wonder to yourself.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeToc4.text,|||\nBenjamin is looking around on the ground like maybe he dropped whatever he’s looking for. <i>Could it be a book instead of a key?</i> you wonder to yourself.\n|||
 EventBenBeforeToc4.button1,{action} “How long will it take us to look through the house?”
 EventBenBeforeToc4.button2,{action} “What do you think happened to those children?”
 EventBenBeforeToc4.button3,{action} “Where were those children found?”
 EventBenBeforeToc4.button4,{action} “Why did you wait so long to sell the house?”
 EventBenBeforeToc4.button5,{action} “I’m sorry about the gate.”
 EventBenBeforeToc4.button6,{qst:cancel}
-EventBenBeforeToc5.text,|||\nEventBenBeforeToc5 @(-1,-1)\n\nBenjamin still doesn’t look happy, but he doesn’t seem as angry now.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeToc5.text,|||\nBenjamin still doesn’t look happy, but he doesn’t seem as angry now.\n|||
 EventBenBeforeToc5.button1,{action} “How long will it take us to look through the house?”
 EventBenBeforeToc5.button2,{action} “What do you think happened to those children?”
 EventBenBeforeToc5.button3,{action} “Where were those children found?”
 EventBenBeforeToc5.button4,{action} “Why did you wait so long to sell the house?”
 EventBenBeforeToc5.button5,{action} “I’m sorry about the gate.”
 EventBenBeforeToc5.button6,{qst:cancel}
-EventBenBeforeTocTiePoint.text,|||\nEventBenBeforeTocTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeTocTiePoint.text,
 EventBenBeforeTocTiePoint.button1,
-EventBenBeforeTocIsFinished.text,|||\nEventBenBeforeTocIsFinished @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeTocIsFinished.text,
 EventBenBeforeTocIsFinished.button1,
-EventBenBeforeExpr53.text,|||\nEventBenBeforeExpr53 @(165,2)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
-EventBenBeforeExpr53.button1,
-EventBenBeforeReadPageProlog.text,|||\nEventBenBeforeReadPageProlog @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeExpr57.text,
+EventBenBeforeExpr57.button1,
+EventBenBeforeReadPageProlog.text,
 EventBenBeforeReadPageProlog.button1,
-EventBenBeforeReadPagePrologTestFinished.text,|||\nEventBenBeforeReadPagePrologTestFinished @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPagePrologTestFinished.text,
 EventBenBeforeReadPagePrologTestFinished.button1,
-EventBenBeforeReadPagePrologDisplay.text,|||\nEventBenBeforeReadPagePrologDisplay @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPagePrologDisplay.text,
 EventBenBeforeReadPagePrologDisplay.button1,
-EventBenBeforeReadPagePrologBase.text,|||\nEventBenBeforeReadPagePrologBase @(-1,-1)\n\nBenjamin is digging around in his pockets. You think you hear him mutter something about a key.\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPagePrologBase.text,|||\nBenjamin is digging around in his pockets. You think you hear him mutter something about a key.\n|||
 EventBenBeforeReadPagePrologBase.button1,{qst:continue}
-EventBenBeforeReadPagePrologTiePoint.text,|||\nEventBenBeforeReadPagePrologTiePoint @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPagePrologTiePoint.text,
 EventBenBeforeReadPagePrologTiePoint.button1,
-EventBenBeforeReadPagePrologEnd.text,|||\nEventBenBeforeReadPagePrologEnd @(-1,-1)\n\n\n\nprev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}\n|||
+EventBenBeforeReadPagePrologEnd.text,
 EventBenBeforeReadPagePrologEnd.button1,
+EventPlaceDiningRoomStart.text,
+EventPlaceDiningRoomStart.button1,
+EventPlaceDiningRoomInit.text,
+EventPlaceDiningRoomInit.button1,
+EventPlaceDiningRoomFirstTimeInitializer.text,
+EventPlaceDiningRoomFirstTimeInitializer.button1,
+EventExploreKitchenExpr3.text,
+EventExploreKitchenExpr3.button1,
+EventExploreKitchenExpr4.text,
+EventExploreKitchenExpr4.button1,
+EventPlaceDiningRoomExpr8.text,
+EventPlaceDiningRoomExpr8.button1,
+EventPlaceDiningRoomExpr10.text,
+EventPlaceDiningRoomExpr10.button1,
+EventPlaceDiningRoomExpr9.text,
+EventPlaceDiningRoomExpr9.button1,
+EventExploreKitchenExpr5.text,
+EventExploreKitchenExpr5.button1,
+EventPlaceDiningRoomTriggerPrologSelector.text,
+EventPlaceDiningRoomTriggerPrologSelector.button1,
+EventPlaceDiningRoomTriggerSelector.text,
+EventPlaceDiningRoomTriggerSelector.button1,
+EventPlaceDiningRoomReadPageLockedXferIfTriggered.text,
+EventPlaceDiningRoomReadPageLockedXferIfTriggered.button1,
+EventPlaceDiningRoomReadPageLocked.text,
+EventPlaceDiningRoomReadPageLocked.button1,
+EventPlaceDiningRoomReadPageLockedDisplay.text,
+EventPlaceDiningRoomReadPageLockedDisplay.button1,
+EventPlaceDiningRoomReadPageLockedBase.text,|||\nThe door is filthy. You check the knob, but it’s locked: you’ll need a key to get in.\n|||
+EventPlaceDiningRoomReadPageLockedBase.button1,{qst:continue}
+EventPlaceDiningRoomReadPageLockedTiePoint.text,
+EventPlaceDiningRoomReadPageLockedTiePoint.button1,
+EventPlaceDiningRoomReadPageLockedAfterMark1.text,
+EventPlaceDiningRoomReadPageLockedAfterMark1.button1,
+EventPlaceDiningRoomReadPageLockedAfterGoto17.text,
+EventPlaceDiningRoomReadPageLockedAfterGoto17.button1,
+EventPlaceDiningRoomEnd.text,
+EventPlaceDiningRoomEnd.button1,
+EventPlaceDiningRoomReadPageOpenDoorXferIfTriggered.text,
+EventPlaceDiningRoomReadPageOpenDoorXferIfTriggered.button1,
+EventPlaceDiningRoomReadPageOpenDoor.text,
+EventPlaceDiningRoomReadPageOpenDoor.button1,
+EventPlaceDiningRoomReadPageOpenDoorBeforeAddRemove1.text,
+EventPlaceDiningRoomReadPageOpenDoorBeforeAddRemove1.button1,
+EventPlaceDiningRoomReadPageOpenDoorBeforeAddRemove2.text,
+EventPlaceDiningRoomReadPageOpenDoorBeforeAddRemove2.button1,
+EventPlaceDiningRoomReadPageOpenDoorDisplay.text,
+EventPlaceDiningRoomReadPageOpenDoorDisplay.button1,
+EventPlaceDiningRoomReadPageOpenDoorBase.text,|||\n“Ah! Here’s the key,” Benjamin exclaims. He steps up to the door and unlocks it. A surprising amount of dirt falls as he pushes it open.\n\nThe door creaks open and you see what looks like the servants’ dining room. The room makes the yard look orderly. Heaps of rubbish and broken glassware are strewn about the room.\n\nPlace the {c:TileDiningRoom} tile and door as indicated, then remove this Explore token.\n|||
+EventPlaceDiningRoomReadPageOpenDoorBase.button1,{qst:continue}
+EventPlaceDiningRoomReadPageOpenDoorTiePoint.text,
+EventPlaceDiningRoomReadPageOpenDoorTiePoint.button1,
+EventPlaceDiningRoomExpr6.text,
+EventPlaceDiningRoomExpr6.button1,
+EventPlaceDiningRoomReadPageOpenDoorAfterLet1.text,
+EventPlaceDiningRoomReadPageOpenDoorAfterLet1.button1,
+EventPlaceDiningRoomReadPageOpenDoorAfterTrigger2.text,
+EventPlaceDiningRoomReadPageOpenDoorAfterTrigger2.button1,
+EventPlaceDiningRoomReadPageOpenDoorEnd.text,
+EventPlaceDiningRoomReadPageOpenDoorEnd.button1,
+EventPlaceDiningRoomTiePoint.text,
+EventPlaceDiningRoomTiePoint.button1,
+EventPlaceDiningRoomLoopBack.text,
+EventPlaceDiningRoomLoopBack.button1,
+EventPlaceDiningRoomReadPageKitchenXferIfTriggered.text,
+EventPlaceDiningRoomReadPageKitchenXferIfTriggered.button1,
+EventPlaceDiningRoomReadPageKitchen.text,
+EventPlaceDiningRoomReadPageKitchen.button1,
+EventPlaceDiningRoomReadPageKitchenBeforeAddRemove1.text,
+EventPlaceDiningRoomReadPageKitchenBeforeAddRemove1.button1,
+EventPlaceDiningRoomReadPageKitchenDisplay.text,
+EventPlaceDiningRoomReadPageKitchenDisplay.button1,
+EventPlaceDiningRoomReadPageKitchenBase.text,|||\nTo the right, a doorway opens to the kitchen. Place an Explore token as indicated.\n|||
+EventPlaceDiningRoomReadPageKitchenBase.button1,{qst:continue}
+EventPlaceDiningRoomReadPageKitchenTiePoint.text,
+EventPlaceDiningRoomReadPageKitchenTiePoint.button1,
+EventPlaceDiningRoomReadPageKitchenEnd.text,
+EventPlaceDiningRoomReadPageKitchenEnd.button1,
+EventPlaceDiningRoomReadPageOtherExploresXferIfTriggered.text,
+EventPlaceDiningRoomReadPageOtherExploresXferIfTriggered.button1,
+EventPlaceDiningRoomReadPageOtherExplores.text,
+EventPlaceDiningRoomReadPageOtherExplores.button1,
+EventPlaceDiningRoomReadPageOtherExploresBeforeAddRemove1.text,
+EventPlaceDiningRoomReadPageOtherExploresBeforeAddRemove1.button1,
+EventPlaceDiningRoomReadPageOtherExploresDisplay.text,
+EventPlaceDiningRoomReadPageOtherExploresDisplay.button1,
+EventPlaceDiningRoomReadPageOtherExploresBase.text,|||\nTwo other doors lead farther into the house. Place Explore tokens as indicated.\n|||
+EventPlaceDiningRoomReadPageOtherExploresBase.button1,{qst:continue}
+EventPlaceDiningRoomReadPageOtherExploresTiePoint.text,
+EventPlaceDiningRoomReadPageOtherExploresTiePoint.button1,
+EventPlaceDiningRoomReadPageOtherExploresEnd.text,
+EventPlaceDiningRoomReadPageOtherExploresEnd.button1,
+EventPlaceDiningRoomReadPageFluxStabilizerXferIfTriggered.text,
+EventPlaceDiningRoomReadPageFluxStabilizerXferIfTriggered.button1,
+EventPlaceDiningRoomReadPageFluxStabilizer.text,
+EventPlaceDiningRoomReadPageFluxStabilizer.button1,
+EventPlaceDiningRoomReadPageFluxStabilizerBeforeAddRemove1.text,
+EventPlaceDiningRoomReadPageFluxStabilizerBeforeAddRemove1.button1,
+EventPlaceDiningRoomReadPageFluxStabilizerDisplay.text,
+EventPlaceDiningRoomReadPageFluxStabilizerDisplay.button1,
+EventPlaceDiningRoomReadPageFluxStabilizerBase.text,|||\nAn odd-looking device sits on the table. Place a Search token as indicated.\n|||
+EventPlaceDiningRoomReadPageFluxStabilizerBase.button1,{qst:continue}
+EventPlaceDiningRoomReadPageFluxStabilizerTiePoint.text,
+EventPlaceDiningRoomReadPageFluxStabilizerTiePoint.button1,
+EventPlaceDiningRoomReadPageFluxStabilizerEnd.text,
+EventPlaceDiningRoomReadPageFluxStabilizerEnd.button1,
+EventPlaceDiningRoomReadPagePaperXferIfTriggered.text,
+EventPlaceDiningRoomReadPagePaperXferIfTriggered.button1,
+EventPlaceDiningRoomReadPagePaper.text,
+EventPlaceDiningRoomReadPagePaper.button1,
+EventPlaceDiningRoomReadPagePaperBeforeAddRemove1.text,
+EventPlaceDiningRoomReadPagePaperBeforeAddRemove1.button1,
+EventPlaceDiningRoomReadPagePaperDisplay.text,
+EventPlaceDiningRoomReadPagePaperDisplay.button1,
+EventPlaceDiningRoomReadPagePaperBase.text,|||\nThere’s a box in the corner that was packed carelessly. Place a Search token as indicated.\n|||
+EventPlaceDiningRoomReadPagePaperBase.button1,{qst:continue}
+EventPlaceDiningRoomReadPagePaperTiePoint.text,
+EventPlaceDiningRoomReadPagePaperTiePoint.button1,
+EventPlaceDiningRoomExpr7.text,
+EventPlaceDiningRoomExpr7.button1,
+EventPlaceDiningRoomReadPagePaperAfterTrigger1.text,
+EventPlaceDiningRoomReadPagePaperAfterTrigger1.button1,
+EventPlaceDiningRoomReadPagePaperEnd.text,
+EventPlaceDiningRoomReadPagePaperEnd.button1,
+EventPlaceDiningRoomReadPageJournalXferIfTriggered.text,
+EventPlaceDiningRoomReadPageJournalXferIfTriggered.button1,
+EventPlaceDiningRoomReadPageJournal.text,
+EventPlaceDiningRoomReadPageJournal.button1,
+EventPlaceDiningRoomReadPageJournalDisplay.text,
+EventPlaceDiningRoomReadPageJournalDisplay.button1,
+EventPlaceDiningRoomReadPageJournalBase.text,|||\nAs you walk into the house, you remember the book in the driveway and glance back toward the gate as you step inside. {c:EventChosenInvesigator} moves 1 space into the {c:TileDiningRoom}.\n|||
+EventPlaceDiningRoomReadPageJournalBase.button1,{qst:continue}
+EventPlaceDiningRoomReadPageJournalTiePoint.text,
+EventPlaceDiningRoomReadPageJournalTiePoint.button1,
+EventPlaceDiningRoomReadPageJournalEnd.text,
+EventPlaceDiningRoomReadPageJournalEnd.button1,
+EventPlaceDiningRoomToc.text,
+EventPlaceDiningRoomToc.button1,
+EventPlaceDiningRoomTocSelector.text,
+EventPlaceDiningRoomTocSelector.button1,
+EventPlaceDiningRoomTocPrologProxyLocked.text,
+EventPlaceDiningRoomTocPrologProxyLocked.button1,
+EventPlaceDiningRoomTocPrologLocked.text,
+EventPlaceDiningRoomTocPrologLocked.button1,
+EventPlaceDiningRoomTocPrologProxyOpenDoor.text,
+EventPlaceDiningRoomTocPrologProxyOpenDoor.button1,
+EventPlaceDiningRoomTocPrologOpenDoor.text,
+EventPlaceDiningRoomTocPrologOpenDoor.button1,
+EventPlaceDiningRoomTocPrologProxyKitchen.text,
+EventPlaceDiningRoomTocPrologProxyKitchen.button1,
+EventPlaceDiningRoomTocPrologKitchen.text,
+EventPlaceDiningRoomTocPrologKitchen.button1,
+EventPlaceDiningRoomTocPrologProxyOtherExplores.text,
+EventPlaceDiningRoomTocPrologProxyOtherExplores.button1,
+EventPlaceDiningRoomTocPrologOtherExplores.text,
+EventPlaceDiningRoomTocPrologOtherExplores.button1,
+EventPlaceDiningRoomTocPrologProxyFluxStabilizer.text,
+EventPlaceDiningRoomTocPrologProxyFluxStabilizer.button1,
+EventPlaceDiningRoomTocPrologFluxStabilizer.text,
+EventPlaceDiningRoomTocPrologFluxStabilizer.button1,
+EventPlaceDiningRoomTocPrologProxyPaper.text,
+EventPlaceDiningRoomTocPrologProxyPaper.button1,
+EventPlaceDiningRoomTocPrologPaper.text,
+EventPlaceDiningRoomTocPrologPaper.button1,
+EventPlaceDiningRoomTocPrologProxyJournal.text,
+EventPlaceDiningRoomTocPrologProxyJournal.button1,
+EventPlaceDiningRoomTocPrologJournal.text,
+EventPlaceDiningRoomTocPrologJournal.button1,
+EventPlaceDiningRoomTocNoPagesAvailable.text,
+EventPlaceDiningRoomTocNoPagesAvailable.button1,
+EventPlaceDiningRoomExpr11.text,
+EventPlaceDiningRoomExpr11.button1,
+EventPlaceDiningRoomReadPageLockedTrigger.text,
+EventPlaceDiningRoomReadPageLockedTrigger.button1,
+EventPlaceDiningRoomReadPageOpenDoorTrigger.text,
+EventPlaceDiningRoomReadPageOpenDoorTrigger.button1,
+EventPlaceDiningRoomExpr1.text,
+EventPlaceDiningRoomExpr1.button1,
+EventPlaceDiningRoomExpr2.text,
+EventPlaceDiningRoomExpr2.button1,
+EventPlaceDiningRoomExpr4.text,
+EventPlaceDiningRoomExpr4.button1,
+EventPlaceDiningRoomExpr3.text,
+EventPlaceDiningRoomExpr3.button1,
+EventPlaceDiningRoomReadPageOpenDoorTriggerFail.text,
+EventPlaceDiningRoomReadPageOpenDoorTriggerFail.button1,
+EventPlaceDiningRoomExpr5.text,
+EventPlaceDiningRoomExpr5.button1,
+EventSearchDiningRoomStart.text,
+EventSearchDiningRoomStart.button1,
+EventSearchDiningRoomInit.text,
+EventSearchDiningRoomInit.button1,
+EventSearchDiningRoomFirstTimeInitializer.text,
+EventSearchDiningRoomFirstTimeInitializer.button1,
+EventExploreKitchenExpr6.text,
+EventExploreKitchenExpr6.button1,
+EventExploreKitchenExpr7.text,
+EventExploreKitchenExpr7.button1,
+EventSearchDiningRoomExpr15.text,
+EventSearchDiningRoomExpr15.button1,
+EventExploreKitchenExpr8.text,
+EventExploreKitchenExpr8.button1,
+EventSearchDiningRoomExpr16.text,
+EventSearchDiningRoomExpr16.button1,
+EventExploreKitchenExpr9.text,
+EventExploreKitchenExpr9.button1,
+EventExploreKitchenExpr10.text,
+EventExploreKitchenExpr10.button1,
+EventExploreKitchenExpr11.text,
+EventExploreKitchenExpr11.button1,
+EventExploreKitchenExpr12.text,
+EventExploreKitchenExpr12.button1,
+EventExploreKitchenExpr13.text,
+EventExploreKitchenExpr13.button1,
+EventExploreKitchenExpr14.text,
+EventExploreKitchenExpr14.button1,
+EventExploreKitchenExpr15.text,
+EventExploreKitchenExpr15.button1,
+EventExploreKitchenExpr16.text,
+EventExploreKitchenExpr16.button1,
+EventExploreKitchenExpr17.text,
+EventExploreKitchenExpr17.button1,
+EventExploreKitchenExpr18.text,
+EventExploreKitchenExpr18.button1,
+EventExploreKitchenExpr19.text,
+EventExploreKitchenExpr19.button1,
+EventExploreKitchenExpr20.text,
+EventExploreKitchenExpr20.button1,
+EventExploreKitchenExpr21.text,
+EventExploreKitchenExpr21.button1,
+EventExploreKitchenExpr22.text,
+EventExploreKitchenExpr22.button1,
+EventExploreKitchenExpr23.text,
+EventExploreKitchenExpr23.button1,
+EventExploreKitchenExpr24.text,
+EventExploreKitchenExpr24.button1,
+EventExploreKitchenExpr25.text,
+EventExploreKitchenExpr25.button1,
+EventExploreKitchenExpr26.text,
+EventExploreKitchenExpr26.button1,
+EventExploreKitchenExpr27.text,
+EventExploreKitchenExpr27.button1,
+EventSearchDiningRoomTriggerPrologSelector.text,
+EventSearchDiningRoomTriggerPrologSelector.button1,
+EventSearchDiningRoomReadPageStartFluxStabilizerTriggeredPrologTarget.text,
+EventSearchDiningRoomReadPageStartFluxStabilizerTriggeredPrologTarget.button1,
+EventSearchDiningRoomTocPrologStartFluxStabilizer.text,|||\nA small device with gears, hoses, and lights sits on the table.\n|||
+EventSearchDiningRoomTocPrologStartFluxStabilizer.button1,{action} Search
+EventSearchDiningRoomTocPrologStartFluxStabilizer.button2,{qst:cancel}
+EventSearchDiningRoomReadPageStartFluxStabilizer.text,
+EventSearchDiningRoomReadPageStartFluxStabilizer.button1,
+EventSearchDiningRoomExpr4.text,
+EventSearchDiningRoomExpr4.button1,
+EventSearchDiningRoomReadPageStartFluxStabilizerBeforeTrigger1.text,
+EventSearchDiningRoomReadPageStartFluxStabilizerBeforeTrigger1.button1,
+EventSearchDiningRoomReadPageStartFluxStabilizerDisplay.text,
+EventSearchDiningRoomReadPageStartFluxStabilizerDisplay.button1,
+EventSearchDiningRoomReadPageStartFluxStabilizerBase.text,|||\nAs you reach down to pick it up, the device sparks and booms, generating a pressure wave that pushes all investigators–including you–1 space away from the device.\n\n{c:EventChosenInvestigator} recovers first and stands back up. As they approach the device, nothing happens. Move {c:EventChosenInvestigator} into the device’s space.\n\nThe other investigators are wary of this device and will avoid it at all costs. When it is not held by {c:EventChosenInvestigator}, no other investigator can stay in its space. Fear makes them move away immediately.\n|||
+EventSearchDiningRoomReadPageStartFluxStabilizerBase.button1,{qst:continue}
+EventSearchDiningRoomReadPageStartFluxStabilizerTiePoint.text,
+EventSearchDiningRoomReadPageStartFluxStabilizerTiePoint.button1,
+EventSearchDiningRoomExpr5.text,
+EventSearchDiningRoomExpr5.button1,
+EventSearchDiningRoomExpr6.text,
+EventSearchDiningRoomExpr6.button1,
+EventSearchDiningRoomExpr7.text,
+EventSearchDiningRoomExpr7.button1,
+EventSearchDiningRoomReadPageStartFluxStabilizerAfterLet1.text,
+EventSearchDiningRoomReadPageStartFluxStabilizerAfterLet1.button1,
+EventSearchDiningRoomExpr9.text,
+EventSearchDiningRoomExpr9.button1,
+EventSearchDiningRoomExpr10.text,
+EventSearchDiningRoomExpr10.button1,
+EventSearchDiningRoomExpr12.text,
+EventSearchDiningRoomExpr12.button1,
+EventSearchDiningRoomExpr11.text,
+EventSearchDiningRoomExpr11.button1,
+EventSearchDiningRoomExpr8.text,
+EventSearchDiningRoomExpr8.button1,
+EventSearchDiningRoomReadPageStartFluxStabilizerAfterLet2.text,
+EventSearchDiningRoomReadPageStartFluxStabilizerAfterLet2.button1,
+EventSearchDiningRoomExpr14.text,
+EventSearchDiningRoomExpr14.button1,
+EventSearchDiningRoomReadPageStartFluxStabilizerAfterLet3.text,
+EventSearchDiningRoomReadPageStartFluxStabilizerAfterLet3.button1,
+EventSearchDiningRoomReadPageStartFluxStabilizerEnd.text,
+EventSearchDiningRoomReadPageStartFluxStabilizerEnd.button1,
+EventSearchDiningRoomTiePoint.text,
+EventSearchDiningRoomTiePoint.button1,
+EventSearchDiningRoomLoopBack.text,
+EventSearchDiningRoomLoopBack.button1,
+EventSearchDiningRoomEnd.text,
+EventSearchDiningRoomEnd.button1,
+EventSearchDiningRoomExpr13.text,
+EventSearchDiningRoomExpr13.button1,
+EventSearchDiningRoomReadPagePuzzle1TriggeredPrologTarget.text,
+EventSearchDiningRoomReadPagePuzzle1TriggeredPrologTarget.button1,
+EventSearchDiningRoomTocPrologPuzzle1.text,|||\nThere seems to be a control panel. Maybe you can restart it? You reach down and begin to fiddle with the buttons and dials.\n\n{c:EventChosenInvestigator} may attempt the puzzle using {lore}.\n|||
+EventSearchDiningRoomTocPrologPuzzle1.button1,{action} Attempt puzzle
+EventSearchDiningRoomTocPrologPuzzle1.button2,{qst:cancel}
+EventSearchDiningRoomReadPagePuzzle1.text,
+EventSearchDiningRoomReadPagePuzzle1.button1,
+EventSearchDiningRoomReadPagePuzzle1Display.text,
+EventSearchDiningRoomReadPagePuzzle1Display.button1,
+EventSearchDiningRoomReadPagePuzzle1TiePoint.text,
+EventSearchDiningRoomReadPagePuzzle1TiePoint.button1,
+EventSearchDiningRoomReadPagePuzzle1AfterTrigger1.text,
+EventSearchDiningRoomReadPagePuzzle1AfterTrigger1.button1,
+EventSearchDiningRoomExpr27.text,
+EventSearchDiningRoomExpr27.button1,
+EventSearchDiningRoomReadPagePuzzle1AfterGoto23.text,
+EventSearchDiningRoomReadPagePuzzle1AfterGoto23.button1,
+EventSearchDiningRoomReadPageGetFluxStabilizer.text,
+EventSearchDiningRoomReadPageGetFluxStabilizer.button1,
+EventSearchDiningRoomReadPageGetFluxStabilizerDisplay.text,
+EventSearchDiningRoomReadPageGetFluxStabilizerDisplay.button1,
+EventSearchDiningRoomReadPageGetFluxStabilizerBase.text,|||\nThe device begins humming quietly.\n\nDiscard this search token, then place the {c:QItemFluxStabilizer} common item in its place.\n\n{c:EventChosenInvestigator} can drop or pick up this item, but cannot trade it to another investigator. When the {c:QItemFluxStabilizer} is on the floor, any investigator who moves or is moved into its space immediately moves 1 space away from the device. Move toward the {c:TileDiningRoom} if possible; you do not need to evade monsters when moving this way. {c:EventChosenInvestigator} is immune to this effect.\n\nWhen {c:EventChosenInvestigator} holds this item, add 1 additional movement to their move actions.\n\nThis information can be reviewed in the app.\n|||
+EventSearchDiningRoomReadPageGetFluxStabilizerBase.button1,{qst:continue}
+EventSearchDiningRoomReadPageGetFluxStabilizerTiePoint.text,
+EventSearchDiningRoomReadPageGetFluxStabilizerTiePoint.button1,
+EventSearchDiningRoomReadPageGetFluxStabilizerAfterGoto28.text,
+EventSearchDiningRoomReadPageGetFluxStabilizerAfterGoto28.button1,
+EventSearchDiningRoomReadPageGetFluxStabilizer2.text,
+EventSearchDiningRoomReadPageGetFluxStabilizer2.button1,
+EventSearchDiningRoomReadPageGetFluxStabilizer2BeforeAddRemove1.text,
+EventSearchDiningRoomReadPageGetFluxStabilizer2BeforeAddRemove1.button1,
+EventSearchDiningRoomReadPageGetFluxStabilizer2BeforeAddRemove2.text,
+EventSearchDiningRoomReadPageGetFluxStabilizer2BeforeAddRemove2.button1,
+EventSearchDiningRoomExpr30.text,
+EventSearchDiningRoomExpr30.button1,
+EventSearchDiningRoomExpr32.text,
+EventSearchDiningRoomExpr32.button1,
+EventSearchDiningRoomExpr31.text,
+EventSearchDiningRoomExpr31.button1,
+EventSearchDiningRoomReadPageGetFluxStabilizer2Display.text,
+EventSearchDiningRoomReadPageGetFluxStabilizer2Display.button1,
+EventSearchDiningRoomReadPageGetFluxStabilizer2Overload1.text,|||\nBenjamin walks briskly through the door snapping, “What are you folks doing in here?!” Move the purple man token as indicated.\n\nHe seems to have something in his hand.\n|||
+EventSearchDiningRoomReadPageGetFluxStabilizer2Overload1.button1,{qst:continue}
+EventSearchDiningRoomReadPageGetFluxStabilizer2TiePoint.text,
+EventSearchDiningRoomReadPageGetFluxStabilizer2TiePoint.button1,
+EventSearchDiningRoomReadPageGetFluxStabilizer2AfterGoto29.text,
+EventSearchDiningRoomReadPageGetFluxStabilizer2AfterGoto29.button1,
+EventSearchDiningRoomReadPageGetFluxStabilizer2Base.text,|||\nBenjamin walks through the door into the {c:TileDiningRoom}. Move the purple man token as indicated.\n\nAs he walks in he says, “I heard a noise. This house can be dangerous with everything in disarray. Please be careful.”\n\nHe seems to be holding something in his hand.\n|||
+EventSearchDiningRoomReadPageGetFluxStabilizer2Base.button1,{qst:continue}
+EventSearchDiningRoomExpr33.text,
+EventSearchDiningRoomExpr33.button1,
+EventSearchDiningRoomReadPagePuzzle1AfterGoto24.text,
+EventSearchDiningRoomReadPagePuzzle1AfterGoto24.button1,
+EventSearchDiningRoomReadPageDontGetFluxStabilizer.text,
+EventSearchDiningRoomReadPageDontGetFluxStabilizer.button1,
+EventSearchDiningRoomReadPageDontGetFluxStabilizerDisplay.text,
+EventSearchDiningRoomReadPageDontGetFluxStabilizerDisplay.button1,
+EventSearchDiningRoomReadPageDontGetFluxStabilizerBase.text,|||\nIt still just sits there. Doing nothing. The hoses aren’t moving, the lights are off, and it makes no noise.\n|||
+EventSearchDiningRoomReadPageDontGetFluxStabilizerBase.button1,{qst:continue}
+EventSearchDiningRoomReadPageDontGetFluxStabilizerTiePoint.text,
+EventSearchDiningRoomReadPageDontGetFluxStabilizerTiePoint.button1,
+EventSearchDiningRoomReadPageDontGetFluxStabilizerAfterGoto27.text,
+EventSearchDiningRoomReadPageDontGetFluxStabilizerAfterGoto27.button1,
+EventSearchDiningRoomReadPagePuzzle2TriggeredPrologTarget.text,
+EventSearchDiningRoomReadPagePuzzle2TriggeredPrologTarget.button1,
+EventSearchDiningRoomTocPrologPuzzle2.text,|||\nMaybe if you randomly flipped a few more buttons or turned a few more dials, it will do something.\n\n{c:EventChosenInvestigator} can attempt it again using {lore}.\n|||
+EventSearchDiningRoomTocPrologPuzzle2.button1,{action} {qst:continue}
+EventSearchDiningRoomTocPrologPuzzle2.button2,{qst:cancel}
+EventSearchDiningRoomReadPagePuzzle2.text,
+EventSearchDiningRoomReadPagePuzzle2.button1,
+EventSearchDiningRoomReadPagePuzzle2BeforeTrigger1.text,
+EventSearchDiningRoomReadPagePuzzle2BeforeTrigger1.button1,
+EventSearchDiningRoomExpr29.text,
+EventSearchDiningRoomExpr29.button1,
+EventSearchDiningRoomReadPagePuzzle2BeforeGoto25.text,
+EventSearchDiningRoomReadPagePuzzle2BeforeGoto25.button1,
+EventSearchDiningRoomReadPagePuzzle2BeforeMark2.text,
+EventSearchDiningRoomReadPagePuzzle2BeforeMark2.button1,
+EventSearchDiningRoomReadPagePuzzle2BeforeGoto26.text,
+EventSearchDiningRoomReadPagePuzzle2BeforeGoto26.button1,
+EventSearchDiningRoomReadPagePaperInBoxTriggeredPrologTarget.text,
+EventSearchDiningRoomReadPagePaperInBoxTriggeredPrologTarget.button1,
+EventSearchDiningRoomTocPrologPaperInBox.text,|||\nThere’s a yellowed scrap of paper in the box.\n|||
+EventSearchDiningRoomTocPrologPaperInBox.button1,{action} Search
+EventSearchDiningRoomTocPrologPaperInBox.button2,{qst:cancel}
+EventSearchDiningRoomReadPagePaperInBox.text,
+EventSearchDiningRoomReadPagePaperInBox.button1,
+EventSearchDiningRoomReadPagePaperInBoxBeforeAddRemove1.text,
+EventSearchDiningRoomReadPagePaperInBoxBeforeAddRemove1.button1,
+EventSearchDiningRoomReadPagePaperInBoxBeforeAddRemove2.text,
+EventSearchDiningRoomReadPagePaperInBoxBeforeAddRemove2.button1,
+EventSearchDiningRoomReadPagePaperInBoxDisplay.text,
+EventSearchDiningRoomReadPagePaperInBoxDisplay.button1,
+EventSearchDiningRoomReadPagePaperInBoxBase.text,|||\nThe paper is old, yellowed, and dry. When you pick it up, a corner breaks off. The writing is faded but you can make out a few phrases.\n\n“... this Saturday, the children will...”\n\n“... everything is ready, but my daughter doesn’t know...”\n\n“Blood will... chapel... altar”\n\nGain the {c:QItemEvidenceDiningRoom} Unique Item, gain 2 {clue}, and discard this Search token.\n|||
+EventSearchDiningRoomReadPagePaperInBoxBase.button1,{qst:continue}
+EventSearchDiningRoomReadPagePaperInBoxTiePoint.text,
+EventSearchDiningRoomReadPagePaperInBoxTiePoint.button1,
+EventSearchDiningRoomReadPagePaperInBoxEnd.text,
+EventSearchDiningRoomReadPagePaperInBoxEnd.button1,
+EventSearchDiningRoomTriggerSelector.text,
+EventSearchDiningRoomTriggerSelector.button1,
+EventSearchDiningRoomReadPageStartFluxStabilizerXferIfTriggered.text,
+EventSearchDiningRoomReadPageStartFluxStabilizerXferIfTriggered.button1,
+EventSearchDiningRoomReadPageFinnXferIfTriggered.text,
+EventSearchDiningRoomReadPageFinnXferIfTriggered.button1,
+EventSearchDiningRoomReadPageFinn.text,
+EventSearchDiningRoomReadPageFinn.button1,
+EventSearchDiningRoomReadPageFinnDisplay.text,
+EventSearchDiningRoomReadPageFinnDisplay.button1,
+EventSearchDiningRoomReadPageFinnBase.text,|||\nFinn Edwards starts to come to, not sure at first where he is: he is on the ground where he fell. As his vision clears, he feels different. He feels... off. Finn can no longer use his special ability.\n\nAs he starts to push himself up, he puts his hand down in the wrong place. Hard. Pain. When he looks at what he hit, he gains the {c:QItemBrassKnuckles} Common Item. As he plays with them, they make him feel more confident. Improve Finn’s {strength}.\n|||
+EventSearchDiningRoomReadPageFinnBase.button1,{qst:continue}
+EventSearchDiningRoomReadPageFinnTiePoint.text,
+EventSearchDiningRoomReadPageFinnTiePoint.button1,
+EventSearchDiningRoomReadPageFinnEnd.text,
+EventSearchDiningRoomReadPageFinnEnd.button1,
+EventSearchDiningRoomReadPageKateXferIfTriggered.text,
+EventSearchDiningRoomReadPageKateXferIfTriggered.button1,
+EventSearchDiningRoomReadPageKate.text,
+EventSearchDiningRoomReadPageKate.button1,
+EventSearchDiningRoomReadPageKateDisplay.text,
+EventSearchDiningRoomReadPageKateDisplay.button1,
+EventSearchDiningRoomReadPageKateBase.text,|||\nWill Kate pick up the {c:QItemFluxStabilizer}?\n|||
+EventSearchDiningRoomReadPageKateBase.button1,Yes
+EventSearchDiningRoomReadPageKateBase.button2,No
+EventSearchDiningRoomReadPageKateBasePass.text,
+EventSearchDiningRoomReadPageKateBasePass.button1,
+EventSearchDiningRoomReadPageKateBaseButtonsTiePoint.text,
+EventSearchDiningRoomReadPageKateBaseButtonsTiePoint.button1,
+EventSearchDiningRoomReadPageKateTiePoint.text,
+EventSearchDiningRoomReadPageKateTiePoint.button1,
+EventSearchDiningRoomExpr17.text,
+EventSearchDiningRoomExpr17.button1,
+EventSearchDiningRoomReadPageKateAfterGoto18.text,
+EventSearchDiningRoomReadPageKateAfterGoto18.button1,
+EventSearchDiningRoomReadPageKatePicksUp.text,
+EventSearchDiningRoomReadPageKatePicksUp.button1,
+EventSearchDiningRoomReadPageKatePicksUpDisplay.text,
+EventSearchDiningRoomReadPageKatePicksUpDisplay.button1,
+EventSearchDiningRoomReadPageKatePicksUpBase.text,|||\nKate is overjoyed that she will have a {c:QItemFluxStablizer} again, especially one this powerful.\n\nLooking at it, she calms down and loses her focusing anger. Kate no longer becomes Focused when she is attacked.\n\nKate says to the others, “This device can repel monsters. I don’t expect I’ll need it here, but mine broke this morning and I didn’t know how I’d find another.”\n|||
+EventSearchDiningRoomReadPageKatePicksUpBase.button1,{qst:continue}
+EventSearchDiningRoomReadPageKatePicksUpTiePoint.text,
+EventSearchDiningRoomReadPageKatePicksUpTiePoint.button1,
+EventSearchDiningRoomReadPageKatePicksUpAfterMark1.text,
+EventSearchDiningRoomReadPageKatePicksUpAfterMark1.button1,
+EventSearchDiningRoomExpr18.text,
+EventSearchDiningRoomExpr18.button1,
+EventSearchDiningRoomReadPageKatePicksUpAfterLet2.text,
+EventSearchDiningRoomReadPageKatePicksUpAfterLet2.button1,
+EventSearchDiningRoomReadPageKatePicksUpAfterGoto20.text,
+EventSearchDiningRoomReadPageKatePicksUpAfterGoto20.button1,
+EventSearchDiningRoomReadPageKateAfterGoto19.text,
+EventSearchDiningRoomReadPageKateAfterGoto19.button1,
+EventSearchDiningRoomReadPageKateDoesNotPickUp.text,
+EventSearchDiningRoomReadPageKateDoesNotPickUp.button1,
+EventSearchDiningRoomReadPageKateDoesNotPickUpDisplay.text,
+EventSearchDiningRoomReadPageKateDoesNotPickUpDisplay.button1,
+EventSearchDiningRoomReadPageKateDoesNotPickUpBase.text,|||\nKate quietly seethes to herself at the unfairness: <i>That thing should be mine.</i>\n\nKate becomes Focused.\n|||
+EventSearchDiningRoomReadPageKateDoesNotPickUpBase.button1,{qst:continue}
+EventSearchDiningRoomReadPageKateDoesNotPickUpTiePoint.text,
+EventSearchDiningRoomReadPageKateDoesNotPickUpTiePoint.button1,
+EventSearchDiningRoomExpr19.text,
+EventSearchDiningRoomExpr19.button1,
+EventSearchDiningRoomReadPageKateDoesNotPickUpAfterLet1.text,
+EventSearchDiningRoomReadPageKateDoesNotPickUpAfterLet1.button1,
+EventSearchDiningRoomReadPageKateDoesNotPickUpAfterGoto21.text,
+EventSearchDiningRoomReadPageKateDoesNotPickUpAfterGoto21.button1,
+EventSearchDiningRoomReadPageKateBaseFail.text,
+EventSearchDiningRoomReadPageKateBaseFail.button1,
+EventSearchDiningRoomReadPageKatePicksUpXferIfTriggered.text,
+EventSearchDiningRoomReadPageKatePicksUpXferIfTriggered.button1,
+EventSearchDiningRoomReadPageKateDoesNotPickUpXferIfTriggered.text,
+EventSearchDiningRoomReadPageKateDoesNotPickUpXferIfTriggered.button1,
+EventSearchDiningRoomReadPagePaperXferIfTriggered.text,
+EventSearchDiningRoomReadPagePaperXferIfTriggered.button1,
+EventSearchDiningRoomReadPagePaper.text,
+EventSearchDiningRoomReadPagePaper.button1,
+EventSearchDiningRoomReadPagePaperDisplay.text,
+EventSearchDiningRoomReadPagePaperDisplay.button1,
+EventSearchDiningRoomReadPagePaperBase.text,|||\nThere is a piece of paper next to the device: instructions. It’s called a “{c:QItemFluxStabilizer},” and it repels monsters. “MONSTERS!?” you erupt loudly.\n\nEveryone turns to look at you.\n|||
+EventSearchDiningRoomReadPagePaperBase.button1,{qst:continue}
+EventSearchDiningRoomReadPagePaperTiePoint.text,
+EventSearchDiningRoomReadPagePaperTiePoint.button1,
+EventSearchDiningRoomReadPagePaperAfterGoto22.text,
+EventSearchDiningRoomReadPagePaperAfterGoto22.button1,
+EventSearchDiningRoomReadPagePuzzle1XferIfTriggered.text,
+EventSearchDiningRoomReadPagePuzzle1XferIfTriggered.button1,
+EventSearchDiningRoomReadPagePuzzle2XferIfTriggered.text,
+EventSearchDiningRoomReadPagePuzzle2XferIfTriggered.button1,
+EventSearchDiningRoomReadPageDontGetFluxStabilizerXferIfTriggered.text,
+EventSearchDiningRoomReadPageDontGetFluxStabilizerXferIfTriggered.button1,
+EventSearchDiningRoomReadPageGetFluxStabilizerXferIfTriggered.text,
+EventSearchDiningRoomReadPageGetFluxStabilizerXferIfTriggered.button1,
+EventSearchDiningRoomReadPageGetFluxStabilizer2XferIfTriggered.text,
+EventSearchDiningRoomReadPageGetFluxStabilizer2XferIfTriggered.button1,
+EventSearchDiningRoomReadPagePaperInBoxXferIfTriggered.text,
+EventSearchDiningRoomReadPagePaperInBoxXferIfTriggered.button1,
+EventSearchDiningRoomToc.text,
+EventSearchDiningRoomToc.button1,
+EventSearchDiningRoomTocSelector.text,
+EventSearchDiningRoomTocSelector.button1,
+EventSearchDiningRoomTocPrologProxyStartFluxStabilizer.text,
+EventSearchDiningRoomTocPrologProxyStartFluxStabilizer.button1,
+EventSearchDiningRoomTocPrologProxyFinn.text,
+EventSearchDiningRoomTocPrologProxyFinn.button1,
+EventSearchDiningRoomTocPrologFinn.text,
+EventSearchDiningRoomTocPrologFinn.button1,
+EventSearchDiningRoomTocPrologProxyKate.text,
+EventSearchDiningRoomTocPrologProxyKate.button1,
+EventSearchDiningRoomTocPrologKate.text,
+EventSearchDiningRoomTocPrologKate.button1,
+EventSearchDiningRoomTocPrologProxyKatePicksUp.text,
+EventSearchDiningRoomTocPrologProxyKatePicksUp.button1,
+EventSearchDiningRoomTocPrologKatePicksUp.text,
+EventSearchDiningRoomTocPrologKatePicksUp.button1,
+EventSearchDiningRoomTocPrologProxyKateDoesNotPickUp.text,
+EventSearchDiningRoomTocPrologProxyKateDoesNotPickUp.button1,
+EventSearchDiningRoomTocPrologKateDoesNotPickUp.text,
+EventSearchDiningRoomTocPrologKateDoesNotPickUp.button1,
+EventSearchDiningRoomTocPrologProxyPaper.text,
+EventSearchDiningRoomTocPrologProxyPaper.button1,
+EventSearchDiningRoomTocPrologPaper.text,
+EventSearchDiningRoomTocPrologPaper.button1,
+EventSearchDiningRoomTocPrologProxyPuzzle1.text,
+EventSearchDiningRoomTocPrologProxyPuzzle1.button1,
+EventSearchDiningRoomTocPrologProxyPuzzle2.text,
+EventSearchDiningRoomTocPrologProxyPuzzle2.button1,
+EventSearchDiningRoomTocPrologProxyDontGetFluxStabilizer.text,
+EventSearchDiningRoomTocPrologProxyDontGetFluxStabilizer.button1,
+EventSearchDiningRoomTocPrologDontGetFluxStabilizer.text,
+EventSearchDiningRoomTocPrologDontGetFluxStabilizer.button1,
+EventSearchDiningRoomTocPrologProxyGetFluxStabilizer.text,
+EventSearchDiningRoomTocPrologProxyGetFluxStabilizer.button1,
+EventSearchDiningRoomTocPrologGetFluxStabilizer.text,
+EventSearchDiningRoomTocPrologGetFluxStabilizer.button1,
+EventSearchDiningRoomTocPrologProxyGetFluxStabilizer2.text,
+EventSearchDiningRoomTocPrologProxyGetFluxStabilizer2.button1,
+EventSearchDiningRoomTocPrologGetFluxStabilizer2.text,
+EventSearchDiningRoomTocPrologGetFluxStabilizer2.button1,
+EventSearchDiningRoomTocPrologProxyPaperInBox.text,
+EventSearchDiningRoomTocPrologProxyPaperInBox.button1,
+EventSearchDiningRoomTocNoPagesAvailable.text,
+EventSearchDiningRoomTocNoPagesAvailable.button1,
+EventSearchDiningRoomReadPageStartFluxStabilizerTrigger.text,
+EventSearchDiningRoomReadPageStartFluxStabilizerTrigger.button1,
+EventSearchDiningRoomExpr1.text,
+EventSearchDiningRoomExpr1.button1,
+EventSearchDiningRoomExpr2.text,
+EventSearchDiningRoomExpr2.button1,
+EventSearchDiningRoomReadPageStartFluxStabilizerTriggerFail.text,
+EventSearchDiningRoomReadPageStartFluxStabilizerTriggerFail.button1,
+EventSearchDiningRoomExpr3.text,
+EventSearchDiningRoomExpr3.button1,
+EventSearchDiningRoomReadPagePuzzle1Trigger.text,
+EventSearchDiningRoomReadPagePuzzle1Trigger.button1,
+EventSearchDiningRoomExpr20.text,
+EventSearchDiningRoomExpr20.button1,
+EventSearchDiningRoomExpr21.text,
+EventSearchDiningRoomExpr21.button1,
+EventSearchDiningRoomExpr23.text,
+EventSearchDiningRoomExpr23.button1,
+EventSearchDiningRoomExpr25.text,
+EventSearchDiningRoomExpr25.button1,
+EventSearchDiningRoomExpr24.text,
+EventSearchDiningRoomExpr24.button1,
+EventSearchDiningRoomReadPagePuzzle1TriggerFail.text,
+EventSearchDiningRoomReadPagePuzzle1TriggerFail.button1,
+EventSearchDiningRoomExpr26.text,
+EventSearchDiningRoomExpr26.button1,
+EventSearchDiningRoomExpr22.text,
+EventSearchDiningRoomExpr22.button1,
+EventSearchDiningRoomReadPagePuzzle2Trigger.text,
+EventSearchDiningRoomReadPagePuzzle2Trigger.button1,
+EventSearchDiningRoomExpr28.text,
+EventSearchDiningRoomExpr28.button1,
+EventSearchDiningRoomReadPagePuzzle2TriggerFail.text,
+EventSearchDiningRoomReadPagePuzzle2TriggerFail.button1,
+EventSearchDiningRoomReadPagePaperInBoxTrigger.text,
+EventSearchDiningRoomReadPagePaperInBoxTrigger.button1,
+EventExploreKitchenStart.text,
+EventExploreKitchenStart.button1,
+EventExploreKitchenInit.text,
+EventExploreKitchenInit.button1,
+EventExploreKitchenFirstTimeInitializer.text,
+EventExploreKitchenFirstTimeInitializer.button1,
+EventExploreKitchenTriggerPrologSelector.text,
+EventExploreKitchenTriggerPrologSelector.button1,
+EventExploreKitchenReadPageStartTriggeredPrologTarget.text,
+EventExploreKitchenReadPageStartTriggeredPrologTarget.button1,
+EventExploreKitchenTocPrologStart.text,|||\nThe swinging door doesn’t look like it will hold up to much use, so you’ll need to be careful.\n|||
+EventExploreKitchenTocPrologStart.button1,{action} Push through door
+EventExploreKitchenTocPrologStart.button2,{qst:cancel}
+EventExploreKitchenReadPageStart.text,
+EventExploreKitchenReadPageStart.button1,
+EventExploreKitchenReadPageStartBeforeAddRemove1.text,
+EventExploreKitchenReadPageStartBeforeAddRemove1.button1,
+EventExploreKitchenReadPageStartDisplay.text,
+EventExploreKitchenReadPageStartDisplay.button1,
+EventExploreKitchenReadPageStartBase.text,|||\nCompared to the dining room, the kitchen looks clean. The cupboards are empty. A couple of barrels of wine and a half-packed box have been left behind. Maybe the rest of the house will be as easy to clean as this room.\n\n<i>Still, cleaning is in the details</i>, you think to yourself. <i>And there are lot of details here.</i>\n\nRemove this Explore token.\n|||
+EventExploreKitchenReadPageStartBase.button1,{qst:continue}
+EventExploreKitchenReadPageStartTiePoint.text,
+EventExploreKitchenReadPageStartTiePoint.button1,
+EventExploreKitchenExpr1.text,
+EventExploreKitchenExpr1.button1,
+EventExploreKitchenReadPageStartAfterLet1.text,
+EventExploreKitchenReadPageStartAfterLet1.button1,
+EventExploreKitchenExpr2.text,
+EventExploreKitchenExpr2.button1,
+EventExploreKitchenReadPageStartAfterLet2.text,
+EventExploreKitchenReadPageStartAfterLet2.button1,
+EventExploreKitchenReadPageStartEnd.text,
+EventExploreKitchenReadPageStartEnd.button1,
+EventExploreKitchenTiePoint.text,
+EventExploreKitchenTiePoint.button1,
+EventExploreKitchenLoopBack.text,
+EventExploreKitchenLoopBack.button1,
+EventExploreKitchenEnd.text,
+EventExploreKitchenEnd.button1,
+EventExploreKitchenTriggerSelector.text,
+EventExploreKitchenTriggerSelector.button1,
+EventExploreKitchenReadPageStartXferIfTriggered.text,
+EventExploreKitchenReadPageStartXferIfTriggered.button1,
+EventExploreKitchenReadPageCutleryXferIfTriggered.text,
+EventExploreKitchenReadPageCutleryXferIfTriggered.button1,
+EventExploreKitchenReadPageCutlery.text,
+EventExploreKitchenReadPageCutlery.button1,
+EventExploreKitchenReadPageCutleryBeforeAddRemove1.text,
+EventExploreKitchenReadPageCutleryBeforeAddRemove1.button1,
+EventExploreKitchenReadPageCutleryDisplay.text,
+EventExploreKitchenReadPageCutleryDisplay.button1,
+EventExploreKitchenReadPageCutleryBase.text,|||\nYou notice a few pieces of cutlery have been left on the counter; place a Search token as indicated.\n|||
+EventExploreKitchenReadPageCutleryBase.button1,{qst:continue}
+EventExploreKitchenReadPageCutleryTiePoint.text,
+EventExploreKitchenReadPageCutleryTiePoint.button1,
+EventExploreKitchenReadPageCutleryEnd.text,
+EventExploreKitchenReadPageCutleryEnd.button1,
+EventExploreKitchenReadPageBoxXferIfTriggered.text,
+EventExploreKitchenReadPageBoxXferIfTriggered.button1,
+EventExploreKitchenReadPageBox.text,
+EventExploreKitchenReadPageBox.button1,
+EventExploreKitchenReadPageBoxBeforeAddRemove1.text,
+EventExploreKitchenReadPageBoxBeforeAddRemove1.button1,
+EventExploreKitchenReadPageBoxDisplay.text,
+EventExploreKitchenReadPageBoxDisplay.button1,
+EventExploreKitchenReadPageBoxBase.text,|||\nNext to you is a box that looks like it was filled in a hurry. Place a Search token as indicated.\n|||
+EventExploreKitchenReadPageBoxBase.button1,{qst:continue}
+EventExploreKitchenReadPageBoxTiePoint.text,
+EventExploreKitchenReadPageBoxTiePoint.button1,
+EventExploreKitchenReadPageBoxAfterTrigger1.text,
+EventExploreKitchenReadPageBoxAfterTrigger1.button1,
+EventExploreKitchenReadPageBoxAfterGoto30.text,
+EventExploreKitchenReadPageBoxAfterGoto30.button1,
+EventExploreKitchenToc.text,
+EventExploreKitchenToc.button1,
+EventExploreKitchenTocSelector.text,
+EventExploreKitchenTocSelector.button1,
+EventExploreKitchenTocPrologProxyStart.text,
+EventExploreKitchenTocPrologProxyStart.button1,
+EventExploreKitchenTocPrologProxyCutlery.text,
+EventExploreKitchenTocPrologProxyCutlery.button1,
+EventExploreKitchenTocPrologCutlery.text,
+EventExploreKitchenTocPrologCutlery.button1,
+EventExploreKitchenTocPrologProxyBox.text,
+EventExploreKitchenTocPrologProxyBox.button1,
+EventExploreKitchenTocPrologBox.text,
+EventExploreKitchenTocPrologBox.button1,
+EventExploreKitchenTocNoPagesAvailable.text,
+EventExploreKitchenTocNoPagesAvailable.button1,
+EventExploreKitchenReadPageStartTrigger.text,
+EventExploreKitchenReadPageStartTrigger.button1,
 EventDrivewayStart.text,
 EventDrivewayStart.button1,
 EventDrivewayInit.text,
@@ -6232,8 +6797,8 @@ EventDrivewayExpr3.text,
 EventDrivewayExpr3.button1,
 EventDrivewayReadPageSearchGardenToolAfterLet1.text,
 EventDrivewayReadPageSearchGardenToolAfterLet1.button1,
-EventDrivewayReadPageSearchGardenToolAfterGoto16.text,
-EventDrivewayReadPageSearchGardenToolAfterGoto16.button1,
+EventDrivewayReadPageSearchGardenToolAfterGoto32.text,
+EventDrivewayReadPageSearchGardenToolAfterGoto32.button1,
 EventDrivewayEnd.text,
 EventDrivewayEnd.button1,
 EventDrivewayReadPageSearchJournalTriggeredPrologTarget.text,
@@ -6255,8 +6820,8 @@ EventDrivewayExpr4.text,
 EventDrivewayExpr4.button1,
 EventDrivewayReadPageSearchJournalAfterLet1.text,
 EventDrivewayReadPageSearchJournalAfterLet1.button1,
-EventDrivewayReadPageSearchJournalAfterGoto17.text,
-EventDrivewayReadPageSearchJournalAfterGoto17.button1,
+EventDrivewayReadPageSearchJournalAfterGoto33.text,
+EventDrivewayReadPageSearchJournalAfterGoto33.button1,
 EventDrivewayTriggerSelector.text,
 EventDrivewayTriggerSelector.button1,
 EventDrivewayReadPagePlaceXferIfTriggered.text,
@@ -6355,8 +6920,8 @@ EventDrivewayReadPageEndPlaceXferIfTriggered.text,
 EventDrivewayReadPageEndPlaceXferIfTriggered.button1,
 EventDrivewayReadPageEndPlace.text,
 EventDrivewayReadPageEndPlace.button1,
-EventDrivewayReadPageEndPlaceBeforeGoto15.text,
-EventDrivewayReadPageEndPlaceBeforeGoto15.button1,
+EventDrivewayReadPageEndPlaceBeforeGoto31.text,
+EventDrivewayReadPageEndPlaceBeforeGoto31.button1,
 EventDrivewayReadPageSearchGardenToolXferIfTriggered.text,
 EventDrivewayReadPageSearchGardenToolXferIfTriggered.button1,
 EventDrivewayReadPageSearchJournalXferIfTriggered.text,
@@ -6378,8 +6943,8 @@ EventDrivewayReadPageExploreBackyardViaDrivewayTiePoint.text,
 EventDrivewayReadPageExploreBackyardViaDrivewayTiePoint.button1,
 EventDrivewayExpr5.text,
 EventDrivewayExpr5.button1,
-EventDrivewayReadPageExploreBackyardViaDrivewayAfterGoto18.text,
-EventDrivewayReadPageExploreBackyardViaDrivewayAfterGoto18.button1,
+EventDrivewayReadPageExploreBackyardViaDrivewayAfterGoto34.text,
+EventDrivewayReadPageExploreBackyardViaDrivewayAfterGoto34.button1,
 EventDrivewayReadPageExploreNotNice.text,
 EventDrivewayReadPageExploreNotNice.button1,
 EventDrivewayReadPageExploreNotNiceBeforeAddRemove1.text,
@@ -6396,8 +6961,8 @@ EventDrivewayExpr6.text,
 EventDrivewayExpr6.button1,
 EventDrivewayReadPageExploreNotNiceAfterLet1.text,
 EventDrivewayReadPageExploreNotNiceAfterLet1.button1,
-EventDrivewayReadPageExploreNotNiceAfterGoto20.text,
-EventDrivewayReadPageExploreNotNiceAfterGoto20.button1,
+EventDrivewayReadPageExploreNotNiceAfterGoto36.text,
+EventDrivewayReadPageExploreNotNiceAfterGoto36.button1,
 EventDrivewayReadPageExploreNotNiceBen.text,
 EventDrivewayReadPageExploreNotNiceBen.button1,
 EventDrivewayReadPageExploreNotNiceBenDisplay.text,
@@ -6408,8 +6973,8 @@ EventDrivewayReadPageExploreNotNiceBenTiePoint.text,
 EventDrivewayReadPageExploreNotNiceBenTiePoint.button1,
 EventDrivewayReadPageExploreNotNiceBenAfterAddRemove1.text,
 EventDrivewayReadPageExploreNotNiceBenAfterAddRemove1.button1,
-EventDrivewayReadPageExploreNotNiceBenAfterGoto21.text,
-EventDrivewayReadPageExploreNotNiceBenAfterGoto21.button1,
+EventDrivewayReadPageExploreNotNiceBenAfterGoto37.text,
+EventDrivewayReadPageExploreNotNiceBenAfterGoto37.button1,
 EventDrivewayReadPageExploreNotNiceJournal.text,
 EventDrivewayReadPageExploreNotNiceJournal.button1,
 EventDrivewayReadPageExploreNotNiceJournalBeforeAddRemove1.text,
@@ -6420,10 +6985,10 @@ EventDrivewayReadPageExploreNotNiceJournalBase.text,|||\nYou look down and shake
 EventDrivewayReadPageExploreNotNiceJournalBase.button1,{qst:continue}
 EventDrivewayReadPageExploreNotNiceJournalTiePoint.text,
 EventDrivewayReadPageExploreNotNiceJournalTiePoint.button1,
-EventDrivewayReadPageExploreNotNiceJournalAfterGoto22.text,
-EventDrivewayReadPageExploreNotNiceJournalAfterGoto22.button1,
-EventDrivewayReadPageExploreBackyardViaDrivewayAfterGoto19.text,
-EventDrivewayReadPageExploreBackyardViaDrivewayAfterGoto19.button1,
+EventDrivewayReadPageExploreNotNiceJournalAfterGoto38.text,
+EventDrivewayReadPageExploreNotNiceJournalAfterGoto38.button1,
+EventDrivewayReadPageExploreBackyardViaDrivewayAfterGoto35.text,
+EventDrivewayReadPageExploreBackyardViaDrivewayAfterGoto35.button1,
 EventDrivewayReadPageExploreNice.text,
 EventDrivewayReadPageExploreNice.button1,
 EventDrivewayReadPageExploreNiceBeforeAddRemove1.text,
@@ -6440,8 +7005,8 @@ EventDrivewayExpr7.text,
 EventDrivewayExpr7.button1,
 EventDrivewayReadPageExploreNiceAfterLet1.text,
 EventDrivewayReadPageExploreNiceAfterLet1.button1,
-EventDrivewayReadPageExploreNiceAfterGoto23.text,
-EventDrivewayReadPageExploreNiceAfterGoto23.button1,
+EventDrivewayReadPageExploreNiceAfterGoto39.text,
+EventDrivewayReadPageExploreNiceAfterGoto39.button1,
 EventDrivewayReadPageExploreNiceBen.text,
 EventDrivewayReadPageExploreNiceBen.button1,
 EventDrivewayReadPageExploreNiceBenDisplay.text,
@@ -6452,8 +7017,8 @@ EventDrivewayReadPageExploreNiceBenTiePoint.text,
 EventDrivewayReadPageExploreNiceBenTiePoint.button1,
 EventDrivewayReadPageExploreNiceBenAfterAddRemove1.text,
 EventDrivewayReadPageExploreNiceBenAfterAddRemove1.button1,
-EventDrivewayReadPageExploreNiceBenAfterGoto24.text,
-EventDrivewayReadPageExploreNiceBenAfterGoto24.button1,
+EventDrivewayReadPageExploreNiceBenAfterGoto40.text,
+EventDrivewayReadPageExploreNiceBenAfterGoto40.button1,
 EventDrivewayReadPageExploreNiceJournal.text,
 EventDrivewayReadPageExploreNiceJournal.button1,
 EventDrivewayReadPageExploreNiceJournalBeforeAddRemove1.text,
@@ -6464,8 +7029,8 @@ EventDrivewayReadPageExploreNiceJournalBase.text,|||\nYou turn to look back and 
 EventDrivewayReadPageExploreNiceJournalBase.button1,{qst:continue}
 EventDrivewayReadPageExploreNiceJournalTiePoint.text,
 EventDrivewayReadPageExploreNiceJournalTiePoint.button1,
-EventDrivewayReadPageExploreNiceJournalAfterGoto25.text,
-EventDrivewayReadPageExploreNiceJournalAfterGoto25.button1,
+EventDrivewayReadPageExploreNiceJournalAfterGoto41.text,
+EventDrivewayReadPageExploreNiceJournalAfterGoto41.button1,
 EventDrivewayReadPageExploreBackyardViaDrivewayBaseFail.text,
 EventDrivewayReadPageExploreBackyardViaDrivewayBaseFail.button1,
 EventDrivewayReadPageExploreNotNiceXferIfTriggered.text,
@@ -6554,54 +7119,352 @@ EventDrivewayReadPageSearchJournalTrigger.text,
 EventDrivewayReadPageSearchJournalTrigger.button1,
 EventDrivewayReadPageExploreBackyardViaDrivewayTrigger.text,
 EventDrivewayReadPageExploreBackyardViaDrivewayTrigger.button1,
+EventHall1Start.text,|||\nEventHall1Start @(-1,-1)\n\n\n\n\n|||
+EventHall1Start.button1,
+EventHall1Init.text,|||\nEventHall1Init @(-1,-1)\n\n\n\n\n|||
+EventHall1Init.button1,
+EventHall1FirstTimeInitializer.text,|||\nEventHall1FirstTimeInitializer @(-1,-1)\n\n\n\n\n|||
+EventHall1FirstTimeInitializer.button1,
+EventHall1TriggerPrologSelector.text,|||\nEventHall1TriggerPrologSelector @(-1,-1)\n\n\n\n\n|||
+EventHall1TriggerPrologSelector.button1,
+EventHall1ReadPageExploreHall1TriggeredPrologTarget.text,|||\nEventHall1ReadPageExploreHall1TriggeredPrologTarget @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageExploreHall1TriggeredPrologTarget.button1,
+EventHall1TocPrologExploreHall1.text,|||\nEventHall1TocPrologExploreHall1 @(-1,-1)\n\nThe door has a dirty push plate. When you push on it, you discover it’s locked. An investigator with the {c:QItemBrassKey} can open this door.\n\n\n|||
+EventHall1TocPrologExploreHall1.button1,{action} Explore
+EventHall1TocPrologExploreHall1.button2,{qst:cancel}
+EventHall1ReadPageExploreHall1.text,|||\nEventHall1ReadPageExploreHall1 @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageExploreHall1.button1,
+EventHall1ReadPageExploreHall1Display.text,|||\nEventHall1ReadPageExploreHall1Display @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageExploreHall1Display.button1,
+EventHall1ReadPageExploreHall1Base.text,|||\nEventHall1ReadPageExploreHall1Base @(-1,-1)\n\nWhen you open the door, the rush of cold, stale air sends a chill down your spine.\n\nYou stop for a moment and look back down at the footsteps leading to this door. You wonder how the air feels so stale if this door has been opened recently.\n\n\n|||
+EventHall1ReadPageExploreHall1Base.button1,{qst:continue}
+EventHall1ReadPageExploreHall1TiePoint.text,|||\nEventHall1ReadPageExploreHall1TiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageExploreHall1TiePoint.button1,
+EventHall1Expr1.text,|||\nEventHall1Expr1 @(25,16)\n\n\n\n\n|||
+EventHall1Expr1.button1,
+EventHall1ReadPageExploreHall1AfterLet1.text,|||\nEventHall1ReadPageExploreHall1AfterLet1 @(25,2)\n\n\n\n\n|||
+EventHall1ReadPageExploreHall1AfterLet1.button1,
+EventHall1Expr2.text,|||\nEventHall1Expr2 @(26,18)\n\n\n\n\n|||
+EventHall1Expr2.button1,
+EventHall1ReadPageExploreHall1AfterLet2.text,|||\nEventHall1ReadPageExploreHall1AfterLet2 @(26,2)\n\n\n\n\n|||
+EventHall1ReadPageExploreHall1AfterLet2.button1,
+EventHall1ReadPageExploreHall1End.text,|||\nEventHall1ReadPageExploreHall1End @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageExploreHall1End.button1,
+EventHall1TiePoint.text,|||\nEventHall1TiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1TiePoint.button1,
+EventHall1LoopBack.text,|||\nEventHall1LoopBack @(-1,-1)\n\n\n\n\n|||
+EventHall1LoopBack.button1,
+EventHall1End.text,|||\nEventHall1End @(-1,-1)\n\n\n\n\n|||
+EventHall1End.button1,
+EventHall1ReadPageSearchRugTriggeredPrologTarget.text,|||\nEventHall1ReadPageSearchRugTriggeredPrologTarget @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchRugTriggeredPrologTarget.button1,
+EventHall1TocPrologSearchRug.text,|||\nEventHall1TocPrologSearchRug @(-1,-1)\n\nThe corner of the rug is folder over.\n\n\n|||
+EventHall1TocPrologSearchRug.button1,{action} Search
+EventHall1TocPrologSearchRug.button2,{qst:cancel}
+EventHall1ReadPageSearchRug.text,|||\nEventHall1ReadPageSearchRug @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchRug.button1,
+EventHall1ReadPageSearchRugDisplay.text,|||\nEventHall1ReadPageSearchRugDisplay @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchRugDisplay.button1,
+EventHall1ReadPageSearchRugBase.text,|||\nEventHall1ReadPageSearchRugBase @(-1,-1)\n\nYou lean down to straighten the rug. You play with it for a bit, but have trouble getting it to stay flat–the fold has been there too long. You lift the rug a little more to try to flatten the corner. There’s a piece of paper under the rug. You pick it up to find it has a diagram of a tabletop with arcane symbols. Maybe it’s part of some ritual? You’ve heard the people in this town have some funny beliefs.\n\nGain the {c:QItemEvidenceHall1} Unique Item and 1 {clue}, then discard this Search token.\n\n\n|||
+EventHall1ReadPageSearchRugBase.button1,{qst:continue}
+EventHall1ReadPageSearchRugTiePoint.text,|||\nEventHall1ReadPageSearchRugTiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchRugTiePoint.button1,
+EventHall1ReadPageSearchRugAfterAddRemove1.text,|||\nEventHall1ReadPageSearchRugAfterAddRemove1 @(137,2)\n\n\n\n\n|||
+EventHall1ReadPageSearchRugAfterAddRemove1.button1,
+EventHall1ReadPageSearchRugAfterAddRemove2.text,|||\nEventHall1ReadPageSearchRugAfterAddRemove2 @(138,2)\n\n\n\n\n|||
+EventHall1ReadPageSearchRugAfterAddRemove2.button1,
+EventHall1ReadPageSearchRugAfterGoto44.text,|||\nEventHall1ReadPageSearchRugAfterGoto44 @(140,2)\n\n\n\n\n|||
+EventHall1ReadPageSearchRugAfterGoto44.button1,
+EventHall1ReadPageSearchPaintingTriggeredPrologTarget.text,|||\nEventHall1ReadPageSearchPaintingTriggeredPrologTarget @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPaintingTriggeredPrologTarget.button1,
+EventHall1TocPrologSearchPainting.text,|||\nEventHall1TocPrologSearchPainting @(-1,-1)\n\nThe painting glows with unnatural light.\n\n\n|||
+EventHall1TocPrologSearchPainting.button1,{action} Search
+EventHall1TocPrologSearchPainting.button2,{qst:cancel}
+EventHall1ReadPageSearchPainting.text,|||\nEventHall1ReadPageSearchPainting @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPainting.button1,
+EventHall1ReadPageSearchPaintingDisplay.text,|||\nEventHall1ReadPageSearchPaintingDisplay @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPaintingDisplay.button1,
+EventHall1ReadPageSearchPaintingBase.text,|||\nEventHall1ReadPageSearchPaintingBase @(-1,-1)\n\nThe painting is a girl, maybe 12 or 13 years old. The work is stunning and the girl looks so lifelike, it’s as if she could just step through the frame. She’s wearing a white dress and looks serious.\n\nWhen you blink, you think the painting has moved but you know that cannot happen. You also notice that there is no dust anywhere on the painting or the frame. You feel like there’s something else you’ve missed, but you dismiss it and turn away. Gain 1 {clue}, then remove this Search token.\n\n\n|||
+EventHall1ReadPageSearchPaintingBase.button1,{qst:continue}
+EventHall1ReadPageSearchPaintingTiePoint.text,|||\nEventHall1ReadPageSearchPaintingTiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPaintingTiePoint.button1,
+EventHall1ReadPageSearchPaintingAfterAddRemove1.text,|||\nEventHall1ReadPageSearchPaintingAfterAddRemove1 @(162,2)\n\n\n\n\n|||
+EventHall1ReadPageSearchPaintingAfterAddRemove1.button1,
+EventHall1ReadPageSearchPaintingEnd.text,|||\nEventHall1ReadPageSearchPaintingEnd @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPaintingEnd.button1,
+EventHall1ReadPageTalkToSarah2TriggeredPrologTarget.text,|||\nEventHall1ReadPageTalkToSarah2TriggeredPrologTarget @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2TriggeredPrologTarget.button1,
+EventHall1TocPrologTalkToSarah2.text,|||\nEventHall1TocPrologTalkToSarah2 @(-1,-1)\n\nShe looks at you expectantly. She looks like she wants to say something, but is holding back. She still looks serious, but also concerned and maybe a little afraid. You notice that she seems to be glowing. And maybe a bit transparent.\n\nShe will only speak with {c:EventChosenInvestigator}.\n\n\n|||
+EventHall1TocPrologTalkToSarah2.button1,{action} Talk to her
+EventHall1TocPrologTalkToSarah2.button2,{qst:cancel}
+EventHall1ReadPageTalkToSarah2.text,|||\nEventHall1ReadPageTalkToSarah2 @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2.button1,
+EventHall1ReadPageTalkToSarah2Display.text,|||\nEventHall1ReadPageTalkToSarah2Display @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2Display.button1,
+EventHall1ReadPageTalkToSarah2Base.text,|||\nEventHall1ReadPageTalkToSarah2Base @(-1,-1)\n\nShe brightens up. “It’s good to see you again. I thought you had forgotten me after that night. I’ve missed you.”\n\nYou are surprised at what she says. <i>Who is this girl? Why does she think she knows me?</i>\n\nThe girl walks over and turns to face you. She looks up at you expectantly.\n\nMove the Green Girl token to your investigator card. She will follow you to whatever ends you meet in this house.\n\n\n|||
+EventHall1ReadPageTalkToSarah2Base.button1,{qst:continue}
+EventHall1ReadPageTalkToSarah2TiePoint.text,|||\nEventHall1ReadPageTalkToSarah2TiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2TiePoint.button1,
+EventHall1ReadPageTalkToSarah2AfterAddRemove1.text,|||\nEventHall1ReadPageTalkToSarah2AfterAddRemove1 @(218,2)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2AfterAddRemove1.button1,
+EventHall1Expr10.text,|||\nEventHall1Expr10 @(219,15)\n\n\n\n\n|||
+EventHall1Expr10.button1,
+EventHall1ReadPageTalkToSarah2AfterLet2.text,|||\nEventHall1ReadPageTalkToSarah2AfterLet2 @(219,2)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2AfterLet2.button1,
+EventHall1ReadPageTalkToSarah2AfterGoto45.text,|||\nEventHall1ReadPageTalkToSarah2AfterGoto45 @(220,2)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2AfterGoto45.button1,
+EventHall1TriggerSelector.text,|||\nEventHall1TriggerSelector @(-1,-1)\n\n\n\n\n|||
+EventHall1TriggerSelector.button1,
+EventHall1ReadPageExploreHall1XferIfTriggered.text,|||\nEventHall1ReadPageExploreHall1XferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageExploreHall1XferIfTriggered.button1,
+EventHall1ReadPagePlaceHall1XferIfTriggered.text,|||\nEventHall1ReadPagePlaceHall1XferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1XferIfTriggered.button1,
+EventHall1ReadPagePlaceHall1.text,|||\nEventHall1ReadPagePlaceHall1 @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1.button1,
+EventHall1ReadPagePlaceHall1Display.text,|||\nEventHall1ReadPagePlaceHall1Display @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1Display.button1,
+EventHall1ReadPagePlaceHall1Base.text,|||\nEventHall1ReadPagePlaceHall1Base @(-1,-1)\n\nYou look through the doorway to find a hall. It is clear that it was intended for the servants: plain and dark. Place the {c:TileHall1} tile, a door, and a wall as indicated.\n\nMove one space space into the hall.\n\n\n|||
+EventHall1ReadPagePlaceHall1Base.button1,{qst:continue}
+EventHall1ReadPagePlaceHall1TiePoint.text,|||\nEventHall1ReadPagePlaceHall1TiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1TiePoint.button1,
+EventHall1ReadPagePlaceHall1AfterAddRemove1.text,|||\nEventHall1ReadPagePlaceHall1AfterAddRemove1 @(38,2)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1AfterAddRemove1.button1,
+EventHall1ReadPagePlaceHall1AfterAddRemove2.text,|||\nEventHall1ReadPagePlaceHall1AfterAddRemove2 @(40,2)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1AfterAddRemove2.button1,
+EventHall1ReadPagePlaceHall1End.text,|||\nEventHall1ReadPagePlaceHall1End @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1End.button1,
+EventHall1ReadPagePlaceHall1GalleryXferIfTriggered.text,|||\nEventHall1ReadPagePlaceHall1GalleryXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1GalleryXferIfTriggered.button1,
+EventHall1ReadPagePlaceHall1Gallery.text,|||\nEventHall1ReadPagePlaceHall1Gallery @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1Gallery.button1,
+EventHall1ReadPagePlaceHall1GalleryBeforeAddRemove1.text,|||\nEventHall1ReadPagePlaceHall1GalleryBeforeAddRemove1 @(44,2)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1GalleryBeforeAddRemove1.button1,
+EventHall1ReadPagePlaceHall1GalleryDisplay.text,|||\nEventHall1ReadPagePlaceHall1GalleryDisplay @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1GalleryDisplay.button1,
+EventHall1ReadPagePlaceHall1GalleryBase.text,|||\nEventHall1ReadPagePlaceHall1GalleryBase @(-1,-1)\n\nTo your immediate right is a door. Place an Explore token as indicated.\n\n\n|||
+EventHall1ReadPagePlaceHall1GalleryBase.button1,{qst:continue}
+EventHall1ReadPagePlaceHall1GalleryTiePoint.text,|||\nEventHall1ReadPagePlaceHall1GalleryTiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1GalleryTiePoint.button1,
+EventHall1ReadPagePlaceHall1GalleryEnd.text,|||\nEventHall1ReadPagePlaceHall1GalleryEnd @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1GalleryEnd.button1,
+EventHall1ReadPagePlaceHall1PaintingXferIfTriggered.text,|||\nEventHall1ReadPagePlaceHall1PaintingXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1PaintingXferIfTriggered.button1,
+EventHall1ReadPagePlaceHall1Painting.text,|||\nEventHall1ReadPagePlaceHall1Painting @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1Painting.button1,
+EventHall1ReadPagePlaceHall1PaintingBeforeAddRemove1.text,|||\nEventHall1ReadPagePlaceHall1PaintingBeforeAddRemove1 @(53,2)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1PaintingBeforeAddRemove1.button1,
+EventHall1ReadPagePlaceHall1PaintingDisplay.text,|||\nEventHall1ReadPagePlaceHall1PaintingDisplay @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1PaintingDisplay.button1,
+EventHall1ReadPagePlaceHall1PaintingBase.text,|||\nEventHall1ReadPagePlaceHall1PaintingBase @(-1,-1)\n\nOn the left, a painting glows with unnatural light. You can almost feel it calling to you. You shake it off because paintings don’t have power. Place a Search token as indicated.\n\nAs you look away, you catch something moving in your peripheral vision. You glance back and the painting is still lightly glowing, something that suddenly seems more troubling.\n\n\n|||
+EventHall1ReadPagePlaceHall1PaintingBase.button1,{qst:continue}
+EventHall1ReadPagePlaceHall1PaintingTiePoint.text,|||\nEventHall1ReadPagePlaceHall1PaintingTiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1PaintingTiePoint.button1,
+EventHall1ReadPagePlaceHall1PaintingEnd.text,|||\nEventHall1ReadPagePlaceHall1PaintingEnd @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1PaintingEnd.button1,
+EventHall1ReadPagePlaceHall1EvidenceXferIfTriggered.text,|||\nEventHall1ReadPagePlaceHall1EvidenceXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1EvidenceXferIfTriggered.button1,
+EventHall1ReadPagePlaceHall1Evidence.text,|||\nEventHall1ReadPagePlaceHall1Evidence @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1Evidence.button1,
+EventHall1ReadPagePlaceHall1EvidenceBeforeAddRemove1.text,|||\nEventHall1ReadPagePlaceHall1EvidenceBeforeAddRemove1 @(68,2)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1EvidenceBeforeAddRemove1.button1,
+EventHall1ReadPagePlaceHall1EvidenceDisplay.text,|||\nEventHall1ReadPagePlaceHall1EvidenceDisplay @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1EvidenceDisplay.button1,
+EventHall1ReadPagePlaceHall1EvidenceBase.text,|||\nEventHall1ReadPagePlaceHall1EvidenceBase @(-1,-1)\n\nYou look down. The rug on the floor is old and beautiful, if dirty and poorly cared for. One corner is folded up and looks like it has been that way for years. You should probably put it back so you don’t trip over it.\n\nPlace a Search token as indicated.\n\n\n|||
+EventHall1ReadPagePlaceHall1EvidenceBase.button1,{qst:continue}
+EventHall1ReadPagePlaceHall1EvidenceTiePoint.text,|||\nEventHall1ReadPagePlaceHall1EvidenceTiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1EvidenceTiePoint.button1,
+EventHall1ReadPagePlaceHall1EvidenceEnd.text,|||\nEventHall1ReadPagePlaceHall1EvidenceEnd @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1EvidenceEnd.button1,
+EventHall1ReadPagePlaceHall1SightXferIfTriggered.text,|||\nEventHall1ReadPagePlaceHall1SightXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1SightXferIfTriggered.button1,
+EventHall1ReadPagePlaceHall1Sight.text,|||\nEventHall1ReadPagePlaceHall1Sight @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1Sight.button1,
+EventHall1ReadPagePlaceHall1SightBeforeAddRemove1.text,|||\nEventHall1ReadPagePlaceHall1SightBeforeAddRemove1 @(81,2)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1SightBeforeAddRemove1.button1,
+EventHall1ReadPagePlaceHall1SightDisplay.text,|||\nEventHall1ReadPagePlaceHall1SightDisplay @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1SightDisplay.button1,
+EventHall1ReadPagePlaceHall1SightBase.text,|||\nEventHall1ReadPagePlaceHall1SightBase @(-1,-1)\n\nThe hall stretches forward. Place a Sight token as indicated.\n\nAs you look around, something doesn’t feel right. You feel like you are being watched.\n\n\n|||
+EventHall1ReadPagePlaceHall1SightBase.button1,{qst:continue}
+EventHall1ReadPagePlaceHall1SightTiePoint.text,|||\nEventHall1ReadPagePlaceHall1SightTiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1SightTiePoint.button1,
+EventHall1Expr3.text,|||\nEventHall1Expr3 @(90,5)\n\n\n\n\n|||
+EventHall1Expr3.button1,
+EventHall1ReadPagePlaceHall1SightAfterTrigger1.text,|||\nEventHall1ReadPagePlaceHall1SightAfterTrigger1 @(90,23)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1SightAfterTrigger1.button1,
+EventHall1Expr4.text,|||\nEventHall1Expr4 @(91,5)\n\n\n\n\n|||
+EventHall1Expr4.button1,
+EventHall1ReadPagePlaceHall1SightAfterGoto42.text,|||\nEventHall1ReadPagePlaceHall1SightAfterGoto42 @(91,23)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1SightAfterGoto42.button1,
+EventHall1ReadPagePlaceHall1SightEnd.text,|||\nEventHall1ReadPagePlaceHall1SightEnd @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1SightEnd.button1,
+EventHall1ReadPagePlaceHall1JournalXferIfTriggered.text,|||\nEventHall1ReadPagePlaceHall1JournalXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1JournalXferIfTriggered.button1,
+EventHall1ReadPagePlaceHall1Journal.text,|||\nEventHall1ReadPagePlaceHall1Journal @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1Journal.button1,
+EventHall1ReadPagePlaceHall1JournalDisplay.text,|||\nEventHall1ReadPagePlaceHall1JournalDisplay @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1JournalDisplay.button1,
+EventHall1ReadPagePlaceHall1JournalBase.text,|||\nEventHall1ReadPagePlaceHall1JournalBase @(-1,-1)\n\n<i>The book on the floor,</i> you remind yourself. You turn around, see the book, and bend down to pick it up. Gain the {c:QItemJournal} unique item.\n\nYou look at the book you picked up: small, thin, and leather-bound. You flip through the pages: it’s a journal. The first entry was scrawled last Sunday.\n\nMaybe you should hold onto it to give back to Benjamin when you see him later today. And maybe take a quick look yourself.\n\nGain the {c:QItemJournal} Unique Item, then remove its Search token. An investigator holding the {c:QItemJournal} can interact with it in the app.\n\n\n|||
+EventHall1ReadPagePlaceHall1JournalBase.button1,{qst:continue}
+EventHall1ReadPagePlaceHall1JournalTiePoint.text,|||\nEventHall1ReadPagePlaceHall1JournalTiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1JournalTiePoint.button1,
+EventHall1Expr5.text,|||\nEventHall1Expr5 @(112,17)\n\n\n\n\n|||
+EventHall1Expr5.button1,
+EventHall1ReadPagePlaceHall1JournalAfterLet1.text,|||\nEventHall1ReadPagePlaceHall1JournalAfterLet1 @(112,2)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1JournalAfterLet1.button1,
+EventHall1ReadPagePlaceHall1JournalAfterGoto43.text,|||\nEventHall1ReadPagePlaceHall1JournalAfterGoto43 @(114,2)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1JournalAfterGoto43.button1,
+EventHall1ReadPageSearchRugXferIfTriggered.text,|||\nEventHall1ReadPageSearchRugXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchRugXferIfTriggered.button1,
+EventHall1ReadPageSearchPaintingXferIfTriggered.text,|||\nEventHall1ReadPageSearchPaintingXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPaintingXferIfTriggered.button1,
+EventHall1ReadPageSearchPainting2XferIfTriggered.text,|||\nEventHall1ReadPageSearchPainting2XferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPainting2XferIfTriggered.button1,
+EventHall1ReadPageSearchPainting2.text,|||\nEventHall1ReadPageSearchPainting2 @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPainting2.button1,
+EventHall1ReadPageSearchPainting2Display.text,|||\nEventHall1ReadPageSearchPainting2Display @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPainting2Display.button1,
+EventHall1ReadPageSearchPainting2Base.text,|||\nEventHall1ReadPageSearchPainting2Base @(-1,-1)\n\nAs you turn around, you notice two shadows on the wall, yours and... you quickly look back at the painting. The girl is not there. Startled, you turn to run back to the {c:TileDiningRoom} and are brought up short when the girl from the painting is standing in front of you.\n\nPlace the Green Girl token as indicated. Shocked, you take 1 Horror ({will} negates).\n\n\n|||
+EventHall1ReadPageSearchPainting2Base.button1,{qst:continue}
+EventHall1ReadPageSearchPainting2TiePoint.text,|||\nEventHall1ReadPageSearchPainting2TiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPainting2TiePoint.button1,
+EventHall1ReadPageSearchPainting2AfterAddRemove1.text,|||\nEventHall1ReadPageSearchPainting2AfterAddRemove1 @(177,2)\n\n\n\n\n|||
+EventHall1ReadPageSearchPainting2AfterAddRemove1.button1,
+EventHall1ReadPageSearchPainting2End.text,|||\nEventHall1ReadPageSearchPainting2End @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPainting2End.button1,
+EventHall1ReadPageTalkToSarahXferIfTriggered.text,|||\nEventHall1ReadPageTalkToSarahXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarahXferIfTriggered.button1,
+EventHall1ReadPageTalkToSarah.text,|||\nEventHall1ReadPageTalkToSarah @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah.button1,
+EventHall1ReadPageTalkToSarahDisplay.text,|||\nEventHall1ReadPageTalkToSarahDisplay @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarahDisplay.button1,
+EventHall1ReadPageTalkToSarahBase.text,|||\nEventHall1ReadPageTalkToSarahBase @(-1,-1)\n\nShe is a pretty girl in the the first blush of youth–maybe 11 or 12 years old. She has curly hair with ribbons and a bright white dress that stands out in the dingy hallway.\n\n\n|||
+EventHall1ReadPageTalkToSarahBase.button1,{qst:continue}
+EventHall1ReadPageTalkToSarahTiePoint.text,|||\nEventHall1ReadPageTalkToSarahTiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarahTiePoint.button1,
+EventHall1ReadPageTalkToSarahEnd.text,|||\nEventHall1ReadPageTalkToSarahEnd @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarahEnd.button1,
+EventHall1ReadPageTalkToSarah2XferIfTriggered.text,|||\nEventHall1ReadPageTalkToSarah2XferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2XferIfTriggered.button1,
+EventHall1Toc.text,|||\nEventHall1Toc @(-1,-1)\n\n\n\n\n|||
+EventHall1Toc.button1,
+EventHall1TocSelector.text,|||\nEventHall1TocSelector @(-1,-1)\n\n\n\n\n|||
+EventHall1TocSelector.button1,
+EventHall1TocPrologProxyExploreHall1.text,|||\nEventHall1TocPrologProxyExploreHall1 @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologProxyExploreHall1.button1,
+EventHall1TocPrologProxyPlaceHall1.text,|||\nEventHall1TocPrologProxyPlaceHall1 @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologProxyPlaceHall1.button1,
+EventHall1TocPrologPlaceHall1.text,|||\nEventHall1TocPrologPlaceHall1 @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologPlaceHall1.button1,
+EventHall1TocPrologProxyPlaceHall1Gallery.text,|||\nEventHall1TocPrologProxyPlaceHall1Gallery @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologProxyPlaceHall1Gallery.button1,
+EventHall1TocPrologPlaceHall1Gallery.text,|||\nEventHall1TocPrologPlaceHall1Gallery @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologPlaceHall1Gallery.button1,
+EventHall1TocPrologProxyPlaceHall1Painting.text,|||\nEventHall1TocPrologProxyPlaceHall1Painting @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologProxyPlaceHall1Painting.button1,
+EventHall1TocPrologPlaceHall1Painting.text,|||\nEventHall1TocPrologPlaceHall1Painting @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologPlaceHall1Painting.button1,
+EventHall1TocPrologProxyPlaceHall1Evidence.text,|||\nEventHall1TocPrologProxyPlaceHall1Evidence @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologProxyPlaceHall1Evidence.button1,
+EventHall1TocPrologPlaceHall1Evidence.text,|||\nEventHall1TocPrologPlaceHall1Evidence @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologPlaceHall1Evidence.button1,
+EventHall1TocPrologProxyPlaceHall1Sight.text,|||\nEventHall1TocPrologProxyPlaceHall1Sight @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologProxyPlaceHall1Sight.button1,
+EventHall1TocPrologPlaceHall1Sight.text,|||\nEventHall1TocPrologPlaceHall1Sight @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologPlaceHall1Sight.button1,
+EventHall1TocPrologProxyPlaceHall1Journal.text,|||\nEventHall1TocPrologProxyPlaceHall1Journal @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologProxyPlaceHall1Journal.button1,
+EventHall1TocPrologPlaceHall1Journal.text,|||\nEventHall1TocPrologPlaceHall1Journal @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologPlaceHall1Journal.button1,
+EventHall1TocPrologProxySearchRug.text,|||\nEventHall1TocPrologProxySearchRug @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologProxySearchRug.button1,
+EventHall1TocPrologProxySearchPainting.text,|||\nEventHall1TocPrologProxySearchPainting @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologProxySearchPainting.button1,
+EventHall1TocPrologProxySearchPainting2.text,|||\nEventHall1TocPrologProxySearchPainting2 @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologProxySearchPainting2.button1,
+EventHall1TocPrologSearchPainting2.text,|||\nEventHall1TocPrologSearchPainting2 @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologSearchPainting2.button1,
+EventHall1TocPrologProxyTalkToSarah.text,|||\nEventHall1TocPrologProxyTalkToSarah @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologProxyTalkToSarah.button1,
+EventHall1TocPrologTalkToSarah.text,|||\nEventHall1TocPrologTalkToSarah @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologTalkToSarah.button1,
+EventHall1TocPrologProxyTalkToSarah2.text,|||\nEventHall1TocPrologProxyTalkToSarah2 @(-1,-1)\n\n\n\n\n|||
+EventHall1TocPrologProxyTalkToSarah2.button1,
+EventHall1TocNoPagesAvailable.text,|||\nEventHall1TocNoPagesAvailable @(-1,-1)\n\n\n\n\n|||
+EventHall1TocNoPagesAvailable.button1,
+EventHall1ReadPageExploreHall1Trigger.text,|||\nEventHall1ReadPageExploreHall1Trigger @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageExploreHall1Trigger.button1,
+EventHall1ReadPageSearchRugTrigger.text,|||\nEventHall1ReadPageSearchRugTrigger @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchRugTrigger.button1,
+EventHall1ReadPageSearchPaintingTrigger.text,|||\nEventHall1ReadPageSearchPaintingTrigger @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPaintingTrigger.button1,
+EventHall1ReadPageTalkToSarahTrigger.text,|||\nEventHall1ReadPageTalkToSarahTrigger @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarahTrigger.button1,
+EventHall1Expr6.text,|||\nEventHall1Expr6 @(182,33)\n\n\n\n\n|||
+EventHall1Expr6.button1,
+EventHall1Expr7.text,|||\nEventHall1Expr7 @(182,33)\n\n\n\n\n|||
+EventHall1Expr7.button1,
+EventHall1ReadPageTalkToSarahTriggerFail.text,|||\nEventHall1ReadPageTalkToSarahTriggerFail @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarahTriggerFail.button1,
+EventHall1Expr8.text,|||\nEventHall1Expr8 @(182,33)\n\n\n\n\n|||
+EventHall1Expr8.button1,
+EventHall1ReadPageTalkToSarah2Trigger.text,|||\nEventHall1ReadPageTalkToSarah2Trigger @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2Trigger.button1,
+EventHall1Expr9.text,|||\nEventHall1Expr9 @(192,33)\n\n\n\n\n|||
+EventHall1Expr9.button1,
+EventHall1ReadPageTalkToSarah2TriggerFail.text,|||\nEventHall1ReadPageTalkToSarah2TriggerFail @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2TriggerFail.button1,
 EventStartupStart.text,
 EventStartupStart.button1,
 EventStartupInit.text,
 EventStartupInit.button1,
 EventStartupFirstTimeInitializer.text,
 EventStartupFirstTimeInitializer.button1,
-EventStartupExpr50.text,
-EventStartupExpr50.button1,
-EventStartupExpr51.text,
-EventStartupExpr51.button1,
-EventStartupExpr40.text,
-EventStartupExpr40.button1,
 EventStartupExpr52.text,
 EventStartupExpr52.button1,
 EventStartupExpr53.text,
 EventStartupExpr53.button1,
+EventStartupExpr41.text,
+EventStartupExpr41.button1,
 EventStartupExpr54.text,
 EventStartupExpr54.button1,
 EventStartupExpr55.text,
 EventStartupExpr55.button1,
 EventStartupExpr56.text,
 EventStartupExpr56.button1,
-EventStartupExpr41.text,
-EventStartupExpr41.button1,
-EventStartupExpr58.text,
-EventStartupExpr58.button1,
 EventStartupExpr57.text,
 EventStartupExpr57.button1,
-EventStartupExpr60.text,
-EventStartupExpr60.button1,
+EventStartupExpr58.text,
+EventStartupExpr58.button1,
 EventStartupExpr42.text,
 EventStartupExpr42.button1,
-EventStartupExpr43.text,
-EventStartupExpr43.button1,
-EventStartupExpr45.text,
-EventStartupExpr45.button1,
-EventStartupExpr44.text,
-EventStartupExpr44.button1,
-EventStartupExpr61.text,
-EventStartupExpr61.button1,
-EventStartupExpr49.text,
-EventStartupExpr49.button1,
-EventStartupExpr63.text,
-EventStartupExpr63.button1,
+EventStartupExpr60.text,
+EventStartupExpr60.button1,
+EventStartupExpr59.text,
+EventStartupExpr59.button1,
 EventStartupExpr62.text,
 EventStartupExpr62.button1,
+EventStartupExpr43.text,
+EventStartupExpr43.button1,
+EventStartupExpr44.text,
+EventStartupExpr44.button1,
+EventStartupExpr46.text,
+EventStartupExpr46.button1,
+EventStartupExpr45.text,
+EventStartupExpr45.button1,
+EventStartupExpr49.text,
+EventStartupExpr49.button1,
+EventStartupExpr48.text,
+EventStartupExpr48.button1,
+EventStartupExpr63.text,
+EventStartupExpr63.button1,
+EventStartupExpr51.text,
+EventStartupExpr51.button1,
 EventStartupExpr65.text,
 EventStartupExpr65.button1,
+EventStartupExpr64.text,
+EventStartupExpr64.button1,
+EventStartupExpr67.text,
+EventStartupExpr67.button1,
 EventStartupTriggerPrologSelector.text,
 EventStartupTriggerPrologSelector.button1,
 EventStartupTriggerSelector.text,
@@ -6708,24 +7571,26 @@ EventStartupReadPageStartUpBeforeLet18.text,
 EventStartupReadPageStartUpBeforeLet18.button1,
 EventStartupExpr31.text,
 EventStartupExpr31.button1,
-EventStartupReadPageStartUpBeforeLet19.text,
-EventStartupReadPageStartUpBeforeLet19.button1,
 EventStartupExpr32.text,
 EventStartupExpr32.button1,
-EventStartupExpr34.text,
-EventStartupExpr34.button1,
+EventStartupReadPageStartUpBeforeLet19.text,
+EventStartupReadPageStartUpBeforeLet19.button1,
 EventStartupExpr33.text,
 EventStartupExpr33.button1,
+EventStartupExpr35.text,
+EventStartupExpr35.button1,
+EventStartupExpr34.text,
+EventStartupExpr34.button1,
 EventStartupReadPageStartUpBeforeTrigger20.text,
 EventStartupReadPageStartUpBeforeTrigger20.button1,
-EventStartupExpr36.text,
-EventStartupExpr36.button1,
-EventStartupExpr38.text,
-EventStartupExpr38.button1,
 EventStartupExpr37.text,
 EventStartupExpr37.button1,
-EventStartupReadPageStartUpBeforeGoto26.text,
-EventStartupReadPageStartUpBeforeGoto26.button1,
+EventStartupExpr39.text,
+EventStartupExpr39.button1,
+EventStartupExpr38.text,
+EventStartupExpr38.button1,
+EventStartupReadPageStartUpBeforeGoto46.text,
+EventStartupReadPageStartUpBeforeGoto46.button1,
 EventStartupEnd.text,
 EventStartupEnd.button1,
 EventStartupReadPageStartUpDisplay.text,
@@ -6740,10 +7605,10 @@ EventStartupTiePoint.text,
 EventStartupTiePoint.button1,
 EventStartupLoopBack.text,
 EventStartupLoopBack.button1,
-EventStartupExpr39.text,
-EventStartupExpr39.button1,
-EventStartupExpr35.text,
-EventStartupExpr35.button1,
+EventStartupExpr40.text,
+EventStartupExpr40.button1,
+EventStartupExpr36.text,
+EventStartupExpr36.button1,
 EventStartupReadPageShowEverythingXferIfTriggered.text,
 EventStartupReadPageShowEverythingXferIfTriggered.button1,
 EventStartupReadPageShowEverything.text,
@@ -6794,16 +7659,18 @@ EventStartupReadPageShowEverythingBeforeAddRemove22.text,
 EventStartupReadPageShowEverythingBeforeAddRemove22.button1,
 EventStartupReadPageShowEverythingBeforeAddRemove23.text,
 EventStartupReadPageShowEverythingBeforeAddRemove23.button1,
-EventStartupReadPageShowEverythingBeforeGoto27.text,
-EventStartupReadPageShowEverythingBeforeGoto27.button1,
+EventStartupReadPageShowEverythingBeforeAddRemove24.text,
+EventStartupReadPageShowEverythingBeforeAddRemove24.button1,
+EventStartupReadPageShowEverythingBeforeGoto47.text,
+EventStartupReadPageShowEverythingBeforeGoto47.button1,
 EventStartupReadPageSplashScreenXferIfTriggered.text,
 EventStartupReadPageSplashScreenXferIfTriggered.button1,
 EventStartupReadPageSplashScreen.text,
 EventStartupReadPageSplashScreen.button1,
 EventStartupReadPageSplashScreenBeforeAddRemove1.text,
 EventStartupReadPageSplashScreenBeforeAddRemove1.button1,
-EventStartupReadPageSplashScreenBeforeGoto28.text,
-EventStartupReadPageSplashScreenBeforeGoto28.button1,
+EventStartupReadPageSplashScreenBeforeGoto48.text,
+EventStartupReadPageSplashScreenBeforeGoto48.button1,
 EventStartupReadPageSplashScreenClosedXferIfTriggered.text,
 EventStartupReadPageSplashScreenClosedXferIfTriggered.button1,
 EventStartupReadPageSplashScreenClosed.text,
@@ -6890,16 +7757,14 @@ EventStartupTocPrologPlaceDriveway.text,
 EventStartupTocPrologPlaceDriveway.button1,
 EventStartupTocNoPagesAvailable.text,
 EventStartupTocNoPagesAvailable.button1,
-EventStartupExpr64.text,
-EventStartupExpr64.button1,
-EventStartupExpr46.text,
-EventStartupExpr46.button1,
+EventStartupExpr66.text,
+EventStartupExpr66.button1,
+EventStartupExpr50.text,
+EventStartupExpr50.button1,
 EventStartupExpr47.text,
 EventStartupExpr47.button1,
-EventStartupExpr48.text,
-EventStartupExpr48.button1,
-EventStartupExpr59.text,
-EventStartupExpr59.button1,
+EventStartupExpr61.text,
+EventStartupExpr61.button1,
 EventStartupReadPageStartUpTrigger.text,
 EventStartupReadPageStartUpTrigger.button1,
 EventStartupReadPageSplashScreenTrigger.text,

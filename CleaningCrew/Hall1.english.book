@@ -1,9 +1,10 @@
 Language English
+Debug On
 
 Book Hall1 Ordered No Keep Looped
 
 	Page ExploreHall1
-		Triggered By @ExploreHall1
+		Triggered By @ExploreHall1ViaDiningRoom
 		
 		Prolog """
 			The door has a dirty push plate. When you push on it, you discover
@@ -40,15 +41,17 @@ Book Hall1 Ordered No Keep Looped
 	End Page PlaceHall1
 	
 	Page PlaceHall1Gallery
+		Add TokenExploreGalleryViaHall1!
+
 		Text """
 			To your immediate right is a door. Place an Explore token as
 			indicated.
 		"""
-		
-		Add TokenExploreGalleryViaHall1!
 	End Page PlaceHall1Gallery
 	
 	Page PlaceHall1Painting
+		Add TokenSearchHall1Picture!
+
 		Text """
 			On the left, a painting glows with unnatural
 			light. You can almost feel it calling to you. You shake it off
@@ -59,11 +62,11 @@ Book Hall1 Ordered No Keep Looped
 			peripheral vision. You glance back and the painting is still
 			lightly glowing, something that suddenly seems more troubling.
 		"""
-		
-		Add TokenSearchHall1Picture!
 	End Page PlaceHall1Painting
 	
 	Page PlaceHall1Evidence
+		Add TokenSearchHall1Rug!
+
 		Text """
 			You look down. The rug on the floor is old and beautiful, if
 			dirty and poorly cared for. One corner is folded up and looks
@@ -72,11 +75,11 @@ Book Hall1 Ordered No Keep Looped
 			
 			Place a Search token as indicated.
 		"""
-		
-		Add TokenSearchHall1Rug!
 	End Page PlaceHall1Evidence
 	
 	Page PlaceHall1Sight
+		Add TokenSightHall2ViaHall1!
+		
 		Text """
 			The hall stretches forward. Place a Sight token as indicated.
 			
@@ -84,17 +87,14 @@ Book Hall1 Ordered No Keep Looped
 			You feel like you are being watched.
 		"""
 		
-		Add TokenSightHall2ViaHall1!
-		
+		If foundJournal Then Trigger @MoveAfterExplore
 		If foundJournal Then Exit
 	End Page PlaceHall1Sight
 	
 	Page PlaceHall1Journal
 		Text """
 			<i>The book on the floor,</i> you remind yourself. You turn 
-			around and step back. Move one space into the {c:TileDiningRoom}.
-			
-			You look over, see the book, and bend down to pick it up. Gain
+			around, see the book, and bend down to pick it up. Gain
 			the {c:QItemJournal} unique item.
 			
 			You look at the book you picked up:  small, thin, and
@@ -109,7 +109,6 @@ Book Hall1 Ordered No Keep Looped
 			can interact with it in the app.
 		"""
 		
-		Remove TokenSearchDiningRoomJournal
 		foundJournal = true
 		
 		Exit

@@ -1,5 +1,5 @@
 Language English
-Debug "prev={var:readBenBeforePreviousPage}, visible={var:visibleBenBeforeSorry}, read={var:readBenBeforeSorry}"
+Debug Off
 
 Book BenBefore Random No Keep Looped
 	Triggered By @BenBefore

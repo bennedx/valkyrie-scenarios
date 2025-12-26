@@ -84,6 +84,7 @@ Book Startup Ordered No Keep Looped
 		Add TokenTestJournal2, TokenTestBenTrigger, TileHall1
 		Add TileTortureChamber, TokenBackyardBenBefore, TokenDiningRoomBen
 		Add TokenBackyardBenPassive, TokenTestBackdoorLocked
+		Add TokenTestSearchFluxStabilizer, Token0
 		
 		Exit
 	End Page ShowEverything

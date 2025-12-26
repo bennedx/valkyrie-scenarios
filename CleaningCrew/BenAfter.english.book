@@ -2,7 +2,7 @@ Language English
 Debug Off
 
 Book BenAfter Random No Keep Looped
-    Triggered By @BenAfter When exploredDiningRoomen
+    Triggered By @BenAfter
 
     Prolog
         Text """
@@ -57,8 +57,7 @@ Book BenAfter Random No Keep Looped
     Page AnythingElse
         Button "<<Is there anything else we need to know?>>"
     
-        Remove TokenBackyardBenAfter
-        Add TokenExploreBackDoorLocked!, TokenInvestigatorsDiningRoom
+        Add TokenInvestigatorsDiningRoom
         
 		Text """
             <<Oh, my, yes. Here's the key you'll need to open doors throughout
@@ -73,8 +72,7 @@ Book BenAfter Random No Keep Looped
 			{c:TileDiningRoom}.
 			
 			Ben shuts the door behind you. <i>Was that the lock turning?</i>
-			you ask yourself. Place an Explore token as indicated and remove Ben
-			from the board.
+			you ask yourself. Discard the purple man.
         """
     
         If Not exploredBackyardNicely Then Text """
@@ -89,8 +87,7 @@ Book BenAfter Random No Keep Looped
 			{C:TileDiningRoom}.
         
             Ben slams the door shut behind him. <i>Was that the lock
-			turning?</i> you ask yourself. Place an Explore token as indicated
-			and remove Ben from the board.
+			turning?</i> you ask yourself. Discard the purple man.
         """
     
 		Remove TokenInvestigatorsDiningRoom, TokenBackyardBenAfter
@@ -108,17 +105,17 @@ Book BenAfter Random No Keep Looped
         talkedToBenCount = talkedToBenCount + 1
 
         Trigger @TalkedToBenAfter
+		Exit
     End Page AnythingElse
 	
 	Page AnythingElseJournal
-		Visible When Not foundJournal
-		
-		Add TokenDiningRoomJournal!
+		Not Visible
+		Triggered By @TalkedToBenAfter When Not foundJournal
 		
 		Text """
 			At your feet you see a book that looks identical to the one Benjamin
 			dropped outside. He seems to have dropped it again. <i>How is that
-			possible?>> you ask yourself. Place a Search token as indicated.
+			possible?</i> you ask yourself.
 			
 			Something here doesn't feel right.
 		"""
