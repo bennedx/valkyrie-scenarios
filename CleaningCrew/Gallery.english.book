@@ -2,60 +2,61 @@ Language English
 
 Book Gallery Ordered No Keep Looped
 
-	Page ExploreGalleryViaHall1
+	Page PlaceGallery
 		Triggered By @ExploreGalleryViaHall1
 		
-		No Text
-		
-		exploredGalleryViaHall1 = true
-		exploredGalleryViaFoyer = false
-		Goto ExploreGallery
-	End Page ExploreGalleryViaHall1
-	
-	Page ExploreGalleryViaFoyer
-		Triggered By @ExploreGalleryViaFoyer
-		
-		No Text
-		
-		exploredGalleryViaFoyer = true
-		exploredGalleryViaHall1  = false
-		Goto ExploreGallery
-	End Page ExploreGalleryViaFoyer
-
-	Page ExploreGallery
-		PROLOG """
+		Prolog """
 			You approach the door. It has a small brass plaque that reads
 			<<Gallery.>> The door handle catches your eye because light is
-			glinting off it. Unlike everything else here, it is clean...
+			glinting off it. Unlike most everything else here, it is clean...
 			like it has been used recently.
 		"""
-
+		Button "Explore"
+		
 		Add TileGallery
-		Remove TokenExploreGalleryViaHall1, TokenExploreGalleryViaFoyer
+		Remove TokenExploreGalleryViaHall1
 		
 		Text """
-			As the door opens, dust drifts slowly to the floor. Lots of
-			it. If you were still concerned about cleaning, you'd be horrified
-			at the amount of work ahead of you.
+			As the door opens, dust rises then drifts slowly toward the floor.
+			Lots of it. <i>This place could take days to clean,</i> you mumble
+			to yourself.
 			
 			The room behind the door is--or was--stately, with high ceilings,
 			beautiful paintings, and furniture and rugs that look both rich and
 			comfortable. Dim light from the windows reflects off the dust,
 			giving the room an unearthly quality. The glowing dust makes the
-			room feel more rundown that it actually is.
+			room feel shabbier than it actually is.
 			
-			Place the {c:TileGallery} tile, then discard all
-			Explore tokens leading to this room.
+			Place the {c:TileGallery} tile, then discard this Explore token.
 		"""
 		
-	End Page ExploreGallery
+		exploredGallery = true
+		
+		Trigger @ExploreHall2ViaHall1
+	End Page PlaceGallery
+	
+	Page PlaceHall1Painting
+		Add TokenSearchHall1Painting!
 
+		Text """
+			Light from the {c:TileGallery} has, somehow, cast a ray directly
+			on a painting, making it glow with 
+			unnatural light. You can almost feel it calling to you. You shake it
+			off because paintings don't have power. Place a Search token as 
+			indicated.
+			
+			As you look away, you catch something moving in your 
+			peripheral vision. You glance back and the painting is still
+			lightly glowing, something that suddenly seems more troubling.
+		"""
+	End Page PlaceHall1Painting
+	
 	Page PlaceExploreFoyerViaGallery
-		Not Visible When exploredFoyer
 
 		Add TokenExploreFoyerViaGallery!
 
 		Text """
+			Turning back, you look through the {c:TileGallery} door.  
 			Across the room is another door. Place an Explore token as
 			indicated.
 		"""
@@ -75,25 +76,28 @@ Book Gallery Ordered No Keep Looped
 		Add TokenSearchGalleryDvm!
 
 		Text """
-			The two divans are upholstered with once-beautiful cloth... but now
-			they are dirty and moth-eaten. A pile of junk sits on a small table
+			Two divans are upholstered with once-beautiful cloth... but now
+			they are moth-eaten and dirty. A pile of junk sits on a small table
 			between them. Place a Search token as indicated.
 		"""
+		
+		Trigger @MoveAfterExplore
+		Exit
 	End Page PlaceGalleryDvm
 
 	Page PlaceCoatRoom
-		Triggered By @PlaceCoatRoom
+		Triggered By @ExploreCoatRoom
 		
 		Remove TokenExploreCoatRoom
 		Add TokenSearchCoatRoomEvidence!
 
 		Text """
 			The coat room still has a number of coats hung neatly on one side.
-			Shoes and hangers are scattered on the floor. Remove this Explore
+			Shoes and hangers are scattered on the floor. Discard this Explore
 			token.
 
-			A half-filled box sits in one of the corners. Place a Search token as
-			indicated.
+			A half-filled box sits in one of the corners. Place a Search token
+			as indicated.
 		"""
 		
 		Trigger @MoveAfterExplore
@@ -103,11 +107,12 @@ Book Gallery Ordered No Keep Looped
 	Page SearchDvm
 		Triggered By @SearchGalleryDvm
 		
-		PROLOG "A pile of junk sits on the table between the divans."
+		Prolog "A pile of junk sits on the table between the divans."
+		Button "Search"
 		
 		Remove TokenSearchGalleryDvm
 
-		Text """
+		Text QItemDvm """
 			Among the tools, handkerchiefs, and ashtrays are a number of small
 			books. One of them... <i>feels</i> different than the others. It is
 			old and worn, but you get the sense it possesses great power.
@@ -123,14 +128,15 @@ Book Gallery Ordered No Keep Looped
 	Page SearchCoatRoomEvidence
 		Triggered By @SearchCoatRoomEvidence
 		
-		PROLOG """
+		Prolog """
 			This box is half-full of things you might find in a coat room:
 			brushes, shoe polish, and...
 		"""
-	
+		Button "Search"
+		
 		Remove TokenSearchCoatRoomEvidence
 
-		Text """
+		Text QItemEvidenceCoatRoom """
 			Among other items, you find a pair of shoes caked with mud and a
 			bloody handkerchief. Looking closer, you see that the handkerchief
 			was used to wipe blood from the shoes.

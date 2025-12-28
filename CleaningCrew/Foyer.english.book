@@ -2,6 +2,7 @@ Language English
 
 Book Foyer Ordered No Keep Looped
 	Page ExploreFoyerViaGallery
+		Not Visible
 		Triggered BY @ExploreFoyerViaGallery
 		
 		Prolog """
@@ -18,8 +19,8 @@ Book Foyer Ordered No Keep Looped
 	End Page ExploreFoyerViaGallery
 	
 	Page ExploreFoyerViaHall2
+		Not Visible
 		Triggered BY @ExploreFoyerViaHall2
-
 		
 		Prolog "This door has a small brass plaque that reads <<Foyer.>>"
 		Button "Explore"
@@ -31,6 +32,7 @@ Book Foyer Ordered No Keep Looped
 	End Page ExploreFoyerViaHall2
 	
 	Page ExploreFoyerViaStudy
+		Not Visible
 		Triggered BY @ExploreFoyerViaStudy
 		
 		Prolog "This door leads farther into the house."
@@ -47,121 +49,101 @@ Book Foyer Ordered No Keep Looped
 		Add TileFoyer
 		
 		Text """
-			The foyer is a large, nearly empty space with a front door, stairs,
+			The foyer is a large, nearly-empty space with a front door, stairs,
 			and other doors leading to various parts of the house. Place the
-			{c:TileFoyer} tile then remove all Explore tokens leading to this
+			{c:TileFoyer} tile then discard all Explore tokens leading to this
 			room.
 		"""
 		
 		exploredFoyer = true
 	End Page PlaceFoyer
 
-	Page PlaceFoyerExploreGallery
-		Not Visible When exploredGallery
-		
-		Add TokenExploreGalleryViaFoyer!
-
-		// assume ViaHall2
-		Text """
-			To your right, a door leads farther into the house. Place an
-			Explore token as indicated.
-		"""
-		
-		If exploredFoyerViaStudy Then Text """
-			Across the room, a door leads farther into the house. Place
-			an Explore token as indicated.
-		"""
-		
-	End Page PlaceFoyerExploreGallery
-
-	Page PlaceFoyerExploreStudy
+	Page PlaceExploreStudy
 		Not Visible When exploredStudy
 		
 		Add TokenExploreStudyViaFoyer!
 		
 		// Assume ViaHall2
 		Text """
-			Down and up the stairs is another door leading farther into the
+			Across the stairs is another door leading farther into the
 			house. Place an Explore token as indicated.
 		"""
 		
 		If exploredFoyerViaGallery Then Text """
-			Across the room and up some stairs, a door leads father into the
+			Across the room and up some stairs, a door leads farther into the
 			house. Place an Explore token as indicated.
 		"""
-	End Page PlaceFoyerExploreStudy
+	End Page PlaceExploreStudy
 	
-	Page PlaceFoyerExploreHall2
-		Not Visible When exploredHall2
-		
-		Add TokenExploreHall2ViaFoyer!
-
-		// assume ViaGallery
-		Text """
-			Up the stairs and to your left, a door leads farther into the
-			house. Place an Explore token as indicated.
-		"""
-		
-		If exploredFoyerViaStudy Then Text """
-			Down and up the stairs to your right is another door. Place an
-			Explore token as indicated.
-		"""
-	End Page PlaceFoyerExploreHall2
-	
-	Page PlaceFoyerCandles
-		Add TokenFoyerSearchCandles!
+	Page PlaceCandles
+		Add TokenSearchFoyerCandles!
 
 		// assume via Hall2
 		Text """
-			Next to you is a painting that catches your eye. Place a Search
+			Next to you is a painting that piques your interest. Place a Search
 			token as indicated.
 		"""
 		
-		If NOT exploredFoyerViaHall2 Then Text """
-			Next to a door across the room, a painting catches your eye. Place
+		If exploredFoyerViaGallery Then Text """
+			Up the stairs to your left, a painting piques your interest. Place
 			a Search token as indicated.
 		"""
-	End Page PlaceFoyerCandles
+		
+		If exploredFoyerViaStudy Then Text """
+			Next to a door across the stairs, a painting piques your interest.
+			Place a Search token as indicated.
+		"""
+	End Page PlaceCandles
 	
-	Page PlaceFoyerSearchRandom
+	Page PlaceSearchRandom
 		Add TokenSearchFoyerRandom!
 
 		Text """
-			A small cabinet with drawers and little compartments sits next to
-			the front door. Place a Search token as indicated.
+			A small secretary sits next to the entry. It has many compartments
+			and drawers, some hanging open. Place a Search token as indicated.
 		"""
-	End Page PlaceFoyerSearchRandom
+	End Page PlaceSearchRandom
 	
-	Page PlaceFoyerExploreFrontDoor
-		Add TokenFoyerExploreFrontDoor!
+	Page PlaceExploreFrontDoor
+		Add TokenExploreFoyerFrontDoor!
 
 		Text """
 			The front door seems to be in good repair, but the glass set into
 			it is as filthy as that door off the driveway. Place an Explore
 			token as indicated.
 		"""
+	End Page PlaceExploreFrontDoor
+	
+	Page PlaceSearchSpell
+		If exploredFoyerViaStudy Then Add TokenSearchFoyerSpellRight!
+		If Not exploredFoyerViaStudy Then Add TokenSearchFoyerSpellLeft!
+		
+		TEXT """
+			A mirror across the room looks interesting. Place a Search token
+			as indicated.
+		"""
 		
 		Trigger @MoveAfterExplore
 		Exit
-	End Page PlaceFoyerExploreFrontDoor
+	End Page PlaceSearchSpell
 	
-
 	Page SearchRandom
 		Triggered BY @SearchFoyerRandom
 		
 		Prolog """
-			An old cabinet with a set of drawers sits next to the door. Several
-			drawers are half open, like whoever last looked through them was in
-			a hurry.
+			An old cabinet with a set of compartments and drawers sits next to
+			the door. Several drawers are half open, like whoever last looked
+			through them was in a hurry.
 		"""
 		Button "Search"
 		
-		Text """
-			You dig through the various compartments and eventually find
-			something useful. Gain the {c:QItemFoyerRandom} Common Item, then
-			discard this Search token.
+		Text QItemFoyerRandom """
+			You dig through the various drawers and compartments and eventually
+			find something useful. Gain the {c:QItemFoyerRandom} Common Item,
+			then discard this Search token.
 		"""
 		
+		Remove TokenSearchFoyerRandom
 		Exit
 	End Page SearchRandom
 	
@@ -169,17 +151,74 @@ Book Foyer Ordered No Keep Looped
 		Triggered By @SearchFoyerSpell
 		
 		Prolog """
-			Like the cabinet across from it, this table has several drawers.
+			This table sits under a fancy mirror. There is nothing on the table
+			but dust. It does have several drawers.
 		"""
 		Button "Search"
 		
-		Text """
+		Text QItemFoyerSpell """
 			You go through the drawers one-by-one, finding little of interest.
 			Finally, in the last drawer, you find a small pamphlet with arcane 
 			symbols and odd poetry. Gain the {c:QItemFoyerSpell} spell, then
 			discard this Search token.
 		"""
 		
+		Remove TokenSearchFoyerSpellLeft, TokenSearchFoyerSpellRight
 		Exit
 	End Page SearchSpell
+	
+	Page SearchCandles
+		Not Visible
+		Triggered By @SearchFoyerCandles
+		
+		Prolog """
+			This painting is compelling. Something about it makes you want to
+			have a closer look.
+		"""
+		Button "Search"
+		
+		Text QItemCandles """
+			You quickly realize what drew you to the painting:  the man’s eyes
+			glisten and meet yours as if he were alive. He sits in a chair in
+			front of his wife and two children, all standing. You recognize one
+			of the children as Sarah, so the man must be David Smythe. Still,
+			you don’t see anything that will help you with the house. As you
+			turn away, you notice the sconces on either side of the painting.
+			Some of the darker areas of the house could use a little light. You
+			reach out and take a candle.
+
+			Gain the {c:QItemCandles} Common Item, then discard this Search
+			token.
+		"""
+		
+		Remove TokenSearchFoyerCandles
+		
+		foundCandles = true
+		Exit
+	End Page SearchCandles
+	
+	Page ExploreFrontDoor
+		Not Visible
+		Triggered By @ExploreFoyerFrontDoor
+		
+		Prolog """
+			The door seems unfazed by age. A small window purports to look out
+			on the grounds. Maybe you can get out of this madhouse.
+		"""
+		Button "Explore"
+		
+		Text """
+			You grab and twist the knob but your hand just slides over it. No
+			matter how you try, you cannot turn the knob. The window is so
+			filthy that you cannot see through it.
+
+			If you were still worried about cleaning, this would be a lot of
+			work.
+
+			Discard this explore token.
+		"""
+		
+		Remove TokenExploreFoyerFrontDoor
+		Exit
+	End Page ExploreFrontDoor
 End Book Foyer

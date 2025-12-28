@@ -4,129 +4,71 @@ Book Hall2 Ordered No Keep Looped
 
 	// Hall2 can be explored from Hall1, the Foyer, or the Study
 
-	Page ExploreHall2ViaHall1
+	Page PlaceHall2ViaHall1
 		Triggered By @ExploreHall2ViaHall1
 		
-		Prolog """
-			The hall seems to continue on a bit farther. An investigator in the
-			same space as the Sight token can look down the hall.
-		"""
-		Button "Look down the hall"
-		
-		Remove SightHall2ViaHall1, SightHall2ViaFoyer, SightHall2ViaStudy
 		Add TileHall2, TokenWallHall2!
 
 		Text """
-			With the dining room door so far from this end of the hall, you
-			have to take a step forward to see what is there. Place the
-			{c:TileHall2} tile and a wall as indicated. Discard all Sight and
-			Explore tokens leading to this room.
-
-			Move 1 space into the explored area.
+			Feeble light oozes from the {c:TileGallery} door into the hallway. 
+			You can see now that the hallway continues into the dark. Place the
+			{c:TileHall2} tile and a wall as indicated.
 		"""
 		
 		exploredHall2ViaHall1 = true
-		Trigger @MoveAfterExplore
-		Goto PlaceHall2
-	End Page ExploreHall2ViaHall1
+		exploredHall2 = true
+	End Page PlaceHall2ViaHall1
 	
-	Page ExploreHall2ViaFoyer
-		Triggered By @ExploreHall2ViaFoyer
+	Page PlacePart2
+		Add TokenExploreFoyerViaHall2, TokenExploreStudyViaHall2
 		
-		Prolog """
-			This door painted to blend. A casual visitor might not even notice
-			it there.
-		"""
-		Button "Explore"
-		
-		Remove SightHall2ViaHall1, SightHall2ViaFoyer, SightHall2ViaStudy
-		Add TileHall2, TokenWallHall2!
-
 		Text """
-			You realize this connects with the hallway you used to enter the
-			gallery. Light from the foyer, even as dim as it, allows you to
-			see into the room.
-			
-			Place the {c:TileHall2} tile and door as indicated. Remove all
-			Sight and Explore tokens leading to this room.
+			Doors off the hall lead deeper into the house. Place Explore tokens
+			as indicated.
 		"""
-		
-		exploreHall2ViaVoyer = true
-		Goto PlaceHall2
-	End Page ExploreHall2ViaFoyer
+	End Page PlacePart2
 	
-	Page ExploreHall2ViaStudy
-		Triggered By @ExploreHall2ViaStudy
+	Page PlaceInvestigator
+		Visible When exploredBackyardNicely
+		Add TokenHall2Investigators
 		
-		Prolog """
-			This door is not labeled.
-		"""
-		Button "Explore"
-		
-		Remove SightHall2ViaHall1, SightHall2ViaFoyer, SightHall2ViaStudy
-		Add TileHall2, TokenWallHall2!
-
 		Text """
-			Light from the study spills into the darkness. <<Oh,>> you say out
-			loud, <<this leads back to the dining room.>> Place the
-			{c:TileHall} and a door as indicated.
-			
-			Discard all Sight and Explore tokens leading to this room.
+			Neither {c:EventChosenInvestigator} nor the investigator who is
+			Exploring walks down the hall, but any one of the others may move 1
+			space into {c:TileHall2} as indicated.
 		"""
-
-		exploredHall2ViaStudy = true
-	End Page ExploreHall2ViaStudy
+		
+		Remove TokenHall2Investigators
+	End Page PlaceInvestigator
 	
-	Page PlaceHall2
+	Page PlaceHall2Evidence
+		Add TokenSearchHall2Evidence
+		
 		Text """
 			A table has been knocked over, scattering its contents across the
-			room. <i>That broken lamp on the floor would help navigate this 
+			room. <i>That broken lamp on the floor might help navigate this 
 			room,</i> you think to yourself. Place a Search token as indicated.
 		"""
 		
-		If exploredHall2ViaFoyer Or exploredHall2ViaStudy Then Trigger @MoveAfterExplore
-		exploredHall2 = true
-
-		If exploredFoyer Or exploredStudy Then Exit
-	End Page PlaceHall2
-	
-	
-	Page PlaceExploreFoyerViaHall2
-		Not Visible When exploredFoyer
-		
-		Add TokenExploreFoyerViaHall2!
-
-		Text """
-			Another door leads farther into the house. It has a small brass 
-			plate that reads <<Foyer.>> Place an Explore token as indicated.
-		"""	
-		
-		If exploredStudy Then Exit
-	End Page PlaceExploreFoyerViaHall2
-
-	Page PlaceHall2ExploreStudy
-		Add TokenExploreStudyViaHall2!
-
-		Text """
-			Another door has a name plate that reads <<Study.>> Place an
-			Explore token as indicated.
-		"""
-		
 		Exit
-	End Page PlaceHall2ExploreStudy
-	
+	End Page PlaceHall2Evidence
+
 	Page SearchEvidence
 		Triggered By @SearchHall2Evidence
 		
 		Prolog "The upended table has spilled its contents across the floor."
+		Button "Search"
 		
-		Text """
-			There is a dead plant and many scraps of paper tossed around. One
+		Remove TokenSearchHall2Evidence
+		
+		Text QItemEvidenceHall2 """
+			You start with the lamp but it is too broken to use. Besides the
+			lamp, there is a dead plant and scraps of paper tossed around. One
 			of the scraps catches your eye:  it is spattered in dried blood.
 			The note talks about preparations for a ritual and mentions
-			something about a chapel and crypt that you don’t understand. The
+			something about a chapel and crypt. The
 			author of the note wants to stop the ritual and it is clear he will
-			do what he can. The note is signed <<Henry Smythe.>>
+			do anything to stop it. The note is signed <<Henry Smythe.>>
 
 			Gain the {c:QItemEvidenceHall2} Unique Item, then discard this
 			Search token.

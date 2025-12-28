@@ -28,10 +28,9 @@ TokenSearchHall1Rug.button1,{action} Search
 TokenSearchDiningRoomFluxStabilizer.text,"\n"
 TokenWallHall1.button1,Continue
 TokenTestPlaceHall2ViaHall1.button1,Test
-TokenSearchFoyerSpell.button1,{action} Search
+TokenSearchFoyerSpellRight.button1,Button1
 TokenChapelTrapdoor.text,"\nThis door leads to the library.\n"
 TokenExploreFoyerViaHall2.button1,{action} Explore
-TokenSearchFoyerCandles.text,"\nThis painting is compelling. Something about it makes you want to have a closer look.\n"
 TokenSearchKitchenCutlery.button1,{action} Dig through the cutlery
 TokenSearchKitchenCutlery.text,"\nOn closer inspection, the pile of cutlery is deep, like someone upended several drawers and then left.\n"
 TokenExploreKitchenViaDriveway.button1,{action} Open door
@@ -117,10 +116,8 @@ TokenExploreCryptViaChapel.button1,{action} Continue
 TokenExploreFoyerViaGallery.button1,{action} Explore
 TokenSearchFoyerRandom.button1,{action} Search
 TokenExploreChapelViaCrypt.text,"\nThere is no keyhole on the crypt side of the door. An investigator in the chapel who has the {c:QItemKey} can explore.\n"
-TokenExploreCoatRoom.text,"\nThis door leads to the coat room. The door is ajar and you can tell that most of its contents were removed.\n"
-TokenSearchGalleryDVM.button1,{action} Continue
-TokenExploreGalleryViaFoyer.button1,{action} Explore
-TokenTestPlaceGalleryViaFoyer.button1,Test
+TokenExploreStudyViaHall2.button1,Button1
+TokenExploreFoyerViaStudy.button1,Button1
 TokenTestPlaceFoyerViaGallery.button1,Test
 TokenSearchCoatRoomEvidence.button1,{action} Search
 TokenChapelTrapdoor.button1,Continue
@@ -170,7 +167,6 @@ TokenSearchStudyHealingStone.text,"\nThe desk is covered in loose papers, books,
 TokenExploreStudyViaFoyer.button1,{action} Explore
 TokenDoorStudy.text,"\nThis door leads farther into the house.\n"
 TokenWallLibrary.button1,Continue
-TokenExploreStudyViaFoyer.text,|||\nA small plaque on the door reads "Study."\n|||
 TokenTestPlaceDriveway.button1,Test
 TokenSearchDrivewayGardenTool.button1,{action} Search
 TokenSearchDrivewayJournal.button1,{action} Search
@@ -188,7 +184,6 @@ SpawnMythosWandererLibrary.text,"\nOne of the locals walks into the library thro
 TokenTestPlaceGalleryViaHall1.button1,Test
 TokenTestPlaceCoatRoomViaGallery.button1,Test
 TokenTestPlaceDiningRoomViaBackdoor.button2,Cancel
-TokenTestPlaceHall1ViaHall2.button1,Test
 TokenTestPlaceDungeonCaveViaBasement.button1,Test
 TokenTestInitChosenInvestigator.button1,Button1
 TokenTestPlaceHall1ViaDiningRoom.button1,Test
@@ -209,12 +204,7 @@ TokenTestPlaceLibraryAfterCultists.button2,Cancel
 TokenTestPlaceKitchenViaDiningRoom.text,PlaceKitchenViaDiningRoom
 TokenTestPlaceHall2ViaHall1.text,PlaceHall2ViaHall1
 TokenTestPlaceHall2ViaFoyer.text,PlaceHall2ViaFoyer
-TokenTestPlaceHall1ViaHall2.text,PlaceHall1ViaHall2
-TokenTestPlaceHall1ViaHall2.button2,Cancel
 TokenTestPlaceGalleryViaHall1.text,PlaceGalleryViaHall1
-TokenTestPlaceGalleryViaHall1.button2,Cancel
-TokenTestPlaceGalleryViaFoyer.text,PlaceGalleryViaFoyer
-TokenTestPlaceGalleryViaFoyer.button2,Cancel
 TokenTestPlaceFoyerViaStudy.text,PlaceFoyerViaStudy
 TokenTestPlaceFoyerViaStudy.button2,Cancel
 TokenTestPlaceFoyerViaHall2.text,PlaceFoyerViaHall2
@@ -270,8 +260,6 @@ TokenInteractEscape.text,"\nYou look over your shoulder at {c:CustomMonsterDavid
 TokenInteractEscape.button1,{action} Escape
 TokenDavidSmythesSonRescuable.text,The boy is curled up like a ball. His breathing
 TokenDavidSmythesSonRescuable.button1,Continue
-TokenExploreFrontDoor.button1,{action} Explore
-TokenExploreFrontDoor.text,"\nThe door seems unfazed by age. A small window purports to look out on the grounds. Maybe you can finally get out of this madhouse.\n"
 EventExploreDiningRoom.button1,Continue
 EventMoveAfterExplore.button1,Continue
 EventExploreDiningRoomKnock.button1,Continue
@@ -523,8 +511,6 @@ EventPlaceCellHoleViaJournalTrigger.text,"\nNow that you know what to look for, 
 EventPlaceCellHoleViaJournalTrigger.button1,Continue
 EventPlaceBasementSearchTrapdoorViaJournal.text,"\nThat door must be behind that pile of trash in the corner of the basement.\n\nPlace a search token as indicated.\n"
 EventPlaceBasementSearchTrapdoorViaJournal.button1,Continue
-EventSearchFoyerCandles.button1,Continue
-EventSearchFoyerCandles.text,"\nYou quickly realize what drew you to the painting:  the man’s eyes glisten and meet yours as if he were alive. He next to a woman and two children. You recognize one of the children as Sarah, so it must be {c:MosterDavidSmyth}. Still, you don’t see anything that will help you with the house. As you turn away, you notice the sconces on either side of the painting. Some of the darker areas of the house could use a little light. You reach out and take down one of the candles.\n\nGain the {c:QItemCandles} Common Item, then remove this search token.\n"
 EventMythosSarahPatterGo.button1,Button1
 EventPlaceTortureChamberExploreCellStopCultists.button1,Continue
 EventPlaceTortureChamberExploreCellStopCultists.text,"\nA door leads to a small cell. Through the door you near a boy moan.\n"
@@ -556,10 +542,8 @@ EventInteractEscape4.button1,Continue
 EventInteractEscape5.text,"\nYou don’t look back as you run through the door. Remove your investigator token from the board.\n"
 EventInteractEscape5.button1,Continue
 EventInteractEscapeCheckDone.button1,Button1
-EventExploreFrontDoor.text,"\nYou grab and twist the knob but your hand just slides over it. No matter how you try, you cannot turn the knob. The window is so filthy that you cannot see through it.\n\nIf you were still worried about cleaning, this would be a lot of work.\n\nRemove this explore token.\n"
 EventPlaceFoyerSightFrontDoor.text,"\nThe front door looks old and disused. Place a sight token as indicated.\n"
 EventPlaceFoyerSightFrontDoor.button1,Continue
-EventExploreFrontDoor.button1,Continue
 TokenTestBackdoorLocked.text,Test BackdoorLocked
 TokenTestBackdoorLocked.button1,Continue
 quest.authors_short,Daniel.
@@ -3603,628 +3587,6 @@ EventFeedPortalReadPageItsHereEnd.text,
 EventFeedPortalReadPageItsHereEnd.button1,
 EventFeedPortalExpr4.text,
 EventFeedPortalExpr4.button1,
-EventFoyerStart.text,
-EventFoyerStart.button1,
-EventFoyerInit.text,
-EventFoyerInit.button1,
-EventFoyerFirstTimeInitializer.text,
-EventFoyerFirstTimeInitializer.button1,
-EventFoyerPageSelector.text,
-EventFoyerPageSelector.button1,
-EventFoyerReadPageExploreFoyerViaGalleryXferIfTriggered.text,
-EventFoyerReadPageExploreFoyerViaGalleryXferIfTriggered.button1,
-EventFoyerReadPageExploreFoyerViaGallery.text,
-EventFoyerReadPageExploreFoyerViaGallery.button1,
-EventFoyerReadPageExploreFoyerViaGalleryDisplay.text,
-EventFoyerReadPageExploreFoyerViaGalleryDisplay.button1,
-EventFoyerReadPageExploreFoyerViaGalleryTiePoint.text,
-EventFoyerReadPageExploreFoyerViaGalleryTiePoint.button1,
-EventFoyerExpr1.text,
-EventFoyerExpr1.button1,
-EventFoyerReadPageExploreFoyerViaGalleryAfterLet1.text,
-EventFoyerReadPageExploreFoyerViaGalleryAfterLet1.button1,
-EventFoyerReadPageExploreFoyerViaGalleryAfterGoto73.text,
-EventFoyerReadPageExploreFoyerViaGalleryAfterGoto73.button1,
-EventFoyerReadPageExploreFoyerViaGalleryEnd.text,
-EventFoyerReadPageExploreFoyerViaGalleryEnd.button1,
-EventFoyerTiePoint.text,
-EventFoyerTiePoint.button1,
-EventFoyerToc.text,
-EventFoyerToc.button1,
-EventFoyerTocSelector.text,
-EventFoyerTocSelector.button1,
-EventFoyerTocPrologExploreFoyerViaGallery.text,"\nUp close, you can see how beautiful the door is: ornate carvings and beautiful hardware. This door has a small plaque that reads “Foyer.”\n"
-EventFoyerTocPrologExploreFoyerViaGallery.button1,{action} Explore
-EventFoyerTocPrologExploreFoyerViaGallery.button2,{qst:cancel}
-EventFoyerEnd.text,
-EventFoyerEnd.button1,
-EventFoyerTocPrologExploreFoyerViaHall2.text,"\nThis door has a small brass plaque that reads “Foyer.”\n"
-EventFoyerTocPrologExploreFoyerViaHall2.button1,{action} Explore
-EventFoyerTocPrologExploreFoyerViaHall2.button2,{qst:cancel}
-EventFoyerReadPageExploreFoyerViaHall2.text,
-EventFoyerReadPageExploreFoyerViaHall2.button1,
-EventFoyerReadPageExploreFoyerViaHall2Display.text,
-EventFoyerReadPageExploreFoyerViaHall2Display.button1,
-EventFoyerReadPageExploreFoyerViaHall2TiePoint.text,
-EventFoyerReadPageExploreFoyerViaHall2TiePoint.button1,
-EventFoyerExpr2.text,
-EventFoyerExpr2.button1,
-EventFoyerReadPageExploreFoyerViaHall2AfterLet1.text,
-EventFoyerReadPageExploreFoyerViaHall2AfterLet1.button1,
-EventFoyerReadPageExploreFoyerViaHall2AfterGoto74.text,
-EventFoyerReadPageExploreFoyerViaHall2AfterGoto74.button1,
-EventFoyerReadPageExploreFoyerViaHall2End.text,
-EventFoyerReadPageExploreFoyerViaHall2End.button1,
-EventFoyerTocPrologExploreFoyerViaStudy.text,"\nThis door leads farther into the house.\n"
-EventFoyerTocPrologExploreFoyerViaStudy.button1,{action} Explore
-EventFoyerTocPrologExploreFoyerViaStudy.button2,{qst:cancel}
-EventFoyerReadPageExploreFoyerViaStudy.text,
-EventFoyerReadPageExploreFoyerViaStudy.button1,
-EventFoyerReadPageExploreFoyerViaStudyDisplay.text,
-EventFoyerReadPageExploreFoyerViaStudyDisplay.button1,
-EventFoyerReadPageExploreFoyerViaStudyTiePoint.text,
-EventFoyerReadPageExploreFoyerViaStudyTiePoint.button1,
-EventFoyerExpr3.text,
-EventFoyerExpr3.button1,
-EventFoyerReadPageExploreFoyerViaStudyAfterLet1.text,
-EventFoyerReadPageExploreFoyerViaStudyAfterLet1.button1,
-EventFoyerReadPageExploreFoyerViaStudyAfterGoto75.text,
-EventFoyerReadPageExploreFoyerViaStudyAfterGoto75.button1,
-EventFoyerReadPageExploreFoyerViaStudyEnd.text,
-EventFoyerReadPageExploreFoyerViaStudyEnd.button1,
-EventFoyerTocPrologPlaceFoyer.text,
-EventFoyerTocPrologPlaceFoyer.button1,
-EventFoyerReadPagePlaceFoyer.text,
-EventFoyerReadPagePlaceFoyer.button1,
-EventFoyerReadPagePlaceFoyerBeforeAddRemove1.text,
-EventFoyerReadPagePlaceFoyerBeforeAddRemove1.button1,
-EventFoyerReadPagePlaceFoyerBeforeAddRemove2.text,
-EventFoyerReadPagePlaceFoyerBeforeAddRemove2.button1,
-EventFoyerReadPagePlaceFoyerDisplay.text,
-EventFoyerReadPagePlaceFoyerDisplay.button1,
-EventFoyerReadPagePlaceFoyerBase.text,"\nThe foyer is a large, nearly empty space with a front door, stairs, and other doors leading to various parts of the house. Place the {c:TileFoyer} tile then remove all Explore tokens leading to this room.\n"
-EventFoyerReadPagePlaceFoyerBase.button1,{qst:continue}
-EventFoyerReadPagePlaceFoyerTiePoint.text,
-EventFoyerReadPagePlaceFoyerTiePoint.button1,
-EventFoyerExpr4.text,
-EventFoyerExpr4.button1,
-EventFoyerReadPagePlaceFoyerAfterLet1.text,
-EventFoyerReadPagePlaceFoyerAfterLet1.button1,
-EventFoyerReadPagePlaceFoyerEnd.text,
-EventFoyerReadPagePlaceFoyerEnd.button1,
-EventFoyerTocPrologPlaceFoyerExploreGallery.text,
-EventFoyerTocPrologPlaceFoyerExploreGallery.button1,
-EventFoyerReadPagePlaceFoyerExploreGallery.text,
-EventFoyerReadPagePlaceFoyerExploreGallery.button1,
-EventFoyerReadPagePlaceFoyerExploreGalleryBeforeAddRemove1.text,
-EventFoyerReadPagePlaceFoyerExploreGalleryBeforeAddRemove1.button1,
-EventFoyerExpr5.text,
-EventFoyerExpr5.button1,
-EventFoyerReadPagePlaceFoyerExploreGalleryDisplay.text,
-EventFoyerReadPagePlaceFoyerExploreGalleryDisplay.button1,
-EventFoyerReadPagePlaceFoyerExploreGalleryOverload1.text,"\nAcross the room, a door leads farther into the house. Place an Explore token as indicated.\n"
-EventFoyerReadPagePlaceFoyerExploreGalleryOverload1.button1,{qst:continue}
-EventFoyerReadPagePlaceFoyerExploreGalleryTiePoint.text,
-EventFoyerReadPagePlaceFoyerExploreGalleryTiePoint.button1,
-EventFoyerReadPagePlaceFoyerExploreGalleryEnd.text,
-EventFoyerReadPagePlaceFoyerExploreGalleryEnd.button1,
-EventFoyerReadPagePlaceFoyerExploreGalleryBase.text,"\nTo your right, a door leads farther into the house. Place an Explore token as indicated.\n"
-EventFoyerReadPagePlaceFoyerExploreGalleryBase.button1,{qst:continue}
-EventFoyerTocPrologPlaceFoyerExploreStudy.text,
-EventFoyerTocPrologPlaceFoyerExploreStudy.button1,
-EventFoyerReadPagePlaceFoyerExploreStudy.text,
-EventFoyerReadPagePlaceFoyerExploreStudy.button1,
-EventFoyerReadPagePlaceFoyerExploreStudyBeforeAddRemove1.text,
-EventFoyerReadPagePlaceFoyerExploreStudyBeforeAddRemove1.button1,
-EventFoyerExpr6.text,
-EventFoyerExpr6.button1,
-EventFoyerReadPagePlaceFoyerExploreStudyDisplay.text,
-EventFoyerReadPagePlaceFoyerExploreStudyDisplay.button1,
-EventFoyerReadPagePlaceFoyerExploreStudyOverload1.text,"\nAcross the room and up some stairs, a door leads father into the house. Place an Explore token as indicated.\n"
-EventFoyerReadPagePlaceFoyerExploreStudyOverload1.button1,{qst:continue}
-EventFoyerReadPagePlaceFoyerExploreStudyTiePoint.text,
-EventFoyerReadPagePlaceFoyerExploreStudyTiePoint.button1,
-EventFoyerReadPagePlaceFoyerExploreStudyEnd.text,
-EventFoyerReadPagePlaceFoyerExploreStudyEnd.button1,
-EventFoyerReadPagePlaceFoyerExploreStudyBase.text,"\nDown and up the stairs is another door leading farther into the house. Place an Explore token as indicated.\n"
-EventFoyerReadPagePlaceFoyerExploreStudyBase.button1,{qst:continue}
-EventFoyerTocPrologPlaceFoyerExploreHall2.text,
-EventFoyerTocPrologPlaceFoyerExploreHall2.button1,
-EventFoyerReadPagePlaceFoyerExploreHall2.text,
-EventFoyerReadPagePlaceFoyerExploreHall2.button1,
-EventFoyerReadPagePlaceFoyerExploreHall2BeforeAddRemove1.text,
-EventFoyerReadPagePlaceFoyerExploreHall2BeforeAddRemove1.button1,
-EventFoyerExpr7.text,
-EventFoyerExpr7.button1,
-EventFoyerReadPagePlaceFoyerExploreHall2Display.text,
-EventFoyerReadPagePlaceFoyerExploreHall2Display.button1,
-EventFoyerReadPagePlaceFoyerExploreHall2Overload1.text,"\nDown and up the stairs to your right is another door. Place an Explore token as indicated.\n"
-EventFoyerReadPagePlaceFoyerExploreHall2Overload1.button1,{qst:continue}
-EventFoyerReadPagePlaceFoyerExploreHall2TiePoint.text,
-EventFoyerReadPagePlaceFoyerExploreHall2TiePoint.button1,
-EventFoyerReadPagePlaceFoyerExploreHall2End.text,
-EventFoyerReadPagePlaceFoyerExploreHall2End.button1,
-EventFoyerReadPagePlaceFoyerExploreHall2Base.text,"\nUp the stairs and to your left, a door leads farther into the house. Place an Explore token as indicated.\n"
-EventFoyerReadPagePlaceFoyerExploreHall2Base.button1,{qst:continue}
-EventFoyerTocPrologPlaceFoyerCandles.text,
-EventFoyerTocPrologPlaceFoyerCandles.button1,
-EventFoyerReadPagePlaceFoyerCandles.text,
-EventFoyerReadPagePlaceFoyerCandles.button1,
-EventFoyerReadPagePlaceFoyerCandlesBeforeAddRemove1.text,
-EventFoyerReadPagePlaceFoyerCandlesBeforeAddRemove1.button1,
-EventFoyerExpr8.text,
-EventFoyerExpr8.button1,
-EventFoyerExpr9.text,
-EventFoyerExpr9.button1,
-EventFoyerReadPagePlaceFoyerCandlesDisplay.text,
-EventFoyerReadPagePlaceFoyerCandlesDisplay.button1,
-EventFoyerReadPagePlaceFoyerCandlesOverload1.text,"\nNext to a door across the room, a painting catches your eye. Place a Search token as indicated.\n"
-EventFoyerReadPagePlaceFoyerCandlesOverload1.button1,{qst:continue}
-EventFoyerReadPagePlaceFoyerCandlesTiePoint.text,
-EventFoyerReadPagePlaceFoyerCandlesTiePoint.button1,
-EventFoyerReadPagePlaceFoyerCandlesEnd.text,
-EventFoyerReadPagePlaceFoyerCandlesEnd.button1,
-EventFoyerReadPagePlaceFoyerCandlesBase.text,"\nNext to you is a painting that catches your eye. Place a Search token as indicated.\n"
-EventFoyerReadPagePlaceFoyerCandlesBase.button1,{qst:continue}
-EventFoyerExpr10.text,
-EventFoyerExpr10.button1,
-EventFoyerTocPrologPlaceFoyerSearchRandom.text,
-EventFoyerTocPrologPlaceFoyerSearchRandom.button1,
-EventFoyerReadPagePlaceFoyerSearchRandom.text,
-EventFoyerReadPagePlaceFoyerSearchRandom.button1,
-EventFoyerReadPagePlaceFoyerSearchRandomBeforeAddRemove1.text,
-EventFoyerReadPagePlaceFoyerSearchRandomBeforeAddRemove1.button1,
-EventFoyerReadPagePlaceFoyerSearchRandomDisplay.text,
-EventFoyerReadPagePlaceFoyerSearchRandomDisplay.button1,
-EventFoyerReadPagePlaceFoyerSearchRandomBase.text,"\nA small cabinet with drawers and little compartments sits next to the front door. Place a Search token as indicated.\n"
-EventFoyerReadPagePlaceFoyerSearchRandomBase.button1,{qst:continue}
-EventFoyerReadPagePlaceFoyerSearchRandomTiePoint.text,
-EventFoyerReadPagePlaceFoyerSearchRandomTiePoint.button1,
-EventFoyerReadPagePlaceFoyerSearchRandomEnd.text,
-EventFoyerReadPagePlaceFoyerSearchRandomEnd.button1,
-EventFoyerTocPrologPlaceFoyerExploreFrontDoor.text,
-EventFoyerTocPrologPlaceFoyerExploreFrontDoor.button1,
-EventFoyerReadPagePlaceFoyerExploreFrontDoor.text,
-EventFoyerReadPagePlaceFoyerExploreFrontDoor.button1,
-EventFoyerReadPagePlaceFoyerExploreFrontDoorBeforeAddRemove1.text,
-EventFoyerReadPagePlaceFoyerExploreFrontDoorBeforeAddRemove1.button1,
-EventFoyerReadPagePlaceFoyerExploreFrontDoorDisplay.text,
-EventFoyerReadPagePlaceFoyerExploreFrontDoorDisplay.button1,
-EventFoyerReadPagePlaceFoyerExploreFrontDoorBase.text,"\nThe front door seems to be in good repair, but the glass set into it is as filthy as that door off the driveway. Place an Explore token as indicated.\n"
-EventFoyerReadPagePlaceFoyerExploreFrontDoorBase.button1,{qst:continue}
-EventFoyerReadPagePlaceFoyerExploreFrontDoorTiePoint.text,
-EventFoyerReadPagePlaceFoyerExploreFrontDoorTiePoint.button1,
-EventFoyerReadPagePlaceFoyerExploreFrontDoorAfterTrigger1.text,
-EventFoyerReadPagePlaceFoyerExploreFrontDoorAfterTrigger1.button1,
-EventFoyerReadPagePlaceFoyerExploreFrontDoorAfterGoto76.text,
-EventFoyerReadPagePlaceFoyerExploreFrontDoorAfterGoto76.button1,
-EventFoyerReadPagePlaceFoyerExploreFrontDoorEnd.text,
-EventFoyerReadPagePlaceFoyerExploreFrontDoorEnd.button1,
-EventFoyerTocPrologSearchRandom.text,"\nAn old cabinet with a set of drawers sits next to the door. Several drawers are half open, like whoever last looked through them was in a hurry.\n"
-EventFoyerTocPrologSearchRandom.button1,{action} Search
-EventFoyerTocPrologSearchRandom.button2,{qst:cancel}
-EventFoyerReadPageSearchRandom.text,
-EventFoyerReadPageSearchRandom.button1,
-EventFoyerReadPageSearchRandomDisplay.text,
-EventFoyerReadPageSearchRandomDisplay.button1,
-EventFoyerReadPageSearchRandomBase.text,"\nYou dig through the various compartments and eventually find something useful. Gain the {c:QItemFoyerRandom} Common Item, then discard this Search token.\n"
-EventFoyerReadPageSearchRandomBase.button1,{qst:continue}
-EventFoyerReadPageSearchRandomTiePoint.text,
-EventFoyerReadPageSearchRandomTiePoint.button1,
-EventFoyerReadPageSearchRandomAfterGoto77.text,
-EventFoyerReadPageSearchRandomAfterGoto77.button1,
-EventFoyerReadPageSearchRandomEnd.text,
-EventFoyerReadPageSearchRandomEnd.button1,
-EventFoyerTocPrologSearchSpell.text,"\nLike the cabinet across from it, this table has several drawers.\n"
-EventFoyerTocPrologSearchSpell.button1,{action} Search
-EventFoyerTocPrologSearchSpell.button2,{qst:cancel}
-EventFoyerReadPageSearchSpell.text,
-EventFoyerReadPageSearchSpell.button1,
-EventFoyerReadPageSearchSpellDisplay.text,
-EventFoyerReadPageSearchSpellDisplay.button1,
-EventFoyerReadPageSearchSpellBase.text,"\nYou go through the drawers one-by-one, finding little of interest. Finally, in the last drawer, you find a small pamphlet with arcane symbols and odd poetry. Gain the {c:QItemFoyerSpell} spell, then discard this Search token.\n"
-EventFoyerReadPageSearchSpellBase.button1,{qst:continue}
-EventFoyerReadPageSearchSpellTiePoint.text,
-EventFoyerReadPageSearchSpellTiePoint.button1,
-EventFoyerReadPageSearchSpellAfterGoto78.text,
-EventFoyerReadPageSearchSpellAfterGoto78.button1,
-EventFoyerReadPageSearchSpellEnd.text,
-EventFoyerReadPageSearchSpellEnd.button1,
-EventFoyerReadPageExploreFoyerViaHall2XferIfTriggered.text,
-EventFoyerReadPageExploreFoyerViaHall2XferIfTriggered.button1,
-EventFoyerReadPageExploreFoyerViaStudyXferIfTriggered.text,
-EventFoyerReadPageExploreFoyerViaStudyXferIfTriggered.button1,
-EventFoyerReadPageSearchRandomXferIfTriggered.text,
-EventFoyerReadPageSearchRandomXferIfTriggered.button1,
-EventFoyerReadPageSearchSpellXferIfTriggered.text,
-EventFoyerReadPageSearchSpellXferIfTriggered.button1,
-EventFoyerReadPageExploreFoyerViaGalleryTrigger.text,
-EventFoyerReadPageExploreFoyerViaGalleryTrigger.button1,
-EventFoyerReadPageExploreFoyerViaHall2Trigger.text,
-EventFoyerReadPageExploreFoyerViaHall2Trigger.button1,
-EventFoyerReadPageExploreFoyerViaStudyTrigger.text,
-EventFoyerReadPageExploreFoyerViaStudyTrigger.button1,
-EventFoyerReadPageSearchRandomTrigger.text,
-EventFoyerReadPageSearchRandomTrigger.button1,
-EventFoyerReadPageSearchSpellTrigger.text,
-EventFoyerReadPageSearchSpellTrigger.button1,
-EventGalleryStart.text,
-EventGalleryStart.button1,
-EventGalleryInit.text,
-EventGalleryInit.button1,
-EventGalleryFirstTimeInitializer.text,
-EventGalleryFirstTimeInitializer.button1,
-EventGalleryPageSelector.text,
-EventGalleryPageSelector.button1,
-EventGalleryReadPageExploreGalleryViaHall1XferIfTriggered.text,
-EventGalleryReadPageExploreGalleryViaHall1XferIfTriggered.button1,
-EventGalleryReadPageExploreGalleryViaHall1.text,
-EventGalleryReadPageExploreGalleryViaHall1.button1,
-EventGalleryReadPageExploreGalleryViaHall1Display.text,
-EventGalleryReadPageExploreGalleryViaHall1Display.button1,
-EventGalleryReadPageExploreGalleryViaHall1TiePoint.text,
-EventGalleryReadPageExploreGalleryViaHall1TiePoint.button1,
-EventGalleryExpr1.text,
-EventGalleryExpr1.button1,
-EventGalleryReadPageExploreGalleryViaHall1AfterLet1.text,
-EventGalleryReadPageExploreGalleryViaHall1AfterLet1.button1,
-EventGalleryExpr2.text,
-EventGalleryExpr2.button1,
-EventGalleryReadPageExploreGalleryViaHall1AfterLet2.text,
-EventGalleryReadPageExploreGalleryViaHall1AfterLet2.button1,
-EventGalleryReadPageExploreGalleryViaHall1AfterGoto79.text,
-EventGalleryReadPageExploreGalleryViaHall1AfterGoto79.button1,
-EventGalleryReadPageExploreGalleryViaHall1End.text,
-EventGalleryReadPageExploreGalleryViaHall1End.button1,
-EventGalleryTiePoint.text,
-EventGalleryTiePoint.button1,
-EventGalleryToc.text,
-EventGalleryToc.button1,
-EventGalleryTocSelector.text,
-EventGalleryTocSelector.button1,
-EventGalleryTocPrologExploreGalleryViaHall1.text,
-EventGalleryTocPrologExploreGalleryViaHall1.button1,
-EventGalleryTocPrologExploreGalleryViaFoyer.text,
-EventGalleryTocPrologExploreGalleryViaFoyer.button1,
-EventGalleryReadPageExploreGalleryViaFoyer.text,
-EventGalleryReadPageExploreGalleryViaFoyer.button1,
-EventGalleryReadPageExploreGalleryViaFoyerDisplay.text,
-EventGalleryReadPageExploreGalleryViaFoyerDisplay.button1,
-EventGalleryReadPageExploreGalleryViaFoyerTiePoint.text,
-EventGalleryReadPageExploreGalleryViaFoyerTiePoint.button1,
-EventGalleryExpr3.text,
-EventGalleryExpr3.button1,
-EventGalleryReadPageExploreGalleryViaFoyerAfterLet1.text,
-EventGalleryReadPageExploreGalleryViaFoyerAfterLet1.button1,
-EventGalleryExpr4.text,
-EventGalleryExpr4.button1,
-EventGalleryReadPageExploreGalleryViaFoyerAfterLet2.text,
-EventGalleryReadPageExploreGalleryViaFoyerAfterLet2.button1,
-EventGalleryReadPageExploreGalleryViaFoyerAfterGoto80.text,
-EventGalleryReadPageExploreGalleryViaFoyerAfterGoto80.button1,
-EventGalleryReadPageExploreGalleryViaFoyerEnd.text,
-EventGalleryReadPageExploreGalleryViaFoyerEnd.button1,
-EventGalleryTocPrologExploreGallery.text,"\nYou approach the door. It has a small brass plaque that reads “Gallery.” The door handle catches your eye because light is glinting off it. Unlike everything else here, it is clean... like it has been used recently.\n"
-EventGalleryTocPrologExploreGallery.button1,{action} 
-EventGalleryTocPrologExploreGallery.button2,{qst:cancel}
-EventGalleryReadPageExploreGallery.text,
-EventGalleryReadPageExploreGallery.button1,
-EventGalleryReadPageExploreGalleryBeforeAddRemove1.text,
-EventGalleryReadPageExploreGalleryBeforeAddRemove1.button1,
-EventGalleryReadPageExploreGalleryBeforeAddRemove2.text,
-EventGalleryReadPageExploreGalleryBeforeAddRemove2.button1,
-EventGalleryReadPageExploreGalleryDisplay.text,
-EventGalleryReadPageExploreGalleryDisplay.button1,
-EventGalleryReadPageExploreGalleryBase.text,"\nAs the door opens, dust drifts slowly to the floor. Lots of it. If you were still concerned about cleaning, you’d be horrified at the amount of work ahead of you.\n\nThe room behind the door is–or was–stately, with high ceilings, beautiful paintings, and furniture and rugs that look both rich and comfortable. Dim light from the windows reflects off the dust, giving the room an unearthly quality. The glowing dust makes the room feel more rundown that it actually is.\n\nPlace the {c:TileGallery} tile, then discard all Explore tokens leading to this room.\n"
-EventGalleryReadPageExploreGalleryBase.button1,{qst:continue}
-EventGalleryReadPageExploreGalleryTiePoint.text,
-EventGalleryReadPageExploreGalleryTiePoint.button1,
-EventGalleryReadPageExploreGalleryEnd.text,
-EventGalleryReadPageExploreGalleryEnd.button1,
-EventGalleryEnd.text,
-EventGalleryEnd.button1,
-EventGalleryTocPrologPlaceExploreFoyerViaGallery.text,
-EventGalleryTocPrologPlaceExploreFoyerViaGallery.button1,
-EventGalleryReadPagePlaceExploreFoyerViaGallery.text,
-EventGalleryReadPagePlaceExploreFoyerViaGallery.button1,
-EventGalleryReadPagePlaceExploreFoyerViaGalleryBeforeAddRemove1.text,
-EventGalleryReadPagePlaceExploreFoyerViaGalleryBeforeAddRemove1.button1,
-EventGalleryReadPagePlaceExploreFoyerViaGalleryDisplay.text,
-EventGalleryReadPagePlaceExploreFoyerViaGalleryDisplay.button1,
-EventGalleryReadPagePlaceExploreFoyerViaGalleryBase.text,"\nAcross the room is another door. Place an Explore token as indicated.\n"
-EventGalleryReadPagePlaceExploreFoyerViaGalleryBase.button1,{qst:continue}
-EventGalleryReadPagePlaceExploreFoyerViaGalleryTiePoint.text,
-EventGalleryReadPagePlaceExploreFoyerViaGalleryTiePoint.button1,
-EventGalleryReadPagePlaceExploreFoyerViaGalleryEnd.text,
-EventGalleryReadPagePlaceExploreFoyerViaGalleryEnd.button1,
-EventGalleryTocPrologPlaceGalleryCoatRoom.text,
-EventGalleryTocPrologPlaceGalleryCoatRoom.button1,
-EventGalleryReadPagePlaceGalleryCoatRoom.text,
-EventGalleryReadPagePlaceGalleryCoatRoom.button1,
-EventGalleryReadPagePlaceGalleryCoatRoomBeforeAddRemove1.text,
-EventGalleryReadPagePlaceGalleryCoatRoomBeforeAddRemove1.button1,
-EventGalleryReadPagePlaceGalleryCoatRoomDisplay.text,
-EventGalleryReadPagePlaceGalleryCoatRoomDisplay.button1,
-EventGalleryReadPagePlaceGalleryCoatRoomBase.text,"\nA coat room sits in the corner across from you. Place an Explore token as indicated.\n"
-EventGalleryReadPagePlaceGalleryCoatRoomBase.button1,{qst:continue}
-EventGalleryReadPagePlaceGalleryCoatRoomTiePoint.text,
-EventGalleryReadPagePlaceGalleryCoatRoomTiePoint.button1,
-EventGalleryReadPagePlaceGalleryCoatRoomEnd.text,
-EventGalleryReadPagePlaceGalleryCoatRoomEnd.button1,
-EventGalleryTocPrologPlaceGalleryDvm.text,
-EventGalleryTocPrologPlaceGalleryDvm.button1,
-EventGalleryReadPagePlaceGalleryDvm.text,
-EventGalleryReadPagePlaceGalleryDvm.button1,
-EventGalleryReadPagePlaceGalleryDvmBeforeAddRemove1.text,
-EventGalleryReadPagePlaceGalleryDvmBeforeAddRemove1.button1,
-EventGalleryReadPagePlaceGalleryDvmDisplay.text,
-EventGalleryReadPagePlaceGalleryDvmDisplay.button1,
-EventGalleryReadPagePlaceGalleryDvmBase.text,"\nThe two divans are upholstered with once-beautiful cloth... but now they are dirty and moth-eaten. A pile of junk sits on a small table between them. Place a Search token as indicated.\n"
-EventGalleryReadPagePlaceGalleryDvmBase.button1,{qst:continue}
-EventGalleryReadPagePlaceGalleryDvmTiePoint.text,
-EventGalleryReadPagePlaceGalleryDvmTiePoint.button1,
-EventGalleryReadPagePlaceGalleryDvmEnd.text,
-EventGalleryReadPagePlaceGalleryDvmEnd.button1,
-EventGalleryTocPrologPlaceCoatRoom.text,
-EventGalleryTocPrologPlaceCoatRoom.button1,
-EventGalleryReadPagePlaceCoatRoom.text,
-EventGalleryReadPagePlaceCoatRoom.button1,
-EventGalleryReadPagePlaceCoatRoomBeforeAddRemove1.text,
-EventGalleryReadPagePlaceCoatRoomBeforeAddRemove1.button1,
-EventGalleryReadPagePlaceCoatRoomBeforeAddRemove2.text,
-EventGalleryReadPagePlaceCoatRoomBeforeAddRemove2.button1,
-EventGalleryReadPagePlaceCoatRoomDisplay.text,
-EventGalleryReadPagePlaceCoatRoomDisplay.button1,
-EventGalleryReadPagePlaceCoatRoomBase.text,"\nThe coat room still has a number of coats hung neatly on one side. Shoes and hangers are scattered on the floor. Remove this Explore token.\n\nA half-filled box sits in one of the corners. Place a Search token as indicated.\n"
-EventGalleryReadPagePlaceCoatRoomBase.button1,{qst:continue}
-EventGalleryReadPagePlaceCoatRoomTiePoint.text,
-EventGalleryReadPagePlaceCoatRoomTiePoint.button1,
-EventGalleryReadPagePlaceCoatRoomAfterTrigger1.text,
-EventGalleryReadPagePlaceCoatRoomAfterTrigger1.button1,
-EventGalleryReadPagePlaceCoatRoomAfterGoto81.text,
-EventGalleryReadPagePlaceCoatRoomAfterGoto81.button1,
-EventGalleryReadPagePlaceCoatRoomEnd.text,
-EventGalleryReadPagePlaceCoatRoomEnd.button1,
-EventGalleryTocPrologSearchDvm.text,"\nA pile of junk sits on the table between the divans.\n"
-EventGalleryTocPrologSearchDvm.button1,{action} 
-EventGalleryTocPrologSearchDvm.button2,{qst:cancel}
-EventGalleryReadPageSearchDvm.text,
-EventGalleryReadPageSearchDvm.button1,
-EventGalleryReadPageSearchDvmBeforeAddRemove1.text,
-EventGalleryReadPageSearchDvmBeforeAddRemove1.button1,
-EventGalleryReadPageSearchDvmDisplay.text,
-EventGalleryReadPageSearchDvmDisplay.button1,
-EventGalleryReadPageSearchDvmBase.text,"\nAmong the tools, handkerchiefs, and ashtrays are a number of small books. One of them... <i>feels</i> different than the others. It is old and worn, but you get the sense it possesses great power.\n\nGain the {c:QItemDvm} Common Item, then discard this Search token. An investigator with the {c:QItemDvm} can interact with it in the app.\n"
-EventGalleryReadPageSearchDvmBase.button1,{qst:continue}
-EventGalleryReadPageSearchDvmTiePoint.text,
-EventGalleryReadPageSearchDvmTiePoint.button1,
-EventGalleryExpr5.text,
-EventGalleryExpr5.button1,
-EventGalleryReadPageSearchDvmAfterLet1.text,
-EventGalleryReadPageSearchDvmAfterLet1.button1,
-EventGalleryReadPageSearchDvmEnd.text,
-EventGalleryReadPageSearchDvmEnd.button1,
-EventGalleryTocPrologSearchCoatRoomEvidence.text,"\nThis box is half-full of things you might find in a coat room: brushes, shoe polish, and...\n"
-EventGalleryTocPrologSearchCoatRoomEvidence.button1,{action} 
-EventGalleryTocPrologSearchCoatRoomEvidence.button2,{qst:cancel}
-EventGalleryReadPageSearchCoatRoomEvidence.text,
-EventGalleryReadPageSearchCoatRoomEvidence.button1,
-EventGalleryReadPageSearchCoatRoomEvidenceBeforeAddRemove1.text,
-EventGalleryReadPageSearchCoatRoomEvidenceBeforeAddRemove1.button1,
-EventGalleryReadPageSearchCoatRoomEvidenceDisplay.text,
-EventGalleryReadPageSearchCoatRoomEvidenceDisplay.button1,
-EventGalleryReadPageSearchCoatRoomEvidenceBase.text,"\nAmong other items, you find a pair of shoes caked with mud and a bloody handkerchief. Looking closer, you see that the handkerchief was used to wipe blood from the shoes.\n\nGain the {c:QItemEvidenceCoatRoom} Unique Item, then discard this Search token.\n"
-EventGalleryReadPageSearchCoatRoomEvidenceBase.button1,{qst:continue}
-EventGalleryReadPageSearchCoatRoomEvidenceTiePoint.text,
-EventGalleryReadPageSearchCoatRoomEvidenceTiePoint.button1,
-EventGalleryReadPageSearchCoatRoomEvidenceAfterGoto82.text,
-EventGalleryReadPageSearchCoatRoomEvidenceAfterGoto82.button1,
-EventGalleryReadPageSearchCoatRoomEvidenceEnd.text,
-EventGalleryReadPageSearchCoatRoomEvidenceEnd.button1,
-EventGalleryReadPageExploreGalleryViaFoyerXferIfTriggered.text,
-EventGalleryReadPageExploreGalleryViaFoyerXferIfTriggered.button1,
-EventGalleryReadPagePlaceCoatRoomXferIfTriggered.text,
-EventGalleryReadPagePlaceCoatRoomXferIfTriggered.button1,
-EventGalleryReadPageSearchDvmXferIfTriggered.text,
-EventGalleryReadPageSearchDvmXferIfTriggered.button1,
-EventGalleryReadPageSearchCoatRoomEvidenceXferIfTriggered.text,
-EventGalleryReadPageSearchCoatRoomEvidenceXferIfTriggered.button1,
-EventGalleryReadPageExploreGalleryViaHall1Trigger.text,
-EventGalleryReadPageExploreGalleryViaHall1Trigger.button1,
-EventGalleryReadPageExploreGalleryViaFoyerTrigger.text,
-EventGalleryReadPageExploreGalleryViaFoyerTrigger.button1,
-EventGalleryReadPagePlaceCoatRoomTrigger.text,
-EventGalleryReadPagePlaceCoatRoomTrigger.button1,
-EventGalleryReadPageSearchDvmTrigger.text,
-EventGalleryReadPageSearchDvmTrigger.button1,
-EventGalleryReadPageSearchCoatRoomEvidenceTrigger.text,
-EventGalleryReadPageSearchCoatRoomEvidenceTrigger.button1,
-EventHall2Start.text,
-EventHall2Start.button1,
-EventHall2Init.text,
-EventHall2Init.button1,
-EventHall2FirstTimeInitializer.text,
-EventHall2FirstTimeInitializer.button1,
-EventHall2PageSelector.text,
-EventHall2PageSelector.button1,
-EventHall2ReadPageExploreHall2ViaHall1XferIfTriggered.text,
-EventHall2ReadPageExploreHall2ViaHall1XferIfTriggered.button1,
-EventHall2ReadPageExploreHall2ViaHall1.text,
-EventHall2ReadPageExploreHall2ViaHall1.button1,
-EventHall2ReadPageExploreHall2ViaHall1BeforeAddRemove1.text,
-EventHall2ReadPageExploreHall2ViaHall1BeforeAddRemove1.button1,
-EventHall2ReadPageExploreHall2ViaHall1BeforeAddRemove2.text,
-EventHall2ReadPageExploreHall2ViaHall1BeforeAddRemove2.button1,
-EventHall2ReadPageExploreHall2ViaHall1Display.text,
-EventHall2ReadPageExploreHall2ViaHall1Display.button1,
-EventHall2ReadPageExploreHall2ViaHall1Base.text,"\nWith the dining room door so far from this end of the hall, you have to take a step forward to see what is there. Place the {c:TileHall2} tile and a wall as indicated. Discard all Sight and Explore tokens leading to this room.\n\nMove 1 space into the explored area.\n"
-EventHall2ReadPageExploreHall2ViaHall1Base.button1,{qst:continue}
-EventHall2ReadPageExploreHall2ViaHall1TiePoint.text,
-EventHall2ReadPageExploreHall2ViaHall1TiePoint.button1,
-EventHall2Expr1.text,
-EventHall2Expr1.button1,
-EventHall2ReadPageExploreHall2ViaHall1AfterLet1.text,
-EventHall2ReadPageExploreHall2ViaHall1AfterLet1.button1,
-EventHall2ReadPageExploreHall2ViaHall1AfterTrigger2.text,
-EventHall2ReadPageExploreHall2ViaHall1AfterTrigger2.button1,
-EventHall2ReadPageExploreHall2ViaHall1AfterGoto87.text,
-EventHall2ReadPageExploreHall2ViaHall1AfterGoto87.button1,
-EventHall2ReadPageExploreHall2ViaHall1End.text,
-EventHall2ReadPageExploreHall2ViaHall1End.button1,
-EventHall2TiePoint.text,
-EventHall2TiePoint.button1,
-EventHall2Toc.text,
-EventHall2Toc.button1,
-EventHall2TocSelector.text,
-EventHall2TocSelector.button1,
-EventHall2TocPrologExploreHall2ViaHall1.text,"\nThe hall seems to continue on a bit farther. An investigator in the same space as the Sight token can look down the hall.\n"
-EventHall2TocPrologExploreHall2ViaHall1.button1,{action} Look down the hall
-EventHall2TocPrologExploreHall2ViaHall1.button2,{qst:cancel}
-EventHall2End.text,
-EventHall2End.button1,
-EventHall2TocPrologExploreHall2ViaFoyer.text,"\nThis door painted to blend. A casual visitor might not even notice it there.\n"
-EventHall2TocPrologExploreHall2ViaFoyer.button1,{action} Explore
-EventHall2TocPrologExploreHall2ViaFoyer.button2,{qst:cancel}
-EventHall2ReadPageExploreHall2ViaFoyer.text,
-EventHall2ReadPageExploreHall2ViaFoyer.button1,
-EventHall2ReadPageExploreHall2ViaFoyerBeforeAddRemove1.text,
-EventHall2ReadPageExploreHall2ViaFoyerBeforeAddRemove1.button1,
-EventHall2ReadPageExploreHall2ViaFoyerBeforeAddRemove2.text,
-EventHall2ReadPageExploreHall2ViaFoyerBeforeAddRemove2.button1,
-EventHall2ReadPageExploreHall2ViaFoyerDisplay.text,
-EventHall2ReadPageExploreHall2ViaFoyerDisplay.button1,
-EventHall2ReadPageExploreHall2ViaFoyerBase.text,"\nYou realize this connects with the hallway you used to enter the gallery. Light from the foyer, even as dim as it, allows you to see into the room.\n\nPlace the {c:TileHall2} tile and door as indicated. Remove all Sight and Explore tokens leading to this room.\n"
-EventHall2ReadPageExploreHall2ViaFoyerBase.button1,{qst:continue}
-EventHall2ReadPageExploreHall2ViaFoyerTiePoint.text,
-EventHall2ReadPageExploreHall2ViaFoyerTiePoint.button1,
-EventHall2Expr2.text,
-EventHall2Expr2.button1,
-EventHall2ReadPageExploreHall2ViaFoyerAfterLet1.text,
-EventHall2ReadPageExploreHall2ViaFoyerAfterLet1.button1,
-EventHall2ReadPageExploreHall2ViaFoyerAfterGoto88.text,
-EventHall2ReadPageExploreHall2ViaFoyerAfterGoto88.button1,
-EventHall2ReadPageExploreHall2ViaFoyerEnd.text,
-EventHall2ReadPageExploreHall2ViaFoyerEnd.button1,
-EventHall2TocPrologExploreHall2ViaStudy.text,"\nThis door is not labeled.\n"
-EventHall2TocPrologExploreHall2ViaStudy.button1,{action} Explore
-EventHall2TocPrologExploreHall2ViaStudy.button2,{qst:cancel}
-EventHall2ReadPageExploreHall2ViaStudy.text,
-EventHall2ReadPageExploreHall2ViaStudy.button1,
-EventHall2ReadPageExploreHall2ViaStudyBeforeAddRemove1.text,
-EventHall2ReadPageExploreHall2ViaStudyBeforeAddRemove1.button1,
-EventHall2ReadPageExploreHall2ViaStudyBeforeAddRemove2.text,
-EventHall2ReadPageExploreHall2ViaStudyBeforeAddRemove2.button1,
-EventHall2ReadPageExploreHall2ViaStudyDisplay.text,
-EventHall2ReadPageExploreHall2ViaStudyDisplay.button1,
-EventHall2ReadPageExploreHall2ViaStudyBase.text,"\nLight from the study spills into the darkness. “Oh,” you say out loud, “this leads back to the dining room.” Place the {c:TileHall} and a door as indicated.\n\nDiscard all Sight and Explore tokens leading to this room.\n"
-EventHall2ReadPageExploreHall2ViaStudyBase.button1,{qst:continue}
-EventHall2ReadPageExploreHall2ViaStudyTiePoint.text,
-EventHall2ReadPageExploreHall2ViaStudyTiePoint.button1,
-EventHall2Expr3.text,
-EventHall2Expr3.button1,
-EventHall2ReadPageExploreHall2ViaStudyAfterLet1.text,
-EventHall2ReadPageExploreHall2ViaStudyAfterLet1.button1,
-EventHall2ReadPageExploreHall2ViaStudyEnd.text,
-EventHall2ReadPageExploreHall2ViaStudyEnd.button1,
-EventHall2TocPrologPlaceHall2.text,
-EventHall2TocPrologPlaceHall2.button1,
-EventHall2ReadPagePlaceHall2.text,
-EventHall2ReadPagePlaceHall2.button1,
-EventHall2ReadPagePlaceHall2Display.text,
-EventHall2ReadPagePlaceHall2Display.button1,
-EventHall2ReadPagePlaceHall2Base.text,"\nA table has been knocked over, scattering its contents across the room. <i>That broken lamp on the floor would help navigate this room,</i> you think to yourself. Place a Search token as indicated.\n"
-EventHall2ReadPagePlaceHall2Base.button1,{qst:continue}
-EventHall2ReadPagePlaceHall2TiePoint.text,
-EventHall2ReadPagePlaceHall2TiePoint.button1,
-EventHall2Expr4.text,
-EventHall2Expr4.button1,
-EventHall2Expr5.text,
-EventHall2Expr5.button1,
-EventHall2Expr6.text,
-EventHall2Expr6.button1,
-EventHall2ReadPagePlaceHall2AfterTrigger1.text,
-EventHall2ReadPagePlaceHall2AfterTrigger1.button1,
-EventHall2Expr8.text,
-EventHall2Expr8.button1,
-EventHall2ReadPagePlaceHall2AfterLet2.text,
-EventHall2ReadPagePlaceHall2AfterLet2.button1,
-EventHall2Expr9.text,
-EventHall2Expr9.button1,
-EventHall2Expr10.text,
-EventHall2Expr10.button1,
-EventHall2Expr11.text,
-EventHall2Expr11.button1,
-EventHall2ReadPagePlaceHall2AfterGoto89.text,
-EventHall2ReadPagePlaceHall2AfterGoto89.button1,
-EventHall2ReadPagePlaceHall2End.text,
-EventHall2ReadPagePlaceHall2End.button1,
-EventHall2Expr12.text,
-EventHall2Expr12.button1,
-EventHall2Expr7.text,
-EventHall2Expr7.button1,
-EventHall2TocPrologPlaceExploreFoyerViaHall2.text,
-EventHall2TocPrologPlaceExploreFoyerViaHall2.button1,
-EventHall2ReadPagePlaceExploreFoyerViaHall2.text,
-EventHall2ReadPagePlaceExploreFoyerViaHall2.button1,
-EventHall2ReadPagePlaceExploreFoyerViaHall2BeforeAddRemove1.text,
-EventHall2ReadPagePlaceExploreFoyerViaHall2BeforeAddRemove1.button1,
-EventHall2ReadPagePlaceExploreFoyerViaHall2Display.text,
-EventHall2ReadPagePlaceExploreFoyerViaHall2Display.button1,
-EventHall2ReadPagePlaceExploreFoyerViaHall2Base.text,"\nAnother door leads farther into the house. It has a small brass plate that reads “Foyer.” Place an Explore token as indicated.\n"
-EventHall2ReadPagePlaceExploreFoyerViaHall2Base.button1,{qst:continue}
-EventHall2ReadPagePlaceExploreFoyerViaHall2TiePoint.text,
-EventHall2ReadPagePlaceExploreFoyerViaHall2TiePoint.button1,
-EventHall2Expr13.text,
-EventHall2Expr13.button1,
-EventHall2ReadPagePlaceExploreFoyerViaHall2AfterGoto90.text,
-EventHall2ReadPagePlaceExploreFoyerViaHall2AfterGoto90.button1,
-EventHall2ReadPagePlaceExploreFoyerViaHall2End.text,
-EventHall2ReadPagePlaceExploreFoyerViaHall2End.button1,
-EventHall2TocPrologPlaceHall2ExploreStudy.text,
-EventHall2TocPrologPlaceHall2ExploreStudy.button1,
-EventHall2ReadPagePlaceHall2ExploreStudy.text,
-EventHall2ReadPagePlaceHall2ExploreStudy.button1,
-EventHall2ReadPagePlaceHall2ExploreStudyBeforeAddRemove1.text,
-EventHall2ReadPagePlaceHall2ExploreStudyBeforeAddRemove1.button1,
-EventHall2ReadPagePlaceHall2ExploreStudyDisplay.text,
-EventHall2ReadPagePlaceHall2ExploreStudyDisplay.button1,
-EventHall2ReadPagePlaceHall2ExploreStudyBase.text,"\nAnother door has a name plate that reads “Study.” Place an Explore token as indicated.\n"
-EventHall2ReadPagePlaceHall2ExploreStudyBase.button1,{qst:continue}
-EventHall2ReadPagePlaceHall2ExploreStudyTiePoint.text,
-EventHall2ReadPagePlaceHall2ExploreStudyTiePoint.button1,
-EventHall2ReadPagePlaceHall2ExploreStudyAfterGoto91.text,
-EventHall2ReadPagePlaceHall2ExploreStudyAfterGoto91.button1,
-EventHall2ReadPagePlaceHall2ExploreStudyEnd.text,
-EventHall2ReadPagePlaceHall2ExploreStudyEnd.button1,
-EventHall2TocPrologSearchEvidence.text,"\nThe upended table has spilled its contents across the floor.\n"
-EventHall2TocPrologSearchEvidence.button1,{action} 
-EventHall2TocPrologSearchEvidence.button2,{qst:cancel}
-EventHall2ReadPageSearchEvidence.text,
-EventHall2ReadPageSearchEvidence.button1,
-EventHall2ReadPageSearchEvidenceDisplay.text,
-EventHall2ReadPageSearchEvidenceDisplay.button1,
-EventHall2ReadPageSearchEvidenceBase.text,"\nThere is a dead plant and many scraps of paper tossed around. One of the scraps catches your eye: it is spattered in dried blood. The note talks about preparations for a ritual and mentions something about a chapel and crypt that you don’t understand. The author of the note wants to stop the ritual and it is clear he will do what he can. The note is signed “Henry Smythe.”\n\nGain the {c:QItemEvidenceHall2} Unique Item, then discard this Search token.\n"
-EventHall2ReadPageSearchEvidenceBase.button1,{qst:continue}
-EventHall2ReadPageSearchEvidenceTiePoint.text,
-EventHall2ReadPageSearchEvidenceTiePoint.button1,
-EventHall2ReadPageSearchEvidenceAfterGoto92.text,
-EventHall2ReadPageSearchEvidenceAfterGoto92.button1,
-EventHall2ReadPageSearchEvidenceEnd.text,
-EventHall2ReadPageSearchEvidenceEnd.button1,
-EventHall2ReadPageExploreHall2ViaFoyerXferIfTriggered.text,
-EventHall2ReadPageExploreHall2ViaFoyerXferIfTriggered.button1,
-EventHall2ReadPageExploreHall2ViaStudyXferIfTriggered.text,
-EventHall2ReadPageExploreHall2ViaStudyXferIfTriggered.button1,
-EventHall2ReadPageSearchEvidenceXferIfTriggered.text,
-EventHall2ReadPageSearchEvidenceXferIfTriggered.button1,
-EventHall2ReadPageExploreHall2ViaHall1Trigger.text,
-EventHall2ReadPageExploreHall2ViaHall1Trigger.button1,
-EventHall2ReadPageExploreHall2ViaFoyerTrigger.text,
-EventHall2ReadPageExploreHall2ViaFoyerTrigger.button1,
-EventHall2ReadPageExploreHall2ViaStudyTrigger.text,
-EventHall2ReadPageExploreHall2ViaStudyTrigger.button1,
-EventHall2ReadPageSearchEvidenceTrigger.text,
-EventHall2ReadPageSearchEvidenceTrigger.button1,
 EventJournalStart.text,
 EventJournalStart.button1,
 EventJournalInit.text,
@@ -5281,6 +4643,10 @@ EventExploreBackDoorLockedReadPageEpilogTiePoint.button1,
 EventExploreBackDoorLockedReadPageEpilogEnd.text,
 EventExploreBackDoorLockedReadPageEpilogEnd.button1,
 TokenDiningRoomBen.button1,Button1
+TokenSearchHall2Evidence.button1,Button1
+TokenSearchGalleryDvm.button1,{action} Continue
+TokenExploreFoyerFrontDoor.button1,{action} Explore
+TokenSearchFoyerSpellLeft.button1,{action} Search
 EventBackyardStart.text,
 EventBackyardStart.button1,
 EventBackyardInit.text,
@@ -7119,300 +6485,989 @@ EventDrivewayReadPageSearchJournalTrigger.text,
 EventDrivewayReadPageSearchJournalTrigger.button1,
 EventDrivewayReadPageExploreBackyardViaDrivewayTrigger.text,
 EventDrivewayReadPageExploreBackyardViaDrivewayTrigger.button1,
-EventHall1Start.text,|||\nEventHall1Start @(-1,-1)\n\n\n\n\n|||
+EventFoyerStart.text,
+EventFoyerStart.button1,
+EventFoyerInit.text,
+EventFoyerInit.button1,
+EventFoyerFirstTimeInitializer.text,
+EventFoyerFirstTimeInitializer.button1,
+EventFoyerExpr15.text,
+EventFoyerExpr15.button1,
+EventFoyerExpr16.text,
+EventFoyerExpr16.button1,
+EventFoyerExpr17.text,
+EventFoyerExpr17.button1,
+EventFoyerExpr18.text,
+EventFoyerExpr18.button1,
+EventFoyerExpr19.text,
+EventFoyerExpr19.button1,
+EventFoyerExpr20.text,
+EventFoyerExpr20.button1,
+EventFoyerExpr5.text,
+EventFoyerExpr5.button1,
+EventFoyerExpr22.text,
+EventFoyerExpr22.button1,
+EventFoyerExpr21.text,
+EventFoyerExpr21.button1,
+EventFoyerExpr24.text,
+EventFoyerExpr24.button1,
+EventFoyerExpr25.text,
+EventFoyerExpr25.button1,
+EventFoyerExpr26.text,
+EventFoyerExpr26.button1,
+EventFoyerExpr27.text,
+EventFoyerExpr27.button1,
+EventFoyerExpr28.text,
+EventFoyerExpr28.button1,
+EventFoyerTriggerPrologSelector.text,
+EventFoyerTriggerPrologSelector.button1,
+EventFoyerReadPageExploreFoyerViaGalleryTriggeredPrologTarget.text,
+EventFoyerReadPageExploreFoyerViaGalleryTriggeredPrologTarget.button1,
+EventFoyerTocPrologExploreFoyerViaGallery.text,|||\nUp close, you can see how beautiful the door is: ornate carvings and beautiful hardware. This door has a small plaque that reads “Foyer.”\n|||
+EventFoyerTocPrologExploreFoyerViaGallery.button1,{action} Explore
+EventFoyerTocPrologExploreFoyerViaGallery.button2,{qst:cancel}
+EventFoyerReadPageExploreFoyerViaGallery.text,
+EventFoyerReadPageExploreFoyerViaGallery.button1,
+EventFoyerReadPageExploreFoyerViaGalleryDisplay.text,
+EventFoyerReadPageExploreFoyerViaGalleryDisplay.button1,
+EventFoyerReadPageExploreFoyerViaGalleryTiePoint.text,
+EventFoyerReadPageExploreFoyerViaGalleryTiePoint.button1,
+EventFoyerExpr1.text,
+EventFoyerExpr1.button1,
+EventFoyerReadPageExploreFoyerViaGalleryAfterLet1.text,
+EventFoyerReadPageExploreFoyerViaGalleryAfterLet1.button1,
+EventFoyerReadPageExploreFoyerViaGalleryAfterGoto42.text,
+EventFoyerReadPageExploreFoyerViaGalleryAfterGoto42.button1,
+EventFoyerReadPagePlaceFoyer.text,
+EventFoyerReadPagePlaceFoyer.button1,
+EventFoyerReadPagePlaceFoyerBeforeAddRemove1.text,
+EventFoyerReadPagePlaceFoyerBeforeAddRemove1.button1,
+EventFoyerReadPagePlaceFoyerBeforeAddRemove2.text,
+EventFoyerReadPagePlaceFoyerBeforeAddRemove2.button1,
+EventFoyerReadPagePlaceFoyerDisplay.text,
+EventFoyerReadPagePlaceFoyerDisplay.button1,
+EventFoyerReadPagePlaceFoyerBase.text,|||\nThe foyer is a large, nearly-empty space with a front door, stairs, and other doors leading to various parts of the house. Place the {c:TileFoyer} tile then discard all Explore tokens leading to this room.\n|||
+EventFoyerReadPagePlaceFoyerBase.button1,{qst:continue}
+EventFoyerReadPagePlaceFoyerTiePoint.text,
+EventFoyerReadPagePlaceFoyerTiePoint.button1,
+EventFoyerExpr4.text,
+EventFoyerExpr4.button1,
+EventFoyerReadPagePlaceFoyerAfterLet1.text,
+EventFoyerReadPagePlaceFoyerAfterLet1.button1,
+EventFoyerReadPagePlaceFoyerEnd.text,
+EventFoyerReadPagePlaceFoyerEnd.button1,
+EventFoyerTiePoint.text,
+EventFoyerTiePoint.button1,
+EventFoyerLoopBack.text,
+EventFoyerLoopBack.button1,
+EventFoyerEnd.text,
+EventFoyerEnd.button1,
+EventFoyerReadPageExploreFoyerViaHall2TriggeredPrologTarget.text,
+EventFoyerReadPageExploreFoyerViaHall2TriggeredPrologTarget.button1,
+EventFoyerTocPrologExploreFoyerViaHall2.text,|||\nThis door has a small brass plaque that reads “Foyer.”\n|||
+EventFoyerTocPrologExploreFoyerViaHall2.button1,{action} Explore
+EventFoyerTocPrologExploreFoyerViaHall2.button2,{qst:cancel}
+EventFoyerReadPageExploreFoyerViaHall2.text,
+EventFoyerReadPageExploreFoyerViaHall2.button1,
+EventFoyerReadPageExploreFoyerViaHall2Display.text,
+EventFoyerReadPageExploreFoyerViaHall2Display.button1,
+EventFoyerReadPageExploreFoyerViaHall2TiePoint.text,
+EventFoyerReadPageExploreFoyerViaHall2TiePoint.button1,
+EventFoyerExpr2.text,
+EventFoyerExpr2.button1,
+EventFoyerReadPageExploreFoyerViaHall2AfterLet1.text,
+EventFoyerReadPageExploreFoyerViaHall2AfterLet1.button1,
+EventFoyerReadPageExploreFoyerViaHall2AfterGoto43.text,
+EventFoyerReadPageExploreFoyerViaHall2AfterGoto43.button1,
+EventFoyerReadPageExploreFoyerViaStudyTriggeredPrologTarget.text,
+EventFoyerReadPageExploreFoyerViaStudyTriggeredPrologTarget.button1,
+EventFoyerTocPrologExploreFoyerViaStudy.text,|||\nThis door leads farther into the house.\n|||
+EventFoyerTocPrologExploreFoyerViaStudy.button1,{action} Explore
+EventFoyerTocPrologExploreFoyerViaStudy.button2,{qst:cancel}
+EventFoyerReadPageExploreFoyerViaStudy.text,
+EventFoyerReadPageExploreFoyerViaStudy.button1,
+EventFoyerReadPageExploreFoyerViaStudyDisplay.text,
+EventFoyerReadPageExploreFoyerViaStudyDisplay.button1,
+EventFoyerReadPageExploreFoyerViaStudyTiePoint.text,
+EventFoyerReadPageExploreFoyerViaStudyTiePoint.button1,
+EventFoyerExpr3.text,
+EventFoyerExpr3.button1,
+EventFoyerReadPageExploreFoyerViaStudyAfterLet1.text,
+EventFoyerReadPageExploreFoyerViaStudyAfterLet1.button1,
+EventFoyerReadPageExploreFoyerViaStudyAfterGoto44.text,
+EventFoyerReadPageExploreFoyerViaStudyAfterGoto44.button1,
+EventFoyerReadPageSearchRandomTriggeredPrologTarget.text,
+EventFoyerReadPageSearchRandomTriggeredPrologTarget.button1,
+EventFoyerTocPrologSearchRandom.text,|||\nAn old cabinet with a set of compartments and drawers sits next to the door. Several drawers are half open, like whoever last looked through them was in a hurry.\n|||
+EventFoyerTocPrologSearchRandom.button1,{action} Search
+EventFoyerTocPrologSearchRandom.button2,{qst:cancel}
+EventFoyerReadPageSearchRandom.text,
+EventFoyerReadPageSearchRandom.button1,
+EventFoyerReadPageSearchRandomDisplay.text,
+EventFoyerReadPageSearchRandomDisplay.button1,
+EventFoyerReadPageSearchRandomBase.text,|||\nYou dig through the various drawers and compartments and eventually find something useful. Gain the {c:QItemFoyerRandom} Common Item, then discard this Search token.\n|||
+EventFoyerReadPageSearchRandomBase.button1,{qst:continue}
+EventFoyerReadPageSearchRandomTiePoint.text,
+EventFoyerReadPageSearchRandomTiePoint.button1,
+EventFoyerReadPageSearchRandomAfterAddRemove1.text,
+EventFoyerReadPageSearchRandomAfterAddRemove1.button1,
+EventFoyerReadPageSearchRandomAfterGoto46.text,
+EventFoyerReadPageSearchRandomAfterGoto46.button1,
+EventFoyerReadPageSearchSpellTriggeredPrologTarget.text,
+EventFoyerReadPageSearchSpellTriggeredPrologTarget.button1,
+EventFoyerTocPrologSearchSpell.text,|||\nThis table sits under a fancy mirror. There is nothing on the table but dust. It does have several drawers.\n|||
+EventFoyerTocPrologSearchSpell.button1,{action} Search
+EventFoyerTocPrologSearchSpell.button2,{qst:cancel}
+EventFoyerReadPageSearchSpell.text,
+EventFoyerReadPageSearchSpell.button1,
+EventFoyerReadPageSearchSpellDisplay.text,
+EventFoyerReadPageSearchSpellDisplay.button1,
+EventFoyerReadPageSearchSpellBase.text,|||\nYou go through the drawers one-by-one, finding little of interest. Finally, in the last drawer, you find a small pamphlet with arcane symbols and odd poetry. Gain the {c:QItemFoyerSpell} spell, then discard this Search token.\n|||
+EventFoyerReadPageSearchSpellBase.button1,{qst:continue}
+EventFoyerReadPageSearchSpellTiePoint.text,
+EventFoyerReadPageSearchSpellTiePoint.button1,
+EventFoyerReadPageSearchSpellAfterAddRemove1.text,
+EventFoyerReadPageSearchSpellAfterAddRemove1.button1,
+EventFoyerReadPageSearchSpellAfterGoto47.text,
+EventFoyerReadPageSearchSpellAfterGoto47.button1,
+EventFoyerReadPageSearchCandlesTriggeredPrologTarget.text,
+EventFoyerReadPageSearchCandlesTriggeredPrologTarget.button1,
+EventFoyerTocPrologSearchCandles.text,|||\nThis painting is compelling. Something about it makes you want to have a closer look.\n|||
+EventFoyerTocPrologSearchCandles.button1,{action} Search
+EventFoyerTocPrologSearchCandles.button2,{qst:cancel}
+EventFoyerReadPageSearchCandles.text,
+EventFoyerReadPageSearchCandles.button1,
+EventFoyerReadPageSearchCandlesDisplay.text,
+EventFoyerReadPageSearchCandlesDisplay.button1,
+EventFoyerReadPageSearchCandlesBase.text,|||\nYou quickly realize what drew you to the painting: the man’s eyes glisten and meet yours as if he were alive. He sits in a chair in front of his wife and two children, all standing. You recognize one of the children as Sarah, so the man must be David Smythe. Still, you don’t see anything that will help you with the house. As you turn away, you notice the sconces on either side of the painting. Some of the darker areas of the house could use a little light. You reach out and take a candle.\n\nGain the {c:QItemCandles} Common Item, then discard this Search token.\n|||
+EventFoyerReadPageSearchCandlesBase.button1,{qst:continue}
+EventFoyerReadPageSearchCandlesTiePoint.text,
+EventFoyerReadPageSearchCandlesTiePoint.button1,
+EventFoyerReadPageSearchCandlesAfterAddRemove1.text,
+EventFoyerReadPageSearchCandlesAfterAddRemove1.button1,
+EventFoyerExpr14.text,
+EventFoyerExpr14.button1,
+EventFoyerReadPageSearchCandlesAfterLet2.text,
+EventFoyerReadPageSearchCandlesAfterLet2.button1,
+EventFoyerReadPageSearchCandlesAfterGoto48.text,
+EventFoyerReadPageSearchCandlesAfterGoto48.button1,
+EventFoyerReadPageExploreFrontDoorTriggeredPrologTarget.text,
+EventFoyerReadPageExploreFrontDoorTriggeredPrologTarget.button1,
+EventFoyerTocPrologExploreFrontDoor.text,|||\nThe door seems unfazed by age. A small window purports to look out on the grounds. Maybe you can get out of this madhouse.\n|||
+EventFoyerTocPrologExploreFrontDoor.button1,{action} Explore
+EventFoyerTocPrologExploreFrontDoor.button2,{qst:cancel}
+EventFoyerReadPageExploreFrontDoor.text,
+EventFoyerReadPageExploreFrontDoor.button1,
+EventFoyerReadPageExploreFrontDoorDisplay.text,
+EventFoyerReadPageExploreFrontDoorDisplay.button1,
+EventFoyerReadPageExploreFrontDoorBase.text,|||\nYou grab and twist the knob but your hand just slides over it. No matter how you try, you cannot turn the knob. The window is so filthy that you cannot see through it.\n\nIf you were still worried about cleaning, this would be a lot of work.\n\nDiscard this explore token.\n|||
+EventFoyerReadPageExploreFrontDoorBase.button1,{qst:continue}
+EventFoyerReadPageExploreFrontDoorTiePoint.text,
+EventFoyerReadPageExploreFrontDoorTiePoint.button1,
+EventFoyerReadPageExploreFrontDoorAfterAddRemove1.text,
+EventFoyerReadPageExploreFrontDoorAfterAddRemove1.button1,
+EventFoyerReadPageExploreFrontDoorAfterGoto49.text,
+EventFoyerReadPageExploreFrontDoorAfterGoto49.button1,
+EventFoyerTriggerSelector.text,
+EventFoyerTriggerSelector.button1,
+EventFoyerReadPageExploreFoyerViaGalleryXferIfTriggered.text,
+EventFoyerReadPageExploreFoyerViaGalleryXferIfTriggered.button1,
+EventFoyerReadPageExploreFoyerViaHall2XferIfTriggered.text,
+EventFoyerReadPageExploreFoyerViaHall2XferIfTriggered.button1,
+EventFoyerReadPageExploreFoyerViaStudyXferIfTriggered.text,
+EventFoyerReadPageExploreFoyerViaStudyXferIfTriggered.button1,
+EventFoyerReadPagePlaceFoyerXferIfTriggered.text,
+EventFoyerReadPagePlaceFoyerXferIfTriggered.button1,
+EventFoyerReadPagePlaceExploreStudyXferIfTriggered.text,
+EventFoyerReadPagePlaceExploreStudyXferIfTriggered.button1,
+EventFoyerReadPagePlaceExploreStudy.text,
+EventFoyerReadPagePlaceExploreStudy.button1,
+EventFoyerReadPagePlaceExploreStudyBeforeAddRemove1.text,
+EventFoyerReadPagePlaceExploreStudyBeforeAddRemove1.button1,
+EventFoyerExpr6.text,
+EventFoyerExpr6.button1,
+EventFoyerReadPagePlaceExploreStudyDisplay.text,
+EventFoyerReadPagePlaceExploreStudyDisplay.button1,
+EventFoyerReadPagePlaceExploreStudyOverload1.text,|||\nAcross the room and up some stairs, a door leads farther into the house. Place an Explore token as indicated.\n|||
+EventFoyerReadPagePlaceExploreStudyOverload1.button1,{qst:continue}
+EventFoyerReadPagePlaceExploreStudyTiePoint.text,
+EventFoyerReadPagePlaceExploreStudyTiePoint.button1,
+EventFoyerReadPagePlaceExploreStudyEnd.text,
+EventFoyerReadPagePlaceExploreStudyEnd.button1,
+EventFoyerReadPagePlaceExploreStudyBase.text,|||\nAcross the stairs is another door leading farther into the house. Place an Explore token as indicated.\n|||
+EventFoyerReadPagePlaceExploreStudyBase.button1,{qst:continue}
+EventFoyerReadPagePlaceCandlesXferIfTriggered.text,
+EventFoyerReadPagePlaceCandlesXferIfTriggered.button1,
+EventFoyerReadPagePlaceCandles.text,
+EventFoyerReadPagePlaceCandles.button1,
+EventFoyerReadPagePlaceCandlesBeforeAddRemove1.text,
+EventFoyerReadPagePlaceCandlesBeforeAddRemove1.button1,
+EventFoyerExpr7.text,
+EventFoyerExpr7.button1,
+EventFoyerExpr8.text,
+EventFoyerExpr8.button1,
+EventFoyerReadPagePlaceCandlesDisplay.text,
+EventFoyerReadPagePlaceCandlesDisplay.button1,
+EventFoyerReadPagePlaceCandlesOverload1.text,|||\nUp the stairs to your left, a painting piques your interest. Place a Search token as indicated.\n|||
+EventFoyerReadPagePlaceCandlesOverload1.button1,{qst:continue}
+EventFoyerReadPagePlaceCandlesTiePoint.text,
+EventFoyerReadPagePlaceCandlesTiePoint.button1,
+EventFoyerReadPagePlaceCandlesEnd.text,
+EventFoyerReadPagePlaceCandlesEnd.button1,
+EventFoyerReadPagePlaceCandlesOverload2.text,|||\nNext to a door across the stairs, a painting piques your interest. Place a Search token as indicated.\n|||
+EventFoyerReadPagePlaceCandlesOverload2.button1,{qst:continue}
+EventFoyerReadPagePlaceCandlesBase.text,|||\nNext to you is a painting that piques your interest. Place a Search token as indicated.\n|||
+EventFoyerReadPagePlaceCandlesBase.button1,{qst:continue}
+EventFoyerReadPagePlaceSearchRandomXferIfTriggered.text,
+EventFoyerReadPagePlaceSearchRandomXferIfTriggered.button1,
+EventFoyerReadPagePlaceSearchRandom.text,
+EventFoyerReadPagePlaceSearchRandom.button1,
+EventFoyerReadPagePlaceSearchRandomBeforeAddRemove1.text,
+EventFoyerReadPagePlaceSearchRandomBeforeAddRemove1.button1,
+EventFoyerReadPagePlaceSearchRandomDisplay.text,
+EventFoyerReadPagePlaceSearchRandomDisplay.button1,
+EventFoyerReadPagePlaceSearchRandomBase.text,|||\nA small secretary sits next to the entry. It has many compartments and drawers, some hanging open. Place a Search token as indicated.\n|||
+EventFoyerReadPagePlaceSearchRandomBase.button1,{qst:continue}
+EventFoyerReadPagePlaceSearchRandomTiePoint.text,
+EventFoyerReadPagePlaceSearchRandomTiePoint.button1,
+EventFoyerReadPagePlaceSearchRandomEnd.text,
+EventFoyerReadPagePlaceSearchRandomEnd.button1,
+EventFoyerReadPagePlaceExploreFrontDoorXferIfTriggered.text,
+EventFoyerReadPagePlaceExploreFrontDoorXferIfTriggered.button1,
+EventFoyerReadPagePlaceExploreFrontDoor.text,
+EventFoyerReadPagePlaceExploreFrontDoor.button1,
+EventFoyerReadPagePlaceExploreFrontDoorBeforeAddRemove1.text,
+EventFoyerReadPagePlaceExploreFrontDoorBeforeAddRemove1.button1,
+EventFoyerReadPagePlaceExploreFrontDoorDisplay.text,
+EventFoyerReadPagePlaceExploreFrontDoorDisplay.button1,
+EventFoyerReadPagePlaceExploreFrontDoorBase.text,|||\nThe front door seems to be in good repair, but the glass set into it is as filthy as that door off the driveway. Place an Explore token as indicated.\n|||
+EventFoyerReadPagePlaceExploreFrontDoorBase.button1,{qst:continue}
+EventFoyerReadPagePlaceExploreFrontDoorTiePoint.text,
+EventFoyerReadPagePlaceExploreFrontDoorTiePoint.button1,
+EventFoyerReadPagePlaceExploreFrontDoorEnd.text,
+EventFoyerReadPagePlaceExploreFrontDoorEnd.button1,
+EventFoyerReadPagePlaceSearchSpellXferIfTriggered.text,
+EventFoyerReadPagePlaceSearchSpellXferIfTriggered.button1,
+EventFoyerReadPagePlaceSearchSpell.text,
+EventFoyerReadPagePlaceSearchSpell.button1,
+EventFoyerExpr9.text,
+EventFoyerExpr9.button1,
+EventFoyerReadPagePlaceSearchSpellBeforeAddRemove1.text,
+EventFoyerReadPagePlaceSearchSpellBeforeAddRemove1.button1,
+EventFoyerExpr10.text,
+EventFoyerExpr10.button1,
+EventFoyerExpr12.text,
+EventFoyerExpr12.button1,
+EventFoyerExpr11.text,
+EventFoyerExpr11.button1,
+EventFoyerReadPagePlaceSearchSpellBeforeAddRemove2.text,
+EventFoyerReadPagePlaceSearchSpellBeforeAddRemove2.button1,
+EventFoyerReadPagePlaceSearchSpellDisplay.text,
+EventFoyerReadPagePlaceSearchSpellDisplay.button1,
+EventFoyerReadPagePlaceSearchSpellBase.text,|||\nA mirror across the room looks interesting. Place a Search token as indicated.\n|||
+EventFoyerReadPagePlaceSearchSpellBase.button1,{qst:continue}
+EventFoyerReadPagePlaceSearchSpellTiePoint.text,
+EventFoyerReadPagePlaceSearchSpellTiePoint.button1,
+EventFoyerReadPagePlaceSearchSpellAfterTrigger1.text,
+EventFoyerReadPagePlaceSearchSpellAfterTrigger1.button1,
+EventFoyerReadPagePlaceSearchSpellAfterGoto45.text,
+EventFoyerReadPagePlaceSearchSpellAfterGoto45.button1,
+EventFoyerExpr13.text,
+EventFoyerExpr13.button1,
+EventFoyerReadPageSearchRandomXferIfTriggered.text,
+EventFoyerReadPageSearchRandomXferIfTriggered.button1,
+EventFoyerReadPageSearchSpellXferIfTriggered.text,
+EventFoyerReadPageSearchSpellXferIfTriggered.button1,
+EventFoyerReadPageSearchCandlesXferIfTriggered.text,
+EventFoyerReadPageSearchCandlesXferIfTriggered.button1,
+EventFoyerReadPageExploreFrontDoorXferIfTriggered.text,
+EventFoyerReadPageExploreFrontDoorXferIfTriggered.button1,
+EventFoyerToc.text,
+EventFoyerToc.button1,
+EventFoyerTocSelector.text,
+EventFoyerTocSelector.button1,
+EventFoyerTocPrologProxyExploreFoyerViaGallery.text,
+EventFoyerTocPrologProxyExploreFoyerViaGallery.button1,
+EventFoyerTocPrologProxyExploreFoyerViaHall2.text,
+EventFoyerTocPrologProxyExploreFoyerViaHall2.button1,
+EventFoyerTocPrologProxyExploreFoyerViaStudy.text,
+EventFoyerTocPrologProxyExploreFoyerViaStudy.button1,
+EventFoyerTocPrologProxyPlaceFoyer.text,
+EventFoyerTocPrologProxyPlaceFoyer.button1,
+EventFoyerTocPrologPlaceFoyer.text,
+EventFoyerTocPrologPlaceFoyer.button1,
+EventFoyerTocPrologProxyPlaceExploreStudy.text,
+EventFoyerTocPrologProxyPlaceExploreStudy.button1,
+EventFoyerTocPrologPlaceExploreStudy.text,
+EventFoyerTocPrologPlaceExploreStudy.button1,
+EventFoyerTocPrologProxyPlaceCandles.text,
+EventFoyerTocPrologProxyPlaceCandles.button1,
+EventFoyerTocPrologPlaceCandles.text,
+EventFoyerTocPrologPlaceCandles.button1,
+EventFoyerTocPrologProxyPlaceSearchRandom.text,
+EventFoyerTocPrologProxyPlaceSearchRandom.button1,
+EventFoyerTocPrologPlaceSearchRandom.text,
+EventFoyerTocPrologPlaceSearchRandom.button1,
+EventFoyerTocPrologProxyPlaceExploreFrontDoor.text,
+EventFoyerTocPrologProxyPlaceExploreFrontDoor.button1,
+EventFoyerTocPrologPlaceExploreFrontDoor.text,
+EventFoyerTocPrologPlaceExploreFrontDoor.button1,
+EventFoyerTocPrologProxyPlaceSearchSpell.text,
+EventFoyerTocPrologProxyPlaceSearchSpell.button1,
+EventFoyerTocPrologPlaceSearchSpell.text,
+EventFoyerTocPrologPlaceSearchSpell.button1,
+EventFoyerTocPrologProxySearchRandom.text,
+EventFoyerTocPrologProxySearchRandom.button1,
+EventFoyerTocPrologProxySearchSpell.text,
+EventFoyerTocPrologProxySearchSpell.button1,
+EventFoyerTocPrologProxySearchCandles.text,
+EventFoyerTocPrologProxySearchCandles.button1,
+EventFoyerTocPrologProxyExploreFrontDoor.text,
+EventFoyerTocPrologProxyExploreFrontDoor.button1,
+EventFoyerTocNoPagesAvailable.text,
+EventFoyerTocNoPagesAvailable.button1,
+EventFoyerExpr23.text,
+EventFoyerExpr23.button1,
+EventFoyerReadPageExploreFoyerViaGalleryTrigger.text,
+EventFoyerReadPageExploreFoyerViaGalleryTrigger.button1,
+EventFoyerReadPageExploreFoyerViaHall2Trigger.text,
+EventFoyerReadPageExploreFoyerViaHall2Trigger.button1,
+EventFoyerReadPageExploreFoyerViaStudyTrigger.text,
+EventFoyerReadPageExploreFoyerViaStudyTrigger.button1,
+EventFoyerReadPageSearchRandomTrigger.text,
+EventFoyerReadPageSearchRandomTrigger.button1,
+EventFoyerReadPageSearchSpellTrigger.text,
+EventFoyerReadPageSearchSpellTrigger.button1,
+EventFoyerReadPageSearchCandlesTrigger.text,
+EventFoyerReadPageSearchCandlesTrigger.button1,
+EventFoyerReadPageExploreFrontDoorTrigger.text,
+EventFoyerReadPageExploreFrontDoorTrigger.button1,
+EventGalleryStart.text,
+EventGalleryStart.button1,
+EventGalleryInit.text,
+EventGalleryInit.button1,
+EventGalleryFirstTimeInitializer.text,
+EventGalleryFirstTimeInitializer.button1,
+EventGalleryTriggerPrologSelector.text,
+EventGalleryTriggerPrologSelector.button1,
+EventGalleryReadPagePlaceGalleryTriggeredPrologTarget.text,
+EventGalleryReadPagePlaceGalleryTriggeredPrologTarget.button1,
+EventGalleryTocPrologPlaceGallery.text,|||\nYou approach the door. It has a small brass plaque that reads “Gallery.” The door handle catches your eye because light is glinting off it. Unlike most everything else here, it is clean... like it has been used recently.\n|||
+EventGalleryTocPrologPlaceGallery.button1,{action} Explore
+EventGalleryTocPrologPlaceGallery.button2,{qst:cancel}
+EventGalleryReadPagePlaceGallery.text,
+EventGalleryReadPagePlaceGallery.button1,
+EventGalleryReadPagePlaceGalleryBeforeAddRemove1.text,
+EventGalleryReadPagePlaceGalleryBeforeAddRemove1.button1,
+EventGalleryReadPagePlaceGalleryBeforeAddRemove2.text,
+EventGalleryReadPagePlaceGalleryBeforeAddRemove2.button1,
+EventGalleryReadPagePlaceGalleryDisplay.text,
+EventGalleryReadPagePlaceGalleryDisplay.button1,
+EventGalleryReadPagePlaceGalleryBase.text,|||\nAs the door opens, dust rises then drifts slowly toward the floor. Lots of it. <i>This place could take days to clean,</i> you mumble to yourself.\n\nThe room behind the door is–or was–stately, with high ceilings, beautiful paintings, and furniture and rugs that look both rich and comfortable. Dim light from the windows reflects off the dust, giving the room an unearthly quality. The glowing dust makes the room feel shabbier than it actually is.\n\nPlace the {c:TileGallery} tile, then discard this Explore token.\n|||
+EventGalleryReadPagePlaceGalleryBase.button1,{qst:continue}
+EventGalleryReadPagePlaceGalleryTiePoint.text,
+EventGalleryReadPagePlaceGalleryTiePoint.button1,
+EventGalleryExpr1.text,
+EventGalleryExpr1.button1,
+EventGalleryReadPagePlaceGalleryAfterLet1.text,
+EventGalleryReadPagePlaceGalleryAfterLet1.button1,
+EventGalleryReadPagePlaceGalleryAfterTrigger2.text,
+EventGalleryReadPagePlaceGalleryAfterTrigger2.button1,
+EventGalleryReadPagePlaceGalleryEnd.text,
+EventGalleryReadPagePlaceGalleryEnd.button1,
+EventGalleryTiePoint.text,
+EventGalleryTiePoint.button1,
+EventGalleryLoopBack.text,
+EventGalleryLoopBack.button1,
+EventGalleryEnd.text,
+EventGalleryEnd.button1,
+EventGalleryReadPageSearchDvmTriggeredPrologTarget.text,
+EventGalleryReadPageSearchDvmTriggeredPrologTarget.button1,
+EventGalleryTocPrologSearchDvm.text,|||\nA pile of junk sits on the table between the divans.\n|||
+EventGalleryTocPrologSearchDvm.button1,{action} Search
+EventGalleryTocPrologSearchDvm.button2,{qst:cancel}
+EventGalleryReadPageSearchDvm.text,
+EventGalleryReadPageSearchDvm.button1,
+EventGalleryReadPageSearchDvmBeforeAddRemove1.text,
+EventGalleryReadPageSearchDvmBeforeAddRemove1.button1,
+EventGalleryReadPageSearchDvmDisplay.text,
+EventGalleryReadPageSearchDvmDisplay.button1,
+EventGalleryReadPageSearchDvmBase.text,|||\nAmong the tools, handkerchiefs, and ashtrays are a number of small books. One of them... <i>feels</i> different than the others. It is old and worn, but you get the sense it possesses great power.\n\nGain the {c:QItemDvm} Common Item, then discard this Search token. An investigator with the {c:QItemDvm} can interact with it in the app.\n|||
+EventGalleryReadPageSearchDvmBase.button1,{qst:continue}
+EventGalleryReadPageSearchDvmTiePoint.text,
+EventGalleryReadPageSearchDvmTiePoint.button1,
+EventGalleryExpr2.text,
+EventGalleryExpr2.button1,
+EventGalleryReadPageSearchDvmAfterLet1.text,
+EventGalleryReadPageSearchDvmAfterLet1.button1,
+EventGalleryReadPageSearchDvmEnd.text,
+EventGalleryReadPageSearchDvmEnd.button1,
+EventGalleryReadPageSearchCoatRoomEvidenceTriggeredPrologTarget.text,
+EventGalleryReadPageSearchCoatRoomEvidenceTriggeredPrologTarget.button1,
+EventGalleryTocPrologSearchCoatRoomEvidence.text,|||\nThis box is half-full of things you might find in a coat room: brushes, shoe polish, and...\n|||
+EventGalleryTocPrologSearchCoatRoomEvidence.button1,{action} Search
+EventGalleryTocPrologSearchCoatRoomEvidence.button2,{qst:cancel}
+EventGalleryReadPageSearchCoatRoomEvidence.text,
+EventGalleryReadPageSearchCoatRoomEvidence.button1,
+EventGalleryReadPageSearchCoatRoomEvidenceBeforeAddRemove1.text,
+EventGalleryReadPageSearchCoatRoomEvidenceBeforeAddRemove1.button1,
+EventGalleryReadPageSearchCoatRoomEvidenceDisplay.text,
+EventGalleryReadPageSearchCoatRoomEvidenceDisplay.button1,
+EventGalleryReadPageSearchCoatRoomEvidenceBase.text,|||\nAmong other items, you find a pair of shoes caked with mud and a bloody handkerchief. Looking closer, you see that the handkerchief was used to wipe blood from the shoes.\n\nGain the {c:QItemEvidenceCoatRoom} Unique Item, then discard this Search token.\n|||
+EventGalleryReadPageSearchCoatRoomEvidenceBase.button1,{qst:continue}
+EventGalleryReadPageSearchCoatRoomEvidenceTiePoint.text,
+EventGalleryReadPageSearchCoatRoomEvidenceTiePoint.button1,
+EventGalleryReadPageSearchCoatRoomEvidenceAfterGoto52.text,
+EventGalleryReadPageSearchCoatRoomEvidenceAfterGoto52.button1,
+EventGalleryTriggerSelector.text,
+EventGalleryTriggerSelector.button1,
+EventGalleryReadPagePlaceGalleryXferIfTriggered.text,
+EventGalleryReadPagePlaceGalleryXferIfTriggered.button1,
+EventGalleryReadPagePlaceHall1PaintingXferIfTriggered.text,
+EventGalleryReadPagePlaceHall1PaintingXferIfTriggered.button1,
+EventGalleryReadPagePlaceHall1Painting.text,
+EventGalleryReadPagePlaceHall1Painting.button1,
+EventGalleryReadPagePlaceHall1PaintingBeforeAddRemove1.text,
+EventGalleryReadPagePlaceHall1PaintingBeforeAddRemove1.button1,
+EventGalleryReadPagePlaceHall1PaintingDisplay.text,
+EventGalleryReadPagePlaceHall1PaintingDisplay.button1,
+EventGalleryReadPagePlaceHall1PaintingBase.text,|||\nLight from the {c:TileGallery} has, somehow, cast a ray directly on a painting, making it glow with unnatural light. You can almost feel it calling to you. You shake it off because paintings don’t have power. Place a Search token as indicated.\n\nAs you look away, you catch something moving in your peripheral vision. You glance back and the painting is still lightly glowing, something that suddenly seems more troubling.\n|||
+EventGalleryReadPagePlaceHall1PaintingBase.button1,{qst:continue}
+EventGalleryReadPagePlaceHall1PaintingTiePoint.text,
+EventGalleryReadPagePlaceHall1PaintingTiePoint.button1,
+EventGalleryReadPagePlaceHall1PaintingEnd.text,
+EventGalleryReadPagePlaceHall1PaintingEnd.button1,
+EventGalleryReadPagePlaceExploreFoyerViaGalleryXferIfTriggered.text,
+EventGalleryReadPagePlaceExploreFoyerViaGalleryXferIfTriggered.button1,
+EventGalleryReadPagePlaceExploreFoyerViaGallery.text,
+EventGalleryReadPagePlaceExploreFoyerViaGallery.button1,
+EventGalleryReadPagePlaceExploreFoyerViaGalleryBeforeAddRemove1.text,
+EventGalleryReadPagePlaceExploreFoyerViaGalleryBeforeAddRemove1.button1,
+EventGalleryReadPagePlaceExploreFoyerViaGalleryDisplay.text,
+EventGalleryReadPagePlaceExploreFoyerViaGalleryDisplay.button1,
+EventGalleryReadPagePlaceExploreFoyerViaGalleryBase.text,|||\nTurning back, you look through the {c:TileGallery} door. Across the room is another door. Place an Explore token as indicated.\n|||
+EventGalleryReadPagePlaceExploreFoyerViaGalleryBase.button1,{qst:continue}
+EventGalleryReadPagePlaceExploreFoyerViaGalleryTiePoint.text,
+EventGalleryReadPagePlaceExploreFoyerViaGalleryTiePoint.button1,
+EventGalleryReadPagePlaceExploreFoyerViaGalleryEnd.text,
+EventGalleryReadPagePlaceExploreFoyerViaGalleryEnd.button1,
+EventGalleryReadPagePlaceGalleryCoatRoomXferIfTriggered.text,
+EventGalleryReadPagePlaceGalleryCoatRoomXferIfTriggered.button1,
+EventGalleryReadPagePlaceGalleryCoatRoom.text,
+EventGalleryReadPagePlaceGalleryCoatRoom.button1,
+EventGalleryReadPagePlaceGalleryCoatRoomBeforeAddRemove1.text,
+EventGalleryReadPagePlaceGalleryCoatRoomBeforeAddRemove1.button1,
+EventGalleryReadPagePlaceGalleryCoatRoomDisplay.text,
+EventGalleryReadPagePlaceGalleryCoatRoomDisplay.button1,
+EventGalleryReadPagePlaceGalleryCoatRoomBase.text,|||\nA coat room sits in the corner across from you. Place an Explore token as indicated.\n|||
+EventGalleryReadPagePlaceGalleryCoatRoomBase.button1,{qst:continue}
+EventGalleryReadPagePlaceGalleryCoatRoomTiePoint.text,
+EventGalleryReadPagePlaceGalleryCoatRoomTiePoint.button1,
+EventGalleryReadPagePlaceGalleryCoatRoomEnd.text,
+EventGalleryReadPagePlaceGalleryCoatRoomEnd.button1,
+EventGalleryReadPagePlaceGalleryDvmXferIfTriggered.text,
+EventGalleryReadPagePlaceGalleryDvmXferIfTriggered.button1,
+EventGalleryReadPagePlaceGalleryDvm.text,
+EventGalleryReadPagePlaceGalleryDvm.button1,
+EventGalleryReadPagePlaceGalleryDvmBeforeAddRemove1.text,
+EventGalleryReadPagePlaceGalleryDvmBeforeAddRemove1.button1,
+EventGalleryReadPagePlaceGalleryDvmDisplay.text,
+EventGalleryReadPagePlaceGalleryDvmDisplay.button1,
+EventGalleryReadPagePlaceGalleryDvmBase.text,|||\nTwo divans are upholstered with once-beautiful cloth... but now they are moth-eaten and dirty. A pile of junk sits on a small table between them. Place a Search token as indicated.\n|||
+EventGalleryReadPagePlaceGalleryDvmBase.button1,{qst:continue}
+EventGalleryReadPagePlaceGalleryDvmTiePoint.text,
+EventGalleryReadPagePlaceGalleryDvmTiePoint.button1,
+EventGalleryReadPagePlaceGalleryDvmAfterTrigger1.text,
+EventGalleryReadPagePlaceGalleryDvmAfterTrigger1.button1,
+EventGalleryReadPagePlaceGalleryDvmAfterGoto50.text,
+EventGalleryReadPagePlaceGalleryDvmAfterGoto50.button1,
+EventGalleryReadPagePlaceCoatRoomXferIfTriggered.text,
+EventGalleryReadPagePlaceCoatRoomXferIfTriggered.button1,
+EventGalleryReadPagePlaceCoatRoom.text,
+EventGalleryReadPagePlaceCoatRoom.button1,
+EventGalleryReadPagePlaceCoatRoomBeforeAddRemove1.text,
+EventGalleryReadPagePlaceCoatRoomBeforeAddRemove1.button1,
+EventGalleryReadPagePlaceCoatRoomBeforeAddRemove2.text,
+EventGalleryReadPagePlaceCoatRoomBeforeAddRemove2.button1,
+EventGalleryReadPagePlaceCoatRoomDisplay.text,
+EventGalleryReadPagePlaceCoatRoomDisplay.button1,
+EventGalleryReadPagePlaceCoatRoomBase.text,|||\nThe coat room still has a number of coats hung neatly on one side. Shoes and hangers are scattered on the floor. Discard this Explore token.\n\nA half-filled box sits in one of the corners. Place a Search token as indicated.\n|||
+EventGalleryReadPagePlaceCoatRoomBase.button1,{qst:continue}
+EventGalleryReadPagePlaceCoatRoomTiePoint.text,
+EventGalleryReadPagePlaceCoatRoomTiePoint.button1,
+EventGalleryReadPagePlaceCoatRoomAfterTrigger1.text,
+EventGalleryReadPagePlaceCoatRoomAfterTrigger1.button1,
+EventGalleryReadPagePlaceCoatRoomAfterGoto51.text,
+EventGalleryReadPagePlaceCoatRoomAfterGoto51.button1,
+EventGalleryReadPageSearchDvmXferIfTriggered.text,
+EventGalleryReadPageSearchDvmXferIfTriggered.button1,
+EventGalleryReadPageSearchCoatRoomEvidenceXferIfTriggered.text,
+EventGalleryReadPageSearchCoatRoomEvidenceXferIfTriggered.button1,
+EventGalleryToc.text,
+EventGalleryToc.button1,
+EventGalleryTocSelector.text,
+EventGalleryTocSelector.button1,
+EventGalleryTocPrologProxyPlaceGallery.text,
+EventGalleryTocPrologProxyPlaceGallery.button1,
+EventGalleryTocPrologProxyPlaceHall1Painting.text,
+EventGalleryTocPrologProxyPlaceHall1Painting.button1,
+EventGalleryTocPrologPlaceHall1Painting.text,
+EventGalleryTocPrologPlaceHall1Painting.button1,
+EventGalleryTocPrologProxyPlaceExploreFoyerViaGallery.text,
+EventGalleryTocPrologProxyPlaceExploreFoyerViaGallery.button1,
+EventGalleryTocPrologPlaceExploreFoyerViaGallery.text,
+EventGalleryTocPrologPlaceExploreFoyerViaGallery.button1,
+EventGalleryTocPrologProxyPlaceGalleryCoatRoom.text,
+EventGalleryTocPrologProxyPlaceGalleryCoatRoom.button1,
+EventGalleryTocPrologPlaceGalleryCoatRoom.text,
+EventGalleryTocPrologPlaceGalleryCoatRoom.button1,
+EventGalleryTocPrologProxyPlaceGalleryDvm.text,
+EventGalleryTocPrologProxyPlaceGalleryDvm.button1,
+EventGalleryTocPrologPlaceGalleryDvm.text,
+EventGalleryTocPrologPlaceGalleryDvm.button1,
+EventGalleryTocPrologProxyPlaceCoatRoom.text,
+EventGalleryTocPrologProxyPlaceCoatRoom.button1,
+EventGalleryTocPrologPlaceCoatRoom.text,
+EventGalleryTocPrologPlaceCoatRoom.button1,
+EventGalleryTocPrologProxySearchDvm.text,
+EventGalleryTocPrologProxySearchDvm.button1,
+EventGalleryTocPrologProxySearchCoatRoomEvidence.text,
+EventGalleryTocPrologProxySearchCoatRoomEvidence.button1,
+EventGalleryTocNoPagesAvailable.text,
+EventGalleryTocNoPagesAvailable.button1,
+EventGalleryReadPagePlaceGalleryTrigger.text,
+EventGalleryReadPagePlaceGalleryTrigger.button1,
+EventGalleryReadPagePlaceCoatRoomTrigger.text,
+EventGalleryReadPagePlaceCoatRoomTrigger.button1,
+EventGalleryReadPageSearchDvmTrigger.text,
+EventGalleryReadPageSearchDvmTrigger.button1,
+EventGalleryReadPageSearchCoatRoomEvidenceTrigger.text,
+EventGalleryReadPageSearchCoatRoomEvidenceTrigger.button1,
+EventHall1Start.text,
 EventHall1Start.button1,
-EventHall1Init.text,|||\nEventHall1Init @(-1,-1)\n\n\n\n\n|||
+EventHall1Init.text,
 EventHall1Init.button1,
-EventHall1FirstTimeInitializer.text,|||\nEventHall1FirstTimeInitializer @(-1,-1)\n\n\n\n\n|||
+EventHall1FirstTimeInitializer.text,
 EventHall1FirstTimeInitializer.button1,
-EventHall1TriggerPrologSelector.text,|||\nEventHall1TriggerPrologSelector @(-1,-1)\n\n\n\n\n|||
+EventHall1Expr3.text,
+EventHall1Expr3.button1,
+EventHall1Expr16.text,
+EventHall1Expr16.button1,
+EventHall1Expr15.text,
+EventHall1Expr15.button1,
+EventHall1Expr18.text,
+EventHall1Expr18.button1,
+EventHall1Expr19.text,
+EventHall1Expr19.button1,
+EventHall1Expr20.text,
+EventHall1Expr20.button1,
+EventHall1Expr21.text,
+EventHall1Expr21.button1,
+EventHall1Expr22.text,
+EventHall1Expr22.button1,
+EventHall1Expr23.text,
+EventHall1Expr23.button1,
+EventHall1Expr24.text,
+EventHall1Expr24.button1,
+EventHall1Expr25.text,
+EventHall1Expr25.button1,
+EventHall1Expr26.text,
+EventHall1Expr26.button1,
+EventHall1Expr27.text,
+EventHall1Expr27.button1,
+EventHall1Expr28.text,
+EventHall1Expr28.button1,
+EventHall1TriggerPrologSelector.text,
 EventHall1TriggerPrologSelector.button1,
-EventHall1ReadPageExploreHall1TriggeredPrologTarget.text,|||\nEventHall1ReadPageExploreHall1TriggeredPrologTarget @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageExploreHall1TriggeredPrologTarget.button1,
-EventHall1TocPrologExploreHall1.text,|||\nEventHall1TocPrologExploreHall1 @(-1,-1)\n\nThe door has a dirty push plate. When you push on it, you discover it’s locked. An investigator with the {c:QItemBrassKey} can open this door.\n\n\n|||
-EventHall1TocPrologExploreHall1.button1,{action} Explore
-EventHall1TocPrologExploreHall1.button2,{qst:cancel}
-EventHall1ReadPageExploreHall1.text,|||\nEventHall1ReadPageExploreHall1 @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageExploreHall1.button1,
-EventHall1ReadPageExploreHall1Display.text,|||\nEventHall1ReadPageExploreHall1Display @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageExploreHall1Display.button1,
-EventHall1ReadPageExploreHall1Base.text,|||\nEventHall1ReadPageExploreHall1Base @(-1,-1)\n\nWhen you open the door, the rush of cold, stale air sends a chill down your spine.\n\nYou stop for a moment and look back down at the footsteps leading to this door. You wonder how the air feels so stale if this door has been opened recently.\n\n\n|||
-EventHall1ReadPageExploreHall1Base.button1,{qst:continue}
-EventHall1ReadPageExploreHall1TiePoint.text,|||\nEventHall1ReadPageExploreHall1TiePoint @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageExploreHall1TiePoint.button1,
-EventHall1Expr1.text,|||\nEventHall1Expr1 @(25,16)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1TriggeredPrologTarget.text,
+EventHall1ReadPagePlaceHall1TriggeredPrologTarget.button1,
+EventHall1TocPrologPlaceHall1.text,|||\nThe door has a dirty push plate. When you push on it, you discover it’s locked. An investigator with the {c:QItemBrassKey} can open this door.\n|||
+EventHall1TocPrologPlaceHall1.button1,{action} Explore
+EventHall1TocPrologPlaceHall1.button2,{qst:cancel}
+EventHall1ReadPagePlaceHall1.text,
+EventHall1ReadPagePlaceHall1.button1,
+EventHall1ReadPagePlaceHall1Display.text,
+EventHall1ReadPagePlaceHall1Display.button1,
+EventHall1ReadPagePlaceHall1Base.text,|||\nWhen you open the door, the rush of cold, stale air sends a chill down your spine.\n\nYou stop for a moment and look back down at the footsteps leading to this door. You wonder how the air feels so stale if this door has been opened recently.\n|||
+EventHall1ReadPagePlaceHall1Base.button1,{qst:continue}
+EventHall1ReadPagePlaceHall1TiePoint.text,
+EventHall1ReadPagePlaceHall1TiePoint.button1,
+EventHall1Expr1.text,
 EventHall1Expr1.button1,
-EventHall1ReadPageExploreHall1AfterLet1.text,|||\nEventHall1ReadPageExploreHall1AfterLet1 @(25,2)\n\n\n\n\n|||
-EventHall1ReadPageExploreHall1AfterLet1.button1,
-EventHall1Expr2.text,|||\nEventHall1Expr2 @(26,18)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1AfterLet1.text,
+EventHall1ReadPagePlaceHall1AfterLet1.button1,
+EventHall1Expr2.text,
 EventHall1Expr2.button1,
-EventHall1ReadPageExploreHall1AfterLet2.text,|||\nEventHall1ReadPageExploreHall1AfterLet2 @(26,2)\n\n\n\n\n|||
-EventHall1ReadPageExploreHall1AfterLet2.button1,
-EventHall1ReadPageExploreHall1End.text,|||\nEventHall1ReadPageExploreHall1End @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageExploreHall1End.button1,
-EventHall1TiePoint.text,|||\nEventHall1TiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1AfterLet2.text,
+EventHall1ReadPagePlaceHall1AfterLet2.button1,
+EventHall1ReadPagePlaceHall1End.text,
+EventHall1ReadPagePlaceHall1End.button1,
+EventHall1TiePoint.text,
 EventHall1TiePoint.button1,
-EventHall1LoopBack.text,|||\nEventHall1LoopBack @(-1,-1)\n\n\n\n\n|||
+EventHall1LoopBack.text,
 EventHall1LoopBack.button1,
-EventHall1End.text,|||\nEventHall1End @(-1,-1)\n\n\n\n\n|||
+EventHall1End.text,
 EventHall1End.button1,
-EventHall1ReadPageSearchRugTriggeredPrologTarget.text,|||\nEventHall1ReadPageSearchRugTriggeredPrologTarget @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchRugTriggeredPrologTarget.text,
 EventHall1ReadPageSearchRugTriggeredPrologTarget.button1,
-EventHall1TocPrologSearchRug.text,|||\nEventHall1TocPrologSearchRug @(-1,-1)\n\nThe corner of the rug is folder over.\n\n\n|||
+EventHall1TocPrologSearchRug.text,|||\nThe corner of the rug is folded over.\n|||
 EventHall1TocPrologSearchRug.button1,{action} Search
 EventHall1TocPrologSearchRug.button2,{qst:cancel}
-EventHall1ReadPageSearchRug.text,|||\nEventHall1ReadPageSearchRug @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchRug.text,
 EventHall1ReadPageSearchRug.button1,
-EventHall1ReadPageSearchRugDisplay.text,|||\nEventHall1ReadPageSearchRugDisplay @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchRugDisplay.text,
 EventHall1ReadPageSearchRugDisplay.button1,
-EventHall1ReadPageSearchRugBase.text,|||\nEventHall1ReadPageSearchRugBase @(-1,-1)\n\nYou lean down to straighten the rug. You play with it for a bit, but have trouble getting it to stay flat–the fold has been there too long. You lift the rug a little more to try to flatten the corner. There’s a piece of paper under the rug. You pick it up to find it has a diagram of a tabletop with arcane symbols. Maybe it’s part of some ritual? You’ve heard the people in this town have some funny beliefs.\n\nGain the {c:QItemEvidenceHall1} Unique Item and 1 {clue}, then discard this Search token.\n\n\n|||
+EventHall1ReadPageSearchRugBase.text,|||\nYou lean down to straighten the rug. You play with it for a bit, but have trouble getting it to stay flat–the fold has been there too long. You lift the rug a little try again. There’s a piece of paper under the rug. You pick it up; it has a diagram of a tabletop with arcane symbols. Maybe it’s part of some ritual? You’ve heard the people in this town have some funny beliefs.\n\nGain the {c:QItemEvidenceHall1} Unique Item and 1 {clue}, then discard this Search token.\n|||
 EventHall1ReadPageSearchRugBase.button1,{qst:continue}
-EventHall1ReadPageSearchRugTiePoint.text,|||\nEventHall1ReadPageSearchRugTiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchRugTiePoint.text,
 EventHall1ReadPageSearchRugTiePoint.button1,
-EventHall1ReadPageSearchRugAfterAddRemove1.text,|||\nEventHall1ReadPageSearchRugAfterAddRemove1 @(137,2)\n\n\n\n\n|||
+EventHall1ReadPageSearchRugAfterAddRemove1.text,
 EventHall1ReadPageSearchRugAfterAddRemove1.button1,
-EventHall1ReadPageSearchRugAfterAddRemove2.text,|||\nEventHall1ReadPageSearchRugAfterAddRemove2 @(138,2)\n\n\n\n\n|||
-EventHall1ReadPageSearchRugAfterAddRemove2.button1,
-EventHall1ReadPageSearchRugAfterGoto44.text,|||\nEventHall1ReadPageSearchRugAfterGoto44 @(140,2)\n\n\n\n\n|||
-EventHall1ReadPageSearchRugAfterGoto44.button1,
-EventHall1ReadPageSearchPaintingTriggeredPrologTarget.text,|||\nEventHall1ReadPageSearchPaintingTriggeredPrologTarget @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchRugAfterGoto54.text,
+EventHall1ReadPageSearchRugAfterGoto54.button1,
+EventHall1ReadPageSearchPaintingTriggeredPrologTarget.text,
 EventHall1ReadPageSearchPaintingTriggeredPrologTarget.button1,
-EventHall1TocPrologSearchPainting.text,|||\nEventHall1TocPrologSearchPainting @(-1,-1)\n\nThe painting glows with unnatural light.\n\n\n|||
+EventHall1TocPrologSearchPainting.text,|||\nThe painting glows with unnatural light.\n|||
 EventHall1TocPrologSearchPainting.button1,{action} Search
 EventHall1TocPrologSearchPainting.button2,{qst:cancel}
-EventHall1ReadPageSearchPainting.text,|||\nEventHall1ReadPageSearchPainting @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPainting.text,
 EventHall1ReadPageSearchPainting.button1,
-EventHall1ReadPageSearchPaintingDisplay.text,|||\nEventHall1ReadPageSearchPaintingDisplay @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPaintingBeforeAddRemove1.text,
+EventHall1ReadPageSearchPaintingBeforeAddRemove1.button1,
+EventHall1ReadPageSearchPaintingDisplay.text,
 EventHall1ReadPageSearchPaintingDisplay.button1,
-EventHall1ReadPageSearchPaintingBase.text,|||\nEventHall1ReadPageSearchPaintingBase @(-1,-1)\n\nThe painting is a girl, maybe 12 or 13 years old. The work is stunning and the girl looks so lifelike, it’s as if she could just step through the frame. She’s wearing a white dress and looks serious.\n\nWhen you blink, you think the painting has moved but you know that cannot happen. You also notice that there is no dust anywhere on the painting or the frame. You feel like there’s something else you’ve missed, but you dismiss it and turn away. Gain 1 {clue}, then remove this Search token.\n\n\n|||
+EventHall1ReadPageSearchPaintingBase.text,|||\nThe painting is of a girl. The work is stunning and the girl looks so lifelike, it’s as if she could just step through the frame. She’s wearing a white dress and looks serious.\n\nWhen you blink, you think the painting has moved but you know that cannot happen. You also notice that there is no dust anywhere on the painting or the frame. You feel like there’s something else you’ve missed, but you dismiss it and turn away. Gain 1 {clue}, then discard this Search token.\n|||
 EventHall1ReadPageSearchPaintingBase.button1,{qst:continue}
-EventHall1ReadPageSearchPaintingTiePoint.text,|||\nEventHall1ReadPageSearchPaintingTiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPaintingTiePoint.text,
 EventHall1ReadPageSearchPaintingTiePoint.button1,
-EventHall1ReadPageSearchPaintingAfterAddRemove1.text,|||\nEventHall1ReadPageSearchPaintingAfterAddRemove1 @(162,2)\n\n\n\n\n|||
-EventHall1ReadPageSearchPaintingAfterAddRemove1.button1,
-EventHall1ReadPageSearchPaintingEnd.text,|||\nEventHall1ReadPageSearchPaintingEnd @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageSearchPaintingEnd.button1,
-EventHall1ReadPageTalkToSarah2TriggeredPrologTarget.text,|||\nEventHall1ReadPageTalkToSarah2TriggeredPrologTarget @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchPaintingAfterGoto55.text,
+EventHall1ReadPageSearchPaintingAfterGoto55.button1,
+EventHall1ReadPageSearchPainting2.text,
+EventHall1ReadPageSearchPainting2.button1,
+EventHall1ReadPageSearchPainting2BeforeAddRemove1.text,
+EventHall1ReadPageSearchPainting2BeforeAddRemove1.button1,
+EventHall1ReadPageSearchPainting2Display.text,
+EventHall1ReadPageSearchPainting2Display.button1,
+EventHall1ReadPageSearchPainting2Base.text,|||\nAs you turn around, you notice two shadows on the wall: yours and... you quickly look back at the painting. The girl is not there. Startled, you turn to run back; move 1 space toward the {c:TileDiningRoom}. You are brought up short when the girl from the painting is standing in front of you.\n\nPlace the Green Girl token as indicated. Shocked, you take 1 Horror ({will} negates).\n|||
+EventHall1ReadPageSearchPainting2Base.button1,{qst:continue}
+EventHall1ReadPageSearchPainting2TiePoint.text,
+EventHall1ReadPageSearchPainting2TiePoint.button1,
+EventHall1ReadPageSearchPainting2AfterGoto56.text,
+EventHall1ReadPageSearchPainting2AfterGoto56.button1,
+EventHall1ReadPageTalkToSarah2TriggeredPrologTarget.text,
 EventHall1ReadPageTalkToSarah2TriggeredPrologTarget.button1,
-EventHall1TocPrologTalkToSarah2.text,|||\nEventHall1TocPrologTalkToSarah2 @(-1,-1)\n\nShe looks at you expectantly. She looks like she wants to say something, but is holding back. She still looks serious, but also concerned and maybe a little afraid. You notice that she seems to be glowing. And maybe a bit transparent.\n\nShe will only speak with {c:EventChosenInvestigator}.\n\n\n|||
+EventHall1TocPrologTalkToSarah2.text,|||\nShe looks at you like she wants to say something, but is holding back. She still looks serious, but also concerned and maybe afraid. You notice that she seems to be glowing. And maybe a bit transparent.\n\nShe will only speak with {c:EventChosenInvestigator}.\n|||
 EventHall1TocPrologTalkToSarah2.button1,{action} Talk to her
 EventHall1TocPrologTalkToSarah2.button2,{qst:cancel}
-EventHall1ReadPageTalkToSarah2.text,|||\nEventHall1ReadPageTalkToSarah2 @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2.text,
 EventHall1ReadPageTalkToSarah2.button1,
-EventHall1ReadPageTalkToSarah2Display.text,|||\nEventHall1ReadPageTalkToSarah2Display @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2Display.text,
 EventHall1ReadPageTalkToSarah2Display.button1,
-EventHall1ReadPageTalkToSarah2Base.text,|||\nEventHall1ReadPageTalkToSarah2Base @(-1,-1)\n\nShe brightens up. “It’s good to see you again. I thought you had forgotten me after that night. I’ve missed you.”\n\nYou are surprised at what she says. <i>Who is this girl? Why does she think she knows me?</i>\n\nThe girl walks over and turns to face you. She looks up at you expectantly.\n\nMove the Green Girl token to your investigator card. She will follow you to whatever ends you meet in this house.\n\n\n|||
+EventHall1ReadPageTalkToSarah2Base.text,|||\nShe brightens up. “It’s good to see you again. I thought you had forgotten me after that night. I’ve missed you.”\n\nYou are surprised at what she says. <i>Who is this girl? Why does she think she knows me?</i>\n\nThe girl walks over and turns to face you. She looks up at you expectantly.\n\nMove the Green Girl token to your investigator card. She will follow you to whatever ends you meet in this house.\n|||
 EventHall1ReadPageTalkToSarah2Base.button1,{qst:continue}
-EventHall1ReadPageTalkToSarah2TiePoint.text,|||\nEventHall1ReadPageTalkToSarah2TiePoint @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2TiePoint.text,
 EventHall1ReadPageTalkToSarah2TiePoint.button1,
-EventHall1ReadPageTalkToSarah2AfterAddRemove1.text,|||\nEventHall1ReadPageTalkToSarah2AfterAddRemove1 @(218,2)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2AfterAddRemove1.text,
 EventHall1ReadPageTalkToSarah2AfterAddRemove1.button1,
-EventHall1Expr10.text,|||\nEventHall1Expr10 @(219,15)\n\n\n\n\n|||
-EventHall1Expr10.button1,
-EventHall1ReadPageTalkToSarah2AfterLet2.text,|||\nEventHall1ReadPageTalkToSarah2AfterLet2 @(219,2)\n\n\n\n\n|||
+EventHall1Expr14.text,
+EventHall1Expr14.button1,
+EventHall1ReadPageTalkToSarah2AfterLet2.text,
 EventHall1ReadPageTalkToSarah2AfterLet2.button1,
-EventHall1ReadPageTalkToSarah2AfterGoto45.text,|||\nEventHall1ReadPageTalkToSarah2AfterGoto45 @(220,2)\n\n\n\n\n|||
-EventHall1ReadPageTalkToSarah2AfterGoto45.button1,
-EventHall1TriggerSelector.text,|||\nEventHall1TriggerSelector @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageTalkToSarah2AfterGoto57.text,
+EventHall1ReadPageTalkToSarah2AfterGoto57.button1,
+EventHall1TriggerSelector.text,
 EventHall1TriggerSelector.button1,
-EventHall1ReadPageExploreHall1XferIfTriggered.text,|||\nEventHall1ReadPageExploreHall1XferIfTriggered @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageExploreHall1XferIfTriggered.button1,
-EventHall1ReadPagePlaceHall1XferIfTriggered.text,|||\nEventHall1ReadPagePlaceHall1XferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPagePlaceHall1XferIfTriggered.text,
 EventHall1ReadPagePlaceHall1XferIfTriggered.button1,
-EventHall1ReadPagePlaceHall1.text,|||\nEventHall1ReadPagePlaceHall1 @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1.button1,
-EventHall1ReadPagePlaceHall1Display.text,|||\nEventHall1ReadPagePlaceHall1Display @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1Display.button1,
-EventHall1ReadPagePlaceHall1Base.text,|||\nEventHall1ReadPagePlaceHall1Base @(-1,-1)\n\nYou look through the doorway to find a hall. It is clear that it was intended for the servants: plain and dark. Place the {c:TileHall1} tile, a door, and a wall as indicated.\n\nMove one space space into the hall.\n\n\n|||
-EventHall1ReadPagePlaceHall1Base.button1,{qst:continue}
-EventHall1ReadPagePlaceHall1TiePoint.text,|||\nEventHall1ReadPagePlaceHall1TiePoint @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1TiePoint.button1,
-EventHall1ReadPagePlaceHall1AfterAddRemove1.text,|||\nEventHall1ReadPagePlaceHall1AfterAddRemove1 @(38,2)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1AfterAddRemove1.button1,
-EventHall1ReadPagePlaceHall1AfterAddRemove2.text,|||\nEventHall1ReadPagePlaceHall1AfterAddRemove2 @(40,2)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1AfterAddRemove2.button1,
-EventHall1ReadPagePlaceHall1End.text,|||\nEventHall1ReadPagePlaceHall1End @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1End.button1,
-EventHall1ReadPagePlaceHall1GalleryXferIfTriggered.text,|||\nEventHall1ReadPagePlaceHall1GalleryXferIfTriggered @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1GalleryXferIfTriggered.button1,
-EventHall1ReadPagePlaceHall1Gallery.text,|||\nEventHall1ReadPagePlaceHall1Gallery @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1Gallery.button1,
-EventHall1ReadPagePlaceHall1GalleryBeforeAddRemove1.text,|||\nEventHall1ReadPagePlaceHall1GalleryBeforeAddRemove1 @(44,2)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1GalleryBeforeAddRemove1.button1,
-EventHall1ReadPagePlaceHall1GalleryDisplay.text,|||\nEventHall1ReadPagePlaceHall1GalleryDisplay @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1GalleryDisplay.button1,
-EventHall1ReadPagePlaceHall1GalleryBase.text,|||\nEventHall1ReadPagePlaceHall1GalleryBase @(-1,-1)\n\nTo your immediate right is a door. Place an Explore token as indicated.\n\n\n|||
-EventHall1ReadPagePlaceHall1GalleryBase.button1,{qst:continue}
-EventHall1ReadPagePlaceHall1GalleryTiePoint.text,|||\nEventHall1ReadPagePlaceHall1GalleryTiePoint @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1GalleryTiePoint.button1,
-EventHall1ReadPagePlaceHall1GalleryEnd.text,|||\nEventHall1ReadPagePlaceHall1GalleryEnd @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1GalleryEnd.button1,
-EventHall1ReadPagePlaceHall1PaintingXferIfTriggered.text,|||\nEventHall1ReadPagePlaceHall1PaintingXferIfTriggered @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1PaintingXferIfTriggered.button1,
-EventHall1ReadPagePlaceHall1Painting.text,|||\nEventHall1ReadPagePlaceHall1Painting @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1Painting.button1,
-EventHall1ReadPagePlaceHall1PaintingBeforeAddRemove1.text,|||\nEventHall1ReadPagePlaceHall1PaintingBeforeAddRemove1 @(53,2)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1PaintingBeforeAddRemove1.button1,
-EventHall1ReadPagePlaceHall1PaintingDisplay.text,|||\nEventHall1ReadPagePlaceHall1PaintingDisplay @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1PaintingDisplay.button1,
-EventHall1ReadPagePlaceHall1PaintingBase.text,|||\nEventHall1ReadPagePlaceHall1PaintingBase @(-1,-1)\n\nOn the left, a painting glows with unnatural light. You can almost feel it calling to you. You shake it off because paintings don’t have power. Place a Search token as indicated.\n\nAs you look away, you catch something moving in your peripheral vision. You glance back and the painting is still lightly glowing, something that suddenly seems more troubling.\n\n\n|||
-EventHall1ReadPagePlaceHall1PaintingBase.button1,{qst:continue}
-EventHall1ReadPagePlaceHall1PaintingTiePoint.text,|||\nEventHall1ReadPagePlaceHall1PaintingTiePoint @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1PaintingTiePoint.button1,
-EventHall1ReadPagePlaceHall1PaintingEnd.text,|||\nEventHall1ReadPagePlaceHall1PaintingEnd @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1PaintingEnd.button1,
-EventHall1ReadPagePlaceHall1EvidenceXferIfTriggered.text,|||\nEventHall1ReadPagePlaceHall1EvidenceXferIfTriggered @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1EvidenceXferIfTriggered.button1,
-EventHall1ReadPagePlaceHall1Evidence.text,|||\nEventHall1ReadPagePlaceHall1Evidence @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1Evidence.button1,
-EventHall1ReadPagePlaceHall1EvidenceBeforeAddRemove1.text,|||\nEventHall1ReadPagePlaceHall1EvidenceBeforeAddRemove1 @(68,2)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1EvidenceBeforeAddRemove1.button1,
-EventHall1ReadPagePlaceHall1EvidenceDisplay.text,|||\nEventHall1ReadPagePlaceHall1EvidenceDisplay @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1EvidenceDisplay.button1,
-EventHall1ReadPagePlaceHall1EvidenceBase.text,|||\nEventHall1ReadPagePlaceHall1EvidenceBase @(-1,-1)\n\nYou look down. The rug on the floor is old and beautiful, if dirty and poorly cared for. One corner is folded up and looks like it has been that way for years. You should probably put it back so you don’t trip over it.\n\nPlace a Search token as indicated.\n\n\n|||
-EventHall1ReadPagePlaceHall1EvidenceBase.button1,{qst:continue}
-EventHall1ReadPagePlaceHall1EvidenceTiePoint.text,|||\nEventHall1ReadPagePlaceHall1EvidenceTiePoint @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1EvidenceTiePoint.button1,
-EventHall1ReadPagePlaceHall1EvidenceEnd.text,|||\nEventHall1ReadPagePlaceHall1EvidenceEnd @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1EvidenceEnd.button1,
-EventHall1ReadPagePlaceHall1SightXferIfTriggered.text,|||\nEventHall1ReadPagePlaceHall1SightXferIfTriggered @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1SightXferIfTriggered.button1,
-EventHall1ReadPagePlaceHall1Sight.text,|||\nEventHall1ReadPagePlaceHall1Sight @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1Sight.button1,
-EventHall1ReadPagePlaceHall1SightBeforeAddRemove1.text,|||\nEventHall1ReadPagePlaceHall1SightBeforeAddRemove1 @(81,2)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1SightBeforeAddRemove1.button1,
-EventHall1ReadPagePlaceHall1SightDisplay.text,|||\nEventHall1ReadPagePlaceHall1SightDisplay @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1SightDisplay.button1,
-EventHall1ReadPagePlaceHall1SightBase.text,|||\nEventHall1ReadPagePlaceHall1SightBase @(-1,-1)\n\nThe hall stretches forward. Place a Sight token as indicated.\n\nAs you look around, something doesn’t feel right. You feel like you are being watched.\n\n\n|||
-EventHall1ReadPagePlaceHall1SightBase.button1,{qst:continue}
-EventHall1ReadPagePlaceHall1SightTiePoint.text,|||\nEventHall1ReadPagePlaceHall1SightTiePoint @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1SightTiePoint.button1,
-EventHall1Expr3.text,|||\nEventHall1Expr3 @(90,5)\n\n\n\n\n|||
-EventHall1Expr3.button1,
-EventHall1ReadPagePlaceHall1SightAfterTrigger1.text,|||\nEventHall1ReadPagePlaceHall1SightAfterTrigger1 @(90,23)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1SightAfterTrigger1.button1,
-EventHall1Expr4.text,|||\nEventHall1Expr4 @(91,5)\n\n\n\n\n|||
+EventHall1ReadPagePlaceJournalXferIfTriggered.text,
+EventHall1ReadPagePlaceJournalXferIfTriggered.button1,
+EventHall1ReadPagePlaceJournal.text,
+EventHall1ReadPagePlaceJournal.button1,
+EventHall1ReadPagePlaceJournalDisplay.text,
+EventHall1ReadPagePlaceJournalDisplay.button1,
+EventHall1ReadPagePlaceJournalBase.text,|||\nWhile you are looking at the prints, the book on the floor gets your attention, so you reach over to pick it up. Gain the {c:QItemJournal} unique item.\n\nYou look at the book you picked up: small, thin, and leather-bound. You flip through the pages: it’s a journal. The first entry was scrawled last Sunday.\n\nMaybe you should hold onto it to give back to Benjamin when you see him later today. And maybe take a quick look yourself.\n\nDiscard this Search token.\n\nAn investigator holding the {c:QItemJournal} can interact with it in the app.\n|||
+EventHall1ReadPagePlaceJournalBase.button1,{qst:continue}
+EventHall1ReadPagePlaceJournalTiePoint.text,
+EventHall1ReadPagePlaceJournalTiePoint.button1,
+EventHall1Expr4.text,
 EventHall1Expr4.button1,
-EventHall1ReadPagePlaceHall1SightAfterGoto42.text,|||\nEventHall1ReadPagePlaceHall1SightAfterGoto42 @(91,23)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1SightAfterGoto42.button1,
-EventHall1ReadPagePlaceHall1SightEnd.text,|||\nEventHall1ReadPagePlaceHall1SightEnd @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1SightEnd.button1,
-EventHall1ReadPagePlaceHall1JournalXferIfTriggered.text,|||\nEventHall1ReadPagePlaceHall1JournalXferIfTriggered @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1JournalXferIfTriggered.button1,
-EventHall1ReadPagePlaceHall1Journal.text,|||\nEventHall1ReadPagePlaceHall1Journal @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1Journal.button1,
-EventHall1ReadPagePlaceHall1JournalDisplay.text,|||\nEventHall1ReadPagePlaceHall1JournalDisplay @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1JournalDisplay.button1,
-EventHall1ReadPagePlaceHall1JournalBase.text,|||\nEventHall1ReadPagePlaceHall1JournalBase @(-1,-1)\n\n<i>The book on the floor,</i> you remind yourself. You turn around, see the book, and bend down to pick it up. Gain the {c:QItemJournal} unique item.\n\nYou look at the book you picked up: small, thin, and leather-bound. You flip through the pages: it’s a journal. The first entry was scrawled last Sunday.\n\nMaybe you should hold onto it to give back to Benjamin when you see him later today. And maybe take a quick look yourself.\n\nGain the {c:QItemJournal} Unique Item, then remove its Search token. An investigator holding the {c:QItemJournal} can interact with it in the app.\n\n\n|||
-EventHall1ReadPagePlaceHall1JournalBase.button1,{qst:continue}
-EventHall1ReadPagePlaceHall1JournalTiePoint.text,|||\nEventHall1ReadPagePlaceHall1JournalTiePoint @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1JournalTiePoint.button1,
-EventHall1Expr5.text,|||\nEventHall1Expr5 @(112,17)\n\n\n\n\n|||
+EventHall1ReadPagePlaceJournalAfterLet1.text,
+EventHall1ReadPagePlaceJournalAfterLet1.button1,
+EventHall1Expr5.text,
 EventHall1Expr5.button1,
-EventHall1ReadPagePlaceHall1JournalAfterLet1.text,|||\nEventHall1ReadPagePlaceHall1JournalAfterLet1 @(112,2)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1JournalAfterLet1.button1,
-EventHall1ReadPagePlaceHall1JournalAfterGoto43.text,|||\nEventHall1ReadPagePlaceHall1JournalAfterGoto43 @(114,2)\n\n\n\n\n|||
-EventHall1ReadPagePlaceHall1JournalAfterGoto43.button1,
-EventHall1ReadPageSearchRugXferIfTriggered.text,|||\nEventHall1ReadPageSearchRugXferIfTriggered @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageSearchRugXferIfTriggered.button1,
-EventHall1ReadPageSearchPaintingXferIfTriggered.text,|||\nEventHall1ReadPageSearchPaintingXferIfTriggered @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageSearchPaintingXferIfTriggered.button1,
-EventHall1ReadPageSearchPainting2XferIfTriggered.text,|||\nEventHall1ReadPageSearchPainting2XferIfTriggered @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageSearchPainting2XferIfTriggered.button1,
-EventHall1ReadPageSearchPainting2.text,|||\nEventHall1ReadPageSearchPainting2 @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageSearchPainting2.button1,
-EventHall1ReadPageSearchPainting2Display.text,|||\nEventHall1ReadPageSearchPainting2Display @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageSearchPainting2Display.button1,
-EventHall1ReadPageSearchPainting2Base.text,|||\nEventHall1ReadPageSearchPainting2Base @(-1,-1)\n\nAs you turn around, you notice two shadows on the wall, yours and... you quickly look back at the painting. The girl is not there. Startled, you turn to run back to the {c:TileDiningRoom} and are brought up short when the girl from the painting is standing in front of you.\n\nPlace the Green Girl token as indicated. Shocked, you take 1 Horror ({will} negates).\n\n\n|||
-EventHall1ReadPageSearchPainting2Base.button1,{qst:continue}
-EventHall1ReadPageSearchPainting2TiePoint.text,|||\nEventHall1ReadPageSearchPainting2TiePoint @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageSearchPainting2TiePoint.button1,
-EventHall1ReadPageSearchPainting2AfterAddRemove1.text,|||\nEventHall1ReadPageSearchPainting2AfterAddRemove1 @(177,2)\n\n\n\n\n|||
-EventHall1ReadPageSearchPainting2AfterAddRemove1.button1,
-EventHall1ReadPageSearchPainting2End.text,|||\nEventHall1ReadPageSearchPainting2End @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageSearchPainting2End.button1,
-EventHall1ReadPageTalkToSarahXferIfTriggered.text,|||\nEventHall1ReadPageTalkToSarahXferIfTriggered @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageTalkToSarahXferIfTriggered.button1,
-EventHall1ReadPageTalkToSarah.text,|||\nEventHall1ReadPageTalkToSarah @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageTalkToSarah.button1,
-EventHall1ReadPageTalkToSarahDisplay.text,|||\nEventHall1ReadPageTalkToSarahDisplay @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageTalkToSarahDisplay.button1,
-EventHall1ReadPageTalkToSarahBase.text,|||\nEventHall1ReadPageTalkToSarahBase @(-1,-1)\n\nShe is a pretty girl in the the first blush of youth–maybe 11 or 12 years old. She has curly hair with ribbons and a bright white dress that stands out in the dingy hallway.\n\n\n|||
-EventHall1ReadPageTalkToSarahBase.button1,{qst:continue}
-EventHall1ReadPageTalkToSarahTiePoint.text,|||\nEventHall1ReadPageTalkToSarahTiePoint @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageTalkToSarahTiePoint.button1,
-EventHall1ReadPageTalkToSarahEnd.text,|||\nEventHall1ReadPageTalkToSarahEnd @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageTalkToSarahEnd.button1,
-EventHall1ReadPageTalkToSarah2XferIfTriggered.text,|||\nEventHall1ReadPageTalkToSarah2XferIfTriggered @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageTalkToSarah2XferIfTriggered.button1,
-EventHall1Toc.text,|||\nEventHall1Toc @(-1,-1)\n\n\n\n\n|||
-EventHall1Toc.button1,
-EventHall1TocSelector.text,|||\nEventHall1TocSelector @(-1,-1)\n\n\n\n\n|||
-EventHall1TocSelector.button1,
-EventHall1TocPrologProxyExploreHall1.text,|||\nEventHall1TocPrologProxyExploreHall1 @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologProxyExploreHall1.button1,
-EventHall1TocPrologProxyPlaceHall1.text,|||\nEventHall1TocPrologProxyPlaceHall1 @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologProxyPlaceHall1.button1,
-EventHall1TocPrologPlaceHall1.text,|||\nEventHall1TocPrologPlaceHall1 @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologPlaceHall1.button1,
-EventHall1TocPrologProxyPlaceHall1Gallery.text,|||\nEventHall1TocPrologProxyPlaceHall1Gallery @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologProxyPlaceHall1Gallery.button1,
-EventHall1TocPrologPlaceHall1Gallery.text,|||\nEventHall1TocPrologPlaceHall1Gallery @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologPlaceHall1Gallery.button1,
-EventHall1TocPrologProxyPlaceHall1Painting.text,|||\nEventHall1TocPrologProxyPlaceHall1Painting @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologProxyPlaceHall1Painting.button1,
-EventHall1TocPrologPlaceHall1Painting.text,|||\nEventHall1TocPrologPlaceHall1Painting @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologPlaceHall1Painting.button1,
-EventHall1TocPrologProxyPlaceHall1Evidence.text,|||\nEventHall1TocPrologProxyPlaceHall1Evidence @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologProxyPlaceHall1Evidence.button1,
-EventHall1TocPrologPlaceHall1Evidence.text,|||\nEventHall1TocPrologPlaceHall1Evidence @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologPlaceHall1Evidence.button1,
-EventHall1TocPrologProxyPlaceHall1Sight.text,|||\nEventHall1TocPrologProxyPlaceHall1Sight @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologProxyPlaceHall1Sight.button1,
-EventHall1TocPrologPlaceHall1Sight.text,|||\nEventHall1TocPrologPlaceHall1Sight @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologPlaceHall1Sight.button1,
-EventHall1TocPrologProxyPlaceHall1Journal.text,|||\nEventHall1TocPrologProxyPlaceHall1Journal @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologProxyPlaceHall1Journal.button1,
-EventHall1TocPrologPlaceHall1Journal.text,|||\nEventHall1TocPrologPlaceHall1Journal @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologPlaceHall1Journal.button1,
-EventHall1TocPrologProxySearchRug.text,|||\nEventHall1TocPrologProxySearchRug @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologProxySearchRug.button1,
-EventHall1TocPrologProxySearchPainting.text,|||\nEventHall1TocPrologProxySearchPainting @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologProxySearchPainting.button1,
-EventHall1TocPrologProxySearchPainting2.text,|||\nEventHall1TocPrologProxySearchPainting2 @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologProxySearchPainting2.button1,
-EventHall1TocPrologSearchPainting2.text,|||\nEventHall1TocPrologSearchPainting2 @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologSearchPainting2.button1,
-EventHall1TocPrologProxyTalkToSarah.text,|||\nEventHall1TocPrologProxyTalkToSarah @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologProxyTalkToSarah.button1,
-EventHall1TocPrologTalkToSarah.text,|||\nEventHall1TocPrologTalkToSarah @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologTalkToSarah.button1,
-EventHall1TocPrologProxyTalkToSarah2.text,|||\nEventHall1TocPrologProxyTalkToSarah2 @(-1,-1)\n\n\n\n\n|||
-EventHall1TocPrologProxyTalkToSarah2.button1,
-EventHall1TocNoPagesAvailable.text,|||\nEventHall1TocNoPagesAvailable @(-1,-1)\n\n\n\n\n|||
-EventHall1TocNoPagesAvailable.button1,
-EventHall1ReadPageExploreHall1Trigger.text,|||\nEventHall1ReadPageExploreHall1Trigger @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageExploreHall1Trigger.button1,
-EventHall1ReadPageSearchRugTrigger.text,|||\nEventHall1ReadPageSearchRugTrigger @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageSearchRugTrigger.button1,
-EventHall1ReadPageSearchPaintingTrigger.text,|||\nEventHall1ReadPageSearchPaintingTrigger @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageSearchPaintingTrigger.button1,
-EventHall1ReadPageTalkToSarahTrigger.text,|||\nEventHall1ReadPageTalkToSarahTrigger @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageTalkToSarahTrigger.button1,
-EventHall1Expr6.text,|||\nEventHall1Expr6 @(182,33)\n\n\n\n\n|||
+EventHall1ReadPagePlaceJournalAfterLet2.text,
+EventHall1ReadPagePlaceJournalAfterLet2.button1,
+EventHall1ReadPagePlaceJournalEnd.text,
+EventHall1ReadPagePlaceJournalEnd.button1,
+EventHall1ReadPagePlaceHall1TileXferIfTriggered.text,
+EventHall1ReadPagePlaceHall1TileXferIfTriggered.button1,
+EventHall1ReadPagePlaceHall1Tile.text,
+EventHall1ReadPagePlaceHall1Tile.button1,
+EventHall1ReadPagePlaceHall1TileBeforeAddRemove1.text,
+EventHall1ReadPagePlaceHall1TileBeforeAddRemove1.button1,
+EventHall1ReadPagePlaceHall1TileBeforeAddRemove2.text,
+EventHall1ReadPagePlaceHall1TileBeforeAddRemove2.button1,
+EventHall1ReadPagePlaceHall1TileDisplay.text,
+EventHall1ReadPagePlaceHall1TileDisplay.button1,
+EventHall1ReadPagePlaceHall1TileBase.text,|||\nYou look through the doorway to find a hall. It is clear that it was intended for the servants: plain and dark. Place the {c:TileHall1} tile, a door, and a wall as indicated.\n\nMove one space space into the hall.\n|||
+EventHall1ReadPagePlaceHall1TileBase.button1,{qst:continue}
+EventHall1ReadPagePlaceHall1TileTiePoint.text,
+EventHall1ReadPagePlaceHall1TileTiePoint.button1,
+EventHall1ReadPagePlaceHall1TileEnd.text,
+EventHall1ReadPagePlaceHall1TileEnd.button1,
+EventHall1ReadPagePlaceExploreGalleryXferIfTriggered.text,
+EventHall1ReadPagePlaceExploreGalleryXferIfTriggered.button1,
+EventHall1ReadPagePlaceExploreGallery.text,
+EventHall1ReadPagePlaceExploreGallery.button1,
+EventHall1ReadPagePlaceExploreGalleryBeforeAddRemove1.text,
+EventHall1ReadPagePlaceExploreGalleryBeforeAddRemove1.button1,
+EventHall1ReadPagePlaceExploreGalleryDisplay.text,
+EventHall1ReadPagePlaceExploreGalleryDisplay.button1,
+EventHall1ReadPagePlaceExploreGalleryBase.text,|||\nThere is a door to your immediate right. Place an Explore token as indicated.\n|||
+EventHall1ReadPagePlaceExploreGalleryBase.button1,{qst:continue}
+EventHall1ReadPagePlaceExploreGalleryTiePoint.text,
+EventHall1ReadPagePlaceExploreGalleryTiePoint.button1,
+EventHall1ReadPagePlaceExploreGalleryEnd.text,
+EventHall1ReadPagePlaceExploreGalleryEnd.button1,
+EventHall1ReadPagePlaceHall1EvidenceXferIfTriggered.text,
+EventHall1ReadPagePlaceHall1EvidenceXferIfTriggered.button1,
+EventHall1ReadPagePlaceHall1Evidence.text,
+EventHall1ReadPagePlaceHall1Evidence.button1,
+EventHall1ReadPagePlaceHall1EvidenceBeforeAddRemove1.text,
+EventHall1ReadPagePlaceHall1EvidenceBeforeAddRemove1.button1,
+EventHall1ReadPagePlaceHall1EvidenceDisplay.text,
+EventHall1ReadPagePlaceHall1EvidenceDisplay.button1,
+EventHall1ReadPagePlaceHall1EvidenceBase.text,|||\nYou look down. The rug on the floor is old and beautiful, if dirty and poorly cared for. One corner is folded up and looks like it has been that way for years. You should probably put it back so you don’t trip over it.\n\nPlace a Search token as indicated.\n|||
+EventHall1ReadPagePlaceHall1EvidenceBase.button1,{qst:continue}
+EventHall1ReadPagePlaceHall1EvidenceTiePoint.text,
+EventHall1ReadPagePlaceHall1EvidenceTiePoint.button1,
+EventHall1Expr6.text,
 EventHall1Expr6.button1,
-EventHall1Expr7.text,|||\nEventHall1Expr7 @(182,33)\n\n\n\n\n|||
-EventHall1Expr7.button1,
-EventHall1ReadPageTalkToSarahTriggerFail.text,|||\nEventHall1ReadPageTalkToSarahTriggerFail @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageTalkToSarahTriggerFail.button1,
-EventHall1Expr8.text,|||\nEventHall1Expr8 @(182,33)\n\n\n\n\n|||
+EventHall1Expr8.text,
 EventHall1Expr8.button1,
-EventHall1ReadPageTalkToSarah2Trigger.text,|||\nEventHall1ReadPageTalkToSarah2Trigger @(-1,-1)\n\n\n\n\n|||
-EventHall1ReadPageTalkToSarah2Trigger.button1,
-EventHall1Expr9.text,|||\nEventHall1Expr9 @(192,33)\n\n\n\n\n|||
+EventHall1Expr7.text,
+EventHall1Expr7.button1,
+EventHall1ReadPagePlaceHall1EvidenceAfterTrigger1.text,
+EventHall1ReadPagePlaceHall1EvidenceAfterTrigger1.button1,
+EventHall1ReadPagePlaceHall1EvidenceAfterGoto53.text,
+EventHall1ReadPagePlaceHall1EvidenceAfterGoto53.button1,
+EventHall1Expr9.text,
 EventHall1Expr9.button1,
-EventHall1ReadPageTalkToSarah2TriggerFail.text,|||\nEventHall1ReadPageTalkToSarah2TriggerFail @(-1,-1)\n\n\n\n\n|||
+EventHall1ReadPageSearchRugXferIfTriggered.text,
+EventHall1ReadPageSearchRugXferIfTriggered.button1,
+EventHall1ReadPageSearchPaintingXferIfTriggered.text,
+EventHall1ReadPageSearchPaintingXferIfTriggered.button1,
+EventHall1ReadPageSearchPainting2XferIfTriggered.text,
+EventHall1ReadPageSearchPainting2XferIfTriggered.button1,
+EventHall1ReadPageTalkToSarahXferIfTriggered.text,
+EventHall1ReadPageTalkToSarahXferIfTriggered.button1,
+EventHall1ReadPageTalkToSarah.text,
+EventHall1ReadPageTalkToSarah.button1,
+EventHall1ReadPageTalkToSarahDisplay.text,
+EventHall1ReadPageTalkToSarahDisplay.button1,
+EventHall1ReadPageTalkToSarahBase.text,|||\nShe is a pretty girl in the the first blush of youth–maybe 11 or 12 years old. She has curly hair with emerald green ribbons and a bright white dress that stands out in the dingy hallway.\n|||
+EventHall1ReadPageTalkToSarahBase.button1,{qst:continue}
+EventHall1ReadPageTalkToSarahTiePoint.text,
+EventHall1ReadPageTalkToSarahTiePoint.button1,
+EventHall1ReadPageTalkToSarahEnd.text,
+EventHall1ReadPageTalkToSarahEnd.button1,
+EventHall1ReadPageTalkToSarah2XferIfTriggered.text,
+EventHall1ReadPageTalkToSarah2XferIfTriggered.button1,
+EventHall1Toc.text,
+EventHall1Toc.button1,
+EventHall1TocSelector.text,
+EventHall1TocSelector.button1,
+EventHall1TocPrologProxyPlaceHall1.text,
+EventHall1TocPrologProxyPlaceHall1.button1,
+EventHall1TocPrologProxyPlaceJournal.text,
+EventHall1TocPrologProxyPlaceJournal.button1,
+EventHall1TocPrologPlaceJournal.text,
+EventHall1TocPrologPlaceJournal.button1,
+EventHall1TocPrologProxyPlaceHall1Tile.text,
+EventHall1TocPrologProxyPlaceHall1Tile.button1,
+EventHall1TocPrologPlaceHall1Tile.text,
+EventHall1TocPrologPlaceHall1Tile.button1,
+EventHall1TocPrologProxyPlaceExploreGallery.text,
+EventHall1TocPrologProxyPlaceExploreGallery.button1,
+EventHall1TocPrologPlaceExploreGallery.text,
+EventHall1TocPrologPlaceExploreGallery.button1,
+EventHall1TocPrologProxyPlaceHall1Evidence.text,
+EventHall1TocPrologProxyPlaceHall1Evidence.button1,
+EventHall1TocPrologPlaceHall1Evidence.text,
+EventHall1TocPrologPlaceHall1Evidence.button1,
+EventHall1TocPrologProxySearchRug.text,
+EventHall1TocPrologProxySearchRug.button1,
+EventHall1TocPrologProxySearchPainting.text,
+EventHall1TocPrologProxySearchPainting.button1,
+EventHall1TocPrologProxySearchPainting2.text,
+EventHall1TocPrologProxySearchPainting2.button1,
+EventHall1TocPrologSearchPainting2.text,
+EventHall1TocPrologSearchPainting2.button1,
+EventHall1TocPrologProxyTalkToSarah.text,
+EventHall1TocPrologProxyTalkToSarah.button1,
+EventHall1TocPrologTalkToSarah.text,
+EventHall1TocPrologTalkToSarah.button1,
+EventHall1TocPrologProxyTalkToSarah2.text,
+EventHall1TocPrologProxyTalkToSarah2.button1,
+EventHall1TocNoPagesAvailable.text,
+EventHall1TocNoPagesAvailable.button1,
+EventHall1Expr17.text,
+EventHall1Expr17.button1,
+EventHall1ReadPagePlaceHall1Trigger.text,
+EventHall1ReadPagePlaceHall1Trigger.button1,
+EventHall1ReadPageSearchRugTrigger.text,
+EventHall1ReadPageSearchRugTrigger.button1,
+EventHall1ReadPageSearchPaintingTrigger.text,
+EventHall1ReadPageSearchPaintingTrigger.button1,
+EventHall1ReadPageTalkToSarahTrigger.text,
+EventHall1ReadPageTalkToSarahTrigger.button1,
+EventHall1Expr10.text,
+EventHall1Expr10.button1,
+EventHall1Expr11.text,
+EventHall1Expr11.button1,
+EventHall1ReadPageTalkToSarahTriggerFail.text,
+EventHall1ReadPageTalkToSarahTriggerFail.button1,
+EventHall1Expr12.text,
+EventHall1Expr12.button1,
+EventHall1ReadPageTalkToSarah2Trigger.text,
+EventHall1ReadPageTalkToSarah2Trigger.button1,
+EventHall1Expr13.text,
+EventHall1Expr13.button1,
+EventHall1ReadPageTalkToSarah2TriggerFail.text,
 EventHall1ReadPageTalkToSarah2TriggerFail.button1,
+EventHall2Start.text,
+EventHall2Start.button1,
+EventHall2Init.text,
+EventHall2Init.button1,
+EventHall2FirstTimeInitializer.text,
+EventHall2FirstTimeInitializer.button1,
+EventHall2Expr3.text,
+EventHall2Expr3.button1,
+EventHall2Expr4.text,
+EventHall2Expr4.button1,
+EventHall2TriggerPrologSelector.text,
+EventHall2TriggerPrologSelector.button1,
+EventHall2ReadPageSearchEvidenceTriggeredPrologTarget.text,
+EventHall2ReadPageSearchEvidenceTriggeredPrologTarget.button1,
+EventHall2TocPrologSearchEvidence.text,|||\nThe upended table has spilled its contents across the floor.\n|||
+EventHall2TocPrologSearchEvidence.button1,{action} Search
+EventHall2TocPrologSearchEvidence.button2,{qst:cancel}
+EventHall2ReadPageSearchEvidence.text,
+EventHall2ReadPageSearchEvidence.button1,
+EventHall2ReadPageSearchEvidenceBeforeAddRemove1.text,
+EventHall2ReadPageSearchEvidenceBeforeAddRemove1.button1,
+EventHall2ReadPageSearchEvidenceDisplay.text,
+EventHall2ReadPageSearchEvidenceDisplay.button1,
+EventHall2ReadPageSearchEvidenceBase.text,|||\nYou start with the lamp but it is too broken to use. Besides the lamp, there is a dead plant and scraps of paper tossed around. One of the scraps catches your eye: it is spattered in dried blood. The note talks about preparations for a ritual and mentions something about a chapel and crypt. The author of the note wants to stop the ritual and it is clear he will do anything to stop it. The note is signed “Henry Smythe.”\n\nGain the {c:QItemEvidenceHall2} Unique Item, then discard this Search token.\n|||
+EventHall2ReadPageSearchEvidenceBase.button1,{qst:continue}
+EventHall2ReadPageSearchEvidenceTiePoint.text,
+EventHall2ReadPageSearchEvidenceTiePoint.button1,
+EventHall2ReadPageSearchEvidenceAfterGoto59.text,
+EventHall2ReadPageSearchEvidenceAfterGoto59.button1,
+EventHall2End.text,
+EventHall2End.button1,
+EventHall2TriggerSelector.text,
+EventHall2TriggerSelector.button1,
+EventHall2ReadPagePlaceHall2ViaHall1XferIfTriggered.text,
+EventHall2ReadPagePlaceHall2ViaHall1XferIfTriggered.button1,
+EventHall2ReadPagePlaceHall2ViaHall1.text,
+EventHall2ReadPagePlaceHall2ViaHall1.button1,
+EventHall2ReadPagePlaceHall2ViaHall1BeforeAddRemove1.text,
+EventHall2ReadPagePlaceHall2ViaHall1BeforeAddRemove1.button1,
+EventHall2ReadPagePlaceHall2ViaHall1Display.text,
+EventHall2ReadPagePlaceHall2ViaHall1Display.button1,
+EventHall2ReadPagePlaceHall2ViaHall1Base.text,|||\nFeeble light oozes from the {c:TileGallery} door into the hallway. You can see now that the hallway continues into the dark. Place the {c:TileHall2} tile and a wall as indicated.\n|||
+EventHall2ReadPagePlaceHall2ViaHall1Base.button1,{qst:continue}
+EventHall2ReadPagePlaceHall2ViaHall1TiePoint.text,
+EventHall2ReadPagePlaceHall2ViaHall1TiePoint.button1,
+EventHall2Expr1.text,
+EventHall2Expr1.button1,
+EventHall2ReadPagePlaceHall2ViaHall1AfterLet1.text,
+EventHall2ReadPagePlaceHall2ViaHall1AfterLet1.button1,
+EventHall2Expr2.text,
+EventHall2Expr2.button1,
+EventHall2ReadPagePlaceHall2ViaHall1AfterLet2.text,
+EventHall2ReadPagePlaceHall2ViaHall1AfterLet2.button1,
+EventHall2ReadPagePlaceHall2ViaHall1End.text,
+EventHall2ReadPagePlaceHall2ViaHall1End.button1,
+EventHall2TiePoint.text,
+EventHall2TiePoint.button1,
+EventHall2LoopBack.text,
+EventHall2LoopBack.button1,
+EventHall2ReadPagePlacePart2XferIfTriggered.text,
+EventHall2ReadPagePlacePart2XferIfTriggered.button1,
+EventHall2ReadPagePlacePart2.text,
+EventHall2ReadPagePlacePart2.button1,
+EventHall2ReadPagePlacePart2BeforeAddRemove1.text,
+EventHall2ReadPagePlacePart2BeforeAddRemove1.button1,
+EventHall2ReadPagePlacePart2Display.text,
+EventHall2ReadPagePlacePart2Display.button1,
+EventHall2ReadPagePlacePart2Base.text,|||\nDoors off the hall lead deeper into the house. Place Explore tokens as indicated.\n|||
+EventHall2ReadPagePlacePart2Base.button1,{qst:continue}
+EventHall2ReadPagePlacePart2TiePoint.text,
+EventHall2ReadPagePlacePart2TiePoint.button1,
+EventHall2ReadPagePlacePart2End.text,
+EventHall2ReadPagePlacePart2End.button1,
+EventHall2ReadPagePlaceInvestigatorXferIfTriggered.text,
+EventHall2ReadPagePlaceInvestigatorXferIfTriggered.button1,
+EventHall2ReadPagePlaceInvestigator.text,
+EventHall2ReadPagePlaceInvestigator.button1,
+EventHall2ReadPagePlaceInvestigatorBeforeAddRemove1.text,
+EventHall2ReadPagePlaceInvestigatorBeforeAddRemove1.button1,
+EventHall2ReadPagePlaceInvestigatorDisplay.text,
+EventHall2ReadPagePlaceInvestigatorDisplay.button1,
+EventHall2ReadPagePlaceInvestigatorBase.text,|||\nNeither {c:EventChosenInvestigator} nor the investigator who is Exploring walks down the hall, but any one of the others may move 1 space into {c:TileHall2} as indicated.\n|||
+EventHall2ReadPagePlaceInvestigatorBase.button1,{qst:continue}
+EventHall2ReadPagePlaceInvestigatorTiePoint.text,
+EventHall2ReadPagePlaceInvestigatorTiePoint.button1,
+EventHall2ReadPagePlaceInvestigatorAfterAddRemove1.text,
+EventHall2ReadPagePlaceInvestigatorAfterAddRemove1.button1,
+EventHall2ReadPagePlaceInvestigatorEnd.text,
+EventHall2ReadPagePlaceInvestigatorEnd.button1,
+EventHall2ReadPagePlaceHall2EvidenceXferIfTriggered.text,
+EventHall2ReadPagePlaceHall2EvidenceXferIfTriggered.button1,
+EventHall2ReadPagePlaceHall2Evidence.text,
+EventHall2ReadPagePlaceHall2Evidence.button1,
+EventHall2ReadPagePlaceHall2EvidenceBeforeAddRemove1.text,
+EventHall2ReadPagePlaceHall2EvidenceBeforeAddRemove1.button1,
+EventHall2ReadPagePlaceHall2EvidenceDisplay.text,
+EventHall2ReadPagePlaceHall2EvidenceDisplay.button1,
+EventHall2ReadPagePlaceHall2EvidenceBase.text,|||\nA table has been knocked over, scattering its contents across the room. <i>That broken lamp on the floor might help navigate this room,</i> you think to yourself. Place a Search token as indicated.\n|||
+EventHall2ReadPagePlaceHall2EvidenceBase.button1,{qst:continue}
+EventHall2ReadPagePlaceHall2EvidenceTiePoint.text,
+EventHall2ReadPagePlaceHall2EvidenceTiePoint.button1,
+EventHall2ReadPagePlaceHall2EvidenceAfterGoto58.text,
+EventHall2ReadPagePlaceHall2EvidenceAfterGoto58.button1,
+EventHall2ReadPageSearchEvidenceXferIfTriggered.text,
+EventHall2ReadPageSearchEvidenceXferIfTriggered.button1,
+EventHall2Toc.text,
+EventHall2Toc.button1,
+EventHall2TocSelector.text,
+EventHall2TocSelector.button1,
+EventHall2TocPrologProxyPlaceHall2ViaHall1.text,
+EventHall2TocPrologProxyPlaceHall2ViaHall1.button1,
+EventHall2TocPrologPlaceHall2ViaHall1.text,
+EventHall2TocPrologPlaceHall2ViaHall1.button1,
+EventHall2TocPrologProxyPlacePart2.text,
+EventHall2TocPrologProxyPlacePart2.button1,
+EventHall2TocPrologPlacePart2.text,
+EventHall2TocPrologPlacePart2.button1,
+EventHall2TocPrologProxyPlaceInvestigator.text,
+EventHall2TocPrologProxyPlaceInvestigator.button1,
+EventHall2TocPrologPlaceInvestigator.text,
+EventHall2TocPrologPlaceInvestigator.button1,
+EventHall2TocPrologProxyPlaceHall2Evidence.text,
+EventHall2TocPrologProxyPlaceHall2Evidence.button1,
+EventHall2TocPrologPlaceHall2Evidence.text,
+EventHall2TocPrologPlaceHall2Evidence.button1,
+EventHall2TocPrologProxySearchEvidence.text,
+EventHall2TocPrologProxySearchEvidence.button1,
+EventHall2TocNoPagesAvailable.text,
+EventHall2TocNoPagesAvailable.button1,
+EventHall2ReadPagePlaceHall2ViaHall1Trigger.text,
+EventHall2ReadPagePlaceHall2ViaHall1Trigger.button1,
+EventHall2ReadPageSearchEvidenceTrigger.text,
+EventHall2ReadPageSearchEvidenceTrigger.button1,
 EventStartupStart.text,
 EventStartupStart.button1,
 EventStartupInit.text,
@@ -7589,8 +7644,8 @@ EventStartupExpr39.text,
 EventStartupExpr39.button1,
 EventStartupExpr38.text,
 EventStartupExpr38.button1,
-EventStartupReadPageStartUpBeforeGoto46.text,
-EventStartupReadPageStartUpBeforeGoto46.button1,
+EventStartupReadPageStartUpBeforeGoto60.text,
+EventStartupReadPageStartUpBeforeGoto60.button1,
 EventStartupEnd.text,
 EventStartupEnd.button1,
 EventStartupReadPageStartUpDisplay.text,
@@ -7661,16 +7716,16 @@ EventStartupReadPageShowEverythingBeforeAddRemove23.text,
 EventStartupReadPageShowEverythingBeforeAddRemove23.button1,
 EventStartupReadPageShowEverythingBeforeAddRemove24.text,
 EventStartupReadPageShowEverythingBeforeAddRemove24.button1,
-EventStartupReadPageShowEverythingBeforeGoto47.text,
-EventStartupReadPageShowEverythingBeforeGoto47.button1,
+EventStartupReadPageShowEverythingBeforeGoto61.text,
+EventStartupReadPageShowEverythingBeforeGoto61.button1,
 EventStartupReadPageSplashScreenXferIfTriggered.text,
 EventStartupReadPageSplashScreenXferIfTriggered.button1,
 EventStartupReadPageSplashScreen.text,
 EventStartupReadPageSplashScreen.button1,
 EventStartupReadPageSplashScreenBeforeAddRemove1.text,
 EventStartupReadPageSplashScreenBeforeAddRemove1.button1,
-EventStartupReadPageSplashScreenBeforeGoto48.text,
-EventStartupReadPageSplashScreenBeforeGoto48.button1,
+EventStartupReadPageSplashScreenBeforeGoto62.text,
+EventStartupReadPageSplashScreenBeforeGoto62.button1,
 EventStartupReadPageSplashScreenClosedXferIfTriggered.text,
 EventStartupReadPageSplashScreenClosedXferIfTriggered.button1,
 EventStartupReadPageSplashScreenClosed.text,

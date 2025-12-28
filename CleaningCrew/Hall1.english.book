@@ -1,9 +1,9 @@
 Language English
-Debug On
+Debug Off
 
 Book Hall1 Ordered No Keep Looped
 
-	Page ExploreHall1
+	Page PlaceHall1
 		Triggered By @ExploreHall1ViaDiningRoom
 		
 		Prolog """
@@ -24,9 +24,38 @@ Book Hall1 Ordered No Keep Looped
 	
 		$mythosHall = true
 		exploredHall1 = true
-	End Page ExploreHall1
+	End Page PlaceHall1
 
-	Page PlaceHall1
+	
+	Page PlaceJournal
+		Not Visible When foundJournal
+		
+		Text QItemJournal """
+			While you are looking at the prints, the book on the floor gets
+			your attention, so you reach over to pick it up. Gain the
+			{c:QItemJournal} unique item.
+			
+			You look at the book you picked up:  small, thin, and
+			leather-bound. You flip through the pages: 	it's a journal.
+			The first entry was scrawled last Sunday.
+
+			Maybe you should hold onto it to give back to Benjamin when you
+			see him later today. And maybe take a quick look yourself.
+
+			Discard this Search token.
+			
+			An investigator holding the {c:QItemJournal} can interact with it in
+			the app.
+		"""
+		
+		foundJournal = true
+		foundJournalInDiningRoom = true
+	End Page PlaceJournal
+
+	Page PlaceHall1Tile
+		Add TileHall1, TokenDoorHall1!, TokenWallHall1!
+		Remove TokenExploreHall1ViaDiningRoom
+		
 		Text """
 			You look through the doorway to find a hall. It is clear that it
 			was intended for the servants:  plain and dark. Place the
@@ -34,35 +63,16 @@ Book Hall1 Ordered No Keep Looped
 			
 			Move one space space into the hall.
 		"""
-						
-		Remove TokenExploreHallway1ViaDiningRoom
-		
-		Add TileHall1, TokenDoorHall1!, TokenWallHall1!
-	End Page PlaceHall1
+	End Page PlaceHall1Tile
 	
-	Page PlaceHall1Gallery
+	Page PlaceExploreGallery
 		Add TokenExploreGalleryViaHall1!
 
 		Text """
-			To your immediate right is a door. Place an Explore token as
+			There is a door to your immediate right. Place an Explore token as
 			indicated.
 		"""
-	End Page PlaceHall1Gallery
-	
-	Page PlaceHall1Painting
-		Add TokenSearchHall1Picture!
-
-		Text """
-			On the left, a painting glows with unnatural
-			light. You can almost feel it calling to you. You shake it off
-			because paintings don't have power. Place a Search token as 
-			indicated.
-			
-			As you look away, you catch something moving in your 
-			peripheral vision. You glance back and the painting is still
-			lightly glowing, something that suddenly seems more troubling.
-		"""
-	End Page PlaceHall1Painting
+	End Page PlaceExploreGallery
 	
 	Page PlaceHall1Evidence
 		Add TokenSearchHall1Rug!
@@ -75,126 +85,99 @@ Book Hall1 Ordered No Keep Looped
 			
 			Place a Search token as indicated.
 		"""
+		
+		If Not foundJournalInDiningRoom Then Trigger @MoveAfterExplore
+		Exit
 	End Page PlaceHall1Evidence
 	
-	Page PlaceHall1Sight
-		Add TokenSightHall2ViaHall1!
-		
-		Text """
-			The hall stretches forward. Place a Sight token as indicated.
-			
-			As you look around, something doesn't feel right.
-			You feel like you are being watched.
-		"""
-		
-		If foundJournal Then Trigger @MoveAfterExplore
-		If foundJournal Then Exit
-	End Page PlaceHall1Sight
-	
-	Page PlaceHall1Journal
-		Text """
-			<i>The book on the floor,</i> you remind yourself. You turn 
-			around, see the book, and bend down to pick it up. Gain
-			the {c:QItemJournal} unique item.
-			
-			You look at the book you picked up:  small, thin, and
-			leather-bound. You flip through the pages: 	it's a journal.
-			The first entry was scrawled last Sunday.
-
-			Maybe you should hold onto it to give back to Benjamin when you
-			see him later today. And maybe take a quick look yourself.
-
-			Gain the {c:QItemJournal} Unique Item, then remove its
-			Search token. An investigator holding the {c:QItemJournal}
-			can interact with it in the app.
-		"""
-		
-		foundJournal = true
-		
-		Exit
-	End Page PlaceHall1Journal
-	
-	
 	Page SearchRug
+		Not Visible
 		Triggered By @SearchHall1Rug
 	
-		Prolog "The corner of the rug is folder over."
+		Prolog "The corner of the rug is folded over."
 		Button "Search"
 		
-		Text """
+		Text QItemEvidenceHall1 """
 			You lean down to straighten the rug. You play with it for a bit,
 			but have trouble getting it to stay flat--the fold has been there
-			too long. You lift the rug a little more to try to flatten the
-			corner. There's a piece of paper under the rug. You pick it up to
-			find it has a diagram of a tabletop with arcane symbols. Maybe
-			it's part of some ritual? You’ve heard the people in this town have
-			some funny beliefs.
+			too long. You lift the rug a little try again. There's a piece of
+			paper under the rug. You pick it up; it has a diagram of a tabletop
+			with arcane symbols. Maybe it's part of some ritual? You've heard
+			the people in this town have some funny beliefs.
 
 			Gain the {c:QItemEvidenceHall1} Unique Item and
 			1 {clue}, then discard this Search token.
 		"""
 		
-		Add QItemEvidenceHall1
 		Remove TokenSearchHall1Rug
 		
 		Exit
 	End Page SearchRug
 	
 	Page SearchPainting
+		Not Visible
 		Triggered By @SearchHall1Painting
 		
 		Prolog "The painting glows with unnatural light."
 		Button "Search"
 		
+		Remove TokenSearchHall1Painting
+
 		Text """
-			The painting is a girl, maybe 12 or 13 years old. The work is
-			stunning and the girl looks so lifelike, it’s as if she could just
-			step through the frame. She’s wearing a white dress and looks
+			The painting is of a girl. The work is
+			stunning and the girl looks so lifelike, it's as if she could just
+			step through the frame. She's wearing a white dress and looks
 			serious.
 
 			When you blink, you think the painting has moved but you know that
 			cannot happen. You also notice that there is no dust anywhere on
-			the painting or the frame. You feel like there’s something else
+			the painting or the frame. You feel like there's something else
 			you've missed, but you dismiss it and turn away. Gain 1 {clue},
-			then remove this Search token.
+			then discard this Search token.
 		"""
 		
-		Remove TokenSearchHall1Painting
+		Goto SearchPainting2
 	End Page SearchPainting
 
 	Page SearchPainting2
+		Not Visible
+
+		Add TokenSarah!
+		
 		Text """
-			As you turn around, you notice two shadows on the wall, yours
+			As you turn around, you notice two shadows on the wall:  yours
 			and... you quickly look back at the painting. The girl is not
-			there. Startled, you turn to run back to the {c:TileDiningRoom} and
-			are brought up short when the girl from the painting is standing in
-			front of you.
+			there. Startled, you turn to run back; move 1 space toward the
+			{c:TileDiningRoom}. You are brought up short when the girl from the
+			painting is standing in front of you.
 
 			Place the Green Girl token as indicated. Shocked, you take 1 Horror
 			({will} negates).
 		"""
 		
-		Add TokenSarah!
+		Exit
 	End Page SearchPainting2
 	
 	
 	Page TalkToSarah
+		Not Visible
 		Triggered By @TalkToSarah When Unread
 		
 		Text """
 			She is a pretty girl in the the first blush of youth--maybe 11 or
-			12 years old. She has curly hair with ribbons and a bright white 
-			dress that stands out in the dingy hallway.
+			12 years old. She has curly hair with emerald green ribbons and a
+			bright white dress that stands out in the dingy hallway.
 		"""
 	End Page TalkToSarah
 	
 	Page TalkToSarah2
+		Not Visible
 		Triggered By @TalkToSarah When TalkToSarah Is Read
 		
 		Prolog """
-			She looks at you expectantly. She looks like she wants to say
+			She looks at you like she wants to say
 			something, but is holding back. She still looks serious, but also
-			concerned and maybe a little afraid. You notice that she seems
+			concerned and maybe afraid. You notice that she seems
 			to be glowing. And maybe a bit transparent.
 
 			She will only speak with {c:EventChosenInvestigator}.		
@@ -219,4 +202,5 @@ Book Hall1 Ordered No Keep Looped
 		foundSarah = true
 		Exit
 	End Page TalkToSarah2
+	
 End Book Hall1

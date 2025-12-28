@@ -74,17 +74,18 @@ Book Startup Ordered No Keep Looped
 		Add TokenTestBasementViaDiningRoomSight, TileStudy, TileHall2
 		Add TileGallery, TileFoyer, TileDriveway, TileDiningRoom, TileCrypt
 		Add TileChapel, TileBasement, TileBackyard, TileAltar
-		Add TokenTestPlaceHall1ViaDiningRoom, TokenTestPlaceFoyerViaGallery
-		Add TokenTestPlaceGalleryViaFoyer, TokenTestPlaceHall2ViaFoyer
+		Add TokenTestPlaceFoyerViaGallery
 		Add TokenTestPlaceFoyerViaHall2, TokenTestPlaceStudyViaFoyer
 		Add TokenTestPlaceStudyViaHall2, TokenTestPlaceFoyerViaStudy
-		Add TokenTestPlaceHall2ViaFoyer, TokenTestPlaceDungeonCaveViaBasement
-		Add TokenTestPlaceDungeonCaveViaCrypt, TokenTestPlaceHall1ViaHall2
+		Add TokenTestPlaceDungeonCaveViaBasement
+		Add TokenTestPlaceDungeonCaveViaCrypt
 		Add TokenTestPlaceBackdoorViaDriveway, TokenTestPlaceGalleryViaHall1
 		Add TokenTestJournal2, TokenTestBenTrigger, TileHall1
 		Add TileTortureChamber, TokenBackyardBenBefore, TokenDiningRoomBen
 		Add TokenBackyardBenPassive, TokenTestBackdoorLocked
-		Add TokenTestSearchFluxStabilizer, Token0
+		Add TokenTestSearchFluxStabilizer, TokenTestPlaceHall1ViaDiningRoom
+		
+		Add Token0
 		
 		Exit
 	End Page ShowEverything
