@@ -12,15 +12,19 @@ Book Study Ordered No Keep Looped
 	Page ExploreStudyViaFoyer No Text
 		Triggered By @ExploreStudyViaFoyer
 		
-		exploredStudyViaHall2 = true
-		exploredStudyViaFoyer = false	
+		exploredStudyViaHall2 = false
+		exploredStudyViaFoyer = true	
 		Goto ExploreStudy		
 	End Page ExploreStudyViaFoyer
 
 	Page ExploreStudy
 		Prolog """
-			A small plaque on the door reads <<Study.>>
+			A small plaque on this door reads <<Study.>>
 		"""
+		
+		Remove TokenExploreStudyViaFoyer, TokenExploreStudyViaHall2
+		Remove TokenExploreFoyerViaStudy
+		Add TileStudy, TokenDoorStudy!
 		
 		Text """
 			The door opens smoothly, like it has been used recently. Behind it,
@@ -33,18 +37,6 @@ Book Study Ordered No Keep Looped
 		exploredStudy = true
 	End Page ExploreStudy
 
-	Page PlaceExploreHall2
-		Visible When exploredHall2 != exploredFoyer
-		
-		Text """
-			A door next to you leads farther into the house. Place an Explore
-			token as indicated.
-		"""
-		
-		If Not exploredHall2 Add TokenExploreHall2ViaStudy
-		If Not exploredFoyer Add TokenExploreFoyerViaStudy
-	End Page PlaceExploreHall2
-
 	Page PlaceExploreLibrary
 		Add TokenExploreLibraryViaStudy!
 
@@ -55,12 +47,15 @@ Book Study Ordered No Keep Looped
 	End Page PlaceExploreLibrary
 	
 	Page PlaceHealingStone
-		Add TokenStudyHealingStone!
+		Add TokenSearchStudyHealingStone!
 
 		Text """
 			A large oak desk sits in the middle of the room. A dead plant and a
-			mess of papers covers it. Place a Search token as indicated.
+			mess of papers cover it. Place a Search token as indicated.
 		"""
+		
+		Trigger @MoveOnExplore
+		Exit
 	End Page PlaceHealingStone
 	
 	Page SearchHealingStone
@@ -71,7 +66,7 @@ Book Study Ordered No Keep Looped
 			several ancient artifacts.
 		"""
 			
-		Text """
+		Text QItemHealingStone """
 			You find an ugly stone carving among the detritus on the desk.
 			You aren't sure why, but you must have it. Gain the
 			{c:QItemHealingStone} Unique Item, then discard this Search token.

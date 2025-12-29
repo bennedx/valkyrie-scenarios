@@ -2,8 +2,8 @@ Language English
 
 Book Library Ordered No Keep Looped
 
-	Page ExploreLibrary
-		Triggered By @ExploreLibrary
+	Page ExploreLibraryViaStudy
+		Triggered By @ExploreLibraryViaStudy
 		
 		Prolog "This door has a small brass plaque that reads <<Library.>>"
 		Button "Explore"
@@ -12,28 +12,19 @@ Book Library Ordered No Keep Looped
 		Remove TokenExploreLibraryViaStudy
 
 		Text """
-			The door opens and a bit of fresh air surprises you. You feel a
+			The door opens and the taste of fresh air surprises you. You feel a
 			draft, but cannot tell where it is coming from. Place a wall as
 			indicated, then discard this Explore token.
 		"""
 		
-		
-		exploredLibary = TRUE
-		exploredLibraryViaStudy = TRUE
-		$mythosLibrary = TRUE 
-		wandererInStudy = FALSE
-	End Page ExploreLibrary
+		exploredLibary = true
+		exploredLibraryViaStudy = true
+		$mythosLibrary = true 
+		wandererInStudy = true
+	End Page ExploreLibraryViaStudy
 
-	Page SpawnCultist
+	Page SpawnCultist No Text
 		Spawn SpawnLibraryCultist
-		
-		Text """
-			When you walk in, a man is seated across from the door. He is
-			wearing robes, like someone from a religious order. He looks
-			familiar... maybe one of the townspeople who welcomed you a few
-			weeks ago. Startled, the man gets up, scowls, then moves toward you
-			aggressively. Spawn a cultist as indicated.
-		"""
 		Exit
 	End Page SpawnCultist
 	
@@ -50,7 +41,6 @@ Book Library Ordered No Keep Looped
 			When the man got up earlier, something fell out of his pocket.
 			Place a Search token as indicated.
 		"""
-		
 	End Page PlaceKey
 	
 	Page PlaceSearchBookCase
@@ -66,6 +56,7 @@ Book Library Ordered No Keep Looped
 	End Page PlaceSearchBookCase
 	
 	Page SearchKey
+		Not Visible
 		Triggered By @SearchLibraryKey
 		
 		Prolog "It looks like the man dropped his key ring."
@@ -74,7 +65,7 @@ Book Library Ordered No Keep Looped
 		Add QItemKey
 		Remove TokenSearchLibraryKey
 
-		Text """
+		Text QItemKey """
 			You reach down to pick up the keys. You’re impressed by the number
 			and variety. Some of the keys have strange symbols on their bows
 			while others have beautiful and intricate blades. You pocket them
@@ -82,10 +73,12 @@ Book Library Ordered No Keep Looped
 			then discard this Search token.
 		"""
 		
-		foundKey = TRUE
+		foundKey = true
+		Exit
 	End Page SearchKey
 	
 	Page SearchBookcase
+		Not Visible
 		Triggered By @SearchLibraryBookcase When Unread
 		
 		Prolog """
@@ -96,6 +89,7 @@ Book Library Ordered No Keep Looped
 			with a bright, white spine that stands out among the other, darker
 			books.
 		"""
+		Button "Search"
 		
 		Text """
 			You reach up to get the book but it doesn't move. You reach
@@ -105,28 +99,35 @@ Book Library Ordered No Keep Looped
 		
 		Test "Pass" Or "Fail" Set passSearchBookcase
 		If passSearchBookcase Then Goto SearchBookcasePass
+		Goto SearchBookcaseFail
 	End Page SearchBookcase
 	
 	Page SearchBookcaseFail
+		Not Visible
 		Text "It just won't budge. Maybe if you try a little harder."
 		Exit
 	End Page SearchBookcaseFail
 	
 	Page SearchBookcaseAgain
+		Not Visible
 		Triggered By @SearchLibraryBookcase When SearchBookcase Is Read
 		
-		Prolog "The book wouldn't move, but it will this time..."
+		Prolog "The book wouldn't move, but maybe it will this time..."
+		Button "Try again"
 		
 		Text """
 			You reach up again, grab the book and pull as hard as
-			you can ({stregth}).
+			you can ({stregth;2}).
 		"""
 		
 		Test "Pass" Or "Fail" Set passSearchBookcase
 		If Not passSearchBookcase Then Goto SearchBookcaseFail
+		Goto SearchBookcasePass
 	End Page SearchBookcaseAgain
 	
 	Page SearchBookcasePass
+		Not Visible
+		
 		Remove TokenSearchLibraryBookcase
 
 		Text """
@@ -134,22 +135,28 @@ Book Library Ordered No Keep Looped
 			doesn't come out all the way, but you realize it is part of a lock
 			for a secret door. Discard this Search token.
 		"""
+		
+		Goto PlaceBookcaseExplore
 	End Page SearchBookcasePass
 		
 	Page PlaceBookcaseExplore
-		Add TokenLibraryTrapDoor, TokenExploreLibraryBookcase
+		Not Visible
+		
+		Add TokenLibraryTrapDoor, TokenExploreChapelViaLibrary!
 
 		Text """
 			You pull on the bookcase and it swings out with a creak. Behind it
 			is a door with an elaborate lock. What was old Mr Smythe up to?
 
-			Place trap door and Explore tokens as indicated.
+			Place a trap door and an Explore token as indicated.
 		"""
 	
 		Exit
 	End Page PlaceBookcaseExplore
 	
 	Page ExploreChapelViaBookcase
+		Not Visible
+		
 		Triggered By @ExploreChapelViaBookcase When Unread
 		
 		Text """
@@ -159,15 +166,13 @@ Book Library Ordered No Keep Looped
 			bust through the door; otherwise, maybe the lock could be picked?
 		"""
 
-		Test "Tap to attempt the puzzle using {lore}" Or "Smash the door with a heavy weapon" Set puzzleForBookcase
-		If Not puzzleForBookcase Then Goto ExploreChapleViaBookcaseSmash
+		Test "Attempt the puzzle using {lore}" Or "Smash the door with a heavy weapon" Set puzzleForBookcase
+		If Not puzzleForBookcase Then Goto ExploreChapelViaBookcaseSmash
+		Trigger @PuzzleBookcaseLock
 	End Page ExploreChapelViaBookcase
 	
-	Page ExploreChapelViaBookcasePuzzle
-		Puzzle PuzzleBookcaseLock Set completedBookcasePuzzle
-	End Page
-	
-	Page ExploreChapleViaBookcaseSmash
+	Page ExploreChapelViaBookcaseSmash
+		Not Visible 
 		Text """
 			You raise your heavy weapon and swing. Roll 1 fewer die if you have
 			suffered 3 or more Damage. ({strength};2) Deal damage equal to the
@@ -177,14 +182,16 @@ Book Library Ordered No Keep Looped
 		Test Quota 5 Set passSmashBookcase
 		If passSmashBookcase Then Goto SmashPass
 		Goto SmashFail
-	End Page ExploreChapleViaBookcaseSmash
+	End Page ExploreChapelViaBookcaseSmash
 	
 	Page SmashFail
+		Not Visible
 		Text "No done"
 		Exit
 	End Page SmashFail
 	
 	Page SmashPass
+		Not Visible
 		Text "Not done (2)"
 		Exit
 	End Page SmashPass	
