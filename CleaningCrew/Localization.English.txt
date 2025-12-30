@@ -41,10 +41,9 @@ CustomMonsterLibraryCultist.monstername,Cultist
 CustomMonsterLibraryCultist.info,-
 TokenSearchLibraryBookcase.button1,{action} Search
 TokenExploreChapelViaLibrary.button1,Tap to attempt the puzzle using {lore}
-TokenExploreChapelViaLibrary.button2,Smash the door with a heavy weapon
-TokenExploreChapelViaLibrary.button3,Cancel
+SpawnCustomMonsterChapelRiot.text,"\n“What am <i>I</i> doing here? I’m a priest; this is my chapel. It’s not a place for impertinent criminals.” He turns toward the door and yells, “Boys!” Several men in robes run through the door. “They do not belong here. Take care of them.” Your stomach sinks as the men turn toward you.\n\nReplace the White Man token with a {c:CustomMonsterChapelRiot}.\n"
+SpawnCustomMonsterChapelRiot.button1,Continue
 PuzzleExploreLibraryBookcase.button1,Got it!
-TokenSearchChapelWhiskey.text,"\nThere’s a liquor bottle here. Someone has picked at the edges of the label. It’s about half-full.\n"
 TokenSearchChapelWhiskey.button1,{action} Search
 CustomMonsterChapelRiot.info,-
 TokenExploreCoatRoom.button1,{action} Explore
@@ -220,7 +219,7 @@ TokenTestPlaceCryptViaChapel.button2,Cancel
 TokenTestPlaceCoatRoomViaGallery.text,PlaceCoatRoomViaGallery
 TokenTestPlaceCoatRoomViaGallery.button2,Cancel
 TokenTestPlaceChapelViaLibrary.text,PlaceChapelViaLibrary
-TokenTestPlaceChapelViaLibrary.button2,Cancel
+TokenSearchChapelRitualComponents.button1,Button1
 SpawnMythosWandererFoyer.text,|||\nA man in a robe comes through a door marked "Study." Place a cultist as indicated.\n|||
 SpawnMythosWandererGallery.text,"\nA man steps through a door into the Gallery. Place a cultist as indicated.\n"
 SpawnMythosWandererHall2.text,"\nSomeone walks through the door at the end of the hall. Place a cultist as indicated.\n"
@@ -316,27 +315,11 @@ EventMythosRitualRestrained.button1,Continue
 EventMythosRitualRestrained.text,"\nThe closing ritual is in progress. {c:EventChosenInvestigator} takes a Restrained card.\n"
 EventInteractSarahSpeaks1.button1,Continue
 EventPlaceChapelExploreCryptWithNoKey.text,"\nA small wooden door leads out of the room to the right. Place an Explore token as indicated.\n"
-TokenExploreChapelViaLibrary.text,"\nThere is an elaborate lock on the door behind the bookcase; it has arcane markings, ones that you recognize from the spine of one of the books. An investigator with a heavy weapon might be able to bust through the door; otherwise, maybe the lock could be picked?\n"
 EventExploreLibraryBookcaseLorePass.text,"\nAfter much fiddling, the lock springs loose and the door opens.\n"
 EventExploreLibraryBookcaseLorePass.button1,Continue
-EventPlaceChapel.button1,Continue
-EventPlaceChapelWhiskey.text,"\nThis place is a mess. You hope this isn’t part of the cleaning contract.\n\nThere’s a bottle lying on one of the pews. Place a Search token as indicated.\n"
-EventPlaceChapelLectern.text,"\nThe priest’s lectern has a large book on it. Place a Search token as indicated.\n"
-EventPlaceChapelLectern.button1,Continue
-EventPlaceChapel.text,"\nOpening the door, you step into the opening of a long tunnel. It’s so dark that you find yourself feeling your way along the smooth stone walls. Eventually, you come to a staircase that leads to a door on the ceiling. When you open it, you find yourself in an chapel that is old but well-maintained. In the distance, through one of the windows, you can see the house you are supposed to be cleaning. Place the {c:TileChapel} tile and trap door as indicated, then remove this Explore token.\n"
-EventPlaceChapelWhiskey.button1,Continue
-EventSearchChapelWhiskey.button1,Continue
-EventSearchChapelWhiskeyNoise.text,|||\nWhile you are bent over getting the bottle, you don’t notice the chapel door swing open and a priest walk in. Without looking around, he turns and heads for a door on the other side of the room. Place the White Man token as indicated.\n\nAs you stand up, pleased with your find, you catch your shirt on the pew, trip, and fall to the ground, letting out a loud, "Goddammit!"\n\nAs the priest turns, his face goes from startled to angry. "Who are you and how did you get in here?!"\n|||
-EventSearchChapelWhiskey.text,"\nYou bend down to pick up and smell the bottle. Man, that is some good whiskey! Gain the {c:QItemWhiskey} Common Item. Then discard this Search token.\n"
-EventSearchChapelWhiskeyNoise.button1,Continue
+TokenSearchChapelRitualDagger.button1,Button1
+TokenExploreEscapeViaChapelLocked.button1,Button1
 EventPlaceChapelExploreCryptWithKey.button1,Button1
-EventExploreLibraryBookcaseStrength.text,"\nYou raise your heavy weapon and swing. Roll 1 fewer die if you have suffered 3 or more Damage. ({strength};2) Deal damage equal to the weapon’s damage.\n"
-EventExploreLibraryBookcaseStrength.button1,Continue
-EventExploreLibraryBookcaseStrength.button2,Fail
-EventExploreLibraryBookcaseStrengthPass.button1,Continue
-EventExploreLibraryBookcaseStrengthFail.text,"\nYou can see the damage. Maybe another hit...\n"
-EventExploreLibraryBookcaseStrengthPass.text,"\nThe lock has been knocked off and the door opens. That felt good! Discard 1 Horror, then remove this Explore token.\n"
-EventExploreLibraryBookcaseStrengthFail.button1,Continue
 EventGameDoneWin.button1,Button1
 EventMythosHealingStoneYesEarly.text,"\nThe ugly stone carving in your pocket grows warm and begins to hum quietly. When you take it out of your pocket, you suddenly feel more hopeful.\n\nThe investigator who holds the {c:QItemHealingStone} may do one of the following.\n\n1. If you have no Damage or Horror, improve 1 skill, become focused, or gain 1 {clue}.\n2. Turn 1 Damage or Horror facedown\n3. Discard 1 facedown Damage or Horror\n"
 EventInvestigatorTransportStart.button1,Button1
@@ -518,8 +501,6 @@ EventTriggerFoundElderSign.button1,Continue
 EventTriggerJournalRead.text,"\nYou cannot believe anyone could be so evil. But you have the {c:QItemElderSign} he needs. Now you’ll need to find a way to limit the number of townspeople he can use to hold the portal open for his god.\n"
 EventTriggerJournalRead.button1,Continue
 EventPlaceChapel2.button1,Button1
-EventPlaceChapelEscape.text,"\nAcross the room is a door to the outside. Place an explore token as indicated.\n"
-EventPlaceChapelEscape.button1,Continue
 EventKillChapelEscapeRiot.text,|||\nAs the last of the {c:CustomMonsterChapelTownfolk} fall to the ground dying, you take a deep breath. You can finally get out of here and get the boy to safety.\n\nYou are startled by a roar of rage coming through the crypt door. "WHERE IS MY SON?!" Spawn a {c:MonsterCultLeader} as indicated. This is {c:CustomMonsterDavidSmythAngry}.\n\nThe man roars, closer than before. You can also see light radiating through the crypt door. You look over at the exit and back to the crypt door.\n|||
 EventPlaceChapel2DeadPriest.text,"\nYou quickly tell everyone what you saw and that you were seen. You also tell them about the dead priest... the one you killed earlier. Place a search token as indicated.\n\nWhat you don’t tell them is that the corpse isn’t where you left it. There’s no blood where you killed him and no streaks to show he was dragged. He’s facing the other direction now. Maybe this place is getting to you. Suffer 1 facedown horror ({will}-1 negates).\n"
 EventPlaceChapel2DeadPriest.button1,Continue
