@@ -9,15 +9,19 @@ Book Chapel Ordered No Keep Looped
 		Add TileChapel, TokenChapelTrapdoor!
 		
 		Prolog """
-			The door behind the bookcase is unlocked. Curiosity about what's
-			behind it is growing. You quickly look around, the reach for the
-			door...
+			The door behind the bookcase is unlocked now. You aren't sure if you
+			want to see what's beind the door, but curiosity is getting the 
+			better of you. You look around, then reach for then door...
+		"""
+		Button "Explore"
 		
 		Text """
-			You grab the handle and pull. Behind it is the opening of a long
-			tunnel. It's so dark that you find yourself feeling your way along
-			the smooth stone walls. Eventually, you come to a staircase that
-			leads to a door on the ceiling. When you open it, you find yourself
+			You grab the handle and pull. Behind it is the opening of a dark
+			tunnel. You step in, but eventually it's so dark that you are
+			feeling your way along the smooth stone walls. Eventually,
+			you can see light coming through a crack in the ceiling. A
+			staircase leads up to it. You find a door in the ceiling and when
+			you open it, you find yourself
 			in an old--but well-maintained--chapel. In the distance, through one
 			of the windows, you can see the house you are supposed to be
 			cleaning. Place the {c:TileChapel} tile and trap door as indicated,
@@ -31,7 +35,7 @@ Book Chapel Ordered No Keep Looped
 	End Page Place
 	
 	Page PlaceExploreOutsideViaChapelLocked
-		Add TokenChapelEscapeViaChapelLocked!
+		Add TokenExploreEscapeViaChapelLocked!
 	
 		Text """
 			Across the room in front of you is the front door of the chapel.
@@ -62,7 +66,7 @@ Book Chapel Ordered No Keep Looped
 		
 		Text """
 			While clean, the room is not neat. You wonder if this would have
-			been part of the cleaning contract. Had it had been real.
+			been part of the cleaning job. Had it had been real.
 
 			There's a bottle lying on one of the pews. Place a Search token as
 			indicated.
@@ -76,6 +80,8 @@ Book Chapel Ordered No Keep Looped
 			A ceremonial table sits next to you at the front of the room. There
 			is a large book and various religous icons and implements. Place a
 			Search token as indicated.
+			
+			Move 1 space into the explored area.
 		"""
 	
 		Trigger @MoveAfterExplore
@@ -99,7 +105,7 @@ Book Chapel Ordered No Keep Looped
 		Remove TokenExploreEscapeViaChapelLocked
 
 		Exit
-	End Page ExploreChapelEscapeLocked
+	End Page ExploreEscapeViaChapelLocked
 	
 	Page SearchRitualComponents
 		Not Visible
@@ -163,7 +169,8 @@ Book Chapel Ordered No Keep Looped
 		Text """
 			While you are bent over getting the bottle, you don't notice the
 			chapel door swing open and a priest walk in. Without looking around,
-			he turns and heads for the door to your right. 
+			he walks along the back wall and turns to walk to the front of the 
+			room. 
 
 			As you stand up, pleased with your find, you catch your shirt on the
 			pew, trip, and fall to the ground. When you hit the floor, you 
@@ -182,21 +189,24 @@ Book Chapel Ordered No Keep Looped
 		Not Visible
 		Triggered By @TalkToChapelPriest
 		
-		Prolog "The priest is glaring at you expectantly. You respond, ..."
+		Text "The priest is glaring at you expectantly. You respond, ..."
 		
-		Button "<<What are <i>you</i> doing here?!" Set chapelPriestReply
-		Button "<<I'm with a cleaning service and I got lost." Set chapelPriestReply
-		Button "In for a penny, in for a pound: kill him." Set chapelPriestReply
+		Button 1, "{action} <<What are <i>you</i> doing here?!"
+		Button 2, "{action} <<I'm with a cleaning service and I got lost."
+		Button 3, "{action} In for a penny, in for a pound: kill him"
+		Button 4, "Cancel"
 		
-		If chapelPriestReply = 1 Then Goto ChallengePriest
-		if chapelPriestReply = 2 Then Goto TruthToPriest
+		If selection = 4 Then Exit
+		
+		If selection = 1 Then Goto ChallengePriest
+		if selection = 2 Then Goto TruthToPriest
 		Goto KillPriest
 	End Page TalkToPriest
 	
 	Page ChallengePriest No Text
 		Not Visible
 		Remove TokenChapelPriestAlive
-		Spawn CustomMonsterChapelRiot
+		Spawn SpawnCustomMonsterChapelRiot
 		Exit
 	End Page ChallengePriest
 	
