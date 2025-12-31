@@ -1,7 +1,22 @@
 Language English
 
 Book Crypt Ordered No Keep Looped
-	Page Explore
+	Page ExploreViaChapel
+		Not Visible
+		
+		exploredCryptViaChapel = true
+		Goto PlaceCrypt
+	End Page ExploreViaChapel
+	
+	Page ExploreViaDungeonCave
+		Not Visible
+		
+		exploredChapelViaDungeon = true
+		Goto PlaceCrypt
+	End Page
+	
+	Page PlaceCrypt
+		Not Visible
 		Triggered By @ExploreCryptViaDungeonCave
 		
 		Prolog "The cave continues into the darkness."
@@ -17,56 +32,82 @@ Book Crypt Ordered No Keep Looped
 			
 			Place the {c:TileCrypt} tile and discard this Sight token.
 		"""
-	End Page Explore
+		
+		If exploredCryptViaChapel Then Text """
+			You peer into the darkspace but cannot see much. Move 1 space
+			into the explored area.
+			
+			You eyes adjust quickly to the light.
+			
+			Place the {c:TileCrypt} tile and discard this Search token.
+		"""
+		
+		Goto PlaceSearchPendant
+	End Page PlaceCrypt
 	
 	Page PlaceSearchPendant
+		Not Visible
 		Add TokenSearchCryptPendant!
 		
 		Text """
 			One of the vaults is open. You aren't sure you want to look inside.
 			Place a Search token as indicated.
 		"""
+		
+		If exploredCryptViaDungeonCave Then Goto PlaceExploreChapelViaCrypt
+		Goto PlaceSearchHenry
 	End Page PlaceSearchPendant
 
 	Page PlaceExploreChapelViaCrypt
-		Visible When Not exploredChapel
+		Not Visible
 		
-		Add TokenExploreChapelViaCrypt!
+		Add TokenSearchChapelViaCrypt!
 		
 		Text """
-			A door at the other end of the crypt leads... somewhere. Place an
-			ExploreTokenAsIndicated.
+			Something about the wall seems... off. Place a Search token
+			as indicated.
 		"""
+		Goto PlaceSearchHenry
 	End Page PlaceExploreChapelViaCrypt
 	
-	Page PlaceExit
+	Page PlaceSearchHenry
+		Not Visible
+		Text """
+			The casket on the end looks much newer than the others. Place a
+			Search token as indicated.
+		"""
+	End Page PlaceSearchHenry
+	
+	Page PlaceExit No Text
 		Exit
 	End Page PlaceExit
 	
-	Page ExploreChapelViaCrypt
-		Triggered By @ExploreChapelViaCrypt
+	Page SearchChapelViaCrypt
+		Not Visible
+		Triggered By @SearchChapelViaCrypt
 		
 		Prolog """
-			An investigator in the crypt can try to open this door.
+			The wall in front of you is smooth rock. Is that a cut?
 		"""
-		Button "Open door"
+		Button "Search"
 		
 		Text """
-			As you reach for the door, you trip over something lying on the
-			floor. A piece of wood has been stuck into the crack between the 
-			door and its jam. You knock the wood out of the way and reach again
-			for the door. You grab the handle and pull. It seems to be locked
-			from the other side.
+			You walk up to the wall and put your hands on it, moving around
+			until you see it:  a razor-thin, rectangular cut into the rock. The
+			cut is about the size of the other doors inside the house. Maybe
+			this is a door too?
+			
+			A lot of time passes before you finally give up looking for...
+			something. Become Stunned.
+			
+			Discard this Search token.
 		"""
-	End Page ExploreChapelViaCrypt
-	
-	Page PlaceExploreCryptViaChapel No Text
-		Add TokenExploreCryptViaChapel
-		Remove TokenExploreChapelViaCrypt
-		Exit
-	End Page
+		
+		Remove TokenSearchChapelViaCrypt
+	End Page SearchChapelViaCrypt
 	
 	Page SearchPendant
+		Not Visible
 		Triggered By @SearchCryptPendant
 		
 		Prolog """
@@ -88,4 +129,36 @@ Book Crypt Ordered No Keep Looped
 		
 		Exit
 	End Page SearchPendant
+	
+	Page SearchHenry
+		Not Visible
+		Triggered By @SearchCryptHenry
+		
+		Prolog """
+			A brass plate on top of the casket looks like it has the name of the
+			person inside. The letters dance and swim, much like the text in the
+			{c:QItemOldJournal}.
+			
+			Only {c:EventChosenInvestigator} can read the inscription.
+		"""
+		Button "Search"
+		
+		Text """
+			When you lean over to read it, the letters coalesce into the name
+			and dates of the person inside. You read out loud:
+			
+			Here lies Henry Smythe\n
+			Born 12 May, 1885 -- Died 31 October, 1915
+
+			It seems your father died after stopping the ritual 10 years
+			ago. You cannot remember him, but thinking about him lying dead
+			three feet away makes your chest hurt.
+			
+			Remove this Search token.
+		"""
+		
+		henryIsDead = true
+		Remove TokenSearchChapelHenry
+		Exit
+	End Page SearchHenry
 End Book Crypt
