@@ -2,30 +2,74 @@ Language English
 
 Book DungeonCave Ordered No Keep Looped
 
-	Page Explore
-		Triggered By @ExploreDungeonCave
-		
+	Page ExploreViaCrypt
+		Not Visible
+		Triggered By @ExploreDungeonCaveViaCrypt
+
 		Prolog """
-			This door looks well-maintained, like it has been used recently.
+			The space gets darker the farther you look. 
+			
+			An investigator in this Sight token's space may look deeper.
+		"""
+		Button "Look"
+		Free
+		
+		Remove TokenExploreDungeonCaveViaCrypt
+		Remove TokenExploreDungeonCaveViaBasement
+		Add TileTortureChamber, TokenDungeonCaveWall!
+		
+		Text """
+			When you turn a corner, you are surprised to see a cave hewn from
+			the rock. Flickering torches make shadows dance slowly on the walls.
+
+			
+			Place the {c:TileTortureChamber} tile and a wall a indicated, then
+			discard all Sight and Explore tokens leading to the explored area.
+		"""
+		
+		exploredDungeonCaveViaCrypt = true
+		exploredDungeonCave = true
+		Goto PlaceExploreTortureChamber
+	End Page ExploreViaCrypt
+
+	Page ExploreViaBasement
+		Not Visible
+		Triggered By @ExploreDungeonCaveViaBasement
+
+		Prolog """
+			The door looks clean and well-used. An investigator in the
+			basement can open it.
 		"""
 		Button "Explore"
 		
-		Remove TokenExploreDungeonCaveViaBasement
+		Remove TokenExploreDungeonCaveViaBasement, TokenDungeonCaveWall
 		Add TileTortureChamber
 		
 		Text """
-			When you open the door, you are surprised to see a cave hewn from
-			the rock. Flickering torches make shadows slowly dance on the walls.
+			When you open the door, you find the back of another door which you
+			push open. Once it is open, you are surprised to see a large cave
+			hewn from the rock. Flickering torches make shadows dance slowly on the walls.
+
 			
-			Place the {c:TileTortureChamber} tile, then discard this Explore
-			token.
+			Place the {c:TileTortureChamber} tile, then discard Sight and
+			Explore tokens leading to the explored area.
 		"""
 		
-		exploredDungeonCave = true
-	End Page Explore
+		If exploredDungeonCave Then Text """
+			When you open the door, you find the back of another door which you
+			push open. <<This is the cave we found earlier,>> you comment.
+			
+			Discard this Explore token and the wall under it.
+		"""
 		
-	
+		exploredDungeonCaveViaCrypt = true
+		exploredDungeonCave = true
+		Goto PlaceExploreCrypt
+	End Page ExploreViaBasement
+
 	Page PlaceExploreCrypt
+		Visible When Not exploredCrypt
+		
 		Add TokenExploreCryptViaDungeonCave!
 		
 		Text """
@@ -38,9 +82,8 @@ Book DungeonCave Ordered No Keep Looped
 		Add TokenExploreTortureChamber!
 		
 		Text """
-			To the right, a door leads... somewhere. That part of the cave
-			seems more finished than the rest of the cave and feels much more
-			substantial. Place an Explore token as indicated.
+			A door in the wall leads... somewhere. Place an Explore token as
+			indicated.
 		"""
 	
 		Trigger @MoveAfterExplore

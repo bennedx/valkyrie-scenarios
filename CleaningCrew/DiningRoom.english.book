@@ -304,10 +304,9 @@ Book SearchDiningRoom Ordered No Keep Looped
 		Prolog "There's a yellowed scrap of paper in the box."
 		Button "Search"
 		
-		Add QItemEvidenceDiningRoom
 		Remove TokenSearchDiningRoomPaper
 
-		Text """
+		Text QItemEvidenceDiningRoom """
 			The paper is old, yellowed, and dry. When you pick it up, a corner
 			breaks off. The writing is faded but you can make out a few phrases.
 
@@ -321,6 +320,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 			discard this Search token.
 		"""
 		
+		foundEvidenceCount = foundEvidenceCount + 1
 	End Page PaperInBox
 End Book SearchDiningRoom
 

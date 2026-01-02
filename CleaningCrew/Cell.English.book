@@ -9,9 +9,7 @@ Book Cell Ordered No Keep Looped
 			When you look through the bars, it's dark inside. You think that you
 			hear something.
 		"""
-		Button "Open door"
-		
-		Remove TokenExploreCellViaTortureChamber
+		Button "Explore"
 		
 		Text """
 			The cell is no brighter than it was before you opened the door, but
@@ -19,18 +17,19 @@ Book Cell Ordered No Keep Looped
 			negates), then discard this Explore token.
 		"""
 		
+		Remove TokenExploreCellViaTortureChamber
 		exploredCell = true
 	End Page Explore
 	
 	Page PlaceHoleInWall
 		Visible When readAboutBoy
+		Triggered By @ReadAboutBoy When exploredCell
 		
 		Add TokenCellHoleInWall!
 		
 		Text """
 			A ray of light coming from the middle of a solid wall catches your
-			eye. Place a Sight token as indicated. This must be the hole you
-			read about in the journal.
+			eye. This must be the hole you read about in the journal.
 			
 			Place a Trapdoor as indicated.
 		"""
@@ -43,7 +42,10 @@ Book Cell Ordered No Keep Looped
 	
 		Add TokenExploreAltarViaCell!
 		
-		Text "Place a Sight token as indicated."
+		Text """
+			You should probably look through the hole to see where it leads.
+			Place a Sight token as indicated.
+		"""
 	End Page PlaceExploreAltarViaCell
 	
 	Page PlaceDavidsSon
@@ -52,14 +54,20 @@ Book Cell Ordered No Keep Looped
 		Add TokenSearchCellDavidsSon!
 		
 		Text """
-			A boy lies on the floor of the cell, moaning quietly. Place a Person
-			token as indicated. This is David's son.
+			 A boy is chained to the wall, lying on the floor, and moaning
+			quietly. Place a Person token as indicated. This is David's son.
+		"""
+		
+		If readAboutBoy Then Text """
+			A boy is chained to the wall, lying on the floor, and moaning
+			quietly. Place a Person token as indicated. This is David's son,
+			the sacrifice.
 		"""
 	End Page PlaceDavidsSon
 	
-	Page PlaceExit No Text
+	Page PlaceEnd No Text
 		Exit
-	End Page PlaceExit
+	End Page PlaceEnd
 	
 	Page SearchBoy
 		Text """
@@ -85,21 +93,8 @@ Book Cell Ordered No Keep Looped
 			<i>A hole in the wall? That must be in the cell you found earlier,
 			<i> you think to yourself.
 		"""
-	End Page
-	
-	/*
-	Page PlaceExploreAltarViaCell
-		Visible When Not ritual
-		
-		Add TokenExploreAltarViaCell!
-		
-		Text "Place a Sight token as indicated"
 		
 		cellHoleFound = true
-	End Page PlaceExploreAltarViaCell
-	*/
-	
-	Page PlaceExploreAltarViaCellExit No Text
 		Exit
-	End Page PlaceExploreAltarViaCellExit
+	End Page
 End Book Cell

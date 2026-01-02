@@ -61,31 +61,59 @@ Book Startup Ordered No Keep Looped
 	Page ShowEverything No Text
 		Visible When testMode
 		
-		Add TokenTestPlaceDriveway, TokenTestTakeBooks, TokenTestStartRitual
-		Add TokenTestRitualPreparations, TokenTestRitualFinished
-		Add TokenTestPlaceTortureChamber, TokenTestPlaceLibraryViaStudy
-		Add TokenTestPlaceLibraryAfterCultists, TokenTestPlaceChapelViaLibrary
-		Add TokenTestPlaceKitchenViaDiningRoom, TokenTestPlaceStudyViaHall2
-		Add TokenTestPlaceHall2ViaHall1, TokenTestPlaceStudyViaFoyer
-		Add TokenTestPlaceDungeonCell, TokenTestPlaceCryptViaDungeonCave
-		Add TokenTestPlaceDiningRoomViaBackdoor, TokenTestPlaceCryptViaChapel
-		Add TokenTestPlaceCoatRoomViaGallery, TokenTestPlaceAltar
-		Add TokenTestInitChosenInvestigator, TokenTestPlaceDriveway
-		Add TokenTestBasementViaDiningRoomSight, TileStudy, TileHall2
-		Add TileGallery, TileFoyer, TileDriveway, TileDiningRoom, TileCrypt
-		Add TileChapel, TileBasement, TileBackyard, TileAltar
-		Add TokenTestPlaceFoyerViaGallery
-		Add TokenTestPlaceFoyerViaHall2, TokenTestPlaceStudyViaFoyer
-		Add TokenTestPlaceStudyViaHall2, TokenTestPlaceFoyerViaStudy
-		Add TokenTestPlaceDungeonCaveViaBasement
-		Add TokenTestPlaceDungeonCaveViaCrypt
-		Add TokenTestPlaceBackdoorViaDriveway, TokenTestPlaceGalleryViaHall1
-		Add TokenTestJournal2, TokenTestBenTrigger, TileHall1
-		Add TileTortureChamber, TokenBackyardBenBefore, TokenDiningRoomBen
-		Add TokenBackyardBenPassive, TokenTestBackdoorLocked
-		Add TokenTestSearchFluxStabilizer, TokenTestPlaceHall1ViaDiningRoom
+		Add TileAltar
+		Add TileBackyard
+		Add TileBasement
+		Add TileChapel
+		Add	TileCrypt
+		Add TileDiningRoom
+		Add TileDriveway
+		Add	TileFoyer
+		Add	TileGallery
+		Add	TileHall1
+		Add TileHall2
+		Add TileStudy
+		Add TileTortureChamber
 		
-		Add Token0
+		
+		Add TokenTestExploreAltar
+		Add TokenTestExploreBackyardViaDriveway
+		Add TokenTestExploreBasementViaDiningRoom
+		Add TokenTestExploreChapelViaLibrary
+		Add TokenTestExploreCoatRoomViaGallery
+		Add TokenTestExploreCryptViaChapel
+		Add TokenTestExploreCryptViaDungeonCave
+		Add TokenTestExploreDiningRoomViaBackyard
+		Add TokenTestExploreDrivewayViaStartup
+		Add TokenTestExploreDungeonCaveViaBasement
+		Add TokenTestExploreDungeonCaveViaCrypt
+		Add TokenTestExploreDungeonCellViaTortureChamber
+		Add TokenTestExploreFoyerViaGallery
+		Add TokenTestExploreFoyerViaHall2
+		Add TokenTestExploreFoyerViaStudy
+		Add TokenTestExploreGalleryViaHall1
+		Add TokenTestExploreHall1ViaDiningRoom
+		Add TokenTestExploreHall2ViaFoyer
+		Add TokenTestExploreHall2ViaHall1
+		Add TokenTestExploreHall2ViaStudy
+		Add TokenTestExploreKitchenViaDiningRoom
+		Add TokenTestExploreLibraryAfterCultist
+		Add TokenTestExploreLibraryViaStudy
+		Add TokenTestExploreStudyViaFoyer
+		Add TokenTestExploreStudyViaHall2
+		Add TokenTestExploreTortureChamberViaDungeonCave
+		
+		Add TokenTestSearchFluxStabilizer
+
+		Add TokenTestTakeBooks
+		Add TokenTestStartRitual
+		Add TokenTestRitualPreparations
+		Add TokenTestRitualFinished
+		Add TokenTestInitChosenInvestigator
+		Add TokenTestJournal2
+		Add TokenBackyardBenBefore
+		Add TokenBackyardBenPassive
+		Add TokenDiningRoomBen
 		
 		Exit
 	End Page ShowEverything
@@ -126,6 +154,6 @@ Book Startup Ordered No Keep Looped
 	
 	Page PlaceDriveway No Text
 		Not Visible When testMode
-		Trigger @PlaceDriveway
+		Trigger @ExploreDrivewayViaStartup
 	End Page PlaceDriveway
 End Book Startup

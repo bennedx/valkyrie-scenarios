@@ -3,7 +3,7 @@ Language English
 Book Basement Ordered No Keep Looped
 
 	Page Place
-		Triggered By @PlaceBasement
+		Triggered By @ExploreBasementViaDiningRoom
 		
 		Prolog """
 			The basement is so dark you cannot see your hand when you put it 
@@ -17,8 +17,8 @@ Book Basement Ordered No Keep Looped
 		
 		TEXT """
 			The basement is dark, even with your light. Place the
-			{c:TileBasement} tile and wall as indicated, then remove all Sight
-			and Explore tokens leading to this room.
+			{c:TileBasement} tile and wall as indicated, then remove this
+			Sight token.
 		"""
 		
 		exploredBasement = true
@@ -39,38 +39,44 @@ Book Basement Ordered No Keep Looped
 		"""
 	End Page PlaceDarkness
 
-	Page PlaceTrapdoor
-		Visible When readAboutBasementDoorToCave
-		
-		Add TokenSearchBasementTrapdoor!
-		
-		Text """
-			A pile of trash sits in the corner. From here, it looks like it was
-			recently dumped. Place a Search token as indicated.
-		"""
-	End Page PlaceTrapdoor
-	
 	Page PlaceEvidence
 		Add TokenSearchBasementEvidence!
 		
 		Text """
-			There is more junk in one of the corners. Place a Search token as
-			indicated.
+			There is a pile of junk in one of the corners. Place a Search token
+			as indicated.
 		"""
 		
 		Trigger @MoveAfterExplore
-		Exit
 	End Page PlaceEvidence
+
+	Page PlaceExploreDungeonCaveViaBasement
+		Visible When readAboutExploreDungeonCaveViaBasement
+		Triggered By @ReadAboutExploreDungeonCaveViaBasement When Not exploredBasement
+		
+		Add TokenSearchBasementTrapdoor!
+		
+		Text """
+			A pile of trash sits in the corner of the basement. It looks freshly
+			dumped. Is there where the journal talks about a door? Place a
+			Search token as indicated.
+		"""
+	End Page PlaceExploreDungeonCaveViaBasement
+	
+	Page PlaceEnd No Text
+		Exit
+	End Page PlaceEnd
+	
 	
 	Page SearchEvidence
+		Not Visible
 		Triggered By @SearchBasementEvidence
 		
 		Prolog "There is a lot of refuse here."
 		
-		Add QItemEvidenceBasementEvidence
 		Remove TokenSearchBasementEvidence
 		
-		Text """
+		Text QItemEvidenceBasementRubble """
 			You fish through the rubbish. While you don't find anything of use,
 			you do find several old pictures and a damaged necklace. One of the
 			pictures shows an open door with a man walking through it. The door
@@ -86,6 +92,7 @@ Book Basement Ordered No Keep Looped
 	End Page SearchEvidence
 	
 	Page SearchTrapdoor
+		Not Visible
 		Triggered By @SearchBasementTrapdoor
 		
 		Prolog """
@@ -94,22 +101,15 @@ Book Basement Ordered No Keep Looped
 		Button "Search"
 		
 		Remove TokenBasementWall, TokenSearchBasementTrapdoor
-		
-		Text """
-			As you dig through the junk, you realize it is hiding something.
-			You sweep it away and find a door under it. Remove this Search token
-			and the wall.
-		"""
-	End Page SearchTrapdoor
-		
-	Page SearchTrapdoorExplore
+		Remove TokenDungeonCaveWall
 		Add TokenExploreDungeonCaveViaBasement!
 		
 		Text """
-			The door looks like it goes farther underground. Place an Explore
-			token as indicated.
+			As you dig through the junk, you realize it is hiding something.
+			You sweep it away and find a door. Discard this Search token
+			and the wall, then place an Explore token as indicated.
 		"""
 		
-		Exit		
-	End Page SearchTrapdoorExplore
+		Exit
+	End Page SearchTrapdoor
 End Book Basement

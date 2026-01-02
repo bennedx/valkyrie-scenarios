@@ -78,8 +78,8 @@ Book Journal Ordered Keep Looped
 			before Saturday.
         """
 
-        readAboutBasementDoorToCave = true
-        Trigger @foundBasementDoorToCaveViaJournal
+        readAboutExploreDungeonCaveViaBasement = true
+        Trigger @ReadAboutExploreDungeonCaveViaBasement
     End Page Page3
  
     Page Page4

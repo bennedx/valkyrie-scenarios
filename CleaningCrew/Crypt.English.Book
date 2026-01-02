@@ -3,6 +3,7 @@ Language English
 Book Crypt Ordered No Keep Looped
 	Page ExploreViaChapel
 		Not Visible
+		Triggered By @ExploreCryptViaChapel
 		
 		exploredCryptViaChapel = true
 		Goto PlaceCrypt
@@ -10,6 +11,7 @@ Book Crypt Ordered No Keep Looped
 	
 	Page ExploreViaDungeonCave
 		Not Visible
+		Triggered By @ExploreCryptViaDungeonCave
 		
 		exploredChapelViaDungeon = true
 		Goto PlaceCrypt
@@ -27,19 +29,20 @@ Book Crypt Ordered No Keep Looped
 		
 		Text """
 			You walk forward a bit and realize the other part of the cave
-			is a crypt containing above-ground vaults. The air is different, 
-			even from the cave you have been in.
+			is a crypt containing above-ground stone caskets. The air is
+			different, even from the cave you have been in.
 			
 			Place the {c:TileCrypt} tile and discard this Sight token.
 		"""
 		
 		If exploredCryptViaChapel Then Text """
-			You peer into the darkspace but cannot see much. Move 1 space
+			You peer into the dark space but cannot see much. Move 1 space
 			into the explored area.
 			
 			You eyes adjust quickly to the light.
 			
-			Place the {c:TileCrypt} tile and discard this Search token.
+			Place the {c:TileCrypt} tile and discard this Search and any
+			Sight tokens leading to the explored area.
 		"""
 		
 		Goto PlaceSearchPendant
@@ -50,8 +53,8 @@ Book Crypt Ordered No Keep Looped
 		Add TokenSearchCryptPendant!
 		
 		Text """
-			One of the vaults is open. You aren't sure you want to look inside.
-			Place a Search token as indicated.
+			One of the stone caskets is open. You aren't sure you want to look
+			inside. Place a Search token as indicated.
 		"""
 		
 		If exploredCryptViaDungeonCave Then Goto PlaceExploreChapelViaCrypt
@@ -73,37 +76,35 @@ Book Crypt Ordered No Keep Looped
 	Page PlaceSearchHenry
 		Not Visible
 		Text """
-			The casket on the end looks much newer than the others. Place a
-			Search token as indicated.
+			The stone casket on the end looks much newer than the others. Place
+			a Search token as indicated.
 		"""
-	End Page PlaceSearchHenry
-	
-	Page PlaceExit No Text
 		Exit
-	End Page PlaceExit
+	End Page PlaceSearchHenry
 	
 	Page SearchChapelViaCrypt
 		Not Visible
 		Triggered By @SearchChapelViaCrypt
 		
 		Prolog """
-			The wall in front of you is smooth rock. Is that a cut?
+			The wall in front of you is smooth rock. But is that a cut?
 		"""
 		Button "Search"
 		
 		Text """
 			You walk up to the wall and put your hands on it, moving around
 			until you see it:  a razor-thin, rectangular cut into the rock. The
-			cut is about the size of the other doors inside the house. Maybe
+			cut is about the size of the doors inside the house. Maybe
 			this is a door too?
 			
-			A lot of time passes before you finally give up looking for...
-			something. Become Stunned.
+			A lot of time passes before you give up looking for a way
+			to open it. Become Stunned.
 			
 			Discard this Search token.
 		"""
 		
 		Remove TokenSearchChapelViaCrypt
+		Exit
 	End Page SearchChapelViaCrypt
 	
 	Page SearchPendant
@@ -111,7 +112,7 @@ Book Crypt Ordered No Keep Looped
 		Triggered By @SearchCryptPendant
 		
 		Prolog """
-			The casket inside the vault is also open. You wonder what might have
+			You walk over to the open stone casket. You wonder what might have
 			been interred with the body. And whether there is anything left
 			after whatever descecration left the casket open.
 		"""
@@ -119,7 +120,7 @@ Book Crypt Ordered No Keep Looped
 		
 		Remove TokenSearchCryptPendant
 		
-		Text """
+		Text QItemElderSignPendant """
 			Mixed in with the bones, tattered clothing, and cobwebs are several
 			pieces of junk jewelry, tarnished and of no value. But there is one
 			piece that looks like it might be worth something. Gain the
@@ -135,9 +136,9 @@ Book Crypt Ordered No Keep Looped
 		Triggered By @SearchCryptHenry
 		
 		Prolog """
-			A brass plate on top of the casket looks like it has the name of the
-			person inside. The letters dance and swim, much like the text in the
-			{c:QItemOldJournal}.
+			A brass plate on top of the stone casket looks like it has the name
+			of the person inside. The letters dance and swim, much like the text
+			in the {c:QItemDwm}.
 			
 			Only {c:EventChosenInvestigator} can read the inscription.
 		"""
@@ -145,14 +146,15 @@ Book Crypt Ordered No Keep Looped
 		
 		Text """
 			When you lean over to read it, the letters coalesce into the name
-			and dates of the person inside. You read out loud:
+			and dates of the person inside.
 			
 			Here lies Henry Smythe\n
 			Born 12 May, 1885 -- Died 31 October, 1915
 
-			It seems your father died after stopping the ritual 10 years
-			ago. You cannot remember him, but thinking about him lying dead
-			three feet away makes your chest hurt.
+			It seems your father didn't leave, he died after stopping the ritual
+			10 years ago, probably killed by your uncle. You cannot remember
+			him, but thinking about him lying dead three feet away makes your
+			chest hurt.
 			
 			Remove this Search token.
 		"""

@@ -110,7 +110,7 @@ Book Hall1 Ordered No Keep Looped
 		"""
 		
 		Remove TokenSearchHall1Rug
-		
+		foundEvidenceCount = foundEvidenceCount + 1
 		Exit
 	End Page SearchRug
 	

@@ -356,6 +356,7 @@ Book Chapel Ordered No Keep Looped
 		"""
 		
 		Remove TokenSearchCryptViaChapel
+		Remove ChapelWall
 		
 		Goto SearchCryptViaChapel2
 	End Page SearchCryptViaChapel
@@ -363,18 +364,20 @@ Book Chapel Ordered No Keep Looped
 	Page SearchCryptViaChapel2
 		Not Visible
 		
-		TEXT """
+		Add TileCrypt
+		
+		Text """
 			You pull the wall back to expose a doorway with a stone door. You
-			push on it to expose the {c:TileCrypt}.
+			push on it. Place the {c:TileCrypt} tile.
 		"""
 		
 		If exploredCrypt Then TEXT """
-			You pull back the wall to find a doorway with a stone door. <<This
-			is the door we found in the crypt earlier.>> It also popped loose
-			and, when you push on it, it swings open into the {c:Crypt}.
+			You pull back the wall to find a doorway with a stone door. You
+			push on it. Place the {c:TileCrypt} tile. <<This
+			is the door we found in the crypt earlier,>> you say.
 		"""
 		
-		If Not exploredCrypt Then Trigger @PlaceCryptViaChapel
+		If Not exploredCrypt Then Trigger @ExploreCryptViaChapel
 
 		Exit
 	End Page SearchCryptViaChapel2

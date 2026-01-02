@@ -2,7 +2,7 @@ Language English
 
 Book TortureChamber Ordered No Keep Looped
 
-	Page Explore
+	Page Place
 		Triggered By @ExploreTortureChamberViaDungeonCave
 		
 		Prolog """
@@ -23,7 +23,7 @@ Book TortureChamber Ordered No Keep Looped
 		"""
 
 		exploredTortureChamber = true
-	End Page Explore
+	End Page Place
 
 	Page PlaceRandom
 		Add TokenSearchTortureChamberRandom!
@@ -44,6 +44,7 @@ Book TortureChamber Ordered No Keep Looped
 	End Page PlaceExploreCell
 	
 	Page SearchRandom
+		Not Visible
 		Triggered By @SearchTortureChamberRandom
 		
 		Prolog "An old restraint device seems to have been used recently."

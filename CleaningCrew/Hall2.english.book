@@ -74,6 +74,7 @@ Book Hall2 Ordered No Keep Looped
 			Search token.
 		"""
 
+		foundEvidenceCount = foundEvidenceCount + 1
 		Exit
 	End Page SearchEvidence
 
