@@ -33,7 +33,7 @@ Book Foyer Ordered No Keep Looped
 	
 	Page ExploreFoyerViaStudy
 		Not Visible
-		Triggered BY @ExploreFoyerViaStudy
+		Triggered By @ExploreFoyerViaStudy
 		
 		Prolog "This door leads farther into the house."
 		Button "Explore"
@@ -43,6 +43,17 @@ Book Foyer Ordered No Keep Looped
 		exploredFoyerViaStudy = true
 		Goto PlaceFoyer
 	End Page ExploreFoyerViaStudy
+	
+	Page ExploreGalleryViaFoyer
+		Not Visible
+		Triggered By @ExploreGalleryViaFoyer
+		
+		Text """
+			The door is beautiful:  beautifully carved and finished. You try
+			the handle, but it is locked.
+		"""
+		Exit
+	End Page ExploreGalleryViaFoyer
 	
 	Page PlaceFoyer
 		Remove TokenExploreFoyerViaGallery, TokenExploreFoyerViaHall2, TokenExploreFoyerViaStudy
@@ -74,6 +85,16 @@ Book Foyer Ordered No Keep Looped
 			house. Place an Explore token as indicated.
 		"""
 	End Page PlaceExploreStudy
+	
+	Page PlaceExploreGallery
+		Not Visible When exploredGallery
+		
+		Add TokenExploreGalleryViaFoyer
+		Text """
+			An ornate door leads further into the house. Place an Explore
+			token as indicated.
+		"""
+	End Page PlaceExploreGallery
 	
 	Page PlaceCandles
 		Add TokenSearchFoyerCandles!
@@ -128,6 +149,7 @@ Book Foyer Ordered No Keep Looped
 	End Page PlaceSearchSpell
 	
 	Page SearchRandom
+		Not Visible
 		Triggered BY @SearchFoyerRandom
 		
 		Prolog """
@@ -148,6 +170,7 @@ Book Foyer Ordered No Keep Looped
 	End Page SearchRandom
 	
 	Page SearchSpell
+		Not Visible
 		Triggered By @SearchFoyerSpell
 		
 		Prolog """

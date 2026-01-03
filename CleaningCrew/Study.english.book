@@ -7,7 +7,6 @@ Book Study Ordered No Keep Looped
 		
 		exploredStudyViaHall2 = true
 		exploredStudyViaFoyer = false
-		Goto ExploreStudy
 	End Page ExploreStudyViaHall2
 
 	Page ExploreStudyViaFoyer No Text
@@ -16,14 +15,13 @@ Book Study Ordered No Keep Looped
 		
 		exploredStudyViaHall2 = false
 		exploredStudyViaFoyer = true	
-		Goto ExploreStudy		
 	End Page ExploreStudyViaFoyer
 
 	Page ExploreStudy
 		Prolog """
 			A small plaque on this door reads <<Study.>>
 		"""
-		button "Explore"
+		Button "Explore"
 		
 		Remove TokenExploreStudyViaFoyer, TokenExploreStudyViaHall2
 		Add TileStudy, TokenDoorStudy!
@@ -72,12 +70,14 @@ Book Study Ordered No Keep Looped
 	End Page PlaceHealingStone
 	
 	Page SearchHealingStone
+		Not Visible
 		Triggered By @SearchStudyHealingStone
 		
 		Prolog """
 			The desk is covered in loose papers, books, and what look like
 			several ancient artifacts.
 		"""
+		Button "Search"
 			
 		Text QItemHealingStone """
 			You find several poor-quality stone carvings in the junk on the

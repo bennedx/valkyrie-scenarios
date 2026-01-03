@@ -93,9 +93,7 @@ Book Startup Ordered No Keep Looped
 		Add TokenTestExploreFoyerViaStudy
 		Add TokenTestExploreGalleryViaHall1
 		Add TokenTestExploreHall1ViaDiningRoom
-		Add TokenTestExploreHall2ViaFoyer
 		Add TokenTestExploreHall2ViaHall1
-		Add TokenTestExploreHall2ViaStudy
 		Add TokenTestExploreKitchenViaDiningRoom
 		Add TokenTestExploreLibraryAfterCultist
 		Add TokenTestExploreLibraryViaStudy

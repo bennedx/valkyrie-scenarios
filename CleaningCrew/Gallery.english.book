@@ -24,20 +24,18 @@ Book Gallery Ordered No Keep Looped
 			The room behind the door is--or was--stately, with high ceilings,
 			beautiful paintings, and furniture and rugs that look both rich and
 			comfortable. Dim light from the windows reflects off the dust,
-			giving the room an unearthly quality, making the room feel shabbier
-			than it actually is.
+			giving the room an quality, and making the room feel
+			even shabbier than it actually is.
 			
 			Place the {c:TileGallery} tile, then discard this Explore token.
 		"""
-		
-		exploredGallery = true
 	End Page PlaceGallery
 	
 	Page PlaceHall2
 		Add TokenExploreGalleryViaHall1Sight!, TokenHall1Investigators
 		
 		Text """
-			Feeble light oozes from the {c:TileGallery} door into the hallway. 
+			Feeble light oozes from the {c:TileGallery} into the hallway. 
 			Your eyes follow the light and it looks like the hall continues.
 			Place a Sight token as indicated, then move 1 space farther down
 			the hall.
@@ -52,27 +50,65 @@ Book Gallery Ordered No Keep Looped
 		Add TokenSearchHall1Painting!
 
 		Text """
-			Light from the {c:TileGallery} has, somehow, cast a ray directly
-			on a painting, making it glow with 
-			unnatural light. You can almost feel it calling to you. You shake it
-			off because paintings don't have power. Place a Search token as 
-			indicated.
+			Somehow, light from the {c:TileGallery} has cast a ray directly
+			on a painting, making it glow with unsettling light. You can almost
+			feel it calling to you. You shake it off because paintings don't
+			have power. Place a Search token as indicated.
 			
 			As you look away, you catch something moving in your 
-			peripheral vision. You glance back and the painting is still
-			lightly glowing, something that suddenly seems more troubling.
+			peripheral vision. You glance back and the painting is 
+			still glowing, something that suddenly seems even more troubling.
 		"""
 		
 		Exit
 	End Page PlaceHall1Painting
 	
-	Page PlaceExploreFoyerViaGallery
+	Page ExploreGalleryViaHall1After No Text
 		Not Visible
 		Triggered By @ExploreGalleryViaHall1 When PlaceGallery Is Read
+		
+		exploredGalleryViaHall = true
+	End Page ExploreGalleryViaHall1After
+
+	Page ExploreGalleryViaFoyer No Text
+		Not Visible
+		Triggered By @ExploreGalleryViaFoyer
+		
+		exploredGalleryViaFoyer = true
+	End Page
+	
+	Page ExploreGalleryAfter
+		Prolog """
+			You turn back to the {c:TileGallery}. An investigator in the Sight
+			token's space can look through the door.
+		"""
+		Button "Look"
+
+		Remove TokenExploreGalleryViaFoyer
 		Add TokenExploreFoyerViaGallery!
 
 		Text """
-			Turning back, you look through the {c:TileGallery} door.  
+			The gallery is larger than it first looked. The ceiling is vaulted
+			and windows rise from floor to ceiling. Thick curtains cover most
+			of them, but one is open and the curtain has torn and is hanging on
+			another. They let light into the room, and the dust is still
+			catching and scattering it. 
+			
+			Discard all Sight and Explore
+			tokens leading to this explored area.
+		"""
+		
+		exploredGalleryViaHall = true
+		exploredGallery = true
+	End Page ExploreGalleryAfter
+	
+	Page PlaceExploreFoyerViaGallery
+		Not Visible When exploredFoyer
+		
+		Remove TokenExploreGalleryViaFoyer
+		Add TokenExploreFoyerViaGallery!
+
+		Text """
 			Across the room is another door. Place an Explore token as
 			indicated.
 		"""
@@ -82,8 +118,8 @@ Book Gallery Ordered No Keep Looped
 		Add TokenExploreCoatRoomViaGallery!
 
 		Text """
-			A coat room sits in the corner across from you. Place an Explore
-			token as indicated.
+			A coat room sits in the corner across from you, its door ajar.
+			Place an Explore token as indicated.
 		"""
 	End Page PlaceGalleryCoatRoom
 		
@@ -101,6 +137,7 @@ Book Gallery Ordered No Keep Looped
 	End Page PlaceGalleryDvm
 
 	Page PlaceCoatRoom
+		Not Visible
 		Triggered By @ExploreCoatRoomViaGallery
 		
 		Add TokenSearchCoatRoomEvidence!
@@ -126,6 +163,7 @@ Book Gallery Ordered No Keep Looped
 	End Page PlaceCoatRoom
 
 	Page SearchDvm
+		Not Visible
 		Triggered By @SearchGalleryDvm
 		
 		Prolog "A pile of junk sits on the table between the divans."
@@ -147,9 +185,11 @@ Book Gallery Ordered No Keep Looped
 		"""
 		
 		foundDvm = true
+		Exit
 	End Page SearchDvm
 	
 	Page SearchCoatRoomEvidence
+		Not Visible
 		Triggered By @SearchCoatRoomEvidence
 		
 		Prolog """

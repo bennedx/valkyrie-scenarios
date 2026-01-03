@@ -34,8 +34,8 @@ Book Hall2 Ordered No Keep Looped
 		
 		Text """
 			A table has been knocked over, scattering its contents across the
-			room. <i>That broken lamp on the floor might help navigate this 
-			room,</i> you consider. Place a Search token as indicated.
+			room. <i>That broken lamp on the floor might help navigate the 
+			house,</i> you consider. Place a Search token as indicated.
 		"""
 		
 		Exit
