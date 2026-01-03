@@ -3,7 +3,7 @@ Language English
 Book Gallery Ordered No Keep Looped
 
 	Page PlaceGallery
-		Triggered By @ExploreGalleryViaHall1
+		Triggered By @ExploreGalleryViaHall1 When Unread
 		
 		Prolog """
 			You approach the door. It has a small brass plaque that reads
@@ -24,16 +24,29 @@ Book Gallery Ordered No Keep Looped
 			The room behind the door is--or was--stately, with high ceilings,
 			beautiful paintings, and furniture and rugs that look both rich and
 			comfortable. Dim light from the windows reflects off the dust,
-			giving the room an unearthly quality. The glowing dust makes the
-			room feel shabbier than it actually is.
+			giving the room an unearthly quality, making the room feel shabbier
+			than it actually is.
 			
 			Place the {c:TileGallery} tile, then discard this Explore token.
 		"""
 		
 		exploredGallery = true
+	End Page PlaceGallery
+	
+	Page PlaceHall2
+		Add TokenExploreGalleryViaHall1Sight!, TokenHall1Investigators
+		
+		Text """
+			Feeble light oozes from the {c:TileGallery} door into the hallway. 
+			Your eyes follow the light and it looks like the hall continues.
+			Place a Sight token as indicated, then move 1 space farther down
+			the hall.
+		"""
+		
+		Remove TokenHall1Investigators
 		
 		Trigger @ExploreHall2ViaHall1
-	End Page PlaceGallery
+	End Page PlaceHall2
 	
 	Page PlaceHall1Painting
 		Add TokenSearchHall1Painting!
@@ -49,10 +62,13 @@ Book Gallery Ordered No Keep Looped
 			peripheral vision. You glance back and the painting is still
 			lightly glowing, something that suddenly seems more troubling.
 		"""
+		
+		Exit
 	End Page PlaceHall1Painting
 	
 	Page PlaceExploreFoyerViaGallery
-
+		Not Visible
+		Triggered By @ExploreGalleryViaHall1 When PlaceGallery Is Read
 		Add TokenExploreFoyerViaGallery!
 
 		Text """
@@ -63,13 +79,12 @@ Book Gallery Ordered No Keep Looped
 	End Page PlaceExploreFoyerViaGallery
 
 	Page PlaceGalleryCoatRoom
-		Add TokenExploreCoatRoom!
+		Add TokenExploreCoatRoomViaGallery!
 
 		Text """
 			A coat room sits in the corner across from you. Place an Explore
 			token as indicated.
 		"""
-		
 	End Page PlaceGalleryCoatRoom
 		
 	Page PlaceGalleryDvm
@@ -86,10 +101,14 @@ Book Gallery Ordered No Keep Looped
 	End Page PlaceGalleryDvm
 
 	Page PlaceCoatRoom
-		Triggered By @ExploreCoatRoom
+		Triggered By @ExploreCoatRoomViaGallery
 		
-		Remove TokenExploreCoatRoom
 		Add TokenSearchCoatRoomEvidence!
+
+		Prolog """
+			You walk over to the coat room to have a look.
+		"""
+		Button "Explore"
 
 		Text """
 			The coat room still has a number of coats hung neatly on one side.
@@ -99,6 +118,8 @@ Book Gallery Ordered No Keep Looped
 			A half-filled box sits in one of the corners. Place a Search token
 			as indicated.
 		"""
+
+		Remove TokenExploreCoatRoomViaGallery
 		
 		Trigger @MoveAfterExplore
 		Exit
@@ -118,6 +139,9 @@ Book Gallery Ordered No Keep Looped
 			old and worn, but you get the sense it possesses great power.
 
 			Gain the {c:QItemDvm} Common Item, then discard this Search token.
+			This card cannot be removed from the game; if you are asked to,
+			drop it instead.
+			
 			An investigator with the {c:QItemDvm} can interact with it in the
 			app.
 		"""

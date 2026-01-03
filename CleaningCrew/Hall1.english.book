@@ -177,22 +177,25 @@ Book Hall1 Ordered No Keep Looped
 		Prolog """
 			She looks at you like she wants to say
 			something, but is holding back. She still looks serious, but also
-			concerned and maybe afraid. You notice that she seems
-			to be glowing. And maybe a bit transparent.
+			concerned and maybe afraid. You think your mind is playing
+			tricks on you because she seems to be glowing. And maybe a 
+			little transparent.
 
 			She will only speak with {c:EventChosenInvestigator}.		
 		"""
 		Button "Talk to her"
 		
 		Text """
-			She brightens up. <<It's good to see you again. I thought you
-			had forgotten me after that night. I've missed you.>>
+			She brightens up, both emotionally and her glow. <<It's good to see
+			you again. I thought you had forgotten me after that night. I've
+			missed you.>>
 
 			You are surprised at what she says. <i>Who is this girl? Why does
 			she think she knows me?</i>
 
-			The girl walks over and turns to face you. She looks up 
-			at you expectantly.
+			The girl walks over and turns to face you. <<I know you have many
+			questions and I'll get to them. But first, you need to know that you
+			and your partners are in danger. We need to move quickly.>>
 
 			Move the Green Girl token to your investigator card.
 			She will follow you to whatever ends you meet in this house.

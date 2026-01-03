@@ -10,10 +10,11 @@ Book Hall2 Ordered No Keep Looped
 		Add TileHall2, TokenWallHall2!
 
 		Text """
-			Feeble light oozes from the {c:TileGallery} door into the hallway. 
-			You can see now that the hallway continues into the dark. Place the
+			Now that you are closer, you can see it clearly. Place the
 			{c:TileHall2} tile and a wall as indicated.
 		"""
+		
+		Remove TokenHall2Investigators
 		
 		exploredHall2ViaHall1 = true
 		exploredHall2 = true
@@ -28,26 +29,13 @@ Book Hall2 Ordered No Keep Looped
 		"""
 	End Page PlacePart2
 	
-	Page PlaceInvestigator
-		Visible When exploredBackyardNicely
-		Add TokenHall2Investigators
-		
-		Text """
-			Neither {c:EventChosenInvestigator} nor the investigator who is
-			Exploring walks down the hall, but any one of the others may move 1
-			space into {c:TileHall2} as indicated.
-		"""
-		
-		Remove TokenHall2Investigators
-	End Page PlaceInvestigator
-	
 	Page PlaceHall2Evidence
-		Add TokenSearchHall2Evidence
+		Add TokenSearchHall2Evidence!
 		
 		Text """
 			A table has been knocked over, scattering its contents across the
 			room. <i>That broken lamp on the floor might help navigate this 
-			room,</i> you think to yourself. Place a Search token as indicated.
+			room,</i> you consider. Place a Search token as indicated.
 		"""
 		
 		Exit
@@ -59,21 +47,22 @@ Book Hall2 Ordered No Keep Looped
 		Prolog "The upended table has spilled its contents across the floor."
 		Button "Search"
 		
-		Remove TokenSearchHall2Evidence
-		
 		Text QItemEvidenceHall2 """
-			You start with the lamp but it is too broken to use. Besides the
-			lamp, there is a dead plant and scraps of paper tossed around. One
-			of the scraps catches your eye:  it is spattered in dried blood.
-			The note talks about preparations for a ritual and mentions
-			something about a chapel and crypt. The
-			author of the note wants to stop the ritual and it is clear he will
-			do anything to stop it. The note is signed <<Henry Smythe.>>
+			You start with the lamp but it is too broken to use. There is also a
+			dead plant and scraps of paper tossed around. One of the scraps
+			catches your eye because it is spattered in dried blood. The piece
+			of the note you have talks about preparations for a ritual and
+			mentions something about a chapel and crypt. You look at another and
+			it becomes clear that the author of the note wants to stop the
+			ritual and it is clear he will do anything to stop it. Another scrap
+			signs the note <<Henry Smythe.>>
 
 			Gain the {c:QItemEvidenceHall2} Unique Item, then discard this
 			Search token.
 		"""
 
+		Remove TokenSearchHall2Evidence
+		
 		foundEvidenceCount = foundEvidenceCount + 1
 		Exit
 	End Page SearchEvidence

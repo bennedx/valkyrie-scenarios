@@ -2,6 +2,7 @@ LANGUAGE English
 
 Book Study Ordered No Keep Looped
 	Page ExploreStudyViaHall2 No Text
+		Not Visible
 		Triggered By @ExploreStudyViaHall2
 		
 		exploredStudyViaHall2 = true
@@ -10,6 +11,7 @@ Book Study Ordered No Keep Looped
 	End Page ExploreStudyViaHall2
 
 	Page ExploreStudyViaFoyer No Text
+		Not Visible
 		Triggered By @ExploreStudyViaFoyer
 		
 		exploredStudyViaHall2 = false
@@ -21,21 +23,32 @@ Book Study Ordered No Keep Looped
 		Prolog """
 			A small plaque on this door reads <<Study.>>
 		"""
+		button "Explore"
 		
 		Remove TokenExploreStudyViaFoyer, TokenExploreStudyViaHall2
-		Remove TokenExploreFoyerViaStudy
 		Add TileStudy, TokenDoorStudy!
 		
 		Text """
 			The door opens smoothly, like it has been used recently. Behind it,
 			you find a well-appointed study.
 
-			Discard all Explore tokens leading to this room. Place the 
-			{c:TileStudy} tile and a door as indicated.
+			Place the {c:TileStudy} tile and a door as indicated. Discard all
+			Explore tokens leading to the explored area.
 		"""
 	
 		exploredStudy = true
 	End Page ExploreStudy
+
+	Page PlaceExploreFoyer
+		Not Visible When exploredFoyer
+
+		Add TokenExploreFoyerViaStudy!
+		
+		Text """
+			Next to you is a door that leads farther into the house. Place an
+			Explore token as indicated.
+		"""
+	End Page PlaceExploreFoyer
 
 	Page PlaceExploreLibrary
 		Add TokenExploreLibraryViaStudy!
@@ -67,10 +80,14 @@ Book Study Ordered No Keep Looped
 		"""
 			
 		Text QItemHealingStone """
-			You find an ugly stone carving among the detritus on the desk.
-			You aren't sure why, but you must have it. Gain the
-			{c:QItemHealingStone} Unique Item, then discard this Search token.
+			You find several poor-quality stone carvings in the junk on the
+			desk. You sigh and turn away. But there is something about those
+			artifacts. You turn back. You aren't sure why, but that ugly
+			carving... you must have it. Gain the {c:QItemHealingStone} Unique
+			Item, then discard this Search token.
 		"""
+		
+		Remove TokenSearchStudyHealingStone
 		
 		foundHealingStone = true
 		Exit
