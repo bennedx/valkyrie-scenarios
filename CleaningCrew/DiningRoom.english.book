@@ -30,8 +30,8 @@ Book PlaceDiningRoom Ordered No Keep Looped
 			dining room. The room makes the yard look orderly. Heaps of rubbish
 			and broken glassware are strewn about the room.
 
-			Place the {c:TileDiningRoom} tile and door as indicated, then remove
-			this Explore token.
+			Place the {c:TileDiningRoom} tile and door as indicated, then
+			discard this Explore token.
 		"""
 		
 		exploredDiningRoom = true
@@ -88,8 +88,7 @@ Book PlaceDiningRoom Ordered No Keep Looped
 		Text """
 			As you walk into the house, you remember the book in the driveway
 			and glance back toward the gate as you step inside. 
-			{c:EventChosenInvesigator} moves 1 space into the
-			{c:TileDiningRoom}.
+			{c:EventChosenInvestigator} moves into the device's space.
 		"""
 	End Page Journal
 End Book PlaceDiningRoom
@@ -98,7 +97,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 
 	Page StartFluxStabilizer
 		Not Visible
-		Triggered By @SearchFluxStabilizer When Unread
+		Triggered By @SearchDiningRoomFluxStabilizer When Unread
 		If testMode Then Trigger @AskAboutGate
 	
 		Prolog "A small device with gears, hoses, and lights sits on the table."
@@ -113,11 +112,6 @@ Book SearchDiningRoom Ordered No Keep Looped
 			{c:EventChosenInvestigator} recovers first and stands back up. As
 			they approach the device, nothing happens. Move
 			{c:EventChosenInvestigator} into the device's space.
-
-			The other investigators are wary of this device and will avoid it at
-			all costs. When it is not held by {c:EventChosenInvestigator}, no
-			other investigator can stay in its space. Fear makes them
-			move away immediately.
 		"""
 		
 		// wanderers are the cultists who seem to be coming from the secret
@@ -170,7 +164,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 		
 		Mark Paper Read
 		kateHasFluxStabilizer = true
-		Exit
+		Goto Puzzle1
 	End Page KatePicksUp
 	
 	Page KateDoesNotPickUp
@@ -183,28 +177,15 @@ Book SearchDiningRoom Ordered No Keep Looped
 		"""
 		
 		kateHasFluxStabilizer = false
-		Exit
+		Goto Puzzle1
 	End Page KateDoesNotPickUp
-
-	Page Paper
-		Not Visible
-		Text """
-			There is a piece of paper next to the device: instructions. It's
-			called a <<{c:QItemFluxStabilizer},>> and it repels monsters.
-			<<MONSTERS!?>> you erupt loudly.
-
-			Everyone turns to look at you.
-		"""
-		
-		Exit
-	End Page Paper
 
 	Page Puzzle1
 		Not Visible
-		Triggered By @SearchFluxStabilizer When Unread And StartFluxStabilizer Is Read
+		Triggered By @SearchDiningRoomFluxStabilizer When Unread And StartFluxStabilizer Is Read
 
 		Prolog """
-			There seems to be a control panel. Maybe you can restart it? You
+			There is a control panel. Maybe you can restart it? You
 			reach down and begin to fiddle with the buttons and dials.
 
 			{c:EventChosenInvestigator} may attempt the puzzle using {lore}.
@@ -220,7 +201,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 
 	Page Puzzle2
 		Not Visible
-		Triggered By @SearchFluxStabilizer When Puzzle1 Is Read
+		Triggered By @SearchDiningRoomFluxStabilizer When Puzzle1 Is Read
 		
 		Prolog """
 			Maybe if you randomly flipped a few more buttons or turned a few
@@ -248,18 +229,18 @@ Book SearchDiningRoom Ordered No Keep Looped
 	Page GetFluxStabilizer
 		Not Visible
 		
-		Text """
-			The device begins humming quietly.
+		Text QItemFluxStabilizer """
+			The device sputters, then begins humming quietly.
 
-			Discard this search token, then place the {c:QItemFluxStabilizer}
-			common item in its place.
+			Gain the {c:QItemFluxStabilizer} common item, then discard
+			this Search token.
 
-			{c:EventChosenInvestigator} can drop or pick up this item, but
-			cannot trade it to another investigator. When the
+			{c:EventChosenInvestigator} can drop or pick up this item. No other
+			investigator can hold it. When the
 			{c:QItemFluxStabilizer} is on the floor, any investigator who moves
 			or is moved into its space immediately moves 1 space away from the
 			device. Move toward the {c:TileDiningRoom} if possible; you do not
-			need to evade monsters when moving this way.
+			evade monsters when moving this way.
 			{c:EventChosenInvestigator} is immune to this effect.
 
 			When {c:EventChosenInvestigator} holds this item, add 1 additional
@@ -268,6 +249,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 			This information can be reviewed in the app.
 		"""
 
+		Remove TokenSearchDiningRoomFluxStabilizer
 		Goto GetFluxStabilizer2
 	End Page GetFluxStabilizer
 
@@ -279,7 +261,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 	
 		Text """
 			Benjamin walks through the door into the {c:TileDiningRoom}. Move
-			the purple man token as indicated.
+			the Purple Man token as indicated.
 
 			As he walks in he says, <<I heard a noise. This house
 			can be dangerous with everything in disarray. Please be careful.>>
@@ -289,7 +271,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 		
 		If Not exploredBackyardNicely Then Text """
 			Benjamin walks briskly through the door snapping, <<What are you
-			folks doing in here?!>> Move the purple man token as indicated.
+			folks doing in here?!>> Move the Purple Man token as indicated.
 
 			He seems to have something in his hand.
 		"""
@@ -316,48 +298,49 @@ Book SearchDiningRoom Ordered No Keep Looped
 
 			<<Blood will... chapel... altar>>
 
-			Gain the {c:QItemEvidenceDiningRoom} Unique Item, gain 2 {clue}, and
-			discard this Search token.
+			Gain the {c:QItemEvidenceDiningRoom} Unique Item and gain 2 {clue},
+			then discard this Search token.
 		"""
 		
 		foundEvidenceCount = foundEvidenceCount + 1
 	End Page PaperInBox
 End Book SearchDiningRoom
 
-Book ExploreKitchen Ordered No Keep Looped
-	Page Start
+Book Kitchen Ordered No Keep Looped
+	Page Explore
 		Triggered By @ExploreKitchenViaDiningRoom
 		
 		Prolog """
 			The swinging door doesn't look like it will hold up to much use, so
 			you'll need to be careful.
 		"""
-		Button "Push through door"
+		Button "Explore"
 
-		Remove TokenExploreKitchenViaDiningRoom
-		
 		Text """
 			Compared to the dining room, the kitchen looks clean. The
-			cupboards are empty. A couple of barrels of wine and a
-			half-packed box have been left behind. Maybe the rest of
-			the house will be as easy to clean as this room.
+			cupboards are empty. A couple of barrels of ale and a half-packed
+			box are the on the floor. Several cooking tools were left 
+			on the counter.
+			
+			<i>Maybe the rest of the house will be as easy to clean as this
+			room,</i> you think. And you really hope it is:  your friend is
+			paying you for the job, not by the hour.
 
-			<i>Still, cleaning is in the details</i>, you think to
-			yourself. <i>And there are lot of details here.</i>
-
-			Remove this Explore token.
+			Discard this Explore token.
 		"""
+		
+		Remove TokenExploreKitchenViaDiningRoom
 		
 		exploredKitchen = true
 		$MythosKitchen = true
-	End Page Start
+	End Page Explore
 	
 	Page Cutlery
 		
 		Add TokenSearchKitchenCutlery!
 
 		Text """
-			You notice a few pieces of cutlery have been left on the
+			A few pieces of cutlery have been left on the
 			counter; place a Search token as indicated.
 		"""
 	End Page Cutlery
@@ -370,8 +353,54 @@ Book ExploreKitchen Ordered No Keep Looped
 			hurry. Place a Search token as indicated.
 		"""
 		
-		Trigger @moveAfterExplore
+		Trigger @MoveAfterExplore
 		Exit
 	End Page Box
-End Book ExploreKitchen
+	
+	Page SearchCutlery
+		Not Visible
+		Triggered By @SearchKitchenCutlery
+		
+		Prolog """
+			On closer inspection, the pile of cutlery is deep, like someone
+			upended a drawer and then left.
+		"""
+		Button "Search"
+		
+		Text QItemCutlery """
+			Ouch! You cut yourself; take 1 facedown damage. While you watch,
+			several drops of blood fall to the floor; take 1 horror ({will}
+			negates).
+			
+			As you look up from where your blood landed, you notice something
+			pushed under the counter. Gain the {c:QItemCutlery} Common Item,
+			then discard this Search token.
+		"""
+		
+		Remove TokenSearchKitchenCutlery
+		
+		Exit
+	End Page SearchCutlery
+	
+	Page SearchRandom
+		Not Visible
+		Triggered By @SearchKitchenRandom
+		
+		Prolog """
+			A hastily-packed box of kitchen tools sits off to the side of the
+			room near the door.
+		"""
+		Button "Search"
+		
+		Text """
+			You dig down, looking through the box. There are a number of
+			bottles. One of them is half full and has an odd greenish glow.
+			Gain an Elixir, then discard this Search token.
+		"""
+		
+		Remove TokenSearchKitchenRandom
+		
+		Exit
+	End Page SearchRandom
+End Book Kitchen
 

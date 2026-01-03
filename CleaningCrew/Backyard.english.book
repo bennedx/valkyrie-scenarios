@@ -4,12 +4,13 @@ Debug Off
 Book Backyard Ordered No Keep Looped
 
 	Page Place
-		Triggered By @PlaceBackyard
+		Triggered By @ExploreBackyardViaDriveway
 		
-		Prolog "You can see the huge mess through the gate."
+		Prolog "You can see a huge mess through the gate."
 		Button "Look"
 		Free
 		
+		Remove TokenExploreBackyardViaDriveway
 		Add TileBackyard, TokenDoorBackyard!
 		
 		Text """
@@ -24,7 +25,6 @@ Book Backyard Ordered No Keep Looped
 	End Page Place
 
 	Page Place2x4
-		Remove TokenExploreBackyardViaDrivewaySight
 		Add TokenSearchBackyard2x4!
 
 		Text """
@@ -35,8 +35,6 @@ Book Backyard Ordered No Keep Looped
 
 			There might be something useful in the pile. Place a Search
 			token as indicated.
-			
-			Discard this Sight token.
 		"""
 	
 		If NOT exploredBackyardNicely Then Text """
@@ -46,7 +44,6 @@ Book Backyard Ordered No Keep Looped
 
 			Place a Search token as indicated and discard this Sight token.
 		"""
-	
 	End Page Place2x4
 	
 	Page PlaceBen
@@ -89,6 +86,7 @@ Book Backyard Ordered No Keep Looped
 			Place a Search token as indicated.
 		"""
 		
+		Trigger @MoveAfterExplore
 		Exit
 	End Page PlacePlant
 	
@@ -114,7 +112,7 @@ Book Backyard Ordered No Keep Looped
 			After looking at and around the plant, you bump into the pot,
 			knock it over, and break it. Exposed in the dirt, you find
 			something. Gain the {c:QItemBackyardRandom} Common Item, then
-			remove this Search token.
+			discard this Search token.
 		"""
 		
 		Remove TokenSearchBackyardRandom
@@ -128,7 +126,7 @@ Book Backyard Ordered No Keep Looped
 		Text QItemBackyardRandom """
 			After looking at and around the plant, you bump into the pot,
 			knock it over, and break it. Exposed in the dirt, you find
-			something. Gain the {c:QItemBackdoorRandom} Common
+			something. Gain the {c:QItemBackyardRandom} Common
 			Item. As you pick it up, a shard from the pot draws blood; take one
 			facedown Damage ({agility}) negates.
 			

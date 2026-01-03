@@ -47,7 +47,7 @@ Book Driveway Ordered No Keep Looped
 	End Page PlaceExploreKitchenViaDriveway
 	
 	Page PlaceGate
-		Add TokenExploreBackyardViaDriveway!
+		Add TokenExploreBackyardViaDrivewayBlocked!
 		
 		Text """
 			Up ahead, at the end of the drive, is a gate that leads around to
@@ -140,7 +140,7 @@ Book Driveway Ordered No Keep Looped
 	
 	Page ExploreBackyardViaDriveway
 		Not Visible
-		Triggered By @ExploreBackyardViaDriveway
+		Triggered By @ExploreBackyardViaDrivewayBlocked
 		
 		Text """
 			An intricate wrought-iron gate is set into a stone wall.
@@ -153,6 +153,7 @@ Book Driveway Ordered No Keep Looped
 		"""
 		
 		Test Quota 3 Set exploredBackyardNotNicely
+		
 		If exploredBackyardNotNicely Then Goto ExploreNotNice
 		Goto ExploreNice
 	End Page ExploreBackyardViaDriveway
@@ -160,7 +161,7 @@ Book Driveway Ordered No Keep Looped
 	Page ExploreNotNice
 		Not Visible
 		Add TokenDriveWayBen!
-		Remove TokenExploreBackyardViaDriveway
+		Remove TokenExploreBackyardViaDrivewayBlocked
 
 		Text """
 			You give it all you've got... and the gate, seemingly
@@ -205,7 +206,7 @@ Book Driveway Ordered No Keep Looped
 	
 	Page ExploreNotNiceJournal
 		Not Visible
-		Add TokenSearchDrivewayJournal!, TokenExploreBackyardViaDrivewaySight!
+		Add TokenSearchDrivewayJournal!, TokenExploreBackyardViaDriveway!
 		
 		Text """
 			You look down and shake your head. As you do, you see a book lying
@@ -221,14 +222,14 @@ Book Driveway Ordered No Keep Looped
 	End Page ExploreNotNiceJournal
 	
 	Page ExploreNice
-		Remove TokenExploreBackyardViaDriveway
+		Remove TokenExploreBackyardViaDrivewayBlocked
 		Add TokenDrivewayBen!
 
 		Text """
 			As you gently pull the gate, you find that it opens easily.
 			Now that you're looking, you see that someone recently
 			cleaned the hinges and gave them some oil. You're glad you
-			didn't force it. Remove this explore token.
+			didn't force it. Discard this explore token.
 
 			
 			<<I see the handyman was able to fix the gate yesterday.
@@ -251,7 +252,7 @@ Book Driveway Ordered No Keep Looped
 			
 			Benjamin turns and walks through the now-open gate.
 			
-			Remove the Purple Man token from the board.
+			Discard the Purple Man token.
 		"""
 	
 		Remove TokenDrivewayBen
@@ -259,7 +260,7 @@ Book Driveway Ordered No Keep Looped
 	End Page ExploreNiceBen
 	
 	Page ExploreNiceJournal
-		Add TokenSearchDrivewayJournal!, TokenExploreBackyardViaDrivewaySight!
+		Add TokenSearchDrivewayJournal!, TokenExploreBackyardViaDriveway!
 
 		Text """
 			You turn to look back and see a book Benjamin dropped. Place a

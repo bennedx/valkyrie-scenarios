@@ -351,12 +351,12 @@ Book Chapel Ordered No Keep Looped
 			moves, but not very much.
 			
 			You stand up and step on it. The panel sinks in and makes a
-			satisfying click. The wall in front of you pops open. Remove the 
+			satisfying click. The wall in front of you pops open. Discard the 
 			wall and this Search token.
 		"""
 		
 		Remove TokenSearchCryptViaChapel
-		Remove ChapelWall
+		Remove TokenChapelWall
 		
 		Goto SearchCryptViaChapel2
 	End Page SearchCryptViaChapel

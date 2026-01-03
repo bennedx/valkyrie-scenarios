@@ -156,7 +156,7 @@ Book Crypt Ordered No Keep Looped
 			him, but thinking about him lying dead three feet away makes your
 			chest hurt.
 			
-			Remove this Search token.
+			Discard this Search token.
 		"""
 		
 		henryIsDead = true

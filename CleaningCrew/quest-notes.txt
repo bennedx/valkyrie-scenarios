@@ -1,3 +1,9 @@
+to do
+- driveway:  kitchen door 
+- backyard:  ?
+- dining room:  puzzle hardcoded to 1-2-3-4
+- (kitchen): SearchRandom is Elixer ok in this scenario?
+
 Valkyrie log cleanup:  ^NullReference.*?(\r\n\r\n)
 
 Rooms to convert ------------------------------------------------------------------------

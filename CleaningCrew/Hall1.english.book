@@ -44,8 +44,8 @@ Book Hall1 Ordered No Keep Looped
 
 			Discard this Search token.
 			
-			An investigator holding the {c:QItemJournal} can interact with it in
-			the app.
+			An investigator holding the {c:QItemJournal} Unique Item can
+			interact with it in the app.
 		"""
 		
 		foundJournal = true

@@ -57,9 +57,9 @@ Book BenAfter Random No Keep Looped
     Page AnythingElse
         Button "<<Is there anything else we need to know?>>"
     
-        Add TokenInvestigatorsDiningRoom
+        Add TokenInvestigatorsDiningRoom, TokenExploreBackyardViaDiningRoomBlocked!
         
-		Text """
+		Text QItemBrassKey """
             <<Oh, my, yes. Here's the key you'll need to open doors throughout
 			the house.>>
     
@@ -72,10 +72,11 @@ Book BenAfter Random No Keep Looped
 			{c:TileDiningRoom}.
 			
 			Ben shuts the door behind you. <i>Was that the lock turning?</i>
-			you ask yourself. Discard the purple man.
+			you ask yourself. Discard the Purple Man token and place and
+			Explore token as indicated.
         """
     
-        If Not exploredBackyardNicely Then Text """
+        If Not exploredBackyardNicely Then Text QItemBrassKey """
             <<What?>> he growls. <<Oh, here's the key to the house. Don't lose
 			it.>>
         
@@ -83,14 +84,14 @@ Book BenAfter Random No Keep Looped
 			the {c:QItemBrassKey} common item in Ben's space. Once outside,
 			Benjamin barks, <<Everyone inside. No dawdling.>>
 
-			Move any investigators who are outside one space into the
-			{C:TileDiningRoom}.
+			Move any investigators who are outside intto Ben's space.
         
             Ben slams the door shut behind him. <i>Was that the lock
-			turning?</i> you ask yourself. Discard the purple man.
+			turning?</i> you ask yourself. Discard the Purple Man token and
+			place an Explore token as indicated.
         """
     
-		Remove TokenInvestigatorsDiningRoom, TokenBackyardBenAfter
+		Remove TokenInvestigatorsDiningRoom, TokenDiningRoomBen
 		
 		Trigger @ClearAllMythosFlags
 		
