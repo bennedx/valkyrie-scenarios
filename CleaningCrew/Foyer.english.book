@@ -20,7 +20,7 @@ Book Foyer Ordered No Keep Looped
 	
 	Page ExploreFoyerViaHall2
 		Not Visible
-		Triggered BY @ExploreFoyerViaHall2
+		Triggered BY @ExploreFoyerViaHall2 When foundSarah
 		
 		Prolog "This door has a small brass plaque that reads <<Foyer.>>"
 		Button "Explore"
@@ -30,6 +30,18 @@ Book Foyer Ordered No Keep Looped
 		exploredFoyerViaHall2 = true
 		Goto PlaceFoyer
 	End Page ExploreFoyerViaHall2
+	
+	Page ExploreVoyerViaHall2NoSarah
+		Not Visible
+		Triggered BY @ExploreFoyerViaHall2 When Not foundSarah
+		
+		Text """
+			As you reach for the door, your eye is drawn back to the
+			painting behind you. You cannot help but look at it.
+		"""
+
+		Exit
+	End Page ExploreVoyerViaHall2NoSarah
 	
 	Page ExploreFoyerViaStudy
 		Not Visible

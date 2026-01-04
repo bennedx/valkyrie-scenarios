@@ -4,6 +4,12 @@ to do
 - dining room:  puzzle hardcoded to 1-2-3-4
 - (kitchen): SearchRandom is Elixer ok in this scenario?
 
+- gallery:  Place Gallery:
+	Triggered By @ExploreGalleryViaHall1 When Unread
+		It triggers even when page is already read
+		
+- library:  smashing door isn't implemented
+
 Valkyrie log cleanup:  ^NullReference.*?(\r\n\r\n)
 
 Rooms to convert ------------------------------------------------------------------------

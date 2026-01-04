@@ -60,7 +60,7 @@ Book Library Ordered No Keep Looped
 		Triggered By @SearchLibraryKey
 		
 		Prolog "It looks like the man dropped his key ring."
-		Button "Pick up keys"
+		Button "Search"
 		
 		Add QItemKey
 		Remove TokenSearchLibraryKey
@@ -142,7 +142,7 @@ Book Library Ordered No Keep Looped
 	Page PlaceBookcaseExplore
 		Not Visible
 		
-		Add TokenLibraryTrapDoor, TokenExploreChapelViaLibrary!
+		Add TokenLibraryTrapDoor, TokenExploreChapelViaLibraryBlocked!
 
 		Text """
 			You pull on the bookcase and it swings out with a creak. Behind it
@@ -154,11 +154,9 @@ Book Library Ordered No Keep Looped
 		Exit
 	End Page PlaceBookcaseExplore
 	
-	Page ExploreChapelViaBookcase
-		Not Visible
-		
-		Triggered By @ExploreChapelViaBookcase When Unread
-		
+	Page ExploreChapelViaBookcaseBlocked
+		Triggered By @ExploreChapelViaLibraryBlocked When Unread
+
 		Text """
 			There is an elaborate lock on the door behind the bookcase; it has
 			arcane markings, ones that you recognize from the spine of one of
@@ -168,31 +166,73 @@ Book Library Ordered No Keep Looped
 
 		Test "Attempt the puzzle using {lore}" Or "Smash the door with a heavy weapon" Set puzzleForBookcase
 		If Not puzzleForBookcase Then Goto ExploreChapelViaBookcaseSmash
+		Goto ExploreChapelViaBookcaseBlockedPuzzle
+	End Page ExploreChapelViaBookcaseBlocked
+	
+	Page ExploreChapelViaBookcaseBlockedRepeat
+		Not Visible
+		Triggered By @ExploreChapelViaLibraryBlocked When ExploreChapelViaBookcaseBlocked Is Read
+		
+		Text """
+			The lock is still firmly protecting the door.
+		"""
+
+		Test "Attempt the puzzle using {lore}" Or "Smash the door with a heavy weapon" Set puzzleForBookcase
+		If Not puzzleForBookcase Then Goto ExploreChapelViaBookcaseSmash
+		Goto ExploreChapelViaBookcaseBlockedPuzzle
+	End Page ExploreChapelViaBookcaseBlockedRepeat
+	
+	Page ExploreChapelViaBookcaseBlockedPuzzle No Text
+		Not Visible
+		
 		Trigger @PuzzleBookcaseLock
-	End Page ExploreChapelViaBookcase
+		
+		If exploreChapelViaLibraryUnlocked Then Add TokenExploreChapelViaLibrary
+		If exploreChapelViaLibraryUnlocked Then Remove TokenExploreChapelViaLibraryBlocked
+	End Page ExploreChapelViaBookcaseBlockedPuzzle
 	
 	Page ExploreChapelViaBookcaseSmash
 		Not Visible 
 		Text """
-			You raise your heavy weapon and swing. Roll 1 fewer die if you have
-			suffered 3 or more Damage. ({strength};2) Deal damage equal to the
+			You raise your heavy weapon and swing ({strength}). Roll 1 fewer die
+			if you have suffered 3 or more Damage. Deal damage equal to the
 			weapon's damage.
 		"""
 		
-		Test Quota 5 Set passSmashBookcase
+		Test Quota 6 Set passSmashBookcase
 		If passSmashBookcase Then Goto SmashPass
 		Goto SmashFail
 	End Page ExploreChapelViaBookcaseSmash
 	
 	Page SmashFail
 		Not Visible
-		Text "No done"
+		Text """
+			The case is cracked, but is still firmly in place. Maybe if you hit
+			it a little harder?
+		"""
+		
 		Exit
 	End Page SmashFail
 	
 	Page SmashPass
 		Not Visible
-		Text "Not done (2)"
+		
+		Add TokenExploreChapelViaLibrary
+		Remove TokenExploreChapelViaLibraryBlocked
+		
+		Text """
+			The lock casing distorts and falls away. After another hit, the
+			mechanism explodes and you are showered with small pieces. You take
+			a deep, satisfied breath. When you look around expecting approval
+			from your fellow investigators, you instead get dumbfounded stares
+			and shaking heads.
+
+			<<What?>> you ask. <<Did one of you want to smash it?>> The silence
+			in the room is deafening.
+		"""
+		
+		exploreChapelViaLibraryUnlocked = true
+		Trigger @ExploreChapelViaLibrary
 		Exit
 	End Page SmashPass	
 End Book Library	

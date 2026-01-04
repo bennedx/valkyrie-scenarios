@@ -65,10 +65,22 @@ Book Gallery Ordered No Keep Looped
 	
 	Page ExploreGalleryViaHall1After No Text
 		Not Visible
-		Triggered By @ExploreGalleryViaHall1 When PlaceGallery Is Read
+		Triggered By @ExploreGalleryViaHall1 When PlaceGallery Is Read And foundSarah
 		
-		exploredGalleryViaHall = true
+		exploredGalleryViaHall1 = true
 	End Page ExploreGalleryViaHall1After
+
+	Page ExploreGalleryViaHall1NoSarah
+		Not Visible
+		Triggered by @ExploreGalleryViaHall1 When PlaceGallery Is Read and Not foundSarah
+		
+		Text """
+			As you approach the door, your eye is drawn back to the painting
+			behind you. Something about it won't let you look away.
+		"""
+		
+		Exit
+	End Page ExploreGalleryViaHall1NoSarah
 
 	Page ExploreGalleryViaFoyer No Text
 		Not Visible

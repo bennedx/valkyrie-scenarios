@@ -76,6 +76,7 @@ Book Chapel Ordered No Keep Looped
 		Prolog """
 			You pull out keys and starting trying them in the lock.
 		"""
+		Button "Explore"
 		
 		Text """
 			As you work through the keys, you hesitate. Whatever is going on
@@ -108,7 +109,7 @@ Book Chapel Ordered No Keep Looped
 			The book is the Smythe family bible. The first section lists
 			births, marriages, and deaths going back many generations. A few 
 			of the men--all named Smythe--have a {success} next to their names.
-			{c:EventChosenInvestigaor}'s cousin David has this marking. You
+			{c:EventChosenInvestigator}'s cousin David has this marking. You
 			aren't sure what it means, but from what you've seen and read today,
 			it worries you.
 				
@@ -168,7 +169,7 @@ Book Chapel Ordered No Keep Looped
 	
 	Page TalkToPriest
 		Not Visible
-		Triggered By @TalkToChapelPriest When Unread
+		Triggered By @TalkToChapelPriest
 		
 		Text "The priest is glaring at you expectantly. You respond, ..."
 		
@@ -177,6 +178,7 @@ Book Chapel Ordered No Keep Looped
 		Button 3, "{action} In for a penny, in for a pound: kill him"
 		Button 4, "Cancel"
 		
+		If selection = 4 Then Mark Unread
 		If selection = 4 Then Exit
 		
 		If selection = 1 Then Goto ChallengePriest
@@ -186,6 +188,7 @@ Book Chapel Ordered No Keep Looped
 	
 	Page ChallengePriest No Text
 		Not Visible
+		Remove TokenChapelPriestAlive
 		Spawn SpawnCustomMonsterChapelRiot
 		Exit
 	End Page ChallengePriest
@@ -224,7 +227,7 @@ Book Chapel Ordered No Keep Looped
 		Add TokenSearchCryptViaChapel!
 		
 		TEXT """
-			As you are picking up the knife, something about the floor makes you
+			As you pick up the knife, something about the floor makes you
 			look twice. Place a Search token as indicated.
 		"""
 		
@@ -265,20 +268,18 @@ Book Chapel Ordered No Keep Looped
 	
 	Page DefeatRiot
 		Not Visible
-		Triggered By @DefeatCustomMonsterChapelRiot
+		Triggered By @DefeatedCustomMonsterChapelRiot
 	
 		Text QItemRitualDagger """
 			The priest and his men lie dead at your feet, their blood seeping
 			into the wooden floor.
 			
 			<<A haunted house, dead kids, and now a local cult,>> you mutter to
-			yourself. <<I should get out of here before someone finds these
-			bodies.>>
+			yourself. <<I should get out of here before anyone else shows up.>>
 			
 			You casually look down at the carnage and think, <i>Maybe there's
 			something in there I can use?</i>  Then you see it:  something 
-			falling out of the priest's robe. Place the {c:QItemRitualDagger} in
-			the priests space.
+			falling out of the priest's robe. Gain the {c:QItemRitualDagger}.
 		"""
 		
 		chapelPriestDead = 1
@@ -288,7 +289,7 @@ Book Chapel Ordered No Keep Looped
 		If wandererMax > 6 Then WandererMax = 6
 		wandererFrequency = wandererFrequency - 1
 		
-		Exit
+		Goto PlaceSearchCryptViaChapel
 	End Page
 	
 	Page SearchRitualDagger

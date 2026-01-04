@@ -3,11 +3,24 @@ LANGUAGE English
 Book Study Ordered No Keep Looped
 	Page ExploreStudyViaHall2 No Text
 		Not Visible
-		Triggered By @ExploreStudyViaHall2
+		Triggered By @ExploreStudyViaHall2 When foundSarah
 		
 		exploredStudyViaHall2 = true
 		exploredStudyViaFoyer = false
 	End Page ExploreStudyViaHall2
+
+	Page ExploreStudyViaHall2NoSarah
+		Not Visible
+		Triggered By @ExploreStudyViaHall2 When Not foundSarah
+		
+		Text """
+			When you reach for the handle, something behind you pulls your
+			attention. That painting behind you draws you too hard to
+			continue exploring.
+		"""
+
+		Exit
+	End Page ExploreStudyViaHall2NoSarah
 
 	Page ExploreStudyViaFoyer No Text
 		Not Visible
