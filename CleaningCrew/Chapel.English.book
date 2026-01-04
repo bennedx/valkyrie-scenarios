@@ -1,4 +1,5 @@
 Language English
+Debug Off
 
 Book Chapel Ordered No Keep Looped
 
@@ -206,7 +207,7 @@ Book Chapel Ordered No Keep Looped
 			
 			Discard the White Man token.
 			
-			As you ponder, you look down and see that the priest has dropped
+			As you ponder, you look down and see that the priest dropped
 			something. Wrapped in cloth is an ornate knife. Gain the 
 			{c:QItemRitualDagger} Common Item.
 
@@ -241,14 +242,13 @@ Book Chapel Ordered No Keep Looped
 		
 		Text QItemRitualDagger """
 			You cock your arm to punch the priest and he raises his arms in
-			defense. As he does, a knife falls out of his robe. Place the
-			{c:QItemRitualDagger} Common Item in the priest's space.
-
-			You punch hard through his waving arms and strike him in the temple.
-			The man falls back, hitting his head on the corner of a pew. He 
-			collapses, seizes for a moment, and then goes still. He's dead.
-			Take 1 facedown Horror.
-
+			defense. You punch hard through his waving arms and strike him in
+			the temple. The man falls back, hitting his head on the corner of a
+			pew. He slumps, seizes for a minute, and then goes still.
+			
+			You look down at the dead priest and see something 
+			falling out of the his robes. Gain the {c:QItemRitualDagger}.
+			
 			<<A haunted house, dead kids, and now a local cult,>> you mutter to
 			yourself. <<I should get out of here before someone finds this
 			body.>>

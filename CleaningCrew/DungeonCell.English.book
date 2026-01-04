@@ -1,9 +1,14 @@
 Language English
 
-Book Cell Ordered No Keep Looped
+Book DungeonCell Ordered No Keep Looped
 
-	Page Explore
-		Triggered By @ExploreCellViaTortureChamber
+	Page ExploreViaTorturChamber No Text
+		Triggered By @ExploreDungeonCellViaTortureChamber
+		exploredCellViaTortureChamber = true
+		exploredCell = true
+	End Page ExploreViaTorturChamber
+	
+	Page Place
 		
 		Prolog """
 			When you look through the bars, it's dark inside. You think that you
@@ -18,8 +23,7 @@ Book Cell Ordered No Keep Looped
 		"""
 		
 		Remove TokenExploreCellViaTortureChamber
-		exploredCell = true
-	End Page Explore
+	End Page Place
 	
 	Page PlaceHoleInWall
 		Visible When readAboutBoy
@@ -54,12 +58,12 @@ Book Cell Ordered No Keep Looped
 		Add TokenSearchCellDavidsSon!
 		
 		Text """
-			 A boy is chained to the wall, lying on the floor, and moaning
+			A boy is chained to the wall, lying on the floor, and moaning
 			quietly. Place a Person token as indicated. This is David's son.
 		"""
 		
 		If readAboutBoy Then Text """
-			A boy is chained to the wall, lying on the floor, and moaning
+			A boy is chained to the wall, lying on the floor, moaning
 			quietly. Place a Person token as indicated. This is David's son,
 			the sacrifice.
 		"""

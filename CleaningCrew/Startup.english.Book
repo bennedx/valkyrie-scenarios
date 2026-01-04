@@ -103,6 +103,7 @@ Book Startup Ordered No Keep Looped
 		
 		Add TokenTestSearchFluxStabilizer
 		Add TokenTestSearchLibraryBookcase
+		Add TokenTestTalkToChapelPriest
 		
 		Add TokenTestTakeBooks
 		Add TokenTestStartRitual

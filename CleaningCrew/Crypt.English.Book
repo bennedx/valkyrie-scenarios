@@ -6,6 +6,7 @@ Book Crypt Ordered No Keep Looped
 		Triggered By @ExploreCryptViaChapel
 		
 		exploredCryptViaChapel = true
+		exploredCryptViaDungeonCave = false
 		Goto PlaceCrypt
 	End Page ExploreViaChapel
 	
@@ -13,19 +14,20 @@ Book Crypt Ordered No Keep Looped
 		Not Visible
 		Triggered By @ExploreCryptViaDungeonCave
 		
-		exploredChapelViaDungeon = true
+		exploredCryptViaDungeonCave = true
+		exploredCryptViaChapel = false
 		Goto PlaceCrypt
 	End Page
 	
 	Page PlaceCrypt
 		Not Visible
-		Triggered By @ExploreCryptViaDungeonCave
 		
 		Prolog "The cave continues into the darkness."
 		Button "Look"
 		
 		Add TileCrypt
 		Remove TokenExploreCryptViaDungeonCave
+		Remove TokenSearchCryptViaChapel
 		
 		Text """
 			You walk forward a bit and realize the other part of the cave
@@ -36,13 +38,12 @@ Book Crypt Ordered No Keep Looped
 		"""
 		
 		If exploredCryptViaChapel Then Text """
-			You peer into the dark space but cannot see much. Move 1 space
-			into the explored area.
+			You peer into the dark space but cannot see much, so you step
+			through the doorway. You eyes adjust quickly to the light.
 			
-			You eyes adjust quickly to the light.
-			
-			Place the {c:TileCrypt} tile and discard this Search and any
-			Sight tokens leading to the explored area.
+			Place the {c:TileCrypt} tile, discard this Search and any
+			Sight tokens leading to the explored area, then move 1 space into
+			the explored area.
 		"""
 		
 		Goto PlaceSearchPendant
@@ -57,9 +58,22 @@ Book Crypt Ordered No Keep Looped
 			inside. Place a Search token as indicated.
 		"""
 		
-		If exploredCryptViaDungeonCave Then Goto PlaceExploreChapelViaCrypt
 		Goto PlaceSearchHenry
 	End Page PlaceSearchPendant
+	
+	Page PlaceSearchHenry
+		Not Visible
+		
+		Add TokenSearchCryptHenry!
+		Text """
+			The stone casket on the end looks much newer than the others. Place
+			a Search token as indicated.
+		"""
+		
+		If Not exploredDungeonCave Then Goto PlaceExploreDungeonCaveViaCrypt
+		If Not exploredCryptViaChapel Then Goto PlaceExploreChapelViaCrypt
+		Exit
+	End Page PlaceSearchHenry
 
 	Page PlaceExploreChapelViaCrypt
 		Not Visible
@@ -70,17 +84,21 @@ Book Crypt Ordered No Keep Looped
 			Something about the wall seems... off. Place a Search token
 			as indicated.
 		"""
-		Goto PlaceSearchHenry
+		
+		Exit
 	End Page PlaceExploreChapelViaCrypt
 	
-	Page PlaceSearchHenry
+	Page PlaceExploreDungeonCaveViaCrypt
 		Not Visible
+		
+		Add TokenExploreDungeonCaveViaCrypt!
 		Text """
-			The stone casket on the end looks much newer than the others. Place
-			a Search token as indicated.
+			The back of crypt is too dark to see from here. Place a Sight
+			token as indicated.
 		"""
+		
 		Exit
-	End Page PlaceSearchHenry
+	End Page PlaceExploreDungeonCaveViaCrypt
 	
 	Page SearchChapelViaCrypt
 		Not Visible
@@ -98,7 +116,7 @@ Book Crypt Ordered No Keep Looped
 			this is a door too?
 			
 			A lot of time passes before you give up looking for a way
-			to open it. Become Stunned.
+			to open it. Your turn ends immediately and you skip your next turn.
 			
 			Discard this Search token.
 		"""
@@ -138,7 +156,7 @@ Book Crypt Ordered No Keep Looped
 		Prolog """
 			A brass plate on top of the stone casket looks like it has the name
 			of the person inside. The letters dance and swim, much like the text
-			in the {c:QItemDwm}.
+			in the {c:QItemDvm}.
 			
 			Only {c:EventChosenInvestigator} can read the inscription.
 		"""
@@ -160,7 +178,7 @@ Book Crypt Ordered No Keep Looped
 		"""
 		
 		henryIsDead = true
-		Remove TokenSearchChapelHenry
+		Remove TokenSearchCryptHenry
 		Exit
 	End Page SearchHenry
 End Book Crypt

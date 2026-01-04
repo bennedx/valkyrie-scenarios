@@ -11,7 +11,7 @@ Book DungeonCave Ordered No Keep Looped
 			
 			An investigator in this Sight token's space may look deeper.
 		"""
-		Button "Look"
+		Button "Explore"
 		Free
 		
 		Remove TokenExploreDungeonCaveViaCrypt
@@ -23,7 +23,7 @@ Book DungeonCave Ordered No Keep Looped
 			the rock. Flickering torches make shadows dance slowly on the walls.
 
 			
-			Place the {c:TileTortureChamber} tile and a wall a indicated, then
+			Place the {c:TileTortureChamber} tile and a wall as indicated, then
 			discard all Sight and Explore tokens leading to the explored area.
 		"""
 		
@@ -63,12 +63,11 @@ Book DungeonCave Ordered No Keep Looped
 		"""
 		
 		exploredDungeonCaveViaCrypt = true
-		exploredDungeonCave = true
-		Goto PlaceExploreCrypt
+		If Not exploredDungeonCave Then Goto PlaceExploreCrypt
 	End Page ExploreViaBasement
 
 	Page PlaceExploreCrypt
-		Visible When Not exploredCrypt
+		Not Visible
 		
 		Add TokenExploreCryptViaDungeonCave!
 		
@@ -76,11 +75,15 @@ Book DungeonCave Ordered No Keep Looped
 			The cave continues into the darkness. Place a Sight token as
 			indicated.
 		"""
+		
+		exploredDungeonCave = true
+		Goto PlaceExploreTortureChamber
 	End Page PlaceExploreCrypt
 	
 	Page PlaceExploreTortureChamber
-		Add TokenExploreTortureChamber!
+		Not Visible
 		
+		Add TokenExploreTortureChamberViaDungeonCave!
 		Text """
 			A door in the wall leads... somewhere. Place an Explore token as
 			indicated.

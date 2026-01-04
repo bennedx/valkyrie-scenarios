@@ -11,8 +11,6 @@ Book TortureChamber Ordered No Keep Looped
 		"""
 		Button "Explore"
 
-		Remove TokenExploreTortureChamberViaDungeonCave
-
 		Text """
 			This is a torture chamber. Along the walls are various devices for
 			stretching, beating, burning, and cutting. You gulp thinking about
@@ -21,6 +19,8 @@ Book TortureChamber Ordered No Keep Looped
 			
 			Discard this Explore token.
 		"""
+
+		Remove TokenExploreTortureChamberViaDungeonCave
 
 		exploredTortureChamber = true
 	End Page Place
