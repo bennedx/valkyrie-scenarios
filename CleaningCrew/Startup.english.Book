@@ -79,6 +79,7 @@ Book Startup Ordered No Keep Looped
 		Add TokenTestExploreAltar
 		Add TokenTestExploreBackyardViaDriveway
 		Add TokenTestExploreBasementViaDiningRoom
+		Add TokenTestExploreBasementViaDiningRoomBlocked
 		Add TokenTestExploreChapelViaLibrary
 		Add TokenTestExploreCoatRoomViaGallery
 		Add TokenTestExploreCryptViaChapel

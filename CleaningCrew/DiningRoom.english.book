@@ -5,7 +5,7 @@ Book PlaceDiningRoom Ordered No Keep Looped
 	
 	Page Locked
 		Not Visible
-		Triggered By @ExploreHall1ViaDiningRoomLocked
+		Triggered By @ExploreHall1ViaDiningRoomBlocked
 		
 		Text """
 			The door is filthy. You check the knob, but it's locked:  you'll need a key to get in.
@@ -403,4 +403,300 @@ Book Kitchen Ordered No Keep Looped
 		Exit
 	End Page SearchRandom
 End Book Kitchen
+
+// -----------------------------------------------------------------------------
+
+Book DoorBasementViaDiningRoomLock Ordered No Keep Looped
+
+	Page Entry No Text
+		Triggered By @ExploreBasementViaDiningRoomBlocked
+	End Page Entry
+	
+	Page FirstStart
+		
+		brains = 1
+		brawn = 2
+		none = 0
+		
+		first = 1
+		second = 2
+		third = 3
+		unlocked = 4
+		basementPhase = first
+		
+		Text """
+			This door has a rusty lock. You can (maybe) think of a couple of
+			ways to get through it. <i>But how to proceed?</i>
+		"""
+		Button 1, "{action} Use Brawn"
+		Button 2, "{action} Use Brains"
+		Button 3, "Cancel"
+		
+		If selection = 3 Then Exit
+		basementSkill = brains
+		If select = 1 Then basementSkill = brawn
+	End Page FirstStart
+
+	Page FirstBrawn
+		Visible When basementPhase = first And basementSkill = brawn
+		
+		Text """
+			After struggling with the lock for several minutes, you lose your
+			temper and hit it as hard as you can. Frustrated and in pain, you
+			lean back and slide down to sit on the floor with your back against
+			the door. You fume for a while and then it occurs to you! All you
+			have to do is... ({lore}).
+		"""
+		Test "Pass" OR "Fail" Set basementUnlocked
+	End Page FirstBrawn
+	
+	Page FirstBrawnPass
+		Visible When basementPhase = first And basementSkill = brawn And basementUnlocked
+	
+		Text """
+			Eureka! You figured it out. (You’ll wonder how that happened for a
+			long time.) The house is dank and scary, but it’s just an old house.
+			This isn’t so bad.
+
+			Improve {lore} or {will}, then remove this Explore token.
+		"""
+		
+		basementPhase = 9
+	End Page FirstBrawnPass
+	
+	Page FirstBrawnFail
+		Visible When basementPhase = first And basementSkill = brawn And Not basementUnlocked
+
+		Text """
+			<i>Well, what did I think would happen?!</i> you mutter to yourself.
+			Frustrated, you swear never to think again.
+		"""
+		
+		basementPhase = second
+		basementSkill = none
+	End Page FirstBrawnFail
+	
+	Page FirstBrains
+		Visible When basementPhase = first And basementSkill = brains
+		
+		Text """
+			After trying everything you can think of, you lose your temper and
+			start to hit and kick the lock ({strength}).
+		"""
+		Test "Pass" OR "Fail" Set basementUnlocked
+	End Page FirstBrains
+	
+	Page FirstBrainsPass
+		Visible When basementPhase = first And basementSkill = brains And basementUnlocked
+	
+		Text """
+			<<I didn’t know I had it in me!>> you exclaim. Improve {strength} or
+			{will}, then discard this Explore token.
+		"""
+		
+		basementPhase = unlocked
+	End Page FirstBrainsPass
+	
+	Page FirstBrainsFail
+		Visible When basementPhase = 1 And basementSkill = brawn And Not basementUnlocked
+
+		Text """
+			Feeling like you can’t do anything right, you settle into a sulk.
+			<i>I really need to watch my temper today,</i> you think. You hand
+			is still throbbing with pain. Take 1 Damage ({will}).
+		"""
+		
+		basementPhase = second
+		basementSkill = none
+	End Page FirstBrainsFail
+
+	Page SecondStart
+		Text """
+			The lock resists your attempts to release it. You'll need to try
+			again.
+		"""
+		Button 1, "{action} Use Brawn"
+		Button 2, "{action} Use Brains"
+		Button 3, "Cancel"
+		
+		If selection = 3 Then Exit
+		basementSkill = brains
+		If select = 1 Then basementSkill = brawn
+	End Page SecondStart
+
+	Page SecondBrawn
+		Visible When basementPhase = second And basementSkill = brawn
+		
+		Text """
+			Refreshed from your break, you try again ({strength}). You grab the
+			handle and prepare to pull as hard as you can.
+		"""
+		Test "Pass" OR "Fail" Set basementUnlocked
+	End Page SecondBrawn
+	
+	Page SecondBrawnPass
+		Visible When basementPhase = second And basementSkill = brawn And basementUnlocked
+	
+		Text """
+			Your hand hurts almost as much as your pride, but at least it's
+			unlocked. Discard this Explore token.
+		"""
+		
+		basementPhase = unlocked
+	End Page SecondBrawnPass
+	
+	Page SecondBrawnFail
+		Visible When basementPhase = second And basementSkill = brawn And Not basementUnlocked
+
+		Text """
+			Your hand hurts from the effort and your frustration mounts. The 
+			handle might be bent a little. <i>Best not to mention this,</i> you
+			convince yourself.
+		"""
+		
+		basementPhase = third
+		basementSkill = none
+	End Page SecondBrawnFail
+	
+	Page SecondBrains
+		Visible When basementPhase = second And basementSkill = brains
+		
+		Text """
+			Out of breath, you rest for a minute, then try again ({lore}).
+			You lean down to look at the lock and consider your options.
+		"""
+		Test "Pass" OR "Fail" Set basementUnlocked
+	End Page SecondBrains
+	
+	Page SecondBrainsPass
+		Visible When basementPhase = second And basementSkill = brains And basementUnlocked
+	
+		Text """
+			<i>That took longer than I expected,</i>n you think. You're
+			embarrassed that you couldn't do it faster, but you feel better now
+			that it's unlocked.
+		"""
+		
+		basementPhase = unlocked
+	End Page SecondBrainsPass
+	
+	Page SecondBrainsFail
+		Visible When basementPhase = 1 And basementSkill = brains And Not basementUnlocked
+
+		Text """
+			<<What's wrong with me today?</i> you ask yourself. The other 
+			investigators look at you oddly and you realize you said that out
+			loud.
+			
+			Take 1 Horror ({will} negates)
+		"""
+		
+		basementPhase = third
+		basementSkill = none
+	End Page SecondBrainsFail
+	
+	Page ThirdStart
+		Text """
+			...
+		"""
+		Button 1, "{action} Use Brawn"
+		Button 2, "{action} Use Brains"
+		Button 3, "Cancel"
+		
+		If selection = 3 Then Exit
+		basementSkill = brains
+		If select = 1 Then basementSkill = brawn
+	End Page ThirdStart
+
+	Page ThirdBrawn
+		Visible When basementPhase = third And basementSkill = brawn
+		
+		Text """
+			({strength}).
+		"""
+		Test "Pass" OR "Fail" Set basementUnlocked
+	End Page ThirdBrawn
+	
+	Page ThirdBrawnPass
+		Visible When basementPhase = third And basementSkill = brawn And basementUnlocked
+	
+		Text """
+			The lock finally gives way but you've hurt your hand even more from
+			the effort. Take 1 Damage and remove this Explore token.
+		"""
+		
+		basementPhase = unlocked
+	End Page ThirdBrawnPass
+	
+	Page ThirdBrawnFail
+		Visible When basementPhase = third And basementSkill = brawn And Not basementUnlocked
+
+		Text """
+			((sigh))
+		"""
+		
+		basementPhase = third
+		basementSkill = none
+		Mark Unread
+		Mark ThirdBrawn Unread
+	End Page ThirdBrawnFail
+	
+	Page ThirdBrains
+		Visible When basementPhase = third And basementSkill = brains
+		
+		Text """
+			({lore}).
+		"""
+		Test "Pass" OR "Fail" Set basementUnlocked
+	End Page ThirdBrains
+	
+	Page ThirdBrainsPass
+		Visible When basementPhase = third And basementSkill = brains And basementUnlocked
+	
+		Text """
+			Though you finally figured it out, taking so long has shaken your
+			confidence and made you wonder how smart you really are. Take 1
+			facedown Horror, then remove this Explore token.
+		"""
+		
+		basementPhase = unlocked
+	End Page ThirdBrainsPass
+	
+	Page ThirdBrainsFail
+		Visible When basementPhase = 1 And basementSkill = brains And Not basementUnlocked
+
+		Text """
+			...!
+		"""
+		
+		basementPhase = third
+		basementSkill = none
+		Mark Unread
+		Mark ThirdBrains Unread
+	End Page ThirdBrainsFail	
+
+
+	Page Unlocked
+		Visible When basementPhase = unlocked
+		
+		Remove TokenExploreBasementViaDiningRoomBlocked
+		Add TokenDiningRoomDarkness1!
+		Add TokenDiningRoomDarkness2!
+		Add TokenExploreBasementViaDiningRoom!
+		
+		Text """
+			Now that the lock is loose, you open the door. The darkness
+			seems to bleed into the room. You thought the dining room was dark
+			when you first walked in, but now you know it was merely dim. Place
+			darkness in each space of the dining room.
+
+			An investigator with a light source may
+			go into the basement. Place a Sight token as indicated.
+		"""
+	End Page
+
+
+
+End Book DoorBasementViaDiningRoomLock
+
 

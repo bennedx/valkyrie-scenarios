@@ -101,4 +101,4 @@ Book DungeonCell Ordered No Keep Looped
 		cellHoleFound = true
 		Exit
 	End Page
-End Book Cell
+End Book DungeonCell
