@@ -222,7 +222,7 @@ Book WandererAttacks Ordered No Keep
 
 		TEXT """
 			<<It is time Brothers,>> the cultist's voice booms through the house.
-			<<We must get to the portal before it is too late.>> Any investigators
+			<<We must get to the gate before it is too late.>> Any investigators
 			not carrying a {c:QItemFluxStabilizer} become Restrained.
 		"""
 	End Page Story17

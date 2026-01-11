@@ -1,11 +1,13 @@
-LANGUAGE English
-DEBUG OFF
+Language English
+Debug On
 
-Book DvmClosePortal Ordered Keep Looped
-    If goal != goalClosePortal Then Exit
+// use this for both goalOpenGate and goalFeedGate
+Book DvmOpenGate Ordered Keep Looped
+    Triggered By @ReadDvm When (goal = goalOpenGate Or goal = goalFeedGate) And Not ritual
 
+	// page 1 is the same as DvmCloseGate.Page1
     Page TableOfContents
-        Prolog "The {c:QItemDVM} looks old and worn with time."
+        Prolog "The book looks old and worn with time."
         Button "Open the book" After "Table of Contents"
 
         Text """
@@ -19,53 +21,48 @@ Book DvmClosePortal Ordered Keep Looped
 			
 			You puzzle over this for a moment, then turn to the first page.
 			It's a table of contents. The book seems to be full of spells and
-			rituals. You scan down to find something about portals. Maybe
+			rituals. You scan down to find something about gates. Maybe
 			<<Travel, page 72>>?
 
-            {qst:FirstTimeRead}, gain 1 {clue}.
+            The first time you read this page, gain 1 {clue}.
         """
     End Page TableOfContents
 
-    Page Portals
+    Page Overview
+		// same as the prolog for DvmCloseGAte.Page2
         Prolog """
             This is a spell book and {c:EventChosenInvestigator}
 			may have... abilities. Sarah is pushing you to find something
-			about closing portals.
+			about closing gates.
         """
-        Button "Turn to page 72" After "Portals"
+        Button "Turn to page 72" After "Overview"
 
         Text """
-            You flip through the pages to find the <<Travel>> section on
-            page 72. The first entry is for portals.
-
-            Portals
-            
-            You read through an overview of the spell and skim past the opening
-            ritual, including the list of materials needed to open one. Behind
-			it is a closing ritual: how to close a portal that has already been
-			cast.
-            
+            You read through an overview of the opening ritual and how to
+			perform it.
             There is a list of materials and artifacts needed.
             The list includes a dagger, chalice, human skull, and
             various herbs. There's also mention of an <<elder sign>>
-            but you aren't sure what that is. From what you saw earlier in the
-			book, these materials seem similar to what is needed to open a
-			portal.
-            
-            <i>I wonder if they actually have these already?</i> you ask
-            yourself. 
+            but you aren't sure what that is.
+
+            You must look for the dagger,
+            various ritual components, and
+            an elder sign.
+
+            <i>Maybe they don't have all of these yet,</i> you hope to
+            yourself.
         """
-    End Page Portals
+    End Page Overview
 
     Page Tools
-        Prolog "Closing a portal is going to require a lot of work."
-        Button "Read the next page" After "Tools"
-    
+        Prolog "This ritual seems complicated."
+        Button "Read next page" After "Tools"
+
         Text """
             Dagger
         
             You flip the page. Here the book goes into detail about the
-            knife needed to close the portal. It sounds beautiful,
+            knife needed to close the gate. It sounds beautiful,
 			but you wonder where you would find something like that. Next is
 			the process of empowering the blade. When you look at
 			the incantation, it is written in a language you cannot read
@@ -74,54 +71,51 @@ Book DvmClosePortal Ordered Keep Looped
 
             Elder Sign
         
-            According to the book, once the portal has manifested, it is weak
-			and unstable. An elder sign is used to stabilize it.
-			Either way, an
-			elder sign is needed to close it. There is a drawing
-			of one here, so now you know what to look for. There is
-			another incantation you cannot understand or even sound out.
+            Once the gate has manifested, it is weak and unstable. An
+            elder sign is used to stabilize it. There is a picture of
+            one here, so you at least know what it looks like now. The 
+			book goes on to say that without an elder sign, the gate
+			must be fed blood to stay open.
 
             {qst:FirstTimeRead}, gain 1 {clue}.
         """
     End Page Tools
 
     Page Sacrifice
-        Prolog "
-            Each tool seems to need special attention. This will require more
-            study.
-        "
-        Button "Read the next page" After "Sacrifice"
-    
+        Prolog "Opening a gate seem complicated."
+        Button "Read next page" After "Sacrifice"
+
         Text """
-            Sacrifice
-
-            The next page delves into the importance of personal sacrifice.
-            For this ritual, the sacrifice is small:  a few drops of your own
-            blood. You shudder as you read about using even more of your blood
-			for this.
+			The Sacrifice
 			
-			You remember it saying a person is required to make the portal.
-			You wonder who they might choose.
-
-            {qst:FirstTimeRead}, suffer 1 Horror ({will} negates).
+			
+            The next page delves into the importance of personal sacrifice. For
+            this ritual, the required sacrifice is large. A cold chill runs
+            down your spine as you realize that only a precious loved one is
+            enough. <i>What kind of monster could do such a thing?>></i> you
+            ask yourself.
+        
+            {qst:FirstTimeRead}, suffer 1 Horror ({will} negates), then
+            gain 2 {clue} if you don’t go Insane.
         """
-		
-		If readJournalPage5 Then Text """
-            Sacrifice
-
+        
+        If journalReadPage4 Then Text """
+            The Sacrifice
+        
             The next page delves into the importance of personal sacrifice.
-            For this ritual, the sacrifice is small:  a few drops of your own
-            blood. You shudder as you read about using even more of your blood
-			for this.
-			
-			You remember it saying a person is required to make the portal.
-			<i>It must be the boy,</i> you say out loud and startle yourself
-			when you hear your own voice.
-
-            {qst:FirstTimeRead}, suffer 1 Horror ({will} negates).
-		"""
+            For this ritual, the required sacrifice is large. A chill runs down
+            your spine as you realize that only a precious loved one is enough.
+            <i>The boy from the journal,</i> you think to yourself. <i>He's
+            here somewhere and we're going to find him.</i>
+        
+			<i>Who could do this to their own child?</i> you ask yourself.
+		
+            {qst:FirstTimeRead}, suffer 1 Horror ({will} negates), then
+            gain 2 {clue} if you don't go Insane.
+        """
     End Page Sacrifice
-    
+
+	// this is the same as DvmCloseGate.Page5
     Page Commentary
         Prolog """
             A look of concern and disgust on your face, you turn the page.
@@ -158,8 +152,12 @@ Book DvmClosePortal Ordered Keep Looped
             <i>The boy must be under the house somewhere,</i> you think to
             yourself.
         """
+
+		// ??? Why is this here
+        // Trigger @FoundCellHoleViaJournal
     End Page Commentary
-    
+
+	// this is the same as DvmCloseGate.Epilog
     Epilog
         Text """
             <i>Maybe I need to explore a bit more to figure out what I need to
@@ -176,5 +174,6 @@ Book DvmClosePortal Ordered Keep Looped
             find the artifacts before they start the ritual and, if you can, 
             save the boy.
         """
-    End Epilog
-End Book DvmClosePortal
+	End Epilog
+End Book DvmOpenGate
+

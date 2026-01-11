@@ -1,7 +1,7 @@
 Language English
 
-Book OpenPortal Ordered No Keep Looped
-    If goal != goalOpenPortal Then Exit
+Book OpenGateOrdered No Keep Looped
+	Triggered By @ReadDvm When goal = goalOpenGate And ritual
 
 	Mark Step3Repeat Read
 
@@ -30,7 +30,7 @@ Book OpenPortal Ordered No Keep Looped
         Text """
 			When you get close to the altar, you see that
 			David does not have an {c:QItemElderSign}. That
-			means he will need blood to keep the portal open. You must stop him
+			means he will need blood to keep the gate open. You must stop him
 			before he uses you to feed it.
 			
 			You think back to the counter-spell you memorized earlier. You hold
@@ -117,8 +117,8 @@ Book OpenPortal Ordered No Keep Looped
 			For each Unique Item you have, you may roll 1 extra die.
 		"""
 		
-		Test Quota 4 Set passOpenPortalStep3
-		If passOpenPortalStep3 Then Goto Step4
+		Test Quota 4 Set passOpenGateStep3
+		If passOpenGateStep3 Then Goto Step4
 	End Page Step3Repeat
 
 	Page Step3RepeatFail
@@ -189,4 +189,4 @@ Book OpenPortal Ordered No Keep Looped
 		No Prolog
 		No Text
 	End Epilog
-End Book OpenPortal
+End Book OpenGate

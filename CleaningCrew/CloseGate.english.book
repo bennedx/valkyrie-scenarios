@@ -1,7 +1,7 @@
-LANGUAGE English
+Language English
 
-Book ClosePortal ORDERED NO Keep Looped
-    If goal != goalClosePortal Then Exit
+Book CloseGate Ordered No Keep Looped
+    Triggered By @ReadDvm When goal = goalCloseGate And ritual
 
     // this hides the page since we are NO Keep
     // this is easier than managing visibility
@@ -9,7 +9,7 @@ Book ClosePortal ORDERED NO Keep Looped
 
     Page Step1
         Prolog """
-            The portal is open and you must close it quickly. If you have the
+            The gate is open and you must close it quickly. If you have the
             {c:QItemRitualKnife}, the {c:QItemRitualComponents}, and the
             {c:QItemElderSignPendant}, you can start now.
         
@@ -26,7 +26,7 @@ Book ClosePortal ORDERED NO Keep Looped
 			and lay out the materials. The pattern is complex and it takes a
 			few minutes to get right. Your companions are under constant attack
 			by cult members and you can feel the approach of something from the
-			other side of the portal. You must hurry.
+			other side of the gate. You must hurry.
     
             Drop the {c:QItemRitualComponents} Unique Item on the altar. It
 			must stay on the altar for the duration of the ritual.
@@ -48,10 +48,10 @@ Book ClosePortal ORDERED NO Keep Looped
 
         Text """
             The book shows you how to hold the knife and some kind movement,
-			like you>re presenting it to the altar. You fumble around, hoping
+			like you're presenting it to the altar. You fumble around, hoping
 			your first try at something like this will be good enough.
 
-            While you can read the words, you aren>t sure you understand them.
+            While you can read the words, you aren't sure you understand them.
             If you do, test {lore}; otherwise, test {will} and hope for the
 			best.
         
@@ -59,8 +59,8 @@ Book ClosePortal ORDERED NO Keep Looped
         """
 		
 		// even if we pass, we fail
-        Test Quota 10 set passClosePortalStep2
-        If passClosePortalStep2 Then Goto Step2Fail
+        Test Quota 10 set passCloseGateStep2
+        If passCloseGateStep2 Then Goto Step2Fail
         Goto Step2Fail
     End Page Step2
 
@@ -81,7 +81,7 @@ Book ClosePortal ORDERED NO Keep Looped
 
         Text """
             You finish the incantation but nothing seems to have happened.
-			You>ll need to keep trying.
+			You'll need to keep trying.
         
             Suffer 1 facedown Damage and 1 facedown Horror ({will} negates).
         """
@@ -92,7 +92,7 @@ Book ClosePortal ORDERED NO Keep Looped
     Page Step2Repeat
         Prolog """
             The knife still feels cold and dead in your hand. You're starting
-			to wonder if you>>ll really be able to do this. You look at your
+			to wonder if you>'ll really be able to do this. You look at your
 			fellow investigators, struggling to keep you alive and look down
 			to try again.
         """
@@ -107,8 +107,8 @@ Book ClosePortal ORDERED NO Keep Looped
 			{will} and hope for the best.
         """
 
-        Test Quota 4 Set passClosePortalStep2
-        If passClosePortalStep2 Then Goto Step2Pass
+        Test Quota 4 Set passCloseGateStep2
+        If passCloseGateStep2 Then Goto Step2Pass
         Goto Step2RepeatFail
     End Page Step2Repeat
 	
@@ -131,7 +131,7 @@ Book ClosePortal ORDERED NO Keep Looped
             You turn the page and see the next step: drawing blood. You have to
 			cut yourself with the {c:QItemRitualDagger} and let the blood drip
 			into the chalice on the altar. The book says that the blood will
-			empower the ritual and to close the portal.
+			empower the ritual and to close the gate.
     
             You look at your hand and realize you are going to have to do this
 			more than once. You steel yourself and prepare to draw blood.
@@ -149,8 +149,8 @@ Book ClosePortal ORDERED NO Keep Looped
         """
 
         // even if we pass, we fail
-		Test Quota 10 Set passClosePortalStep3
-        If passClosePortalStep3 Then Goto Step3Fail
+		Test Quota 10 Set passCloseGateStep3
+        If passCloseGateStep3 Then Goto Step3Fail
         Goto Step3Fail
     End Page Step3
 
@@ -159,7 +159,7 @@ Book ClosePortal ORDERED NO Keep Looped
 
         Text """
             You squeeze your hand into a tight fist and blood drips into the
-			chalice. You can>t see or hear the chalice change, but you can feel
+			chalice. You can't see or hear the chalice change, but you can feel
 			something happen to it.
 
             This step is complete.
@@ -181,19 +181,19 @@ Book ClosePortal ORDERED NO Keep Looped
 
     Page Step4
         Prolog """
-            The portal is humming and pulsing with energy. You can feel
+            The gate is humming and pulsing with energy. You can feel
 			something trying to get through from the other side. You must
 			hurry. You turn the page and see the next incantation. Like the one
-			for the dagger, blessing, you can read it, but you aren>t sure you
+			for the dagger, blessing, you can read it, but you aren't sure you
 			understand it.
         """
 
         Button "Read the incantation"
 
         Text """
-            The incantation is long and complex. You>ll have to get this right
-			to weaken the portal. If you don>t, it will take longer to close
-			and the onslaught from the other side isn>t abating. You close your
+            The incantation is long and complex. You'll have to get this right
+			to weaken the gate. If you don't, it will take longer to close
+			and the onslaught from the other side isn't abating. You close your
 			eyes for a moment, take a deep breath, look at the text again, and
 			begin to speak the incantation.
 
@@ -202,8 +202,8 @@ Book ClosePortal ORDERED NO Keep Looped
        """
    
        // even if we pass, we fail
-	   Test Quota 10 Set passClosePortalStep4
-       If passClosePortalStep4 Then Goto Step4Fail
+	   Test Quota 10 Set passCloseGateStep4
+       If passCloseGateStep4 Then Goto Step4Fail
        Goto Step4Fail
     End Page Step4
 
@@ -213,12 +213,12 @@ Book ClosePortal ORDERED NO Keep Looped
         Text """
             You feel a welling of power as you speak the last word. The feeling
             inside you grows and you suddenly feel like you control the cosmos.
-            The portal grows brighter and {c:TokenPortal} screams. You had
+            The gate grows brighter and {c:TokenGate} screams. You had
             forgotten about the boy--he will die in this ritual.
         
             Suffer 1 facedown Horror.
         
-            As the scream echos in the room, the portal grows dimmer and shrinks
+            As the scream echos in the room, the gate grows dimmer and shrinks
             slightly. Where it was humming and stable before, it is sputtering,
             pulsing erratically, and making an electrical sound. It has been
             weakened, but not closed. It will eventually collapse on its own,
@@ -233,7 +233,7 @@ Book ClosePortal ORDERED NO Keep Looped
 
         Text """
             You can feel something happen inside but it is not very strong. The
-			portal sputters for a moment, but nothing more. You>ll have to try
+			gate sputters for a moment, but nothing more. You'll have to try
 			the incantation again.
 
             Suffer 1 facedown Damage and 1 facedown Horror ({will} negates).
@@ -246,7 +246,7 @@ Book ClosePortal ORDERED NO Keep Looped
 
     Page Step4Repeat
         Prolog """
-            The portal is still humming and pulsing with energy. Whatever is
+            The gate is still humming and pulsing with energy. Whatever is
             approaching is getting closer.
         
             You look at the incantation again and take a deep, calming breath.
@@ -264,18 +264,18 @@ Book ClosePortal ORDERED NO Keep Looped
         """
         
 		// even if we pass, we fail
-		Test Quota 4 Set passClosePortalStep4
-        if passClosePortalStep4 Then Goto Step4Pass
+		Test Quota 4 Set passCloseGateStep4
+        if passCloseGateStep4 Then Goto Step4Pass
         Goto Step4Fail
     End Page Step4Repeat
 
     Page Step5
         Prolog """
-            You turn the page and see the next step: you>ll need more blood. You
+            You turn the page and see the next step: you'll need more blood. You
             have to cut yourself again with the {c:QItemRitualDagger} and let the
             blood drip on to the {c:QItemElderSign}. The book says that the blood
-            will empower the {c:QItemElderSign} to completely close the portal,
-			and seal this ley line in a way that will prevent another portal
+            will empower the {c:QItemElderSign} to completely close the gate,
+			and seal this ley line in a way that will prevent another gate
 			from opening here ever again.
     
             You look at your hand and see that it has stopped bleeding. Cutting
@@ -297,8 +297,8 @@ Book ClosePortal ORDERED NO Keep Looped
         """
 
         // even if we pass, we fail
-		Test Quota 10 Set passClosePortalStep5
-        If passClosePortalStep5 Then Goto Step5Fail
+		Test Quota 10 Set passCloseGateStep5
+        If passCloseGateStep5 Then Goto Step5Fail
         Goto Step5Fail
     End Page Step5
 
@@ -308,16 +308,16 @@ Book ClosePortal ORDERED NO Keep Looped
         Text """
             You squeeze your hand into a tight fist over the trinket. As your
 			blood drips, the it begins to glow. Then it and the knife begin
-			pulsing. When you look up, you see the portal is dimmer and
+			pulsing. When you look up, you see the gate is dimmer and
 			smaller, pulsing in sync with the {QItemRitualDagger} and the
 			{c:QItemElderSign}. The boy screams again, no longer sounding
 			human.
 
             The {c:QItemElderSign} rises and hovers over the altar. It vibrates
-            briefly, then slowly moves across the room toward the portal.
+            briefly, then slowly moves across the room toward the gate.
 
             The boy screams one last time as the elder sign makes contact with
-			his forehead. The boy goes rigid, then the portal collapses and the
+			his forehead. The boy goes rigid, then the gate collapses and the
 			boy falls to the ground... still smoldering... still moaning.
         
             This investigation is over.
@@ -333,7 +333,7 @@ Book ClosePortal ORDERED NO Keep Looped
 
         Text """
             You finish the incantation, but the {c:QItemElderSign} just lies
-			there. You>ll have to try again.
+			there. You'll have to try again.
 
             Suffer 1 facedown Horror ({will} negates).
         """
@@ -360,9 +360,9 @@ Book ClosePortal ORDERED NO Keep Looped
             For each Unique Item you have, you may roll 1 extra die.
         """
 
-        Test Quota 4 Set passClosePortalStep5
-        If passClosePortalStep5 Then Goto Step5Pass
+        Test Quota 4 Set passCloseGateStep5
+        If passCloseGateStep5 Then Goto Step5Pass
         Goto Step5Fail
     End Page Step5Repeat
 
-End ClosePortal
+End CloseGate

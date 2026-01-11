@@ -18,7 +18,7 @@ Book ExploreBackDoorLocked Ordered No Keep Looped
 
 	Page ShakeDoor
 		Prolog """
-			No matter how hard you try, the knob just won>t turn.
+			No matter how hard you try, the knob just won't turn.
 			Looking closer, you see a light peeking between the door
 			and its jam. <i>Maybe I can shake it open?<i> you think
 			to yourself.
@@ -54,7 +54,7 @@ Book ExploreBackDoorLocked Ordered No Keep Looped
 		Prolog "
 			The third or fourth time you hit door, something in your
 			shoulder pops and it hurts. Bad. You feel the panic setting in.
-			<i>Why won>t this door open?</i> you ask yourself.
+			<i>Why won't this door open?</i> you ask yourself.
 			
 			Take 1 facedown damage ({strength} negates).
 

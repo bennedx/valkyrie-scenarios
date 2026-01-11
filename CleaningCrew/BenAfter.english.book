@@ -44,7 +44,7 @@ Book BenAfter Random No Keep Looped
 		"""
         
         If Not exploredBackyardNicely Then Text """
-            <<Then you should sweep it up. That>s what you>re here for, not to 
+            <<Then you should sweep it up. That's what you're here for, not to 
 			complain about dirt.>>
         """
 

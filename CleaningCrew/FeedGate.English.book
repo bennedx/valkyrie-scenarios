@@ -3,8 +3,8 @@ Language English
 // this is run during the Mythos phase while they
 // are killing cultists
 
-Book FeedPortal Ordered No Keep
-	If goal != goalFeedPortal Then EXIT
+Book FeedGate Ordered No Keep
+	Triggered By @ReadDvm When goal = goalFeedGate And ritual
 	
 	Page RitualBegins
 		Text """
@@ -24,33 +24,33 @@ Book FeedPortal Ordered No Keep
 		"""
 	End Page RitualBegins
 
-	Page PortalOpens
+	Page GateOpens
 		Text """
 			The woman's screaming stops and, for a moment, the house is silent
 			again... as if the house were taking a breath. Then, though you
-			cannot see it, you can feel the portal spring into being. You
+			cannot see it, you can feel the gate spring into being. You
 			hear... <i>something</> moan in pain, reverberating through the
 			wall, an unearthly sound. You know in your gut it's David's son.
 			
 			The feeling of power grows stronger; it radiates through the
 			floorboards and moves through the walls. Sarah whispers, <<The
-			portal is open, we have to stop him.>>
+			gate is open, we have to stop him.>>
 			
 			As she speaks, another cultist brushes past you, also heading
 			toward the cell.
 
 			Sarah lights up. <<We have the {c:QItemElderSign}. Without it,
 			David needs constant sacrifice to keep the gate open. Those
-			cultists are his sacrifice.
+			cultists are his sacrifices.
 
 			<<You must kill them,>> she says loudly. Everyone in the room turns
 			to look at her. <<You must kill them all.>>
 		"""
 		
-		feedPortalKillCount = 0
-		feedPortalKillGoal = 2 * #investigator + 2 + !exploredGateNicely * #investigator
-		feedPortalKillCount = 0
-	End Page PortalOpens
+		feedGateKillCount = 0
+		feedGateKillGoal = 2 * #investigator + 2 + !exploredGateNicely * #investigator
+		feedGateKillCount = 0
+	End Page GateOpens
 		
 	Page Sacrifice
 		Text """
@@ -59,8 +59,8 @@ Book FeedPortal Ordered No Keep
 			for another attack.
 			
 			The power you feel sputters with instability. With these cultists
-			as sacrifice, the portal will remain open; without them, it will
-			collapse.
+			as sacrifice, the gate will remain open; without them, it will
+			surely collapse.
 		"""
 	End Page Sacrifice
 	
@@ -70,7 +70,7 @@ Book FeedPortal Ordered No Keep
 			feel it.>>
 			
 			The house continues to vibrate with what you assume is the energy
-			of the portal. What should be a stable hum continues its uneven
+			of the gate. What should be a stable hum continues its uneven
 			popping.
 		"""
 	End Page Hurry
@@ -78,7 +78,7 @@ Book FeedPortal Ordered No Keep
 	Page Ponder
 		Text """
 			You stop for a moment and wonder, <i>How many cultists do we have
-			to kill? We've already killed {feedPortalKillCount}.</i> Out of
+			to kill? We've already killed {feedGateKillCount}.</i> Out of
 			the corner of your eye you see another one coming. It's time to get
 			back to work.
 		"""
@@ -99,7 +99,7 @@ Book FeedPortal Ordered No Keep
 	
 	Page RunningOutOfTime Random
 		Text """
-			<<Hurry,>> Sarah whispers. <<The portal is still open and we are
+			<<Hurry,>> Sarah whispers. <<The gate is still open and we are
 			running out of time.>>
 		"""
 	End Page RunningOutOfTime
@@ -115,4 +115,4 @@ Book FeedPortal Ordered No Keep
 			<<I can feel It. It is here. We may already be too late.>>
 		"""
 	End Page ItsHere
-End Book FeedPortal
+End Book FeedGate

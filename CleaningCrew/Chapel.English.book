@@ -11,7 +11,7 @@ Book Chapel Ordered No Keep Looped
 		
 		Prolog """
 			The door behind the bookcase is unlocked now. You aren't sure if you
-			want to see what's beind the door, but curiosity is getting the 
+			want to see what's behind the door, but curiosity is getting the 
 			better of you. You look around, then reach for then door...
 		"""
 		Button "Explore"
@@ -63,7 +63,7 @@ Book Chapel Ordered No Keep Looped
 		
 		Text """
 			A ceremonial table sits next to you at the front of the room. There
-			is a large book and various religous icons and implements. Place a
+			is a large book and various religious icons and implements. Place a
 			Search token as indicated.
 		"""
 	
@@ -134,7 +134,7 @@ Book Chapel Ordered No Keep Looped
 		Button "Search"
 		
 		Text QItemWhiskey """
-			You bend down to pick it up and causually smell the bottle. Man,
+			You bend down to pick it up and casually smell the bottle. Man,
 			that is some good whiskey! Gain the {c:QItemWhiskey} Common Item,
 			then discard this Search token.
 		"""
@@ -294,7 +294,7 @@ Book Chapel Ordered No Keep Looped
 	
 	Page SearchRitualDagger
 		Not Visible
-		Triggered By @SearchChapelRitualDagger When Not Read
+		Triggered By @SearchChapelRitualDagger When Unread
 		
 		Prolog """
 			The priest lies dead on the floor in front of you. Before you go

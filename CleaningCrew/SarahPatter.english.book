@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------------
 // use this to manage Sarah's commentary and make it work across scenarios
 // TOC: There are no TOC entries and this is ordered|nokeep:  this means the next page will be read each time it is opened
-// The default page text entries for goal == goalClosePortal
+// The default page text entries for goal == goalCloseGate
 // Note that the "visible" directives may change during the game, so pages with visibility rules might show out of order
 
 Language English
@@ -20,7 +20,7 @@ BOOK SarahPatter Ordered No Keep
 			that night. Everyone thought he and his brother ran off together
 			after he put a stop to the ritual.>>
 			
-			She chokes up momemtarily and a single tear runs down her right
+			She chokes up momentarily and a single tear runs down her right
 			cheek. She takes a breath and shakes it off. <i>Tears are for
 			later,</i> she thinks.
 			
@@ -34,20 +34,20 @@ BOOK SarahPatter Ordered No Keep
 		Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDVM} is
 			a spell book. It contains many powerful spells, including how to
-			open and close portals, and how to interrupt a ritual that has been
+			open and close gates, and how to interrupt a ritual that has been
 			started.
 			
-			<<If you cannot stop {c:CustomMonsterDavidSmythe} in time,
-			you may need to perform a closing ritual. Closing portals is easier
-			than opening them but it takes time. With the portal open, many
+			<<If you cannot stop David in time,
+			you may need to perform a closing ritual. Closing gates is easier
+			than opening them but it takes time. With the gate open, many
 			horrors could come through while you are trying to close it. You
 			must be prepared. Read the book carefully and read it soon.>>
 		"""
 
-		If goal == goalFeedPortal Or goal == goalClosePortal Then Text """
+		If goal == goalFeedGate Or goal == goalCloseGate Then Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDVM} is
 			a spell book. It contains many powerful spells, including how to
-			open and close portals. You should read it to better understand
+			open and close gates. You should read it to better understand
 			what is happening.>>
 		"""
 	End Page Dvm
@@ -59,7 +59,7 @@ BOOK SarahPatter Ordered No Keep
 			Sarah whispers to {c:EventChosenInvestigator}, <<There's a part of
 			the house that is too dark to enter without light. The candles you
 			found should help. If we move fast enough, maybe we can stop
-			{c:CustomMonsterDavidSmythe} from opening the portal.>>
+			{c:CustomMonsterDavidSmythe} from opening the gate.>>
 		"""
 	End Page Candles
 
@@ -73,18 +73,18 @@ BOOK SarahPatter Ordered No Keep
 			have it, you should keep it with you at all times.>>
 		"""
 
-		If goal == goalClosePortal Then Text """
+		If goal == goalCloseGate Then Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<The
 			{c:QItemElderSign} is an important part of the closing ritual. It
-			seals the portal permanently. When the closing ritual was
-			performed 10 years ago, our Uncle Henry was able to close the
-			portal, but he died before he could seal it.>>
+			seals the gate permanently. When the closing ritual was
+			performed 10 years ago, our father was able to close the
+			gate, but he died before he could seal it.>>
 		"""
 
-		If goal == goalOpenPortal Then Text """
+		If goal == goalOpenGate Then Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<The
 			{c:QItemElderSign} is important for their plans tonight. It is used
-			to either secure or seal a portal. It is good we found it before
+			to either secure or seal a gate. It is good we found it before
 			they did.>>
 		"""
 
@@ -95,7 +95,7 @@ BOOK SarahPatter Ordered No Keep
 		
 		Text """
 			Sarah reaches out as if to touch the {c:QItemRitualComponents}. <<I
-			recognize some of these items from the portal ritual. Both my father
+			recognize some of these items from the gate ritual. Both my father
 			and the men who tried to stop him brought similar items to help with
 			the spells.>>
 		"""
@@ -107,7 +107,7 @@ BOOK SarahPatter Ordered No Keep
 		Text """
 			Sarah reaches toward the {c:QItemRitualDagger}. <<I recognize this
 			dagger,>> she starts. <<It looks like the one my father used in the
-			portal ritual. With luck, they need this one and we have it.>>
+			gate ritual. With luck, they need this one and we have it.>>
 		"""
 	End Page Dagger
 
@@ -127,9 +127,9 @@ BOOK SarahPatter Ordered No Keep
 			me or what happened 10 years ago. I am your little sister.
 			
 			<<I will tell you everything you need to know, but first I must
-			tell you that David will open a portal
+			tell you that David will open a gate
 			tonight and you must stop him; if you cannot stop him, you will
-			need to close that portal.>>
+			need to close that gate.>>
 		"""
 	End Page Color1
 
@@ -138,10 +138,10 @@ BOOK SarahPatter Ordered No Keep
 			Sarah whispers to {c:EventChosenInvestigator}, <<The people in this
 			town worship a darker god than most. They want to bring their god
 			to Earth. 10 years ago, my father cast a ritual to summon It. He
-			opened a portal. The power it possessed was breathtaking and I
+			opened a gate. The power it possessed was breathtaking and I
 			could do nothing to stop it. Somehow, Father summoned local
-			townsfolk through the portal to protect his casting, even after he
-			was dead. As the portal, I could feel people and monsters
+			townsfolk through the gate to protect his casting, even after he
+			was dead. As the gate, I could feel people and monsters
 			approaching and passing through me from the other side.>>
 		"""
 	End Page Color2
@@ -152,7 +152,7 @@ BOOK SarahPatter Ordered No Keep
 			ancient one approach from the other side. Suddenly, a group of men
 			broke into the altar chamber and began fighting the locals. One man
 			went to the altar, killed our father, laid out some materials, and
-			spoke words I didn't understand. He closed the portal while his
+			spoke words I didn't understand. He closed the gate while his
 			friends protected him from what came through it.>>
 		"""
 	End Page Color3
@@ -161,8 +161,8 @@ BOOK SarahPatter Ordered No Keep
 		Text """
 			Sarah whispers to {c:EventChosenInvestigator},
 			<<Our father believed that personal sacrifice was the most powerful
-			magic. The portal is created by binding power to the body of a
-			loved one. Father used me to summon the portal. When the portal
+			magic. The gate is created by binding power to the body of a
+			loved one. Father used me to summon the gate. When the gate
 			closed, I died with it. The pain of the ritual so engulfed me that
 			I can still feel it.>>
 		"""
@@ -186,7 +186,7 @@ BOOK SarahPatter Ordered No Keep
 			ritual, two of my friends came to visit me. When Father told them I
 			wasn't allowed out, they sneaked to my window and crawled in when I
 			opened it. Father was furious. I'm not sure who strangled them or
-			who dragged them to the yard. I was burning alive when the portal
+			who dragged them to the yard. I was burning alive when the gate
 			closed, then my body was dumped with my friends. It wasn't until
 			then that I knew they were dead. I smoldered for several days,
 			alive and conscious until the end.>>
@@ -195,11 +195,11 @@ BOOK SarahPatter Ordered No Keep
 	
 	Page Color7
 		Text """
-			Sarah whispers to {c:EventChosenInvestigator}, “I don't know who
-			the other men were, but the one who closed the portal was our uncle
+			Sarah whispers to {c:EventChosenInvestigator}, <<I don't know who
+			the other men were, but the one who closed the gate was our uncle
 			Henry--Father's brother. I think there's something special about
 			our family; there are things only we can do. It's why Father could
-			summon the portal, and why Uncle Henry could close it.
+			summon the gate, and why Uncle Henry could close it.
 			
 			<<You probably share the family abilities. You must trust yourself
 			to know what to do.>>

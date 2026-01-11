@@ -1,8 +1,9 @@
 Language English
+Debug On
 
 Book Basement Ordered No Keep Looped
 
-	Page Place
+	Page PlaceStart
 		Triggered By @ExploreBasementViaDiningRoom
 		
 		Prolog """
@@ -22,7 +23,7 @@ Book Basement Ordered No Keep Looped
 		"""
 		
 		exploredBasement = true
-	End Page Place
+	End Page PlaceStart
 
 	Page PlaceDarkness
 		Add TokenBasementDarkness1!
@@ -46,7 +47,6 @@ Book Basement Ordered No Keep Looped
 			There is a pile of junk in one of the corners. Place a Search token
 			as indicated.
 		"""
-		moveAfterExplore = true
 	End Page PlaceEvidence
 
 	Page PlaceExploreDungeonCaveViaBasement

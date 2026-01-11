@@ -109,8 +109,8 @@ Book SearchDiningRoom Ordered No Keep Looped
 			investigators--including you--1 space away from the
 			device.
 
-			{c:EventChosenInvestigator} recovers first and stands back up. As
-			they approach the device, nothing happens. Move
+			{c:EventChosenInvestigator} recovers first and stands back up. 
+			They approach the device but nothing happens. Move
 			{c:EventChosenInvestigator} into the device's space.
 		"""
 		
@@ -162,7 +162,6 @@ Book SearchDiningRoom Ordered No Keep Looped
 			and I didn't know how I'd find another.>>
 		"""
 		
-		Mark DiningRoom.Paper Read
 		kateHasFluxStabilizer = true
 		Goto Puzzle1
 	End Page KatePicksUp
@@ -185,8 +184,9 @@ Book SearchDiningRoom Ordered No Keep Looped
 		Triggered By @SearchDiningRoomFluxStabilizer When Unread And StartFluxStabilizer Is Read
 
 		Prolog """
-			There is a control panel. Maybe you can restart it? You
-			reach down and begin to fiddle with the buttons and dials.
+			There is a control panel. You probably shouldn't, but maybe you can
+			restart it? You reach down and begin to fiddle with the buttons and
+			dials.
 
 			{c:EventChosenInvestigator} may attempt the puzzle using {lore}.
 		"""
@@ -699,9 +699,6 @@ Book DoorBasementViaDiningRoomLock Ordered No Keep Looped
 			go into the basement. Place a Sight token as indicated.
 		"""
 	End Page
-
-
-
 End Book DoorBasementViaDiningRoomLock
 
 
