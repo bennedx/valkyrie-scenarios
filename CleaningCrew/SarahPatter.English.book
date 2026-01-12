@@ -9,24 +9,25 @@ Language English
 BOOK SarahPatter Ordered No Keep
 
 
-	Page HenryIsDead
-		Visible When henryIsDead
+	Page PeterIsDead
+		Visible When peterIsDead
 		
 		Text """
 			Sarah leans in and whispers into {c:EventChosenInvestigator}'s
 			ear. She is visibly upset.
 			
-			<<I cannot believe our father, Henry, was killed
-			that night. Everyone thought he and his brother ran off together
-			after he put a stop to the ritual.>>
+			<<I didn't know Uncle Peter was killed
+			that night. Everyone thought he and Father ran off
+			together after Uncle Peter put a stop to the ritual.>>
 			
 			She chokes up momentarily and a single tear runs down her right
-			cheek. She takes a breath and shakes it off. <i>Tears are for
-			later,</i> she thinks.
+			cheek. She takes a breath and shakes it off. <<Tears are for
+			later.>>
 			
-			<<Now I know what really happened. And it will not happen again.>>
+			She's quiet for a moment, then says, <<Now I know what really
+			happened. And it will not happen again.>>
 		"""
-	End Page HenryIsDead
+	End Page PeterIsDead
 	
 	Page Dvm
 		Visible When foundDvm
@@ -37,7 +38,7 @@ BOOK SarahPatter Ordered No Keep
 			open and close gates, and how to interrupt a ritual that has been
 			started.
 			
-			<<If you cannot stop David in time,
+			<<If you cannot stop Mathias in time,
 			you may need to perform a closing ritual. Closing gates is easier
 			than opening them but it takes time. With the gate open, many
 			horrors could come through while you are trying to close it. You
@@ -59,7 +60,7 @@ BOOK SarahPatter Ordered No Keep
 			Sarah whispers to {c:EventChosenInvestigator}, <<There's a part of
 			the house that is too dark to enter without light. The candles you
 			found should help. If we move fast enough, maybe we can stop
-			{c:CustomMonsterDavidSmythe} from opening the gate.>>
+			Mathias from opening the gate.>>
 		"""
 	End Page Candles
 
@@ -107,7 +108,7 @@ BOOK SarahPatter Ordered No Keep
 		Text """
 			Sarah reaches toward the {c:QItemRitualDagger}. <<I recognize this
 			dagger,>> she starts. <<It looks like the one my father used in the
-			gate ritual. With luck, they need this one and we have it.>>
+			gate ritual. With luck, they need this but we have it.>>
 		"""
 	End Page Dagger
 
@@ -127,9 +128,9 @@ BOOK SarahPatter Ordered No Keep
 			me or what happened 10 years ago. I am your little sister.
 			
 			<<I will tell you everything you need to know, but first I must
-			tell you that David will open a gate
+			tell you that our cousin, Mathias, will open a gate
 			tonight and you must stop him; if you cannot stop him, you will
-			need to close that gate.>>
+			need to find a way to close that gate.>>
 		"""
 	End Page Color1
 
@@ -137,10 +138,10 @@ BOOK SarahPatter Ordered No Keep
 		Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<The people in this
 			town worship a darker god than most. They want to bring their god
-			to Earth. 10 years ago, my father cast a ritual to summon It. He
-			opened a gate. The power it possessed was breathtaking and I
-			could do nothing to stop it. Somehow, Father summoned local
-			townsfolk through the gate to protect his casting, even after he
+			to Earth. 10 years ago, Father cast a ritual to summon It. He
+			opened a gate using my body. The power it possessed was breathtaking
+			and I could do nothing to stop it. Somehow, Father summoned local
+			church members through the gate to protect it, even after he
 			was dead. As the gate, I could feel people and monsters
 			approaching and passing through me from the other side.>>
 		"""
@@ -150,17 +151,18 @@ BOOK SarahPatter Ordered No Keep
 		Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<I could feel the
 			ancient one approach from the other side. Suddenly, a group of men
-			broke into the altar chamber and began fighting the locals. One man
-			went to the altar, killed our father, laid out some materials, and
-			spoke words I didn't understand. He closed the gate while his
-			friends protected him from what came through it.>>
+			broke into the altar chamber and began fighting the men Father was
+			summoning. One man went to the altar, killed our father, laid
+			out some materials, and spoke words I didn't understand. He closed
+			the gate while his friends protected him from the men who came
+			through it.>>
 		"""
 	End Page Color3
 
 	Page Color4
 		Text """
 			Sarah whispers to {c:EventChosenInvestigator},
-			<<Our father believed that personal sacrifice was the most powerful
+			<<Father believed that personal sacrifice was the most powerful
 			magic. The gate is created by binding power to the body of a
 			loved one. Father used me to summon the gate. When the gate
 			closed, I died with it. The pain of the ritual so engulfed me that
@@ -187,7 +189,7 @@ BOOK SarahPatter Ordered No Keep
 			wasn't allowed out, they sneaked to my window and crawled in when I
 			opened it. Father was furious. I'm not sure who strangled them or
 			who dragged them to the yard. I was burning alive when the gate
-			closed, then my body was dumped with my friends. It wasn't until
+			closed, then my body was dumped with my friends'. It wasn't until
 			then that I knew they were dead. I smoldered for several days,
 			alive and conscious until the end.>>
 		"""
@@ -196,10 +198,11 @@ BOOK SarahPatter Ordered No Keep
 	Page Color7
 		Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<I don't know who
-			the other men were, but the one who closed the gate was our uncle
-			Henry--Father's brother. I think there's something special about
+			the other men were, but the one who closed the gate was Uncle
+			Peter--Father's brother. I think there's something special about
 			our family; there are things only we can do. It's why Father could
-			summon the gate, and why Uncle Henry could close it.
+			summon the gate, and why Uncle Peter could close it. And now Peter's
+			son, Mathias, is going to try to open another gate tonight.
 			
 			<<You probably share the family abilities. You must trust yourself
 			to know what to do.>>

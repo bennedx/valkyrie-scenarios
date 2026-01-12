@@ -17,7 +17,7 @@ Book BenBefore Random No Keep Looped
 		Text """
 			<<How long, you ask? Well, the house is large. There are numerous
 			rooms on the ground floor, a basement, and many rooms upstairs.
-			Peter lived here with his daughter. The wife died under suspicious
+			Elize lived here with his son and daughter. The wife died under suspicious
 			circumstances when the girl was three. Never explained.>>
 			
 			Gain 1 {clue}.
@@ -32,8 +32,8 @@ Book BenBefore Random No Keep Looped
 		If Not exploredBackyardNicely Text """
 			<<Long enough,>> he snaps. <<There are numerous rooms on the ground
 			floor, there is a basement, and there are many rooms upstairs. The
-			place has always been too big for the family. Peter lived here with
-			his daughter. His wife died under suspicious circumstances when the
+			place has always been too big for the family. Elias lived here with
+			his son and daughter. His wife died under suspicious circumstances when the
 			girl was three. Never explained.
 		
 			<<Anyway, you will take whatever time is necessary to look in every
@@ -61,13 +61,12 @@ Book BenBefore Random No Keep Looped
 			The other two were strangled and parts were... taken. The burns
 			were never explained. Nasty business.
 		
-			<<Peter Smythe--the
+			<<Elias Smythe--the
 			girl's father and the owner of this house--went missing that
 			night. Most folks think he did something to the children and
 			then ran away. Still hiding, they think.
 		
-			<<What wasn't reported
-			is that his brother, Henry, also disappeared that night. Folks in
+			<<His brother, Peter, also disappeared that night. Folks in
 			town figured they'd run off together to avoid difficult questions.>>
 		
 			Gain 1 {clue}.
@@ -77,9 +76,9 @@ Book BenBefore Random No Keep Looped
 			<<The children? Two were strangled. Parts of them were... missing.
 			The burns on the third were never explained. Nasty business.
 			
-			<<Peter and his brother Henry both went missing that night. Most
-			folks don't know about Henry. Left a lot of folks around town
-			wondering what really happened. But we're not here to gossip.>>
+			<<Elias and his brother Peter both went missing that night. Left a
+			lot of folks around town wondering what really happened. But we're
+			not here to gossip.>>
 		"""
 		
 		Epilog """
@@ -102,8 +101,8 @@ Book BenBefore Random No Keep Looped
 			smoking from the burns. Strangest thing: she kept smoking until the
 			next day. Coroner wasn't able to explain it. No one was.
 		
-			<<Our family has lived here for generations--many of them in this
-			house. We're upset to let it go, but no one lives here... or wants
+			<<Their family has lived here for generations--many of them in this
+			house. They're upset to let it go, but no one lives here... or wants
 			to after what happened.>>
 		
 			Gain 1 {clue}.
@@ -121,7 +120,7 @@ Book BenBefore Random No Keep Looped
 		
 		Epilog """
 			Benjamin is still looking through his pockets, but he's moving
-			slower and looks upset. You wonder what his connection is to those
+			slower and looks upset. You wonder if he's connected is to those
 			children.
 		"""
 		
@@ -135,7 +134,7 @@ Book BenBefore Random No Keep Looped
 		Button "<<Why did you wait so long to sell the house?>>"
 		
 		Text """
-			<<Well, we tried right after the... trouble. No one would even come
+			<<Well, they tried right after the... trouble. No one would even come
 			to look at it back then, but our, um, priest, told us now is the
 			right time.>>
 		

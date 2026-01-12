@@ -52,7 +52,7 @@ Book Startup Ordered No Keep Looped
 		goalFeedGate = 2
 		goalCloseGate = 3
 		
-		goal = RANDOM(3)
+		goal = goalCloseGate //RANDOM(3)
 		
 		If Not testMode Then Trigger @SplashScreen
 		if Not testMode Then Exit

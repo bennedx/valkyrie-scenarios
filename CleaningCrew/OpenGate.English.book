@@ -7,7 +7,7 @@ Book OpenGateOrdered No Keep Looped
 
     Page Step1
         Prolog """
-			David stands at the alter, arms raised, speaking
+			Mathias stands at the alter, arms raised, speaking
 			a language you cannot understand. You can see on the altar the
 			various tools and materials needed for the ritual.
 			
@@ -20,7 +20,7 @@ Book OpenGateOrdered No Keep Looped
         
             Only {c:EventChosenInvestigator} can perform this task and only
             while standing at the altar in the space next to
-			David.
+			Mathias.
         
             Are you ready?
         """
@@ -29,13 +29,13 @@ Book OpenGateOrdered No Keep Looped
 
         Text """
 			When you get close to the altar, you see that
-			David does not have an {c:QItemElderSign}. That
+			Mathias does not have an {c:QItemElderSign}. That
 			means he will need blood to keep the gate open. You must stop him
 			before he uses you to feed it.
 			
 			You think back to the counter-spell you memorized earlier. You hold
 			the {c:QItemRitualKnife} and chalice above your head and speak the
-			words. David snaps his head toward you, as though seeing
+			words. Mathias snaps his head toward you, as though seeing
 			you here for the first time. Your eyes lock and you see a 
 			determined but haunted look in his eyes.
 			
@@ -52,7 +52,7 @@ Book OpenGateOrdered No Keep Looped
 			sound comes out, you see him moving his lips.
         """
 
-        Button "Stab David"
+        Button "Stab Mathias"
 
         Text """
 			You choose your moment and lunge at him with your knife. At the
@@ -78,7 +78,7 @@ Book OpenGateOrdered No Keep Looped
 		Button "Speak the words"
 
         Text """
-			David grabs the knife and begins speaking the
+			Mathias grabs the knife and begins speaking the
 			incantation again, his voice booming with power. The knife begins
 			glowing and lightly, slowly pulsing.
 			
@@ -93,7 +93,7 @@ Book OpenGateOrdered No Keep Looped
 
     Page Step3Fail
         Text """
-            You fumble the words and nothing happens. David
+            You fumble the words and nothing happens. Mathias
 			ignores you and slides the blade across his palm.
         
             Suffer 2 Horror ({will} negates).
@@ -123,7 +123,7 @@ Book OpenGateOrdered No Keep Looped
 
 	Page Step3RepeatFail
 		Text """
-			David seems unphased as blood wells up from the 
+			Mathias seems unphased as blood wells up from the 
 			cut in his palm. You look at the dagger and chalice raised in your
 			hands and wonder why nothing is happening. You take a deep breath,
 			determined to stop this madness.
@@ -135,14 +135,14 @@ Book OpenGateOrdered No Keep Looped
 
     Page Step4
         Prolog """
-            As David squeezes blood from his fist into the
+            As Mathias squeezes blood from his fist into the
 			chalice, the spell takes hold and... he loses his voice again.
         """
 
         Button "Make your move"
 
         Text """
-			With David distracted and frustrated, you reach
+			With Mathias distracted and frustrated, you reach
 			out to grab the skull. If only you can reach it before he... does
 			something.
 			
@@ -157,12 +157,12 @@ Book OpenGateOrdered No Keep Looped
 
 	Page Step4Fail
 		Text """
-			David swings his arm at you, dagger flashing in the low
+			Mathias swings his arm at you, dagger flashing in the low
 			light. It catches your arm, causing you to drop the dagger.
 			
 			Drop {c:QItemRitualKnife}. Take 2 {damage} ({agility} negates).
 			
-			David squeezes more of his blood into the chalice, 
+			Mathias squeezes more of his blood into the chalice, 
 			causing it to... change in a way you cannot describe. It somehow
 			feels powerful, like the knife he is wielding.
 		"""
@@ -176,8 +176,8 @@ Book OpenGateOrdered No Keep Looped
 	
 		// we need to replace unattackable monster with one we can attack
 		
-		Remove MonsterUncleDavidAltar
-		Spawn MonsterUncleDavidToKill
+		Remove MonsterUncleMathiasAltar
+		Spawn MonsterUncleMathiasToKill
 		
 		// does this make the DVM go away?
 		Remove QItemDvm

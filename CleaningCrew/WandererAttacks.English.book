@@ -407,7 +407,7 @@ Book WandererAttacks Ordered No Keep
 	Page LoreRestrained RANDOM
 		TEXT """
 			The cultist pours out a circle of dust and speaks in a language you do
-			not understand, though you think you heard <<David.>> You close your
+			not understand, though you think you heard <<Mathias.>> You close your
 			eyes and hope for the best. ({lore};2) If you pass, the dust just sits
 			there while the frustrated cultist continues mumbling. If you fail, the
 			circle slides across the floor, under your feet, and up your legs where

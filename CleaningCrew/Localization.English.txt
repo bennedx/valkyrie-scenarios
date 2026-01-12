@@ -82,7 +82,7 @@ CustomMonsterCellLloiger.monstername,Lloigor
 SpawnCellStartRitualMonster.text,"\nA monster squeezes through the hole in the wall. It smells you and wants blood. Place a {c:CustomMonsterCellLloiger} as indicated. This monster’s awareness is high:  you cannot evade it. If you are in the same space, you can only attack or pass. Something about this monster is different; the investigator holding the {c:QItemElderSignPendant} must either attack or pass when in the same space, like any other investigator.\n\nIf you have not already done so, place a trapdoor as indicated.\n\n{c:EventChosenInvestigator} tries to repel the monster with the {c:QItemFluxStabilizer}. The monster is too large and the device fizzles, falters, and fails. Discard the {c:QItemFluxStabilizer}.\n"
 SpawnCellStartRitualMonster.button1,Continue
 TokenTestStartRitual.text,Start Ritual
-UIOpeningText.uitext,|||As the owner of a new cleaning service, your friend was excited when he got the call for this job. The old Smythe estate has a large, rambling house that was abandoned years ago, after "the incident." Your buddy asked you to fill in for him today, so here you are with some friends to get started. You were excited for the opportunity to see the inside of the house--and you can use the money your friend offered--but now that you are here, you wonder if the job is really worth it.\n\nYou walk up the long drive, slowly passing by the front of the now-dilapidated mansion. Looking around the yard, you remember back 10 years when those three kids were found. Two had been strangled, but the third--Peter Smythe’s daughter--had been burned beyond recognition. They’d been found in the backyard.\n\nAfter the murders, old Mr Smythe was never seen again, so the family decided to sell the estate. You’d laughed off rumors that the kids had never really left, but no buyer was interested in this place, so it sat moldering for all these years.\n\nThe yard looks like it hasn’t been tended since Mr Smythe disappeared... or maybe longer. The gardens are dry and withered, cobblestones upended and half-buried, and dead trees are strewn across the property. You cannot see through the windows for all the mud and webs.\nYou hope the inside is cleaner than the outside but, if it were, you wouldn’t be here. As you round the corner of the house, you look toward the backyard and nervously laugh to yourself for thinking you’ll encounter a mess like those kids 10 years ago.|||
+UIOpeningText.uitext,|||As the owner of a new cleaning service, your friend was excited when he got the call for this job. The old Smythe estate has a large, rambling house that was abandoned years ago, after "the incident." Your buddy asked you to fill in for him today, so here you are with some friends, ready to get started. You were excited for the opportunity to see the inside of the house--and you can use the money your friend offered--but now that you are here, you wonder if the job is really worth it.\n\nYou walk up the long drive, slowly passing by the front of the now-dilapidated mansion. Looking around the yard, you remember something you were told about three kids found dead here 10 years ago. Two had been strangled, but the third--Peter Smythe’s daughter--had been burned beyond recognition. They’d been found in the backyard.\n\nAfter the murders, old Mr Smythe was never seen again, so the family decided to sell the estate. You’d laughed off rumors that the kids had never really left, but no buyer was interested in this place, so it sat moldering for all these years.\n\nThe yard looks like it hasn’t been tended since Mr Smythe disappeared... or maybe longer. The gardens are dry and withered, cobblestones are upended and half-buried, and dead trees are strewn across the property. You cannot see through the windows for all the mud and webs.\nYou hope the inside is cleaner than the outside but, if it were, you wouldn’t be here. As you round the corner of the house, you come to a driveway and what looks like gate. You nervously laugh to yourself for thinking you’ll encounter a mess like those kids 10 years ago.|||
 UIStoryImage.button1,Continue
 UIOpeningTitle.uitext,Cleaning Crew
 UIStoryContinue.uitext,Continue
@@ -222,7 +222,6 @@ EventExploreDiningRoomKnock.button1,Continue
 EventExploreFoyerLockedDoor.text,"\nThe key doesn’t fit this lock. Remove this Explore token.\n"
 EventExploreDiningRoom.text,"\nWhen you try to open the door, it sticks, so you push harder. The door splinters into pieces, a mess hanging by a hinge. If you’re here to clean this place up, this is not a good start.\n"
 EventExploreFoyerLockedDoor.button1,Continue
-EventExploreBackdoorFailSearchJournal.button1,Continue
 EventInteractSarahSpeaks1.text,|||\n"I don’t remember much about it. There was a lot of noise and light. I remember Father holding knife and reading from a book. There was blood, and a cup... and many, many men fighting."\n|||
 EventMythosRitualRestrained.button1,Continue
 EventMythosRitualRestrained.text,"\nThe closing ritual is in progress. {c:EventChosenInvestigator} takes a Restrained card.\n"
@@ -230,7 +229,7 @@ EventInteractSarahSpeaks1.button1,Continue
 EventPlaceChapelExploreCryptWithNoKey.text,"\nA small wooden door leads out of the room to the right. Place an Explore token as indicated.\n"
 EventExploreLibraryBookcaseLorePass.text,"\nAfter much fiddling, the lock springs loose.\n"
 EventExploreLibraryBookcaseLorePass.button1,Continue
-TokenSearchCryptHenry.button1,Button1
+TokenSearchCryptPeter.button1,Button1
 TokenExploreEscapeViaChapelLocked.button1,Trigger
 EventPlaceChapelExploreCryptWithKey.button1,Button1
 EventGameDoneWin.button1,Button1
@@ -347,16 +346,12 @@ EventPlaceBasementConditionConfirm.button2,No
 EventPlaceBasementConditionConfirm.text,"\nDo you have a light source?\n"
 EventPlaceBasementConditionConfirm.button1,Yes
 EventPlaceStudyExploreHall2Yes.button1,Button1
-EventExploreBackdoorFailSearchJournal.text,"\nBenjamin smiles again and walks through the now-opened gate. As soon as he is out of sight, you hear a loud crash and cursing.\n\nRemove the Purple Man token.\n\nIt looks like Benjamin dropped a book of some kind where he was introducing himself. Place a Search token as indicated.\n"
-EventExploreDiningRoomViaBackdoor.text,|||\n"Ah, here they are," Benjamin exclaims, waving his keys. "Let’s go in."\n|||
-EventExploreDiningRoomViaBackdoor.button1,Continue
 EventFluxStablizerInspect.button1,Continue
 EventFluxStablizerInspect.text,"\nOnly {c:EventChosenInvestigator} can drop or pick up this item, and cannot trade it to another investigator. When the {c:QItemFluxStabilizer} is on the floor, any investigator who moves or is moved into the space immediately moves 1 space away from the device. Move toward the {c:TileDiningRoom} if possible, or choose the direction randomly. This does not count as a movement. {c:EventChosenInvestigator} is immune to this effect.\n\nWhen {c:EventChosenInvestigator} carries this item, add 1 additional movement to their move actions.\n"
 EventMythosWandererStart.button1,Continue
 EventMythosWandererStart.button3,Button3
 EventMythosWandererStart.button4,Button4
 EventMythosWandererPlaced.button1,Continue
-EventPlaceCryptExploreDungeonCaveYes.button1,Button1
 TokenDarknessDiningRoom1.button1,Continue
 EventMythosWandererEnd.button1,Continue
 EventMythosWandererNotPlaced.button1,Button1
@@ -434,416 +429,7 @@ EventRngBuildNumber.button1,i < k
 EventTestRng.text,{var:rngResult}
 EventTestRng.button1,Continue
 EventTestRng.button2,Cancel
-EventBackdoorBenBeforeStart.text,
-EventBackdoorBenBeforeStart.button1,
-EventBackdoorBenBeforeInit.text,
-EventBackdoorBenBeforeInit.button1,
-EventBackdoorBenBeforeFirstTimeInitializer.text,
-EventBackdoorBenBeforeFirstTimeInitializer.button1,
-EventBackdoorBenBeforeToc.text,
-EventBackdoorBenBeforeToc.button1,
-EventBackdoorBenBeforeTocSelector.text,
-EventBackdoorBenBeforeTocSelector.button1,
-EventBackdoorBenBeforeToc0.text,"\nBenjamin is digging around in his pockets. You think you hear him mutter something about a key.\n"
-EventBackdoorBenBeforeToc0.button1,{action} “How long will it take us to look through the house?”
-EventBackdoorBenBeforeToc0.button2,{action} “What do you think happened to those children?”
-EventBackdoorBenBeforeToc0.button3,{action} “Where were those children found?”
-EventBackdoorBenBeforeToc0.button4,{action} “Why did you wait so long to sell the house?”
-EventBackdoorBenBeforeToc0.button5,{action} “I’m sorry about the gate.”
-EventBackdoorBenBeforeToc0.button6,Cancel
-EventBackdoorBenBeforeReadPageHowLong.text,
-EventBackdoorBenBeforeReadPageHowLong.button1,
-EventBackdoorBenBeforeExpr2.text,
-EventBackdoorBenBeforeExpr2.button1,
-EventBackdoorBenBeforeExpr3.text,
-EventBackdoorBenBeforeExpr3.button1,
-EventBackdoorBenBeforeExpr5.text,
-EventBackdoorBenBeforeExpr5.button1,
-EventBackdoorBenBeforeReadPageHowLongLetBefore1.text,
-EventBackdoorBenBeforeReadPageHowLongLetBefore1.button1,
-EventBackdoorBenBeforeExpr6.text,
-EventBackdoorBenBeforeExpr6.button1,
-EventBackdoorBenBeforeExpr7.text,
-EventBackdoorBenBeforeExpr7.button1,
-EventBackdoorBenBeforeExpr8.text,
-EventBackdoorBenBeforeExpr8.button1,
-EventBackdoorBenBeforeReadPageHowLongLetBefore2.text,
-EventBackdoorBenBeforeReadPageHowLongLetBefore2.button1,
-EventBackdoorBenBeforeReadPageHowLongTriggerBefore3.text,
-EventBackdoorBenBeforeReadPageHowLongTriggerBefore3.button1,
-EventBackdoorBenBeforeReadPageHowLongDisplay.text,
-EventBackdoorBenBeforeReadPageHowLongDisplay.button1,
-EventBackdoorBenBeforeReadPageHowLongOverload1.text,"\n“Long enough,” he snaps. “There are numerous rooms on the ground floor, there is a basement, and there are many rooms upstairs. The place has always been too big for the family. Peter lived here with his daughter. His wife died under suspicious circumstances when the girl was three. Never explained.\n\n“Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren’t you? And you won’t break anything else?” “I hope not,” he mutters under his breath.\n"
-EventBackdoorBenBeforeReadPageHowLongOverload1.button1,Continue
-EventBackdoorBenBeforeReadPageHowLongTiePoint.text,
-EventBackdoorBenBeforeReadPageHowLongTiePoint.button1,
-EventBackdoorBenBeforeExpr9.text,
-EventBackdoorBenBeforeExpr9.button1,
-EventBackdoorBenBeforeExpr10.text,
-EventBackdoorBenBeforeExpr10.button1,
-EventBackdoorBenBeforeExpr11.text,
-EventBackdoorBenBeforeExpr11.button1,
-EventBackdoorBenBeforeReadPageHowLongExitAfter1.text,
-EventBackdoorBenBeforeReadPageHowLongExitAfter1.button1,
-EventBackdoorBenBeforeReadPageHowLongTestEnd.text,
-EventBackdoorBenBeforeReadPageHowLongTestEnd.button1,
-EventBackdoorBenBeforeReadPageHowLongEnd.text,
-EventBackdoorBenBeforeReadPageHowLongEnd.button1,
-EventBackdoorBenBeforeTiePoint.text,
-EventBackdoorBenBeforeTiePoint.button1,
-EventBackdoorBenBeforeClearTrigger.text,
-EventBackdoorBenBeforeClearTrigger.button1,
-EventBackdoorBenBeforeLoopBack.text,
-EventBackdoorBenBeforeLoopBack.button1,
-EventBackdoorBenBeforeEnd.text,
-EventBackdoorBenBeforeEnd.button1,
-EventBackdoorBenBeforeExpr12.text,
-EventBackdoorBenBeforeExpr12.button1,
-EventBackdoorBenBeforeReadPageHowLongBase.text,"\n“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Peter lived here with his daughter. The wife died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I guess you’ll need a few hours just to look through the place and get your bearings. You’ll want to check every drawer, cabinet, and box in the house–take as much time as you need. The whole house should be cleared out and spotless by the end of next week.”\n"
-EventBackdoorBenBeforeReadPageHowLongBase.button1,Continue
-EventBackdoorBenBeforeExpr4.text,
-EventBackdoorBenBeforeExpr4.button1,
-EventBackdoorBenBeforeReadPageWhat.text,
-EventBackdoorBenBeforeReadPageWhat.button1,
-EventBackdoorBenBeforeExpr13.text,
-EventBackdoorBenBeforeExpr13.button1,
-EventBackdoorBenBeforeExpr14.text,
-EventBackdoorBenBeforeExpr14.button1,
-EventBackdoorBenBeforeExpr16.text,
-EventBackdoorBenBeforeExpr16.button1,
-EventBackdoorBenBeforeReadPageWhatLetBefore1.text,
-EventBackdoorBenBeforeReadPageWhatLetBefore1.button1,
-EventBackdoorBenBeforeExpr17.text,
-EventBackdoorBenBeforeExpr17.button1,
-EventBackdoorBenBeforeExpr18.text,
-EventBackdoorBenBeforeExpr18.button1,
-EventBackdoorBenBeforeExpr19.text,
-EventBackdoorBenBeforeExpr19.button1,
-EventBackdoorBenBeforeReadPageWhatLetBefore2.text,
-EventBackdoorBenBeforeReadPageWhatLetBefore2.button1,
-EventBackdoorBenBeforeReadPageWhatTriggerBefore3.text,
-EventBackdoorBenBeforeReadPageWhatTriggerBefore3.button1,
-EventBackdoorBenBeforeReadPageWhatDisplay.text,
-EventBackdoorBenBeforeReadPageWhatDisplay.button1,
-EventBackdoorBenBeforeReadPageWhatOverload1.text,"\n“The children? Two were strangled. Parts of them were... missing. The burns on the third were never explained. Nasty business.\n\n“Peter and his brother Henry both went missing that night. Most folks don’t know about Henry. Left a lot of folks around town wondering what really happened. But we’re not here to gossip.”\n"
-EventBackdoorBenBeforeReadPageWhatOverload1.button1,Continue
-EventBackdoorBenBeforeReadPageWhatTiePoint.text,
-EventBackdoorBenBeforeReadPageWhatTiePoint.button1,
-EventBackdoorBenBeforeExpr20.text,
-EventBackdoorBenBeforeExpr20.button1,
-EventBackdoorBenBeforeExpr21.text,
-EventBackdoorBenBeforeExpr21.button1,
-EventBackdoorBenBeforeExpr22.text,
-EventBackdoorBenBeforeExpr22.button1,
-EventBackdoorBenBeforeReadPageWhatExitAfter1.text,
-EventBackdoorBenBeforeReadPageWhatExitAfter1.button1,
-EventBackdoorBenBeforeReadPageWhatTestEnd.text,
-EventBackdoorBenBeforeReadPageWhatTestEnd.button1,
-EventBackdoorBenBeforeReadPageWhatEnd.text,
-EventBackdoorBenBeforeReadPageWhatEnd.button1,
-EventBackdoorBenBeforeExpr23.text,
-EventBackdoorBenBeforeExpr23.button1,
-EventBackdoorBenBeforeReadPageWhatBase.text,"\n“The children? One of them was burned from head-to-toe. The other two were strangled and parts were... taken. The burns were never explained. Nasty business.\n\n“Peter Smythe–the girl’s father and the owner of this house–went missing that night. Most folks think he did something to the children and then ran away. Still hiding, they think.\n\n“What wasn’t reported is that his brother, Henry, also disappeared that night. Folks in town figured they’d run off together to avoid difficult questions.”\n\nGain 1 {clue}.\n"
-EventBackdoorBenBeforeReadPageWhatBase.button1,Continue
-EventBackdoorBenBeforeExpr15.text,
-EventBackdoorBenBeforeExpr15.button1,
-EventBackdoorBenBeforeReadPageWhere.text,
-EventBackdoorBenBeforeReadPageWhere.button1,
-EventBackdoorBenBeforeExpr24.text,
-EventBackdoorBenBeforeExpr24.button1,
-EventBackdoorBenBeforeExpr25.text,
-EventBackdoorBenBeforeExpr25.button1,
-EventBackdoorBenBeforeExpr27.text,
-EventBackdoorBenBeforeExpr27.button1,
-EventBackdoorBenBeforeReadPageWhereLetBefore1.text,
-EventBackdoorBenBeforeReadPageWhereLetBefore1.button1,
-EventBackdoorBenBeforeExpr28.text,
-EventBackdoorBenBeforeExpr28.button1,
-EventBackdoorBenBeforeExpr29.text,
-EventBackdoorBenBeforeExpr29.button1,
-EventBackdoorBenBeforeExpr30.text,
-EventBackdoorBenBeforeExpr30.button1,
-EventBackdoorBenBeforeReadPageWhereLetBefore2.text,
-EventBackdoorBenBeforeReadPageWhereLetBefore2.button1,
-EventBackdoorBenBeforeReadPageWhereTriggerBefore3.text,
-EventBackdoorBenBeforeReadPageWhereTriggerBefore3.button1,
-EventBackdoorBenBeforeReadPageWhereDisplay.text,
-EventBackdoorBenBeforeReadPageWhereDisplay.button1,
-EventBackdoorBenBeforeReadPageWhereOverload1.text,"\n“The children were found just over there,” he grumbles, pointing back the way you came. “Not sure why it matters, but I’ll tell you: the girl who was burnt, she kept smoldering until the next day. Coroner couldn’t explain it.” Benjamin resumes digging through his pockets, but seems a little shaken.\n"
-EventBackdoorBenBeforeReadPageWhereOverload1.button1,Continue
-EventBackdoorBenBeforeReadPageWhereTiePoint.text,
-EventBackdoorBenBeforeReadPageWhereTiePoint.button1,
-EventBackdoorBenBeforeExpr31.text,
-EventBackdoorBenBeforeExpr31.button1,
-EventBackdoorBenBeforeExpr32.text,
-EventBackdoorBenBeforeExpr32.button1,
-EventBackdoorBenBeforeExpr33.text,
-EventBackdoorBenBeforeExpr33.button1,
-EventBackdoorBenBeforeReadPageWhereExitAfter1.text,
-EventBackdoorBenBeforeReadPageWhereExitAfter1.button1,
-EventBackdoorBenBeforeReadPageWhereTestEnd.text,
-EventBackdoorBenBeforeReadPageWhereTestEnd.button1,
-EventBackdoorBenBeforeReadPageWhereEnd.text,
-EventBackdoorBenBeforeReadPageWhereEnd.button1,
-EventBackdoorBenBeforeExpr34.text,
-EventBackdoorBenBeforeExpr34.button1,
-EventBackdoorBenBeforeReadPageWhereBase.text,"\n“The children were found just over there,” he says, pointing back the way you came. “They were in a pile; the girl’s body was still smoking from the burns. Strangest thing: she kept smoking until the next day. Coroner wasn’t able to explain it. No one was.\n\n“Our family has lived here for generations–many of them in this house. We’re upset to let it go, but no one lives here... or wants to after what happened.”\n\nGain 1 {clue}.\n\nBenjamin resumes searching his pockets, but seems a little shaken.\n"
-EventBackdoorBenBeforeReadPageWhereBase.button1,Continue
-EventBackdoorBenBeforeExpr26.text,
-EventBackdoorBenBeforeExpr26.button1,
-EventBackdoorBenBeforeReadPageWhy.text,
-EventBackdoorBenBeforeReadPageWhy.button1,
-EventBackdoorBenBeforeExpr35.text,
-EventBackdoorBenBeforeExpr35.button1,
-EventBackdoorBenBeforeExpr36.text,
-EventBackdoorBenBeforeExpr36.button1,
-EventBackdoorBenBeforeExpr38.text,
-EventBackdoorBenBeforeExpr38.button1,
-EventBackdoorBenBeforeReadPageWhyLetBefore1.text,
-EventBackdoorBenBeforeReadPageWhyLetBefore1.button1,
-EventBackdoorBenBeforeExpr39.text,
-EventBackdoorBenBeforeExpr39.button1,
-EventBackdoorBenBeforeExpr40.text,
-EventBackdoorBenBeforeExpr40.button1,
-EventBackdoorBenBeforeExpr41.text,
-EventBackdoorBenBeforeExpr41.button1,
-EventBackdoorBenBeforeReadPageWhyLetBefore2.text,
-EventBackdoorBenBeforeReadPageWhyLetBefore2.button1,
-EventBackdoorBenBeforeReadPageWhyTriggerBefore3.text,
-EventBackdoorBenBeforeReadPageWhyTriggerBefore3.button1,
-EventBackdoorBenBeforeReadPageWhyDisplay.text,
-EventBackdoorBenBeforeReadPageWhyDisplay.button1,
-EventBackdoorBenBeforeReadPageWhyOverload1.text,"\n“That’s none of your concern,” he snaps.\n\nYou startle at his abrupt response. You and all investigators in your space suffer 1 facedown horror ({will} negates).\n"
-EventBackdoorBenBeforeReadPageWhyOverload1.button1,Continue
-EventBackdoorBenBeforeReadPageWhyTiePoint.text,
-EventBackdoorBenBeforeReadPageWhyTiePoint.button1,
-EventBackdoorBenBeforeExpr42.text,
-EventBackdoorBenBeforeExpr42.button1,
-EventBackdoorBenBeforeExpr43.text,
-EventBackdoorBenBeforeExpr43.button1,
-EventBackdoorBenBeforeExpr44.text,
-EventBackdoorBenBeforeExpr44.button1,
-EventBackdoorBenBeforeReadPageWhyExitAfter1.text,
-EventBackdoorBenBeforeReadPageWhyExitAfter1.button1,
-EventBackdoorBenBeforeReadPageWhyTestEnd.text,
-EventBackdoorBenBeforeReadPageWhyTestEnd.button1,
-EventBackdoorBenBeforeReadPageWhyEnd.text,
-EventBackdoorBenBeforeReadPageWhyEnd.button1,
-EventBackdoorBenBeforeExpr45.text,
-EventBackdoorBenBeforeExpr45.button1,
-EventBackdoorBenBeforeReadPageWhyBase.text,"\n“Well, we tried right after the... trouble. No one would even come to look at it back then, but our priest, uh, told us now is the right time.”\n\nGain 1 {clue}.\n"
-EventBackdoorBenBeforeReadPageWhyBase.button1,Continue
-EventBackdoorBenBeforeExpr37.text,
-EventBackdoorBenBeforeExpr37.button1,
-EventBackdoorBenBeforeReadPageSorry.text,
-EventBackdoorBenBeforeReadPageSorry.button1,
-EventBackdoorBenBeforeExpr49.text,
-EventBackdoorBenBeforeExpr49.button1,
-EventBackdoorBenBeforeReadPageSorryLetBefore1.text,
-EventBackdoorBenBeforeReadPageSorryLetBefore1.button1,
-EventBackdoorBenBeforeReadPageSorryDisplay.text,
-EventBackdoorBenBeforeReadPageSorryDisplay.button1,
-EventBackdoorBenBeforeReadPageSorryBase.text,"\n“You should be more careful. The house is old and in poor repair.” His shoulders rise for a moment, then fall as he sighs. “No real harm done... the gate can be repaired... again.”\n"
-EventBackdoorBenBeforeReadPageSorryBase.button1,Continue
-EventBackdoorBenBeforeReadPageSorryTiePoint.text,
-EventBackdoorBenBeforeReadPageSorryTiePoint.button1,
-EventBackdoorBenBeforeReadPageSorryTestEnd.text,
-EventBackdoorBenBeforeReadPageSorryTestEnd.button1,
-EventBackdoorBenBeforeReadPageSorryEnd.text,
-EventBackdoorBenBeforeReadPageSorryEnd.button1,
-EventBackdoorBenBeforeToc1.text,"\nAs he digs through his pockets, he is grumbling something about the size of the house and you catch the word... “indolent”?\n"
-EventBackdoorBenBeforeToc1.button1,{action} “How long will it take us to look through the house?”
-EventBackdoorBenBeforeToc1.button2,{action} “What do you think happened to those children?”
-EventBackdoorBenBeforeToc1.button3,{action} “Where were those children found?”
-EventBackdoorBenBeforeToc1.button4,{action} “Why did you wait so long to sell the house?”
-EventBackdoorBenBeforeToc1.button5,{action} “I’m sorry about the gate.”
-EventBackdoorBenBeforeToc1.button6,Cancel
-EventBackdoorBenBeforeToc2.text,"\nBenjamin is still digging through his pockets. You hear him mutter about paying attention and minding your own business.\n"
-EventBackdoorBenBeforeToc2.button1,{action} “How long will it take us to look through the house?”
-EventBackdoorBenBeforeToc2.button2,{action} “What do you think happened to those children?”
-EventBackdoorBenBeforeToc2.button3,{action} “Where were those children found?”
-EventBackdoorBenBeforeToc2.button4,{action} “Why did you wait so long to sell the house?”
-EventBackdoorBenBeforeToc2.button5,{action} “I’m sorry about the gate.”
-EventBackdoorBenBeforeToc2.button6,Cancel
-EventBackdoorBenBeforeToc3.text,"\nBenjamin is still looking through his pockets, but he’s moving slower and looks upset. You wonder what his connection is to those children.\n"
-EventBackdoorBenBeforeToc3.button1,{action} “How long will it take us to look through the house?”
-EventBackdoorBenBeforeToc3.button2,{action} “What do you think happened to those children?”
-EventBackdoorBenBeforeToc3.button3,{action} “Where were those children found?”
-EventBackdoorBenBeforeToc3.button4,{action} “Why did you wait so long to sell the house?”
-EventBackdoorBenBeforeToc3.button5,{action} “I’m sorry about the gate.”
-EventBackdoorBenBeforeToc3.button6,Cancel
-EventBackdoorBenBeforeToc4.text,"\nBenjamin is looking around on the ground like maybe he dropped whatever he’s looking for. <i>Could it be a book instead of a key?</i> you wonder to yourself.\n"
-EventBackdoorBenBeforeToc4.button1,{action} “How long will it take us to look through the house?”
-EventBackdoorBenBeforeToc4.button2,{action} “What do you think happened to those children?”
-EventBackdoorBenBeforeToc4.button3,{action} “Where were those children found?”
-EventBackdoorBenBeforeToc4.button4,{action} “Why did you wait so long to sell the house?”
-EventBackdoorBenBeforeToc4.button5,{action} “I’m sorry about the gate.”
-EventBackdoorBenBeforeToc4.button6,Cancel
-EventBackdoorBenBeforeToc5.text,"\nBenjamin still doesn’t look happy, but he doesn’t seem as angry now.\n"
-EventBackdoorBenBeforeToc5.button1,{action} “How long will it take us to look through the house?”
-EventBackdoorBenBeforeToc5.button2,{action} “What do you think happened to those children?”
-EventBackdoorBenBeforeToc5.button3,{action} “Where were those children found?”
-EventBackdoorBenBeforeToc5.button4,{action} “Why did you wait so long to sell the house?”
-EventBackdoorBenBeforeToc5.button5,{action} “I’m sorry about the gate.”
-EventBackdoorBenBeforeToc5.button6,Cancel
-EventBackdoorBenBeforeTocTiePoint.text,
-EventBackdoorBenBeforeTocTiePoint.button1,
-EventBackdoorBenBeforeTocIsFinished.text,
-EventBackdoorBenBeforeTocIsFinished.button1,
 EventChosenInvestigator.button1,Continue
-EventBackDoorLockedStart.text,
-EventBackDoorLockedStart.button1,
-EventBackDoorLockedInit.text,
-EventBackDoorLockedInit.button1,
-EventBackDoorLockedFirstTimeInitializer.text,
-EventBackDoorLockedFirstTimeInitializer.button1,
-EventBackDoorLockedToc.text,
-EventBackDoorLockedToc.button1,
-EventBackDoorLockedTocDisplay.text,
-EventBackDoorLockedTocDisplay.button1,
-EventBackDoorLockedTocBase.text,"\nWell, you try to put the key into the lock but it doesn’t fit, no matter how hard you try. You look at the key and try again. And again. And again. Dejected and out of ideas, you turn away from the door. “I guess we’ll have to find another way out,” you say to no one in particular. Someone mutters, “Yeah.”\n\nRemove this explore token.\n"
-EventBackDoorLockedTocBase.button1,Continue
-EventBackDoorLockedTocTiePoint.text,
-EventBackDoorLockedTocTiePoint.button1,
-EventBackDoorLockedTocAddRemoveAfter1.text,
-EventBackDoorLockedTocAddRemoveAfter1.button1,
-EventBackDoorLockedTocEnd.text,
-EventBackDoorLockedTocEnd.button1,
-EventBackDoorLockedTocSelector.text,
-EventBackDoorLockedTocSelector.button1,
-EventBackDoorLockedTocPrologTurnKnob.text,"\nThe door that closed behind you looks larger and more solid from inside.\n"
-EventBackDoorLockedTocPrologTurnKnob.button1,{action} Open door
-EventBackDoorLockedTocPrologTurnKnob.button2,Cancel
-EventBackDoorLockedReadPageTurnKnob.text,
-EventBackDoorLockedReadPageTurnKnob.button1,
-EventBackDoorLockedReadPageTurnKnobDisplay.text,
-EventBackDoorLockedReadPageTurnKnobDisplay.button1,
-EventBackDoorLockedReadPageTurnKnobBase.text,"\nYou reach for the knob. Test {strength} or {agility}.\n"
-EventBackDoorLockedReadPageTurnKnobBase.button1,Continue
-EventBackDoorLockedReadPageTurnKnobBase.button2,Cancel
-EventBackDoorLockedReadPageTurnKnobBasePassTest.text,
-EventBackDoorLockedReadPageTurnKnobBasePassTest.button1,
-EventBackDoorLockedReadPageTurnKnobTiePoint.text,
-EventBackDoorLockedReadPageTurnKnobTiePoint.button1,
-EventBackDoorLockedReadPageTurnKnobPostTest.text,
-EventBackDoorLockedReadPageTurnKnobPostTest.button1,
-EventBackDoorLockedReadPageTurnKnobPostTestPass.text,
-EventBackDoorLockedReadPageTurnKnobPostTestPass.button1,
-EventBackDoorLockedReadPageTurnKnobEnd.text,
-EventBackDoorLockedReadPageTurnKnobEnd.button1,
-EventBackDoorLockedTiePoint.text,
-EventBackDoorLockedTiePoint.button1,
-EventBackDoorLockedClearTrigger.text,
-EventBackDoorLockedClearTrigger.button1,
-EventBackDoorLockedLoopBack.text,
-EventBackDoorLockedLoopBack.button1,
-EventBackDoorLockedEnd.text,
-EventBackDoorLockedEnd.button1,
-EventBackDoorLockedReadPageTurnKnobPostTestFail.text,
-EventBackDoorLockedReadPageTurnKnobPostTestFail.button1,
-EventBackDoorLockedReadPageTurnKnobBaseFailTest.text,
-EventBackDoorLockedReadPageTurnKnobBaseFailTest.button1,
-EventBackDoorLockedTocPrologShakeDoor.text,"\nNo matter how hard you try, the knob just won’t turn. Looking closer, you see a light peeking between the door and its jam. <i>Maybe I can shake it open?<i> you think to yourself.\n"
-EventBackDoorLockedTocPrologShakeDoor.button1,{action} Shake door
-EventBackDoorLockedTocPrologShakeDoor.button2,Cancel
-EventBackDoorLockedReadPageShakeDoor.text,
-EventBackDoorLockedReadPageShakeDoor.button1,
-EventBackDoorLockedReadPageShakeDoorDisplay.text,
-EventBackDoorLockedReadPageShakeDoorDisplay.button1,
-EventBackDoorLockedReadPageShakeDoorBase.text,"\nYou grab the knob again and begin shaking it violently. Test {strength} or {will}.\n"
-EventBackDoorLockedReadPageShakeDoorBase.button1,Continue
-EventBackDoorLockedReadPageShakeDoorBase.button2,Cancel
-EventBackDoorLockedReadPageShakeDoorBasePassTest.text,
-EventBackDoorLockedReadPageShakeDoorBasePassTest.button1,
-EventBackDoorLockedReadPageShakeDoorTiePoint.text,
-EventBackDoorLockedReadPageShakeDoorTiePoint.button1,
-EventBackDoorLockedReadPageShakeDoorPostTest.text,
-EventBackDoorLockedReadPageShakeDoorPostTest.button1,
-EventBackDoorLockedReadPageShakeDoorPostTestPass.text,
-EventBackDoorLockedReadPageShakeDoorPostTestPass.button1,
-EventBackDoorLockedReadPageShakeDoorEnd.text,
-EventBackDoorLockedReadPageShakeDoorEnd.button1,
-EventBackDoorLockedReadPageShakeDoorPostTestFail.text,
-EventBackDoorLockedReadPageShakeDoorPostTestFail.button1,
-EventBackDoorLockedReadPageShakeDoorBaseFailTest.text,
-EventBackDoorLockedReadPageShakeDoorBaseFailTest.button1,
-EventBackDoorLockedTocPrologHitDoor.text,"\nNo matter how hard you shake it, the door doesn’t budge. And you might have pulled something in your right arm. Maybe you can knock it down? You also begin to wonder if you shouldn’t move on. Or just knock it down.\n"
-EventBackDoorLockedTocPrologHitDoor.button1,{action} Break it down
-EventBackDoorLockedTocPrologHitDoor.button2,Cancel
-EventBackDoorLockedReadPageHitDoor.text,
-EventBackDoorLockedReadPageHitDoor.button1,
-EventBackDoorLockedReadPageHitDoorDisplay.text,
-EventBackDoorLockedReadPageHitDoorDisplay.button1,
-EventBackDoorLockedReadPageHitDoorBase.text,"\nYou muster up your strength and prepare to break the door down with your shoulder. Test {strength} or {lore}.\n"
-EventBackDoorLockedReadPageHitDoorBase.button1,Continue
-EventBackDoorLockedReadPageHitDoorBase.button2,Cancel
-EventBackDoorLockedReadPageHitDoorBasePassTest.text,
-EventBackDoorLockedReadPageHitDoorBasePassTest.button1,
-EventBackDoorLockedReadPageHitDoorTiePoint.text,
-EventBackDoorLockedReadPageHitDoorTiePoint.button1,
-EventBackDoorLockedReadPageHitDoorPostTest.text,
-EventBackDoorLockedReadPageHitDoorPostTest.button1,
-EventBackDoorLockedReadPageHitDoorPostTestPass.text,
-EventBackDoorLockedReadPageHitDoorPostTestPass.button1,
-EventBackDoorLockedReadPageHitDoorEnd.text,
-EventBackDoorLockedReadPageHitDoorEnd.button1,
-EventBackDoorLockedReadPageHitDoorPostTestFail.text,
-EventBackDoorLockedReadPageHitDoorPostTestFail.button1,
-EventBackDoorLockedReadPageHitDoorBaseFailTest.text,
-EventBackDoorLockedReadPageHitDoorBaseFailTest.button1,
-EventBackDoorLockedTocPrologPickLock.text,"\nThe third or fourth time you hit door, something in your shoulder pops and it hurts. Bad. You feel the panic setting in. <i>Why won’t this door open?</i> you ask yourself.\n\nTake 1 facedown damage ({strength} negates).\n\n“Hey, is this a hairpin?” you ask out loud. One of the other investigators turns to look at you.\n"
-EventBackDoorLockedTocPrologPickLock.button1,{action} Pick lock
-EventBackDoorLockedTocPrologPickLock.button2,Cancel
-EventBackDoorLockedReadPagePickLock.text,
-EventBackDoorLockedReadPagePickLock.button1,
-EventBackDoorLockedExpr1.text,
-EventBackDoorLockedExpr1.button1,
-EventBackDoorLockedReadPagePickLockLetBefore1.text,
-EventBackDoorLockedReadPagePickLockLetBefore1.button1,
-EventBackDoorLockedReadPagePickLockDisplay.text,
-EventBackDoorLockedReadPagePickLockDisplay.button1,
-EventBackDoorLockedReadPagePickLockBase.text,"\nAs you work the hairpin into the lock, you wonder why it was in your pocket. Test {agility} or {influence}.\n"
-EventBackDoorLockedReadPagePickLockBase.button1,Continue
-EventBackDoorLockedReadPagePickLockBase.button2,Cancel
-EventBackDoorLockedReadPagePickLockBasePassTest.text,
-EventBackDoorLockedReadPagePickLockBasePassTest.button1,
-EventBackDoorLockedReadPagePickLockTiePoint.text,
-EventBackDoorLockedReadPagePickLockTiePoint.button1,
-EventBackDoorLockedReadPagePickLockPostTest.text,
-EventBackDoorLockedReadPagePickLockPostTest.button1,
-EventBackDoorLockedReadPagePickLockPostTestPass.text,
-EventBackDoorLockedReadPagePickLockPostTestPass.button1,
-EventBackDoorLockedReadPagePickLockEnd.text,
-EventBackDoorLockedReadPagePickLockEnd.button1,
-EventBackDoorLockedReadPagePickLockPostTestFail.text,
-EventBackDoorLockedReadPagePickLockPostTestFail.button1,
-EventBackDoorLockedReadPagePickLockBaseFailTest.text,
-EventBackDoorLockedReadPagePickLockBaseFailTest.button1,
-EventBackDoorLockedTocPrologUnlockDoor.text,"\nYou can feel the tumblers, but nothing moves. Eventually, the hairpin bends too much to be of use. <i>Maybe this really is a waste of time,</i> you consider. <i>Wait, I have that key.</i>\n\nIf you have the {c:QItemBrassKey}, ...\n"
-EventBackDoorLockedTocPrologUnlockDoor.button1,{action} Unlock door
-EventBackDoorLockedTocPrologUnlockDoor.button2,Cancel
-EventBackDoorLockedReadPageUnlockDoor.text,
-EventBackDoorLockedReadPageUnlockDoor.button1,
-EventBackDoorLockedReadPageUnlockDoorDisplay.text,
-EventBackDoorLockedReadPageUnlockDoorDisplay.button1,
-EventBackDoorLockedReadPageUnlockDoorBase.text,"\nYou pull out the key and look at it for a moment before putting it into the lock... Test {strength} or {observation}.\n"
-EventBackDoorLockedReadPageUnlockDoorBase.button1,Continue
-EventBackDoorLockedReadPageUnlockDoorBase.button2,Cancel
-EventBackDoorLockedReadPageUnlockDoorBasePassTest.text,
-EventBackDoorLockedReadPageUnlockDoorBasePassTest.button1,
-EventBackDoorLockedReadPageUnlockDoorTiePoint.text,
-EventBackDoorLockedReadPageUnlockDoorTiePoint.button1,
-EventBackDoorLockedReadPageUnlockDoorPostTest.text,
-EventBackDoorLockedReadPageUnlockDoorPostTest.button1,
-EventBackDoorLockedReadPageUnlockDoorPostTestPass.text,
-EventBackDoorLockedReadPageUnlockDoorPostTestPass.button1,
-EventBackDoorLockedReadPageUnlockDoorEnd.text,
-EventBackDoorLockedReadPageUnlockDoorEnd.button1,
-EventBackDoorLockedReadPageUnlockDoorPostTestFail.text,
-EventBackDoorLockedReadPageUnlockDoorPostTestFail.button1,
-EventBackDoorLockedReadPageUnlockDoorBaseFailTest.text,
-EventBackDoorLockedReadPageUnlockDoorBaseFailTest.button1,
-quest.UncleDavid,Uncle David
 TokenBackyardBenPassive.text,Benjamin has gone back to searching his pockets.
 TokenBackyardBenPassive.button1,Continue
 PuzzleFluxStabilizer.button1,That’s it!
@@ -1632,170 +1218,6 @@ Token0.button1,Set
 Token0.text,"Puzzle:  1 2 3 4 \n\n{var:puzzleFluxStabilizerSolved}"
 TokenTestSearchFluxStabilizer.button1,Continue
 TokenTestSearchFluxStabilizer.text,SearchFluxStabilizer
-EventExploreBackDoorLockedStart.text,
-EventExploreBackDoorLockedStart.button1,
-EventExploreBackDoorLockedInit.text,
-EventExploreBackDoorLockedInit.button1,
-EventExploreBackDoorLockedFirstTimeInitializer.text,
-EventExploreBackDoorLockedFirstTimeInitializer.button1,
-EventExploreBackDoorLockedTriggerPrologSelector.text,
-EventExploreBackDoorLockedTriggerPrologSelector.button1,
-EventExploreBackDoorLockedTriggerSelector.text,
-EventExploreBackDoorLockedTriggerSelector.button1,
-EventExploreBackDoorLockedReadPageTurnKnobXferIfTriggered.text,
-EventExploreBackDoorLockedReadPageTurnKnobXferIfTriggered.button1,
-EventExploreBackDoorLockedReadPageTurnKnob.text,
-EventExploreBackDoorLockedReadPageTurnKnob.button1,
-EventExploreBackDoorLockedReadPageTurnKnobDisplay.text,
-EventExploreBackDoorLockedReadPageTurnKnobDisplay.button1,
-EventExploreBackDoorLockedReadPageTurnKnobBase.text,"\nYou reach for the knob. Test {strength} or {agility}.\n"
-EventExploreBackDoorLockedReadPageTurnKnobBase.button1,{qst:continue}
-EventExploreBackDoorLockedReadPageTurnKnobBase.button2,Fail
-EventExploreBackDoorLockedReadPageTurnKnobBasePass.text,
-EventExploreBackDoorLockedReadPageTurnKnobBasePass.button1,
-EventExploreBackDoorLockedReadPageTurnKnobBaseButtonsTiePoint.text,
-EventExploreBackDoorLockedReadPageTurnKnobBaseButtonsTiePoint.button1,
-EventExploreBackDoorLockedReadPageTurnKnobTiePoint.text,
-EventExploreBackDoorLockedReadPageTurnKnobTiePoint.button1,
-EventExploreBackDoorLockedReadPageTurnKnobEnd.text,
-EventExploreBackDoorLockedReadPageTurnKnobEnd.button1,
-EventExploreBackDoorLockedTiePoint.text,
-EventExploreBackDoorLockedTiePoint.button1,
-EventExploreBackDoorLockedLoopBack.text,
-EventExploreBackDoorLockedLoopBack.button1,
-EventExploreBackDoorLockedEnd.text,
-EventExploreBackDoorLockedEnd.button1,
-EventExploreBackDoorLockedReadPageTurnKnobBaseFail.text,
-EventExploreBackDoorLockedReadPageTurnKnobBaseFail.button1,
-EventExploreBackDoorLockedReadPageShakeDoorXferIfTriggered.text,
-EventExploreBackDoorLockedReadPageShakeDoorXferIfTriggered.button1,
-EventExploreBackDoorLockedReadPageShakeDoor.text,
-EventExploreBackDoorLockedReadPageShakeDoor.button1,
-EventExploreBackDoorLockedReadPageShakeDoorDisplay.text,
-EventExploreBackDoorLockedReadPageShakeDoorDisplay.button1,
-EventExploreBackDoorLockedReadPageShakeDoorBase.text,"\nYou grab the knob again and begin shaking it violently. Test {strength} or {will}.\n"
-EventExploreBackDoorLockedReadPageShakeDoorBase.button1,{qst:continue}
-EventExploreBackDoorLockedReadPageShakeDoorBase.button2,Fail
-EventExploreBackDoorLockedReadPageShakeDoorBasePass.text,
-EventExploreBackDoorLockedReadPageShakeDoorBasePass.button1,
-EventExploreBackDoorLockedReadPageShakeDoorBaseButtonsTiePoint.text,
-EventExploreBackDoorLockedReadPageShakeDoorBaseButtonsTiePoint.button1,
-EventExploreBackDoorLockedReadPageShakeDoorTiePoint.text,
-EventExploreBackDoorLockedReadPageShakeDoorTiePoint.button1,
-EventExploreBackDoorLockedReadPageShakeDoorEnd.text,
-EventExploreBackDoorLockedReadPageShakeDoorEnd.button1,
-EventExploreBackDoorLockedReadPageShakeDoorBaseFail.text,
-EventExploreBackDoorLockedReadPageShakeDoorBaseFail.button1,
-EventExploreBackDoorLockedReadPageHitDoorXferIfTriggered.text,
-EventExploreBackDoorLockedReadPageHitDoorXferIfTriggered.button1,
-EventExploreBackDoorLockedReadPageHitDoor.text,
-EventExploreBackDoorLockedReadPageHitDoor.button1,
-EventExploreBackDoorLockedReadPageHitDoorDisplay.text,
-EventExploreBackDoorLockedReadPageHitDoorDisplay.button1,
-EventExploreBackDoorLockedReadPageHitDoorBase.text,"\nYou muster up your strength and prepare to break the door down with your shoulder. Test {strength} or {lore}.\n"
-EventExploreBackDoorLockedReadPageHitDoorBase.button1,{qst:continue}
-EventExploreBackDoorLockedReadPageHitDoorBase.button2,Fail
-EventExploreBackDoorLockedReadPageHitDoorBasePass.text,
-EventExploreBackDoorLockedReadPageHitDoorBasePass.button1,
-EventExploreBackDoorLockedReadPageHitDoorBaseButtonsTiePoint.text,
-EventExploreBackDoorLockedReadPageHitDoorBaseButtonsTiePoint.button1,
-EventExploreBackDoorLockedReadPageHitDoorTiePoint.text,
-EventExploreBackDoorLockedReadPageHitDoorTiePoint.button1,
-EventExploreBackDoorLockedReadPageHitDoorEnd.text,
-EventExploreBackDoorLockedReadPageHitDoorEnd.button1,
-EventExploreBackDoorLockedReadPageHitDoorBaseFail.text,
-EventExploreBackDoorLockedReadPageHitDoorBaseFail.button1,
-EventExploreBackDoorLockedReadPagePickLockXferIfTriggered.text,
-EventExploreBackDoorLockedReadPagePickLockXferIfTriggered.button1,
-EventExploreBackDoorLockedReadPagePickLock.text,
-EventExploreBackDoorLockedReadPagePickLock.button1,
-EventExploreBackDoorLockedReadPagePickLockDisplay.text,
-EventExploreBackDoorLockedReadPagePickLockDisplay.button1,
-EventExploreBackDoorLockedReadPagePickLockBase.text,"\nAs you work the hairpin into the lock, you wonder why it was in your pocket. Test {agility} or {influence}.\n"
-EventExploreBackDoorLockedReadPagePickLockBase.button1,{qst:continue}
-EventExploreBackDoorLockedReadPagePickLockBase.button2,Fail
-EventExploreBackDoorLockedReadPagePickLockBasePass.text,
-EventExploreBackDoorLockedReadPagePickLockBasePass.button1,
-EventExploreBackDoorLockedReadPagePickLockBaseButtonsTiePoint.text,
-EventExploreBackDoorLockedReadPagePickLockBaseButtonsTiePoint.button1,
-EventExploreBackDoorLockedReadPagePickLockTiePoint.text,
-EventExploreBackDoorLockedReadPagePickLockTiePoint.button1,
-EventExploreBackDoorLockedReadPagePickLockEnd.text,
-EventExploreBackDoorLockedReadPagePickLockEnd.button1,
-EventExploreBackDoorLockedReadPagePickLockBaseFail.text,
-EventExploreBackDoorLockedReadPagePickLockBaseFail.button1,
-EventExploreBackDoorLockedReadPageUnlockDoorXferIfTriggered.text,
-EventExploreBackDoorLockedReadPageUnlockDoorXferIfTriggered.button1,
-EventExploreBackDoorLockedReadPageUnlockDoor.text,
-EventExploreBackDoorLockedReadPageUnlockDoor.button1,
-EventExploreBackDoorLockedReadPageUnlockDoorDisplay.text,
-EventExploreBackDoorLockedReadPageUnlockDoorDisplay.button1,
-EventExploreBackDoorLockedReadPageUnlockDoorBase.text,"\nYou pull out the key and look at it for a moment before putting it into the lock... Test {strength} or {observation}.\n"
-EventExploreBackDoorLockedReadPageUnlockDoorBase.button1,{qst:continue}
-EventExploreBackDoorLockedReadPageUnlockDoorBase.button2,Fail
-EventExploreBackDoorLockedReadPageUnlockDoorBasePass.text,
-EventExploreBackDoorLockedReadPageUnlockDoorBasePass.button1,
-EventExploreBackDoorLockedReadPageUnlockDoorBaseButtonsTiePoint.text,
-EventExploreBackDoorLockedReadPageUnlockDoorBaseButtonsTiePoint.button1,
-EventExploreBackDoorLockedReadPageUnlockDoorTiePoint.text,
-EventExploreBackDoorLockedReadPageUnlockDoorTiePoint.button1,
-EventExploreBackDoorLockedReadPageUnlockDoorEnd.text,
-EventExploreBackDoorLockedReadPageUnlockDoorEnd.button1,
-EventExploreBackDoorLockedReadPageUnlockDoorBaseFail.text,
-EventExploreBackDoorLockedReadPageUnlockDoorBaseFail.button1,
-EventExploreBackDoorLockedToc.text,
-EventExploreBackDoorLockedToc.button1,
-EventExploreBackDoorLockedTocBeforeAddRemove1.text,
-EventExploreBackDoorLockedTocBeforeAddRemove1.button1,
-EventExploreBackDoorLockedTocDisplay.text,
-EventExploreBackDoorLockedTocDisplay.button1,
-EventExploreBackDoorLockedTocBase.text,"\nWell, you try to put the key into the lock but it doesn’t fit, no matter how hard you try. You look at the key and try again. And again. And again. Dejected and out of ideas, you turn away from the door. “I guess we’ll have to find another way out,” you say to no one in particular. Someone mutters, “Yeah.”\n\nDiscard this explore token.\n"
-EventExploreBackDoorLockedTocBase.button1,{qst:continue}
-EventExploreBackDoorLockedTocTiePoint.text,
-EventExploreBackDoorLockedTocTiePoint.button1,
-EventExploreBackDoorLockedTocEnd.text,
-EventExploreBackDoorLockedTocEnd.button1,
-EventExploreBackDoorLockedTocSelector.text,
-EventExploreBackDoorLockedTocSelector.button1,
-EventExploreBackDoorLockedTocPrologProxyTurnKnob.text,
-EventExploreBackDoorLockedTocPrologProxyTurnKnob.button1,
-EventExploreBackDoorLockedTocPrologTurnKnob.text,"\nThe door that closed behind you looks larger and more solid from inside.\n"
-EventExploreBackDoorLockedTocPrologTurnKnob.button1,{action} Open door
-EventExploreBackDoorLockedTocPrologTurnKnob.button2,{qst:cancel}
-EventExploreBackDoorLockedTocPrologProxyShakeDoor.text,
-EventExploreBackDoorLockedTocPrologProxyShakeDoor.button1,
-EventExploreBackDoorLockedTocPrologShakeDoor.text,"\nNo matter how hard you try, the knob just won’t turn. Looking closer, you see a light peeking between the door and its jam. <i>Maybe I can shake it open?<i> you think to yourself.\n"
-EventExploreBackDoorLockedTocPrologShakeDoor.button1,{action} Shake door
-EventExploreBackDoorLockedTocPrologShakeDoor.button2,{qst:cancel}
-EventExploreBackDoorLockedTocPrologProxyHitDoor.text,
-EventExploreBackDoorLockedTocPrologProxyHitDoor.button1,
-EventExploreBackDoorLockedTocPrologHitDoor.text,"\nNo matter how hard you shake it, the door doesn’t budge. And you might have pulled something in your right arm. Maybe you can knock it down? You also begin to wonder if you should move on. Or knock it down.\n"
-EventExploreBackDoorLockedTocPrologHitDoor.button1,{action} Break it down
-EventExploreBackDoorLockedTocPrologHitDoor.button2,{qst:cancel}
-EventExploreBackDoorLockedTocPrologProxyPickLock.text,
-EventExploreBackDoorLockedTocPrologProxyPickLock.button1,
-EventExploreBackDoorLockedTocPrologPickLock.text,"\nThe third or fourth time you hit door, something in your shoulder pops and it hurts. Bad. You feel the panic setting in. <i>Why won’t this door open?</i> you ask yourself.\n\nTake 1 facedown damage ({strength} negates).\n\n“Hey, is this a hairpin?” you ask out loud. One of the other investigators turns to look at you.\n"
-EventExploreBackDoorLockedTocPrologPickLock.button1,{action} Pick lock
-EventExploreBackDoorLockedTocPrologPickLock.button2,{qst:cancel}
-EventExploreBackDoorLockedTocPrologProxyUnlockDoor.text,
-EventExploreBackDoorLockedTocPrologProxyUnlockDoor.button1,
-EventExploreBackDoorLockedTocPrologUnlockDoor.text,"\nYou can feel the tumblers, but nothing moves. Eventually, the hairpin bends too much to be of use. <i>Maybe this really is a waste of time,</i> you consider. <i>Wait, I have that key.</i>\n\nIf you have the {c:QItemBrassKey}, ...\n"
-EventExploreBackDoorLockedTocPrologUnlockDoor.button1,{action} Unlock door
-EventExploreBackDoorLockedTocPrologUnlockDoor.button2,{qst:cancel}
-EventExploreBackDoorLockedTocNoPagesAvailable.text,
-EventExploreBackDoorLockedTocNoPagesAvailable.button1,
-EventExploreBackDoorLockedReadPageEpilog.text,
-EventExploreBackDoorLockedReadPageEpilog.button1,
-EventExploreBackDoorLockedReadPageEpilogBeforeAddRemove1.text,
-EventExploreBackDoorLockedReadPageEpilogBeforeAddRemove1.button1,
-EventExploreBackDoorLockedReadPageEpilogDisplay.text,
-EventExploreBackDoorLockedReadPageEpilogDisplay.button1,
-EventExploreBackDoorLockedReadPageEpilogBase.text,"\nWell, you try to put the key into the lock but it doesn’t fit, no matter how hard you try. You look at the key and try again. And again. And again. Dejected and out of ideas, you turn away from the door. “I guess we’ll have to find another way out,” you say to no one in particular. Someone mutters, “Yeah.”\n\nDiscard this explore token.\n"
-EventExploreBackDoorLockedReadPageEpilogBase.button1,{qst:continue}
-EventExploreBackDoorLockedReadPageEpilogTiePoint.text,
-EventExploreBackDoorLockedReadPageEpilogTiePoint.button1,
-EventExploreBackDoorLockedReadPageEpilogEnd.text,
-EventExploreBackDoorLockedReadPageEpilogEnd.button1,
 TokenDiningRoomBen.button1,Button1
 TokenSearchHall2Evidence.button1,Button1
 TokenSearchGalleryDvm.button1,{action} Continue
@@ -2918,7 +2340,7 @@ EventBenBeforeExpr2.text,
 EventBenBeforeExpr2.button1,
 EventBenBeforeReadPageHowLongDisplay.text,
 EventBenBeforeReadPageHowLongDisplay.button1,
-EventBenBeforeReadPageHowLongOverload1.text,|||\n“Long enough,” he snaps. “There are numerous rooms on the ground floor, there is a basement, and there are many rooms upstairs. The place has always been too big for the family. Peter lived here with his daughter. His wife died under suspicious circumstances when the girl was three. Never explained.\n\n“Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren’t you? And you won’t break anything else?” “I hope not,” he mutters under his breath.\n|||
+EventBenBeforeReadPageHowLongOverload1.text,|||\n“Long enough,” he snaps. “There are numerous rooms on the ground floor, there is a basement, and there are many rooms upstairs. The place has always been too big for the family. Elias lived here with his son and daughter. His wife died under suspicious circumstances when the girl was three. Never explained.\n\n“Anyway, you will take whatever time is necessary to look in every drawer, cabinet, and box in the house. You are thorough, aren’t you? And you won’t break anything else?” “I hope not,” he mutters under his breath.\n|||
 EventBenBeforeReadPageHowLongOverload1.button1,{qst:continue}
 EventBenBeforeReadPageHowLongTiePoint.text,
 EventBenBeforeReadPageHowLongTiePoint.button1,
@@ -2956,7 +2378,7 @@ EventBenBeforeLoopBack.text,
 EventBenBeforeLoopBack.button1,
 EventBenBeforeExpr13.text,
 EventBenBeforeExpr13.button1,
-EventBenBeforeReadPageHowLongBase.text,|||\n“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Peter lived here with his daughter. The wife died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I guess you’ll need a few hours just to look through the place and get your bearings. You’ll want to check every drawer, cabinet, and box in the house–take as much time as you need. The whole house should be cleared out and spotless by the end of next week.”\n|||
+EventBenBeforeReadPageHowLongBase.text,|||\n“How long, you ask? Well, the house is large. There are numerous rooms on the ground floor, a basement, and many rooms upstairs. Elize lived here with his son and daughter. The wife died under suspicious circumstances when the girl was three. Never explained.”\n\nGain 1 {clue}.\n\n“Anyway, I guess you’ll need a few hours just to look through the place and get your bearings. You’ll want to check every drawer, cabinet, and box in the house–take as much time as you need. The whole house should be cleared out and spotless by the end of next week.”\n|||
 EventBenBeforeReadPageHowLongBase.button1,{qst:continue}
 EventBenBeforeExpr4.text,
 EventBenBeforeExpr4.button1,
@@ -2974,7 +2396,7 @@ EventBenBeforeExpr15.text,
 EventBenBeforeExpr15.button1,
 EventBenBeforeReadPageWhatDisplay.text,
 EventBenBeforeReadPageWhatDisplay.button1,
-EventBenBeforeReadPageWhatOverload1.text,|||\n“The children? Two were strangled. Parts of them were... missing. The burns on the third were never explained. Nasty business.\n\n“Peter and his brother Henry both went missing that night. Most folks don’t know about Henry. Left a lot of folks around town wondering what really happened. But we’re not here to gossip.”\n|||
+EventBenBeforeReadPageWhatOverload1.text,|||\n“The children? Two were strangled. Parts of them were... missing. The burns on the third were never explained. Nasty business.\n\n“Elias and his brother Peter both went missing that night. Left a lot of folks around town wondering what really happened. But we’re not here to gossip.”\n|||
 EventBenBeforeReadPageWhatOverload1.button1,{qst:continue}
 EventBenBeforeReadPageWhatTiePoint.text,
 EventBenBeforeReadPageWhatTiePoint.button1,
@@ -3006,7 +2428,7 @@ EventBenBeforeReadPageWhatEnd.text,
 EventBenBeforeReadPageWhatEnd.button1,
 EventBenBeforeExpr26.text,
 EventBenBeforeExpr26.button1,
-EventBenBeforeReadPageWhatBase.text,|||\n“The children? One of them was burned from head-to-toe. The other two were strangled and parts were... taken. The burns were never explained. Nasty business.\n\n“Peter Smythe–the girl’s father and the owner of this house–went missing that night. Most folks think he did something to the children and then ran away. Still hiding, they think.\n\n“What wasn’t reported is that his brother, Henry, also disappeared that night. Folks in town figured they’d run off together to avoid difficult questions.”\n\nGain 1 {clue}.\n|||
+EventBenBeforeReadPageWhatBase.text,|||\n“The children? One of them was burned from head-to-toe. The other two were strangled and parts were... taken. The burns were never explained. Nasty business.\n\n“Elias Smythe–the girl’s father and the owner of this house–went missing that night. Most folks think he did something to the children and then ran away. Still hiding, they think.\n\n“His brother, Peter, also disappeared that night. Folks in town figured they’d run off together to avoid difficult questions.”\n\nGain 1 {clue}.\n|||
 EventBenBeforeReadPageWhatBase.button1,{qst:continue}
 EventBenBeforeExpr17.text,
 EventBenBeforeExpr17.button1,
@@ -3056,7 +2478,7 @@ EventBenBeforeReadPageWhereEnd.text,
 EventBenBeforeReadPageWhereEnd.button1,
 EventBenBeforeExpr39.text,
 EventBenBeforeExpr39.button1,
-EventBenBeforeReadPageWhereBase.text,|||\n“The children were found just over there,” he says, pointing back the way you came. “They were in a pile; the girl’s body was still smoking from the burns. Strangest thing: she kept smoking until the next day. Coroner wasn’t able to explain it. No one was.\n\n“Our family has lived here for generations–many of them in this house. We’re upset to let it go, but no one lives here... or wants to after what happened.”\n\nGain 1 {clue}.\n\nBenjamin resumes searching his pockets, but seems a little shaken.\n|||
+EventBenBeforeReadPageWhereBase.text,|||\n“The children were found just over there,” he says, pointing back the way you came. “They were in a pile; the girl’s body was still smoking from the burns. Strangest thing: she kept smoking until the next day. Coroner wasn’t able to explain it. No one was.\n\n“Their family has lived here for generations–many of them in this house. They’re upset to let it go, but no one lives here... or wants to after what happened.”\n\nGain 1 {clue}.\n\nBenjamin resumes searching his pockets, but seems a little shaken.\n|||
 EventBenBeforeReadPageWhereBase.button1,{qst:continue}
 EventBenBeforeExpr30.text,
 EventBenBeforeExpr30.button1,
@@ -3106,7 +2528,7 @@ EventBenBeforeReadPageWhyEnd.text,
 EventBenBeforeReadPageWhyEnd.button1,
 EventBenBeforeExpr52.text,
 EventBenBeforeExpr52.button1,
-EventBenBeforeReadPageWhyBase.text,|||\n“Well, we tried right after the... trouble. No one would even come to look at it back then, but our, um, priest, told us now is the right time.”\n\nGain 1 {clue}.\n|||
+EventBenBeforeReadPageWhyBase.text,|||\n“Well, they tried right after the... trouble. No one would even come to look at it back then, but our, um, priest, told us now is the right time.”\n\nGain 1 {clue}.\n|||
 EventBenBeforeReadPageWhyBase.button1,{qst:continue}
 EventBenBeforeExpr43.text,
 EventBenBeforeExpr43.button1,
@@ -3153,7 +2575,7 @@ EventBenBeforeToc2.button3,{action} “Where were those children found?”
 EventBenBeforeToc2.button4,{action} “Why did you wait so long to sell the house?”
 EventBenBeforeToc2.button5,{action} “I’m sorry about the gate.”
 EventBenBeforeToc2.button6,{qst:cancel}
-EventBenBeforeToc3.text,|||\nBenjamin is still looking through his pockets, but he’s moving slower and looks upset. You wonder what his connection is to those children.\n|||
+EventBenBeforeToc3.text,|||\nBenjamin is still looking through his pockets, but he’s moving slower and looks upset. You wonder if he’s connected is to those children.\n|||
 EventBenBeforeToc3.button1,{action} “How long will it take us to look through the house?”
 EventBenBeforeToc3.button2,{action} “What do you think happened to those children?”
 EventBenBeforeToc3.button3,{action} “Where were those children found?”
@@ -3319,7 +2741,7 @@ EventChapelReadPageSearchRitualComponents.text,
 EventChapelReadPageSearchRitualComponents.button1,
 EventChapelReadPageSearchRitualComponentsDisplay.text,
 EventChapelReadPageSearchRitualComponentsDisplay.button1,
-EventChapelReadPageSearchRitualComponentsBase.text,|||\nAs you walk around the altar to get a better look, you see that there is a chalice, some herbs, and even a skull. As you prepare to tuck the skull into your bag, you reflect on the many times you’ve been in these situations. You’ve learned to shamelessly grab anything you might need, no matter how unlikely. Gain the {c:QItemRitualComponents} Unique Item.\n\nThe book is the Smythe family bible. The first section lists births, marriages, and deaths going back many generations. A few of the men–all named Smythe–have a {success} next to their names. {c:EventChosenInvestigator}’s cousin David has this marking. You aren’t sure what it means, but from what you’ve seen and read today, it worries you.\n\nGain 2 {clue}, then discard this Search token.\n|||
+EventChapelReadPageSearchRitualComponentsBase.text,|||\nAs you walk around the altar to get a better look, you see that there is a chalice, some herbs, and even a skull. As you prepare to tuck the skull into your bag, you reflect on the many times you’ve been in these situations. You’ve learned to shamelessly grab anything you might need, no matter how unlikely. Gain the {c:QItemRitualComponents} Unique Item.\n\nThe book is the Smythe family bible. The first section lists births, marriages, and deaths going back many generations. A few of the men–all named Smythe–have a {success} next to their names. {c:EventChosenInvestigator}’s cousin Mathias has this marking. You aren’t sure what it means, but from what you’ve seen and read today, it worries you.\n\nGain 2 {clue}, then discard this Search token.\n|||
 EventChapelReadPageSearchRitualComponentsBase.button1,{qst:continue}
 EventChapelReadPageSearchRitualComponentsTiePoint.text,
 EventChapelReadPageSearchRitualComponentsTiePoint.button1,
@@ -3902,27 +3324,27 @@ EventCryptReadPageSearchPendantTiePoint.text,
 EventCryptReadPageSearchPendantTiePoint.button1,
 EventCryptReadPageSearchPendantAfterGoto48.text,
 EventCryptReadPageSearchPendantAfterGoto48.button1,
-EventCryptReadPageSearchHenryTriggeredPrologTarget.text,
-EventCryptReadPageSearchHenryTriggeredPrologTarget.button1,
-EventCryptTocPrologSearchHenry.text,|||\nA brass plate on top of the stone casket looks like it has the name of the person inside. The letters dance and swim, much like the text in the {c:QItemDvm}.\n\nOnly {c:EventChosenInvestigator} can read the inscription.\n|||
-EventCryptTocPrologSearchHenry.button1,{action} Search
-EventCryptTocPrologSearchHenry.button2,{qst:cancel}
-EventCryptReadPageSearchHenry.text,
-EventCryptReadPageSearchHenry.button1,
-EventCryptReadPageSearchHenryDisplay.text,
-EventCryptReadPageSearchHenryDisplay.button1,
-EventCryptReadPageSearchHenryBase.text,|||\nWhen you lean over to read it, the letters coalesce into the name and dates of the person inside.\n\nHere lies Henry Smythe\n\nBorn 12 May, 1885 – Died 31 October, 1915\n\nIt seems your father didn’t leave, he died after stopping the ritual 10 years ago, probably killed by your uncle. You cannot remember him, but thinking about him lying dead three feet away makes your chest hurt.\n\nDiscard this Search token.\n|||
-EventCryptReadPageSearchHenryBase.button1,{qst:continue}
-EventCryptReadPageSearchHenryTiePoint.text,
-EventCryptReadPageSearchHenryTiePoint.button1,
+EventCryptReadPageSearchPeterTriggeredPrologTarget.text,
+EventCryptReadPageSearchPeterTriggeredPrologTarget.button1,
+EventCryptTocPrologSearchPeter.text,|||\nA brass plate on top of the stone casket looks like it has the name of the person inside. The letters dance and swim, much like the text in the {c:QItemDvm}.\n\nOnly {c:EventChosenInvestigator} can read the inscription.\n|||
+EventCryptTocPrologSearchPeter.button1,{action} Search
+EventCryptTocPrologSearchPeter.button2,{qst:cancel}
+EventCryptReadPageSearchPeter.text,
+EventCryptReadPageSearchPeter.button1,
+EventCryptReadPageSearchPeterDisplay.text,
+EventCryptReadPageSearchPeterDisplay.button1,
+EventCryptReadPageSearchPeterBase.text,|||\nWhen you lean over to read it, the letters coalesce into the name and dates of the person inside.\n\nHere lies Peter Smythe\n\nBorn 12 May, 1885 – Died 31 October, 1915\n\nIt seems your father didn’t leave, he died after stopping the ritual 10 years ago, probably killed by your uncle. You cannot remember him, but thinking about him lying dead three feet away makes your chest hurt.\n\nDiscard this Search token.\n|||
+EventCryptReadPageSearchPeterBase.button1,{qst:continue}
+EventCryptReadPageSearchPeterTiePoint.text,
+EventCryptReadPageSearchPeterTiePoint.button1,
 EventCryptExpr14.text,
 EventCryptExpr14.button1,
-EventCryptReadPageSearchHenryAfterLet1.text,
-EventCryptReadPageSearchHenryAfterLet1.button1,
-EventCryptReadPageSearchHenryAfterAddRemove2.text,
-EventCryptReadPageSearchHenryAfterAddRemove2.button1,
-EventCryptReadPageSearchHenryAfterGoto49.text,
-EventCryptReadPageSearchHenryAfterGoto49.button1,
+EventCryptReadPageSearchPeterAfterLet1.text,
+EventCryptReadPageSearchPeterAfterLet1.button1,
+EventCryptReadPageSearchPeterAfterAddRemove2.text,
+EventCryptReadPageSearchPeterAfterAddRemove2.button1,
+EventCryptReadPageSearchPeterAfterGoto49.text,
+EventCryptReadPageSearchPeterAfterGoto49.button1,
 EventCryptTriggerSelector.text,
 EventCryptTriggerSelector.button1,
 EventCryptReadPageExploreViaChapelXferIfTriggered.text,
@@ -3969,24 +3391,24 @@ EventCryptReadPagePlaceSearchPendantTiePoint.text,
 EventCryptReadPagePlaceSearchPendantTiePoint.button1,
 EventCryptReadPagePlaceSearchPendantAfterGoto41.text,
 EventCryptReadPagePlaceSearchPendantAfterGoto41.button1,
-EventCryptReadPagePlaceSearchHenry.text,
-EventCryptReadPagePlaceSearchHenry.button1,
-EventCryptReadPagePlaceSearchHenryBeforeAddRemove1.text,
-EventCryptReadPagePlaceSearchHenryBeforeAddRemove1.button1,
-EventCryptReadPagePlaceSearchHenryDisplay.text,
-EventCryptReadPagePlaceSearchHenryDisplay.button1,
-EventCryptReadPagePlaceSearchHenryBase.text,|||\nThe stone casket on the end looks much newer than the others. Place a Search token as indicated.\n|||
-EventCryptReadPagePlaceSearchHenryBase.button1,{qst:continue}
-EventCryptReadPagePlaceSearchHenryTiePoint.text,
-EventCryptReadPagePlaceSearchHenryTiePoint.button1,
+EventCryptReadPagePlaceSearchPeter.text,
+EventCryptReadPagePlaceSearchPeter.button1,
+EventCryptReadPagePlaceSearchPeterBeforeAddRemove1.text,
+EventCryptReadPagePlaceSearchPeterBeforeAddRemove1.button1,
+EventCryptReadPagePlaceSearchPeterDisplay.text,
+EventCryptReadPagePlaceSearchPeterDisplay.button1,
+EventCryptReadPagePlaceSearchPeterBase.text,|||\nThe stone casket on the end looks much newer than the others. Place a Search token as indicated.\n|||
+EventCryptReadPagePlaceSearchPeterBase.button1,{qst:continue}
+EventCryptReadPagePlaceSearchPeterTiePoint.text,
+EventCryptReadPagePlaceSearchPeterTiePoint.button1,
 EventCryptExpr6.text,
 EventCryptExpr6.button1,
 EventCryptExpr8.text,
 EventCryptExpr8.button1,
 EventCryptExpr7.text,
 EventCryptExpr7.button1,
-EventCryptReadPagePlaceSearchHenryAfterGoto42.text,
-EventCryptReadPagePlaceSearchHenryAfterGoto42.button1,
+EventCryptReadPagePlaceSearchPeterAfterGoto42.text,
+EventCryptReadPagePlaceSearchPeterAfterGoto42.button1,
 EventCryptReadPagePlaceExploreDungeonCaveViaCrypt.text,
 EventCryptReadPagePlaceExploreDungeonCaveViaCrypt.button1,
 EventCryptReadPagePlaceExploreDungeonCaveViaCryptBeforeAddRemove1.text,
@@ -4005,8 +3427,8 @@ EventCryptExpr12.text,
 EventCryptExpr12.button1,
 EventCryptExpr11.text,
 EventCryptExpr11.button1,
-EventCryptReadPagePlaceSearchHenryAfterGoto43.text,
-EventCryptReadPagePlaceSearchHenryAfterGoto43.button1,
+EventCryptReadPagePlaceSearchPeterAfterGoto43.text,
+EventCryptReadPagePlaceSearchPeterAfterGoto43.button1,
 EventCryptReadPagePlaceExploreChapelViaCrypt.text,
 EventCryptReadPagePlaceExploreChapelViaCrypt.button1,
 EventCryptReadPagePlaceExploreChapelViaCryptBeforeAddRemove1.text,
@@ -4019,8 +3441,8 @@ EventCryptReadPagePlaceExploreChapelViaCryptTiePoint.text,
 EventCryptReadPagePlaceExploreChapelViaCryptTiePoint.button1,
 EventCryptReadPagePlaceExploreChapelViaCryptAfterGoto45.text,
 EventCryptReadPagePlaceExploreChapelViaCryptAfterGoto45.button1,
-EventCryptReadPagePlaceSearchHenryAfterGoto44.text,
-EventCryptReadPagePlaceSearchHenryAfterGoto44.button1,
+EventCryptReadPagePlaceSearchPeterAfterGoto44.text,
+EventCryptReadPagePlaceSearchPeterAfterGoto44.button1,
 EventCryptExpr13.text,
 EventCryptExpr13.button1,
 EventCryptExpr9.text,
@@ -4045,8 +3467,8 @@ EventCryptReadPagePlaceCryptXferIfTriggered.text,
 EventCryptReadPagePlaceCryptXferIfTriggered.button1,
 EventCryptReadPagePlaceSearchPendantXferIfTriggered.text,
 EventCryptReadPagePlaceSearchPendantXferIfTriggered.button1,
-EventCryptReadPagePlaceSearchHenryXferIfTriggered.text,
-EventCryptReadPagePlaceSearchHenryXferIfTriggered.button1,
+EventCryptReadPagePlaceSearchPeterXferIfTriggered.text,
+EventCryptReadPagePlaceSearchPeterXferIfTriggered.button1,
 EventCryptReadPagePlaceExploreChapelViaCryptXferIfTriggered.text,
 EventCryptReadPagePlaceExploreChapelViaCryptXferIfTriggered.button1,
 EventCryptReadPagePlaceExploreDungeonCaveViaCryptXferIfTriggered.text,
@@ -4055,8 +3477,8 @@ EventCryptReadPageSearchChapelViaCryptXferIfTriggered.text,
 EventCryptReadPageSearchChapelViaCryptXferIfTriggered.button1,
 EventCryptReadPageSearchPendantXferIfTriggered.text,
 EventCryptReadPageSearchPendantXferIfTriggered.button1,
-EventCryptReadPageSearchHenryXferIfTriggered.text,
-EventCryptReadPageSearchHenryXferIfTriggered.button1,
+EventCryptReadPageSearchPeterXferIfTriggered.text,
+EventCryptReadPageSearchPeterXferIfTriggered.button1,
 EventCryptToc.text,
 EventCryptToc.button1,
 EventCryptTocSelector.text,
@@ -4078,10 +3500,10 @@ EventCryptTocPrologProxyPlaceSearchPendant.text,
 EventCryptTocPrologProxyPlaceSearchPendant.button1,
 EventCryptTocPrologPlaceSearchPendant.text,
 EventCryptTocPrologPlaceSearchPendant.button1,
-EventCryptTocPrologProxyPlaceSearchHenry.text,
-EventCryptTocPrologProxyPlaceSearchHenry.button1,
-EventCryptTocPrologPlaceSearchHenry.text,
-EventCryptTocPrologPlaceSearchHenry.button1,
+EventCryptTocPrologProxyPlaceSearchPeter.text,
+EventCryptTocPrologProxyPlaceSearchPeter.button1,
+EventCryptTocPrologPlaceSearchPeter.text,
+EventCryptTocPrologPlaceSearchPeter.button1,
 EventCryptTocPrologProxyPlaceExploreChapelViaCrypt.text,
 EventCryptTocPrologProxyPlaceExploreChapelViaCrypt.button1,
 EventCryptTocPrologPlaceExploreChapelViaCrypt.text,
@@ -4094,8 +3516,8 @@ EventCryptTocPrologProxySearchChapelViaCrypt.text,
 EventCryptTocPrologProxySearchChapelViaCrypt.button1,
 EventCryptTocPrologProxySearchPendant.text,
 EventCryptTocPrologProxySearchPendant.button1,
-EventCryptTocPrologProxySearchHenry.text,
-EventCryptTocPrologProxySearchHenry.button1,
+EventCryptTocPrologProxySearchPeter.text,
+EventCryptTocPrologProxySearchPeter.button1,
 EventCryptTocNoPagesAvailable.text,
 EventCryptTocNoPagesAvailable.button1,
 EventCryptTiePoint.text,
@@ -4110,8 +3532,8 @@ EventCryptReadPageSearchChapelViaCryptTrigger.text,
 EventCryptReadPageSearchChapelViaCryptTrigger.button1,
 EventCryptReadPageSearchPendantTrigger.text,
 EventCryptReadPageSearchPendantTrigger.button1,
-EventCryptReadPageSearchHenryTrigger.text,
-EventCryptReadPageSearchHenryTrigger.button1,
+EventCryptReadPageSearchPeterTrigger.text,
+EventCryptReadPageSearchPeterTrigger.button1,
 EventPlaceDiningRoomStart.text,
 EventPlaceDiningRoomStart.button1,
 EventPlaceDiningRoomInit.text,
@@ -6813,13 +6235,13 @@ EventDungeonCellExpr11.text,
 EventDungeonCellExpr11.button1,
 EventDungeonCellReadPagePlaceDavidsSonDisplay.text,
 EventDungeonCellReadPagePlaceDavidsSonDisplay.button1,
-EventDungeonCellReadPagePlaceDavidsSonOverload1.text,|||\nA boy is chained to the wall, lying on the floor, moaning quietly. Place a Person token as indicated. This is David’s son, the sacrifice.\n|||
+EventDungeonCellReadPagePlaceDavidsSonOverload1.text,|||\nA boy is chained to the wall, lying on the floor, moaning quietly. Place a Person token as indicated. This is Mathias’s son, the sacrifice.\n|||
 EventDungeonCellReadPagePlaceDavidsSonOverload1.button1,{qst:continue}
 EventDungeonCellReadPagePlaceDavidsSonTiePoint.text,
 EventDungeonCellReadPagePlaceDavidsSonTiePoint.button1,
 EventDungeonCellReadPagePlaceDavidsSonEnd.text,
 EventDungeonCellReadPagePlaceDavidsSonEnd.button1,
-EventDungeonCellReadPagePlaceDavidsSonBase.text,|||\nA boy is chained to the wall, lying on the floor, and moaning quietly. Place a Person token as indicated. This is David’s son.\n|||
+EventDungeonCellReadPagePlaceDavidsSonBase.text,|||\nA boy is chained to the wall, lying on the floor, and moaning quietly. Place a Person token as indicated. This is Mathias’s son.\n|||
 EventDungeonCellReadPagePlaceDavidsSonBase.button1,{qst:continue}
 EventDungeonCellReadPagePlaceEndXferIfTriggered.text,
 EventDungeonCellReadPagePlaceEndXferIfTriggered.button1,
@@ -6922,125 +6344,125 @@ EventDungeonCellReadPagePlaceCellHoleInWallTriggerFail.text,
 EventDungeonCellReadPagePlaceCellHoleInWallTriggerFail.button1,
 EventDungeonCellExpr15.text,
 EventDungeonCellExpr15.button1,
-EventDvmCloseGateStart.text,|||\nEventDvmCloseGateStart @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateStart.text,
 EventDvmCloseGateStart.button1,
-EventDvmCloseGateExpr1.text,|||\nEventDvmCloseGateExpr1 @(5,28)\n\n\n\n\n|||
+EventDvmCloseGateExpr1.text,
 EventDvmCloseGateExpr1.button1,
-EventDvmCloseGateExpr2.text,|||\nEventDvmCloseGateExpr2 @(5,35)\n\n\n\n\n|||
+EventDvmCloseGateExpr2.text,
 EventDvmCloseGateExpr2.button1,
-EventDvmCloseGateExpr4.text,|||\nEventDvmCloseGateExpr4 @(5,28)\n\n\n\n\n|||
+EventDvmCloseGateExpr4.text,
 EventDvmCloseGateExpr4.button1,
-EventDvmCloseGateExpr3.text,|||\nEventDvmCloseGateExpr3 @(5,28)\n\n\n\n\n|||
+EventDvmCloseGateExpr3.text,
 EventDvmCloseGateExpr3.button1,
-EventDvmCloseGateExpr6.text,|||\nEventDvmCloseGateExpr6 @(5,57)\n\n\n\n\n|||
+EventDvmCloseGateExpr6.text,
 EventDvmCloseGateExpr6.button1,
-EventDvmCloseGateExpr8.text,|||\nEventDvmCloseGateExpr8 @(5,53)\n\n\n\n\n|||
+EventDvmCloseGateExpr8.text,
 EventDvmCloseGateExpr8.button1,
-EventDvmCloseGateExpr7.text,|||\nEventDvmCloseGateExpr7 @(5,53)\n\n\n\n\n|||
+EventDvmCloseGateExpr7.text,
 EventDvmCloseGateExpr7.button1,
-EventDvmCloseGateExpr11.text,|||\nEventDvmCloseGateExpr11 @(5,28)\n\n\n\n\n|||
+EventDvmCloseGateExpr11.text,
 EventDvmCloseGateExpr11.button1,
-EventDvmCloseGateExpr10.text,|||\nEventDvmCloseGateExpr10 @(5,28)\n\n\n\n\n|||
+EventDvmCloseGateExpr10.text,
 EventDvmCloseGateExpr10.button1,
-EventDvmCloseGateTriggerFail.text,|||\nEventDvmCloseGateTriggerFail @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateTriggerFail.text,
 EventDvmCloseGateTriggerFail.button1,
-EventDvmCloseGateEnd.text,|||\nEventDvmCloseGateEnd @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateEnd.text,
 EventDvmCloseGateEnd.button1,
-EventDvmCloseGateInit.text,|||\nEventDvmCloseGateInit @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateInit.text,
 EventDvmCloseGateInit.button1,
-EventDvmCloseGateFirstTimeInitializer.text,|||\nEventDvmCloseGateFirstTimeInitializer @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateFirstTimeInitializer.text,
 EventDvmCloseGateFirstTimeInitializer.button1,
-EventDvmCloseGateTriggerPrologSelector.text,|||\nEventDvmCloseGateTriggerPrologSelector @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateTriggerPrologSelector.text,
 EventDvmCloseGateTriggerPrologSelector.button1,
-EventDvmCloseGateTriggerSelector.text,|||\nEventDvmCloseGateTriggerSelector @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateTriggerSelector.text,
 EventDvmCloseGateTriggerSelector.button1,
-EventDvmCloseGateReadPageTableOfContentsXferIfTriggered.text,|||\nEventDvmCloseGateReadPageTableOfContentsXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageTableOfContentsXferIfTriggered.text,
 EventDvmCloseGateReadPageTableOfContentsXferIfTriggered.button1,
-EventDvmCloseGateReadPageTableOfContents.text,|||\nEventDvmCloseGateReadPageTableOfContents @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageTableOfContents.text,
 EventDvmCloseGateReadPageTableOfContents.button1,
-EventDvmCloseGateReadPageTableOfContentsDisplay.text,|||\nEventDvmCloseGateReadPageTableOfContentsDisplay @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageTableOfContentsDisplay.text,
 EventDvmCloseGateReadPageTableOfContentsDisplay.button1,
-EventDvmCloseGateReadPageTableOfContentsBase.text,|||\nEventDvmCloseGateReadPageTableOfContentsBase @(-1,-1)\n\nTable of Contents\n\nYou open the book. On the inside cover, someone scrawled a note that reads, “My descendants will be able to read this at the appointed hour. I have seen to it.”\n\nYou puzzle over this for a moment, then turn to the first page. It’s a table of contents. The book seems to be full of spells and rituals. You scan down to find something about gates. Maybe “Travel, page 72”?\n\n{qst:FirstTimeRead}, gain 1 {clue}.\n\n\n|||
+EventDvmCloseGateReadPageTableOfContentsBase.text,|||\nTable of Contents\n\nYou open the book. On the inside cover, someone scrawled a note that reads, “My kin will be able to read this at the appointed hour. I have seen to it.”\n\nYou puzzle over this for a moment, then turn to the first page. It’s a table of contents. The book seems to be full of spells and rituals. You scan down to find something about gates. Maybe “Travel, page 72”?\n\n{qst:FirstTimeRead}, gain 1 {clue}.\n|||
 EventDvmCloseGateReadPageTableOfContentsBase.button1,{qst:continue}
-EventDvmCloseGateReadPageTableOfContentsTiePoint.text,|||\nEventDvmCloseGateReadPageTableOfContentsTiePoint @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageTableOfContentsTiePoint.text,
 EventDvmCloseGateReadPageTableOfContentsTiePoint.button1,
-EventDvmCloseGateReadPageTableOfContentsEnd.text,|||\nEventDvmCloseGateReadPageTableOfContentsEnd @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageTableOfContentsEnd.text,
 EventDvmCloseGateReadPageTableOfContentsEnd.button1,
-EventDvmCloseGateTiePoint.text,|||\nEventDvmCloseGateTiePoint @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateTiePoint.text,
 EventDvmCloseGateTiePoint.button1,
-EventDvmCloseGateLoopBack.text,|||\nEventDvmCloseGateLoopBack @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateLoopBack.text,
 EventDvmCloseGateLoopBack.button1,
-EventDvmCloseGateReadPageGatesXferIfTriggered.text,|||\nEventDvmCloseGateReadPageGatesXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageGatesXferIfTriggered.text,
 EventDvmCloseGateReadPageGatesXferIfTriggered.button1,
-EventDvmCloseGateReadPageGates.text,|||\nEventDvmCloseGateReadPageGates @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageGates.text,
 EventDvmCloseGateReadPageGates.button1,
-EventDvmCloseGateReadPageGatesDisplay.text,|||\nEventDvmCloseGateReadPageGatesDisplay @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageGatesDisplay.text,
 EventDvmCloseGateReadPageGatesDisplay.button1,
-EventDvmCloseGateReadPageGatesBase.text,|||\nEventDvmCloseGateReadPageGatesBase @(-1,-1)\n\nYou flip through the pages to find the “Travel” section on page 72. The first entry is for gates.\n\nGates\n\nYou read through an overview of the spell and skim past the opening ritual, including the list of materials needed to open one. Behind it is a closing ritual: how to close a gate that has already been cast.\n\nThere is a list of materials and artifacts needed. The list includes a dagger, chalice, human skull, and various herbs. There’s also mention of an “elder sign” but you aren’t sure what that is. From what you saw earlier in the book, these materials seem similar to what is needed to open a gate.\n\n<i>I wonder if they actually have these already?</i> you ask yourself.\n\n\n|||
+EventDvmCloseGateReadPageGatesBase.text,|||\nYou flip through the pages to find the “Travel” section on page 72. The first entry is for gates.\n\nGates\n\nYou read through an overview of the spell and skim past the opening ritual, including the list of materials needed to open one. Behind it is a closing ritual: how to close a gate that has already been cast.\n\nThere is a list of materials and artifacts needed. The list includes a dagger, chalice, human skull, and various herbs. There’s also mention of an “elder sign” but you aren’t sure what that is. From what you saw earlier in the book, these materials seem similar to what is needed to open a gate.\n\n<i>I wonder if they already have these?</i> you ask yourself.\n|||
 EventDvmCloseGateReadPageGatesBase.button1,{qst:continue}
-EventDvmCloseGateReadPageGatesTiePoint.text,|||\nEventDvmCloseGateReadPageGatesTiePoint @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageGatesTiePoint.text,
 EventDvmCloseGateReadPageGatesTiePoint.button1,
-EventDvmCloseGateReadPageGatesEnd.text,|||\nEventDvmCloseGateReadPageGatesEnd @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageGatesEnd.text,
 EventDvmCloseGateReadPageGatesEnd.button1,
-EventDvmCloseGateReadPageToolsXferIfTriggered.text,|||\nEventDvmCloseGateReadPageToolsXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageToolsXferIfTriggered.text,
 EventDvmCloseGateReadPageToolsXferIfTriggered.button1,
-EventDvmCloseGateReadPageTools.text,|||\nEventDvmCloseGateReadPageTools @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageTools.text,
 EventDvmCloseGateReadPageTools.button1,
-EventDvmCloseGateReadPageToolsDisplay.text,|||\nEventDvmCloseGateReadPageToolsDisplay @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageToolsDisplay.text,
 EventDvmCloseGateReadPageToolsDisplay.button1,
-EventDvmCloseGateReadPageToolsBase.text,|||\nEventDvmCloseGateReadPageToolsBase @(-1,-1)\n\nDagger\n\nYou flip the page. Here the book goes into detail about the knife needed to close the gate. It sounds beautiful, but you wonder where you would find something like that. Next is the process of empowering the blade. When you look at the incantation, it is written in a language you cannot read and, when you try, no sound comes from your mouth. Apparently, you will use this knife to draw blood for the ritual. Your blood.\n\nElder Sign\n\nAccording to the book, once the gate has manifested, it is weak and unstable. An elder sign is used to stabilize it. Either way, an elder sign is needed to close it. There is a drawing of one here, so now you know what to look for. There is another incantation you cannot understand or even sound out.\n\n{qst:FirstTimeRead}, gain 1 {clue}.\n\n\n|||
+EventDvmCloseGateReadPageToolsBase.text,|||\nDagger\n\nYou flip the page. Here the book goes into detail about the knife needed to close the gate. It sounds beautiful, but you wonder where you would find something like that. Next is the process of empowering the blade. When you look at the incantation, it is written in a language you cannot read and, when you try, no sound comes from your mouth. Apparently, you will use this knife to draw blood for the ritual. Your blood.\n\nElder Sign\n\nAccording to the book, once the gate has manifested, it is weak and unstable. An elder sign is used to stabilize it. Either way, an elder sign is needed to close it. There is a drawing of one here, so now you know what to look for. There is another incantation you cannot understand or even sound out.\n\n{qst:FirstTimeRead}, gain 1 {clue}.\n|||
 EventDvmCloseGateReadPageToolsBase.button1,{qst:continue}
-EventDvmCloseGateReadPageToolsTiePoint.text,|||\nEventDvmCloseGateReadPageToolsTiePoint @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageToolsTiePoint.text,
 EventDvmCloseGateReadPageToolsTiePoint.button1,
-EventDvmCloseGateReadPageToolsEnd.text,|||\nEventDvmCloseGateReadPageToolsEnd @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageToolsEnd.text,
 EventDvmCloseGateReadPageToolsEnd.button1,
-EventDvmCloseGateReadPageSacrificeXferIfTriggered.text,|||\nEventDvmCloseGateReadPageSacrificeXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageSacrificeXferIfTriggered.text,
 EventDvmCloseGateReadPageSacrificeXferIfTriggered.button1,
-EventDvmCloseGateReadPageSacrifice.text,|||\nEventDvmCloseGateReadPageSacrifice @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageSacrifice.text,
 EventDvmCloseGateReadPageSacrifice.button1,
-EventDvmCloseGateExpr13.text,|||\nEventDvmCloseGateExpr13 @(107,5)\n\n\n\n\n|||
+EventDvmCloseGateExpr13.text,
 EventDvmCloseGateExpr13.button1,
-EventDvmCloseGateReadPageSacrificeDisplay.text,|||\nEventDvmCloseGateReadPageSacrificeDisplay @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageSacrificeDisplay.text,
 EventDvmCloseGateReadPageSacrificeDisplay.button1,
-EventDvmCloseGateReadPageSacrificeOverload1.text,|||\nEventDvmCloseGateReadPageSacrificeOverload1 @(-1,-1)\n\nSacrifice\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the sacrifice is small: a few drops of your own blood. You shudder as you read about using even more of your blood for this.\n\nYou remember it saying a person is required to make the gate. <i>It must be the boy,</i> you say out loud and startle yourself when you hear your own voice.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates).\n\n\n|||
+EventDvmCloseGateReadPageSacrificeOverload1.text,|||\nSacrifice\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the sacrifice is small: a few drops of your own blood. You shudder as you read about using even more of your blood for this.\n\nYou remember it saying a person is required to make the gate. <i>It must be the boy,</i> you say out loud and startle yourself when you hear your own voice.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates).\n|||
 EventDvmCloseGateReadPageSacrificeOverload1.button1,{qst:continue}
-EventDvmCloseGateReadPageSacrificeTiePoint.text,|||\nEventDvmCloseGateReadPageSacrificeTiePoint @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageSacrificeTiePoint.text,
 EventDvmCloseGateReadPageSacrificeTiePoint.button1,
-EventDvmCloseGateReadPageSacrificeEnd.text,|||\nEventDvmCloseGateReadPageSacrificeEnd @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageSacrificeEnd.text,
 EventDvmCloseGateReadPageSacrificeEnd.button1,
-EventDvmCloseGateReadPageSacrificeBase.text,|||\nEventDvmCloseGateReadPageSacrificeBase @(-1,-1)\n\nSacrifice\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the sacrifice is small: a few drops of your own blood. You shudder as you read about using even more of your blood for this.\n\nYou remember it saying a person is required to make the gate. You wonder who they might choose.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates).\n\n\n|||
+EventDvmCloseGateReadPageSacrificeBase.text,|||\nSacrifice\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the sacrifice is small: a few drops of your own blood. You shudder as you read about using even more of your blood for this.\n\nYou remember it saying a person is required to make the gate. You wonder who they might choose.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates).\n|||
 EventDvmCloseGateReadPageSacrificeBase.button1,{qst:continue}
-EventDvmCloseGateReadPageCommentaryXferIfTriggered.text,|||\nEventDvmCloseGateReadPageCommentaryXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageCommentaryXferIfTriggered.text,
 EventDvmCloseGateReadPageCommentaryXferIfTriggered.button1,
-EventDvmCloseGateReadPageCommentary.text,|||\nEventDvmCloseGateReadPageCommentary @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageCommentary.text,
 EventDvmCloseGateReadPageCommentary.button1,
-EventDvmCloseGateExpr14.text,|||\nEventDvmCloseGateExpr14 @(143,11)\n\n\n\n\n|||
+EventDvmCloseGateExpr14.text,
 EventDvmCloseGateExpr14.button1,
-EventDvmCloseGateReadPageCommentaryDisplay.text,|||\nEventDvmCloseGateReadPageCommentaryDisplay @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageCommentaryDisplay.text,
 EventDvmCloseGateReadPageCommentaryDisplay.button1,
-EventDvmCloseGateReadPageCommentaryOverload1.text,|||\nEventDvmCloseGateReadPageCommentaryOverload1 @(-1,-1)\n\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how to use them draw more power for the ritual. Calculating the date and time for the ritual is also discussed, with a full moon being the most important.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n\n<i>The boy must be under the house somewhere,</i> you think to yourself.\n\n\n|||
+EventDvmCloseGateReadPageCommentaryOverload1.text,|||\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how to use them draw more power for the ritual. Calculating the date and time for the ritual is also discussed, with a full moon being the most important.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n\n<i>The boy must be under the house somewhere,</i> you think to yourself.\n|||
 EventDvmCloseGateReadPageCommentaryOverload1.button1,{qst:continue}
-EventDvmCloseGateReadPageCommentaryTiePoint.text,|||\nEventDvmCloseGateReadPageCommentaryTiePoint @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageCommentaryTiePoint.text,
 EventDvmCloseGateReadPageCommentaryTiePoint.button1,
-EventDvmCloseGateReadPageCommentaryEnd.text,|||\nEventDvmCloseGateReadPageCommentaryEnd @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageCommentaryEnd.text,
 EventDvmCloseGateReadPageCommentaryEnd.button1,
-EventDvmCloseGateReadPageCommentaryBase.text,|||\nEventDvmCloseGateReadPageCommentaryBase @(-1,-1)\n\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how they allow you to draw more power for the ritual. Determining the preferred dates and times for the ritual is also discussed, with a full moon being the most important part.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n\n\n|||
+EventDvmCloseGateReadPageCommentaryBase.text,|||\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how they allow you to draw more power for the ritual. Determining the preferred dates and times for the ritual is also discussed, with a full moon being the most important part.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n|||
 EventDvmCloseGateReadPageCommentaryBase.button1,{qst:continue}
-EventDvmCloseGateOrderedToc.text,|||\nEventDvmCloseGateOrderedToc @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateOrderedToc.text,
 EventDvmCloseGateOrderedToc.button1,
-EventDvmCloseGateTocSelector.text,|||\nEventDvmCloseGateTocSelector @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateTocSelector.text,
 EventDvmCloseGateTocSelector.button1,
-EventDvmCloseGateOrderedToc0.text,|||\nEventDvmCloseGateOrderedToc0 @(-1,-1)\n\nThe book looks old and worn with time.\n\n\n|||
+EventDvmCloseGateOrderedToc0.text,|||\nThe book looks old and worn with time.\n|||
 EventDvmCloseGateOrderedToc0.button1,Table of Contents
 EventDvmCloseGateOrderedToc0.button2,{action} Open the book
 EventDvmCloseGateOrderedToc0.button3,{qst:cancel}
-EventDvmCloseGateOrderedToc1.text,|||\nEventDvmCloseGateOrderedToc1 @(-1,-1)\n\nThis is a spell book and {c:EventChosenInvestigator} may have... abilities. Sarah is pushing you to find something about closing gates.\n\n\n|||
+EventDvmCloseGateOrderedToc1.text,|||\nThis is a spell book and {c:EventChosenInvestigator} may have... abilities. Sarah is pushing you to find something about closing gates.\n|||
 EventDvmCloseGateOrderedToc1.button1,Table of Contents
 EventDvmCloseGateOrderedToc1.button2,{action} Open the book
 EventDvmCloseGateOrderedToc1.button3,Gates
 EventDvmCloseGateOrderedToc1.button4,{action} Turn to page 72
 EventDvmCloseGateOrderedToc1.button5,{qst:cancel}
-EventDvmCloseGateOrderedToc2.text,|||\nEventDvmCloseGateOrderedToc2 @(-1,-1)\n\nClosing a gate is going to require a lot of work.\n\n\n|||
+EventDvmCloseGateOrderedToc2.text,|||\nClosing a gate is going to require a lot of work.\n|||
 EventDvmCloseGateOrderedToc2.button1,Table of Contents
 EventDvmCloseGateOrderedToc2.button2,{action} Open the book
 EventDvmCloseGateOrderedToc2.button3,Gates
@@ -7048,7 +6470,7 @@ EventDvmCloseGateOrderedToc2.button4,{action} Turn to page 72
 EventDvmCloseGateOrderedToc2.button5,Tools
 EventDvmCloseGateOrderedToc2.button6,{action} Read the next page
 EventDvmCloseGateOrderedToc2.button7,{qst:cancel}
-EventDvmCloseGateOrderedToc3.text,|||\nEventDvmCloseGateOrderedToc3 @(-1,-1)\n\nEach tool seems to need special attention. This will require more study.\n\n\n|||
+EventDvmCloseGateOrderedToc3.text,|||\nEach tool seems to need special attention. This will require more study.\n|||
 EventDvmCloseGateOrderedToc3.button1,Table of Contents
 EventDvmCloseGateOrderedToc3.button2,{action} Open the book
 EventDvmCloseGateOrderedToc3.button3,Gates
@@ -7058,7 +6480,7 @@ EventDvmCloseGateOrderedToc3.button6,{action} Read the next page
 EventDvmCloseGateOrderedToc3.button7,Sacrifice
 EventDvmCloseGateOrderedToc3.button8,{action} Read the next page
 EventDvmCloseGateOrderedToc3.button9,{qst:cancel}
-EventDvmCloseGateOrderedToc4.text,|||\nEventDvmCloseGateOrderedToc4 @(-1,-1)\n\nA look of concern and disgust on your face, you turn the page.\n\n\n|||
+EventDvmCloseGateOrderedToc4.text,|||\nWith a look of concern and disgust on your face, you turn the page.\n|||
 EventDvmCloseGateOrderedToc4.button1,Table of Contents
 EventDvmCloseGateOrderedToc4.button2,{action} Open the book
 EventDvmCloseGateOrderedToc4.button3,Gates
@@ -7070,173 +6492,199 @@ EventDvmCloseGateOrderedToc4.button8,{action} Read the next page
 EventDvmCloseGateOrderedToc4.button9,Commentary
 EventDvmCloseGateOrderedToc4.button10,{action} Read the next page
 EventDvmCloseGateOrderedToc4.button11,{qst:cancel}
-EventDvmCloseGateOrderedToc5.text,|||\nEventDvmCloseGateOrderedToc5 @(-1,-1)\n\n\n\n\n|||
-EventDvmCloseGateOrderedToc5.button1,Table of Contents
-EventDvmCloseGateOrderedToc5.button2,{action} Open the book
-EventDvmCloseGateOrderedToc5.button3,Gates
-EventDvmCloseGateOrderedToc5.button4,{action} Turn to page 72
-EventDvmCloseGateOrderedToc5.button5,Tools
-EventDvmCloseGateOrderedToc5.button6,{action} Read the next page
-EventDvmCloseGateOrderedToc5.button7,Sacrifice
-EventDvmCloseGateOrderedToc5.button8,{action} Read the next page
-EventDvmCloseGateOrderedToc5.button9,Commentary
-EventDvmCloseGateOrderedToc5.button10,{action} Read the next page
-EventDvmCloseGateOrderedToc5.button11,{qst:cancel}
-EventDvmCloseGateExpr12.text,|||\nEventDvmCloseGateExpr12 @(5,28)\n\n\n\n\n|||
-EventDvmCloseGateExpr12.button1,
-EventDvmCloseGateExpr9.text,|||\nEventDvmCloseGateExpr9 @(5,53)\n\n\n\n\n|||
-EventDvmCloseGateExpr9.button1,
-EventDvmCloseGateExpr5.text,|||\nEventDvmCloseGateExpr5 @(5,28)\n\n\n\n\n|||
-EventDvmCloseGateExpr5.button1,
-EventDvmCloseGateReadPageEpilog.text,|||\nEventDvmCloseGateReadPageEpilog @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageEpilog.text,
 EventDvmCloseGateReadPageEpilog.button1,
-EventDvmCloseGateExpr15.text,|||\nEventDvmCloseGateExpr15 @(167,11)\n\n\n\n\n|||
+EventDvmCloseGateExpr15.text,
 EventDvmCloseGateExpr15.button1,
-EventDvmCloseGateExpr16.text,|||\nEventDvmCloseGateExpr16 @(172,11)\n\n\n\n\n|||
+EventDvmCloseGateExpr16.text,
 EventDvmCloseGateExpr16.button1,
-EventDvmCloseGateReadPageEpilogDisplay.text,|||\nEventDvmCloseGateReadPageEpilogDisplay @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageEpilogDisplay.text,
 EventDvmCloseGateReadPageEpilogDisplay.button1,
-EventDvmCloseGateReadPageEpilogOverload1.text,|||\nEventDvmCloseGateReadPageEpilogOverload1 @(-1,-1)\n\nNow you know where the ritual will be performed and what is needed. You must stop your uncle!\n\n\n|||
+EventDvmCloseGateReadPageEpilogOverload1.text,|||\nNow you know where the ritual will be performed and what is needed. You must stop your cousin!\n|||
 EventDvmCloseGateReadPageEpilogOverload1.button1,{qst:continue}
-EventDvmCloseGateReadPageEpilogTiePoint.text,|||\nEventDvmCloseGateReadPageEpilogTiePoint @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageEpilogTiePoint.text,
 EventDvmCloseGateReadPageEpilogTiePoint.button1,
-EventDvmCloseGateReadPageEpilogEnd.text,|||\nEventDvmCloseGateReadPageEpilogEnd @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateReadPageEpilogEnd.text,
 EventDvmCloseGateReadPageEpilogEnd.button1,
-EventDvmCloseGateReadPageEpilogOverload2.text,|||\nEventDvmCloseGateReadPageEpilogOverload2 @(-1,-1)\n\nYou cannot allow a child to be sacrificed for this evil. You must find the artifacts before they start the ritual and, if you can, save the boy.\n\n\n|||
+EventDvmCloseGateReadPageEpilogDisplay.text,
+EventDvmCloseGateReadPageEpilogDisplay.button1,
+EventDvmCloseGateReadPageEpilogOverload1.text,|||\nNow you know where the ritual will be performed and what is needed. You must stop your cousin!\n|||
+EventDvmCloseGateReadPageEpilogOverload1.button1,Table of Contents
+EventDvmCloseGateReadPageEpilogOverload1.button2,{action} Open the book
+EventDvmCloseGateReadPageEpilogOverload1.button3,Gates
+EventDvmCloseGateReadPageEpilogOverload1.button4,{action} Turn to page 72
+EventDvmCloseGateReadPageEpilogOverload1.button5,Tools
+EventDvmCloseGateReadPageEpilogOverload1.button6,{action} Read the next page
+EventDvmCloseGateReadPageEpilogOverload1.button7,Sacrifice
+EventDvmCloseGateReadPageEpilogOverload1.button8,{action} Read the next page
+EventDvmCloseGateReadPageEpilogOverload1.button9,Commentary
+EventDvmCloseGateReadPageEpilogOverload1.button10,{action} Read the next page
+EventDvmCloseGateReadPageEpilogOverload1.button11,{qst:cancel}
+EventDvmCloseGateReadPageEpilogOverload2.text,|||\nYou cannot allow a child to be sacrificed for this evil. You must find the artifacts before they start the ritual and, if you can, save the boy.\n|||
+EventDvmCloseGateReadPageEpilogOverload2.button1,Table of Contents
+EventDvmCloseGateReadPageEpilogOverload2.button2,{action} Open the book
+EventDvmCloseGateReadPageEpilogOverload2.button3,Gates
+EventDvmCloseGateReadPageEpilogOverload2.button4,{action} Turn to page 72
+EventDvmCloseGateReadPageEpilogOverload2.button5,Tools
+EventDvmCloseGateReadPageEpilogOverload2.button6,{action} Read the next page
+EventDvmCloseGateReadPageEpilogOverload2.button7,Sacrifice
+EventDvmCloseGateReadPageEpilogOverload2.button8,{action} Read the next page
+EventDvmCloseGateReadPageEpilogOverload2.button9,Commentary
+EventDvmCloseGateReadPageEpilogOverload2.button10,{action} Read the next page
+EventDvmCloseGateReadPageEpilogOverload2.button11,{qst:cancel}
+EventDvmCloseGateReadPageEpilogBase.text,|||\n<i>Maybe I need to explore a bit more to figure out what I need to do to stop this madness,</i> you think to yourself.\n|||
+EventDvmCloseGateReadPageEpilogBase.button1,Table of Contents
+EventDvmCloseGateReadPageEpilogBase.button2,{action} Open the book
+EventDvmCloseGateReadPageEpilogBase.button3,Gates
+EventDvmCloseGateReadPageEpilogBase.button4,{action} Turn to page 72
+EventDvmCloseGateReadPageEpilogBase.button5,Tools
+EventDvmCloseGateReadPageEpilogBase.button6,{action} Read the next page
+EventDvmCloseGateReadPageEpilogBase.button7,Sacrifice
+EventDvmCloseGateReadPageEpilogBase.button8,{action} Read the next page
+EventDvmCloseGateReadPageEpilogBase.button9,Commentary
+EventDvmCloseGateReadPageEpilogBase.button10,{action} Read the next page
+EventDvmCloseGateReadPageEpilogBase.button11,{qst:cancel}
+EventDvmCloseGateReadPageEpilogOverload2.text,|||\nYou cannot allow a child to be sacrificed for this evil. You must find the artifacts before they start the ritual and, if you can, save the boy.\n|||
 EventDvmCloseGateReadPageEpilogOverload2.button1,{qst:continue}
-EventDvmCloseGateReadPageEpilogBase.text,|||\nEventDvmCloseGateReadPageEpilogBase @(-1,-1)\n\n<i>Maybe I need to explore a bit more to figure out what I need to do to stop this madness,</i> you think to yourself.\n\n\n|||
+EventDvmCloseGateReadPageEpilogBase.text,|||\n<i>Maybe I need to explore a bit more to figure out what I need to do to stop this madness,</i> you think to yourself.\n|||
 EventDvmCloseGateReadPageEpilogBase.button1,{qst:continue}
-EventDvmOpenGateStart.text,|||\nEventDvmOpenGateStart @(-1,-1)\n\n\n\n\n|||
+EventDvmCloseGateExpr12.text,
+EventDvmCloseGateExpr12.button1,
+EventDvmCloseGateExpr9.text,
+EventDvmCloseGateExpr9.button1,
+EventDvmCloseGateExpr5.text,
+EventDvmCloseGateExpr5.button1,
+EventDvmOpenGateStart.text,
 EventDvmOpenGateStart.button1,
-EventDvmOpenGateExpr1.text,|||\nEventDvmOpenGateExpr1 @(6,32)\n\n\n\n\n|||
+EventDvmOpenGateExpr1.text,
 EventDvmOpenGateExpr1.button1,
-EventDvmOpenGateExpr2.text,|||\nEventDvmOpenGateExpr2 @(6,39)\n\n\n\n\n|||
+EventDvmOpenGateExpr2.text,
 EventDvmOpenGateExpr2.button1,
-EventDvmOpenGateExpr4.text,|||\nEventDvmOpenGateExpr4 @(6,32)\n\n\n\n\n|||
+EventDvmOpenGateExpr4.text,
 EventDvmOpenGateExpr4.button1,
-EventDvmOpenGateExpr3.text,|||\nEventDvmOpenGateExpr3 @(6,32)\n\n\n\n\n|||
+EventDvmOpenGateExpr3.text,
 EventDvmOpenGateExpr3.button1,
-EventDvmOpenGateExpr6.text,|||\nEventDvmOpenGateExpr6 @(6,55)\n\n\n\n\n|||
+EventDvmOpenGateExpr6.text,
 EventDvmOpenGateExpr6.button1,
-EventDvmOpenGateExpr7.text,|||\nEventDvmOpenGateExpr7 @(6,62)\n\n\n\n\n|||
+EventDvmOpenGateExpr7.text,
 EventDvmOpenGateExpr7.button1,
-EventDvmOpenGateExpr9.text,|||\nEventDvmOpenGateExpr9 @(6,55)\n\n\n\n\n|||
+EventDvmOpenGateExpr9.text,
 EventDvmOpenGateExpr9.button1,
-EventDvmOpenGateExpr8.text,|||\nEventDvmOpenGateExpr8 @(6,55)\n\n\n\n\n|||
+EventDvmOpenGateExpr8.text,
 EventDvmOpenGateExpr8.button1,
-EventDvmOpenGateExpr12.text,|||\nEventDvmOpenGateExpr12 @(6,32)\n\n\n\n\n|||
+EventDvmOpenGateExpr12.text,
 EventDvmOpenGateExpr12.button1,
-EventDvmOpenGateExpr11.text,|||\nEventDvmOpenGateExpr11 @(6,32)\n\n\n\n\n|||
+EventDvmOpenGateExpr11.text,
 EventDvmOpenGateExpr11.button1,
-EventDvmOpenGateExpr14.text,|||\nEventDvmOpenGateExpr14 @(6,84)\n\n\n\n\n|||
+EventDvmOpenGateExpr14.text,
 EventDvmOpenGateExpr14.button1,
-EventDvmOpenGateExpr16.text,|||\nEventDvmOpenGateExpr16 @(6,80)\n\n\n\n\n|||
+EventDvmOpenGateExpr16.text,
 EventDvmOpenGateExpr16.button1,
-EventDvmOpenGateExpr15.text,|||\nEventDvmOpenGateExpr15 @(6,80)\n\n\n\n\n|||
+EventDvmOpenGateExpr15.text,
 EventDvmOpenGateExpr15.button1,
-EventDvmOpenGateExpr19.text,|||\nEventDvmOpenGateExpr19 @(6,31)\n\n\n\n\n|||
+EventDvmOpenGateExpr19.text,
 EventDvmOpenGateExpr19.button1,
-EventDvmOpenGateExpr18.text,|||\nEventDvmOpenGateExpr18 @(6,31)\n\n\n\n\n|||
+EventDvmOpenGateExpr18.text,
 EventDvmOpenGateExpr18.button1,
-EventDvmOpenGateTriggerFail.text,|||\nEventDvmOpenGateTriggerFail @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateTriggerFail.text,
 EventDvmOpenGateTriggerFail.button1,
-EventDvmOpenGateEnd.text,|||\nEventDvmOpenGateEnd @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateEnd.text,
 EventDvmOpenGateEnd.button1,
-EventDvmOpenGateInit.text,|||\nEventDvmOpenGateInit @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateInit.text,
 EventDvmOpenGateInit.button1,
-EventDvmOpenGateFirstTimeInitializer.text,|||\nEventDvmOpenGateFirstTimeInitializer @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateFirstTimeInitializer.text,
 EventDvmOpenGateFirstTimeInitializer.button1,
-EventDvmOpenGateTriggerPrologSelector.text,|||\nEventDvmOpenGateTriggerPrologSelector @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateTriggerPrologSelector.text,
 EventDvmOpenGateTriggerPrologSelector.button1,
-EventDvmOpenGateTriggerSelector.text,|||\nEventDvmOpenGateTriggerSelector @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateTriggerSelector.text,
 EventDvmOpenGateTriggerSelector.button1,
-EventDvmOpenGateReadPageTableOfContentsXferIfTriggered.text,|||\nEventDvmOpenGateReadPageTableOfContentsXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageTableOfContentsXferIfTriggered.text,
 EventDvmOpenGateReadPageTableOfContentsXferIfTriggered.button1,
-EventDvmOpenGateReadPageTableOfContents.text,|||\nEventDvmOpenGateReadPageTableOfContents @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageTableOfContents.text,
 EventDvmOpenGateReadPageTableOfContents.button1,
-EventDvmOpenGateReadPageTableOfContentsDisplay.text,|||\nEventDvmOpenGateReadPageTableOfContentsDisplay @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageTableOfContentsDisplay.text,
 EventDvmOpenGateReadPageTableOfContentsDisplay.button1,
-EventDvmOpenGateReadPageTableOfContentsBase.text,|||\nEventDvmOpenGateReadPageTableOfContentsBase @(-1,-1)\n\nTable of Contents\n\nYou open the book. On the inside cover, someone–probably {c:EventChosenInvestigator}’s father– scrawled a note that reads, “Only my descendants will be able to read this book, and only at the appointed hour. I have seen to this.”\n\nYou puzzle over this for a moment, then turn to the first page. It’s a table of contents. The book seems to be full of spells and rituals. You scan down to find something about gates. Maybe “Travel, page 72”?\n\nThe first time you read this page, gain 1 {clue}.\n\n\n|||
+EventDvmOpenGateReadPageTableOfContentsBase.text,|||\nTable of Contents\n\nYou open the book. On the inside cover, someone–probably {c:EventChosenInvestigator}’s father– scrawled a note that reads, “Only my descendants will be able to read this book, and only at the appointed hour. I have seen to this.”\n\nYou puzzle over this for a moment, then turn to the first page. It’s a table of contents. The book seems to be full of spells and rituals. You scan down to find something about gates. Maybe “Travel, page 72”?\n\nThe first time you read this page, gain 1 {clue}.\n|||
 EventDvmOpenGateReadPageTableOfContentsBase.button1,{qst:continue}
-EventDvmOpenGateReadPageTableOfContentsTiePoint.text,|||\nEventDvmOpenGateReadPageTableOfContentsTiePoint @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageTableOfContentsTiePoint.text,
 EventDvmOpenGateReadPageTableOfContentsTiePoint.button1,
-EventDvmOpenGateReadPageTableOfContentsEnd.text,|||\nEventDvmOpenGateReadPageTableOfContentsEnd @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageTableOfContentsEnd.text,
 EventDvmOpenGateReadPageTableOfContentsEnd.button1,
-EventDvmOpenGateTiePoint.text,|||\nEventDvmOpenGateTiePoint @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateTiePoint.text,
 EventDvmOpenGateTiePoint.button1,
-EventDvmOpenGateLoopBack.text,|||\nEventDvmOpenGateLoopBack @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateLoopBack.text,
 EventDvmOpenGateLoopBack.button1,
-EventDvmOpenGateReadPageOverviewXferIfTriggered.text,|||\nEventDvmOpenGateReadPageOverviewXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageOverviewXferIfTriggered.text,
 EventDvmOpenGateReadPageOverviewXferIfTriggered.button1,
-EventDvmOpenGateReadPageOverview.text,|||\nEventDvmOpenGateReadPageOverview @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageOverview.text,
 EventDvmOpenGateReadPageOverview.button1,
-EventDvmOpenGateReadPageOverviewDisplay.text,|||\nEventDvmOpenGateReadPageOverviewDisplay @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageOverviewDisplay.text,
 EventDvmOpenGateReadPageOverviewDisplay.button1,
-EventDvmOpenGateReadPageOverviewBase.text,|||\nEventDvmOpenGateReadPageOverviewBase @(-1,-1)\n\nYou read through an overview of the opening ritual and how to perform it. There is a list of materials and artifacts needed. The list includes a dagger, chalice, human skull, and various herbs. There’s also mention of an “elder sign” but you aren’t sure what that is.\n\nYou must look for the dagger, various ritual components, and an elder sign.\n\n<i>Maybe they don’t have all of these yet,</i> you hope to yourself.\n\n\n|||
+EventDvmOpenGateReadPageOverviewBase.text,|||\nYou read through an overview of the opening ritual and how to perform it. There is a list of materials and artifacts needed. The list includes a dagger, chalice, human skull, and various herbs. There’s also mention of an “elder sign” but you aren’t sure what that is.\n\nYou must look for the dagger, various ritual components, and an elder sign.\n\n<i>Maybe they don’t have all of these yet,</i> you hope to yourself.\n|||
 EventDvmOpenGateReadPageOverviewBase.button1,{qst:continue}
-EventDvmOpenGateReadPageOverviewTiePoint.text,|||\nEventDvmOpenGateReadPageOverviewTiePoint @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageOverviewTiePoint.text,
 EventDvmOpenGateReadPageOverviewTiePoint.button1,
-EventDvmOpenGateReadPageOverviewEnd.text,|||\nEventDvmOpenGateReadPageOverviewEnd @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageOverviewEnd.text,
 EventDvmOpenGateReadPageOverviewEnd.button1,
-EventDvmOpenGateReadPageToolsXferIfTriggered.text,|||\nEventDvmOpenGateReadPageToolsXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageToolsXferIfTriggered.text,
 EventDvmOpenGateReadPageToolsXferIfTriggered.button1,
-EventDvmOpenGateReadPageTools.text,|||\nEventDvmOpenGateReadPageTools @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageTools.text,
 EventDvmOpenGateReadPageTools.button1,
-EventDvmOpenGateReadPageToolsDisplay.text,|||\nEventDvmOpenGateReadPageToolsDisplay @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageToolsDisplay.text,
 EventDvmOpenGateReadPageToolsDisplay.button1,
-EventDvmOpenGateReadPageToolsBase.text,|||\nEventDvmOpenGateReadPageToolsBase @(-1,-1)\n\nDagger\n\nYou flip the page. Here the book goes into detail about the knife needed to close the gate. It sounds beautiful, but you wonder where you would find something like that. Next is the process of empowering the blade. When you look at the incantation, it is written in a language you cannot read and, when you try, no sound comes from your mouth. Apparently, you will use this knife to draw blood for the ritual. Your blood.\n\nElder Sign\n\nOnce the gate has manifested, it is weak and unstable. An elder sign is used to stabilize it. There is a picture of one here, so you at least know what it looks like now. The book goes on to say that without an elder sign, the gate must be fed blood to stay open.\n\n{qst:FirstTimeRead}, gain 1 {clue}.\n\n\n|||
+EventDvmOpenGateReadPageToolsBase.text,|||\nDagger\n\nYou flip the page. Here the book goes into detail about the knife needed to close the gate. It sounds beautiful, but you wonder where you would find something like that. Next is the process of empowering the blade. When you look at the incantation, it is written in a language you cannot read and, when you try, no sound comes from your mouth. Apparently, you will use this knife to draw blood for the ritual. Your blood.\n\nElder Sign\n\nOnce the gate has manifested, it is weak and unstable. An elder sign is used to stabilize it. There is a picture of one here, so you at least know what it looks like now. The book goes on to say that without an elder sign, the gate must be fed blood to stay open.\n\n{qst:FirstTimeRead}, gain 1 {clue}.\n|||
 EventDvmOpenGateReadPageToolsBase.button1,{qst:continue}
-EventDvmOpenGateReadPageToolsTiePoint.text,|||\nEventDvmOpenGateReadPageToolsTiePoint @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageToolsTiePoint.text,
 EventDvmOpenGateReadPageToolsTiePoint.button1,
-EventDvmOpenGateReadPageToolsEnd.text,|||\nEventDvmOpenGateReadPageToolsEnd @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageToolsEnd.text,
 EventDvmOpenGateReadPageToolsEnd.button1,
-EventDvmOpenGateReadPageSacrificeXferIfTriggered.text,|||\nEventDvmOpenGateReadPageSacrificeXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageSacrificeXferIfTriggered.text,
 EventDvmOpenGateReadPageSacrificeXferIfTriggered.button1,
-EventDvmOpenGateReadPageSacrifice.text,|||\nEventDvmOpenGateReadPageSacrifice @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageSacrifice.text,
 EventDvmOpenGateReadPageSacrifice.button1,
-EventDvmOpenGateExpr21.text,|||\nEventDvmOpenGateExpr21 @(102,11)\n\n\n\n\n|||
+EventDvmOpenGateExpr21.text,
 EventDvmOpenGateExpr21.button1,
-EventDvmOpenGateReadPageSacrificeDisplay.text,|||\nEventDvmOpenGateReadPageSacrificeDisplay @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageSacrificeDisplay.text,
 EventDvmOpenGateReadPageSacrificeDisplay.button1,
-EventDvmOpenGateReadPageSacrificeOverload1.text,|||\nEventDvmOpenGateReadPageSacrificeOverload1 @(-1,-1)\n\nThe Sacrifice\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the required sacrifice is large. A chill runs down your spine as you realize that only a precious loved one is enough. <i>The boy from the journal,</i> you think to yourself. <i>He’s here somewhere and we’re going to find him.</i>\n\n<i>Who could do this to their own child?</i> you ask yourself.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates), then gain 2 {clue} if you don’t go Insane.\n\n\n|||
+EventDvmOpenGateReadPageSacrificeOverload1.text,|||\nThe Sacrifice\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the required sacrifice is large. A chill runs down your spine as you realize that only a precious loved one is enough. <i>The boy from the journal,</i> you think to yourself. <i>He’s here somewhere and we’re going to find him.</i>\n\n<i>Who could do this to their own child?</i> you ask yourself.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates), then gain 2 {clue} if you don’t go Insane.\n|||
 EventDvmOpenGateReadPageSacrificeOverload1.button1,{qst:continue}
-EventDvmOpenGateReadPageSacrificeTiePoint.text,|||\nEventDvmOpenGateReadPageSacrificeTiePoint @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageSacrificeTiePoint.text,
 EventDvmOpenGateReadPageSacrificeTiePoint.button1,
-EventDvmOpenGateReadPageSacrificeEnd.text,|||\nEventDvmOpenGateReadPageSacrificeEnd @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageSacrificeEnd.text,
 EventDvmOpenGateReadPageSacrificeEnd.button1,
-EventDvmOpenGateReadPageSacrificeBase.text,|||\nEventDvmOpenGateReadPageSacrificeBase @(-1,-1)\n\nThe Sacrifice\n\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the required sacrifice is large. A cold chill runs down your spine as you realize that only a precious loved one is enough. <i>What kind of monster could do such a thing?”</i> you ask yourself.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates), then gain 2 {clue} if you don’t go Insane.\n\n\n|||
+EventDvmOpenGateReadPageSacrificeBase.text,|||\nThe Sacrifice\n\n\nThe next page delves into the importance of personal sacrifice. For this ritual, the required sacrifice is large. A cold chill runs down your spine as you realize that only a precious loved one is enough. <i>What kind of monster could do such a thing?”</i> you ask yourself.\n\n{qst:FirstTimeRead}, suffer 1 Horror ({will} negates), then gain 2 {clue} if you don’t go Insane.\n|||
 EventDvmOpenGateReadPageSacrificeBase.button1,{qst:continue}
-EventDvmOpenGateReadPageCommentaryXferIfTriggered.text,|||\nEventDvmOpenGateReadPageCommentaryXferIfTriggered @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageCommentaryXferIfTriggered.text,
 EventDvmOpenGateReadPageCommentaryXferIfTriggered.button1,
-EventDvmOpenGateReadPageCommentary.text,|||\nEventDvmOpenGateReadPageCommentary @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageCommentary.text,
 EventDvmOpenGateReadPageCommentary.button1,
-EventDvmOpenGateExpr22.text,|||\nEventDvmOpenGateExpr22 @(139,11)\n\n\n\n\n|||
+EventDvmOpenGateExpr22.text,
 EventDvmOpenGateExpr22.button1,
-EventDvmOpenGateReadPageCommentaryDisplay.text,|||\nEventDvmOpenGateReadPageCommentaryDisplay @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageCommentaryDisplay.text,
 EventDvmOpenGateReadPageCommentaryDisplay.button1,
-EventDvmOpenGateReadPageCommentaryOverload1.text,|||\nEventDvmOpenGateReadPageCommentaryOverload1 @(-1,-1)\n\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how to use them draw more power for the ritual. Calculating the date and time for the ritual is also discussed, with a full moon being the most important.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n\n<i>The boy must be under the house somewhere,</i> you think to yourself.\n\n\n|||
+EventDvmOpenGateReadPageCommentaryOverload1.text,|||\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how to use them draw more power for the ritual. Calculating the date and time for the ritual is also discussed, with a full moon being the most important.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n\n<i>The boy must be under the house somewhere,</i> you think to yourself.\n|||
 EventDvmOpenGateReadPageCommentaryOverload1.button1,{qst:continue}
-EventDvmOpenGateReadPageCommentaryTiePoint.text,|||\nEventDvmOpenGateReadPageCommentaryTiePoint @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageCommentaryTiePoint.text,
 EventDvmOpenGateReadPageCommentaryTiePoint.button1,
-EventDvmOpenGateReadPageCommentaryEnd.text,|||\nEventDvmOpenGateReadPageCommentaryEnd @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageCommentaryEnd.text,
 EventDvmOpenGateReadPageCommentaryEnd.button1,
-EventDvmOpenGateReadPageCommentaryBase.text,|||\nEventDvmOpenGateReadPageCommentaryBase @(-1,-1)\n\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how they allow you to draw more power for the ritual. Determining the preferred dates and times for the ritual is also discussed, with a full moon being the most important part.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n\n\n|||
+EventDvmOpenGateReadPageCommentaryBase.text,|||\nCommentary\n\nFinally, there is commentary and advice. One section discusses ley lines and how they allow you to draw more power for the ritual. Determining the preferred dates and times for the ritual is also discussed, with a full moon being the most important part.\n\nIn the margin are notes about a place under the house that aligns with a ley line; there is also a list of years that would be good for the ritual, and specific dates that are the best. Today is on the list.\n|||
 EventDvmOpenGateReadPageCommentaryBase.button1,{qst:continue}
-EventDvmOpenGateOrderedToc.text,|||\nEventDvmOpenGateOrderedToc @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateOrderedToc.text,
 EventDvmOpenGateOrderedToc.button1,
-EventDvmOpenGateTocSelector.text,|||\nEventDvmOpenGateTocSelector @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateTocSelector.text,
 EventDvmOpenGateTocSelector.button1,
-EventDvmOpenGateOrderedToc0.text,|||\nEventDvmOpenGateOrderedToc0 @(-1,-1)\n\nThe book looks old and worn with time.\n\n\n|||
+EventDvmOpenGateOrderedToc0.text,|||\nThe book looks old and worn with time.\n|||
 EventDvmOpenGateOrderedToc0.button1,Table of Contents
 EventDvmOpenGateOrderedToc0.button2,{action} Open the book
 EventDvmOpenGateOrderedToc0.button3,{qst:cancel}
-EventDvmOpenGateOrderedToc1.text,|||\nEventDvmOpenGateOrderedToc1 @(-1,-1)\n\nThis is a spell book and {c:EventChosenInvestigator} may have... abilities. Sarah is pushing you to find something about closing gates.\n\n\n|||
+EventDvmOpenGateOrderedToc1.text,|||\nThis is a spell book and {c:EventChosenInvestigator} may have... abilities. Sarah is pushing you to find something about closing gates.\n|||
 EventDvmOpenGateOrderedToc1.button1,Table of Contents
 EventDvmOpenGateOrderedToc1.button2,{action} Open the book
 EventDvmOpenGateOrderedToc1.button3,Overview
 EventDvmOpenGateOrderedToc1.button4,{action} Turn to page 72
 EventDvmOpenGateOrderedToc1.button5,{qst:cancel}
-EventDvmOpenGateOrderedToc2.text,|||\nEventDvmOpenGateOrderedToc2 @(-1,-1)\n\nThis ritual seems complicated.\n\n\n|||
+EventDvmOpenGateOrderedToc2.text,|||\nThis ritual seems complicated.\n|||
 EventDvmOpenGateOrderedToc2.button1,Table of Contents
 EventDvmOpenGateOrderedToc2.button2,{action} Open the book
 EventDvmOpenGateOrderedToc2.button3,Overview
@@ -7244,7 +6692,7 @@ EventDvmOpenGateOrderedToc2.button4,{action} Turn to page 72
 EventDvmOpenGateOrderedToc2.button5,Tools
 EventDvmOpenGateOrderedToc2.button6,{action} Read next page
 EventDvmOpenGateOrderedToc2.button7,{qst:cancel}
-EventDvmOpenGateOrderedToc3.text,|||\nEventDvmOpenGateOrderedToc3 @(-1,-1)\n\nOpening a gate seem complicated.\n\n\n|||
+EventDvmOpenGateOrderedToc3.text,|||\nOpening a gate seem complicated.\n|||
 EventDvmOpenGateOrderedToc3.button1,Table of Contents
 EventDvmOpenGateOrderedToc3.button2,{action} Open the book
 EventDvmOpenGateOrderedToc3.button3,Overview
@@ -7254,7 +6702,7 @@ EventDvmOpenGateOrderedToc3.button6,{action} Read next page
 EventDvmOpenGateOrderedToc3.button7,Sacrifice
 EventDvmOpenGateOrderedToc3.button8,{action} Read next page
 EventDvmOpenGateOrderedToc3.button9,{qst:cancel}
-EventDvmOpenGateOrderedToc4.text,|||\nEventDvmOpenGateOrderedToc4 @(-1,-1)\n\nA look of concern and disgust on your face, you turn the page.\n\n\n|||
+EventDvmOpenGateOrderedToc4.text,|||\nA look of concern and disgust on your face, you turn the page.\n|||
 EventDvmOpenGateOrderedToc4.button1,Table of Contents
 EventDvmOpenGateOrderedToc4.button2,{action} Open the book
 EventDvmOpenGateOrderedToc4.button3,Overview
@@ -7266,46 +6714,72 @@ EventDvmOpenGateOrderedToc4.button8,{action} Read next page
 EventDvmOpenGateOrderedToc4.button9,Commentary
 EventDvmOpenGateOrderedToc4.button10,{action} Read the next page
 EventDvmOpenGateOrderedToc4.button11,{qst:cancel}
-EventDvmOpenGateOrderedToc5.text,|||\nEventDvmOpenGateOrderedToc5 @(-1,-1)\n\n\n\n\n|||
-EventDvmOpenGateOrderedToc5.button1,Table of Contents
-EventDvmOpenGateOrderedToc5.button2,{action} Open the book
-EventDvmOpenGateOrderedToc5.button3,Overview
-EventDvmOpenGateOrderedToc5.button4,{action} Turn to page 72
-EventDvmOpenGateOrderedToc5.button5,Tools
-EventDvmOpenGateOrderedToc5.button6,{action} Read next page
-EventDvmOpenGateOrderedToc5.button7,Sacrifice
-EventDvmOpenGateOrderedToc5.button8,{action} Read next page
-EventDvmOpenGateOrderedToc5.button9,Commentary
-EventDvmOpenGateOrderedToc5.button10,{action} Read the next page
-EventDvmOpenGateOrderedToc5.button11,{qst:cancel}
-EventDvmOpenGateExpr20.text,|||\nEventDvmOpenGateExpr20 @(6,31)\n\n\n\n\n|||
-EventDvmOpenGateExpr20.button1,
-EventDvmOpenGateExpr17.text,|||\nEventDvmOpenGateExpr17 @(6,80)\n\n\n\n\n|||
-EventDvmOpenGateExpr17.button1,
-EventDvmOpenGateExpr13.text,|||\nEventDvmOpenGateExpr13 @(6,32)\n\n\n\n\n|||
-EventDvmOpenGateExpr13.button1,
-EventDvmOpenGateExpr10.text,|||\nEventDvmOpenGateExpr10 @(6,55)\n\n\n\n\n|||
-EventDvmOpenGateExpr10.button1,
-EventDvmOpenGateExpr5.text,|||\nEventDvmOpenGateExpr5 @(6,32)\n\n\n\n\n|||
-EventDvmOpenGateExpr5.button1,
-EventDvmOpenGateReadPageEpilog.text,|||\nEventDvmOpenGateReadPageEpilog @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageEpilog.text,
 EventDvmOpenGateReadPageEpilog.button1,
-EventDvmOpenGateExpr23.text,|||\nEventDvmOpenGateExpr23 @(167,11)\n\n\n\n\n|||
+EventDvmOpenGateExpr23.text,
 EventDvmOpenGateExpr23.button1,
-EventDvmOpenGateExpr24.text,|||\nEventDvmOpenGateExpr24 @(172,11)\n\n\n\n\n|||
+EventDvmOpenGateExpr24.text,
 EventDvmOpenGateExpr24.button1,
-EventDvmOpenGateReadPageEpilogDisplay.text,|||\nEventDvmOpenGateReadPageEpilogDisplay @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageEpilogDisplay.text,
 EventDvmOpenGateReadPageEpilogDisplay.button1,
-EventDvmOpenGateReadPageEpilogOverload1.text,|||\nEventDvmOpenGateReadPageEpilogOverload1 @(-1,-1)\n\nNow you know where the ritual will be performed and what is needed. You must stop your uncle!\n\n\n|||
+EventDvmOpenGateReadPageEpilogOverload1.text,|||\nNow you know where the ritual will be performed and what is needed. You must stop your uncle!\n|||
 EventDvmOpenGateReadPageEpilogOverload1.button1,{qst:continue}
-EventDvmOpenGateReadPageEpilogTiePoint.text,|||\nEventDvmOpenGateReadPageEpilogTiePoint @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageEpilogTiePoint.text,
 EventDvmOpenGateReadPageEpilogTiePoint.button1,
-EventDvmOpenGateReadPageEpilogEnd.text,|||\nEventDvmOpenGateReadPageEpilogEnd @(-1,-1)\n\n\n\n\n|||
+EventDvmOpenGateReadPageEpilogEnd.text,
 EventDvmOpenGateReadPageEpilogEnd.button1,
-EventDvmOpenGateReadPageEpilogOverload2.text,|||\nEventDvmOpenGateReadPageEpilogOverload2 @(-1,-1)\n\nYou cannot allow a child to be sacrificed for this evil. You must find the artifacts before they start the ritual and, if you can, save the boy.\n\n\n|||
+EventDvmOpenGateReadPageEpilogDisplay.text,
+EventDvmOpenGateReadPageEpilogDisplay.button1,
+EventDvmOpenGateReadPageEpilogOverload1.text,|||\nNow you know where the ritual will be performed and what is needed. You must stop your uncle!\n|||
+EventDvmOpenGateReadPageEpilogOverload1.button1,Table of Contents
+EventDvmOpenGateReadPageEpilogOverload1.button2,{action} Open the book
+EventDvmOpenGateReadPageEpilogOverload1.button3,Overview
+EventDvmOpenGateReadPageEpilogOverload1.button4,{action} Turn to page 72
+EventDvmOpenGateReadPageEpilogOverload1.button5,Tools
+EventDvmOpenGateReadPageEpilogOverload1.button6,{action} Read next page
+EventDvmOpenGateReadPageEpilogOverload1.button7,Sacrifice
+EventDvmOpenGateReadPageEpilogOverload1.button8,{action} Read next page
+EventDvmOpenGateReadPageEpilogOverload1.button9,Commentary
+EventDvmOpenGateReadPageEpilogOverload1.button10,{action} Read the next page
+EventDvmOpenGateReadPageEpilogOverload1.button11,{qst:cancel}
+EventDvmOpenGateReadPageEpilogOverload2.text,|||\nYou cannot allow a child to be sacrificed for this evil. You must find the artifacts before they start the ritual and, if you can, save the boy.\n|||
+EventDvmOpenGateReadPageEpilogOverload2.button1,Table of Contents
+EventDvmOpenGateReadPageEpilogOverload2.button2,{action} Open the book
+EventDvmOpenGateReadPageEpilogOverload2.button3,Overview
+EventDvmOpenGateReadPageEpilogOverload2.button4,{action} Turn to page 72
+EventDvmOpenGateReadPageEpilogOverload2.button5,Tools
+EventDvmOpenGateReadPageEpilogOverload2.button6,{action} Read next page
+EventDvmOpenGateReadPageEpilogOverload2.button7,Sacrifice
+EventDvmOpenGateReadPageEpilogOverload2.button8,{action} Read next page
+EventDvmOpenGateReadPageEpilogOverload2.button9,Commentary
+EventDvmOpenGateReadPageEpilogOverload2.button10,{action} Read the next page
+EventDvmOpenGateReadPageEpilogOverload2.button11,{qst:cancel}
+EventDvmOpenGateReadPageEpilogBase.text,|||\n<i>Maybe I need to explore a bit more to figure out what I need to do to stop this madness,</i> you think to yourself.\n|||
+EventDvmOpenGateReadPageEpilogBase.button1,Table of Contents
+EventDvmOpenGateReadPageEpilogBase.button2,{action} Open the book
+EventDvmOpenGateReadPageEpilogBase.button3,Overview
+EventDvmOpenGateReadPageEpilogBase.button4,{action} Turn to page 72
+EventDvmOpenGateReadPageEpilogBase.button5,Tools
+EventDvmOpenGateReadPageEpilogBase.button6,{action} Read next page
+EventDvmOpenGateReadPageEpilogBase.button7,Sacrifice
+EventDvmOpenGateReadPageEpilogBase.button8,{action} Read next page
+EventDvmOpenGateReadPageEpilogBase.button9,Commentary
+EventDvmOpenGateReadPageEpilogBase.button10,{action} Read the next page
+EventDvmOpenGateReadPageEpilogBase.button11,{qst:cancel}
+EventDvmOpenGateReadPageEpilogOverload2.text,|||\nYou cannot allow a child to be sacrificed for this evil. You must find the artifacts before they start the ritual and, if you can, save the boy.\n|||
 EventDvmOpenGateReadPageEpilogOverload2.button1,{qst:continue}
-EventDvmOpenGateReadPageEpilogBase.text,|||\nEventDvmOpenGateReadPageEpilogBase @(-1,-1)\n\n<i>Maybe I need to explore a bit more to figure out what I need to do to stop this madness,</i> you think to yourself.\n\n\n|||
+EventDvmOpenGateReadPageEpilogBase.text,|||\n<i>Maybe I need to explore a bit more to figure out what I need to do to stop this madness,</i> you think to yourself.\n|||
 EventDvmOpenGateReadPageEpilogBase.button1,{qst:continue}
+EventDvmOpenGateExpr20.text,
+EventDvmOpenGateExpr20.button1,
+EventDvmOpenGateExpr17.text,
+EventDvmOpenGateExpr17.button1,
+EventDvmOpenGateExpr13.text,
+EventDvmOpenGateExpr13.button1,
+EventDvmOpenGateExpr10.text,
+EventDvmOpenGateExpr10.button1,
+EventDvmOpenGateExpr5.text,
+EventDvmOpenGateExpr5.button1,
 EventFoyerStart.text,
 EventFoyerStart.button1,
 EventFoyerInit.text,
@@ -7484,7 +6958,7 @@ EventFoyerReadPageSearchCandles.text,
 EventFoyerReadPageSearchCandles.button1,
 EventFoyerReadPageSearchCandlesDisplay.text,
 EventFoyerReadPageSearchCandlesDisplay.button1,
-EventFoyerReadPageSearchCandlesBase.text,|||\nYou quickly realize what drew you to the painting: the man’s eyes glisten and meet yours as if he were alive. He sits in a chair in front of his wife and two children, all standing. You recognize one of the children as Sarah, so the man must be David Smythe. Still, you don’t see anything that will help you with the house. As you turn away, you notice the sconces on either side of the painting. Some of the darker areas of the house could use a little light. You reach out and take a candle.\n\nGain the {c:QItemCandles} Common Item, then discard this Search token.\n|||
+EventFoyerReadPageSearchCandlesBase.text,|||\nYou quickly realize what drew you to the painting: the man’s eyes glisten and meet yours as if he were alive. He sits in a chair in front of his wife and two children, all standing. You recognize one of the children as Sarah and the other child looks like you. The man must be your father, Elias Smythe. Still, you don’t see anything that will help you with the house. As you turn away, you notice the sconces on either side of the painting. Some of the darker areas of the house could use a little light. You reach out and take a candle.\n\nGain the {c:QItemCandles} Common Item, then discard this Search token.\n|||
 EventFoyerReadPageSearchCandlesBase.button1,{qst:continue}
 EventFoyerReadPageSearchCandlesTiePoint.text,
 EventFoyerReadPageSearchCandlesTiePoint.button1,
@@ -8463,7 +7937,7 @@ EventHall2ReadPageSearchEvidence.text,
 EventHall2ReadPageSearchEvidence.button1,
 EventHall2ReadPageSearchEvidenceDisplay.text,
 EventHall2ReadPageSearchEvidenceDisplay.button1,
-EventHall2ReadPageSearchEvidenceBase.text,|||\nYou start with the lamp but it is too broken to use. There is also a dead plant and scraps of paper tossed around. One of the scraps catches your eye because it is spattered in dried blood. The piece of the note you have talks about preparations for a ritual and mentions something about a chapel and crypt. You look at another and it becomes clear that the author of the note wants to stop the ritual and it is clear he will do anything to stop it. Another scrap signs the note “Henry Smythe.”\n\nGain the {c:QItemEvidenceHall2} Unique Item, then discard this Search token.\n|||
+EventHall2ReadPageSearchEvidenceBase.text,|||\nYou start with the lamp but it is too broken to use. There is also a dead plant and scraps of paper tossed around. One of the scraps catches your eye because it is spattered in dried blood. The piece of the note you have talks about preparations for a ritual and mentions something about a chapel and crypt. You look at another and it becomes clear that the author of the note wants to stop the ritual and it is clear he will do anything to stop it. Another scrap signs the note “Peter Smythe.”\n\nGain the {c:QItemEvidenceHall2} Unique Item, then discard this Search token.\n|||
 EventHall2ReadPageSearchEvidenceBase.button1,{qst:continue}
 EventHall2ReadPageSearchEvidenceTiePoint.text,
 EventHall2ReadPageSearchEvidenceTiePoint.button1,
@@ -8699,18 +8173,6 @@ EventJournalOrderedToc4.button8,{action} Read next page
 EventJournalOrderedToc4.button9,Page 5
 EventJournalOrderedToc4.button10,{action} Read next page
 EventJournalOrderedToc4.button11,{qst:cancel}
-EventJournalOrderedToc5.text,
-EventJournalOrderedToc5.button1,Page 1
-EventJournalOrderedToc5.button2,{action} Read the first Page
-EventJournalOrderedToc5.button3,Page 2
-EventJournalOrderedToc5.button4,{action} Read the next page
-EventJournalOrderedToc5.button5,Page 3
-EventJournalOrderedToc5.button6,{action} Read next page
-EventJournalOrderedToc5.button7,Page 4
-EventJournalOrderedToc5.button8,{action} Read next page
-EventJournalOrderedToc5.button9,Page 5
-EventJournalOrderedToc5.button10,{action} Read next page
-EventJournalOrderedToc5.button11,{qst:cancel}
 EventJournalReadPageEpilog.text,
 EventJournalReadPageEpilog.button1,
 EventJournalReadPageEpilogDisplay.text,
@@ -8721,6 +8183,20 @@ EventJournalReadPageEpilogTiePoint.text,
 EventJournalReadPageEpilogTiePoint.button1,
 EventJournalReadPageEpilogEnd.text,
 EventJournalReadPageEpilogEnd.button1,
+EventJournalReadPageEpilogDisplay.text,
+EventJournalReadPageEpilogDisplay.button1,
+EventJournalReadPageEpilogBase.text,|||\nThis evil must be stopped. Now you know when and where the ritual will take place. You must hurry.\n|||
+EventJournalReadPageEpilogBase.button1,Page 1
+EventJournalReadPageEpilogBase.button2,{action} Read the first Page
+EventJournalReadPageEpilogBase.button3,Page 2
+EventJournalReadPageEpilogBase.button4,{action} Read the next page
+EventJournalReadPageEpilogBase.button5,Page 3
+EventJournalReadPageEpilogBase.button6,{action} Read next page
+EventJournalReadPageEpilogBase.button7,Page 4
+EventJournalReadPageEpilogBase.button8,{action} Read next page
+EventJournalReadPageEpilogBase.button9,Page 5
+EventJournalReadPageEpilogBase.button10,{action} Read next page
+EventJournalReadPageEpilogBase.button11,{qst:cancel}
 EventLibraryStart.text,
 EventLibraryStart.button1,
 EventLibraryInit.text,
@@ -9230,12 +8706,14 @@ EventStartupInit.text,
 EventStartupInit.button1,
 EventStartupFirstTimeInitializer.text,
 EventStartupFirstTimeInitializer.button1,
+EventStartupExpr51.text,
+EventStartupExpr51.button1,
 EventStartupExpr52.text,
 EventStartupExpr52.button1,
+EventStartupExpr40.text,
+EventStartupExpr40.button1,
 EventStartupExpr53.text,
 EventStartupExpr53.button1,
-EventStartupExpr41.text,
-EventStartupExpr41.button1,
 EventStartupExpr54.text,
 EventStartupExpr54.button1,
 EventStartupExpr55.text,
@@ -9244,38 +8722,36 @@ EventStartupExpr56.text,
 EventStartupExpr56.button1,
 EventStartupExpr57.text,
 EventStartupExpr57.button1,
-EventStartupExpr58.text,
-EventStartupExpr58.button1,
-EventStartupExpr42.text,
-EventStartupExpr42.button1,
-EventStartupExpr60.text,
-EventStartupExpr60.button1,
+EventStartupExpr41.text,
+EventStartupExpr41.button1,
 EventStartupExpr59.text,
 EventStartupExpr59.button1,
-EventStartupExpr62.text,
-EventStartupExpr62.button1,
+EventStartupExpr58.text,
+EventStartupExpr58.button1,
+EventStartupExpr61.text,
+EventStartupExpr61.button1,
+EventStartupExpr42.text,
+EventStartupExpr42.button1,
 EventStartupExpr43.text,
 EventStartupExpr43.button1,
-EventStartupExpr44.text,
-EventStartupExpr44.button1,
-EventStartupExpr46.text,
-EventStartupExpr46.button1,
 EventStartupExpr45.text,
 EventStartupExpr45.button1,
-EventStartupExpr49.text,
-EventStartupExpr49.button1,
+EventStartupExpr44.text,
+EventStartupExpr44.button1,
 EventStartupExpr48.text,
 EventStartupExpr48.button1,
-EventStartupExpr63.text,
-EventStartupExpr63.button1,
-EventStartupExpr51.text,
-EventStartupExpr51.button1,
-EventStartupExpr65.text,
-EventStartupExpr65.button1,
+EventStartupExpr47.text,
+EventStartupExpr47.button1,
+EventStartupExpr62.text,
+EventStartupExpr62.button1,
+EventStartupExpr50.text,
+EventStartupExpr50.button1,
 EventStartupExpr64.text,
 EventStartupExpr64.button1,
-EventStartupExpr67.text,
-EventStartupExpr67.button1,
+EventStartupExpr63.text,
+EventStartupExpr63.button1,
+EventStartupExpr66.text,
+EventStartupExpr66.button1,
 EventStartupTriggerPrologSelector.text,
 EventStartupTriggerPrologSelector.button1,
 EventStartupTriggerSelector.text,
@@ -9382,24 +8858,22 @@ EventStartupReadPageStartUpBeforeLet18.text,
 EventStartupReadPageStartUpBeforeLet18.button1,
 EventStartupExpr31.text,
 EventStartupExpr31.button1,
-EventStartupExpr32.text,
-EventStartupExpr32.button1,
 EventStartupReadPageStartUpBeforeLet19.text,
 EventStartupReadPageStartUpBeforeLet19.button1,
-EventStartupExpr33.text,
-EventStartupExpr33.button1,
-EventStartupExpr35.text,
-EventStartupExpr35.button1,
+EventStartupExpr32.text,
+EventStartupExpr32.button1,
 EventStartupExpr34.text,
 EventStartupExpr34.button1,
+EventStartupExpr33.text,
+EventStartupExpr33.button1,
 EventStartupReadPageStartUpBeforeTrigger20.text,
 EventStartupReadPageStartUpBeforeTrigger20.button1,
-EventStartupExpr37.text,
-EventStartupExpr37.button1,
-EventStartupExpr39.text,
-EventStartupExpr39.button1,
+EventStartupExpr36.text,
+EventStartupExpr36.button1,
 EventStartupExpr38.text,
 EventStartupExpr38.button1,
+EventStartupExpr37.text,
+EventStartupExpr37.button1,
 EventStartupReadPageStartUpBeforeGoto127.text,
 EventStartupReadPageStartUpBeforeGoto127.button1,
 EventStartupEnd.text,
@@ -9416,10 +8890,10 @@ EventStartupTiePoint.text,
 EventStartupTiePoint.button1,
 EventStartupLoopBack.text,
 EventStartupLoopBack.button1,
-EventStartupExpr40.text,
-EventStartupExpr40.button1,
-EventStartupExpr36.text,
-EventStartupExpr36.button1,
+EventStartupExpr39.text,
+EventStartupExpr39.button1,
+EventStartupExpr35.text,
+EventStartupExpr35.button1,
 EventStartupReadPageShowEverythingXferIfTriggered.text,
 EventStartupReadPageShowEverythingXferIfTriggered.button1,
 EventStartupReadPageShowEverything.text,
@@ -9620,14 +9094,14 @@ EventStartupTocPrologPlaceDriveway.text,
 EventStartupTocPrologPlaceDriveway.button1,
 EventStartupTocNoPagesAvailable.text,
 EventStartupTocNoPagesAvailable.button1,
-EventStartupExpr66.text,
-EventStartupExpr66.button1,
-EventStartupExpr50.text,
-EventStartupExpr50.button1,
-EventStartupExpr47.text,
-EventStartupExpr47.button1,
-EventStartupExpr61.text,
-EventStartupExpr61.button1,
+EventStartupExpr65.text,
+EventStartupExpr65.button1,
+EventStartupExpr49.text,
+EventStartupExpr49.button1,
+EventStartupExpr46.text,
+EventStartupExpr46.button1,
+EventStartupExpr60.text,
+EventStartupExpr60.button1,
 EventStartupReadPageStartUpTrigger.text,
 EventStartupReadPageStartUpTrigger.button1,
 EventStartupReadPageSplashScreenTrigger.text,

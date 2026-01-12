@@ -1,5 +1,5 @@
 Language English
-Debug On
+Debug Off
 
 // use this for both goalOpenGate and goalFeedGate
 Book DvmOpenGate Ordered Keep Looped

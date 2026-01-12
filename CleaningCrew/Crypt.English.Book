@@ -58,13 +58,13 @@ Book Crypt Ordered No Keep Looped
 			inside. Place a Search token as indicated.
 		"""
 		
-		Goto PlaceSearchHenry
+		Goto PlaceSearchPeter
 	End Page PlaceSearchPendant
 	
-	Page PlaceSearchHenry
+	Page PlaceSearchPeter
 		Not Visible
 		
-		Add TokenSearchCryptHenry!
+		Add TokenSearchCryptPeter!
 		Text """
 			The stone casket on the end looks much newer than the others. Place
 			a Search token as indicated.
@@ -73,7 +73,7 @@ Book Crypt Ordered No Keep Looped
 		If Not exploredDungeonCave Then Goto PlaceExploreDungeonCaveViaCrypt
 		If Not exploredCryptViaChapel Then Goto PlaceExploreChapelViaCrypt
 		Exit
-	End Page PlaceSearchHenry
+	End Page PlaceSearchPeter
 
 	Page PlaceExploreChapelViaCrypt
 		Not Visible
@@ -149,9 +149,9 @@ Book Crypt Ordered No Keep Looped
 		Exit
 	End Page SearchPendant
 	
-	Page SearchHenry
+	Page SearchPeter
 		Not Visible
-		Triggered By @SearchCryptHenry
+		Triggered By @SearchCryptPeter
 		
 		Prolog """
 			A brass plate on top of the stone casket looks like it has the name
@@ -166,7 +166,7 @@ Book Crypt Ordered No Keep Looped
 			When you lean over to read it, the letters coalesce into the name
 			and dates of the person inside.
 			
-			Here lies Henry Smythe\n
+			Here lies Peter Smythe\n
 			Born 12 May, 1885 -- Died 31 October, 1915
 
 			It seems your father didn't leave, he died after stopping the ritual
@@ -177,8 +177,8 @@ Book Crypt Ordered No Keep Looped
 			Discard this Search token.
 		"""
 		
-		henryIsDead = true
-		Remove TokenSearchCryptHenry
+		peterIsDead = true
+		Remove TokenSearchCryptPeter
 		Exit
-	End Page SearchHenry
+	End Page SearchPeter
 End Book Crypt
