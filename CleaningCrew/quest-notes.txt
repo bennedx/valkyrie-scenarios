@@ -39,16 +39,97 @@ End Games ----------------------------------------------------------------------
 		
 		Portal		xx turns taken -or- 
 		Casting		All items are found, whole house explored, all but 2 pages read
-					"You can feel it start to happen"/woman screens
+					"You can feel it start to happen"/woman screams
 					
-		Win			Cast succeeds
+		Win			Cast fails
 		
-		Draw		Cast succeeds, but xx turns expired:  altar room collapses
-					but, hey, at least the monster won't kill the world
+					The boy lies on the ground, still burning like coals in a
+					stove. He is writhing in pain and you know that he will be
+					like this for several days. Sarah is next to him, speaking
+					words of comfort to no effect.
+					
+					Sarah turns to you and says, <<You were successful. Not only
+					did we stop Mathias's current plans, you we stopped anyone's
+					ability to use this area to try again. Once the boy dies,
+					we will be able to move on and find peace. Thank you.
+					
+					As you leave the house through the servant kitchen, you 
+					reflect on everything that just happened. Exhausted and 
+					still in shock, you wonder if the world will ever feel the
+					same again. But you are also deeply comforted and proud
+					that you were able to save the world from the evil Mathias
+					was bringing.
 		
-		Fail		xx turns expire
+		Draw		Cast succeeds, but you are able to kill Mathias and the gate
+					shuts down. The gate is not sealed. xx turns expired.
+					
+					The boy lies on the ground, still burning like coals in a
+					stove. He is writhing in pain and you know that he will be
+					like this for several days. Sarah is next to him, speaking
+					words of comfort to no effect.
+					
+					Sarah turns to you and says, <<You were successful. But you
+					were not able to seal the gate, so this will all happen
+					again sometime in the future. Once the boy dies, I will try
+					send to send him to find peace. I will stay and wait for 
+					the next opportunity to permanently stop this madness.
+					Thank you for what you were able to do.
+					
+					As you leave the house through the servant kitchen, you 
+					reflect on everything that just happened. Exhausted and 
+					still in shock, you wonder if the world will ever feel the
+					same again. But you are also deeply comforted and proud
+					that you were able to stop the evil Mathias was bringing.
+					This time.
+					
+					You wonder if it will happen again and if anyone will be
+					able to stop it, even temporarily. But for now, the world
+					is safe and, with luck, it will never happen again.
 		
+		Fail		found altar, xx turns expire
 		
+					As the ancient one nears the portal, you panic and try to 
+					run. The altar room is shaking and stone from the ceiling
+					is beginning to fall. You cousin continues to cast the 
+					summoning spell. You panic and begin to run.
+					
+					You find a door that leads back to the cave, but when you 
+					enter, you find yourself surrounded by more cultists. This
+					time, they outnumber you and you fall quickly to their 
+					weapons.
+					
+					As you lie on the floor, bleeding and dying, you hear a
+					monstrous roar and you realize the ancient one is here. As
+					you draw your last breath, the cultists fall to their knees and
+					begin praying to the breast for salvation. The last thing
+					you feel is the ceiling caving in and the screams of the
+					cultists, betrayed by their god and killed for their 
+					foolishness. 
+					
+					The only comfort you have is in knowing that a stream of 
+					sacrifice is required to the ancient one here, and with so
+					many cult members dead, it may not stay long.
+
+					Maybe.
+		
+		Hard fails	didn't find altar
+		
+					The house continues to shake, light streaming up through
+					the floorboards. With a thunderous clap, the house begins
+					to fall apart and the ceiling starts raining down. You run toward
+					the servant dining room, but when you get there, you find
+					cult members blocking your path. They attack you without
+					mercy.
+					
+					Sarah leans down and whispers, <<We failed and there is no
+					telling how much of the world will be destroyed, how many
+					people will die. Thank you for trying.>>
+					
+					As you lie on the floor, bleeding and dying, the cultists
+					run out the door to safety. Your last living experience is 
+					the floor under you rising up as the beast enters the world,
+					then the ceiling collapses.
+					
 		Notes
 		
 		

@@ -78,8 +78,8 @@ Book Startup Ordered No Keep Looped
 		
 		Add TokenTestExploreAltar
 		Add TokenTestExploreBackyardViaDriveway
-		Add TokenTestExploreBasementViaDiningRoom
 		Add TokenTestExploreBasementViaDiningRoomBlocked
+		Add TokenTestExploreBasementViaDiningRoom
 		Add TokenTestExploreChapelViaLibrary
 		Add TokenTestExploreCoatRoomViaGallery
 		Add TokenTestExploreCryptViaChapel
@@ -107,6 +107,7 @@ Book Startup Ordered No Keep Looped
 		Add TokenTestTalkToChapelPriest
 		
 		Add TokenTestTakeBooks
+		Add TokenTestSarahPatter
 		Add TokenTestStartRitual
 		Add TokenTestRitualPreparations
 		Add TokenTestRitualFinished

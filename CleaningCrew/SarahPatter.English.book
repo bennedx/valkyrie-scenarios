@@ -45,10 +45,14 @@ BOOK SarahPatter Ordered No Keep
 			must be prepared. Read the book carefully and read it soon.>>
 		"""
 
-		If goal == goalFeedGate Or goal == goalCloseGate Then Text """
+		If goal == goalFeedGate Then Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDVM} is
 			a spell book. It contains many powerful spells, including how to
-			open and close gates. You should read it to better understand
+			open and close gates. If you cannot stop Mathias from opening a gate
+			you'll need to either starve it of sacrifice or find a way to close
+			it.
+
+			<<You should read the {c:QItemDvm} to better understand
 			what is happening.>>
 		"""
 	End Page Dvm
@@ -70,8 +74,8 @@ BOOK SarahPatter Ordered No Keep
 		Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<The
 			{c:QItemElderSign} is a powerful protective symbol. It can be used
-			to ward off evil creatures and protect people from harm. If you
-			have it, you should keep it with you at all times.>>
+			to ward off evil creatures and protect people from harm. You should
+			keep it with you at all times.>>
 		"""
 
 		If goal == goalCloseGate Then Text """
@@ -113,10 +117,10 @@ BOOK SarahPatter Ordered No Keep
 	End Page Dagger
 
 	Page Journal
-		Visible When foundJournal
+		Visible When foundJournal And exploredDiningRoom
 		
 		Text """
-			Sarah looks down and sees you holding the {c:QItemJournal}. <<The
+			Sarah looks down and notices the {c:QItemJournal}. <<The
 			{c:QItemJournal}! The man who let you in was writing in it all
 			week. You should read it carefully.>>
 		"""
@@ -163,10 +167,10 @@ BOOK SarahPatter Ordered No Keep
 		Text """
 			Sarah whispers to {c:EventChosenInvestigator},
 			<<Father believed that personal sacrifice was the most powerful
-			magic. The gate is created by binding power to the body of a
-			loved one. Father used me to summon the gate. When the gate
-			closed, I died with it. The pain of the ritual so engulfed me that
-			I can still feel it.>>
+			magic. For the spell he used, the gate was created by binding power 
+			to the body of a loved one. Father used me to summon the gate. When
+			the gate closed, I began to die slowly. The pain of the ritual so
+			engulfed me that I can still feel it, 10 years on.>>
 		"""
 	End Page Color4
 	
