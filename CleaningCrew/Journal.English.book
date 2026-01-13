@@ -2,7 +2,8 @@ Language English
 Debug Off
 
 Book Journal Ordered Keep Looped
-
+	Triggered By @ReadJournal
+	
     Page Page1
         Prolog """
 			The book looks new. When you flip through it, you see that there
@@ -135,8 +136,6 @@ Book Journal Ordered Keep Looped
         
             The cleaning crew should be there soon. It is time.
         """
-
-        Trigger @readJournal
     End Page Page5
    
     Epilog

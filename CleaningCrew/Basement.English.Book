@@ -1,5 +1,5 @@
 Language English
-Debug On
+Debug Off
 
 Book Basement Ordered No Keep Looped
 
@@ -21,8 +21,6 @@ Book Basement Ordered No Keep Looped
 			{c:TileBasement} tile and wall as indicated, then remove this
 			Sight token.
 		"""
-		
-		exploredBasement = true
 	End Page PlaceStart
 
 	Page PlaceDarkness
@@ -44,25 +42,40 @@ Book Basement Ordered No Keep Looped
 		Add TokenSearchBasementEvidence!
 		
 		Text """
-			There is a pile of junk in one of the corners. Place a Search token
-			as indicated.
+			There is a pile of odds and ends near the stairs to your right.
+			Place a Search token as indicated.
 		"""
 	End Page PlaceEvidence
 
 	Page PlaceExploreDungeonCaveViaBasement
 		Visible When readAboutExploreDungeonCaveViaBasement
-		Triggered By @ReadAboutExploreDungeonCaveViaBasement When Not exploredBasement
+		Triggered By @ReadAboutExploreDungeonCaveViaBasement When exploredBasement And readAboutExploreDungeonCaveViaBasement And Not placedBasementDoor
 		
 		Add TokenSearchBasementTrapdoor!
 		
 		Text """
-			A pile of trash sits in the corner of the basement. It looks freshly
-			dumped. Is there where the journal talks about a door? Place a
-			Search token as indicated.
+			A stack of boxes sits in the corner of the basement. <i>Is that the
+			door we read about in the journal?</i> you consider.
+
+			Place a Search token as indicated.
 		"""
+		
+		If exploredBasement Then Text """
+			You remember seeing a stack of boxes in the far corner of the
+			basement. <i>Maybe there is a door is behind them,</i> you think to
+			yourself.
+			
+			Place a Search token as indicated.
+		"""
+		
+		placedBasementDoor = true
+		
+		// if this is set, we must have triggered this page
+		If exploredBasement Then Exit
 	End Page PlaceExploreDungeonCaveViaBasement
 	
 	Page PlaceEnd No Text
+		exploredBasement = true
 		If moveAfterExplore Then Trigger @MoveAfterExplore
 		moveAfterExplore = false
 		Exit
@@ -73,19 +86,22 @@ Book Basement Ordered No Keep Looped
 		Not Visible
 		Triggered By @SearchBasementEvidence
 		
-		Prolog "There is a lot of refuse here."
-		
-		Remove TokenSearchBasementEvidence
+		Prolog "There is a lot of stuff here, haphazardly thrown into a pile."
 		
 		Text QItemEvidenceBasementRubble """
-			You fish through the rubbish. While you don't find anything of use,
-			you do find several old pictures and a damaged necklace. One of the
-			pictures shows an open door with a man walking through it. The door
-			looks familiar.
+			You fish through the pile of rubish. While you don't find anything
+			of use, you do find several old pictures and a damaged necklace. One
+			of the pictures is a post-mortem photograph. You recognize it
+			as the woman in the photo where you found the candle. Her corpse is
+			properly dressed and arranged in a lifelike pose. The same three
+			people--Elias, Sarah, and {c:EventChosenInvestigator}--are standing 
+			behind her looking grim.
 
 			Gain the {c:QItemEvidenceBasementRubble} Unique Item, then discard
 			this Search token.
 		"""
+		
+		Remove TokenSearchBasementEvidence
 	
 		foundEvidenceBasement = true
 		foundEvidenceCount = foundEvidenceCount + 1
@@ -97,7 +113,8 @@ Book Basement Ordered No Keep Looped
 		Triggered By @SearchBasementTrapdoor
 		
 		Prolog """
-			The trash here is piled deep. There are footprints all around it.
+			The stack of boxes is piled nearly to your hat. Now that you're
+			looking more closely, you can see the many footprints in the dust.
 		"""
 		Button "Search"
 		
@@ -106,8 +123,9 @@ Book Basement Ordered No Keep Looped
 		Add TokenExploreDungeonCaveViaBasement!
 		
 		Text """
-			As you dig through the junk, you realize it is hiding something.
-			You sweep it away and find a door. Discard this Search token
+			You move a few boxes and in a couple of minutes, you find it: the
+			door from the journal. You spend a few more minutes clearing the 
+			way to the door. Discard this Search token
 			and the wall, then place an Explore token as indicated.
 		"""
 		
