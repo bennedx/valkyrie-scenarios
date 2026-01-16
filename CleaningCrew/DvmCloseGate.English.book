@@ -122,7 +122,7 @@ Book DvmCloseGate Ordered Keep Looped
     
     Page Commentary
         Prolog """
-            With a look of concern and disgust on your face, you turn the page.
+            With a look of concern and disgust on your face, you turn the page.
         """
         Button "Read the next page" After "Commentary"
 

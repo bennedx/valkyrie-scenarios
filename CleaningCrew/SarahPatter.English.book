@@ -5,9 +5,10 @@
 // Note that the "visible" directives may change during the game, so pages with visibility rules might show out of order
 
 Language English
+Debug Off
 
 BOOK SarahPatter Ordered No Keep
-
+	Triggered By @SarahPatter
 
 	Page PeterIsDead
 		Visible When peterIsDead
@@ -33,7 +34,7 @@ BOOK SarahPatter Ordered No Keep
 		Visible When foundDvm
 
 		Text """
-			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDVM} is
+			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDvm} is
 			a spell book. It contains many powerful spells, including how to
 			open and close gates, and how to interrupt a ritual that has been
 			started.
