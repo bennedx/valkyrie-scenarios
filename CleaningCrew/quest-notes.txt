@@ -2,29 +2,43 @@ to do
 - driveway:  kitchen door 
 - backyard:  ?
 - dining room:  puzzle hardcoded to 1-2-3-4
-- (kitchen): SearchRandom is Elixer ok in this scenario?
+- (kitchen): SearchRandom is Elixer; ok in this scenario?
 
-- gallery:  Place Gallery:
-	Triggered By @ExploreGalleryViaHall1 When Unread
-		It triggers even when page is already read
-		
 - library:  smashing door isn't implemented
 
 Valkyrie log cleanup:  ^NullReference.*?(\r\n\r\n)
 
 Rooms to convert ------------------------------------------------------------------------
-Hallway1
-Hallway2
-Gallery
-Study
-Library
-Basement
-Cave
-Crypt
-Chapel
-Torture Chamber
 Cell
 Altar
+
+Timing ----------------------------------------------------------------------------------
+											----- Movement -----
+								Base        3-inv	4-inv	5-inv
+- Driveway						4
+- Backyard						4
+- Dining Room incl basement
+- Kitchen
+- Hall1
+- Hall2
+- Gallery
+- Foyer
+- Study
+- Library
+- Chapel
+- Crypt
+- Dungeon Cave
+- Torture Chamber
+- Dungeon Cell
+- Basement
+- Journal
+- Arcane Manuscript
+
+- Movement:	34 moves from driveway to cell, via Chapel
+			11 from Gallery (w/candle) to opening exploreDungeonCaveViaBasement
+
+Whole house explored: exploredCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
+
 
 End Games -------------------------------------------------------------------------------
 
@@ -49,16 +63,16 @@ End Games ----------------------------------------------------------------------
 					words of comfort to no effect.
 					
 					Sarah turns to you and says, <<You were successful. Not only
-					did we stop Mathias's current plans, you we stopped anyone's
+					did we stop Mathias's current plans, we stopped anyone's
 					ability to use this area to try again. Once the boy dies,
-					we will be able to move on and find peace. Thank you.
+					he and I will be able to move on and find peace. Thank you.
 					
-					As you leave the house through the servant kitchen, you 
+					As you leave the house through the kitchen, you 
 					reflect on everything that just happened. Exhausted and 
 					still in shock, you wonder if the world will ever feel the
 					same again. But you are also deeply comforted and proud
-					that you were able to save the world from the evil Mathias
-					was bringing.
+					that you were able to save the world from the evil that
+					Mathias tried to bring.
 		
 		Draw		Cast succeeds, but you are able to kill Mathias and the gate
 					shuts down. The gate is not sealed. xx turns expired.
@@ -70,16 +84,16 @@ End Games ----------------------------------------------------------------------
 					
 					Sarah turns to you and says, <<You were successful. But you
 					were not able to seal the gate, so this will all happen
-					again sometime in the future. Once the boy dies, I will try
+					again. Once the boy dies, I will try
 					send to send him to find peace. I will stay and wait for 
 					the next opportunity to permanently stop this madness.
 					Thank you for what you were able to do.
 					
-					As you leave the house through the servant kitchen, you 
+					As you leave the house through the kitchen, you 
 					reflect on everything that just happened. Exhausted and 
 					still in shock, you wonder if the world will ever feel the
 					same again. But you are also deeply comforted and proud
-					that you were able to stop the evil Mathias was bringing.
+					that you were able to stop Mathias from bringing is evil.
 					This time.
 					
 					You wonder if it will happen again and if anyone will be
@@ -90,7 +104,7 @@ End Games ----------------------------------------------------------------------
 		
 					As the ancient one nears the portal, you panic and try to 
 					run. The altar room is shaking and stone from the ceiling
-					is beginning to fall. You cousin continues to cast the 
+					is beginning to fall. Your cousin continues to cast the 
 					summoning spell. You panic and begin to run.
 					
 					You find a door that leads back to the cave, but when you 
@@ -101,14 +115,14 @@ End Games ----------------------------------------------------------------------
 					As you lie on the floor, bleeding and dying, you hear a
 					monstrous roar and you realize the ancient one is here. As
 					you draw your last breath, the cultists fall to their knees and
-					begin praying to the breast for salvation. The last thing
+					begin praying to the beast for salvation. The last thing
 					you feel is the ceiling caving in and the screams of the
 					cultists, betrayed by their god and killed for their 
 					foolishness. 
 					
 					The only comfort you have is in knowing that a stream of 
-					sacrifice is required to the ancient one here, and with so
-					many cult members dead, it may not stay long.
+					sacrifice is required to keep the ancient one here, and with
+					so many cult members dead, maybe it won't be here for long.
 
 					Maybe.
 		
@@ -123,7 +137,7 @@ End Games ----------------------------------------------------------------------
 					
 					Sarah leans down and whispers, <<We failed and there is no
 					telling how much of the world will be destroyed, how many
-					people will die. Thank you for trying.>>
+					people will die. But thank you for trying.>>
 					
 					As you lie on the floor, bleeding and dying, the cultists
 					run out the door to safety. Your last living experience is 
@@ -196,16 +210,52 @@ General
 		The prologBlock checks to see if its index matches the random one
 		If not, goes to PageEventRandomFailed/PageEventDisplayRandom which loops back to RANDOM selector
 		When all random pages are read AND bool.IsLoopRandom, clear all readXxx flags
+	
 		
-x		Implement the RNG; 
-		
-		
+
+Linting:  list of things to check
+- every read variable is set somewhere
+- Every used token exists
+- every token is used
+- Every VarTrigger is @Trigger'd somewhere
+- Every referenced event actually exists
+- Every token, tile, and monster is available with the selected expansions
+- Every variable that is assigned is used somewhere
+- 
+- 
+
+Main image
+I am writing a scenario for Mansions of Madness, a board game. In the style of
+ that game's art, please make a picture of the outside of a mansion. 
+ 
+The mansion is large: three stories and 100' wide. The front door is 1/3 of the
+distance from the far end of the mansion. The mansion sits at a 30 degree angle,
+the front of the house faces stage left.
+
+We are looking at the house from the lower left corner. There is a fence that 
+extends from the back of the house, parallel to the wall it extends from.
+There is an ornate gate very close to where the fence meets the house.
+
+The house is dirty:  dirt and spider webs line the windows.
+
+Stage right of the house, a cobblestone driveway leads up to the gate and no
+further. The driveway is in poor condition. Weeds line the driveway parallel
+with the house. A cobblestone footpath leads from the driveway to the front
+door.
+
+The yards were once lush and beautiful but they have been untended for 10 years. 
+Everything is dead: grass, flowers, trees.
+
+ 
+There are three people. A man wears 1920s house clearer clothes. Two women
+accompany him, in some kind of work garb (not maid uniform)
+
+The image must be 256px wide by 512px high.
+
 
 Compiler
 -	support RANDOM pages; only works for ORDERED NO KEEP
--	test #ExprRead, incl GetOrCreate()
-x	PAGE name NO TEXT support
--	add support for token highlighting when an "!" it put after its name on ADD or REMOVE
+-	add support for token highlighting when an "!" is put after its name on ADD or REMOVE
 -	add linting tool
 -	add SPAWN support:  create an event as part of the book that is triggered and goes to the SpawnXxx
 		No text is needed anywhere because, after the spawn, flow returns to where we triggered
@@ -222,20 +272,22 @@ x	PAGE name NO TEXT support
 				PROLOG "..."
 				BUTTON "..." AFTER "..."
 				TEXT "..."
+				IF cond THEN TEXT "..."
 			[no END needed]
 		]
 
 		The "LANGUAGE name" directive changes to "LANGUAGE FILE name"
 
-		add tool that generates a set of files for a language by extracting the names from the .book files
-		Call these, like, Hall2.spanish.book
+		add tool that generates a set of localization files; can maybe validate
+		that the .book and .txt files align?
+		
+		Call these, like, Hall2.Localization.Spanish.txt
 
 -	Add {Macro} support to strings
 
 
 ClosePortal Book:  make sure Step3 is organized correctly with repeats
 
-Hall1:  Gallery door: As you reach for the door, something catches your eye and you turn back to look at the painting. 
 SightHall2: As you try to look farther down the hall, that painting catches your eye again. Maybe you should take a closer look?
 
 Once Sarah is found, explore/site works normally
@@ -256,3 +308,5 @@ ExploreAltarViaCell--this needs work around ritual and such
 How does ritual start? What effect does that have on cell and altar?
 
 - Put something important in the basement to make sure they go through it
+
+SarahPatter.ElderSign:  If goal=close:  should be the default text

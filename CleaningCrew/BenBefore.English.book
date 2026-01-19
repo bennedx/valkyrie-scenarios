@@ -135,8 +135,8 @@ Book BenBefore Random No Keep Looped
 		
 		Text """
 			<<Well, they tried right after the... trouble. No one would even come
-			to look at it back then, but our, um, priest, told us now is the
-			right time.>>
+			to look at it back then. Our, um, priest, told us now is the
+			right time to try again.>>
 		
 			Gain 1 {clue}.
 		"""

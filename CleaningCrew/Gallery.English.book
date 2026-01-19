@@ -1,4 +1,5 @@
 Language English
+Debug Off //"{var:EventGalleryExpr11Temp} / {var:EventGalleryExpr12Temp}"
 
 Book Gallery Ordered No Keep Looped
 
@@ -17,15 +18,14 @@ Book Gallery Ordered No Keep Looped
 		Remove TokenExploreGalleryViaHall1
 		
 		Text """
-			As the door opens, dust rises then drifts slowly toward the floor.
-			Lots of it. <i>This place could take days to clean,</i> you mumble
+			As the door opens, dust rises then floats with a slow churn.
+			Lots of dust. <i>This place could take days to clean,</i> you mumble
 			to yourself.
 			
 			The room behind the door is--or was--stately, with high ceilings,
 			beautiful paintings, and furniture and rugs that look both rich and
-			comfortable. Dim light from the windows reflects off the dust,
-			giving the room an quality, and making the room feel
-			even shabbier than it actually is.
+			comfortable, but now faded and moth-eaten. Dim light from the windows
+			reflects off the dust, making the room feel even shabbier.
 			
 			Place the {c:TileGallery} tile, then discard this Explore token.
 		"""
@@ -36,9 +36,9 @@ Book Gallery Ordered No Keep Looped
 		
 		Text """
 			Feeble light oozes from the {c:TileGallery} into the hallway. 
-			Your eyes follow the light and it looks like the hall continues.
-			Place a Sight token as indicated, then move 1 space farther down
-			the hall.
+			Your eyes follow the light to see that the hallway continues into 
+			the dark. Place a Sight token as indicated, then move 1 space
+			farther down the hall.
 		"""
 		
 		Remove TokenHall1Investigators
@@ -51,13 +51,13 @@ Book Gallery Ordered No Keep Looped
 
 		Text """
 			Somehow, light from the {c:TileGallery} has cast a ray directly
-			on a painting, making it glow with unsettling light. You can almost
-			feel it calling to you. You shake it off because paintings don't
-			have power. Place a Search token as indicated.
+			onto a painting next to you, making it glow unnaturally.
+			You can feel it calling to you. Unsettled, you shake it off. Place
+			a Search token as indicated.
 			
-			As you look away, you catch something moving in your 
-			peripheral vision. You glance back and the painting is 
-			still glowing, something that suddenly seems even more troubling.
+			As you look away, something moves in your 
+			peripheral vision. You glance back and there is nothing there.
+			Except the painting that still glows, seeming more sinister now.
 		"""
 		
 		Exit
@@ -72,7 +72,7 @@ Book Gallery Ordered No Keep Looped
 
 	Page ExploreGalleryViaHall1NoSarah
 		Not Visible
-		Triggered by @ExploreGalleryViaHall1 When PlaceGallery Is Read and Not foundSarah
+		Triggered by @ExploreGalleryViaHall1 When PlaceGallery Is Read And Not foundSarahsPainting
 		
 		Text """
 			As you approach the door, your eye is drawn back to the painting
@@ -82,6 +82,18 @@ Book Gallery Ordered No Keep Looped
 		Exit
 	End Page ExploreGalleryViaHall1NoSarah
 
+	Page ExploreGalleryViaHall1NoSarah2
+		Not Visible
+		Triggered by @ExploreGalleryViaHall1 When PlaceGallery Is Read And foundSarahsPainting And Not foundSarah
+		
+		Text """
+			No matter how hard you try to look away, the girl's quiet glow
+			doesn't allow you to.
+		"""
+		
+		Exit
+	End Page ExploreGalleryViaHall1NoSarah2
+	
 	Page ExploreGalleryViaFoyer No Text
 		Not Visible
 		Triggered By @ExploreGalleryViaFoyer
@@ -97,20 +109,17 @@ Book Gallery Ordered No Keep Looped
 		Button "Look"
 
 		Remove TokenExploreGalleryViaFoyer
-		Add TokenExploreFoyerViaGallery!
 
 		Text """
 			The gallery is larger than it first looked. The ceiling is vaulted
-			and windows rise from floor to ceiling. Thick curtains cover most
-			of them, but one is open and the curtain has torn and is hanging on
-			another. They let light into the room, and the dust is still
-			catching and scattering it. 
+			and windows rise from floor to ceiling. Thick curtains cover the
+			windows but one panel has torn. It sags, allowing light into the
+			room. Dust continues to catch and scatter it. 
 			
-			Discard all Sight and Explore
-			tokens leading to this explored area.
+			Discard all Sight and Explore tokens leading to this explored area.
 		"""
 		
-		exploredGalleryViaHall = true
+		exploredGalleryViaHall1 = true
 		exploredGallery = true
 	End Page ExploreGalleryAfter
 	

@@ -121,8 +121,6 @@ Book Hall1 Ordered No Keep Looped
 		Prolog "The painting glows with unnatural light."
 		Button "Search"
 		
-		Remove TokenSearchHall1Painting
-
 		Text """
 			The painting is of a girl. The work is
 			stunning and the girl looks so lifelike, it's as if she could just
@@ -130,12 +128,14 @@ Book Hall1 Ordered No Keep Looped
 			serious.
 
 			When you blink, you think the painting has moved but you know that
-			cannot happen. You also notice that there is no dust anywhere on
-			the painting or the frame. You feel like there's something else
+			can't happen. You also notice that there is no dust anywhere on
+			the painting or its frame. You feel like there's something else
 			you've missed, but you dismiss it and turn away. Gain 1 {clue},
 			then discard this Search token.
 		"""
 		
+		Remove TokenSearchHall1Painting
+
 		Goto SearchPainting2
 	End Page SearchPainting
 
@@ -155,31 +155,24 @@ Book Hall1 Ordered No Keep Looped
 			({will} negates).
 		"""
 		
+		foundSarahsPainting = true
 		Exit
 	End Page SearchPainting2
 	
-	
 	Page TalkToSarah
 		Not Visible
-		Triggered By @TalkToSarah When Unread
+		Triggered By @TalkToSarah
 		
-		Text """
+		Prolog """
 			She is a pretty girl in the the first blush of youth--maybe 11 or
 			12 years old. She has curly hair with emerald green ribbons and a
 			bright white dress that stands out in the dingy hallway.
-		"""
-	End Page TalkToSarah
-	
-	Page TalkToSarah2
-		Not Visible
-		Triggered By @TalkToSarah When TalkToSarah Is Read
-		
-		Prolog """
+
 			She looks at you like she wants to say
 			something, but is holding back. She still looks serious, but also
 			concerned and maybe afraid. You think your mind is playing
-			tricks on you because she seems to be glowing. And maybe a 
-			little transparent.
+			tricks on you because she seems to be glowing. And a 
+			little bit transparent.
 
 			She will only speak with {c:EventChosenInvestigator}.		
 		"""
@@ -193,17 +186,19 @@ Book Hall1 Ordered No Keep Looped
 			You are surprised at what she says. <i>Who is this girl? Why does
 			she think she knows me?</i>
 
-			The girl walks over and turns to face you. <<I know you have many
-			questions and I'll get to them. But first, you need to know that you
-			and your partners are in danger. We need to move quickly.>>
+			<<I know you have many
+			questions,>> she starts, <<and I'll answer all of them. But first,
+			you need to know that you and your friends are in danger. We must
+			move quickly.>>
 
 			Move the Green Girl token to your investigator card.
-			She will follow you to whatever ends you meet in this house.
+			She will follow you to whatever ends you meet in this house. While
+			she is with you, you gain +1 {will}.
 		"""
 		
 		Remove TokenSarah
 		foundSarah = true
 		Exit
-	End Page TalkToSarah2
+	End Page TalkToSarah
 	
 End Book Hall1

@@ -53,7 +53,7 @@ Book PlaceDiningRoom Ordered No Keep Looped
 	End Page Kitchen
 
 	Page OtherExplores
-		Add TokenExploreBasementFirst!, TokenExploreHall1ViaDiningRoomLocked!
+		Add TokenExploreBasementViaDiningRoomBlocked!, TokenExploreHall1ViaDiningRoomBlocked!
 
 		Text """
 			Two other doors lead farther into the house. Place Explore tokens
@@ -62,7 +62,7 @@ Book PlaceDiningRoom Ordered No Keep Looped
 	End Page OtherExplores
 	
 	Page FluxStabilizer
-		Add TokenSearchDiningRoomFluxStabilizer
+		Add TokenSearchDiningRoomFluxStabilizer!
 
 		Text """
 			An odd-looking device sits on the table. Place a Search token as
@@ -88,7 +88,7 @@ Book PlaceDiningRoom Ordered No Keep Looped
 		Text """
 			As you walk into the house, you remember the book in the driveway
 			and glance back toward the gate as you step inside. 
-			{c:EventChosenInvestigator} moves into the device's space.
+			{c:EventChosenInvestigator} moves 1 space into the explored area.
 		"""
 	End Page Journal
 End Book PlaceDiningRoom
@@ -406,24 +406,22 @@ End Book Kitchen
 
 // -----------------------------------------------------------------------------
 
-Book DoorBasementViaDiningRoomLock Ordered No Keep Looped
-
-	Page Entry No Text
-		// every call starts here and then transitions to the next page to show
-		Triggered By @ExploreBasementViaDiningRoomBlocked
-	End Page Entry
+Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
+	// we check unlocked to make sure it has a value (it doesn't until it comes through
+	// here at least once
+	Triggered By @ExploreBasementViaDiningRoom When basementPhase <> unlocked
 	
+	brains = 1
+	brawn = 2
+	none = 0
+	
+	first = 1
+	second = 2
+	third = 3
+	unlocked = 4
+	basementPhase = first
+
 	Page FirstStart
-		brains = 1
-		brawn = 2
-		none = 0
-		
-		first = 1
-		second = 2
-		third = 3
-		unlocked = 4
-		basementPhase = first
-		
 		Text """
 			This door has a rusty lock. You can (maybe) think of a couple of
 			ways to get through it. <i>But how to proceed?</i>
@@ -695,10 +693,12 @@ Book DoorBasementViaDiningRoomLock Ordered No Keep Looped
 			when you first walked in, but now you know it was merely dim. Place
 			darkness in each space of the dining room.
 
-			An investigator with a light source may
-			go into the basement. Place a Sight token as indicated.
+			When you try to look through the door into the basement, your vision
+			is blocked by a dark that almost feel solid. An investigator with a
+			light source may go into the basement. Place a Sight token as
+			indicated.
 		"""
 	End Page
-End Book DoorBasementViaDiningRoomLock
+End Book DoorBasementViaDiningRoomBlocked
 
 

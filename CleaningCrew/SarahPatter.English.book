@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------------
 // use this to manage Sarah's commentary and make it work across scenarios
 // TOC: There are no TOC entries and this is ordered|nokeep:  this means the next page will be read each time it is opened
-// The default page text entries for goal == goalCloseGate
+// The default page text entries are for goal == goalCloseGate
 // Note that the "visible" directives may change during the game, so pages with visibility rules might show out of order
 
 Language English
@@ -53,7 +53,7 @@ BOOK SarahPatter Ordered No Keep
 			you'll need to either starve it of sacrifice or find a way to close
 			it.
 
-			<<You should read the {c:QItemDvm} to better understand
+			<<Read the {c:QItemDvm} to better understand
 			what is happening.>>
 		"""
 	End Page Dvm
@@ -118,7 +118,7 @@ BOOK SarahPatter Ordered No Keep
 	End Page Dagger
 
 	Page Journal
-		Visible When foundJournal And exploredDiningRoom
+		Visible When foundJournal
 		
 		Text """
 			Sarah looks down and notices the {c:QItemJournal}. <<The
