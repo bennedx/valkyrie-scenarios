@@ -32,6 +32,9 @@ Book Startup Ordered No Keep Looped
 		// investigators, the less often. A single player sees a new
 		// one every 10 turns, while 5 will see one every 2 turns.
 		wandererFrequency = (5 - #heros) * 2 + 2
+		If #heros = 3 Then wandererFrequency = 4
+		If #heros = 4 Then wandererFrequency = 3
+		If #heros = 5 Then wandererFrequency = 2
 		
 		// this counts down to when the next one appears
 		wandererCountdown = wandererFrequency
@@ -39,8 +42,8 @@ Book Startup Ordered No Keep Looped
 		// only one per
 		wandererMax = #heros
 
-		// wanderers killed so farther
-		// wanderersKiled
+		// wanderers killed so far
+		// wanderersKilled
 		
 		// ending flags
 		endWin = 1
@@ -53,6 +56,18 @@ Book Startup Ordered No Keep Looped
 		goalCloseGate = 3
 		
 		goal = goalCloseGate //RANDOM(3)
+		
+		// basement door values
+		brains = 1
+		brawn = 2
+		none = 0
+		
+		first = 1
+		second = 2
+		third = 3
+		unlocked = 4
+		basementPhase = first
+
 		
 		If Not testMode Then Trigger @SplashScreen
 		if Not testMode Then Exit
@@ -79,7 +94,6 @@ Book Startup Ordered No Keep Looped
 		Add TokenTestExploreAltar
 		Add TokenTestExploreBackyardViaDriveway
 		Add TokenTestExploreBasementViaDiningRoomBlocked
-		Add TokenTestExploreBasementViaDiningRoom
 		Add TokenTestExploreChapelViaLibrary
 		Add TokenTestExploreCoatRoomViaGallery
 		Add TokenTestExploreCryptViaChapel

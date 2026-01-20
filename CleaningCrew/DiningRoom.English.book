@@ -7,8 +7,14 @@ Book PlaceDiningRoom Ordered No Keep Looped
 		Not Visible
 		Triggered By @ExploreHall1ViaDiningRoomBlocked
 		
+		Prolog """
+			The door is filthy, though the push plate is shiny, like it has
+			been used recently.
+		"""
+		Button "Explore"
+		
 		Text """
-			The door is filthy. You check the knob, but it's locked:  you'll need a key to get in.
+			It's locked. You'll probably need a key to open it.
 		"""
 		
 		Mark Unread
@@ -118,8 +124,6 @@ Book SearchDiningRoom Ordered No Keep Looped
 		// passageway off the study.
 		wandererMax = #heros - exploredBackyardNicely
 		If wandererMax < 1 Then wandererMax = 1
-		
-		wandererFrequency = 2
 	End Page StartFluxStabilizer
 	
 	Page Finn
@@ -303,7 +307,25 @@ Book SearchDiningRoom Ordered No Keep Looped
 		"""
 		
 		foundEvidenceCount = foundEvidenceCount + 1
+		Exit
 	End Page PaperInBox
+	
+	Page ExploreHall1Blocked
+		Not Visible
+		Triggered By @ExploreHall1ViaDiningRoomBlocked
+		
+		Prolog """
+			For an inside door, this one seems solid and imposing.
+		"""
+		Button "Explore"
+		
+		Text """
+			It's locked. Maybe Ben has the key?
+		"""
+		
+		Mark Unread
+		Exit
+	End Page ExploreHall1Blocked
 End Book SearchDiningRoom
 
 Book Kitchen Ordered No Keep Looped
@@ -411,15 +433,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	// here at least once
 	Triggered By @ExploreBasementViaDiningRoom When basementPhase <> unlocked
 	
-	brains = 1
-	brawn = 2
-	none = 0
-	
-	first = 1
-	second = 2
-	third = 3
-	unlocked = 4
-	basementPhase = first
+	// startup values are defined in Startup
 
 	Page FirstStart
 		Text """
@@ -694,8 +708,8 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 			darkness in each space of the dining room.
 
 			When you try to look through the door into the basement, your vision
-			is blocked by a dark that almost feel solid. An investigator with a
-			light source may go into the basement. Place a Sight token as
+			is blocked by a darkness that almost feels solid. An investigator
+			with a light source may enter the basement. Place a Sight token as
 			indicated.
 		"""
 	End Page

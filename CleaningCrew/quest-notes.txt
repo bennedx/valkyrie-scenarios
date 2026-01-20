@@ -13,26 +13,41 @@ Cell
 Altar
 
 Timing ----------------------------------------------------------------------------------
-											----- Movement -----
-								Base        3-inv	4-inv	5-inv
-- Driveway						4
-- Backyard						4
-- Dining Room incl basement
-- Kitchen
-- Hall1
-- Hall2
-- Gallery
-- Foyer
-- Study
-- Library
-- Chapel
-- Crypt
-- Dungeon Cave
-- Torture Chamber
-- Dungeon Cell
-- Basement
-- Journal
-- Arcane Manuscript
+												----- Movement -----
+									Actions		3-inv	4-inv	5-inv
+- Driveway							4
+- Backyard							4
+- Dining Room (1 box + 2 flux + 2 door(1-5) + 2 Ben + 9 puzzle)
+									16
+- Kitchen							3
+- Hall1								5
+- Hall2								1
+- Gallery							3
+- Foyer								5
+- Study								2
+- Library (6 + 6 puzzle)			12
+- Chapel (4 +  1 priest + 4 monsters)
+									7
+- Crypt 							3
+- Dungeon Cave						1
+- Torture Chamber					2
+- Dungeon Cell						2
+- Basement							2
+- Journal							5
+- Arcane Manuscript					5
+
+
+82 actions + 34 movement = 116
+	Nice		-12 movement
+	Not nice	-4 movement
+
+Wanderers
+	??? how to count
+	
+	investigators	wanderers
+	3				3 (-nice)
+	4				4 (-nice)
+	5				5 (-nice)
 
 - Movement:	34 moves from driveway to cell, via Chapel
 			11 from Gallery (w/candle) to opening exploreDungeonCaveViaBasement

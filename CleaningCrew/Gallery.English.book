@@ -107,6 +107,7 @@ Book Gallery Ordered No Keep Looped
 			token's space can look through the door.
 		"""
 		Button "Look"
+		Free
 
 		Remove TokenExploreGalleryViaFoyer
 
