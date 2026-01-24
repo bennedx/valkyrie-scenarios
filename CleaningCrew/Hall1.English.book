@@ -61,7 +61,7 @@ Book Hall1 Ordered No Keep Looped
 			was intended for the servants:  plain and dark. Place the
 			{c:TileHall1} tile, a door, and a wall as indicated.
 			
-			Move one space space into the hall.
+			Move one space space into the explored area.
 		"""
 	End Page PlaceHall1Tile
 	
@@ -179,9 +179,9 @@ Book Hall1 Ordered No Keep Looped
 		Button "Talk to her"
 		
 		Text """
-			She brightens up, both emotionally and her glow. <<It's good to see
-			you again. I thought you had forgotten me after that night. I've
-			missed you.>>
+			She brightens up, both emotionally and in her glow. <<It's good to
+			see you again. I thought you had forgotten me after that night.
+			I've missed you.>>
 
 			You are surprised at what she says. <i>Who is this girl? Why does
 			she think she knows me?</i>

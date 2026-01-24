@@ -9,7 +9,7 @@ Book Gallery Ordered No Keep Looped
 		Prolog """
 			You approach the door. It has a small brass plaque that reads
 			<<Gallery.>> The door handle catches your eye because light is
-			glinting off it. Unlike most everything else here, it is clean...
+			glinting off it. Unlike almost everything else here, it is clean...
 			like it has been used recently.
 		"""
 		Button "Explore"
@@ -109,8 +109,6 @@ Book Gallery Ordered No Keep Looped
 		Button "Look"
 		Free
 
-		Remove TokenExploreGalleryViaFoyer
-
 		Text """
 			The gallery is larger than it first looked. The ceiling is vaulted
 			and windows rise from floor to ceiling. Thick curtains cover the
@@ -120,6 +118,8 @@ Book Gallery Ordered No Keep Looped
 			Discard all Sight and Explore tokens leading to this explored area.
 		"""
 		
+		Remove TokenExploreGalleryViaFoyer
+
 		exploredGalleryViaHall1 = true
 		exploredGallery = true
 	End Page ExploreGalleryAfter

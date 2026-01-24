@@ -33,7 +33,7 @@ Book Foyer Ordered No Keep Looped
 	
 	Page ExploreVoyerViaHall2NoSarah
 		Not Visible
-		Triggered BY @ExploreFoyerViaHall2 When Not foundSarah
+		Triggered BY @ExploreFoyerViaHall2 When foundSarahsPainting And Not foundSarah
 		
 		Text """
 			As you reach for the door, your eye is drawn back to the
@@ -42,6 +42,23 @@ Book Foyer Ordered No Keep Looped
 
 		Exit
 	End Page ExploreVoyerViaHall2NoSarah
+	
+	Page ExploreFoyerViaHall2NoSarah2
+		Not Visible
+		Triggered by @ExploreFoyerViaHall2 When foundSarahsPainting And Not foundSarah
+		
+		Text """
+			There is a small, brass plate on this door that reads "Foyer."
+			
+			While reaching for the door handle, you glance back over your
+			shoulder. The girl's glow makes it hard to look away. You turn back
+			toward the door, then look back at the girl. <i>I have to know what
+			is happening here,</i> you think to yourself. 
+		"""
+		
+		Exit
+	End Page ExploreFoyerViaHall2NoSarah2
+
 	
 	Page ExploreFoyerViaStudy
 		Not Visible
