@@ -41,9 +41,58 @@ Timing -------------------------------------------------------------------------
 	Nice		-12 movement
 	Not nice	-4 movement
 
-Wanderers
-	??? how to count
+Wanderers--Main
+	Notes
+		Wanderers are cultists who wander around the mansion.
+		During the main phase, they always move toward the
+		Dungeon Cell, though the named destination is based on
+		exploration. See Starting Locations and EndingLocations 
+		below.
+		
+		Wanderers start when exploredHall1
+		
+	Variables
+		wandererMax				The most wanderers allowed on the board
+		
+		wandererCount			How many wanderers are on the board
+		
+		wandererFrequency		The number of rounds between spawns
+		
+		wandererCountdown		Set to wandererFrequency; when it hits
+									0, a new wanderer is spawned
+		
+	Starting locations
+		exploredChapel
+		exploredStudy
+		exploredLibrary
+		exploredFoyer
+		exploredHall2
+		exploredGallery
+		exploredHall1
+		
+	Ending locations
+		exploredCell
+		exploredDungeonCave
+		exploredBasement
+		exploredDiningRoom
 	
+	
+	Event flow
+		Start				wandererCountdown--
+		
+		Locations			wandererCountdown == 0 && exploredLocation && wandererCount < wandererMax
+		...
+		
+		WandererPlaced		wandererCountDown = wandererFrequency, wandererCount++
+		
+		WandererNotPlaced	-
+		
+		WandererEnd			-
+		
+		
+
+
+Wanderers--Ritual
 								
 								nice		not nice
 	investigators	wanderers	action/turn	actions/turn

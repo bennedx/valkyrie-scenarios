@@ -148,7 +148,7 @@ TokenExploreBackyardViaDriveway.button1,Trigger
 TokenSearchDiningRoomFluxStabilizer.button1,{action} Search
 SpawnMythosWandererStudy.button1,Pass
 SpawnMythosWandererStudy.text,"\nOne of the locals walks into the study through a door in the back of the room. Place a cultist as indicated.\n"
-SpawnMythosWandererLibrary.button1,Pass
+SpawnMythosWandererLibrary.button1,Continue
 CustomMonsterWanderer.info,-
 SpawnMythosWandererChapel.text,"\nOne of the locals wanders into the chapel. Place a cultist as indicated.\n"
 SpawnMythosWandererLibrary.text,"\nOne of the locals walks into the library through a secret door. Place a cultist as indicated.\n"
@@ -186,8 +186,8 @@ SpawnMythosWandererHall2.button1,Continue
 TokenTestJournal2.button1,Continue
 TokenTestJournal2.button2,Cancel
 TokenTestJournal2.text,Journal2
-SpawnMythosWandererGallery.button1,Pass
-SpawnMythosWandererFoyer.button1,Pass
+SpawnMythosWandererGallery.button1,Continue
+SpawnMythosWandererFoyer.button1,Continue
 TokenSearchFoyerCandles.button1,{action} Search
 TokenBackyardBenBefore.button1,Continue
 UIGameOverHalfWinRescueBoyText.uitext,|||The cultists surround you and your companions as you fight to protect the boy. "Run!" you yell, and the boy disappears out the door of the room. A cultist starts to follow, but you trip him as he passes and he falls hard.\n\nYou may not have escaped, but perhaps the boy will. It is small comfort to think of the world being safe when you won’t be in it.\n\nAs the cultists close in around you, Sarah quickly whispers, "I will make sure the boy gets away. Thank you for this. It will be years before these fools can try to open the gate again and I will wait for them here."\n\nThe cultists close in and start killing your companions. The knife slips easily into your chest too. White pain is the last thing you feel as the world goes black.\n\nThe investigation is complete... but not for you.|||
@@ -315,7 +315,7 @@ EventInvestigatorStart.button1,Button1
 EventMythosRitualInProgress.button1,Button1
 EventMythosRitualYesTimeout.button1,Button1
 EventInvestigatorEnd.button1,Button1
-EventMythosWandererStart.button2,Button2
+EventMythosWandererSelect.button1,Continue
 EventInvestigatorTransportEnd.button1,Button1
 EventMythosHealingStoneYesEarly.button1,Continue
 EventMythosHealingStoneYesLate.button1,Continue
@@ -342,9 +342,9 @@ EventPlaceBasementConditionConfirm.button1,Yes
 EventPlaceStudyExploreHall2Yes.button1,Button1
 EventFluxStablizerInspect.button1,Continue
 EventFluxStablizerInspect.text,"\nOnly {c:EventChosenInvestigator} can drop or pick up this item, and cannot trade it to another investigator. When the {c:QItemFluxStabilizer} is on the floor, any investigator who moves or is moved into the space immediately moves 1 space away from the device. Move toward the {c:TileDiningRoom} if possible, or choose the direction randomly. This does not count as a movement. {c:EventChosenInvestigator} is immune to this effect.\n\nWhen {c:EventChosenInvestigator} carries this item, add 1 additional movement to their move actions.\n"
-EventMythosWandererStart.button1,Continue
-EventMythosWandererStart.button3,Button3
-EventMythosWandererStart.button4,Button4
+EventMythosWandererSelect.button3,Button3
+EventMythosWandererSelect.button4,Button4
+EventMythosWandererStart.button1,Button1
 EventMythosWandererPlaced.button1,Continue
 TokenDarknessDiningRoom1.button1,Continue
 EventMythosWandererEnd.button1,Continue
@@ -11050,3 +11050,6 @@ EventTortureChamberReadPagePlaceTrigger.text,
 EventTortureChamberReadPagePlaceTrigger.button1,
 EventTortureChamberReadPageSearchRandomTrigger.text,
 EventTortureChamberReadPageSearchRandomTrigger.button1,
+SpawnMythosWandererHall1.button1,Continue
+SpawnMythosWandererHall1.text,"\nThe hall fades into darkness. Out of the dark steps a man in robes. Spawn a culist as indicated.\n"
+EventMythosWandererSelect.button2,Button2
