@@ -177,7 +177,7 @@ Book OpenGateOrdered No Keep Looped
 		// we need to replace unattackable monster with one we can attack
 		
 		Remove MonsterUncleMathiasAltar
-		Spawn MonsterUncleMathiasToKill
+		Call Event MonsterUncleMathiasToKill
 		
 		// does this make the DVM go away?
 		Remove QItemDvm

@@ -6,8 +6,11 @@ Book Backyard Ordered No Keep Looped
 	Page Place
 		Triggered By @ExploreBackyardViaDriveway
 		
-		Prolog "You can see a huge mess through the gate."
-		Button "Look"
+		Prolog """
+			You can see a huge mess through the gate. An investigator in this
+			space can reveal the area behind it.
+		"""
+		Button "Reveal"
 		Free
 		
 		Remove TokenExploreBackyardViaDriveway

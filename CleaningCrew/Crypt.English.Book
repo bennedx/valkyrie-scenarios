@@ -23,7 +23,7 @@ Book Crypt Ordered No Keep Looped
 		Not Visible
 		
 		Prolog "The cave continues into the darkness."
-		Button "Look"
+		Button "Reveal"
 		
 		Add TileCrypt
 		Remove TokenExploreCryptViaDungeonCave

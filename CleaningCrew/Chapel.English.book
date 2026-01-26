@@ -190,7 +190,7 @@ Book Chapel Ordered No Keep Looped
 	Page ChallengePriest No Text
 		Not Visible
 		Remove TokenChapelPriestAlive
-		Spawn SpawnCustomMonsterChapelRiot
+		Call Event SpawnCustomMonsterChapelRiot
 		Exit
 	End Page ChallengePriest
 	

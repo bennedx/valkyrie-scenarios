@@ -48,7 +48,7 @@ Book Foyer Ordered No Keep Looped
 		Triggered by @ExploreFoyerViaHall2 When foundSarahsPainting And Not foundSarah
 		
 		Text """
-			There is a small, brass plate on this door that reads "Foyer."
+			There is a small, brass plate on this door that reads <<Foyer.>>
 			
 			While reaching for the door handle, you glance back over your
 			shoulder. The girl's glow makes it hard to look away. You turn back

@@ -104,9 +104,9 @@ Book Gallery Ordered No Keep Looped
 	Page ExploreGalleryAfter
 		Prolog """
 			You turn back to the {c:TileGallery}. An investigator in the Sight
-			token's space can look through the door.
+			token's space can look through the gallery door.
 		"""
-		Button "Look"
+		Button "Reveal"
 		Free
 
 		Text """

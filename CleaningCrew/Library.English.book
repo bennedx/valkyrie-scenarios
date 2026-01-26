@@ -24,7 +24,7 @@ Book Library Ordered No Keep Looped
 	End Page ExploreLibraryViaStudy
 
 	Page SpawnCultist No Text
-		Spawn SpawnLibraryCultist
+		Call Event SpawnLibraryCultist
 		Exit
 	End Page SpawnCultist
 	

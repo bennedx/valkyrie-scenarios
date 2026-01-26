@@ -4,7 +4,7 @@ Book Altar Ordered No Keep Looped
 
 	Page Explore
 		Prolog "You lean down to look through the hole."
-		Button "Look"
+		Button "Reveal"
 		
 		Text ""
 	End Page Explore
