@@ -1,7 +1,7 @@
 Language English
 
 Book OpenGateOrdered No Keep Looped
-	Triggered By @ReadDvm When goal = goalOpenGate And ritual
+	Triggered By @InteractAltar
 
 	Mark Step3Repeat Read
 
@@ -12,15 +12,15 @@ Book OpenGateOrdered No Keep Looped
 			various tools and materials needed for the ritual.
 			
 			The boy is chained to the floor, crying and quietly begging his
-			father to stop. 
+			father to stop. A cowering woman is chained near Mathias at the
+			altar; it is cleaer that fear has paralyzed her.
 			
             If you have the {c:QItemRitualKnife}, the
 			{c:QItemRitualComponents}, and the {c:QItemElderSign}, you can
 			begin to disrupt the ritual.
         
             Only {c:EventChosenInvestigator} can perform this task and only
-            while standing at the altar in the space next to
-			Mathias.
+            while standing at the altar in the same space as Mathias.
         
             Are you ready?
         """
@@ -31,7 +31,7 @@ Book OpenGateOrdered No Keep Looped
 			When you get close to the altar, you see that
 			Mathias does not have an {c:QItemElderSign}. That
 			means he will need blood to keep the gate open. You must stop him
-			before he uses you to feed it.
+			before he uses you to supply it.
 			
 			You think back to the counter-spell you memorized earlier. You hold
 			the {c:QItemRitualKnife} and chalice above your head and speak the
@@ -48,7 +48,7 @@ Book OpenGateOrdered No Keep Looped
 
     Page Step2
         Prolog """
-            You cousin lowers his eyes to the dagger he holds. While no
+            Your cousin lowers his eyes to the dagger he holds. While no
 			sound comes out, you see him moving his lips.
         """
 
@@ -80,7 +80,7 @@ Book OpenGateOrdered No Keep Looped
         Text """
 			Mathias grabs the knife and begins speaking the
 			incantation again, his voice booming with power. The knife begins
-			glowing and lightly, slowly pulsing.
+			glowing and then lightly, slowly pulsing.
 			
 			You speak the words again. Test {will}.
 			

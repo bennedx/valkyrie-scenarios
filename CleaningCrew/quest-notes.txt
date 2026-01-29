@@ -94,19 +94,19 @@ Wanderers--Main
 
 Wanderers--Ritual
 								
-								nice		not nice
-	investigators	wanderers	action/turn	actions/turn
-	3				3 (-nice)	1/2
+								nice			not nice
+	investigators	wanderers	action/round	actions/turn
+	3				3 (-nice)	1/2				
 	4				4 (-nice)	3/4
 	5				5 (-nice)	1
 	
 Final thru main house in Actions
-									wanderer	
-				nice		rounds 	x 1000		counter 	w. rounds
+									total		wanderer							start
+				nice		rounds 	wanderers	x 1000		counter 	w. rounds	ritual
 	fewest		116 - 12						
-	3			104 / 6		18		400			2-1/3		5			
-	4			104 / 8		13		500			2			7
-	5			104 / 10	11		600			1000		8
+	3			104 / 6		18		9			400			2-1/3		5			sarah + 12
+	4			104 / 8		13		9			500			2			7			sarah + 10
+	5			104 / 10	11		11			600			1000		8			sarah + 8
 
 
 - Movement:	34 moves from driveway to cell, via Chapel
@@ -118,7 +118,7 @@ Whole house explored: exploredCell And exploredCryptViaChapel And exploredDungeo
 End Games -------------------------------------------------------------------------------
 
 1. Open Portal
-		Goal		The portal is not open; try to stop the casting
+		Goal		The portal is not open; try to stop the casting, rescue boy thru Chapel
 		
 		Trigger		All the items are found, the books are read, whole house explored
 		
@@ -385,3 +385,5 @@ How does ritual start? What effect does that have on cell and altar?
 - Put something important in the basement to make sure they go through it
 
 SarahPatter.ElderSign:  If goal=close:  should be the default text
+
+

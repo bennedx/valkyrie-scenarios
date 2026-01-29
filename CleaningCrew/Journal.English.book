@@ -136,6 +136,8 @@ Book Journal Ordered Keep Looped
         
             The cleaning crew should be there soon. It is time.
         """
+		
+		journalFinished = true
     End Page Page5
    
     Epilog

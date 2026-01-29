@@ -1,0 +1,108 @@
+Language English
+Debug Off
+
+Book Mythos Ordered No Keep
+	Triggered By @Mythos
+	
+	Page TakeAction No Text
+		Trigger @SarahPatter
+		Trigger @Wanderers
+		Trigger @HealingStone
+		Trigger @Ritual
+
+		Mark TakeAction Unread
+	End Page TakeAction
+
+	// this will start and manage the ritual
+	Page StartOrContinueRitual No Text
+		
+		Mark ManageRitual Unread
+		
+		If ritual Then Goto ContinueRitual
+		
+		foundEverything = foundJournal And foundDvm And foundElderSign And foundRitualDagger
+		exploredEverything = exploredCryptViaChapel And exploredDungeonCaveViaBasement And exploredDungeonCell
+		didEverything = dvmFinished And journalFinished
+		ready = foundEverything And exploredEverything And didEverything
+		
+		startRitualRound = foundSarahRound + (#heros = 3 ? 12 : #heros = 4 ? 10 : 8)
+		If #round >= startRitualRound Goto StartRitual
+	End Page Ritual
+
+	Page StartRitual
+		ritual = 1
+		
+		
+	End Page
+	
+	Page ContinueRitual
+	
+	End Page
+	
+	Ritual Steps in Mythos:
+	
+	Boy
+		You stop in your tracks as something happens to the house. You aren't sure what it is, but fear clutches your gut as the feeling washes over you.
+
+		Then, from deep in the house, you hear a boy scream in terror, a scream that permeates the whole house. It stops abruptly and you feel something change in the air. The floor shudders and everything goes quiet for a moment. Sarah's eyes widen and she whispers to {c:EventChosenInvestigator}, <<Mathias has started. The ritual has started. We have to get to the altar room and stop him.>>
+	
+		Rules:  every goal
+	
+	Gate
+		You feel the power of the spell {c:CustomMonsterDavidSmythe} is casting. It draws you in and repulses you at the same time. A woman screams. The sound pierces the walls of the house, making the windows rattle in their frames. You feel her take a deep, gasping breath, then she screams again. And again. And again. The screaming sends a chill through you. Each investigator takes 2 Horror ({will} negates).
+		
+		if goalOpenGate: Sarah whispers, <<Our cousin has started the opening ritual. We must stop him.>>
+		
+		Rules:  every goal
+		
+		For goalOpenGate, this is the end; they have 2 - 3 rounds before a hard fail
+		
+	
+	Woman
+		The woman's screaming has stopped and, for a moment, it is silent again, as if the house were taking a breath. Then, though you cannot see it, you can feel the gate spring into being. You hear… something moan in pain; you feel the rumblings of it through the house. You know in your gut it's Mathias's son.
+
+		The power emanating from the gate can be felt throughout the house. 
+		
+		If goalFeedGate, Sarah whispers, <<The gate is open, but you have the 
+		elder sign. Mathias cannot stabilize the gate; instead, he will need a ready supply of blood sacrifice. Maybe
+		we can cut off the supply.
+		
+		if goalCloseGate: Sarah whispers, <<The gate is open. You must perform the closing ritual.>>
+		
+		For goalFeedGate, this is the end. In 2 - 3 rounds, hard fail
+		
+		Rules:  goalFeedGate Or goalCloseGate
+		
+	Seal/Stabilize
+			The woman screams again. After a few seconds, it doesn't sound human. Then the screaming stops and something... changes.
+			The 
+	
+		Rules:  goalCloseGate
+
+	Summons--at altar
+		Mathias is still at the altar and still speaking a language you do not understand. The gate glows and hums, but it seems to be stable now. Mathias is focused on the gate. You can see by his excitement that he is anticipating something. You can feel it growing closer... a cold dread creeping into your already-pounding heart. You don't have long now. 
+
+		Sarah confirms your fear when she leans in and says, <<He is summoning his god. You must stop him. You must kill him.>>
+
+		Rules:  goalCloseGate And foundAltar
+
+	Summons--not at altar
+		You feel the house inhale again; your candle flickers and dances. A low drone signals that something important just happened. Even from here, away from the altar, you can feel a  pulsing of evil, a force from underground.
+
+		Sarah whispers desperately, <<I can feel him summoning his god. We don't have much time.>>
+
+		Rules:  goalOpenGate Or goalCloseGate
+
+	Summoning continues
+		{c:CustomMonsterDavidSmythe} continues summoning... something.
+
+
+	
+	
+	Contiunes
+	Fail
+	
+	
+	
+
+End Book Mythos

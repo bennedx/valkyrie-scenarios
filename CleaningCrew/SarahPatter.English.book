@@ -8,124 +8,7 @@ Language English
 Debug Off
 
 BOOK SarahPatter Ordered No Keep
-	Triggered By @SarahPatter
-
-	Page PeterIsDead
-		Visible When peterIsDead
-		
-		Text """
-			Sarah leans in and whispers into {c:EventChosenInvestigator}'s
-			ear. She is visibly upset.
-			
-			<<I didn't know Uncle Peter was killed
-			that night. Everyone thought he and Father ran off
-			together after Uncle Peter put a stop to the ritual.>>
-			
-			She chokes up momentarily and a single tear runs down her right
-			cheek. She takes a breath and shakes it off. <<Tears are for
-			later.>>
-			
-			She's quiet for a moment, then says, <<Now I know what really
-			happened. And it will not happen again.>>
-		"""
-	End Page PeterIsDead
-	
-	Page Dvm
-		Visible When foundDvm
-
-		Text """
-			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDvm} is
-			a spell book. It contains many powerful spells, including how to
-			open and close gates, and how to interrupt a ritual that has been
-			started.
-			
-			<<If you cannot stop Mathias in time,
-			you may need to perform a closing ritual. Closing gates is easier
-			than opening them but it takes time. With the gate open, many
-			horrors could come through while you are trying to close it. You
-			must be prepared. Read the book carefully and read it soon.>>
-		"""
-
-		If goal == goalFeedGate Then Text """
-			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDVM} is
-			a spell book. It contains many powerful spells, including how to
-			open and close gates. If you cannot stop Mathias from opening a gate
-			you'll need to either starve it of sacrifice or find a way to close
-			it.
-
-			<<Read the {c:QItemDvm} to better understand
-			what is happening.>>
-		"""
-	End Page Dvm
-
-	Page Candles
-		Visible When foundCandles
-
-		Text """
-			Sarah whispers to {c:EventChosenInvestigator}, <<There's a part of
-			the house that is too dark to enter without light. The candles you
-			found should help. If we move fast enough, maybe we can stop
-			Mathias from opening the gate.>>
-		"""
-	End Page Candles
-
-	Page ElderSign
-		Visible When foundElderSign
-
-		Text """
-			Sarah whispers to {c:EventChosenInvestigator}, <<The
-			{c:QItemElderSign} is a powerful protective symbol. It can be used
-			to ward off evil creatures and protect people from harm. You should
-			keep it with you at all times.>>
-		"""
-
-		If goal == goalCloseGate Then Text """
-			Sarah whispers to {c:EventChosenInvestigator}, <<The
-			{c:QItemElderSign} is an important part of the closing ritual. It
-			seals the gate permanently. When the closing ritual was
-			performed 10 years ago, our father was able to close the
-			gate, but he died before he could seal it.>>
-		"""
-
-		If goal == goalOpenGate Then Text """
-			Sarah whispers to {c:EventChosenInvestigator}, <<The
-			{c:QItemElderSign} is important for their plans tonight. It is used
-			to either secure or seal a gate. It is good we found it before
-			they did.>>
-		"""
-
-	End Page ElderSign
-
-	Page RitualComponents
-		Visible When foundRitualComponents
-		
-		Text """
-			Sarah reaches out as if to touch the {c:QItemRitualComponents}. <<I
-			recognize some of these items from the gate ritual. Both my father
-			and the men who tried to stop him brought similar items to help with
-			the spells.>>
-		"""
-	End Page RitualComponents
-
-	Page Dagger
-		Visible When foundDagger
-
-		Text """
-			Sarah reaches toward the {c:QItemRitualDagger}. <<I recognize this
-			dagger,>> she starts. <<It looks like the one my father used in the
-			gate ritual. With luck, they need this but we have it.>>
-		"""
-	End Page Dagger
-
-	Page Journal
-		Visible When foundJournal
-		
-		Text """
-			Sarah looks down and notices the {c:QItemJournal}. <<The
-			{c:QItemJournal}! The man who let you in was writing in it all
-			week. You should read it carefully.>>
-		"""
-	End Page Journal
+	Triggered By @SarahPatter When foundSarah And Not ritual
 
 	Page Color1
 		Text """
@@ -151,6 +34,123 @@ BOOK SarahPatter Ordered No Keep
 			approaching and passing through me from the other side.>>
 		"""
 	End Page Color2
+
+	Page PeterIsDead
+		Visible When peterIsDead
+		
+		Text """
+			Sarah leans in and whispers into {c:EventChosenInvestigator}'s
+			ear. She is visibly upset.
+			
+			<<I didn't know Uncle Peter was killed
+			that night. Everyone thought he and Father ran off
+			together after Uncle Peter put a stop to the ritual.>>
+			
+			She chokes up momentarily and a single tear runs down her right
+			cheek. She takes a breath and shakes it off. <<Tears are for
+			later.>>
+			
+			She's quiet for a moment, then says, <<Now
+			I know what really happened. And it will not happen again.>>
+		"""
+	End Page PeterIsDead
+	
+	Page Candles
+		Visible When foundCandles
+
+		Text """
+			Sarah whispers to {c:EventChosenInvestigator}, <<There's a part of
+			the house that is too dark to enter without light. The candles you
+			found should help. If we move fast enough, maybe we can stop
+			Mathias from opening the gate.>>
+		"""
+	End Page Candles
+
+	Page Journal
+		Visible When foundJournal
+		
+		Text """
+			Sarah looks down and notices the {c:QItemJournal}. <<The
+			{c:QItemJournal}! The man who let you in was writing in it all
+			week. You should read it carefully.>>
+		"""
+	End Page Journal
+
+	Page Dvm
+		Visible When foundDvm
+
+		Text """
+			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDvm} is
+			a spell book. It contains many powerful spells, including rituals to
+			open and close gates, and how to interrupt a ritual that has been
+			started.
+			
+			<<If you cannot stop Mathias in time,
+			you may need to perform a closing ritual. Closing gates is easier
+			than opening them but it takes time. With the gate open, many
+			horrors could come through while you are trying to close it. You
+			must be prepared. Read the book carefully and read it soon.>>
+		"""
+
+		If goal == goalFeedGate Then Text """
+			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDVM} is
+			a spell book. It contains many powerful spells, including rituals to
+			open and close gates. If you cannot stop Mathias from opening a gate
+			you'll need to either starve it of sacrifice or find a way to close
+			it.
+
+			<<You must read the {c:QItemDvm} to better understand what is
+			expected of you.>>
+		"""
+	End Page Dvm
+
+	Page ElderSign
+		Visible When foundElderSign
+
+		Text """
+			Sarah whispers to {c:EventChosenInvestigator}, <<The
+			{c:QItemElderSign} is an important part of the closing ritual. It
+			seals the gate permanently, meaning no gate can be opened there
+			again. When the closing ritual was performed 10 years ago, our
+			uncle Peter was able to close the gate, but was unable to seal it.>>
+		"""
+
+		If goal == goalFeedGate Then Text """
+			Sarah whispers to {c:EventChosenInvestigator}, <<The
+			{c:QItemElderSign} is important for their plans tonight. It is used
+			to secure the gate once it is opened. Without this trinket, they
+			will need a steady supply of sacrifice to keep the gate open.>>
+		"""
+
+		If goal == goalOpenGate Then Text """
+			Sarah whispers to {c:EventChosenInvestigator}, <<The
+			{c:QItemElderSign} is a powerful protective symbol. It can be used
+			to ward off evil creatures and protect people from harm. It can 
+			also be used to secure a gate after it is opened. It is good we
+			found it before they did.>>
+		"""
+	End Page ElderSign
+
+	Page RitualComponents
+		Visible When foundRitualComponents
+		
+		Text """
+			Sarah reaches out as if to touch the {c:QItemRitualComponents}. <<I
+			recognize some of these items from the gate ritual. Both my father
+			and the men who tried to stop him brought similar items to help with
+			their counter-spells.>>
+		"""
+	End Page RitualComponents
+
+	Page Dagger
+		Visible When foundDagger
+
+		Text """
+			Sarah reaches toward the {c:QItemRitualDagger}. <<I recognize this
+			dagger,>> she starts. <<It looks like the one my father used in the
+			gate ritual. With luck, they need this but we have it.>>
+		"""
+	End Page Dagger
 
 	Page Color3
 		Text """
@@ -213,5 +213,49 @@ BOOK SarahPatter Ordered No Keep
 			to know what to do.>>
 		"""
 	End Page Color7
+	
+	Page ExhortationStart
+		Text """
+			Sarah whispers to {c:EventChosenInvestigator}, <<I am worried we are
+			running out of time. You must have the {c:QItemElderSign}, 
+			{c:QItemDvm}, and {c:QItemRitualComponents}. You must have also
+			read {QItemDvm} and {c:QItemJournal}>>
+		"""
+	End Page ExhortationStart
+	
+	Page ExhortationJournal
+		Visible When Not journalFinished
+		
+		Text """
+			Sarah whispers to {c:EventChosenInvestigator}, <<I think the
+			{c:QItemJournal} has important information, things you need to know.
+			You must finish reading it.
+		"""
+	End Page ExhortationJournal
+	
+	Page ExhortationDvm
+		Visible When Not dvmFinished
+		
+		Text """
+			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDvm}
+			contains infromation you must know so that you can do what needs to
+			be done tonight. Please read it now. There is nothing more imporant
+			that being prepared.
+		"""
+	End Page ExhortationDvm
+	
+	Page ExhortationStuff
+		Visible When Not foundRitualDagger Or Not foundElderSign Or Not foundRitualComponents
+		
+		Text """
+			Sarah whispers to {c:EventChosenInvestigator}, there are more things
+			we need to find. We must continue looking through the house. Please,
+			you must hurry.
+		"""
+		
+		Mark ExhortationStart Unread
+		Mark ExhortationJournal Unread
+		Mark ExhortationDvm Unread
+		Mark ExhortationStuff Unread
 End Book SarahPatter
 

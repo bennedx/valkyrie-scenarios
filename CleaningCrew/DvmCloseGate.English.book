@@ -156,6 +156,8 @@ Book DvmCloseGate Ordered Keep Looped
             <i>The boy must be under the house somewhere,</i> you think to
             yourself.
         """
+		
+		dvmFinished = true
     End Page Commentary
     
     Epilog

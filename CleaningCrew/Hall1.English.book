@@ -198,6 +198,7 @@ Book Hall1 Ordered No Keep Looped
 		
 		Remove TokenSarah
 		foundSarah = true
+		foundSarahRound = #round
 		Exit
 	End Page TalkToSarah
 	
