@@ -387,3 +387,4 @@ How does ritual start? What effect does that have on cell and altar?
 SarahPatter.ElderSign:  If goal=close:  should be the default text
 
 
+-----------------------------
