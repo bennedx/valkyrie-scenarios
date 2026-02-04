@@ -257,5 +257,6 @@ BOOK SarahPatter Ordered No Keep
 		Mark ExhortationJournal Unread
 		Mark ExhortationDvm Unread
 		Mark ExhortationStuff Unread
+	End Page ExhortationStuff
 End Book SarahPatter
 
