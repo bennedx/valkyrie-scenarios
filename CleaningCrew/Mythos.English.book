@@ -15,6 +15,9 @@ Book Mythos Ordered No Keep
 	End Page TakeAction
 
 	// this will start and manage the ritual
+	// the ritual runs to the end of the game for goalOpenGate
+	// for goalFeedGate and goalCloseGate, it runs until the
+	// investigators are pulled into the altar room
 	Page StartOrContinueRitual No Text
 		Triggered By @Ritual
 		Mark ManageRitual Unread

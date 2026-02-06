@@ -130,7 +130,7 @@ End Games ----------------------------------------------------------------------
 		Casting		All items are found, whole house explored, all but 2 pages read
 					"You can feel it start to happen"/woman screams
 					
-		Win			Cast fails
+		Win			Cast fails, escape out the Chapel door
 		
 					The boy lies on the ground, still burning like coals in a
 					stove. He is writhing in pain and you know that he will be
@@ -273,9 +273,6 @@ End Games ----------------------------------------------------------------------
 
 
 General					
--	To tell if whole house explored, check at the start of each mythos phase (explored... variables or
-		maybe just count the number of explorations? Check if chapel, hole, and connecting cave explored?
-
 -	how do RANDOM pages work?
 		They follow the non-RANDOM ones
 		They are processed in two different loops
