@@ -4,7 +4,7 @@ Language English
 // are killing cultists
 
 Book FeedGate Ordered No Keep
-	Triggered By @ReadDvm When goal = goalFeedGate And ritual
+	Triggered By @ReadDvm If goal = goalFeedGate And ritual
 	
 	Page RitualBegins
 		Text """

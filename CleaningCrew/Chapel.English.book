@@ -294,7 +294,7 @@ Book Chapel Ordered No Keep Looped
 	
 	Page SearchRitualDagger
 		Not Visible
-		Triggered By @SearchChapelRitualDagger When Unread
+		Triggered By @SearchChapelRitualDagger If Unread
 		
 		Prolog """
 			The priest lies dead on the floor in front of you. Before you go
@@ -320,7 +320,7 @@ Book Chapel Ordered No Keep Looped
 	
 	Page SearchRitualDaggerAfter
 		Not Visible
-		Triggered By @SearchChapelRitualDagger When SearchRitualDagger Is Read	
+		Triggered By @SearchChapelRitualDagger If SearchRitualDagger Is Read	
 		
 		Prolog "The priest's fingers move slightly."
 		Button "Make sure he's dead"

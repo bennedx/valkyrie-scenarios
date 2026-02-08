@@ -4,7 +4,7 @@ Debug Off
 Book Basement Ordered No Keep Looped
 
 	Page PlaceStart
-		Triggered By @ExploreBasementViaDiningRoom When basementPhase = unlocked
+		Triggered By @ExploreBasementViaDiningRoom If basementPhase = unlocked
 		
 		Prolog """
 			The basement is so dark you cannot see your hand when you put it 
@@ -48,8 +48,8 @@ Book Basement Ordered No Keep Looped
 	End Page PlaceEvidence
 
 	Page PlaceExploreDungeonCaveViaBasement
-		Visible When readAboutExploreDungeonCaveViaBasement
-		Triggered By @ReadAboutExploreDungeonCaveViaBasement When exploredBasement And readAboutExploreDungeonCaveViaBasement And Not placedBasementDoor
+		Visible If readAboutExploreDungeonCaveViaBasement
+		Triggered By @ReadAboutExploreDungeonCaveViaBasement If exploredBasement And readAboutExploreDungeonCaveViaBasement And Not placedBasementDoor
 		
 		Add TokenSearchBasementTrapdoor!
 		

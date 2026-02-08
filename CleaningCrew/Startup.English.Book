@@ -74,7 +74,7 @@ Book Startup Ordered No Keep Looped
 	End Page StartUp
 	
 	Page ShowEverything No Text
-		Visible When testMode
+		Visible If testMode
 		
 		Add TileAltar
 		Add TileBackyard
@@ -127,6 +127,7 @@ Book Startup Ordered No Keep Looped
 		Add TokenTestRitualFinished
 		Add TokenTestInitChosenInvestigator
 		Add TokenTestJournal2
+		Add TokenTestWanderer
 		Add TokenBackyardBenBefore
 		Add TokenBackyardBenPassive
 		Add TokenDiningRoomBen
@@ -149,12 +150,12 @@ Book Startup Ordered No Keep Looped
 	End Page SplashScreenClosed
 	
 	Page StartScenario
-	    Not Visible When testMode
+	    Not Visible If testMode
 		Text "Each investigator receives 1 {clue}."
 	End Page StartScenario
 	
 	Page Kate
-		Visible When #HeroKateWinthrop And Not testMode
+		Visible If #HeroKateWinthrop And Not testMode
 		
 		Text """
 			Kate is running late, so she is hurried and inattentive. She grabs
@@ -169,7 +170,7 @@ Book Startup Ordered No Keep Looped
 	End Page Kate
 	
 	Page PlaceDriveway No Text
-		Not Visible When testMode
+		Not Visible If testMode
 		Trigger @ExploreDrivewayViaStartup
 	End Page PlaceDriveway
 End Book Startup

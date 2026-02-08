@@ -68,7 +68,7 @@ Book Driveway Ordered No Keep Looped
 	End Page PlaceGardenTool
 	
 	Page PlaceWendy
-		Visible When #HeroWendyAdams
+		Visible If #HeroWendyAdams
 		
 		Text QItemWendyGun """
 			As she walks up the drive, Wendy Adams trips and falls. She twists

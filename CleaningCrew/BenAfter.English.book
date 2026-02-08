@@ -111,7 +111,7 @@ Book BenAfter Random No Keep Looped
 	
 	Page AnythingElseJournal
 		Not Visible
-		Triggered By @TalkedToBenAfter When Not foundJournal
+		Triggered By @TalkedToBenAfter If Not foundJournal
 		
 		Text """
 			At your feet you see a book that looks identical to the one Benjamin

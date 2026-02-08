@@ -20,7 +20,7 @@ Book Mythos Ordered No Keep
 	// investigators are pulled into the altar room
 	Page StartOrContinueRitual No Text
 		Triggered By @Ritual
-		Mark ManageRitual Unread
+		Mark StartOrContinueRitual Unread
 		
 		If ritual Then Goto ContinueRitual
 		
@@ -33,18 +33,19 @@ Book Mythos Ordered No Keep
 		If #round >= startRitualRound Goto StartRitual
 		
 		Exit
-	End Page Ritual
+	End Page StartOrContinueRitual
 
 	Page StartRitual
 		ritual = 1
 		
 		
-	End Page
+	End Page StartRitual
 	
 	Page ContinueRitual
 	
-	End Page
+	End Page ContinueRitual
 	
+	/*
 	Ritual Steps in Mythos:
 	
 	Boy
@@ -109,7 +110,7 @@ Book Mythos Ordered No Keep
 	Continues
 	Fail
 	
-	
+	*/
 	
 
 End Book Mythos

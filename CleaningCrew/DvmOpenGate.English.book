@@ -3,7 +3,7 @@ Debug Off
 
 // use this for both goalOpenGate and goalFeedGate
 Book DvmOpenGate Ordered Keep Looped
-    Triggered By @ReadDvm When (goal = goalOpenGate Or goal = goalFeedGate) And Not ritual
+    Triggered By @ReadDvm If (goal = goalOpenGate Or goal = goalFeedGate) And Not ritual
 
 	// page 1 is the same as DvmCloseGate.Page1
     Page TableOfContents

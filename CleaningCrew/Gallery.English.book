@@ -4,7 +4,7 @@ Debug Off //"{var:EventGalleryExpr11Temp} / {var:EventGalleryExpr12Temp}"
 Book Gallery Ordered No Keep Looped
 
 	Page PlaceGallery
-		Triggered By @ExploreGalleryViaHall1 When Unread
+		Triggered By @ExploreGalleryViaHall1 If Unread
 		
 		Prolog """
 			You approach the door. It has a small brass plaque that reads
@@ -65,14 +65,14 @@ Book Gallery Ordered No Keep Looped
 	
 	Page ExploreGalleryViaHall1After No Text
 		Not Visible
-		Triggered By @ExploreGalleryViaHall1 When PlaceGallery Is Read And foundSarah
+		Triggered By @ExploreGalleryViaHall1 If PlaceGallery Is Read And foundSarah
 		
 		exploredGalleryViaHall1 = true
 	End Page ExploreGalleryViaHall1After
 
 	Page ExploreGalleryViaHall1NoSarah
 		Not Visible
-		Triggered by @ExploreGalleryViaHall1 When PlaceGallery Is Read And Not foundSarahsPainting
+		Triggered by @ExploreGalleryViaHall1 If PlaceGallery Is Read And Not foundSarahsPainting
 		
 		Text """
 			As you approach the door, your eye is drawn back to the painting
@@ -84,7 +84,7 @@ Book Gallery Ordered No Keep Looped
 
 	Page ExploreGalleryViaHall1NoSarah2
 		Not Visible
-		Triggered by @ExploreGalleryViaHall1 When PlaceGallery Is Read And foundSarahsPainting And Not foundSarah
+		Triggered by @ExploreGalleryViaHall1 If PlaceGallery Is Read And foundSarahsPainting And Not foundSarah
 		
 		Text """
 			No matter how hard you try to look away, the girl's quiet glow
@@ -125,7 +125,7 @@ Book Gallery Ordered No Keep Looped
 	End Page ExploreGalleryAfter
 	
 	Page PlaceExploreFoyerViaGallery
-		Not Visible When exploredFoyer
+		Not Visible If exploredFoyer
 		
 		Remove TokenExploreGalleryViaFoyer
 		Add TokenExploreFoyerViaGallery!
