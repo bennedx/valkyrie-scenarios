@@ -7,7 +7,7 @@ Book Startup Ordered No Keep Looped
 		Not Visible
 		Triggered By @EventStart
 
-		testMode = true
+		testMode = false
 		
 		roundsBeforeRitual = (5 - #heros) * 2 + 15
 				
@@ -139,14 +139,14 @@ Book Startup Ordered No Keep Looped
 		Not Visible
 		Triggered By @SplashScreen
 		
-		Add UIStoryImage, UIStoryBackground, UIOpeningText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
+		Add UIStoryImage, UIStoryBackground, UIOpeningText, UISplashFancyBar, UIStoryContinue
 		Exit
 	End Page SplashScreen
 	
 	Page SplashScreenClosed No Text
 		Not Visible
 		Triggered By @SplashScreenClosed
-		Remove UIStoryImage, UIStoryBackground, UIOpeningText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
+		Remove UIStoryImage, UIStoryBackground, UIOpeningText, UISplashFancyBar, UIStoryContinue
 	End Page SplashScreenClosed
 	
 	Page StartScenario
