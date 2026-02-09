@@ -1,9 +1,10 @@
 LANGUAGE English
 
 Book Study Ordered No Keep Looped
-	Page ExploreStudyViaHall2 No Text
+	Page ExploreStudyViaHall2 
 		Not Visible
 		Triggered By @ExploreStudyViaHall2 If foundSarah
+		No Text
 		
 		exploredStudyViaHall2 = true
 		exploredStudyViaFoyer = false
@@ -35,9 +36,10 @@ Book Study Ordered No Keep Looped
 		Exit
 	End Page ExploreStudyViaHall2NoSarah2
 
-	Page ExploreStudyViaFoyer No Text
+	Page ExploreStudyViaFoyer 
 		Not Visible
 		Triggered By @ExploreStudyViaFoyer
+		No Text
 		
 		exploredStudyViaHall2 = false
 		exploredStudyViaFoyer = true	

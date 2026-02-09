@@ -80,7 +80,8 @@ Book Driveway Ordered No Keep Looped
 		"""
 	End Page PlaceWendy
 	
-	Page EndPlace No Text
+	Page EndPlace 
+		No Text
 		Exit
 	End Page EndPlace
 	

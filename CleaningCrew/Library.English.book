@@ -23,7 +23,8 @@ Book Library Ordered No Keep Looped
 		wandererInStudy = true
 	End Page ExploreLibraryViaStudy
 
-	Page SpawnCultist No Text
+	Page SpawnCultist 
+		No Text
 		Call Event SpawnLibraryCultist
 		Exit
 	End Page SpawnCultist
@@ -182,8 +183,9 @@ Book Library Ordered No Keep Looped
 		Goto ExploreChapelViaBookcaseBlockedPuzzle
 	End Page ExploreChapelViaBookcaseBlockedRepeat
 	
-	Page ExploreChapelViaBookcaseBlockedPuzzle No Text
+	Page ExploreChapelViaBookcaseBlockedPuzzle
 		Not Visible
+		No Text
 		
 		Trigger @PuzzleBookcaseLock
 		

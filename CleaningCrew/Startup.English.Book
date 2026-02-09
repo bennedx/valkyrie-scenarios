@@ -3,7 +3,7 @@ Debug Off
 
 Book Startup Ordered No Keep Looped
 
-	Page StartUp No Text
+	Page StartUp
 		Not Visible
 		Triggered By @EventStart
 
@@ -68,13 +68,16 @@ Book Startup Ordered No Keep Looped
 		unlocked = 4
 		basementPhase = first
 
+		No Text
 		
 		If Not testMode Then Trigger @SplashScreen
-		if Not testMode Then Exit
+		If Not testMode Then Exit
 	End Page StartUp
 	
-	Page ShowEverything No Text
+	Page ShowEverything
 		Visible If testMode
+		
+		No Text
 		
 		Add TileAltar
 		Add TileBackyard
@@ -135,17 +138,26 @@ Book Startup Ordered No Keep Looped
 		Exit
 	End Page ShowEverything
 	
-	Page SplashScreen No Text
+	Page SplashScreen
 		Not Visible
 		Triggered By @SplashScreen
 		
-		Add UIStoryImage, UIStoryBackground, UIOpeningText, UISplashFancyBar, UIStoryContinue
+		Add UIStoryImage, UIStoryBackground, UIOpeningText, UISplashFancyBar 
+		Audio "audio\openingall.ogg"
+		
+		No Text
+		
+		Add UIStoryContinue
+		
 		Exit
 	End Page SplashScreen
 	
-	Page SplashScreenClosed No Text
+	Page SplashScreenClosed
 		Not Visible
 		Triggered By @SplashScreenClosed
+		
+		No Text
+		Audio "audio\no-sound.ogg"
 		Remove UIStoryImage, UIStoryBackground, UIOpeningText, UISplashFancyBar, UIStoryContinue
 	End Page SplashScreenClosed
 	
@@ -169,8 +181,9 @@ Book Startup Ordered No Keep Looped
 		"""
 	End Page Kate
 	
-	Page PlaceDriveway No Text
+	Page PlaceDriveway
 		Not Visible If testMode
+		No Text
 		Trigger @ExploreDrivewayViaStartup
 	End Page PlaceDriveway
 End Book Startup

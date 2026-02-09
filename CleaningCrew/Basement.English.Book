@@ -74,10 +74,11 @@ Book Basement Ordered No Keep Looped
 		If exploredBasement Then Exit
 	End Page PlaceExploreDungeonCaveViaBasement
 	
-	Page PlaceEnd No Text
+	Page PlaceEnd 
 		exploredBasement = true
 		If moveAfterExplore Then Trigger @MoveAfterExplore
 		moveAfterExplore = false
+		No Text
 		Exit
 	End Page PlaceEnd
 	

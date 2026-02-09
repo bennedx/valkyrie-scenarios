@@ -2,8 +2,10 @@ Language English
 
 Book DungeonCell Ordered No Keep Looped
 
-	Page ExploreViaTorturChamber No Text
+	Page ExploreViaTorturChamber 
 		Triggered By @ExploreDungeonCellViaTortureChamber
+		No Text
+		
 		exploredCellViaTortureChamber = true
 		exploredCell = true
 	End Page ExploreViaTorturChamber
@@ -69,7 +71,8 @@ Book DungeonCell Ordered No Keep Looped
 		"""
 	End Page PlaceDavidsSon
 	
-	Page PlaceEnd No Text
+	Page PlaceEnd
+		No Text
 		Exit
 	End Page PlaceEnd
 	

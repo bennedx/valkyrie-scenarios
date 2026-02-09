@@ -187,8 +187,10 @@ Book Chapel Ordered No Keep Looped
 		Goto KillPriest
 	End Page TalkToPriest
 	
-	Page ChallengePriest No Text
+	Page ChallengePriest
 		Not Visible
+		No Text
+		 
 		Remove TokenChapelPriestAlive
 		Call Event SpawnCustomMonsterChapelRiot
 		Exit

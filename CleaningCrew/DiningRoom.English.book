@@ -214,6 +214,8 @@ Book SearchDiningRoom Ordered No Keep Looped
 			{c:EventChosenInvestigator} can attempt it again using {lore}.
 		"""
 		
+		No Text
+		
 		Trigger @AttemptFluxStabilizerPuzzle
 		If puzzleFluxStabilizerSolved Then Goto GetFluxStabilizer
 

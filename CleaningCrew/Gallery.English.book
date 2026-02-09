@@ -63,9 +63,10 @@ Book Gallery Ordered No Keep Looped
 		Exit
 	End Page PlaceHall1Painting
 	
-	Page ExploreGalleryViaHall1After No Text
+	Page ExploreGalleryViaHall1After 
 		Not Visible
 		Triggered By @ExploreGalleryViaHall1 If PlaceGallery Is Read And foundSarah
+		No Text
 		
 		exploredGalleryViaHall1 = true
 	End Page ExploreGalleryViaHall1After
@@ -94,9 +95,10 @@ Book Gallery Ordered No Keep Looped
 		Exit
 	End Page ExploreGalleryViaHall1NoSarah2
 	
-	Page ExploreGalleryViaFoyer No Text
+	Page ExploreGalleryViaFoyer 
 		Not Visible
 		Triggered By @ExploreGalleryViaFoyer
+		No Text
 		
 		exploredGalleryViaFoyer = true
 	End Page

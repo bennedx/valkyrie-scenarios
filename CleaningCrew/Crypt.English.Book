@@ -4,6 +4,7 @@ Book Crypt Ordered No Keep Looped
 	Page ExploreViaChapel
 		Not Visible
 		Triggered By @ExploreCryptViaChapel
+		No Text
 		
 		exploredCryptViaChapel = true
 		exploredCryptViaDungeonCave = false
@@ -13,6 +14,7 @@ Book Crypt Ordered No Keep Looped
 	Page ExploreViaDungeonCave
 		Not Visible
 		Triggered By @ExploreCryptViaDungeonCave
+		No Text
 		
 		exploredCryptViaDungeonCave = true
 		exploredCryptViaChapel = false
