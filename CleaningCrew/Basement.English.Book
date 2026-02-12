@@ -83,7 +83,7 @@ Book Basement Ordered No Keep Looped
 	End Page PlaceEnd
 	
 	
-	Page SearchEvidence
+	Page SearchEvidence1
 		Not Visible
 		Triggered By @SearchBasementEvidence
 		
@@ -98,16 +98,34 @@ Book Basement Ordered No Keep Looped
 			people--Elias, Sarah, and {c:EventChosenInvestigator}--are standing 
 			behind her looking grim.
 
-			Gain the {c:QItemEvidenceBasementRubble} Unique Item, then discard
-			this Search token.
+			Gain the {c:QItemEvidenceBasementRubble} Unique Item.
+		"""
+		
+		foundEvidenceBasement = true
+		foundEvidenceCount = foundEvidenceCount + 1
+		Goto SearchEvidence2
+	End Page SearchEvidence1
+	
+	Page SearchEvidence2
+		Not Visible
+		
+		Text QItemElderSign """
+			Sarah appears next to you, looking over your shoulder. When she
+			sees the necklace, she gets excited; she suddenly looks like a
+			little girl rather than the young woman you've come to know. She
+			leans in and whispers, <<That necklace is more important than it
+			appears. Well, the pendent, really. It is an elder sign.>> She
+			reaches out as if to touch it, a symbol that looks like this:
+			{success}. <<This could be useful to us tonight.>>
+			
+			Gain the {c:QItemElderSign}, then discard this Search token.
 		"""
 		
 		Remove TokenSearchBasementEvidence
-	
-		foundEvidenceBasement = true
-		foundEvidenceCount = foundEvidenceCount + 1
+		foundElderSign = true
+		Trigger @CompletedRequirement
 		Exit
-	End Page SearchEvidence
+	End Page SearchEvidence2
 	
 	Page SearchTrapdoor
 		Not Visible

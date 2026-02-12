@@ -8,7 +8,7 @@ Language English
 Debug Off
 
 BOOK SarahPatter Ordered No Keep
-	Triggered By @SarahPatter If foundSarah And Not ritual
+	Triggered By @Sarah If foundSarah And Not ritual
 
 	Page Color1
 		Text """

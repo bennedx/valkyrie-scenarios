@@ -48,12 +48,12 @@ Book Crypt Ordered No Keep Looped
 			the explored area.
 		"""
 		
-		Goto PlaceSearchPendant
+		Goto PlaceSearchRandom
 	End Page PlaceCrypt
 	
-	Page PlaceSearchPendant
+	Page PlaceSearchRandom
 		Not Visible
-		Add TokenSearchCryptPendant!
+		Add TokenSearchCryptRandom!
 		
 		Text """
 			One of the stone caskets is open. You aren't sure you want to look
@@ -61,7 +61,7 @@ Book Crypt Ordered No Keep Looped
 		"""
 		
 		Goto PlaceSearchPeter
-	End Page PlaceSearchPendant
+	End Page PlaceSearchRandom
 	
 	Page PlaceSearchPeter
 		Not Visible
@@ -127,9 +127,9 @@ Book Crypt Ordered No Keep Looped
 		Exit
 	End Page SearchChapelViaCrypt
 	
-	Page SearchPendant
+	Page SearchRandom
 		Not Visible
-		Triggered By @SearchCryptPendant
+		Triggered By @SearchCryptRandom
 		
 		Prolog """
 			You walk over to the open stone casket. You wonder what might have
@@ -138,18 +138,18 @@ Book Crypt Ordered No Keep Looped
 		"""
 		Button "Search"
 		
-		Remove TokenSearchCryptPendant
-		
-		Text QItemElderSignPendant """
+		Text QItemCryptRandom """
 			Mixed in with the bones, tattered clothing, and cobwebs are several
-			pieces of junk jewelry, tarnished and of no value. But there is one
-			piece that looks like it might be worth something. Gain the
-			{c:QItemElderSignPendant} Common Item, then discard this Search
-			token.
+			unlikely finds. Surpising yourself, you push the bones aside to get
+			to get something you see peeking out from beneath the body. 
+			
+			Gain the {c:QItemCryptRandom}, then discard this Search token.
 		"""
 		
+		Remove TokenSearchCryptRandom
+		
 		Exit
-	End Page SearchPendant
+	End Page SearchRandom
 	
 	Page SearchPeter
 		Not Visible

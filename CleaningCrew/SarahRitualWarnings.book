@@ -1,0 +1,47 @@
+Language English
+Debug Off
+
+Book SarahRitualWarnings Ordered No Keep
+	Triggered By @Sarah If ritual and Not firstRitualDone
+	
+	Page Dvm
+		Visible If Not dvmFinished
+		
+		Text """
+			Sarah leans in and whispers, <<You must finish reading the
+			{c:QItemDvm}. You cannot understand what is happening without
+			reading it.>>
+		"""
+	End Page Dvm
+	
+	Page JournalNoHole
+		Visible If Not journalFinished And Not foundHoleInWall
+		
+		Text """
+			Sarah leans in and whispers, <<You must finish reading the journal.
+			Surely it will tell in more about what is happening now. We still
+			don't know how to find the altar and we aren't sure what your role
+			is to be. We must hurry.>>
+		"""
+	End Page JournalNoHole
+	
+	Page Journal
+		Visible If Not journalfinished and foundHoleInWall
+		
+		Text """
+			You must finish reading the journal. Surely it will tell in more
+			detail what is happening now. We don't even know what their plans
+			are for you and your friends.>>
+		"""
+	End Page Journal
+	
+	Page ElderSignPendent
+		Visible If Not foundElderSignPendent
+		
+		Text """
+			I feel like we are still missing something. Something important,
+			though I'm not sure what it is. We should look around. Maybe we'll
+			find what I'm feeling.>>
+		"""
+	End Page ElderSignPendent
+End Book SarahRitualWarnings

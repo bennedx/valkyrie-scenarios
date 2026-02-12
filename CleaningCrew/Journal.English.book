@@ -96,9 +96,10 @@ Book Journal Ordered Keep Looped
 			all of us. Soon the world will belong to the One True God.
     
             The Master's son continues to plead for his life during the day,
-			then screams in the night, though we don't know how he knows which
-			is which. The Master told me in confidence that he yearns to stop,
-			but that he must keep his commitment and see this through.
+			then screams in the night. There is no window in his cell, so we
+			don't know how he can tell night from day. The Master told me in
+			confidence that he yearns to stop, but that he must keep his
+			commitment and see this through.
             
             The boy has been moved to the dungeon outside the altar room.
 			There is a hole in the wall that he stares through when he's not
@@ -108,7 +109,9 @@ Book Journal Ordered Keep Looped
         """
 		
 		readAboutBoy = true
+		journalFinished = true
 		Trigger @PlaceExploreAltarViaCell
+		Trigger @CompletedRequirement
     End Page Page4
     
     Page Page5
@@ -127,17 +130,18 @@ Book Journal Ordered Keep Looped
         
             Earlier, the Master told me that something is bothering him,
 			but he isn't sure what. He said something has changed, like there
-            is another power in the house. The brethren searched by can find
-			nothing.
+            is another power in the house. Someone or something familiar. The 
+			brethren searched the house, but found nothing.
         
             The woman who lost the stone is already at the altar. Her husband
 			pleaded with me to help him find the stone; I'm going to search the
-			chapel one more time. For his sake, I hope I find it.
+			chapel one more time. For his sake, I hope I find it. But she
+			deserves sacrifice for what she lost.
         
-            The cleaning crew should be there soon. It is time.
+            The cleaning crew should be here soon. It is time for me to meet
+			them.
         """
 		
-		journalFinished = true
     End Page Page5
    
     Epilog
