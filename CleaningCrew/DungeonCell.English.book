@@ -2,8 +2,10 @@ Language English
 
 Book DungeonCell Ordered No Keep Looped
 
-	Page ExploreViaTorturChamber No Text
+	Page ExploreViaTorturChamber 
 		Triggered By @ExploreDungeonCellViaTortureChamber
+		No Text
+		
 		exploredCellViaTortureChamber = true
 		exploredCell = true
 	End Page ExploreViaTorturChamber
@@ -26,8 +28,8 @@ Book DungeonCell Ordered No Keep Looped
 	End Page Place
 	
 	Page PlaceHoleInWall
-		Visible When readAboutBoy
-		Triggered By @ReadAboutBoy When exploredCell
+		Visible If readAboutBoy
+		Triggered By @ReadAboutBoy If exploredCell
 		
 		Add TokenCellHoleInWall!
 		
@@ -42,7 +44,7 @@ Book DungeonCell Ordered No Keep Looped
 	End Page PlaceHoleInWall
 	
 	Page PlaceExploreAltarViaCell
-		Visible When readAboutBoy
+		Visible If readAboutBoy
 	
 		Add TokenExploreAltarViaCell!
 		
@@ -53,7 +55,7 @@ Book DungeonCell Ordered No Keep Looped
 	End Page PlaceExploreAltarViaCell
 	
 	Page PlaceDavidsSon
-		Visible When Not ritual
+		Visible If Not ritual
 		
 		Add TokenSearchCellMathiasSon!
 		
@@ -69,7 +71,8 @@ Book DungeonCell Ordered No Keep Looped
 		"""
 	End Page PlaceDavidsSon
 	
-	Page PlaceEnd No Text
+	Page PlaceEnd
+		No Text
 		Exit
 	End Page PlaceEnd
 	
@@ -82,7 +85,7 @@ Book DungeonCell Ordered No Keep Looped
 	End Page SearchBoy
 	
 	Page PlaceCellHoleInWall
-		Triggered by @PlaceExploreAltarViaCell When Not cellHoleFound
+		Triggered by @PlaceExploreAltarViaCell If Not cellHoleFound
 		
 		Add TokenCellHoleInWall!
 		

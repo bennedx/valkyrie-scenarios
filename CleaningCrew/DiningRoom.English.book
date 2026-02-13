@@ -22,7 +22,7 @@ Book PlaceDiningRoom Ordered No Keep Looped
 	End Page Locked
 
 	Page OpenDoor
-		Triggered By @TalkedToBackyardBen When talkedToBenCount >= 2
+		Triggered By @TalkedToBackyardBen If talkedToBenCount >= 2
 		
 		Add TileDiningRoom, TokenBackyardBenPassive, TokenDoorDiningRoom!
 		Remove TokenExploreDiningRoomViaBackdoor, TokenBackyardBenBefore
@@ -90,7 +90,7 @@ Book PlaceDiningRoom Ordered No Keep Looped
 	End Page Paper
 	
 	Page Journal
-		Visible When Not foundJournal
+		Visible If Not foundJournal
 		
 		Text """
 			As you walk into the house, you remember the book in the driveway
@@ -104,7 +104,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 
 	Page StartFluxStabilizer
 		Not Visible
-		Triggered By @SearchDiningRoomFluxStabilizer When Unread
+		Triggered By @SearchDiningRoomFluxStabilizer If Unread
 		If testMode Then Trigger @AskAboutGate
 	
 		Prolog "A small device with gears, hoses, and lights sits on the table."
@@ -128,7 +128,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 	End Page StartFluxStabilizer
 	
 	Page Finn
-		Visible When #HeroFinnEdwards
+		Visible If #HeroFinnEdwards
 		
 		Text """
 			Finn Edwards starts to come to, not sure at first where he is:  he
@@ -144,7 +144,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 	End Page Finn
 	
 	Page Kate
-		Visible When #HeroKateWinthrop
+		Visible If #HeroKateWinthrop
 		
 		Text "Will Kate pick up the {c:QItemFluxStabilizer}?"
 		
@@ -186,7 +186,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 
 	Page Puzzle1
 		Not Visible
-		Triggered By @SearchDiningRoomFluxStabilizer When Unread And StartFluxStabilizer Is Read
+		Triggered By @SearchDiningRoomFluxStabilizer If Unread And StartFluxStabilizer Is Read
 
 		Prolog """
 			There is a control panel. You probably shouldn't, but maybe you can
@@ -206,7 +206,7 @@ Book SearchDiningRoom Ordered No Keep Looped
 
 	Page Puzzle2
 		Not Visible
-		Triggered By @SearchDiningRoomFluxStabilizer When Puzzle1 Is Read
+		Triggered By @SearchDiningRoomFluxStabilizer If Puzzle1 Is Read
 		
 		Prolog """
 			Maybe if you randomly flipped a few more buttons or turned a few
@@ -214,6 +214,8 @@ Book SearchDiningRoom Ordered No Keep Looped
 			
 			{c:EventChosenInvestigator} can attempt it again using {lore}.
 		"""
+		
+		No Text
 		
 		Trigger @AttemptFluxStabilizerPuzzle
 		If puzzleFluxStabilizerSolved Then Goto GetFluxStabilizer
@@ -432,7 +434,7 @@ End Book Kitchen
 Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	// we check unlocked to make sure it has a value (it doesn't until it comes through
 	// here at least once
-	Triggered By @ExploreBasementViaDiningRoom When basementPhase <> unlocked
+	Triggered By @ExploreBasementViaDiningRoom If basementPhase <> unlocked
 	
 	// startup values are defined in Startup
 
@@ -451,7 +453,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page FirstStart
 
 	Page FirstBrawn
-		Visible When basementPhase = first And basementSkill = brawn
+		Visible If basementPhase = first And basementSkill = brawn
 		
 		Text """
 			After struggling with the lock for several minutes, you lose your
@@ -464,7 +466,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page FirstBrawn
 	
 	Page FirstBrawnPass
-		Visible When basementPhase = first And basementSkill = brawn And basementUnlocked
+		Visible If basementPhase = first And basementSkill = brawn And basementUnlocked
 	
 		Text """
 			Eureka! You figured it out. (You’ll wonder how that happened for a
@@ -478,7 +480,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page FirstBrawnPass
 	
 	Page FirstBrawnFail
-		Visible When basementPhase = first And basementSkill = brawn And Not basementUnlocked
+		Visible If basementPhase = first And basementSkill = brawn And Not basementUnlocked
 
 		Text """
 			<i>Well, what did I think would happen?!</i> you mutter to yourself.
@@ -490,7 +492,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page FirstBrawnFail
 	
 	Page FirstBrains
-		Visible When basementPhase = first And basementSkill = brains
+		Visible If basementPhase = first And basementSkill = brains
 		
 		Text """
 			After trying everything you can think of, you lose your temper and
@@ -500,7 +502,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page FirstBrains
 	
 	Page FirstBrainsPass
-		Visible When basementPhase = first And basementSkill = brains And basementUnlocked
+		Visible If basementPhase = first And basementSkill = brains And basementUnlocked
 	
 		Text """
 			<<I didn’t know I had it in me!>> you exclaim. Improve {strength} or
@@ -511,7 +513,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page FirstBrainsPass
 	
 	Page FirstBrainsFail
-		Visible When basementPhase = first And basementSkill = brains And Not basementUnlocked
+		Visible If basementPhase = first And basementSkill = brains And Not basementUnlocked
 
 		Text """
 			Feeling like you can’t do anything right, you settle into a sulk.
@@ -524,7 +526,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page FirstBrainsFail
 
 	Page SecondStart
-		Visible When basementPhase = second
+		Visible If basementPhase = second
 		
 		Text """
 			The lock resists your attempts to release it. You'll need to try
@@ -540,7 +542,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page SecondStart
 
 	Page SecondBrawn
-		Visible When basementPhase = second And basementSkill = brawn
+		Visible If basementPhase = second And basementSkill = brawn
 		
 		Text """
 			Refreshed from your break, you try again ({strength}). You grab the
@@ -550,7 +552,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page SecondBrawn
 	
 	Page SecondBrawnPass
-		Visible When basementPhase = second And basementSkill = brawn And basementUnlocked
+		Visible If basementPhase = second And basementSkill = brawn And basementUnlocked
 	
 		Text """
 			Your hand hurts almost as much as your pride, but at least it's
@@ -561,7 +563,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page SecondBrawnPass
 	
 	Page SecondBrawnFail
-		Visible When basementPhase = second And basementSkill = brawn And Not basementUnlocked
+		Visible If basementPhase = second And basementSkill = brawn And Not basementUnlocked
 
 		Text """
 			Your hand hurts from the effort and your frustration mounts. The 
@@ -574,7 +576,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page SecondBrawnFail
 	
 	Page SecondBrains
-		Visible When basementPhase = second And basementSkill = brains
+		Visible If basementPhase = second And basementSkill = brains
 		
 		Text """
 			Out of breath, you rest for a minute, then try again ({lore}).
@@ -584,7 +586,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page SecondBrains
 	
 	Page SecondBrainsPass
-		Visible When basementPhase = second And basementSkill = brains And basementUnlocked
+		Visible If basementPhase = second And basementSkill = brains And basementUnlocked
 	
 		Text """
 			<i>That took longer than I expected,</i>n you think. You're
@@ -596,7 +598,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page SecondBrainsPass
 	
 	Page SecondBrainsFail
-		Visible When basementPhase = second And basementSkill = brains And Not basementUnlocked
+		Visible If basementPhase = second And basementSkill = brains And Not basementUnlocked
 
 		Text """
 			<<What's wrong with me today?</i> you ask yourself. The other 
@@ -611,7 +613,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page SecondBrainsFail
 	
 	Page ThirdStart
-		Visible When basementPhase = third
+		Visible If basementPhase = third
 		Text """
 			...
 		"""
@@ -625,7 +627,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page ThirdStart
 
 	Page ThirdBrawn
-		Visible When basementPhase = third And basementSkill = brawn
+		Visible If basementPhase = third And basementSkill = brawn
 		
 		Text """
 			({strength}).
@@ -634,7 +636,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page ThirdBrawn
 	
 	Page ThirdBrawnPass
-		Visible When basementPhase = third And basementSkill = brawn And basementUnlocked
+		Visible If basementPhase = third And basementSkill = brawn And basementUnlocked
 	
 		Text """
 			The lock finally gives way but you've hurt your hand even more from
@@ -645,7 +647,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page ThirdBrawnPass
 	
 	Page ThirdBrawnFail
-		Visible When basementPhase = third And basementSkill = brawn And Not basementUnlocked
+		Visible If basementPhase = third And basementSkill = brawn And Not basementUnlocked
 
 		Text """
 			((sigh))
@@ -659,7 +661,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page ThirdBrawnFail
 	
 	Page ThirdBrains
-		Visible When basementPhase = third And basementSkill = brains
+		Visible If basementPhase = third And basementSkill = brains
 		
 		Text """
 			({lore}).
@@ -668,7 +670,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page ThirdBrains
 	
 	Page ThirdBrainsPass
-		Visible When basementPhase = third And basementSkill = brains And basementUnlocked
+		Visible If basementPhase = third And basementSkill = brains And basementUnlocked
 	
 		Text """
 			Though you finally figured it out, taking so long has shaken your
@@ -680,7 +682,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 	End Page ThirdBrainsPass
 	
 	Page ThirdBrainsFail
-		Visible When basementPhase = third And basementSkill = brains And Not basementUnlocked
+		Visible If basementPhase = third And basementSkill = brains And Not basementUnlocked
 
 		Text """
 			...!
@@ -695,7 +697,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 
 
 	Page Unlocked
-		Visible When basementPhase = unlocked
+		Visible If basementPhase = unlocked
 		
 		Remove TokenExploreBasementViaDiningRoomBlocked
 		Add TokenDarknessDiningRoom1!

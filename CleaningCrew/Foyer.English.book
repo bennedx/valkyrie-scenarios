@@ -20,7 +20,7 @@ Book Foyer Ordered No Keep Looped
 	
 	Page ExploreFoyerViaHall2
 		Not Visible
-		Triggered BY @ExploreFoyerViaHall2 When foundSarah
+		Triggered BY @ExploreFoyerViaHall2 If foundSarah
 		
 		Prolog "This door has a small brass plaque that reads <<Foyer.>>"
 		Button "Explore"
@@ -33,7 +33,7 @@ Book Foyer Ordered No Keep Looped
 	
 	Page ExploreVoyerViaHall2NoSarah
 		Not Visible
-		Triggered BY @ExploreFoyerViaHall2 When foundSarahsPainting And Not foundSarah
+		Triggered BY @ExploreFoyerViaHall2 If foundSarahsPainting And Not foundSarah
 		
 		Text """
 			As you reach for the door, your eye is drawn back to the
@@ -45,7 +45,7 @@ Book Foyer Ordered No Keep Looped
 	
 	Page ExploreFoyerViaHall2NoSarah2
 		Not Visible
-		Triggered by @ExploreFoyerViaHall2 When foundSarahsPainting And Not foundSarah
+		Triggered by @ExploreFoyerViaHall2 If foundSarahsPainting And Not foundSarah
 		
 		Text """
 			There is a small, brass plate on this door that reads <<Foyer.>>
@@ -99,7 +99,7 @@ Book Foyer Ordered No Keep Looped
 	End Page PlaceFoyer
 
 	Page PlaceExploreStudy
-		Not Visible When exploredStudy
+		Not Visible If exploredStudy
 		
 		Add TokenExploreStudyViaFoyer!
 		
@@ -116,7 +116,7 @@ Book Foyer Ordered No Keep Looped
 	End Page PlaceExploreStudy
 	
 	Page PlaceExploreGallery
-		Not Visible When exploredGallery
+		Not Visible If exploredGallery
 		
 		Add TokenExploreGalleryViaFoyer
 		Text """

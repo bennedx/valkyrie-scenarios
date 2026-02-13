@@ -1,25 +1,33 @@
 Language English
 Debug Off
 
+// All text in FirstRitual defaults to goal = closeGate
+
 Book Mythos Ordered No Keep
-	Triggered By @Mythos
 	
-	Page TakeAction No Text
-		Trigger @SarahPatter
+	Page TakeAction 
+		Not Visible
+		Triggered By @Mythos
+		No Text
+		
+		Trigger @Sarah
 		Trigger @Wanderers
 		Trigger @HealingStone
 		Trigger @Ritual
 
-		Mark TakeAction Unread
 		Exit
 	End Page TakeAction
 
 	// this will start and manage the ritual
-	Page StartOrContinueRitual No Text
+	// the ritual runs to the end of the game for goalOpenGate
+	// for goalFeedGate and goalCloseGate, it runs until the
+	// investigators are pulled into the altar room
+	Page StartOrContinueFirstRitual 
+		Not Visible
 		Triggered By @Ritual
-		Mark ManageRitual Unread
+		No Text
 		
-		If ritual Then Goto ContinueRitual
+		If ritual Then Goto ContinueFirstRitual
 		
 		foundEverything = foundJournal And foundDvm And foundElderSign And foundRitualDagger
 		exploredEverything = exploredCryptViaChapel And exploredDungeonCaveViaBasement And exploredDungeonCell
@@ -27,27 +35,136 @@ Book Mythos Ordered No Keep
 		ready = foundEverything And exploredEverything And didEverything
 		
 		startRitualRound = foundSarahRound + (#heros = 3 ? 12 : #heros = 4 ? 10 : 8)
-		If #round >= startRitualRound Goto StartRitual
+		If #round >= startRitualRound Goto StartFirstRitual
 		
 		Exit
-	End Page Ritual
+	End Page StartOrContinueFirstRitual
 
-	Page StartRitual
+	Page StartFirstRitual
+		Not Visible
 		ritual = 1
 		
+		Text """
+			You stop in your tracks as something... happens to the house. You
+			aren't sure what it is, but fear clutches your gut as the feeling
+			washes over you.
+			
+			Each investigator takes 1 horror ({will} negates).
+		"""
 		
-	End Page
+		Exit
+	End Page StartFirstRitual
 	
-	Page ContinueRitual
+	Page ContinueFirstRitual
+		ritual = ritual + 1
+		
+		If ritual = 2 Then Goto FirstRitualKnife
+		If ritual = 3 Then Goto FirstRitualChalice
+		If ritual = 4 Then Goto FirstRitualWoman
+		If ritual = 5 Then Goto FirstRitualOpen
+		Not Visible
+		
+		No Text
+	End Page ContinueFirstRitual
 	
-	End Page
+	Page FirstRitualStart
+		Not Visible
+		
+		Text """
+			From deep in the house, you hear a boy scream in terror. It
+			stops abruptly and you feel something change in the air. The floor
+			shudders and everything goes quiet for a moment.
+
+			Sarah's eyes widen and she whispers to {c:EventChosenInvestigator},
+			<<Mathias has started. The ritual has started. We must get to the
+			altar and stop him.>>			
+			
+		"""
+		If goal == goalOpenGate Then Text """
+			The hair on the back of your neck stands up as you feel a power
+			filling the space around you. Something dark. Something evil.
+			Something violent.
+			
+			Sarah's eyes widen and she whispers,
+			<<Mathias begun preparations for the ritual, the preparations you
+			read about in the {c:QItemDvm}. We must get to the altar before he
+			actually opens the gate. We must stop him.>>
+		"""
+		
+		Exit
+	End Page FirstRitualStart
 	
+	Page FirstRitualKnife
+		Not Visible
+		
+		Text """
+			You feel something new within the power around you. Something that
+			drains you, but somehow makes you feel stronger. You have a sudden
+			flash of a knife being dragged across your palms.
+			
+			Sarah leans in and whispers, <<I can feel him preparing the dagger
+			for the ritual. I can see on your face that you sense it too. We
+			must find Mathias and stop him.
+		"""
+		
+		Exit
+	End Page FirstRitualKnife
+	
+	Page FirstRitualChalice
+		Text """
+			Another shock hits you, making you feel the knife in your palm
+			again, then as if you were squeezing your hand into a tight fist.
+			
+			Sarah leans in and whispers, <<I can feel him putting his blood in
+			a chalice. I can almost see it.>>
+		"""
+		
+		Exit
+	End Page FirstRitualChalice
+	
+	Page FirstRitualWoman
+		Not Visible
+		
+		Text """
+			You feel the first real power of the spell Mathias is casting as it
+			intensifies what you feel around you. It draws you in and repulses
+			you at the same time. A woman screams. The sound pierces the walls
+			of the house, making the windows rattle in their frames. You feel
+			her take a deep, ragged breath, then she screams again. And again.
+			And again. Just as you start to feel like you might start screaming
+			too, it abruptly stops, and you know she is dead.
+
+			Each investigator takes 1 Horror ({will} negates).
+		"""
+		
+		Exit
+	End Page FirstRitualWoman
+	
+	Page FirstRitualOpen
+		Not Visible
+		
+		Text """
+			The woman's screaming abruptly stops and, for a moment, it is silent
+			again, as if the house were taking a breath. A boy's single,
+			terrified scream cuts through the silence. Though cannot see it,
+			you feel the gate spring into being. You hear something moan in
+			pain; you feel the rumblings of it through the house. You know in
+			your gut that it's Mathias's son.
+
+			The power of the gate has infused the air around you with a
+			a nearly electric sense of evil, making your skin buzz
+			in discomfort.
+		"""
+		
+		Exit
+	
+	End Page FirstRitualOpen
+	
+	/*
 	Ritual Steps in Mythos:
 	
 	Boy
-		You stop in your tracks as something... happens to the house. You aren't sure what it is, but fear clutches your gut as the feeling washes over you.
 
-		Then, from deep in the house, you hear a boy scream in terror. It stops abruptly and you feel something change in the air. The floor shudders and everything goes quiet for a moment. Sarah's eyes widen and she whispers to {c:EventChosenInvestigator}, <<Mathias has started. The ritual has started. We have to get to the altar and stop him.>>
 	
 		Rules:  every goal
 	
@@ -62,9 +179,7 @@ Book Mythos Ordered No Keep
 		
 	
 	Woman
-		The woman's screaming has stopped and, for a moment, it is silent again, as if the house were taking a breath. Then, though you cannot see it, you can feel the gate spring into being. You hear... something moan in pain; you feel the rumblings of it through the house. You know in your gut it's Mathias's son.
 
-		The power of the gate can be felt throughout the house. 
 		
 		If goalFeedGate, Sarah whispers, <<The gate is open, but you have the 
 		elder sign. Mathias cannot stabilize the gate; instead, he will need a ready supply of blood sacrifice. Maybe
@@ -106,7 +221,7 @@ Book Mythos Ordered No Keep
 	Continues
 	Fail
 	
-	
+	*/
 	
 
 End Book Mythos

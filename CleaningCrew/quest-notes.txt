@@ -130,7 +130,7 @@ End Games ----------------------------------------------------------------------
 		Casting		All items are found, whole house explored, all but 2 pages read
 					"You can feel it start to happen"/woman screams
 					
-		Win			Cast fails
+		Win			Cast fails, escape out the Chapel door
 		
 					The boy lies on the ground, still burning like coals in a
 					stove. He is writhing in pain and you know that he will be
@@ -273,9 +273,6 @@ End Games ----------------------------------------------------------------------
 
 
 General					
--	To tell if whole house explored, check at the start of each mythos phase (explored... variables or
-		maybe just count the number of explorations? Check if chapel, hole, and connecting cave explored?
-
 -	how do RANDOM pages work?
 		They follow the non-RANDOM ones
 		They are processed in two different loops
@@ -300,32 +297,12 @@ Linting:  list of things to check
 - 
 
 Main image
-I am writing a scenario for Mansions of Madness, a board game. In the style of
- that game's art, please make a picture of the outside of a mansion. 
- 
-The mansion is large: three stories and 100' wide. The front door is 1/3 of the
-distance from the far end of the mansion. The mansion sits at a 30 degree angle,
-the front of the house faces stage left.
+I am writing a scenario for Mansions of Madness, a board game. In the style of that game's art, I need an image that is exactly twice as tall as it is wide. It will be a house with a man and woman walking up to it.
 
-We are looking at the house from the lower left corner. There is a fence that 
-extends from the back of the house, parallel to the wall it extends from.
-There is an ornate gate very close to where the fence meets the house.
+The house large:  two stories, and stretches outside the frame on both sides. On the right side, there should be floor-to-ceiling windows. The front door is visible. The house is old and run-down. A broken cobble stone drive leads up to the house. The landscaping was beautiful once, but everything is dry and brown, and tall weeds grow everywhere. If looking from above with the front of the house facing 6:00, rotate the house to face 4:30.
 
-The house is dirty:  dirt and spider webs line the windows.
+The man and woman are adults dressed for cleaning. She is not in a maids uniform. The are walking up the drive toward the house. It is dusk; one of them carries a lantern.
 
-Stage right of the house, a cobblestone driveway leads up to the gate and no
-further. The driveway is in poor condition. Weeds line the driveway parallel
-with the house. A cobblestone footpath leads from the driveway to the front
-door.
-
-The yards were once lush and beautiful but they have been untended for 10 years. 
-Everything is dead: grass, flowers, trees.
-
- 
-There are three people. A man wears 1920s house clearer clothes. Two women
-accompany him, in some kind of work garb (not maid uniform)
-
-The image must be 256px wide by 512px high.
 
 
 Compiler
@@ -388,3 +365,75 @@ SarahPatter.ElderSign:  If goal=close:  should be the default text
 
 
 -----------------------------
+
+
+Extremely minimal solo piano ambience.
+Cold, ritualistic, and psychologically unsettling.
+Very slow tempo, long pauses between notes.
+Avoid melody, avoid harmony, mostly single notes.
+Unresolved, unstable tonal center with dark dissonant feeling.
+Designed as background for a horror game.
+No vocals, no percussion, no pads.
+Sparse, empty, patient, looping-friendly.
+Resist becoming musical.
+Do not develop themes.
+No emotional swell.
+No beginning or ending.
+Should feel like it continues indefinitely.
+
+
+Solo piano. Ultra minimal.
+
+No melody, no arpeggios, no chords.
+Single notes only. No sustain pedal.
+
+Flat, emotionally neutral performance.
+Mechanical and indifferent. 
+
+No cinematic swells.
+No development.
+No variation.
+
+Cold, ritualistic, psychologically tense.
+Unresolved and static. Tritones, discordant.
+
+Background loop for a horror game.
+Should feel endless.
+
+Nothing else is allowed.
+
+Avoid beauty. 
+
+
+Music for a tabletop horror game in the style of Theodore Shapiro.
+Minimal, emotially neutral performance
+Cold, ritualistic, psychologically tense.
+Should feel endless.
+
+EpidemicSound.com: drone, suspense, scary, dark, horror
+- Dark Space
+- Catecombs
+- They walk among use
+- cursed tunnel
+- are you alone--victor lundberg
+
+https://artlist.io/royalty-free-music/categories/scary
+- Left Behind (first part)
+- The sacred Union
+- Descending Chamber chopped up
+- Infinite Emptiness (first half)
+- Mirrors first part
+- A Dark Creature is Around (most of it)
+- All hope Abandon (maybe filler?)
+- Crimson Shadows (first two sections, especially the second)
+- Underwood (filler?)
+- Into the Next Dimension (Severance)
+- Truthful Poetry (the hum at the beginning that goes continuously)
+- Somebody There (intro humming)
+- The Summoning (end part is overwrought) 
+- The Paladins (am I punch-drunk?)
+- Low Clouds over Dublin
+- Darkness (first half)
+- I Want You to See (parts)
+- Promises (!)
+[stopped at Goliath]

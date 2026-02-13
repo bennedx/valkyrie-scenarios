@@ -1,7 +1,7 @@
 Language English
 
 Book CloseGate Ordered No Keep Looped
-    Triggered By @ReadDvm When goal = goalCloseGate And ritual
+    Triggered By @ReadDvm If goal = goalCloseGate And ritual
 
     // this hides the page since we are NO Keep
     // this is easier than managing visibility
@@ -11,7 +11,7 @@ Book CloseGate Ordered No Keep Looped
         Prolog """
             The gate is open and you must close it quickly. If you have the
             {c:QItemRitualKnife}, the {c:QItemRitualComponents}, and the
-            {c:QItemElderSignPendant}, you can start now.
+            {c:QItemElderSign}, you can start now.
         
             Only {c:EventChosenInvestigator} can perform this ritual and only
             while standing at the altar.

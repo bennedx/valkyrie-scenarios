@@ -3,11 +3,11 @@ Debug Off
 
 Book Startup Ordered No Keep Looped
 
-	Page StartUp No Text
+	Page StartUp
 		Not Visible
 		Triggered By @EventStart
 
-		testMode = true
+		testMode = false
 		
 		roundsBeforeRitual = (5 - #heros) * 2 + 15
 				
@@ -68,13 +68,16 @@ Book Startup Ordered No Keep Looped
 		unlocked = 4
 		basementPhase = first
 
+		No Text
 		
 		If Not testMode Then Trigger @SplashScreen
-		if Not testMode Then Exit
+		If Not testMode Then Exit
 	End Page StartUp
 	
-	Page ShowEverything No Text
-		Visible When testMode
+	Page ShowEverything
+		Visible If testMode
+		
+		No Text
 		
 		Add TileAltar
 		Add TileBackyard
@@ -127,6 +130,7 @@ Book Startup Ordered No Keep Looped
 		Add TokenTestRitualFinished
 		Add TokenTestInitChosenInvestigator
 		Add TokenTestJournal2
+		Add TokenTestWanderer
 		Add TokenBackyardBenBefore
 		Add TokenBackyardBenPassive
 		Add TokenDiningRoomBen
@@ -134,27 +138,36 @@ Book Startup Ordered No Keep Looped
 		Exit
 	End Page ShowEverything
 	
-	Page SplashScreen No Text
+	Page SplashScreen
 		Not Visible
 		Triggered By @SplashScreen
 		
-		Add UIStoryImage, UIStoryBackground, UIOpeningText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
+		Add UIStoryImage, UIStoryBackground, UIOpeningText, UISplashFancyBar 
+		Audio "audio\openingall.ogg"
+		
+		No Text
+		
+		Add UIStoryContinue
+		
 		Exit
 	End Page SplashScreen
 	
-	Page SplashScreenClosed No Text
+	Page SplashScreenClosed
 		Not Visible
 		Triggered By @SplashScreenClosed
-		Remove UIStoryImage, UIStoryBackground, UIOpeningText, UIStoryFrame, UIOpeningTitle, UIStoryContinue
+		
+		No Text
+		Audio "audio\no-sound.ogg"
+		Remove UIStoryImage, UIStoryBackground, UIOpeningText, UISplashFancyBar, UIStoryContinue
 	End Page SplashScreenClosed
 	
 	Page StartScenario
-	    Not Visible When testMode
+	    Not Visible If testMode
 		Text "Each investigator receives 1 {clue}."
 	End Page StartScenario
 	
 	Page Kate
-		Visible When #HeroKateWinthrop And Not testMode
+		Visible If #HeroKateWinthrop And Not testMode
 		
 		Text """
 			Kate is running late, so she is hurried and inattentive. She grabs
@@ -168,8 +181,9 @@ Book Startup Ordered No Keep Looped
 		"""
 	End Page Kate
 	
-	Page PlaceDriveway No Text
-		Not Visible When testMode
+	Page PlaceDriveway
+		Not Visible If testMode
+		No Text
 		Trigger @ExploreDrivewayViaStartup
 	End Page PlaceDriveway
 End Book Startup

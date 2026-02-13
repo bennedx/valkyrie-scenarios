@@ -1,9 +1,10 @@
 LANGUAGE English
 
 Book Study Ordered No Keep Looped
-	Page ExploreStudyViaHall2 No Text
+	Page ExploreStudyViaHall2 
 		Not Visible
-		Triggered By @ExploreStudyViaHall2 When foundSarah
+		Triggered By @ExploreStudyViaHall2 If foundSarah
+		No Text
 		
 		exploredStudyViaHall2 = true
 		exploredStudyViaFoyer = false
@@ -11,7 +12,7 @@ Book Study Ordered No Keep Looped
 
 	Page ExploreStudyViaHall2NoSarah
 		Not Visible
-		Triggered By @ExploreStudyViaHall2 When Not foundSarahsPainting
+		Triggered By @ExploreStudyViaHall2 If Not foundSarahsPainting
 		
 		Text """
 			When you reach for the handle, something behind you pulls your
@@ -24,7 +25,7 @@ Book Study Ordered No Keep Looped
 
 	Page ExploreStudyViaHall2NoSarah2
 		Not Visible
-		Triggered by @ExploreFoyerViaHall2 When foundSarahsPainting And Not foundSarah
+		Triggered by @ExploreFoyerViaHall2 If foundSarahsPainting And Not foundSarah
 		
 		Text """
 			You reach for the door handle but something pulls your arm back.
@@ -35,9 +36,10 @@ Book Study Ordered No Keep Looped
 		Exit
 	End Page ExploreStudyViaHall2NoSarah2
 
-	Page ExploreStudyViaFoyer No Text
+	Page ExploreStudyViaFoyer 
 		Not Visible
 		Triggered By @ExploreStudyViaFoyer
+		No Text
 		
 		exploredStudyViaHall2 = false
 		exploredStudyViaFoyer = true	
@@ -64,7 +66,7 @@ Book Study Ordered No Keep Looped
 	End Page ExploreStudy
 
 	Page PlaceExploreFoyer
-		Not Visible When exploredFoyer
+		Not Visible If exploredFoyer
 
 		Add TokenExploreFoyerViaStudy!
 		

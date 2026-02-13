@@ -28,7 +28,7 @@ Book Hall1 Ordered No Keep Looped
 
 	
 	Page PlaceJournal
-		Not Visible When foundJournal
+		Not Visible If foundJournal
 		
 		Text QItemJournal """
 			While you are looking at the prints, the book on the floor gets

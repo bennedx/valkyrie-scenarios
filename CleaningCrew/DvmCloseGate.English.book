@@ -2,7 +2,7 @@ Language English
 Debug Off
 
 Book DvmCloseGate Ordered Keep Looped
-	Triggered By @ReadDvm When goal = goalCloseGate And Not ritual
+	Triggered By @ReadDvm If goal = goalCloseGate And Not ritual
 
     Page TableOfContents
         Prolog "The book looks old and worn with time."
@@ -158,6 +158,7 @@ Book DvmCloseGate Ordered Keep Looped
         """
 		
 		dvmFinished = true
+		Trigger @CompletedRequirement
     End Page Commentary
     
     Epilog

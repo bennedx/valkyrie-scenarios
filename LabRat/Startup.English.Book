@@ -1,0 +1,69 @@
+Language English
+Debug Off
+
+Book Startup Ordered No Keep Looped
+	Triggered By @EventStart
+	
+	Page Start No Text
+		testing = true
+		
+		
+	End Page Start
+
+	Page ShowEverything No Text
+		Visible If testing
+		
+		Show TileLounge
+	
+	End Page ShowEverything
+
+	Page Begin
+		Visible If Not testing
+		
+		Text """
+			You aren't exactly sure what is happening. Where you are. Who you
+			are. Lights move like the aurora borealis, but your eyes are
+			closed.
+			
+			You start to open your eyes but the light burns and you quickly
+			close them again. <i>Where am I?</i> you ask yourself. You open your
+			eyes just a sliver and can see what feels like blinding light.
+			
+			After a moment, you find your eyes adjusting to the light. In an
+			act of courage, you decide to open your eyes fully...
+		"""
+	End Page Begin
+	
+	Page PlaceLounge
+		Visible If Not testing
+		
+		Text """
+			You open your but go back to a squint as the bright light sears
+			your eyes. Slowly they adjust to the light and, in a moment, you
+			realize it was relative:  there is not really that much light.
+			
+			As your vision settles, the room you are in starts to come into
+			focus. Place the {c:TileLounge} tile as shown.
+		"""
+	End Page PlaceLounge
+	
+	Page PlaceInvestigators
+		Visible If Not testing
+		
+		Add TokenInvestigatorsUpperLeft, TokenInvestigatorsLowerRight
+		
+		Text """
+			As your awareness improves, you can tell you are on a sofa. Finally,
+			you look around and see other people unconscious around you. Divide
+			your investigator figures between the locations indicated. Nothing
+			and no one seems familiar.
+			
+			<i>Where am I?</i> you ask yourself again. Someone across the room
+			lifts their head to look at you and you realize you asked that out
+			loud.
+		"""
+		
+		Remove TokenInvestigatorsUpperLeft, TokenInvestigatorsLowerRight
+
+	End Page PlaceInvestigators
+End Book Startup

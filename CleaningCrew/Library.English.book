@@ -23,7 +23,8 @@ Book Library Ordered No Keep Looped
 		wandererInStudy = true
 	End Page ExploreLibraryViaStudy
 
-	Page SpawnCultist No Text
+	Page SpawnCultist 
+		No Text
 		Call Event SpawnLibraryCultist
 		Exit
 	End Page SpawnCultist
@@ -79,7 +80,7 @@ Book Library Ordered No Keep Looped
 	
 	Page SearchBookcase
 		Not Visible
-		Triggered By @SearchLibraryBookcase When Unread
+		Triggered By @SearchLibraryBookcase If Unread
 		
 		Prolog """
 			The books seem like a hodgepodge of local history, religion, and
@@ -110,7 +111,7 @@ Book Library Ordered No Keep Looped
 	
 	Page SearchBookcaseAgain
 		Not Visible
-		Triggered By @SearchLibraryBookcase When SearchBookcase Is Read
+		Triggered By @SearchLibraryBookcase If SearchBookcase Is Read
 		
 		Prolog "The book wouldn't move, but maybe it will this time..."
 		Button "Try again"
@@ -131,7 +132,7 @@ Book Library Ordered No Keep Looped
 		Remove TokenSearchLibraryBookcase
 
 		Text """
-			The book rains dust onto you when it finally comes loose. It still
+			The book rains dust onto you If it finally comes loose. It still
 			doesn't come out all the way, but you realize it is part of a lock
 			for a secret door. Discard this Search token.
 		"""
@@ -155,7 +156,7 @@ Book Library Ordered No Keep Looped
 	End Page PlaceBookcaseExplore
 	
 	Page ExploreChapelViaBookcaseBlocked
-		Triggered By @ExploreChapelViaLibraryBlocked When Unread
+		Triggered By @ExploreChapelViaLibraryBlocked If Unread
 
 		Text """
 			There is an elaborate lock on the door behind the bookcase; it has
@@ -171,7 +172,7 @@ Book Library Ordered No Keep Looped
 	
 	Page ExploreChapelViaBookcaseBlockedRepeat
 		Not Visible
-		Triggered By @ExploreChapelViaLibraryBlocked When ExploreChapelViaBookcaseBlocked Is Read
+		Triggered By @ExploreChapelViaLibraryBlocked If ExploreChapelViaBookcaseBlocked Is Read
 		
 		Text """
 			The lock is still firmly protecting the door.
@@ -182,8 +183,9 @@ Book Library Ordered No Keep Looped
 		Goto ExploreChapelViaBookcaseBlockedPuzzle
 	End Page ExploreChapelViaBookcaseBlockedRepeat
 	
-	Page ExploreChapelViaBookcaseBlockedPuzzle No Text
+	Page ExploreChapelViaBookcaseBlockedPuzzle
 		Not Visible
+		No Text
 		
 		Trigger @PuzzleBookcaseLock
 		
