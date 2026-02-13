@@ -38,7 +38,7 @@ Book Mythos Ordered No Keep
 		If #round >= startRitualRound Goto StartFirstRitual
 		
 		Exit
-	End Page StartOrContinueRitual
+	End Page StartOrContinueFirstRitual
 
 	Page StartFirstRitual
 		Not Visible
@@ -55,7 +55,7 @@ Book Mythos Ordered No Keep
 		Exit
 	End Page StartFirstRitual
 	
-	Page FirstRitual
+	Page ContinueFirstRitual
 		ritual = ritual + 1
 		
 		If ritual = 2 Then Goto FirstRitualKnife
@@ -65,7 +65,7 @@ Book Mythos Ordered No Keep
 		Not Visible
 		
 		No Text
-	End Page FirstRitual
+	End Page ContinueFirstRitual
 	
 	Page FirstRitualStart
 		Not Visible

@@ -35,13 +35,13 @@ Book SarahRitualWarnings Ordered No Keep
 		"""
 	End Page Journal
 	
-	Page ElderSignPendent
-		Visible If Not foundElderSignPendent
+	Page ElderSign
+		Visible If Not foundElderSign
 		
 		Text """
 			I feel like we are still missing something. Something important,
 			though I'm not sure what it is. We should look around. Maybe we'll
 			find what I'm feeling.>>
 		"""
-	End Page ElderSignPendent
+	End Page ElderSign
 End Book SarahRitualWarnings
