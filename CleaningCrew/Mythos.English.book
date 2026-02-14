@@ -33,6 +33,7 @@ Book Mythos Ordered No Keep
 		exploredEverything = exploredCryptViaChapel And exploredDungeonCaveViaBasement And exploredDungeonCell
 		didEverything = dvmFinished And journalFinished
 		ready = foundEverything And exploredEverything And didEverything
+		if ready Then Goto StartFirstRitual
 		
 		startRitualRound = foundSarahRound + (#heros = 3 ? 12 : #heros = 4 ? 10 : 8)
 		If #round >= startRitualRound Goto StartFirstRitual
@@ -56,13 +57,13 @@ Book Mythos Ordered No Keep
 	End Page StartFirstRitual
 	
 	Page ContinueFirstRitual
+		Not Visible
 		ritual = ritual + 1
 		
 		If ritual = 2 Then Goto FirstRitualKnife
 		If ritual = 3 Then Goto FirstRitualChalice
 		If ritual = 4 Then Goto FirstRitualWoman
 		If ritual = 5 Then Goto FirstRitualOpen
-		Not Visible
 		
 		No Text
 	End Page ContinueFirstRitual

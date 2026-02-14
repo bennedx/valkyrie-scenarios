@@ -220,7 +220,6 @@ Book Chapel Ordered No Keep Looped
 		Remove TokenChapelPriest
 		
 		wandererFrequency = wandererFrequency + 2
-
 		Goto PlaceSearchCryptViaChapel
 	End Page TruthToPriest
 	
@@ -235,6 +234,7 @@ Book Chapel Ordered No Keep Looped
 		"""
 		
 		foundRitualDagger = true
+		Trigger @CompletedRequirement
 		Exit	
 	End Page PlaceSearchCryptViaChapel
 	
@@ -317,6 +317,8 @@ Book Chapel Ordered No Keep Looped
 			<<Hey, did any of you see the priest's right hand twitch?>>
 		"""
 		
+		foundRitualDagger = true
+		Trigger @CompletedRequirement
 		Exit
 	End Page SearchRitualDagger
 	
@@ -374,7 +376,7 @@ Book Chapel Ordered No Keep Looped
 			push on it. Place the {c:TileCrypt} tile.
 		"""
 		
-		If exploredCrypt Then TEXT """
+		If exploredCrypt Then Text """
 			You pull back the wall to find a doorway with a stone door. You
 			push on it. Place the {c:TileCrypt} tile. <<This
 			is the door we found in the crypt earlier,>> you say.
