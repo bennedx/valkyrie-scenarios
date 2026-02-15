@@ -1,0 +1,122 @@
+Language English
+Debug Off
+
+Book MythosFirstRitualOpenGate Ordered No Keep
+	Trigger @Ritual When goal = goalOpenGate And firstRitual
+	
+	Page One
+		Visible When firstRitual = 1
+		
+		Text """
+			You stop in your tracks as something... happens to the house. You
+			aren't sure what it is, but fear clutches your gut as the feeling
+			washes over you.
+			
+			Each investigator takes 1 horror ({will} negates).
+		"""
+
+		firstRitual = 2
+		Exit
+	End Page Start
+	
+	Page Two
+		Not Visible
+		
+		Text """
+			From deep in the house, you hear a boy scream in terror. It
+			stops abruptly and you feel something change in the air. The floor
+			shudders and everything goes quiet for a moment.
+
+			Sarah's eyes widen and she whispers to {c:EventChosenInvestigator},
+			<<Mathias has started. The ritual has started. We must get to the
+			altar and stop him.>>			
+			
+		"""
+		If goal == goalOpenGate Then Text """
+			The hair on the back of your neck stands up as you feel a power
+			filling the space around you. Something dark. Something evil.
+			Something violent.
+			
+			Sarah's eyes widen and she whispers,
+			<<Mathias begun preparations for the ritual, the preparations you
+			read about in the {c:QItemDvm}. We must get to the altar before he
+			actually opens the gate. We must stop him.>>
+		"""
+		
+		Exit
+	End Page FirstRitualStart
+
+	
+End Book MythosFirstRitualOpenGate
+
+Book MythosFirstRitualFeedGate Ordered No Keep
+	Trigger @Ritual If goal = goalFeedGate And firstRitual
+
+	Page One
+		Visible When firstRitual = 1
+		
+		Goto MythosFirstRitualOpenGate.One
+	End Page Start
+	
+	Page Two
+		Not Visible
+		
+		Text """
+			From deep in the house, you hear a boy scream in terror. It
+			stops abruptly and you feel something change in the air. The floor
+			shudders and everything goes quiet for a moment.
+
+			Sarah's eyes widen and she whispers to {c:EventChosenInvestigator},
+			<<Mathias has started. The ritual has started. We must get to the
+			altar and stop him.>>			
+			
+		"""
+		If goal == goalOpenGate Then Text """
+			The hair on the back of your neck stands up as you feel a power
+			filling the space around you. Something dark. Something evil.
+			Something violent.
+			
+			Sarah's eyes widen and she whispers,
+			<<Mathias begun preparations for the ritual, the preparations you
+			read about in the {c:QItemDvm}. We must get to the altar before he
+			actually opens the gate. We must stop him.>>
+		"""
+		
+		Exit
+	End Page FirstRitualStart
+End Book MythosFirstRitualFeedGate
+
+Book MythosFirstRitualCloseGate Ordered No Keep
+	Trigger @Ritual If goal = goalCloseGate And firstRitual
+	
+		
+		Goto MythosFirstRitualOpenGate.One
+	End Page Start
+
+	Page Two
+		Not Visible
+		
+		Text """
+			From deep in the house, you hear a boy scream in terror. It
+			stops abruptly and you feel something change in the air. The floor
+			shudders and everything goes quiet for a moment.
+
+			Sarah's eyes widen and she whispers to {c:EventChosenInvestigator},
+			<<Mathias has started. The ritual has started. We must get to the
+			altar and stop him.>>			
+			
+		"""
+		If goal == goalOpenGate Then Text """
+			The hair on the back of your neck stands up as you feel a power
+			filling the space around you. Something dark. Something evil.
+			Something violent.
+			
+			Sarah's eyes widen and she whispers,
+			<<Mathias begun preparations for the ritual, the preparations you
+			read about in the {c:QItemDvm}. We must get to the altar before he
+			actually opens the gate. We must stop him.>>
+		"""
+		
+		Exit
+	End Page FirstRitualStart
+End Book MythosFirstRitualCloseGate
