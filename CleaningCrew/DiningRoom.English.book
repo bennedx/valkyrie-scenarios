@@ -37,10 +37,11 @@ Book PlaceDiningRoom Ordered No Keep Looped
 			and broken glassware are strewn about the room.
 
 			Place the {c:TileDiningRoom} tile and door as indicated, then
-			discard this Explore token.
+			discard all Explore tokens leading to this tile.
 		"""
 		
 		exploredDiningRoom = true
+		Remove TokenDoorBackyard
 		
 		// we want a clear event name for the name of the target investigator,
 		// not some wacky constructed name
