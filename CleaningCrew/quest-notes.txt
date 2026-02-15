@@ -130,52 +130,66 @@ End Games ----------------------------------------------------------------------
 		Casting		All items are found, whole house explored, all but 2 pages read
 					"You can feel it start to happen"/woman screams
 					
-		Win			Cast fails, escape out the Chapel door
+		Win			Cast fails, escape out the Chapel door w/boy, seal location
 		
-					The boy lies on the ground, still burning like coals in a
-					stove. He is writhing in pain and you know that he will be
-					like this for several days. Sarah is next to him, speaking
-					words of comfort to no effect.
+					You run out the door of the Chapel, breathing hard and
+					nearly carrying the boy with you. Sarah follows you outside
+					into the night. The full moon shines down, showing the path
+					is clear of cultists. You are finally safe.
 					
 					Sarah turns to you and says, <<You were successful. Not only
 					did we stop Mathias's current plans, we stopped anyone's
-					ability to use this area to try again. Once the boy dies,
-					he and I will be able to move on and find peace. Thank you.
+					ability to use this area to try again. Our nephew will grow
+					up normally and I can finally find peace. Thank you.>>
 					
-					As you leave the house through the kitchen, you 
+					As you walk down the road you entered a few hours ago, you 
 					reflect on everything that just happened. Exhausted and 
 					still in shock, you wonder if the world will ever feel the
 					same again. But you are also deeply comforted and proud
 					that you were able to save the world from the evil that
 					Mathias tried to bring.
+					
+					For now.
 		
 		Draw		Cast succeeds, but you are able to kill Mathias and the gate
-					shuts down. The gate is not sealed. xx turns expired.
+					shuts down. The gate is not sealed. xx turns expired. 
 					
-					The boy lies on the ground, still burning like coals in a
-					stove. He is writhing in pain and you know that he will be
-					like this for several days. Sarah is next to him, speaking
-					words of comfort to no effect.
+					You run out the door of the Chapel, breathing hard, still
+					panicked. Sarah follows you outside
+					into the night. The full moon shines down, showing the path
+					is clear of cultists. You are finally safe.
+					
 					
 					Sarah turns to you and says, <<You were successful. But you
 					were not able to seal the gate, so this will all happen
 					again. Once the boy dies, I will try
 					send to send him to find peace. I will stay and wait for 
 					the next opportunity to permanently stop this madness.
-					Thank you for what you were able to do.
+					Thank you for what you were able to do.>>
 					
-					As you leave the house through the kitchen, you 
+					Sarah turns to you and says, <<You were successful. But you
+					were not able to seal the gate, so this will all happen
+					again. I need to get back to our nephew, to see if there is
+					anything I can do for him. Once he dies, I will try
+					to send him to find peace. I will stay and wait for 
+					the next opportunity to permanently stop this madness.
+					Thank you for what you were able to do.>>
+					
+					As you walk down the road you arrived by a few hours ago, you 
 					reflect on everything that just happened. Exhausted and 
 					still in shock, you wonder if the world will ever feel the
-					same again. But you are also deeply comforted and proud
-					that you were able to stop Mathias from bringing is evil.
-					This time.
+					same again. While knowing you stopped his plans, Mathias
+					still brutally killed his son, <<Well,>> you think to 
+					yourself, <<like Sarah before him, he won't die for several
+					days yet.>> But you are at least comforted
+					that you were able to save the world from the evil that
+					Mathias tried to bring.
 					
 					You wonder if it will happen again and if anyone will be
-					able to stop it, even temporarily. But for now, the world
+					able to stop it next time, even temporarily. But for now, the world
 					is safe and, with luck, it will never happen again.
 		
-		Fail		found altar, xx turns expire
+		Fail		found altar, xx turns expire and gate still open
 		
 					As the ancient one nears the portal, you panic and try to 
 					run. The altar room is shaking and stone from the ceiling
@@ -184,30 +198,30 @@ End Games ----------------------------------------------------------------------
 					
 					You find a door that leads back to the cave, but when you 
 					enter, you find yourself surrounded by more cultists. This
-					time, they outnumber you and you fall quickly to their 
+					time, they outnumber you. You fall quickly to their 
 					weapons.
 					
-					As you lie on the floor, bleeding and dying, you hear a
-					monstrous roar and you realize the ancient one is here. As
-					you draw your last breath, the cultists fall to their knees and
-					begin praying to the beast for salvation. The last thing
-					you feel is the ceiling caving in and the screams of the
-					cultists, betrayed by their god and killed for their 
-					foolishness. 
+					Broken and bleeding, you lie on the floor. A monstrous roar
+					cuts through the din:  the ancient one has come through the
+					gate. As you draw your last breath, the cultists fall to
+					their knees and begin praying to the beast for salvation.
+					The last thing you feel is the ceiling caving in and the
+					screams of the cultists, betrayed by their god and killed
+					for their foolishness. 
 					
 					The only comfort you have is in knowing that a stream of 
-					sacrifice is required to keep the ancient one here, and with
+					sacrifice is required to keep the ancient one here. With
 					so many cult members dead, maybe it won't be here for long.
 
 					Maybe.
 		
-		Hard fails	didn't find altar
+		Hard fails	didn't find altar (any goal)
 		
 					The house continues to shake, light streaming up through
 					the floorboards. With a thunderous clap, the house begins
-					to fall apart and the ceiling starts raining down. You run toward
-					the servant dining room, but when you get there, you find
-					cult members blocking your path. They attack you without
+					to fall apart and the ceiling rains down. You run toward
+					the servant dining room, but when you get there, 
+					cult members block your path. They attack you without
 					mercy.
 					
 					Sarah leans down and whispers, <<We failed and there is no
@@ -239,10 +253,73 @@ End Games ----------------------------------------------------------------------
 		
 		Win			xx cultists killed
 		
+					As the last cultist falls---and with Mathias dead---the gate
+					begins supputtering. As the sealing spell is completed, the
+					gate collapses and the boy falls to the ground with thud. He
+					burns like coals, his eyes open wide in terror and pain. He
+					moves his mouth but no sound comes out.
+					
+					Sarah turns to you and says, <<You were successful. Not only
+					did we stop Mathias's plans, we stopped anyone's
+					ability to use this area to try again. I only wish our
+					nephew will have survived. I will stay with him here, then
+					help him find peach once he dies. Thank you.>>
+
+					As you exit the chapel into the moonlit night, you reflect
+					on what happened these last hours. The mystery, the fear,
+					and the death. And you nephew. Thinking of him smouldering
+					back there makes your gorge rise.
+		
+					Exhausted and still in shock, you wonder if the world will
+					ever feel the same again. But you are also deeply comforted
+					and proud that you were able to save the world from the evil
+					that Mathias tried to bring.
+		
 		Draw		same number killed, but xx turns expired--exhaustion/cultists kill you
 					but, hey, at least the monster won't kill the world
-		
+
+					The last cultist falls at your feet. You stagger back, 
+					broken and bleeding. Unable to stand, you fall to the floor.
+					There are no cultists behind that last one. Without Mathias
+					to keep it open and the cultists sacrifice, the gate
+					begins sputtering with instability. A tentacle tentatively
+					pokes through, but pulls back whe the gate pops violently.
+					
+					Sarah leans down and whispers, <<The beast was not able to
+					make it through. Soon the gate will collapse and our nephew
+					will die. I will see him to peace. But you were not able to
+					seal it closed, so it can happen here again. After I guide
+					the boy to peace, I will return and wait for the next
+					attempt.>>
+					
+					The last thing you see is Sarah softly calling your 
+					newphew's name while the gate destablizes. As you die
+					you take pride in what you were able to accomplish. You
+					saved the world. For now at least. 
+					
+					The End
+							
 		Lose		xx cultists escape thru hole -or- xx turns expire
+		
+					The cultists beat and stab you to the ground and eventually
+					you are unable to fight back or defend yourself. One after
+					the other, you watch the cultists approach the gate with a
+					drawn dagger, and slit their own throats. As another draws
+					across his neck, tentacles begin coming through the gate.
+					The room is shaking and the ceiling is starting to rain
+					down on you. 
+					
+					Sarah leans down and whispers, <<We failed. The beast is
+					here. With your unused elder sign, someone else could fix
+					the gate to keep it open. Our newphew could remain as the 
+					gate indefinitely, a fate much worse than death. I will
+					stay and try to find a way to close the gate, but the world
+					is in trouble.>>
+					
+					The last thing you hear before it all goes dark is Sarah.
+					<<Thank you for trying. We did the best that we could.>
+					
+					The End.
 		
 		Notes		Is there a way to have cultists move to specific locations on each activation?
 						Like coming thru the door and automatically move toward the hole?
@@ -263,27 +340,57 @@ End Games ----------------------------------------------------------------------
 					Regardless, all mansion color stuff is disabled
 		
 -		Win			Cast succeeds
+
+					The gate winks out and the boy falls to the ground, 
+					smouldering like coals in a fire pit. The elder sign is
+					embedded in his forehead, unnoticed in the pain of the 
+					fire.
+					
+					Sarah leans in a whispers, <<You were successful in stopping
+					Mathias and his plans to remake the world. You also stopped
+					anyone else from trying it here again. Once the boy dies, I
+					will help him find peace, then I will be able to rest. Thank
+					you.>>
+					
+					As you exit the chapel into the moonlit night, you reflect
+					on what happened these last hours. The mystery, the fear,
+					and the death. And your nephew. Thinking of him burning
+					back there makes your gorge rise.
+		
+					Exhausted and still in shock, you wonder if the world will
+					ever feel the same again. But you are also deeply comforted
+					and proud that you were able to save the world from the evil
+					that Mathias tried to bring.
+					
+					The End.
 		
 -		Draw		cast succeeds but xx turns expire: altar room collapses and kills you
 					but, hey, at least the monster won't kill the world
+					
+					As you say the last word the cave shakes, the gate flashes and pops, then
+					it winks out of existance. When it does, the boy falls to the floor
+					with a thud. His eyes are wide with fear and pain; his
+					mouth moves but no sound comes out. 
+					
+					Sarah turns to you and says, <<You were successful. But you
+					were not able to seal the gate, so this will all happen
+					again. Once the boy dies, I will try
+					send to send him to find peace. I will stay and wait for 
+					the next opportunity to permanently stop this madness.
+					Thank you for what you were able to do.>>
+					
+					As you exit the chapel into the moonlit night, you reflect
+					on what happened these last hours. The mystery, the fear,
+					and the death. And your nephew. Thinking of him burning
+					back there makes your gorge rise.
+					
+					At least the world is safe tonight. 
+					
+					The End.
 		
 -		Lose		xx turns expire:  summoning succeeds
 
-
-
-
-General					
--	how do RANDOM pages work?
-		They follow the non-RANDOM ones
-		They are processed in two different loops
-		There cannot be an epilog block; if one is needed, it will have to be done manually somehow
-		
-		The display and button parts are the same for both
-		The prologBlock checks to see if its index matches the random one
-		If not, goes to PageEventRandomFailed/PageEventDisplayRandom which loops back to RANDOM selector
-		When all random pages are read AND bool.IsLoopRandom, clear all readXxx flags
-	
-		
+					(same as goalOpenGate)
 
 Linting:  list of things to check
 - every read variable is set somewhere
@@ -306,7 +413,6 @@ The man and woman are adults dressed for cleaning. She is not in a maids uniform
 
 
 Compiler
--	support RANDOM pages; only works for ORDERED NO KEEP
 -	add support for token highlighting when an "!" is put after its name on ADD or REMOVE
 -	add linting tool
 -	add SPAWN support:  create an event as part of the book that is triggered and goes to the SpawnXxx
@@ -358,8 +464,6 @@ PlaceChapelViaCrypt
 ExploreAltarViaCell--this needs work around ritual and such
 
 How does ritual start? What effect does that have on cell and altar?
-
-- Put something important in the basement to make sure they go through it
 
 SarahPatter.ElderSign:  If goal=close:  should be the default text
 
