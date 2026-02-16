@@ -67,7 +67,7 @@ Book Library Ordered No Keep Looped
 		Remove TokenSearchLibraryKey
 
 		Text QItemKey """
-			You reach down to pick up the keys. You’re impressed by the number
+			You reach down to pick up the keys. You're impressed by the number
 			and variety. Some of the keys have strange symbols on their bows
 			while others have beautiful and intricate blades. You pocket them
 			and wonder if you'll need them. Gain the {c:QItemKey} Unique Item,

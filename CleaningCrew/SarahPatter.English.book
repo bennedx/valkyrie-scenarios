@@ -17,8 +17,18 @@ BOOK SarahPatter Ordered No Keep
 			
 			<<I will tell you everything you need to know, but first I must
 			tell you that our cousin, Mathias, will open a gate
-			tonight and you must stop him; if you cannot stop him, you will
+			tonight. You must stop him. If you cannot stop him, you will
 			need to find a way to close that gate.>>
+		"""
+
+		If goal = goalFeedGate Then Text """
+			Sarah whispers to {c:EventChosenInvestigator}, <<You don't remember
+			me or what happened 10 years ago. I am your little sister.
+			
+			<<I will tell you everything you need to know, but first I must
+			tell you that our cousin, Mathias, will open a gate
+			tonight. You must stop him. If that gate opens, evil could destroy
+			the world.>>
 		"""
 	End Page Color1
 
@@ -26,12 +36,12 @@ BOOK SarahPatter Ordered No Keep
 		Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<The people in this
 			town worship a darker god than most. They want to bring their god
-			to Earth. 10 years ago, Father cast a ritual to summon It. He
+			to Earth. 10 years ago, Our father, Elias, cast a ritual to summon It. He
 			opened a gate using my body. The power it possessed was breathtaking
 			and I could do nothing to stop it. Somehow, Father summoned local
 			church members through the gate to protect it, even after he
 			was dead. As the gate, I could feel people and monsters
-			approaching and passing through me from the other side.>>
+			approaching and passing through me from the either side.>>
 		"""
 	End Page Color2
 
@@ -62,7 +72,7 @@ BOOK SarahPatter Ordered No Keep
 			Sarah whispers to {c:EventChosenInvestigator}, <<There's a part of
 			the house that is too dark to enter without light. The candles you
 			found should help. If we move fast enough, maybe we can stop
-			Mathias from opening the gate.>>
+			Mathias.>>
 		"""
 	End Page Candles
 
@@ -82,7 +92,7 @@ BOOK SarahPatter Ordered No Keep
 		Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDvm} is
 			a spell book. It contains many powerful spells, including rituals to
-			open and close gates, and how to interrupt a ritual that has been
+			open and close gates. Also, how to interrupt a ritual that has been
 			started.
 			
 			<<If you cannot stop Mathias in time,
@@ -95,9 +105,8 @@ BOOK SarahPatter Ordered No Keep
 		If goal == goalFeedGate Then Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDVM} is
 			a spell book. It contains many powerful spells, including rituals to
-			open and close gates. If you cannot stop Mathias from opening a gate
-			you'll need to either starve it of sacrifice or find a way to close
-			it.
+			open and close gates. If you cannot stop Mathias from opening a gate,
+			you'll need to starve it of sacrifice.
 
 			<<You must read the {c:QItemDvm} to better understand what is
 			expected of you.>>
@@ -111,8 +120,8 @@ BOOK SarahPatter Ordered No Keep
 			Sarah whispers to {c:EventChosenInvestigator}, <<The
 			{c:QItemElderSign} is an important part of the closing ritual. It
 			seals the gate permanently, meaning no gate can be opened there
-			again. When the closing ritual was performed 10 years ago, our
-			uncle Peter was able to close the gate, but was unable to seal it.>>
+			again. When the closing ritual was performed 10 years ago, 
+			Uncle Peter was able to close the gate, but could not seal it.>>
 		"""
 
 		If goal == goalFeedGate Then Text """
@@ -126,8 +135,8 @@ BOOK SarahPatter Ordered No Keep
 			Sarah whispers to {c:EventChosenInvestigator}, <<The
 			{c:QItemElderSign} is a powerful protective symbol. It can be used
 			to ward off evil creatures and protect people from harm. It can 
-			also be used to secure a gate after it is opened. It is good we
-			found it before they did.>>
+			also be used to secure a gate after it is opened. Or permanently
+			seal it once it closes. It is good we found it before they did.>>
 		"""
 	End Page ElderSign
 
@@ -138,7 +147,7 @@ BOOK SarahPatter Ordered No Keep
 			Sarah reaches out as if to touch the {c:QItemRitualComponents}. <<I
 			recognize some of these items from the gate ritual. Both my father
 			and the men who tried to stop him brought similar items to help with
-			their counter-spells.>>
+			their spells and counter-spells.>>
 		"""
 	End Page RitualComponents
 
@@ -147,8 +156,8 @@ BOOK SarahPatter Ordered No Keep
 
 		Text """
 			Sarah reaches toward the {c:QItemRitualDagger}. <<I recognize this
-			dagger,>> she starts. <<It looks like the one my father used in the
-			gate ritual. With luck, they need this but we have it.>>
+			dagger,>> she starts. <<It looks like the one my father used ten 
+			years ago. With luck, Mathias needs this but we have it.>>
 		"""
 	End Page Dagger
 
@@ -204,10 +213,10 @@ BOOK SarahPatter Ordered No Keep
 		Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<I don't know who
 			the other men were, but the one who closed the gate was Uncle
-			Peter--Father's brother. I think there's something special about
+			Peter---Father's brother. I think there's something special about
 			our family; there are things only we can do. It's why Father could
 			summon the gate, and why Uncle Peter could close it. And now Peter's
-			son, Mathias, is going to try to open another gate tonight.
+			son, our cousin Mathias, is going to try to open another gate tonight.
 			
 			<<You probably share the family abilities. You must trust yourself
 			to know what to do.>>

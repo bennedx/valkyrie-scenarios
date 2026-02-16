@@ -78,7 +78,7 @@ Book DungeonCell Ordered No Keep Looped
 	
 	Page SearchBoy
 		Text """
-			The boy is mesmerized. He doesn’t respond to you, no matter what you
+			The boy is mesmerized. He doesn't respond to you, no matter what you
 			do.
 		"""
 		Exit

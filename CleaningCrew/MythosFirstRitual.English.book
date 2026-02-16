@@ -2,11 +2,9 @@ Language English
 Debug Off
 
 Book MythosFirstRitualOpenGate Ordered No Keep
-	Trigger @Ritual When goal = goalOpenGate And firstRitual
+	Triggered By @Ritual If goal = goalOpenGate And firstRitual
 	
-	Page One
-		Visible When firstRitual = 1
-		
+	Page Init
 		Text """
 			You stop in your tracks as something... happens to the house. You
 			aren't sure what it is, but fear clutches your gut as the feeling
@@ -15,52 +13,126 @@ Book MythosFirstRitualOpenGate Ordered No Keep
 			Each investigator takes 1 horror ({will} negates).
 		"""
 
+		Exit
+	End Page Init
+	
+	Page Start
+		Text """
+			The hair on the back of your neck stands up as you feel a power
+			filling the space around you. Something dark. Something evil.
+			Something violent.
+			
+			Sarah's eyes widen and she whispers,
+			<<Mathias has begun preparations for the ritual, the preparations you
+			read about in the {c:QItemDvm}. We must get to the altar before he
+			actually opens the gate. We must stop him.>>
+			
+			No immediate effect.
+		"""
+		
 		firstRitual = 2
 		Exit
 	End Page Start
-	
-	Page Two
-		Not Visible
-		
-		Text """
-			From deep in the house, you hear a boy scream in terror. It
-			stops abruptly and you feel something change in the air. The floor
-			shudders and everything goes quiet for a moment.
 
-			Sarah's eyes widen and she whispers to {c:EventChosenInvestigator},
-			<<Mathias has started. The ritual has started. We must get to the
-			altar and stop him.>>			
+	Page Vamp1
+		Text """
+			Something happens to the air around you as waves of power pass,
+			giving you hints about what is creating them. From
+			time-to-time, a more powerful wave washes over you. When those 
+			waves happen, Sarah's expression turns darker.
 			
-		"""
-		If goal == goalOpenGate Then Text """
-			The hair on the back of your neck stands up as you feel a power
-			filling the space around you. Something dark. Something evil.
-			Something violent.
+			Whatever is happening must be stopped.
 			
-			Sarah's eyes widen and she whispers,
-			<<Mathias begun preparations for the ritual, the preparations you
-			read about in the {c:QItemDvm}. We must get to the altar before he
-			actually opens the gate. We must stop him.>>
+			No immediate effect.
 		"""
 		
 		Exit
-	End Page FirstRitualStart
-
+	End Page Vamp1
 	
+	Page Vamp2
+		No Text
+		Goto MythosFirstRitualFeedOrCloseGate.Dagger
+	End Page Vamp2
+	
+	Page Vamp3
+		Text """
+			The power in air continues to pulse around you, occasionally
+			raising the hair on the back of your neck again.
+			
+			Sarah looks worried.
+			
+			No immediate effect.
+		"""
+		
+		Exit
+	End Page Vamp3
+	
+	Page Vamp4
+		No Text
+		Goto MythosFirstRitualFeedOrCloseGate.Chalice
+	End Page Vamp4
+	
+	Page Vamp5
+		Text """
+			With each step Mathias takes toward opening the gate, the air
+			around you changes in color and texture. But getting stronger at
+			each step. You are feeling the first traces of it in your skin.
+			
+			No immediate effect.
+		"""
+		
+		Exit
+	End Page Vamp5
+	
+	Page Vamp6
+		No Text
+		Goto MythosFirstRitualFeedOrCloseGate.Woman
+	End Page Vamp6
+	
+	Page Vamp7
+		Text """
+			The woman's screaming abruptly stops and, for a moment, it is silent
+			again, as if the house were taking a breath.
+
+			Sarah whispers, <<Mathias has recharged himself. He is nearly at
+			the final stage. He is ready to open the gate.>>
+			
+			No immediate effect.
+		"""
+		
+		Exit
+	End Page Vamp7
+	
+	Page Vamp8
+		Text """
+			A boy's terrified scream cuts through the silence. A moment
+			later, the most powerful wave yet pummels you. Its evil burning 
+			your skin. 
+			
+			Sarah leans in and whispers, <<He is starting to open the gate. We
+			are out of time.>>
+			
+			No immediate effect.
+		"""
+		
+		Exit
+	End Page Vamp8
+	
+	Page Fail
+		No Text
+		Goto EndSummary.OpenGateHardFail
+	End Page Fail
 End Book MythosFirstRitualOpenGate
 
-Book MythosFirstRitualFeedGate Ordered No Keep
-	Trigger @Ritual If goal = goalFeedGate And firstRitual
+Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
+	Triggered By @Ritual If (goal = goalFeedGate Or goal = goalCloseGate) And firstRitual
 
-	Page One
-		Visible When firstRitual = 1
-		
+	Page Init
+		No Text
 		Goto MythosFirstRitualOpenGate.One
-	End Page Start
+	End Page Init
 	
-	Page Two
-		Not Visible
-		
+	Page Start
 		Text """
 			From deep in the house, you hear a boy scream in terror. It
 			stops abruptly and you feel something change in the air. The floor
@@ -70,53 +142,151 @@ Book MythosFirstRitualFeedGate Ordered No Keep
 			<<Mathias has started. The ritual has started. We must get to the
 			altar and stop him.>>			
 			
+			No immediate effect.
 		"""
-		If goal == goalOpenGate Then Text """
-			The hair on the back of your neck stands up as you feel a power
-			filling the space around you. Something dark. Something evil.
-			Something violent.
-			
-			Sarah's eyes widen and she whispers,
-			<<Mathias begun preparations for the ritual, the preparations you
-			read about in the {c:QItemDvm}. We must get to the altar before he
-			actually opens the gate. We must stop him.>>
-		"""
-		
-		Exit
-	End Page FirstRitualStart
-End Book MythosFirstRitualFeedGate
 
-Book MythosFirstRitualCloseGate Ordered No Keep
-	Trigger @Ritual If goal = goalCloseGate And firstRitual
-	
-		
-		Goto MythosFirstRitualOpenGate.One
+		Exit
 	End Page Start
-
-	Page Two
-		Not Visible
-		
+	
+	Page Dagger
 		Text """
-			From deep in the house, you hear a boy scream in terror. It
-			stops abruptly and you feel something change in the air. The floor
-			shudders and everything goes quiet for a moment.
-
-			Sarah's eyes widen and she whispers to {c:EventChosenInvestigator},
-			<<Mathias has started. The ritual has started. We must get to the
-			altar and stop him.>>			
+			You feel something new within the power around you. Something that
+			drains you, but somehow makes you feel stronger. You have a sudden
+			flash of a knife being dragged across your palms.
 			
-		"""
-		If goal == goalOpenGate Then Text """
-			The hair on the back of your neck stands up as you feel a power
-			filling the space around you. Something dark. Something evil.
-			Something violent.
+			Sarah leans in and whispers, <<I can feel him preparing the dagger
+			for the ritual. I can see on your face that you sense it too. We
+			must find Mathias and stop him.>>
 			
-			Sarah's eyes widen and she whispers,
-			<<Mathias begun preparations for the ritual, the preparations you
-			read about in the {c:QItemDvm}. We must get to the altar before he
-			actually opens the gate. We must stop him.>>
+			No immediate effect.
 		"""
 		
 		Exit
-	End Page FirstRitualStart
-End Book MythosFirstRitualCloseGate
+	End Page Dagger
+	
+	Page FirstRitualChalice
+		Text """
+			Another shock hits you, making you feel the knife in your palm
+			again. You squeeze your hand into a tight fist but you aren't sure
+			why.
+			
+			Sarah leans in and whispers, <<I can feel him putting his blood in
+			a chalice. I can almost see it.>> She looks down at your fist and
+			says, <<I can see you are feeling the same thing.>>
+			
+			No immediate effect.
+		"""
+		
+		Exit
+	End Page FirstRitualChalice
+	
+	Page Woman
+		Text """
+			The power of Mathias's spell intensifies around you. It draws you in
+			and repulses you at the same time. A woman screams. The sound
+			pierces the walls of the house, making the windows rattle in their
+			frames. You feel her take a deep, ragged breath, then she screams
+			again. And again. And again.
+
+			She screams like she might never stop.
+
+			Sarah looks at you, eyes wide, and says nothing.
+
+			Each investigator takes 1 Horror ({will} negates).
+		"""
+		
+		Exit
+	End Page Woman
+	
+	Page Open
+		Text """
+			The woman's screaming abruptly stops and, for a moment, it is silent
+			again, as if the house were taking a breath. A boy's single,
+			terrified scream cuts through the silence. Though cannot see it,
+			you feel the gate spring into being. You hear something moan in
+			pain; you feel the rumblings of it through the house. You know in
+			your gut that it's Mathias's son.
+
+			The power of the gate has infused the air around you with a
+			a nearly electric sense of evil, making your skin buzz
+			in discomfort.
+			
+			Sarah looks like you feel. She says nothing.
+			
+			No immediate effect.
+		"""
+		
+		gateOpen = 1
+		Exit
+	End Page Open
+	
+	Page Stablize
+		Text """
+			You can still feel the gate through the walls and floor, sputtering
+			and buzzing, making it sound unstable, like it might collapse at
+			any moment. 
+			
+			A cultist runs into the dungeon cell, raises a hand,
+			mumbles words, and is sucked through the wall. A moment
+			later, the feeling the gate stablizes.
+			
+			Sarah leans in, <<I don't think Mathias has an elder sign to 
+			stablize the gate. Maybe that cultist is what he needed to keep
+			it open.
+			
+			No immediate effect.
+		"""
+		
+		If goal = goalCloseGate Then Text """
+			You can still feel the gate through the walls and floor, sputtering
+			and buzzing, making it sound unstable, like it might collapse at
+			any moment. A cultist runs into the dungeon cell, raises a hand,
+			mumbles words, and is sucked through the wall.
+
+			A minute passes and another wave of power washes over you. When it
+			passes, you can still feel the gate, but it is stable, powerful,
+			and quiet.
+			
+			Sarah leans in, <<He used an elder sign to stabilize the gate. Now
+			he will start summoning.>>
+			
+			No immediate effect.
+		"""
+		
+		gateOpen = gateOpen + 1
+		Exit	
+	End Page Stablize
+	
+	Page Summon
+		Text """
+			Power is now pulsing through the house and caves. Sarah is visibly
+			upset is no longer whispering. She is says loudly, <<Mathias is
+			summonning his god, an ancient one.>>
+			
+			No immediate effect.
+		"""
+		
+		gateOpen = gateOpen + 1
+		Exit
+	End Page Summon
+	
+	Page SummonContinue
+		Text """
+		"""
+		
+		gateOpen = gateOpen + 1
+		if gateOpen < 5 + openedGateNicely Then Mark SummonContinue Unread 
+		Exit		
+	End Page
+	
+	Page Fail
+		Text """
+			Something in the air changes. Something evil. Something final.
+			
+			The investigation is over.
+		"""
+		
+		Goto EndingBook.HardFail
+	End Page Fail
+End Book MythosFirstRitualFeedOrCloseGate
+

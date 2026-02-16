@@ -75,7 +75,7 @@ Book Driveway Ordered No Keep Looped
 			her ankle and skins her knees. When she looks up, she sees
 			something in the weeds. Wendy gains the {c:QItemWendyGun}.
 
-			When she finally stands up, she doesn’t feel as agile as usual. In
+			When she finally stands up, she doesn't feel as agile as usual. In
 			this scenario, Wendy can become Restrained.
 		"""
 	End Page PlaceWendy
@@ -196,7 +196,7 @@ Book Driveway Ordered No Keep Looped
 			Benjamin brushes past you with a harrumph. Discard the
 			Purple Man token.
 
-			You’ve only just arrived and the client is already angry.
+			You've only just arrived and the client is already angry.
 			This could turn out badly for both you and your friend's
 			business.
 		"""

@@ -469,9 +469,9 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 		Visible If basementPhase = first And basementSkill = brawn And basementUnlocked
 	
 		Text """
-			Eureka! You figured it out. (You’ll wonder how that happened for a
-			long time.) The house is dank and scary, but it’s just an old house.
-			This isn’t so bad.
+			Eureka! You figured it out. (You'll wonder how that happened for a
+			long time.) The house is dank and scary, but it's just an old house.
+			This isn't so bad.
 
 			Improve {lore} or {will}, then remove this Explore token.
 		"""
@@ -505,7 +505,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 		Visible If basementPhase = first And basementSkill = brains And basementUnlocked
 	
 		Text """
-			<<I didn’t know I had it in me!>> you exclaim. Improve {strength} or
+			<<I didn't know I had it in me!>> you exclaim. Improve {strength} or
 			{will}, then discard this Explore token.
 		"""
 		
@@ -516,7 +516,7 @@ Book DoorBasementViaDiningRoomBlocked Ordered No Keep Looped
 		Visible If basementPhase = first And basementSkill = brains And Not basementUnlocked
 
 		Text """
-			Feeling like you can’t do anything right, you settle into a sulk.
+			Feeling like you can't do anything right, you settle into a sulk.
 			<i>I really need to watch my temper today,</i> you think. You hand
 			is still throbbing with pain. Take 1 Damage ({will}).
 		"""

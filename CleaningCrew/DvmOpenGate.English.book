@@ -96,7 +96,7 @@ Book DvmOpenGate Ordered Keep Looped
             ask yourself.
         
             {qst:FirstTimeRead}, suffer 1 Horror ({will} negates), then
-            gain 2 {clue} if you don’t go Insane.
+            gain 2 {clue} if you don't go Insane.
         """
         
         If journalReadPage4 Then Text """

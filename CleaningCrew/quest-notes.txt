@@ -159,14 +159,6 @@ End Games ----------------------------------------------------------------------
 					into the night. The full moon shines down, showing the path
 					is clear of cultists. You are finally safe.
 					
-					
-					Sarah turns to you and says, <<You were successful. But you
-					were not able to seal the gate, so this will all happen
-					again. Once the boy dies, I will try
-					send to send him to find peace. I will stay and wait for 
-					the next opportunity to permanently stop this madness.
-					Thank you for what you were able to do.>>
-					
 					Sarah turns to you and says, <<You were successful. But you
 					were not able to seal the gate, so this will all happen
 					again. I need to get back to our nephew, to see if there is
@@ -218,7 +210,8 @@ End Games ----------------------------------------------------------------------
 		Hard fails	didn't find altar (any goal)
 		
 					The house continues to shake, light streaming up through
-					the floorboards. With a thunderous clap, the house begins
+					the floorboards and, somehow, through the cave walls. With
+					a thunderous clap, the house begins
 					to fall apart and the ceiling rains down. You run toward
 					the servant dining room, but when you get there, 
 					cult members block your path. They attack you without

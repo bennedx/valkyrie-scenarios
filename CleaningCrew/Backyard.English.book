@@ -99,7 +99,7 @@ Book Backyard Ordered No Keep Looped
 		Prolog "A withered plant sits on a broken-down table."
 		
 		Text """
-			You carefully examine the pot. You aren’t sure why this is
+			You carefully examine the pot. You aren't sure why this is
 			important. Maybe it's not, but it has your attention. ({agility})
 		"""
 		
@@ -184,7 +184,7 @@ Book Backyard Ordered No Keep Looped
 		Triggered By @ExploreDiningRoomViaBackyard
 		
 		Text """
-			The door is filthy. You check the knob, but it’s locked:
+			The door is filthy. You check the knob, but it's locked:
 			you'll need a key to get in.
 		"""
 		

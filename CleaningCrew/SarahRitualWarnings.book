@@ -19,7 +19,7 @@ Book SarahRitualWarnings Ordered No Keep
 		
 		Text """
 			Sarah leans in and whispers, <<You must finish reading the journal.
-			Surely it will tell in more about what is happening now. We still
+			Surely it will tell in more detail what is planned. We still
 			don't know how to find the altar and we aren't sure what your role
 			is to be. We must hurry.>>
 		"""
@@ -43,5 +43,17 @@ Book SarahRitualWarnings Ordered No Keep
 			though I'm not sure what it is. We should look around. Maybe we'll
 			find what I'm feeling.>>
 		"""
+		
 	End Page ElderSign
+	
+	Page Restart
+		No Text
+		
+		Mark Dvm Unread
+		Mark JournalNoHole Unread
+		Mark Journal Unread
+		Mark ElderSign Unread
+
+		Loop
+	End Page Restart
 End Book SarahRitualWarnings
