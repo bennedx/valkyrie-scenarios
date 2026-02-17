@@ -77,7 +77,7 @@ Book Mythos Ordered No Keep
 			shudders and everything goes quiet for a moment.
 
 			Sarah's eyes widen and she whispers to {c:EventChosenInvestigator},
-			<<Mathias has started. The ritual has started. We must get to the
+			<<Matthias has started. The ritual has started. We must get to the
 			altar and stop him.>>			
 			
 		"""
@@ -87,7 +87,7 @@ Book Mythos Ordered No Keep
 			Something violent.
 			
 			Sarah's eyes widen and she whispers,
-			<<Mathias begun preparations for the ritual, the preparations you
+			<<Matthias begun preparations for the ritual, the preparations you
 			read about in the {c:QItemDvm}. We must get to the altar before he
 			actually opens the gate. We must stop him.>>
 		"""
@@ -105,7 +105,7 @@ Book Mythos Ordered No Keep
 			
 			Sarah leans in and whispers, <<I can feel him preparing the dagger
 			for the ritual. I can see on your face that you sense it too. We
-			must find Mathias and stop him.
+			must find Matthias and stop him.
 		"""
 		
 		Exit
@@ -127,7 +127,7 @@ Book Mythos Ordered No Keep
 		Not Visible
 		
 		Text """
-			You feel the first real power of the spell Mathias is casting as it
+			You feel the first real power of the spell Matthias is casting as it
 			intensifies what you feel around you. It draws you in and repulses
 			you at the same time. A woman screams. The sound pierces the walls
 			of the house, making the windows rattle in their frames. You feel
@@ -150,7 +150,7 @@ Book Mythos Ordered No Keep
 			terrified scream cuts through the silence. Though cannot see it,
 			you feel the gate spring into being. You hear something moan in
 			pain; you feel the rumblings of it through the house. You know in
-			your gut that it's Mathias's son.
+			your gut that it's Matthias's son.
 
 			The power of the gate has infused the air around you with a
 			a nearly electric sense of evil, making your skin buzz
@@ -170,7 +170,7 @@ Book Mythos Ordered No Keep
 		Rules:  every goal
 	
 	Gate
-		You feel the power of the spell Mathias is casting. It draws you in and repulses you at the same time. A woman screams. The sound pierces the walls of the house, making the windows rattle in their frames. You feel her take a deep, gasping breath, then she screams again. And again. And again. The screaming sends a chill through you. Each investigator takes 2 Horror ({will} negates).
+		You feel the power of the spell Matthias is casting. It draws you in and repulses you at the same time. A woman screams. The sound pierces the walls of the house, making the windows rattle in their frames. You feel her take a deep, gasping breath, then she screams again. And again. And again. The screaming sends a chill through you. Each investigator takes 2 Horror ({will} negates).
 		
 		if goalOpenGate: Sarah whispers, <<Our cousin has started the opening ritual. We must stop him.>>
 		
@@ -183,7 +183,7 @@ Book Mythos Ordered No Keep
 
 		
 		If goalFeedGate, Sarah whispers, <<The gate is open, but you have the 
-		elder sign. Mathias cannot stabilize the gate; instead, he will need a ready supply of blood sacrifice. Maybe
+		elder sign. Matthias cannot stabilize the gate; instead, he will need a ready supply of blood sacrifice. Maybe
 		we can cut off the supply.
 		
 		if goalCloseGate: Sarah whispers, <<The gate is open. You must perform the closing ritual.>>
@@ -195,12 +195,12 @@ Book Mythos Ordered No Keep
 	Seal/Stabilize
 			The woman screams again. After a few seconds, it doesn't sound human. Then the screaming stops and something... changes.
 			The gates power in the house has been uneven, sputtering and popping, but now it is seems to be stabilizing. Sarah whispers,
-			<<I think Mathias has used an elder sign to stabilize and hold open the gate. This is bad. We must get to the altar to stop him.>>
+			<<I think Matthias has used an elder sign to stabilize and hold open the gate. This is bad. We must get to the altar to stop him.>>
 	
 		Rules:  goalCloseGate
 
 	Summons--at altar
-		Mathias is still at the altar and still speaking a language you do not understand. The gate glows and hums, but it seems to be stable now. Mathias is focused on the gate. You can see by his excitement that he is anticipating something. You can feel it growing closer... a cold dread creeping into your already-pounding heart. You don't have long now. 
+		Matthias is still at the altar and still speaking a language you do not understand. The gate glows and hums, but it seems to be stable now. Matthias is focused on the gate. You can see by his excitement that he is anticipating something. You can feel it growing closer... a cold dread creeping into your already-pounding heart. You don't have long now. 
 
 		Sarah confirms your fear when she leans in and says, <<He is summoning his god. You must stop him. You must kill him.>>
 

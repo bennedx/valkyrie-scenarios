@@ -142,7 +142,7 @@ Book Startup Ordered No Keep Looped
 		Not Visible
 		Triggered By @SplashScreen
 		
-		Add UIStoryImage, UIStoryBackground, UIOpeningText, UISplashFancyBar 
+		Trigger @ShowIntroFrame
 		Audio "audio\openingall.ogg"
 		
 		No Text
@@ -158,7 +158,8 @@ Book Startup Ordered No Keep Looped
 		
 		No Text
 		Audio "audio\no-sound.ogg"
-		Remove UIStoryImage, UIStoryBackground, UIOpeningText, UISplashFancyBar, UIStoryContinue
+		Trigger @HideIntoFrame
+		Remove UIOpeningText
 	End Page SplashScreenClosed
 	
 	Page StartScenario

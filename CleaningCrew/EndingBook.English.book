@@ -1,0 +1,185 @@
+Language English
+Debug Off
+
+Book Endings
+	Triggered By @GameOver
+	
+	Page HardFail 
+		Visible When ritual
+
+		Trigger @ShowIntroFrame
+		
+		Text Like UIOpeningText """
+			The house shakes, and light streams up through the floorboards and,
+			somehow, through the cave walls. With a thunderous clap and a shock
+			wave of power, the ceiling rains down as the house begins to
+			collapse. You run toward the servant dining room, but when you get
+			there, cult members block your path. They attack you without mercy.
+			
+			As you lie on the floor, bleeding and dying, the cultists run out
+			the door to safety. Sarah leans down and whispers, <<We failed and
+			there is no telling how much of the world will be destroyed, how
+			many people will die. You did your best, so thank you.>>
+
+			Your last living experience is the floor under you rising up as the
+			beast enters the world.
+			
+			The End
+		"""
+		
+		Add UIEndButton
+		Audio "HardFail.English.ogg"
+	End Page HardFail
+
+	Page OpenGateWin
+		Visible If goal = goalOpenGate And win
+
+		Trigger @ShowIntroFrame
+		
+		Text Like UIOpeningText """
+			You run out the door of the Chapel, breathing hard and nearly
+			carrying the boy with you. Sarah follows you outside into the night.
+			The full moon shines down, showing the path is clear of cultists.
+			You are finally safe.
+
+			Sarah turns to you and says, <<You were successful. Not only did we
+			stop Matthias's current plans, we stopped anyone's ability to use
+			this area to try again. Our nephew will grow up normally and I can
+			finally find peace. Thank you.>>
+
+			As you walk down the road you entered a few hours ago, you reflect
+			on everything that just happened. Exhausted and still in shock, you
+			wonder if the world will ever feel the same again. But you are also
+			deeply comforted and proud that you were able to save the world from
+			the evil that Matthias tried to bring.
+
+			The end.
+		"""
+		
+		Add UIEndButton
+		Audio "OpenGateWin.English.ogg"
+	End Page OpenGateWin
+	
+	Page OpenGateDraw
+		Visible If goal = goalOpenGate And draw
+
+		Trigger @ShowIntroFrame
+		
+		Text Like UIOpeningText """
+			You run out the door of the Chapel, breathing hard, still panicked.
+			Sarah follows you outside into the night. The full moon shines down,
+			showing the path is clear of cultists. You are finally safe.
+
+			Sarah turns to you and says, <<You were successful. But you were not
+			able to seal the gate, so this will all happen again. I need to get
+			back to our nephew, to see if there is anything I can do for him.
+			Once he dies, I will try to send him to find peace. I will stay and
+			wait for the next opportunity to permanently stop this madness.
+			Thank you for what you were able to do.>>
+
+			As you walk down the road, you reflect on everything that happened.
+			Exhausted and still in shock, you wonder if the world will ever feel
+			the same again. While knowing you stopped his plans, Matthias still
+			brutally killed his son. But you are at least comforted that you
+			were able to save the world from the evil that Matthias tried to
+			bring.
+
+			The end.
+		"""
+		
+		Add UIEndButton
+		Audio "OpenGateDraw.English.ogg"
+	End Page OpenGateDraw
+	
+	Page OpenGateLose
+		Visible If goal = goalOpenGate And lose
+
+		Trigger @ShowIntroFrame
+		
+		Text Like UIOpeningText """
+			As the ancient one nears the portal, you panic and try to run. The
+			altar room is shaking and stone from the ceiling is beginning to
+			fall. Your cousin continues to cast the summoning spell. You panic
+			and begin to run.
+
+			You find a door that leads back to the cave, but when you enter, you
+			find yourself surrounded by more cultists. This time, they outnumber
+			you. You fall quickly to their weapons.
+
+			Broken and bleeding, you lie on the floor. A monstrous roar cuts
+			through the din:  the Ancient One has come through the gate. As you
+			draw your last breath, the cultists fall to their knees and begin
+			praying to the beast for salvation. The last thing you feel is the
+			ceiling caving in and the screams of the cultists, betrayed by their
+			god for their foolishness. 
+
+			The only comfort you have is in knowing that a stream of sacrifice
+			is required to keep the ancient one here. With so many cult members
+			dead, maybe the beast won't be here for long.
+		"""
+		
+		Add UIEndButton
+		Audio "OpenGateFail.English.ogg"
+	End Page OpenGateLose
+	
+	Page FeedGateWin
+		Visible If goal = goalFeedGate And win
+
+		Trigger @ShowIntroFrame
+		Add UIEpilogTextHardFail, UIEndButton
+		Audio "HardFail.English.ogg"
+	End Page FeedGateWin
+	
+	Page FeedGateDraw
+		Visible If goal = goalFeedGate And draw
+
+		Trigger @ShowIntroFrame
+		Add UIEpilogTextHardFail, UIEndButton
+		Audio "HardFail.English.ogg"
+	End Page FeedGateDraw
+	
+	Page FeedGateLose
+		Visible If goal = goalFeedGate And lose
+
+		Trigger @ShowIntroFrame
+		Add UIEpilogTextHardFail, UIEndButton
+		Audio "HardFail.English.ogg"
+	End Page FeedGateLose
+	
+	Page CloseGateWin
+		Visible If goal = goalCloseGate And win
+
+		Trigger @ShowIntroFrame
+		Add UIEpilogTextHardFail, UIEndButton
+		Audio "HardFail.English.ogg"
+	End Page CloseGateWin
+	
+	Page CloseGateDraw
+		Visible If goal = goalCloseGate And draw
+
+		Trigger @ShowIntroFrame
+		Add UIEpilogTextHardFail, UIEndButton
+		Audio "HardFail.English.ogg"
+	End Page CloseGateDraw
+	
+	Page CloseGateLose
+		Visible If goal = goalCloseGate And lose
+
+		Trigger @ShowIntroFrame
+		Add UIEpilogTextHardFail, UIEndButton
+		Audio "HardFail.English.ogg"
+	End Page CloseGateLose
+	
+	Page ShowUIFrame
+		Triggered By @ShowIntroFrame
+		
+		Add UIStoryImage, UIStoryBackground, UIOpeningText, UISplashFancyBar 
+		No Text
+	End Page ShowUIFrame
+	
+	Page HideIntroFrame
+		Triggered By @HideIntroFrame
+		Remove UIStoryImage, UIStoryBackground, UISplashFancyBar, UIStoryContinue, UIEndGame
+	End Page HideIntroFrame
+End Book Endings
+

@@ -57,16 +57,16 @@ Book DungeonCell Ordered No Keep Looped
 	Page PlaceDavidsSon
 		Visible If Not ritual
 		
-		Add TokenSearchCellMathiasSon!
+		Add TokenSearchCellMatthiasSon!
 		
 		Text """
 			A boy is chained to the wall, lying on the floor, and moaning
-			quietly. Place a Person token as indicated. This is Mathias's son.
+			quietly. Place a Person token as indicated. This is Matthias's son.
 		"""
 		
 		If readAboutBoy Then Text """
 			A boy is chained to the wall, lying on the floor, moaning
-			quietly. Place a Person token as indicated. This is Mathias's son,
+			quietly. Place a Person token as indicated. This is Matthias's son,
 			the sacrifice.
 		"""
 	End Page PlaceDavidsSon

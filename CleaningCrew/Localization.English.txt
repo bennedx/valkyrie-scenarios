@@ -3416,7 +3416,7 @@ EventChapelReadPageSearchRitualComponents.text,
 EventChapelReadPageSearchRitualComponents.button1,
 EventChapelReadPageSearchRitualComponentsDisplay.text,
 EventChapelReadPageSearchRitualComponentsDisplay.button1,
-EventChapelReadPageSearchRitualComponentsBase.text,|||\nAs you walk around the altar to get a better look, you see that there is a chalice, some herbs, and even a skull. As you prepare to tuck the skull into your bag, you reflect on the many times you’ve been in these situations. You’ve learned to shamelessly grab anything you might need, no matter how unlikely. Gain the {c:QItemRitualComponents} Unique Item.\n\nThe book is the Smythe family bible. The first section lists births, marriages, and deaths going back many generations. A few of the men–all named Smythe–have a {success} next to their names. {c:EventChosenInvestigator}’s cousin Mathias has this marking. You aren’t sure what it means, but from what you’ve seen and read today, it worries you.\n\nGain 2 {clue}, then discard this Search token.\n|||
+EventChapelReadPageSearchRitualComponentsBase.text,|||\nAs you walk around the altar to get a better look, you see that there is a chalice, some herbs, and even a skull. As you prepare to tuck the skull into your bag, you reflect on the many times you’ve been in these situations. You’ve learned to shamelessly grab anything you might need, no matter how unlikely. Gain the {c:QItemRitualComponents} Unique Item.\n\nThe book is the Smythe family bible. The first section lists births, marriages, and deaths going back many generations. A few of the men–all named Smythe–have a {success} next to their names. {c:EventChosenInvestigator}’s cousin Matthias has this marking. You aren’t sure what it means, but from what you’ve seen and read today, it worries you.\n\nGain 2 {clue}, then discard this Search token.\n|||
 EventChapelReadPageSearchRitualComponentsBase.button1,{qst:continue}
 EventChapelReadPageSearchRitualComponentsTiePoint.text,
 EventChapelReadPageSearchRitualComponentsTiePoint.button1,
@@ -7401,13 +7401,13 @@ EventDungeonCellExpr11.text,
 EventDungeonCellExpr11.button1,
 EventDungeonCellReadPagePlaceDavidsSonDisplay.text,
 EventDungeonCellReadPagePlaceDavidsSonDisplay.button1,
-EventDungeonCellReadPagePlaceDavidsSonOverload1.text,|||\nA boy is chained to the wall, lying on the floor, moaning quietly. Place a Person token as indicated. This is Mathias’s son, the sacrifice.\n|||
+EventDungeonCellReadPagePlaceDavidsSonOverload1.text,|||\nA boy is chained to the wall, lying on the floor, moaning quietly. Place a Person token as indicated. This is Matthias’s son, the sacrifice.\n|||
 EventDungeonCellReadPagePlaceDavidsSonOverload1.button1,{qst:continue}
 EventDungeonCellReadPagePlaceDavidsSonTiePoint.text,
 EventDungeonCellReadPagePlaceDavidsSonTiePoint.button1,
 EventDungeonCellReadPagePlaceDavidsSonEnd.text,
 EventDungeonCellReadPagePlaceDavidsSonEnd.button1,
-EventDungeonCellReadPagePlaceDavidsSonBase.text,|||\nA boy is chained to the wall, lying on the floor, and moaning quietly. Place a Person token as indicated. This is Mathias’s son.\n|||
+EventDungeonCellReadPagePlaceDavidsSonBase.text,|||\nA boy is chained to the wall, lying on the floor, and moaning quietly. Place a Person token as indicated. This is Matthias’s son.\n|||
 EventDungeonCellReadPagePlaceDavidsSonBase.button1,{qst:continue}
 EventDungeonCellReadPagePlaceEndXferIfTriggered.text,
 EventDungeonCellReadPagePlaceEndXferIfTriggered.button1,
@@ -7968,7 +7968,7 @@ EventFeedGateReadPageRitualBegins.text,
 EventFeedGateReadPageRitualBegins.button1,
 EventFeedGateReadPageRitualBeginsDisplay.text,
 EventFeedGateReadPageRitualBeginsDisplay.button1,
-EventFeedGateReadPageRitualBeginsBase.text,|||\nYou freeze as something... <i>happens‘/’ to the house. You aren’t sure what it is, but fear clutches your gut as the feeling washes over you.\n\nThen, from deep in the house, you hear a boy scream in pain and terror. He stops abruptly and you feel something in the air, like electricity. The house shudders and everything goes quiet. Sarah’s eyes widen and she whispers to {c:EventChosenInvestigator}, “He’s started. The ritual has started. We have to get to the {c:TileAltar} and stop your cousin Mathias.”\n\nAs she finishes speaking, someone in cult robes runs by you, heading toward the cell.\n|||
+EventFeedGateReadPageRitualBeginsBase.text,|||\nYou freeze as something... <i>happens‘/’ to the house. You aren’t sure what it is, but fear clutches your gut as the feeling washes over you.\n\nThen, from deep in the house, you hear a boy scream in pain and terror. He stops abruptly and you feel something in the air, like electricity. The house shudders and everything goes quiet. Sarah’s eyes widen and she whispers to {c:EventChosenInvestigator}, “He’s started. The ritual has started. We have to get to the {c:TileAltar} and stop your cousin Matthias.”\n\nAs she finishes speaking, someone in cult robes runs by you, heading toward the cell.\n|||
 EventFeedGateReadPageRitualBeginsBase.button1,{qst:continue}
 EventFeedGateReadPageRitualBeginsTiePoint.text,
 EventFeedGateReadPageRitualBeginsTiePoint.button1,
@@ -7984,7 +7984,7 @@ EventFeedGateReadPageGateOpens.text,
 EventFeedGateReadPageGateOpens.button1,
 EventFeedGateReadPageGateOpensDisplay.text,
 EventFeedGateReadPageGateOpensDisplay.button1,
-EventFeedGateReadPageGateOpensBase.text,|||\nThe woman’s screaming stops and, for a moment, the house is silent again... as if the house were taking a breath. Then, though you cannot see it, you can feel the gate spring into being. You hear... <i>something‘/’ moan in pain, reverberating through the wall, an unearthly sound. You know in your gut it’s Mathias’s son.\n\nThe feeling of power grows stronger; it radiates through the floorboards and moves through the walls. Sarah whispers, “The gate is open, we have to stop him.”\n\nAs she speaks, another cultist brushes past you, also heading toward the cell.\n\nSarah lights up. “We have the {c:QItemElderSign}. Without it, Mathias needs constant sacrifice to keep the gate open. Those cultists are his sacrifices.\n\n“You must kill them,” she says loudly. Everyone in the room turns to look at her. “You must kill them all.”\n|||
+EventFeedGateReadPageGateOpensBase.text,|||\nThe woman’s screaming stops and, for a moment, the house is silent again... as if the house were taking a breath. Then, though you cannot see it, you can feel the gate spring into being. You hear... <i>something‘/’ moan in pain, reverberating through the wall, an unearthly sound. You know in your gut it’s Matthias’s son.\n\nThe feeling of power grows stronger; it radiates through the floorboards and moves through the walls. Sarah whispers, “The gate is open, we have to stop him.”\n\nAs she speaks, another cultist brushes past you, also heading toward the cell.\n\nSarah lights up. “We have the {c:QItemElderSign}. Without it, Matthias needs constant sacrifice to keep the gate open. Those cultists are his sacrifices.\n\n“You must kill them,” she says loudly. Everyone in the room turns to look at her. “You must kill them all.”\n|||
 EventFeedGateReadPageGateOpensBase.button1,{qst:continue}
 EventFeedGateReadPageGateOpensTiePoint.text,
 EventFeedGateReadPageGateOpensTiePoint.button1,
@@ -10478,13 +10478,13 @@ EventMythosExpr87.text,
 EventMythosExpr87.button1,
 EventMythosReadPageFirstRitualStartDisplay.text,
 EventMythosReadPageFirstRitualStartDisplay.button1,
-EventMythosReadPageFirstRitualStartOverload1.text,|||\nThe hair on the back of your neck stands up as you feel a power filling the space around you. Something dark. Something evil. Something violent.\n\nSarah’s eyes widen and she whispers, “Mathias begun preparations for the ritual, the preparations you read about in the {c:QItemDvm}. We must get to the altar before he actually opens the gate. We must stop him.”\n|||
+EventMythosReadPageFirstRitualStartOverload1.text,|||\nThe hair on the back of your neck stands up as you feel a power filling the space around you. Something dark. Something evil. Something violent.\n\nSarah’s eyes widen and she whispers, “Matthias begun preparations for the ritual, the preparations you read about in the {c:QItemDvm}. We must get to the altar before he actually opens the gate. We must stop him.”\n|||
 EventMythosReadPageFirstRitualStartOverload1.button1,{qst:continue}
 EventMythosReadPageFirstRitualStartTiePoint.text,
 EventMythosReadPageFirstRitualStartTiePoint.button1,
 EventMythosReadPageFirstRitualStartAfterGoto158.text,
 EventMythosReadPageFirstRitualStartAfterGoto158.button1,
-EventMythosReadPageFirstRitualStartBase.text,|||\nFrom deep in the house, you hear a boy scream in terror. It stops abruptly and you feel something change in the air. The floor shudders and everything goes quiet for a moment.\n\nSarah’s eyes widen and she whispers to {c:EventChosenInvestigator}, “Mathias has started. The ritual has started. We must get to the altar and stop him.”\n|||
+EventMythosReadPageFirstRitualStartBase.text,|||\nFrom deep in the house, you hear a boy scream in terror. It stops abruptly and you feel something change in the air. The floor shudders and everything goes quiet for a moment.\n\nSarah’s eyes widen and she whispers to {c:EventChosenInvestigator}, “Matthias has started. The ritual has started. We must get to the altar and stop him.”\n|||
 EventMythosReadPageFirstRitualStartBase.button1,{qst:continue}
 EventMythosExpr89.text,
 EventMythosExpr89.button1,
@@ -10494,7 +10494,7 @@ EventMythosReadPageFirstRitualKnife.text,
 EventMythosReadPageFirstRitualKnife.button1,
 EventMythosReadPageFirstRitualKnifeDisplay.text,
 EventMythosReadPageFirstRitualKnifeDisplay.button1,
-EventMythosReadPageFirstRitualKnifeBase.text,|||\nYou feel something new within the power around you. Something that drains you, but somehow makes you feel stronger. You have a sudden flash of a knife being dragged across your palms.\n\nSarah leans in and whispers, “I can feel him preparing the dagger for the ritual. I can see on your face that you sense it too. We must find Mathias and stop him.\n|||
+EventMythosReadPageFirstRitualKnifeBase.text,|||\nYou feel something new within the power around you. Something that drains you, but somehow makes you feel stronger. You have a sudden flash of a knife being dragged across your palms.\n\nSarah leans in and whispers, “I can feel him preparing the dagger for the ritual. I can see on your face that you sense it too. We must find Matthias and stop him.\n|||
 EventMythosReadPageFirstRitualKnifeBase.button1,{qst:continue}
 EventMythosReadPageFirstRitualKnifeTiePoint.text,
 EventMythosReadPageFirstRitualKnifeTiePoint.button1,
@@ -10518,7 +10518,7 @@ EventMythosReadPageFirstRitualWoman.text,
 EventMythosReadPageFirstRitualWoman.button1,
 EventMythosReadPageFirstRitualWomanDisplay.text,
 EventMythosReadPageFirstRitualWomanDisplay.button1,
-EventMythosReadPageFirstRitualWomanBase.text,|||\nYou feel the first real power of the spell Mathias is casting as it intensifies what you feel around you. It draws you in and repulses you at the same time. A woman screams. The sound pierces the walls of the house, making the windows rattle in their frames. You feel her take a deep, ragged breath, then she screams again. And again. And again. Just as you start to feel like you might start screaming too, it abruptly stops, and you know she is dead.\n\nEach investigator takes 1 Horror ({will} negates).\n|||
+EventMythosReadPageFirstRitualWomanBase.text,|||\nYou feel the first real power of the spell Matthias is casting as it intensifies what you feel around you. It draws you in and repulses you at the same time. A woman screams. The sound pierces the walls of the house, making the windows rattle in their frames. You feel her take a deep, ragged breath, then she screams again. And again. And again. Just as you start to feel like you might start screaming too, it abruptly stops, and you know she is dead.\n\nEach investigator takes 1 Horror ({will} negates).\n|||
 EventMythosReadPageFirstRitualWomanBase.button1,{qst:continue}
 EventMythosReadPageFirstRitualWomanTiePoint.text,
 EventMythosReadPageFirstRitualWomanTiePoint.button1,
@@ -10530,7 +10530,7 @@ EventMythosReadPageFirstRitualOpen.text,
 EventMythosReadPageFirstRitualOpen.button1,
 EventMythosReadPageFirstRitualOpenDisplay.text,
 EventMythosReadPageFirstRitualOpenDisplay.button1,
-EventMythosReadPageFirstRitualOpenBase.text,|||\nThe woman’s screaming abruptly stops and, for a moment, it is silent again, as if the house were taking a breath. A boy’s single, terrified scream cuts through the silence. Though cannot see it, you feel the gate spring into being. You hear something moan in pain; you feel the rumblings of it through the house. You know in your gut that it’s Mathias’s son.\n\nThe power of the gate has infused the air around you with a a nearly electric sense of evil, making your skin buzz in discomfort.\n|||
+EventMythosReadPageFirstRitualOpenBase.text,|||\nThe woman’s screaming abruptly stops and, for a moment, it is silent again, as if the house were taking a breath. A boy’s single, terrified scream cuts through the silence. Though cannot see it, you feel the gate spring into being. You hear something moan in pain; you feel the rumblings of it through the house. You know in your gut that it’s Matthias’s son.\n\nThe power of the gate has infused the air around you with a a nearly electric sense of evil, making your skin buzz in discomfort.\n|||
 EventMythosReadPageFirstRitualOpenBase.button1,{qst:continue}
 EventMythosReadPageFirstRitualOpenTiePoint.text,
 EventMythosReadPageFirstRitualOpenTiePoint.button1,
@@ -10632,7 +10632,7 @@ EventMythosFirstRitualOpenGateReadPageStart.text,
 EventMythosFirstRitualOpenGateReadPageStart.button1,
 EventMythosFirstRitualOpenGateReadPageStartDisplay.text,
 EventMythosFirstRitualOpenGateReadPageStartDisplay.button1,
-EventMythosFirstRitualOpenGateReadPageStartBase.text,|||\nThe hair on the back of your neck stands up as you feel a power filling the space around you. Something dark. Something evil. Something violent.\n\nSarah’s eyes widen and she whispers, “Mathias has begun preparations for the ritual, the preparations you read about in the {c:QItemDvm}. We must get to the altar before he actually opens the gate. We must stop him.”\n\nNo immediate effect.\n|||
+EventMythosFirstRitualOpenGateReadPageStartBase.text,|||\nThe hair on the back of your neck stands up as you feel a power filling the space around you. Something dark. Something evil. Something violent.\n\nSarah’s eyes widen and she whispers, “Matthias has begun preparations for the ritual, the preparations you read about in the {c:QItemDvm}. We must get to the altar before he actually opens the gate. We must stop him.”\n\nNo immediate effect.\n|||
 EventMythosFirstRitualOpenGateReadPageStartBase.button1,{qst:continue}
 EventMythosFirstRitualOpenGateReadPageStartTiePoint.text,
 EventMythosFirstRitualOpenGateReadPageStartTiePoint.button1,
@@ -10692,7 +10692,7 @@ EventMythosFirstRitualOpenGateReadPageVamp5.text,
 EventMythosFirstRitualOpenGateReadPageVamp5.button1,
 EventMythosFirstRitualOpenGateReadPageVamp5Display.text,
 EventMythosFirstRitualOpenGateReadPageVamp5Display.button1,
-EventMythosFirstRitualOpenGateReadPageVamp5Base.text,|||\nWith each step Mathias takes toward opening the gate, the air around you changes in color and texture. But getting stronger at each step. You are feeling the first traces of it in your skin.\n\nNo immediate effect.\n|||
+EventMythosFirstRitualOpenGateReadPageVamp5Base.text,|||\nWith each step Matthias takes toward opening the gate, the air around you changes in color and texture. But getting stronger at each step. You are feeling the first traces of it in your skin.\n\nNo immediate effect.\n|||
 EventMythosFirstRitualOpenGateReadPageVamp5Base.button1,{qst:continue}
 EventMythosFirstRitualOpenGateReadPageVamp5TiePoint.text,
 EventMythosFirstRitualOpenGateReadPageVamp5TiePoint.button1,
@@ -10714,7 +10714,7 @@ EventMythosFirstRitualOpenGateReadPageVamp7.text,
 EventMythosFirstRitualOpenGateReadPageVamp7.button1,
 EventMythosFirstRitualOpenGateReadPageVamp7Display.text,
 EventMythosFirstRitualOpenGateReadPageVamp7Display.button1,
-EventMythosFirstRitualOpenGateReadPageVamp7Base.text,|||\nThe woman’s screaming abruptly stops and, for a moment, it is silent again, as if the house were taking a breath.\n\nSarah whispers, “Mathias has recharged himself. He is nearly at the final stage. He is ready to open the gate.”\n\nNo immediate effect.\n|||
+EventMythosFirstRitualOpenGateReadPageVamp7Base.text,|||\nThe woman’s screaming abruptly stops and, for a moment, it is silent again, as if the house were taking a breath.\n\nSarah whispers, “Matthias has recharged himself. He is nearly at the final stage. He is ready to open the gate.”\n\nNo immediate effect.\n|||
 EventMythosFirstRitualOpenGateReadPageVamp7Base.button1,{qst:continue}
 EventMythosFirstRitualOpenGateReadPageVamp7TiePoint.text,
 EventMythosFirstRitualOpenGateReadPageVamp7TiePoint.button1,
@@ -10856,7 +10856,7 @@ EventMythosFirstRitualFeedOrCloseGateReadPageStart.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageStart.button1,
 EventMythosFirstRitualFeedOrCloseGateReadPageStartDisplay.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageStartDisplay.button1,
-EventMythosFirstRitualFeedOrCloseGateReadPageStartBase.text,|||\nFrom deep in the house, you hear a boy scream in terror. It stops abruptly and you feel something change in the air. The floor shudders and everything goes quiet for a moment.\n\nSarah’s eyes widen and she whispers to {c:EventChosenInvestigator}, “Mathias has started. The ritual has started. We must get to the altar and stop him.”\n\nNo immediate effect.\n|||
+EventMythosFirstRitualFeedOrCloseGateReadPageStartBase.text,|||\nFrom deep in the house, you hear a boy scream in terror. It stops abruptly and you feel something change in the air. The floor shudders and everything goes quiet for a moment.\n\nSarah’s eyes widen and she whispers to {c:EventChosenInvestigator}, “Matthias has started. The ritual has started. We must get to the altar and stop him.”\n\nNo immediate effect.\n|||
 EventMythosFirstRitualFeedOrCloseGateReadPageStartBase.button1,{qst:continue}
 EventMythosFirstRitualFeedOrCloseGateReadPageStartTiePoint.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageStartTiePoint.button1,
@@ -10868,7 +10868,7 @@ EventMythosFirstRitualFeedOrCloseGateReadPageDagger.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageDagger.button1,
 EventMythosFirstRitualFeedOrCloseGateReadPageDaggerDisplay.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageDaggerDisplay.button1,
-EventMythosFirstRitualFeedOrCloseGateReadPageDaggerBase.text,|||\nYou feel something new within the power around you. Something that drains you, but somehow makes you feel stronger. You have a sudden flash of a knife being dragged across your palms.\n\nSarah leans in and whispers, “I can feel him preparing the dagger for the ritual. I can see on your face that you sense it too. We must find Mathias and stop him.”\n\nNo immediate effect.\n|||
+EventMythosFirstRitualFeedOrCloseGateReadPageDaggerBase.text,|||\nYou feel something new within the power around you. Something that drains you, but somehow makes you feel stronger. You have a sudden flash of a knife being dragged across your palms.\n\nSarah leans in and whispers, “I can feel him preparing the dagger for the ritual. I can see on your face that you sense it too. We must find Matthias and stop him.”\n\nNo immediate effect.\n|||
 EventMythosFirstRitualFeedOrCloseGateReadPageDaggerBase.button1,{qst:continue}
 EventMythosFirstRitualFeedOrCloseGateReadPageDaggerTiePoint.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageDaggerTiePoint.button1,
@@ -10892,7 +10892,7 @@ EventMythosFirstRitualFeedOrCloseGateReadPageWoman.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageWoman.button1,
 EventMythosFirstRitualFeedOrCloseGateReadPageWomanDisplay.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageWomanDisplay.button1,
-EventMythosFirstRitualFeedOrCloseGateReadPageWomanBase.text,|||\nThe power of Mathias’s spell intensifies around you. It draws you in and repulses you at the same time. A woman screams. The sound pierces the walls of the house, making the windows rattle in their frames. You feel her take a deep, ragged breath, then she screams again. And again. And again.\n\nShe screams like she might never stop.\n\nSarah looks at you, eyes wide, and says nothing.\n\nEach investigator takes 1 Horror ({will} negates).\n|||
+EventMythosFirstRitualFeedOrCloseGateReadPageWomanBase.text,|||\nThe power of Matthias’s spell intensifies around you. It draws you in and repulses you at the same time. A woman screams. The sound pierces the walls of the house, making the windows rattle in their frames. You feel her take a deep, ragged breath, then she screams again. And again. And again.\n\nShe screams like she might never stop.\n\nSarah looks at you, eyes wide, and says nothing.\n\nEach investigator takes 1 Horror ({will} negates).\n|||
 EventMythosFirstRitualFeedOrCloseGateReadPageWomanBase.button1,{qst:continue}
 EventMythosFirstRitualFeedOrCloseGateReadPageWomanTiePoint.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageWomanTiePoint.button1,
@@ -10904,7 +10904,7 @@ EventMythosFirstRitualFeedOrCloseGateReadPageOpen.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageOpen.button1,
 EventMythosFirstRitualFeedOrCloseGateReadPageOpenDisplay.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageOpenDisplay.button1,
-EventMythosFirstRitualFeedOrCloseGateReadPageOpenBase.text,|||\nThe woman’s screaming abruptly stops and, for a moment, it is silent again, as if the house were taking a breath. A boy’s single, terrified scream cuts through the silence. Though cannot see it, you feel the gate spring into being. You hear something moan in pain; you feel the rumblings of it through the house. You know in your gut that it’s Mathias’s son.\n\nThe power of the gate has infused the air around you with a a nearly electric sense of evil, making your skin buzz in discomfort.\n\nSarah looks like you feel. She says nothing.\n\nNo immediate effect.\n|||
+EventMythosFirstRitualFeedOrCloseGateReadPageOpenBase.text,|||\nThe woman’s screaming abruptly stops and, for a moment, it is silent again, as if the house were taking a breath. A boy’s single, terrified scream cuts through the silence. Though cannot see it, you feel the gate spring into being. You hear something moan in pain; you feel the rumblings of it through the house. You know in your gut that it’s Matthias’s son.\n\nThe power of the gate has infused the air around you with a a nearly electric sense of evil, making your skin buzz in discomfort.\n\nSarah looks like you feel. She says nothing.\n\nNo immediate effect.\n|||
 EventMythosFirstRitualFeedOrCloseGateReadPageOpenBase.button1,{qst:continue}
 EventMythosFirstRitualFeedOrCloseGateReadPageOpenTiePoint.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageOpenTiePoint.button1,
@@ -10942,7 +10942,7 @@ EventMythosFirstRitualFeedOrCloseGateReadPageStablizeAfterLet1.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageStablizeAfterLet1.button1,
 EventMythosFirstRitualFeedOrCloseGateReadPageStablizeAfterGoto180.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageStablizeAfterGoto180.button1,
-EventMythosFirstRitualFeedOrCloseGateReadPageStablizeBase.text,|||\nYou can still feel the gate through the walls and floor, sputtering and buzzing, making it sound unstable, like it might collapse at any moment.\n\nA cultist runs into the dungeon cell, raises a hand, mumbles words, and is sucked through the wall. A moment later, the feeling the gate stablizes.\n\nSarah leans in, “I don’t think Mathias has an elder sign to stablize the gate. Maybe that cultist is what he needed to keep it open.\n\nNo immediate effect.\n|||
+EventMythosFirstRitualFeedOrCloseGateReadPageStablizeBase.text,|||\nYou can still feel the gate through the walls and floor, sputtering and buzzing, making it sound unstable, like it might collapse at any moment.\n\nA cultist runs into the dungeon cell, raises a hand, mumbles words, and is sucked through the wall. A moment later, the feeling the gate stablizes.\n\nSarah leans in, “I don’t think Matthias has an elder sign to stablize the gate. Maybe that cultist is what he needed to keep it open.\n\nNo immediate effect.\n|||
 EventMythosFirstRitualFeedOrCloseGateReadPageStablizeBase.button1,{qst:continue}
 EventMythosFirstRitualFeedOrCloseGateExpr23.text,
 EventMythosFirstRitualFeedOrCloseGateExpr23.button1,
@@ -10952,7 +10952,7 @@ EventMythosFirstRitualFeedOrCloseGateReadPageSummon.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageSummon.button1,
 EventMythosFirstRitualFeedOrCloseGateReadPageSummonDisplay.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageSummonDisplay.button1,
-EventMythosFirstRitualFeedOrCloseGateReadPageSummonBase.text,|||\nPower is now pulsing through the house and caves. Sarah is visibly upset is no longer whispering. She is says loudly, “Mathias is summonning his god, an ancient one.”\n\nNo immediate effect.\n|||
+EventMythosFirstRitualFeedOrCloseGateReadPageSummonBase.text,|||\nPower is now pulsing through the house and caves. Sarah is visibly upset is no longer whispering. She is says loudly, “Matthias is summonning his god, an ancient one.”\n\nNo immediate effect.\n|||
 EventMythosFirstRitualFeedOrCloseGateReadPageSummonBase.button1,{qst:continue}
 EventMythosFirstRitualFeedOrCloseGateReadPageSummonTiePoint.text,
 EventMythosFirstRitualFeedOrCloseGateReadPageSummonTiePoint.button1,
@@ -11086,7 +11086,7 @@ EventOpenGateReadPageStep1.text,
 EventOpenGateReadPageStep1.button1,
 EventOpenGateReadPageStep1Display.text,
 EventOpenGateReadPageStep1Display.button1,
-EventOpenGateReadPageStep1Base.text,|||\nWhen you get close to the altar, you see that Mathias does not have an {c:QItemElderSign}. That means he will need blood to keep the gate open. You must stop him before he uses you to supply it.\n\nYou think back to the counter-spell you memorized earlier. You hold the {c:QItemRitualKnife} and chalice above your head and speak the words. Mathias snaps his head toward you, as though seeing you here for the first time. Your eyes lock and you see a determined but haunted look in his eyes.\n\nHe looks back at the altar and tries to start again. Nothing comes out of his mouth and he looks back at you.\n\nThis step is complete.\n|||
+EventOpenGateReadPageStep1Base.text,|||\nWhen you get close to the altar, you see that Matthias does not have an {c:QItemElderSign}. That means he will need blood to keep the gate open. You must stop him before he uses you to supply it.\n\nYou think back to the counter-spell you memorized earlier. You hold the {c:QItemRitualKnife} and chalice above your head and speak the words. Matthias snaps his head toward you, as though seeing you here for the first time. Your eyes lock and you see a determined but haunted look in his eyes.\n\nHe looks back at the altar and tries to start again. Nothing comes out of his mouth and he looks back at you.\n\nThis step is complete.\n|||
 EventOpenGateReadPageStep1Base.button1,{qst:continue}
 EventOpenGateReadPageStep1TiePoint.text,
 EventOpenGateReadPageStep1TiePoint.button1,
@@ -11123,7 +11123,7 @@ EventOpenGateReadPageStep3.text,
 EventOpenGateReadPageStep3.button1,
 EventOpenGateReadPageStep3Display.text,
 EventOpenGateReadPageStep3Display.button1,
-EventOpenGateReadPageStep3Base.text,|||\nMathias grabs the knife and begins speaking the incantation again, his voice booming with power. The knife begins glowing and then lightly, slowly pulsing.\n\nYou speak the words again. Test {will}.\n\nFor each Unique Item you have, you may roll 1 extra die.\n|||
+EventOpenGateReadPageStep3Base.text,|||\nMatthias grabs the knife and begins speaking the incantation again, his voice booming with power. The knife begins glowing and then lightly, slowly pulsing.\n\nYou speak the words again. Test {will}.\n\nFor each Unique Item you have, you may roll 1 extra die.\n|||
 EventOpenGateReadPageStep3Base.button1,{qst:continue}
 EventOpenGateReadPageStep3Base.button2,Fail
 EventOpenGateReadPageStep3BasePass.text,
@@ -11142,7 +11142,7 @@ EventOpenGateReadPageStep3Fail.text,
 EventOpenGateReadPageStep3Fail.button1,
 EventOpenGateReadPageStep3FailDisplay.text,
 EventOpenGateReadPageStep3FailDisplay.button1,
-EventOpenGateReadPageStep3FailBase.text,|||\nYou fumble the words and nothing happens. Mathias ignores you and slides the blade across his palm.\n\nSuffer 2 Horror ({will} negates).\n\nYou must stop him.\n|||
+EventOpenGateReadPageStep3FailBase.text,|||\nYou fumble the words and nothing happens. Matthias ignores you and slides the blade across his palm.\n\nSuffer 2 Horror ({will} negates).\n\nYou must stop him.\n|||
 EventOpenGateReadPageStep3FailBase.button1,{qst:continue}
 EventOpenGateReadPageStep3FailTiePoint.text,
 EventOpenGateReadPageStep3FailTiePoint.button1,
@@ -11179,7 +11179,7 @@ EventOpenGateReadPageStep3RepeatFail.text,
 EventOpenGateReadPageStep3RepeatFail.button1,
 EventOpenGateReadPageStep3RepeatFailDisplay.text,
 EventOpenGateReadPageStep3RepeatFailDisplay.button1,
-EventOpenGateReadPageStep3RepeatFailBase.text,|||\nMathias seems unphased as blood wells up from the cut in his palm. You look at the dagger and chalice raised in your hands and wonder why nothing is happening. You take a deep breath, determined to stop this madness.\n|||
+EventOpenGateReadPageStep3RepeatFailBase.text,|||\nMatthias seems unphased as blood wells up from the cut in his palm. You look at the dagger and chalice raised in your hands and wonder why nothing is happening. You take a deep breath, determined to stop this madness.\n|||
 EventOpenGateReadPageStep3RepeatFailBase.button1,{qst:continue}
 EventOpenGateReadPageStep3RepeatFailTiePoint.text,
 EventOpenGateReadPageStep3RepeatFailTiePoint.button1,
@@ -11195,7 +11195,7 @@ EventOpenGateReadPageStep4.text,
 EventOpenGateReadPageStep4.button1,
 EventOpenGateReadPageStep4Display.text,
 EventOpenGateReadPageStep4Display.button1,
-EventOpenGateReadPageStep4Base.text,|||\nWith Mathias distracted and frustrated, you reach out to grab the skull. If only you can reach it before he... does something.\n\nTest {agility}.\n\nFor each Unique Item you have, you may roll 1 extra die.\n|||
+EventOpenGateReadPageStep4Base.text,|||\nWith Matthias distracted and frustrated, you reach out to grab the skull. If only you can reach it before he... does something.\n\nTest {agility}.\n\nFor each Unique Item you have, you may roll 1 extra die.\n|||
 EventOpenGateReadPageStep4Base.button1,{qst:continue}
 EventOpenGateReadPageStep4Base.button2,Fail
 EventOpenGateReadPageStep4BasePass.text,
@@ -11214,7 +11214,7 @@ EventOpenGateReadPageStep4Fail.text,
 EventOpenGateReadPageStep4Fail.button1,
 EventOpenGateReadPageStep4FailDisplay.text,
 EventOpenGateReadPageStep4FailDisplay.button1,
-EventOpenGateReadPageStep4FailBase.text,|||\nMathias swings his arm at you, dagger flashing in the low light. It catches your arm, causing you to drop the dagger.\n\nDrop {c:QItemRitualKnife}. Take 2 {damage} ({agility} negates).\n\nMathias squeezes more of his blood into the chalice, causing it to... change in a way you cannot describe. It somehow feels powerful, like the knife he is wielding.\n|||
+EventOpenGateReadPageStep4FailBase.text,|||\nMatthias swings his arm at you, dagger flashing in the low light. It catches your arm, causing you to drop the dagger.\n\nDrop {c:QItemRitualKnife}. Take 2 {damage} ({agility} negates).\n\nMatthias squeezes more of his blood into the chalice, causing it to... change in a way you cannot describe. It somehow feels powerful, like the knife he is wielding.\n|||
 EventOpenGateReadPageStep4FailBase.button1,{qst:continue}
 EventOpenGateReadPageStep4FailTiePoint.text,
 EventOpenGateReadPageStep4FailTiePoint.button1,
@@ -11252,13 +11252,13 @@ EventOpenGateTocSelector.text,
 EventOpenGateTocSelector.button1,
 EventOpenGateTocPrologProxyStep1.text,
 EventOpenGateTocPrologProxyStep1.button1,
-EventOpenGateTocPrologStep1.text,|||\nMathias stands at the alter, arms raised, speaking a language you cannot understand. You can see on the altar the various tools and materials needed for the ritual.\n\nThe boy is chained to the floor, crying and quietly begging his father to stop. A cowering woman is chained near Mathias at the altar; it is cleaer that fear has paralyzed her.\n\nIf you have the {c:QItemRitualKnife}, the {c:QItemRitualComponents}, and the {c:QItemElderSign}, you can begin to disrupt the ritual.\n\nOnly {c:EventChosenInvestigator} can perform this task and only while standing at the altar in the same space as Mathias.\n\nAre you ready?\n|||
+EventOpenGateTocPrologStep1.text,|||\nMatthias stands at the alter, arms raised, speaking a language you cannot understand. You can see on the altar the various tools and materials needed for the ritual.\n\nThe boy is chained to the floor, crying and quietly begging his father to stop. A cowering woman is chained near Matthias at the altar; it is cleaer that fear has paralyzed her.\n\nIf you have the {c:QItemRitualKnife}, the {c:QItemRitualComponents}, and the {c:QItemElderSign}, you can begin to disrupt the ritual.\n\nOnly {c:EventChosenInvestigator} can perform this task and only while standing at the altar in the same space as Matthias.\n\nAre you ready?\n|||
 EventOpenGateTocPrologStep1.button1,{action} Speak the words
 EventOpenGateTocPrologStep1.button2,{qst:cancel}
 EventOpenGateTocPrologProxyStep2.text,
 EventOpenGateTocPrologProxyStep2.button1,
 EventOpenGateTocPrologStep2.text,|||\nYour cousin lowers his eyes to the dagger he holds. While no sound comes out, you see him moving his lips.\n|||
-EventOpenGateTocPrologStep2.button1,{action} Stab Mathias
+EventOpenGateTocPrologStep2.button1,{action} Stab Matthias
 EventOpenGateTocPrologStep2.button2,{qst:cancel}
 EventOpenGateTocPrologProxyStep3.text,
 EventOpenGateTocPrologProxyStep3.button1,
@@ -11280,7 +11280,7 @@ EventOpenGateTocPrologStep3RepeatFail.text,
 EventOpenGateTocPrologStep3RepeatFail.button1,
 EventOpenGateTocPrologProxyStep4.text,
 EventOpenGateTocPrologProxyStep4.button1,
-EventOpenGateTocPrologStep4.text,|||\nAs Mathias squeezes blood from his fist into the chalice, the spell takes hold and... he loses his voice again.\n|||
+EventOpenGateTocPrologStep4.text,|||\nAs Matthias squeezes blood from his fist into the chalice, the spell takes hold and... he loses his voice again.\n|||
 EventOpenGateTocPrologStep4.button1,{action} Make your move
 EventOpenGateTocPrologStep4.button2,{qst:cancel}
 EventOpenGateTocPrologProxyStep4Fail.text,
@@ -11405,7 +11405,7 @@ EventSarahPatterExpr11.text,
 EventSarahPatterExpr11.button1,
 EventSarahPatterReadPageColor1Display.text,
 EventSarahPatterReadPageColor1Display.button1,
-EventSarahPatterReadPageColor1Overload1.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that our cousin, Mathias, will open a gate tonight. You must stop him. If that gate opens, evil could destroy the world.”\n|||
+EventSarahPatterReadPageColor1Overload1.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that our cousin, Matthias, will open a gate tonight. You must stop him. If that gate opens, evil could destroy the world.”\n|||
 EventSarahPatterReadPageColor1Overload1.button1,{qst:continue}
 EventSarahPatterReadPageColor1TiePoint.text,
 EventSarahPatterReadPageColor1TiePoint.button1,
@@ -11415,7 +11415,7 @@ EventSarahPatterTiePoint.text,
 EventSarahPatterTiePoint.button1,
 EventSarahPatterLoopBack.text,
 EventSarahPatterLoopBack.button1,
-EventSarahPatterReadPageColor1Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that our cousin, Mathias, will open a gate tonight. You must stop him. If you cannot stop him, you will need to find a way to close that gate.”\n|||
+EventSarahPatterReadPageColor1Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “You don’t remember me or what happened 10 years ago. I am your little sister.\n\n“I will tell you everything you need to know, but first I must tell you that our cousin, Matthias, will open a gate tonight. You must stop him. If you cannot stop him, you will need to find a way to close that gate.”\n|||
 EventSarahPatterReadPageColor1Base.button1,{qst:continue}
 EventSarahPatterExpr13.text,
 EventSarahPatterExpr13.button1,
@@ -11449,7 +11449,7 @@ EventSarahPatterReadPageCandles.text,
 EventSarahPatterReadPageCandles.button1,
 EventSarahPatterReadPageCandlesDisplay.text,
 EventSarahPatterReadPageCandlesDisplay.button1,
-EventSarahPatterReadPageCandlesBase.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “There’s a part of the house that is too dark to enter without light. The candles you found should help. If we move fast enough, maybe we can stop Mathias.”\n|||
+EventSarahPatterReadPageCandlesBase.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “There’s a part of the house that is too dark to enter without light. The candles you found should help. If we move fast enough, maybe we can stop Matthias.”\n|||
 EventSarahPatterReadPageCandlesBase.button1,{qst:continue}
 EventSarahPatterReadPageCandlesTiePoint.text,
 EventSarahPatterReadPageCandlesTiePoint.button1,
@@ -11481,13 +11481,13 @@ EventSarahPatterExpr20.text,
 EventSarahPatterExpr20.button1,
 EventSarahPatterReadPageDvmDisplay.text,
 EventSarahPatterReadPageDvmDisplay.button1,
-EventSarahPatterReadPageDvmOverload1.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemDVM} is a spell book. It contains many powerful spells, including rituals to open and close gates. If you cannot stop Mathias from opening a gate, you’ll need to starve it of sacrifice.\n\n“You must read the {c:QItemDvm} to better understand what is expected of you.”\n|||
+EventSarahPatterReadPageDvmOverload1.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemDVM} is a spell book. It contains many powerful spells, including rituals to open and close gates. If you cannot stop Matthias from opening a gate, you’ll need to starve it of sacrifice.\n\n“You must read the {c:QItemDvm} to better understand what is expected of you.”\n|||
 EventSarahPatterReadPageDvmOverload1.button1,{qst:continue}
 EventSarahPatterReadPageDvmTiePoint.text,
 EventSarahPatterReadPageDvmTiePoint.button1,
 EventSarahPatterReadPageDvmEnd.text,
 EventSarahPatterReadPageDvmEnd.button1,
-EventSarahPatterReadPageDvmBase.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemDvm} is a spell book. It contains many powerful spells, including rituals to open and close gates. Also, how to interrupt a ritual that has been started.\n\n“If you cannot stop Mathias in time, you may need to perform a closing ritual. Closing gates is easier than opening them but it takes time. With the gate open, many horrors could come through while you are trying to close it. You must be prepared. Read the book carefully and read it soon.”\n|||
+EventSarahPatterReadPageDvmBase.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “The {c:QItemDvm} is a spell book. It contains many powerful spells, including rituals to open and close gates. Also, how to interrupt a ritual that has been started.\n\n“If you cannot stop Matthias in time, you may need to perform a closing ritual. Closing gates is easier than opening them but it takes time. With the gate open, many horrors could come through while you are trying to close it. You must be prepared. Read the book carefully and read it soon.”\n|||
 EventSarahPatterReadPageDvmBase.button1,{qst:continue}
 EventSarahPatterExpr22.text,
 EventSarahPatterExpr22.button1,
@@ -11545,7 +11545,7 @@ EventSarahPatterReadPageDagger.text,
 EventSarahPatterReadPageDagger.button1,
 EventSarahPatterReadPageDaggerDisplay.text,
 EventSarahPatterReadPageDaggerDisplay.button1,
-EventSarahPatterReadPageDaggerBase.text,|||\nSarah reaches toward the {c:QItemRitualDagger}. “I recognize this dagger,” she starts. “It looks like the one my father used ten years ago. With luck, Mathias needs this but we have it.”\n|||
+EventSarahPatterReadPageDaggerBase.text,|||\nSarah reaches toward the {c:QItemRitualDagger}. “I recognize this dagger,” she starts. “It looks like the one my father used ten years ago. With luck, Matthias needs this but we have it.”\n|||
 EventSarahPatterReadPageDaggerBase.button1,{qst:continue}
 EventSarahPatterReadPageDaggerTiePoint.text,
 EventSarahPatterReadPageDaggerTiePoint.button1,
@@ -11605,7 +11605,7 @@ EventSarahPatterReadPageColor7.text,
 EventSarahPatterReadPageColor7.button1,
 EventSarahPatterReadPageColor7Display.text,
 EventSarahPatterReadPageColor7Display.button1,
-EventSarahPatterReadPageColor7Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “I don’t know who the other men were, but the one who closed the gate was Uncle Peter―Father’s brother. I think there’s something special about our family; there are things only we can do. It’s why Father could summon the gate, and why Uncle Peter could close it. And now Peter’s son, our cousin Mathias, is going to try to open another gate tonight.\n\n“You probably share the family abilities. You must trust yourself to know what to do.”\n|||
+EventSarahPatterReadPageColor7Base.text,|||\nSarah whispers to {c:EventChosenInvestigator}, “I don’t know who the other men were, but the one who closed the gate was Uncle Peter―Father’s brother. I think there’s something special about our family; there are things only we can do. It’s why Father could summon the gate, and why Uncle Peter could close it. And now Peter’s son, our cousin Matthias, is going to try to open another gate tonight.\n\n“You probably share the family abilities. You must trust yourself to know what to do.”\n|||
 EventSarahPatterReadPageColor7Base.button1,{qst:continue}
 EventSarahPatterReadPageColor7TiePoint.text,
 EventSarahPatterReadPageColor7TiePoint.button1,
@@ -13437,7 +13437,7 @@ EventWandererAttacksReadPageLoreRestrained.text,|||\nEventWandererAttacksReadPag
 EventWandererAttacksReadPageLoreRestrained.button1,
 EventWandererAttacksReadPageLoreRestrainedDisplay.text,|||\nEventWandererAttacksReadPageLoreRestrainedDisplay @(-1,-1)\n\n\n\n\n|||
 EventWandererAttacksReadPageLoreRestrainedDisplay.button1,
-EventWandererAttacksReadPageLoreRestrainedBase.text,|||\nEventWandererAttacksReadPageLoreRestrainedBase @(-1,-1)\n\nThe cultist pours out a circle of dust and speaks in a language you do not understand, though you think you heard “Mathias.” You close your eyes and hope for the best. ({lore};2) If you pass, the dust just sits there while the frustrated cultist continues mumbling. If you fail, the circle slides across the floor, under your feet, and up your legs where it binds you; become Restrained.\n\n\n|||
+EventWandererAttacksReadPageLoreRestrainedBase.text,|||\nEventWandererAttacksReadPageLoreRestrainedBase @(-1,-1)\n\nThe cultist pours out a circle of dust and speaks in a language you do not understand, though you think you heard “Matthias.” You close your eyes and hope for the best. ({lore};2) If you pass, the dust just sits there while the frustrated cultist continues mumbling. If you fail, the circle slides across the floor, under your feet, and up your legs where it binds you; become Restrained.\n\n\n|||
 EventWandererAttacksReadPageLoreRestrainedBase.button1,{qst:continue}
 EventWandererAttacksReadPageLoreRestrainedTiePoint.text,|||\nEventWandererAttacksReadPageLoreRestrainedTiePoint @(-1,-1)\n\n\n\n\n|||
 EventWandererAttacksReadPageLoreRestrainedTiePoint.button1,

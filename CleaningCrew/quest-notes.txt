@@ -138,7 +138,7 @@ End Games ----------------------------------------------------------------------
 					is clear of cultists. You are finally safe.
 					
 					Sarah turns to you and says, <<You were successful. Not only
-					did we stop Mathias's current plans, we stopped anyone's
+					did we stop Matthias's current plans, we stopped anyone's
 					ability to use this area to try again. Our nephew will grow
 					up normally and I can finally find peace. Thank you.>>
 					
@@ -147,11 +147,11 @@ End Games ----------------------------------------------------------------------
 					still in shock, you wonder if the world will ever feel the
 					same again. But you are also deeply comforted and proud
 					that you were able to save the world from the evil that
-					Mathias tried to bring.
+					Matthias tried to bring.
 					
 					For now.
 		
-		Draw		Cast succeeds, but you are able to kill Mathias and the gate
+		Draw		Cast succeeds, but you are able to kill Matthias and the gate
 					shuts down. The gate is not sealed. xx turns expired. 
 					
 					You run out the door of the Chapel, breathing hard, still
@@ -167,15 +167,13 @@ End Games ----------------------------------------------------------------------
 					the next opportunity to permanently stop this madness.
 					Thank you for what you were able to do.>>
 					
-					As you walk down the road you arrived by a few hours ago, you 
-					reflect on everything that just happened. Exhausted and 
+					As you walk down the road, you 
+					reflect on everything that happened. Exhausted and 
 					still in shock, you wonder if the world will ever feel the
-					same again. While knowing you stopped his plans, Mathias
-					still brutally killed his son, <<Well,>> you think to 
-					yourself, <<like Sarah before him, he won't die for several
-					days yet.>> But you are at least comforted
+					same again. While knowing you stopped his plans, Matthias
+					still brutally killed his son. But you are at least comforted
 					that you were able to save the world from the evil that
-					Mathias tried to bring.
+					Matthias tried to bring.
 					
 					You wonder if it will happen again and if anyone will be
 					able to stop it next time, even temporarily. But for now, the world
@@ -211,8 +209,8 @@ End Games ----------------------------------------------------------------------
 		
 					The house continues to shake, light streaming up through
 					the floorboards and, somehow, through the cave walls. With
-					a thunderous clap, the house begins
-					to fall apart and the ceiling rains down. You run toward
+					a thunderous clap, the ceiling rains down as the house
+					begins to collapse. You run toward
 					the servant dining room, but when you get there, 
 					cult members block your path. They attack you without
 					mercy.
@@ -223,8 +221,9 @@ End Games ----------------------------------------------------------------------
 					
 					As you lie on the floor, bleeding and dying, the cultists
 					run out the door to safety. Your last living experience is 
-					the floor under you rising up as the beast enters the world,
-					then the ceiling collapses.
+					the floor under you rising up as the beast enters the world.
+					
+					The End
 					
 		Notes
 		
@@ -246,14 +245,14 @@ End Games ----------------------------------------------------------------------
 		
 		Win			xx cultists killed
 		
-					As the last cultist falls---and with Mathias dead---the gate
+					As the last cultist falls---and with Matthias dead---the gate
 					begins supputtering. As the sealing spell is completed, the
 					gate collapses and the boy falls to the ground with thud. He
 					burns like coals, his eyes open wide in terror and pain. He
 					moves his mouth but no sound comes out.
 					
 					Sarah turns to you and says, <<You were successful. Not only
-					did we stop Mathias's plans, we stopped anyone's
+					did we stop Matthias's plans, we stopped anyone's
 					ability to use this area to try again. I only wish our
 					nephew will have survived. I will stay with him here, then
 					help him find peach once he dies. Thank you.>>
@@ -266,14 +265,14 @@ End Games ----------------------------------------------------------------------
 					Exhausted and still in shock, you wonder if the world will
 					ever feel the same again. But you are also deeply comforted
 					and proud that you were able to save the world from the evil
-					that Mathias tried to bring.
+					that Matthias tried to bring.
 		
 		Draw		same number killed, but xx turns expired--exhaustion/cultists kill you
 					but, hey, at least the monster won't kill the world
 
 					The last cultist falls at your feet. You stagger back, 
 					broken and bleeding. Unable to stand, you fall to the floor.
-					There are no cultists behind that last one. Without Mathias
+					There are no cultists behind that last one. Without Matthias
 					to keep it open and the cultists sacrifice, the gate
 					begins sputtering with instability. A tentacle tentatively
 					pokes through, but pulls back whe the gate pops violently.
@@ -340,7 +339,7 @@ End Games ----------------------------------------------------------------------
 					fire.
 					
 					Sarah leans in a whispers, <<You were successful in stopping
-					Mathias and his plans to remake the world. You also stopped
+					Matthias and his plans to remake the world. You also stopped
 					anyone else from trying it here again. Once the boy dies, I
 					will help him find peace, then I will be able to rest. Thank
 					you.>>
@@ -353,7 +352,7 @@ End Games ----------------------------------------------------------------------
 					Exhausted and still in shock, you wonder if the world will
 					ever feel the same again. But you are also deeply comforted
 					and proud that you were able to save the world from the evil
-					that Mathias tried to bring.
+					that Matthias tried to bring.
 					
 					The End.
 		

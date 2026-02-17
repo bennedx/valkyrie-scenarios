@@ -7,12 +7,12 @@ Book OpenGate Ordered No Keep Looped
 
     Page Step1
         Prolog """
-			Mathias stands at the alter, arms raised, speaking
+			Matthias stands at the alter, arms raised, speaking
 			a language you cannot understand. You can see on the altar the
 			various tools and materials needed for the ritual.
 			
 			The boy is chained to the floor, crying and quietly begging his
-			father to stop. A cowering woman is chained near Mathias at the
+			father to stop. A cowering woman is chained near Matthias at the
 			altar; it is cleaer that fear has paralyzed her.
 			
             If you have the {c:QItemRitualKnife}, the
@@ -20,7 +20,7 @@ Book OpenGate Ordered No Keep Looped
 			begin to disrupt the ritual.
         
             Only {c:EventChosenInvestigator} can perform this task and only
-            while standing at the altar in the same space as Mathias.
+            while standing at the altar in the same space as Matthias.
         
             Are you ready?
         """
@@ -29,13 +29,13 @@ Book OpenGate Ordered No Keep Looped
 
         Text """
 			When you get close to the altar, you see that
-			Mathias does not have an {c:QItemElderSign}. That
+			Matthias does not have an {c:QItemElderSign}. That
 			means he will need blood to keep the gate open. You must stop him
 			before he uses you to supply it.
 			
 			You think back to the counter-spell you memorized earlier. You hold
 			the {c:QItemRitualKnife} and chalice above your head and speak the
-			words. Mathias snaps his head toward you, as though seeing
+			words. Matthias snaps his head toward you, as though seeing
 			you here for the first time. Your eyes lock and you see a 
 			determined but haunted look in his eyes.
 			
@@ -52,7 +52,7 @@ Book OpenGate Ordered No Keep Looped
 			sound comes out, you see him moving his lips.
         """
 
-        Button "Stab Mathias"
+        Button "Stab Matthias"
 
         Text """
 			You choose your moment and lunge at him with your knife. At the
@@ -78,7 +78,7 @@ Book OpenGate Ordered No Keep Looped
 		Button "Speak the words"
 
         Text """
-			Mathias grabs the knife and begins speaking the
+			Matthias grabs the knife and begins speaking the
 			incantation again, his voice booming with power. The knife begins
 			glowing and then lightly, slowly pulsing.
 			
@@ -93,7 +93,7 @@ Book OpenGate Ordered No Keep Looped
 
     Page Step3Fail
         Text """
-            You fumble the words and nothing happens. Mathias
+            You fumble the words and nothing happens. Matthias
 			ignores you and slides the blade across his palm.
         
             Suffer 2 Horror ({will} negates).
@@ -123,7 +123,7 @@ Book OpenGate Ordered No Keep Looped
 
 	Page Step3RepeatFail
 		Text """
-			Mathias seems unphased as blood wells up from the 
+			Matthias seems unphased as blood wells up from the 
 			cut in his palm. You look at the dagger and chalice raised in your
 			hands and wonder why nothing is happening. You take a deep breath,
 			determined to stop this madness.
@@ -135,14 +135,14 @@ Book OpenGate Ordered No Keep Looped
 
     Page Step4
         Prolog """
-            As Mathias squeezes blood from his fist into the
+            As Matthias squeezes blood from his fist into the
 			chalice, the spell takes hold and... he loses his voice again.
         """
 
         Button "Make your move"
 
         Text """
-			With Mathias distracted and frustrated, you reach
+			With Matthias distracted and frustrated, you reach
 			out to grab the skull. If only you can reach it before he... does
 			something.
 			
@@ -157,12 +157,12 @@ Book OpenGate Ordered No Keep Looped
 
 	Page Step4Fail
 		Text """
-			Mathias swings his arm at you, dagger flashing in the low
+			Matthias swings his arm at you, dagger flashing in the low
 			light. It catches your arm, causing you to drop the dagger.
 			
 			Drop {c:QItemRitualKnife}. Take 2 {damage} ({agility} negates).
 			
-			Mathias squeezes more of his blood into the chalice, 
+			Matthias squeezes more of his blood into the chalice, 
 			causing it to... change in a way you cannot describe. It somehow
 			feels powerful, like the knife he is wielding.
 		"""
@@ -176,8 +176,8 @@ Book OpenGate Ordered No Keep Looped
 	
 		// we need to replace unattackable monster with one we can attack
 		
-		Remove MonsterUncleMathiasAltar
-		Call Event MonsterUncleMathiasToKill
+		Remove MonsterUncleMatthiasAltar
+		Call Event MonsterUncleMatthiasToKill
 		
 		// does this make the DVM go away?
 		Remove QItemDvm

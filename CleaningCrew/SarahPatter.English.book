@@ -16,7 +16,7 @@ BOOK SarahPatter Ordered No Keep
 			me or what happened 10 years ago. I am your little sister.
 			
 			<<I will tell you everything you need to know, but first I must
-			tell you that our cousin, Mathias, will open a gate
+			tell you that our cousin, Matthias, will open a gate
 			tonight. You must stop him. If you cannot stop him, you will
 			need to find a way to close that gate.>>
 		"""
@@ -26,7 +26,7 @@ BOOK SarahPatter Ordered No Keep
 			me or what happened 10 years ago. I am your little sister.
 			
 			<<I will tell you everything you need to know, but first I must
-			tell you that our cousin, Mathias, will open a gate
+			tell you that our cousin, Matthias, will open a gate
 			tonight. You must stop him. If that gate opens, evil could destroy
 			the world.>>
 		"""
@@ -72,7 +72,7 @@ BOOK SarahPatter Ordered No Keep
 			Sarah whispers to {c:EventChosenInvestigator}, <<There's a part of
 			the house that is too dark to enter without light. The candles you
 			found should help. If we move fast enough, maybe we can stop
-			Mathias.>>
+			Matthias.>>
 		"""
 	End Page Candles
 
@@ -95,7 +95,7 @@ BOOK SarahPatter Ordered No Keep
 			open and close gates. Also, how to interrupt a ritual that has been
 			started.
 			
-			<<If you cannot stop Mathias in time,
+			<<If you cannot stop Matthias in time,
 			you may need to perform a closing ritual. Closing gates is easier
 			than opening them but it takes time. With the gate open, many
 			horrors could come through while you are trying to close it. You
@@ -105,7 +105,7 @@ BOOK SarahPatter Ordered No Keep
 		If goal == goalFeedGate Then Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDVM} is
 			a spell book. It contains many powerful spells, including rituals to
-			open and close gates. If you cannot stop Mathias from opening a gate,
+			open and close gates. If you cannot stop Matthias from opening a gate,
 			you'll need to starve it of sacrifice.
 
 			<<You must read the {c:QItemDvm} to better understand what is
@@ -157,7 +157,7 @@ BOOK SarahPatter Ordered No Keep
 		Text """
 			Sarah reaches toward the {c:QItemRitualDagger}. <<I recognize this
 			dagger,>> she starts. <<It looks like the one my father used ten 
-			years ago. With luck, Mathias needs this but we have it.>>
+			years ago. With luck, Matthias needs this but we have it.>>
 		"""
 	End Page Dagger
 
@@ -216,7 +216,7 @@ BOOK SarahPatter Ordered No Keep
 			Peter---Father's brother. I think there's something special about
 			our family; there are things only we can do. It's why Father could
 			summon the gate, and why Uncle Peter could close it. And now Peter's
-			son, our cousin Mathias, is going to try to open another gate tonight.
+			son, our cousin Matthias, is going to try to open another gate tonight.
 			
 			<<You probably share the family abilities. You must trust yourself
 			to know what to do.>>

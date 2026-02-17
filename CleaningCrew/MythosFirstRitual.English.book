@@ -23,7 +23,7 @@ Book MythosFirstRitualOpenGate Ordered No Keep
 			Something violent.
 			
 			Sarah's eyes widen and she whispers,
-			<<Mathias has begun preparations for the ritual, the preparations you
+			<<Matthias has begun preparations for the ritual, the preparations you
 			read about in the {c:QItemDvm}. We must get to the altar before he
 			actually opens the gate. We must stop him.>>
 			
@@ -74,7 +74,7 @@ Book MythosFirstRitualOpenGate Ordered No Keep
 	
 	Page Vamp5
 		Text """
-			With each step Mathias takes toward opening the gate, the air
+			With each step Matthias takes toward opening the gate, the air
 			around you changes in color and texture. But getting stronger at
 			each step. You are feeling the first traces of it in your skin.
 			
@@ -94,7 +94,7 @@ Book MythosFirstRitualOpenGate Ordered No Keep
 			The woman's screaming abruptly stops and, for a moment, it is silent
 			again, as if the house were taking a breath.
 
-			Sarah whispers, <<Mathias has recharged himself. He is nearly at
+			Sarah whispers, <<Matthias has recharged himself. He is nearly at
 			the final stage. He is ready to open the gate.>>
 			
 			No immediate effect.
@@ -139,13 +139,9 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 			shudders and everything goes quiet for a moment.
 
 			Sarah's eyes widen and she whispers to {c:EventChosenInvestigator},
-			<<Mathias has started. The ritual has started. We must get to the
+			<<Matthias has started. The ritual has started. We must get to the
 			altar and stop him.>>			
-			
-			No immediate effect.
 		"""
-
-		Exit
 	End Page Start
 	
 	Page Dagger
@@ -156,12 +152,8 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 			
 			Sarah leans in and whispers, <<I can feel him preparing the dagger
 			for the ritual. I can see on your face that you sense it too. We
-			must find Mathias and stop him.>>
-			
-			No immediate effect.
+			must find Matthias and stop him.>>
 		"""
-		
-		Exit
 	End Page Dagger
 	
 	Page FirstRitualChalice
@@ -173,16 +165,12 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 			Sarah leans in and whispers, <<I can feel him putting his blood in
 			a chalice. I can almost see it.>> She looks down at your fist and
 			says, <<I can see you are feeling the same thing.>>
-			
-			No immediate effect.
 		"""
-		
-		Exit
 	End Page FirstRitualChalice
 	
 	Page Woman
 		Text """
-			The power of Mathias's spell intensifies around you. It draws you in
+			The power of Matthias's spell intensifies around you. It draws you in
 			and repulses you at the same time. A woman screams. The sound
 			pierces the walls of the house, making the windows rattle in their
 			frames. You feel her take a deep, ragged breath, then she screams
@@ -194,8 +182,6 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 
 			Each investigator takes 1 Horror ({will} negates).
 		"""
-		
-		Exit
 	End Page Woman
 	
 	Page Open
@@ -205,19 +191,13 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 			terrified scream cuts through the silence. Though cannot see it,
 			you feel the gate spring into being. You hear something moan in
 			pain; you feel the rumblings of it through the house. You know in
-			your gut that it's Mathias's son.
+			your gut that it's Matthias's son.
 
 			The power of the gate has infused the air around you with a
 			a nearly electric sense of evil, making your skin buzz
 			in discomfort.
 			
-			Sarah looks like you feel. She says nothing.
-			
-			No immediate effect.
 		"""
-		
-		gateOpen = 1
-		Exit
 	End Page Open
 	
 	Page Stablize
@@ -230,11 +210,9 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 			mumbles words, and is sucked through the wall. A moment
 			later, the feeling the gate stablizes.
 			
-			Sarah leans in, <<I don't think Mathias has an elder sign to 
+			Sarah leans in, <<I don't think Matthias has an elder sign to 
 			stablize the gate. Maybe that cultist is what he needed to keep
 			it open.
-			
-			No immediate effect.
 		"""
 		
 		If goal = goalCloseGate Then Text """
@@ -249,34 +227,37 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 			
 			Sarah leans in, <<He used an elder sign to stabilize the gate. Now
 			he will start summoning.>>
-			
-			No immediate effect.
 		"""
-		
-		gateOpen = gateOpen + 1
-		Exit	
 	End Page Stablize
 	
 	Page Summon
 		Text """
 			Power is now pulsing through the house and caves. Sarah is visibly
-			upset is no longer whispering. She is says loudly, <<Mathias is
-			summonning his god, an ancient one.>>
-			
-			No immediate effect.
+			upset and is no longer whispering. She says loudly, <<Matthias is
+			summonning his god, an Ancient One.>>
 		"""
-		
-		gateOpen = gateOpen + 1
-		Exit
 	End Page Summon
 	
 	Page SummonContinue
 		Text """
+			Something rumbles up from beneath you. You can feel its power, its
+			need. You know it is what Matthias is summoning.
+			
+			Panicked, Sarah bellows so everyone can here her, <<We are running
+			out of time. You mustv complete your tasks so I can help you. Until
+			then, we don't know what to do, where to do it, or with what tools.
+			Hurry.>>
 		"""
-		
-		gateOpen = gateOpen + 1
-		if gateOpen < 5 + openedGateNicely Then Mark SummonContinue Unread 
-		Exit		
+	End Page
+	
+	Page
+		Text """
+			The gate continues to hum while burst of energy come from beneath
+			and course through you.
+			
+			Sarah yells, <<I can feel it---the Ancient One. It is nearly here.
+			We are out of time.>>
+		"""
 	End Page
 	
 	Page Fail
