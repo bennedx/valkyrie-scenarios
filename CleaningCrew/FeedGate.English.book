@@ -6,6 +6,45 @@ Language English
 Book FeedGate Ordered No Keep
 	Triggered By @ReadDvm If goal = goalFeedGate And ritual
 	
+	Page Init
+		Text """
+			Sarah looks at all of you and says, <<It is too late to stop Matthias
+			from opening the gate. But he didn't have an elder sign, so he was
+			not able to stabilize the gate. He needs a steady stream of the
+			willing to sacrifice themselves to keep the gate open.>>
+			
+			As she speaks, a cultist somehow sqeezes through the hole to the cell,
+			steps to the gate, pulls out a dagger, and slits his throat. When his
+			blood hits the floor, it is pulled up by the gate, drop-by-drop.
+		
+			
+			<<You must kill them,>> she says loudly. Everyone in the room turns
+			to look at her. <<You must kill them all.>>
+			
+			When she spoke, Matthias noticed the intruders for the first time.
+			A look of worry crosses his face, but only for a moment. He returns
+			immediately to his summoning.			
+		"""
+	End Page
+	
+	Page Instructions
+		
+		Add TokenSarahAltar!
+		
+		Text """
+			Sarah leans down and whispers to {c:EventChosenInvestigator}, <<You
+			must kill Matthias, then close and seal the gate.>>
+			
+			Sarah turns to the others and says loudly, <<You must kill these
+			cultists. It might be easier to head toward the chapel since that
+			seems to be where they are coming from. Speak to me if you want to
+			go out. If you want to come back, yell to me through the hole.>>
+			
+			Move Sarah to the board as indicated.
+		"""
+		
+	End Page Instructions
+	
 	Page RitualBegins
 		Text """
 			You freeze as something... <i>happens</> to the house. You aren't
@@ -138,4 +177,74 @@ Book FeedGate Ordered No Keep
 		Trigger @ExploreAltar
 		Goto Init
 	End Page SarahTransports
+	
+	Page Sarah
+		Triggered By @SpeakToSarah
+		
+		Text """
+			Sarah seems lost in the chaos swirling around her, but when you
+			speak, she snaps her head toward you. She hadn't made eye contact
+			with you all day. The fire and strenght in her gaze is riveting. 
+		"""
+		
+		Button 1, "{action} Send me through the hole."
+		Button 2, "{action} <<Sarah,>> you yell. <<Bring me back.>>
+		Button 3, "{qst:cancel}"
+		
+		If selection = 1 Then Goto SendThroughHole
+		If selection = 2 Then Goto PullThroughHole
+		
+		Mark Sarah Unread
+		Exit
+	End Page Sarah
+	
+	Page SendThroughHole
+		Text """
+			Again, Sarah expands and grows thinner and suddenly you find
+			yourself somewhere else. You recover more quickly this time.
+			
+			Move your investigator figure to other side of the hole.
+		"""
+		
+		Exit
+	End Page SendThroughHole	
+
+	Page PullThroughHole
+		Text """
+			Watching through the hole, you see Sarah grow bigger and thinner. A
+			tendril pulls out of her and heads toward you. It pokes through the
+			hole. Suddenly, you are enveloped and you find yourself somewhere
+			else. You again recover quickly.
+			
+			Move your investigator figure back to altar side of the hole.
+		"""
+		
+		Exit
+	End Page SendThroughHole
 End Book FeedGate
+
+Book Feeders Ordered No Keep
+	Page Start
+	
+	
+	End Page Start
+	
+	Page Activate1
+	End Page Activate1
+	
+	Page Activate2
+	End Page Activate2
+
+	Page Activate3
+	End Page Activate2
+
+	Page Activate4
+	End Page Activate2
+
+	Page Activate5
+	End Page Activate2
+
+	Page Activate6
+	End Page Activate2
+
+End Book Feeders
