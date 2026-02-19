@@ -189,4 +189,26 @@ Book OpenGate Ordered No Keep Looped
 		No Prolog
 		No Text
 	End Epilog
+	
+	Page SarahTransports
+		Not Visible
+		Triggered By @CompleteRequirement If goal = goalOpenGate And foundKnife And foundDvm And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
+		
+		Text """
+			Sarah smiles for the first time and says out load, <<That's it! Now
+			we know what is going on, where it's happening, and what to do about
+			it. I think I can take us where we need to be.>>
+			
+			Sarah seems to grow, getting more transparent. Suddenly, the world
+			shifts and you are... somewhere else. And disoriented. There is
+			noise and light and someone yelling. Folks are rushing by. It all
+			seems far away.>>
+		"""
+		
+		If firstRitual < firstRitualWoman Call MythosFirstRitualOpenGate.Woman
+		
+		firstRitual = false
+		Trigger @ExploreAltar
+		Goto Init
+	End Page SarahTransports
 End Book OpenGate

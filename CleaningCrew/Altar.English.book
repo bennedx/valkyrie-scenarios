@@ -3,14 +3,106 @@ Language English
 Book Altar Ordered No Keep Looped
 
 	Page Explore
+		Not Visible
+		Triggered By @ExploreAltarViaCell
+		
 		Prolog "You lean down to look through the hole."
 		Button "Reveal"
 		
-		Text ""
+		Text """
+			Through the hole you can see there is a room and something standing
+			in the middle of it. It looks like someone may be in the room, 
+			moving around.
+			
+			But all you are getting is impressions. It's probably not important.
+			
+			Remove this Sight token.
+		"""
+		
+		Remove TokenExploreAltarViaCell
+		Exit
 	End Page Explore
 	
 	Page Place
-		No Text
-	End Page Place
+		Triggered By @ExploreAltarViaSarah
+		
+		Text """
+			You become more aware of your surroundings. You are in some
+			kind of underground chamber. A boy hovers in the air, so lost
+			in pain that his face barely looks human. He is surrounded by a
+			fearsome glow and is somehow part of it.
 
+			You look around and there is altar across the room and a man
+			standing behind it, arms raised. He is speaking in a language
+			you don't recognize. His voice seems amplified. As he finishes
+			each line, the gate pulses and makes loud electrical noises. The
+			pulses radiate though you like shock waves. Each wave feels like 
+			fear.
+
+			A woman lies dead at his feet.
+
+			Sarah speaks loudly over the din, <<The summoning spell is nearly
+			complete. I can feel the Ancient One approaching from the other 
+			side. We must move quickly.>>
+		"""
+			
+		If goal = goalOpenGate Then Text """
+			Suddenly, you snap back and quickly look around. A boy is
+			slowly rising up from the ground near you. He shakes with fear and
+			you can see him reacting with each pulse, as though he were being
+			stabbed. He doesn't look at you.
+
+			Across
+			the room is an altar with a man standing behind it. His arms are
+			raised and he is speaking in a language you don't recognize.
+			His voice seems amplified. As he finishes each line, a 
+			shock wave of power emanates from him. Each wave feels like fear
+			pulsing through you. 
+			
+			Sarah speaks loudly over the din, <<The opening spell is nearly
+			complete. The boy will be used as material to create the gate.
+			We must end this.>>
+		"""
+	End Page Place
+	
+	Page PlaceAltar
+		Text """
+			Now that you have your bearings, you better understand where you are
+			and what is around you. Place the {c:TileAltar} tile.
+			
+			The man at the altar continues casting his spell. Place a 
+			{c:CustomMonsterMatthias} as indicated. This is your cousin
+			Matthias.
+	
+			You are standing near the boy. Place your investigator figures
+			as indicated.
+		"""
+	End Page PlaceAltar
+	
+	Page PlaceNpcs
+		Text """
+			The boy floats in the air. Place the {c:TokenGate} token as
+			indicated. This is Matthias's son. He <i>is</i> the gate.
+			
+			A woman lies dead at Matthias's feet. Place the {c:TokenDeadWoman}
+			token. This is the wife of the man who was looking for the
+			healing stone you found.
+		"""
+		
+		If goal = goalOpenGate Then Text """
+			The boy floats in the air. Place the {c:TokenGate} token as
+			indicated. This is Matthias's son. If you don't stop Matthias, 
+			the boy will soon be the gate.
+			
+			A woman lies dead at Matthias's feet. Place the {c:TokenDeadWoman}
+			token. This is the wife of the man who was looking for the
+			healing stone you found.
+		"""
+	End Page PlaceNpc
+	
+	Page PlaceInvestigators
+		Text """
+			You are near the boy. Place your investigator figures as indicated.
+		"""
+	End Page
 End Book Altar

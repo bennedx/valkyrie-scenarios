@@ -115,4 +115,27 @@ Book FeedGate Ordered No Keep
 			<<I can feel It. It is here. We may already be too late.>>
 		"""
 	End Page ItsHere
+	
+	Page SarahTransports
+		Not Visible
+		Triggered By @CompleteRequirement If goal = goalFeedGate And foundKnife And foundDvm And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
+		
+		Text """
+			Sarah smiles for the first time and says out load, <<That's it! Now
+			we know what is going on, where it's happening, and what to do about
+			it. I think I can take us where we need to be.>>
+			
+			Sarah seems to grow, getting more transparent. Suddenly, the world
+			shifts and you are... somewhere else. And disoriented. There is
+			noise and light and someone yelling. Folks are rushing by. It all
+			seems far away.>>
+		"""
+		
+		If firstRitual < firstRitualWoman Call MythosFirstRitualFeedOrCloseGate.Woman
+		If firstRitual < firstRitualOpenGate Call MythosFirstRitualFeedOrCloseGate.OpenGate
+		
+		firstRitual = false
+		Trigger @ExploreAltar
+		Goto Init
+	End Page SarahTransports
 End Book FeedGate

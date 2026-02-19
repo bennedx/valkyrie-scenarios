@@ -68,6 +68,14 @@ Book Startup Ordered No Keep Looped
 		unlocked = 4
 		basementPhase = first
 
+		// firstRitual states
+		firstRitualStarted = 1
+		firstRitualDagger = 2
+		firstRitualChalice = 3
+		firstRitualGateOpen = 4
+		firstRitualWoman = 5
+		firstRitualGateStabilized = 6
+
 		No Text
 		
 		If Not testMode Then Trigger @SplashScreen

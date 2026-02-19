@@ -41,11 +41,15 @@ Book MythosFirstRitualOpenGate Ordered No Keep
 			time-to-time, a more powerful wave washes over you. When those 
 			waves happen, Sarah's expression turns darker.
 			
+			Sarah whispers, <<I can feel something happening with a dagger.
+			Mathias is start the spelll to open a gate.>>
+			
 			Whatever is happening must be stopped.
 			
 			No immediate effect.
 		"""
 		
+		firstRitual = firstRitualDagger
 		Exit
 	End Page Vamp1
 	
@@ -78,9 +82,13 @@ Book MythosFirstRitualOpenGate Ordered No Keep
 			around you changes in color and texture. But getting stronger at
 			each step. You are feeling the first traces of it in your skin.
 			
+			Sarah whispers, <<Matthias's blood is spattering in a cup of some
+			kind. He is making progress on the spell. We must hurry.>>
+			
 			No immediate effect.
 		"""
 		
+		firstRitual = firstRitualChalice
 		Exit
 	End Page Vamp5
 	
@@ -120,7 +128,8 @@ Book MythosFirstRitualOpenGate Ordered No Keep
 	
 	Page Fail
 		No Text
-		Goto EndSummary.OpenGateHardFail
+		fail = true
+		Trigger @GameOver
 	End Page Fail
 End Book MythosFirstRitualOpenGate
 
@@ -154,6 +163,8 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 			for the ritual. I can see on your face that you sense it too. We
 			must find Matthias and stop him.>>
 		"""
+		
+		firstRitual = firstRitualDagger
 	End Page Dagger
 	
 	Page FirstRitualChalice
@@ -166,13 +177,15 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 			a chalice. I can almost see it.>> She looks down at your fist and
 			says, <<I can see you are feeling the same thing.>>
 		"""
+		
+		firstRitual = firstRitualChalice
 	End Page FirstRitualChalice
 	
 	Page Woman
 		Text """
 			The power of Matthias's spell intensifies around you. It draws you in
 			and repulses you at the same time. A woman screams. The sound
-			pierces the walls of the house, making the windows rattle in their
+			pierces the walls, making windows rattle in their
 			frames. You feel her take a deep, ragged breath, then she screams
 			again. And again. And again.
 
@@ -184,7 +197,7 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 		"""
 	End Page Woman
 	
-	Page Open
+	Page OpenGate
 		Text """
 			The woman's screaming abruptly stops and, for a moment, it is silent
 			again, as if the house were taking a breath. A boy's single,
@@ -196,11 +209,12 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 			The power of the gate has infused the air around you with a
 			a nearly electric sense of evil, making your skin buzz
 			in discomfort.
-			
 		"""
+		
+		firstRitual = firstRitualGateOpen
 	End Page Open
 	
-	Page Stablize
+	Page Stabilize
 		Text """
 			You can still feel the gate through the walls and floor, sputtering
 			and buzzing, making it sound unstable, like it might collapse at
@@ -208,10 +222,10 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 			
 			A cultist runs into the dungeon cell, raises a hand,
 			mumbles words, and is sucked through the wall. A moment
-			later, the feeling the gate stablizes.
+			later, the feeling the gate stabilizes.
 			
 			Sarah leans in, <<I don't think Matthias has an elder sign to 
-			stablize the gate. Maybe that cultist is what he needed to keep
+			stabilize the gate. Maybe that cultist is what he needed to keep
 			it open.
 		"""
 		
@@ -228,13 +242,15 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 			Sarah leans in, <<He used an elder sign to stabilize the gate. Now
 			he will start summoning.>>
 		"""
-	End Page Stablize
+		
+		If goal = goalCloseGate Then firstRitual = firstRitualGateStabilized
+	End Page Stabilize
 	
 	Page Summon
 		Text """
 			Power is now pulsing through the house and caves. Sarah is visibly
 			upset and is no longer whispering. She says loudly, <<Matthias is
-			summonning his god, an Ancient One.>>
+			summoning his god, an Ancient One.>>
 		"""
 	End Page Summon
 	
@@ -244,7 +260,7 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 			need. You know it is what Matthias is summoning.
 			
 			Panicked, Sarah bellows so everyone can here her, <<We are running
-			out of time. You mustv complete your tasks so I can help you. Until
+			out of time. You must complete your tasks so I can help you. Until
 			then, we don't know what to do, where to do it, or with what tools.
 			Hurry.>>
 		"""
@@ -267,7 +283,8 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 			The investigation is over.
 		"""
 		
-		Goto EndingBook.HardFail
+		fail = true
+		Trigger @GameOver
 	End Page Fail
 End Book MythosFirstRitualFeedOrCloseGate
 

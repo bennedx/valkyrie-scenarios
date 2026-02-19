@@ -5,7 +5,7 @@ Book Endings
 	Triggered By @GameOver
 	
 	Page HardFail 
-		Visible When ritual
+		Visible When firstRitual
 
 		Trigger @ShowIntroFrame
 		
@@ -19,12 +19,12 @@ Book Endings
 			As you lie on the floor, bleeding and dying, the cultists run out
 			the door to safety. Sarah leans down and whispers, <<We failed and
 			there is no telling how much of the world will be destroyed, how
-			many people will die. You did your best, so thank you.>>
+			many people will die. But you did your best, so thank you.>>
 
 			Your last living experience is the floor under you rising up as the
-			beast enters the world.
+			Ancient One enters the world.
 			
-			The End
+			The end.
 		"""
 		
 		Add UIEndButton
@@ -47,7 +47,7 @@ Book Endings
 			this area to try again. Our nephew will grow up normally and I can
 			finally find peace. Thank you.>>
 
-			As you walk down the road you entered a few hours ago, you reflect
+			As you walk down the road, you reflect
 			on everything that just happened. Exhausted and still in shock, you
 			wonder if the world will ever feel the same again. But you are also
 			deeply comforted and proud that you were able to save the world from
@@ -97,10 +97,9 @@ Book Endings
 		Trigger @ShowIntroFrame
 		
 		Text Like UIOpeningText """
-			As the ancient one nears the portal, you panic and try to run. The
-			altar room is shaking and stone from the ceiling is beginning to
-			fall. Your cousin continues to cast the summoning spell. You panic
-			and begin to run.
+			As the Ancient One nears the portal, the altar room shakes and stone
+			from the ceiling starts to fall. Your cousin continues to cast the
+			summoning spell. You panic and begin to run.
 
 			You find a door that leads back to the cave, but when you enter, you
 			find yourself surrounded by more cultists. This time, they outnumber
@@ -109,65 +108,180 @@ Book Endings
 			Broken and bleeding, you lie on the floor. A monstrous roar cuts
 			through the din:  the Ancient One has come through the gate. As you
 			draw your last breath, the cultists fall to their knees and begin
-			praying to the beast for salvation. The last thing you feel is the
-			ceiling caving in and the screams of the cultists, betrayed by their
-			god for their foolishness. 
-
+			praying to their god for salvation.
+			
 			The only comfort you have is in knowing that a stream of sacrifice
-			is required to keep the ancient one here. With so many cult members
-			dead, maybe the beast won't be here for long.
+			is required to keep the Ancient One here. With so many cult members
+			dead, maybe It won't be here for long.
+			
+			The last thing you feel is the ceiling caving in and the screams of
+			the cultists, betrayed by their god for their foolishness. 
+
+			
+			The end.
 		"""
 		
 		Add UIEndButton
-		Audio "OpenGateFail.English.ogg"
+		Audio "OpenGateLose.English.ogg"
 	End Page OpenGateLose
 	
 	Page FeedGateWin
 		Visible If goal = goalFeedGate And win
 
 		Trigger @ShowIntroFrame
-		Add UIEpilogTextHardFail, UIEndButton
-		Audio "HardFail.English.ogg"
+		
+		Text """
+			As the last cultist falls---and with Matthias dead---the gate begins
+			to sputter. When you complete the sealing spell, the gate collapses
+			and the boy falls to the ground with a thud. He burns like coals, his
+			eyes open wide in terror and pain. He moves his mouth but no sound
+			comes out.
+
+			Sarah turns to you and says, <<You were successful. Not only did we
+			stop Matthias's plans, we stopped anyone's ability to use this area
+			to try again. I only wish our nephew were able to survive, but I 
+			don't think there was a way. I will stay with him here, then help him
+			find peace once he dies. Thank you.>>
+
+			As you exit the chapel into the moonlit night, you reflect on what
+			happened these last hours: the mystery, the fear, and the death. And
+			your nephew. Thinking of him smoldering back there makes your gorge
+			rise. You wonder if the world will ever feel the same. But you
+			are also deeply comforted and proud that you were able to save the
+			world from the evil that Matthias tried to bring.
+			
+			The end.
+		"""
+		
+		Add UIEndButton
+		Audio "FeedGateWin.English.ogg"
 	End Page FeedGateWin
 	
 	Page FeedGateDraw
 		Visible If goal = goalFeedGate And draw
 
 		Trigger @ShowIntroFrame
-		Add UIEpilogTextHardFail, UIEndButton
-		Audio "HardFail.English.ogg"
+
+		Text """
+			The last cultist falls at your feet. You stagger back, broken and
+			bleeding. Unable to stand, you fall to the floor. Without Matthias to keep it open and
+			the cultists to offer sacrifice, the gate begins to sputter. A
+			tentacle tentatively pokes through, but pulls back when the gate
+			suddenly pops.
+
+			Sarah leans down and whispers, <<"The Ancient One was not able to make it
+			through. But you were not able to seal the gate, so it can
+			happen here again. When the gate collapses, our nephew will die. I will
+			see him to peace. Then I will return and wait for the next attempt.>>
+
+			The last thing you see is Sarah softly calling your nephew's name
+			while the gate destabilizes. As you die you are at least a little
+			comforted by what you were able to accomplish. You saved the world.
+			For now at least. 
+
+			The End.
+		"""
+
+		Add UIEndButton
+		Audio "FeedGateDraw.English.ogg"
 	End Page FeedGateDraw
 	
 	Page FeedGateLose
 		Visible If goal = goalFeedGate And lose
 
 		Trigger @ShowIntroFrame
-		Add UIEpilogTextHardFail, UIEndButton
-		Audio "HardFail.English.ogg"
+		
+		Text """
+			The cultists beat and stab you to the ground and eventually you are
+			unable to fight back. One-by-one, you watch cultists
+			approach the gate, draw daggers, and slit their own throats.
+			As another draws across his neck, tentacles begin coming through the
+			gate. The room is shaking and the ceiling starts to fall. 
+
+			Sarah leans in and whispers, <<We failed. The Ancient One is here.
+			With your unused elder sign, someone else could fix the gate to keep
+			it open. Our nephew could remain as the gate indefinitely, a fate
+			much worse than death. I will stay and try to find a way to close
+			the gate, but the world is in trouble.>>
+
+			The last thing you hear before it all goes dark is Sarah. <<Thank
+			you for trying. We did the best that we could.>>
+
+			The end.		
+		"""
+		
+		Add UIEndButton
+		Audio "FeedGateLose.English.ogg"
 	End Page FeedGateLose
 	
 	Page CloseGateWin
 		Visible If goal = goalCloseGate And win
 
 		Trigger @ShowIntroFrame
-		Add UIEpilogTextHardFail, UIEndButton
-		Audio "HardFail.English.ogg"
+		
+		Trigger """
+			The gate winks out and the boy falls to the ground, smoldering like
+			coals in a fire pit. The elder sign is embedded in his forehead,
+			unnoticed in the pain of the fire.
+
+			Sarah leans in and whispers, <<You were successful in stopping
+			Matthias and his plans to remake the world. You also stopped anyone
+			else from trying it here again. Once the boy dies, I will help him
+			find peace, then I will be able to rest. Thank you.>>
+
+			As you exit the chapel into the moonlit night, you reflect on what
+			happened these last hours. The mystery, the fear, and the death.
+			And your nephew. Thinking of him burning back there makes your gorge
+			rise.
+
+			Exhausted and still in shock, you wonder if the world will ever feel
+			the same again. But you are also deeply comforted and proud that you
+			were able to save the world from the evil that Matthias tried to
+			bring.
+
+			The end.		
+		"""
+		
+		Add UIEndButton
+		Audio "CloseGateWin.English.ogg"
 	End Page CloseGateWin
 	
 	Page CloseGateDraw
 		Visible If goal = goalCloseGate And draw
 
 		Trigger @ShowIntroFrame
-		Add UIEpilogTextHardFail, UIEndButton
-		Audio "HardFail.English.ogg"
+		
+		Text """
+			When you complete the closing spell, the cave shakes, the gate
+			flashes and pops twice, then winks out of existence. The boy falls to the
+			floor with a thud. He is smoldering like hot coals; his eyes are wide with fear and pain; his mouth
+			moves but no sound comes out. 
+
+			Sarah turns to you and says, <<You were successful. But you were not
+			able to seal the gate, so this will all happen again. Once the boy
+			dies, I will try to send him to find peace. I will stay and
+			wait for the next opportunity to permanently stop this madness. 
+			Thank you for what you were able to do.>>
+
+			As you exit the chapel into the moonlit night, you reflect on what
+			happened these last hours. The mystery, the fear, and the death. And
+			your nephew. Thinking of him burning back there makes your gorge
+			rise.
+
+			But at least the world is safe tonight. 
+
+			The end.		
+		"""
+		
+		Add UIEndButton
+		Audio "CloseGateDraw.English.ogg"
 	End Page CloseGateDraw
 	
 	Page CloseGateLose
 		Visible If goal = goalCloseGate And lose
-
-		Trigger @ShowIntroFrame
-		Add UIEpilogTextHardFail, UIEndButton
-		Audio "HardFail.English.ogg"
+		No Text
+		
+		Goto OpenGateLose
 	End Page CloseGateLose
 	
 	Page ShowUIFrame

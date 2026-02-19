@@ -9,11 +9,7 @@ Book CloseGate Ordered No Keep Looped
 
     Page Step1
         Prolog """
-            The gate is open and you must close it quickly. If you have the
-            {c:QItemRitualKnife}, the {c:QItemRitualComponents}, and the
-            {c:QItemElderSign}, you can start now.
-        
-            Only {c:EventChosenInvestigator} can perform this ritual and only
+            The gate is open and you must close it quickly. Only {c:EventChosenInvestigator} can perform this ritual and only
             while standing at the altar.
         
             Are you ready?
@@ -323,8 +319,9 @@ Book CloseGate Ordered No Keep Looped
             This investigation is over.
         """
 		
-        result = fullWin
-        Trigger @EventGameOverStart
+        win = true
+        Trigger @GameOver
+		$end = true
 	    Exit
     End Page Step5Pass
 
@@ -365,4 +362,26 @@ Book CloseGate Ordered No Keep Looped
         Goto Step5Fail
     End Page Step5Repeat
 
+	Page SarahTransports
+		Not Visible
+		Triggered By @CompleteRequirement If goal = goalCloseGate And foundKnife And foundDvm And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
+		
+		Text """
+			Sarah smiles for the first time and says out load, <<That's it! Now
+			we know what is going on, where it's happening, and what to do about
+			it. I think I can take us where we need to be.>>
+			
+			Sarah seems to grow, getting more transparent. Suddenly, the world
+			shifts and you are... somewhere else. And disoriented. There is
+			noise and light and someone yelling. Folks are rushing by. It all
+			seems far away.>>
+		"""
+		
+		If firstRitual < firstRitualWoman Call MythosFirstRitualFeedOrCloseGate.Woman
+		If firstRitual < firstRitualOpenGate Call MythosFirstRitualFeedOrCloseGate.OpenGate
+		
+		firstRitual = false
+		Trigger @ExploreAltar
+		Goto Init
+	End Page SarahTransports
 End CloseGate
