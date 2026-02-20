@@ -122,7 +122,7 @@ Book DvmCloseGate Ordered Keep Looped
     
     Page Commentary
         Prolog """
-            With a look of concern and disgust on your face, you turn the page.
+            With a look of concern and disgust on your face, you turn the page.
         """
         Button "Read the next page" After "Commentary"
 
@@ -133,11 +133,15 @@ Book DvmCloseGate Ordered Keep Looped
             lines and how they allow you to draw more power for the ritual.
             Determining the preferred dates and times for the ritual is also
             discussed, with a full moon being the most important part.
-        
+		
             In the margin are notes about a place under the house that aligns
             with a ley line; there is also a list of years that would be good
             for the ritual, and specific dates that are the best. Today is on
             the list.
+			
+			At the bottom of the page is another scrawled message. This one is
+			a spell to silence someone. <i>It's short and it might be useful,
+			</i> you think. You spend the several minutes memorizing it. 
         """
 
         If readAboutBoy Then Text """
