@@ -5,15 +5,19 @@ Book OpenGate Ordered No Keep Looped
 
 	Mark Step3Repeat Read
 
-    Page Step1
-        Prolog """
+    Page Step1Prolog
+        Text """
 			Matthias stands at the alter, arms raised, speaking
-			a language you cannot understand. You can see on the altar the
+			a language you don't understand. You can see on the altar the
 			various tools and materials needed for the ritual.
 			
 			The boy is chained to the floor, crying and quietly begging his
 			father to stop. A cowering woman is chained near Matthias at the
-			altar; it is cleaer that fear has paralyzed her.
+			altar.
+			
+			The woman is screaming now and something is happening to her body.
+			Matthias continues speaking, but this time the waves of power seem
+			to be coming from the air and into him.
 			
             If you have the {c:QItemRitualKnife}, the
 			{c:QItemRitualComponents}, and the {c:QItemElderSign}, you can
@@ -25,10 +29,62 @@ Book OpenGate Ordered No Keep Looped
             Are you ready?
         """
 
-        Button "Speak the words"
+		If firstRitual >= firstRitualWoman Then Text """
+			Matthias stands at the alter, arms raised, speaking
+			a language you don't understand. You can see on the altar the
+			various tools and materials needed for the ritual.
+			
+			The boy is chained to the floor, crying and quietly begging his
+			father to stop. A woman lies dead at his feet, her face locked in a
+			scream that will never end.
+			
+            If you have the {c:QItemRitualKnife}, the
+			{c:QItemRitualComponents}, and the {c:QItemElderSign}, you can
+			begin to disrupt the ritual.
+        
+            Only {c:EventChosenInvestigator} can perform this task and only
+            while standing at the altar in the same space as Matthias.
+        
+            Are you ready?
+        """
 
+        Button 1 "Speak the words"
+		Button 2 "Not Yet"
+
+		If selection = 1 And firstRitual >= firstRitualWoman Then Goto Step1
+		If selection = 1 Then Goto Woman
+		Exit
+	End Page Step1Prolog
+	
+	Page Woman
+		Not Visible
+		
+		Add TokenDeadWoman
+		
+		Text """
+			As you step closer, Matthias lowers then flings his arms upward.
+			The woman screams, gasps for air, then screams again. The power you
+			felt before comes in waves, but this time is feels like it is 
+			going into Matthias. The woman abruptly stops screaming, goes rigid,
+			the goes limp. A momentary glow surrounds Matthias and he lowers his
+			arms long enough to flip to a different page in the book he has on
+			the altar. The woman is dead.
+			
+			Sarah whispers, <<Matthias has recharged himself. He is at
+			the final stage. He is ready to open the gate.>>
+		"""
+		
+		Remove TokenLiveWoman
+		
+		Goto Step1
+	End Page Woman
+	
+	Page step1
+		firstRitual = 0
+		mainRitual = mainRitualStarted
+		
         Text """
-			When you get close to the altar, you see that
+			You look closer at the altar. You notice that
 			Matthias does not have an {c:QItemElderSign}. That
 			means he will need blood to keep the gate open. You must stop him
 			before he uses you to supply it.
@@ -36,7 +92,7 @@ Book OpenGate Ordered No Keep Looped
 			You think back to the counter-spell you memorized earlier. You hold
 			the {c:QItemRitualKnife} and chalice above your head and speak the
 			words. Matthias snaps his head toward you, as though seeing
-			you here for the first time. Your eyes lock and you see a 
+			you for the first time. Your eyes lock and you see a 
 			determined but haunted look in his eyes.
 			
 			He looks back at the altar and tries to start again. Nothing comes
@@ -52,12 +108,12 @@ Book OpenGate Ordered No Keep Looped
 			sound comes out, you see him moving his lips.
         """
 
-        Button "Stab Matthias"
+        Button "Stab Matthias first"
 
         Text """
-			You choose your moment and lunge at him with your knife. At the
-			last moment, he steps to the left and your knife glances off of his
-			robed arm without doing any damage.
+			You choose your moment and lunge at him with your knife. He deftly
+			steps to the left and your knife glances off of his
+			robe, doing no damage.
 			
 			You think you can turn and make a more direct hit. Test {agility}.
 			
@@ -79,8 +135,8 @@ Book OpenGate Ordered No Keep Looped
 
         Text """
 			Matthias grabs the knife and begins speaking the
-			incantation again, his voice booming with power. The knife begins
-			glowing and then lightly, slowly pulsing.
+			incantation again, his voice booming with power. The knife suddenly
+			glows and then, lightly, begins pulsing.
 			
 			You speak the words again. Test {will}.
 			
@@ -98,7 +154,7 @@ Book OpenGate Ordered No Keep Looped
         
             Suffer 2 Horror ({will} negates).
 			
-			You must stop him.
+			<<You must stop him,>> Sarah stammers.
         """
 
         Mark Step3Repeat Unread
@@ -106,7 +162,7 @@ Book OpenGate Ordered No Keep Looped
 
 	Page Step3Repeat
 		Prolog """
-			Suprised that the spell didn't work, you raise your arms again.
+			Surprised that the spell didn't work, you raise your arms again.
 		"""
 		
 		Button "Speak the words"
@@ -122,8 +178,9 @@ Book OpenGate Ordered No Keep Looped
 	End Page Step3Repeat
 
 	Page Step3RepeatFail
+	
 		Text """
-			Matthias seems unphased as blood wells up from the 
+			Matthias seems unfazed as blood wells up from the 
 			cut in his palm. You look at the dagger and chalice raised in your
 			hands and wonder why nothing is happening. You take a deep breath,
 			determined to stop this madness.
@@ -134,9 +191,12 @@ Book OpenGate Ordered No Keep Looped
 	End Page Step3RepeatFail
 
     Page Step4
+		Mark Step3RepeatFail Read
+		
         Prolog """
-            As Matthias squeezes blood from his fist into the
-			chalice, the spell takes hold and... he loses his voice again.
+            Matthias squeezes blood from his fist into the
+			chalice, speaking in that same unknown language. As he does, you can
+			feel your spell take hold... he loses his voice again.
         """
 
         Button "Make your move"
@@ -158,7 +218,7 @@ Book OpenGate Ordered No Keep Looped
 	Page Step4Fail
 		Text """
 			Matthias swings his arm at you, dagger flashing in the low
-			light. It catches your arm, causing you to drop the dagger.
+			light. It catches your arm, causing you to drop your dagger.
 			
 			Drop {c:QItemRitualKnife}. Take 2 {damage} ({agility} negates).
 			
@@ -169,17 +229,31 @@ Book OpenGate Ordered No Keep Looped
 	End Page Step4Fail
 	
     Page KillHim
+		Prolog """
+			You stop for a moment to think. You need to decide what to do next
+			and you need to decide quickly.
+			
+			Sarah quavers, <<You have do something. He is nearly done casting.
+			Please.>>
+		"""
+		Button "Make your decision"
+		
         Text """
             The futility of trying to stop your uncle from completing this
 			ritual sinks in. You're going to have to kill him.
+			
+			Meanwhile, across the room, your friends are fighting for their 
+			lives against what seems to be a never-ending stream of local
+			townsfolk in cult robes.
+			
+			Your cousin still concentrates on the his casting.
         """
 	
 		// we need to replace unattackable monster with one we can attack
 		
-		Remove MonsterUncleMatthiasAltar
-		Call Event MonsterUncleMatthiasToKill
+		Call Event SpawnAltarMatthiasOpenGate
 		
-		// does this make the DVM go away?
+		// does this make the DVM go away? (???)
 		Remove QItemDvm
     End Page KillHim
 	
@@ -212,3 +286,100 @@ Book OpenGate Ordered No Keep Looped
 		Goto Init
 	End Page SarahTransports
 End Book OpenGate
+
+Book MatthiasOpenGateActivation Ordered No Keep
+	Page First
+		Text """
+			Matthias picks up the chalice, a drop of blood still dripping down
+			its inside surface. He examines it carefully, then, seemingly
+			satisfied, he sets it back onto altar. He raises his other arm,
+			dagger still in his hand. After steadying the chalice, he reaches
+			over and flips a page in his book. He glances down, then looks to
+			the boy and begins speaking. As he does, you are briefly stunned by
+			the wave of energy that radiates from him.
+			
+			Each investigator takes 1 facedown damage ({agility} negates).
+			
+			Each cultist takes 1 damage.
+		"""
+	End Page First
+
+	Page Second
+		Text """
+			Matthias begins speaking again, power radiating from him like it
+			did before. His is intent on his son or starts to move. As you watch
+			the boy begins to hover, being slowly pulled up like his on a
+			string. You hear the chain clank when it slips. 
+			
+			Sarah is panicking, look back and forth between her uncle and her
+			cousin. <<Do something,>> she yells. <<Do something now!>>
+			
+			Matthias doesn't notice, all of his attention focused on the words
+			he's speaking and the boy who is their target.
+		"""
+	End Page Second
+	
+	Page Third
+		Text """
+			The boy screams as a glow begins to form around him. He stops rising
+			as the chain binding him to the floor is pulled taut. He is still
+			screaming. At the altar, Matthias is still casting the spell, all 
+			his attention focused, obvious to any of the other people in the
+			small room.
+			
+			Sarah shrieks at Matthias, <<Stop! Please stop!>>
+			
+			With a final flourish of his knife, Matthias completes the spell.
+			A bolt strikes from the tip of the blade to the boys chest. When it
+			hits, the boy stops screaming and goes rigid. 
+			
+			Everyone stops and turns to watch, the room going completely silent
+			for a moment. Then, with a roar, the boy... changes. He is suddenly
+			something more. Something surging and abyssal, but unstable. The
+			gate is open and, somehow, the boy <i>is</i> the gate.
+			
+			Sarah cries out in anguish.
+			
+			The gate sputters.
+		End Text
+		
+		gateOpen = true
+	End Page Third
+	
+	Page Fourth
+		Text """
+			This fight is exhausting you and, for a moment, you stop to catch
+			your breath.
+			
+			As you do, Matthias flip forward many pages in the book, smiling
+			when he finds what he is looking for. He raises his arms and begins
+			speaking again. His own blood still drips from the dagger, landing
+			on the altar. You can feel it in the air as each drop hits.
+
+			Sarah yells, <<He's starting the summoning. The Ancient One has 
+			heard his call. We are running out of time.>>
+			
+			Another cultist enters the room, steps toward the gate, raises a
+			dagger, and slits his own throat. When blood touches the boy's 
+			chain, the gate calms and becomes more stable. It still pops, but 
+			not as strongly now.
+		"""
+		
+		summoning = true
+	End Page Fourth
+	
+	Page Fifth
+		Text """
+			Matthias continues to speak, his voice booming in the chamber. He
+			punctuates each sentence by stabbing the air with his dagger.
+			Suddenly, stops and just watches the gate as a lone tentacle
+			pokes through.
+			
+			The investigation is over.
+		"""
+		
+		lose = true
+		Trigger @GameOver
+	End Page Fifth
+	
+End Book MatthiasOpenGateActivation

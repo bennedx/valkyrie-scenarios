@@ -34,7 +34,7 @@ Book CloseGate Ordered No Keep Looped
     Page Step2
         Prolog """
             You turn the page and again review the process for <<blessing>> the
-			knife. When you glance down, you are suprised that you can read the
+			knife. When you glance down, you are surprised that you can read the
             words now.
 
             You pull out the {c:QItemRitualDagger} and...

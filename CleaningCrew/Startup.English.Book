@@ -76,6 +76,10 @@ Book Startup Ordered No Keep Looped
 		firstRitualWoman = 5
 		firstRitualGateStabilized = 6
 
+		mainRitualStarted = 1
+		mainRitualGateOpen = 2
+		
+
 		No Text
 		
 		If Not testMode Then Trigger @SplashScreen

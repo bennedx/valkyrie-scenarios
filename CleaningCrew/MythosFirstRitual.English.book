@@ -108,6 +108,7 @@ Book MythosFirstRitualOpenGate Ordered No Keep
 			No immediate effect.
 		"""
 		
+		firstRitual = firstRitualWoman
 		Exit
 	End Page Vamp7
 	

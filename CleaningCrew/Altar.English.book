@@ -66,27 +66,34 @@ Book Altar Ordered No Keep Looped
 	End Page Place
 	
 	Page PlaceAltar
+		Add TokenMatthias
+		
 		Text """
 			Now that you have your bearings, you better understand where you are
 			and what is around you. Place the {c:TileAltar} tile.
 			
 			The man at the altar continues casting his spell. Place a 
-			{c:CustomMonsterMatthias} as indicated. This is your cousin
+			Cult Leader as indicated. This is your cousin
 			Matthias.
 	
 			You are standing near the boy. Place your investigator figures
 			as indicated.
 		"""
+		
+		Remove TokenMatthias
 	End Page PlaceAltar
 	
 	Page PlaceNpcs
+		If goal = goalOpenGate Then Add TokenLiveWoman!
+		If goal != goalOpenGate Then Add TokenDeadWoman!
+	
 		Text """
 			The boy floats in the air. Place the {c:TokenGate} token as
-			indicated. This is Matthias's son. He <i>is</i> the gate.
+			indicated. This is Matthias's son. Somehow, he <i>is</i> the gate.
 			
-			A woman lies dead at Matthias's feet. Place the {c:TokenDeadWoman}
-			token. This is the wife of the man who was looking for the
-			healing stone you found.
+			A dead woman is chained to the altar, lying at Matthias's feet. Place the
+			{c:TokenDeadWoman} token. This is the wife of the man who was
+			looking for the healing stone you found.
 		"""
 		
 		If goal = goalOpenGate Then Text """
@@ -94,7 +101,7 @@ Book Altar Ordered No Keep Looped
 			indicated. This is Matthias's son. If you don't stop Matthias, 
 			the boy will soon be the gate.
 			
-			A woman lies dead at Matthias's feet. Place the {c:TokenDeadWoman}
+			A woman lies dead at Matthias's feet. Place the {c:TokenLiveWoman}
 			token. This is the wife of the man who was looking for the
 			healing stone you found.
 		"""

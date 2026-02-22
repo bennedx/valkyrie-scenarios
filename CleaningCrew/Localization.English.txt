@@ -62,8 +62,7 @@ TokenTestExploreDungeonCaveViaCrypt.text,ExploreDungeonCaveViaCrypt
 TokenTestExploreAltar.button1,Test
 SpawnPlaceAltarSpawnDavid.button1,Continue
 SpawnPlaceAltarSpawnDavid.text,|||\nYou look toward the altar and see a man with his arms extended above his head. He is speaking words you do not understand, but you can feel their power. Although the gate is open, he is not done. Sarah yells, "That man is our cousin. He must be stopped. He already has the gate open:  we must stop his summoning!" Place a Cult Leader as indicated; this is your cousin David.\n\nHe looks up, surprised. A worried look crosses his face:  he hadn’t expected this to happen. <i>Who are these people?</i> He turns back to his work and continues the ritual.\n|||
-TokenDyingWoman.text,"\nThe woman writhes in pain, screaming. But her movements are weaker and her screams not as loud. She is dying. You must stop David before he completes the ritual.\n"
-TokenDyingWoman.button1,Continue
+TokenDeadWoman.button1,Continue
 CustomMonsterDavidSmythe.info,-
 SpawnAltarCultists1.text,"\nYou are suddenly aware that Sarah transported the robed townspeople with you. As they become more oriented, they stand and approach you. They will not let you interfere with David's casting. Place {var:cultistCount} {c:CustomMonsterAltarCultist}s as indicated.\n\nEach cultist is placed next to one investigator. Each cultist and investigator can attack only each other (or another monster that wanders in) until one of them is dead. The investigator holding the {c:QItemElderSignPendant} cannot be attacked.\n"
 SpawnAltarCultists2.button1,Continue
@@ -13758,3 +13757,6 @@ EventWandererAttacksExpr9.button1,
 EventWandererAttacksExpr6.text,"\nEventWandererAttacksExpr6 @(18,47)\n\n\n\n\n"
 EventWandererAttacksExpr6.button1,
 TokenSarahAltar.button1,Button1
+TokenLiveWoman.text,|||\nWhen you nudge her with your foot, she moans. Sarah hisses, "Leave her alone. You have work to do."\n|||
+TokenLiveWoman.button1,Continue
+TokenDeadWoman.text,|||\nThe woman lies dead, face frozen in fear; her leg is chained to the altar.\n\n"What you doing?!" Sarah hisses. "We must stop Matthias!"\n|||
