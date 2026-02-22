@@ -7,17 +7,13 @@ Book OpenGate Ordered No Keep Looped
 
     Page Step1Prolog
         Text """
-			Matthias stands at the alter, arms raised, speaking
-			a language you don't understand. You can see on the altar the
-			various tools and materials needed for the ritual.
-			
-			The boy is chained to the floor, crying and quietly begging his
-			father to stop. A cowering woman is chained near Matthias at the
-			altar.
-			
-			The woman is screaming now and something is happening to her body.
-			Matthias continues speaking, but this time the waves of power seem
-			to be coming from the air and into him.
+Matthias stands at the altar, arms raised, speaking in a language you do not understand. Spread before him are the tools and materials required for the ritual.
+
+The boy is chained to the floor, crying and quietly begging his father to stop. Nearby, a cowering woman is shackled beside the altar.
+
+Now the woman is screaming. Something is happening to her body.
+
+Matthias continues the incantation, but this time the waves of power do not radiate from him — they pour from the air itself, rushing into him.
 			
             If you have the {c:QItemRitualKnife}, the
 			{c:QItemRitualComponents}, and the {c:QItemElderSign}, you can
@@ -30,13 +26,9 @@ Book OpenGate Ordered No Keep Looped
         """
 
 		If firstRitual >= firstRitualWoman Then Text """
-			Matthias stands at the alter, arms raised, speaking
-			a language you don't understand. You can see on the altar the
-			various tools and materials needed for the ritual.
-			
-			The boy is chained to the floor, crying and quietly begging his
-			father to stop. A woman lies dead at his feet, her face locked in a
-			scream that will never end.
+Matthias stands at the altar, arms raised, speaking in a language you do not understand. Spread before him are the tools and materials required for the ritual.
+
+The boy is chained to the floor, crying and quietly begging his father to stop. At Matthias’s feet lies a dead woman, her face frozen in a scream that will never fade.
 			
             If you have the {c:QItemRitualKnife}, the
 			{c:QItemRitualComponents}, and the {c:QItemElderSign}, you can
@@ -62,16 +54,17 @@ Book OpenGate Ordered No Keep Looped
 		Add TokenDeadWoman
 		
 		Text """
-			As you step closer, Matthias lowers then flings his arms upward.
-			The woman screams, gasps for air, then screams again. The power you
-			felt before comes in waves, but this time is feels like it is 
-			going into Matthias. The woman abruptly stops screaming, goes rigid,
-			the goes limp. A momentary glow surrounds Matthias and he lowers his
-			arms long enough to flip to a different page in the book he has on
-			the altar. The woman is dead.
-			
-			Sarah whispers, <<Matthias has recharged himself. He is at
-			the final stage. He is ready to open the gate.>>
+As you step closer, Matthias lowers his arms, then flings them skyward.
+
+The woman screams, gasps for air, then screams again. The power you felt before comes in waves, but this time it feels as though it is flowing into Matthias.
+
+Abruptly, the woman stops screaming. She goes rigid — then limp.
+
+A brief glow surrounds Matthias. He lowers his arms just long enough to flip to another page in the book resting on the altar.
+
+The woman is dead.
+
+Sarah whispers, <<Matthias has recharged himself. He is at the final stage. He is ready to open the gate.>>
 		"""
 		
 		Remove TokenLiveWoman
@@ -84,19 +77,19 @@ Book OpenGate Ordered No Keep Looped
 		mainRitual = mainRitualStarted
 		
         Text """
-			You look closer at the altar. You notice that
-			Matthias does not have an {c:QItemElderSign}. That
-			means he will need blood to keep the gate open. You must stop him
-			before he uses you to supply it.
-			
-			You think back to the counter-spell you memorized earlier. You hold
-			the {c:QItemRitualKnife} and chalice above your head and speak the
-			words. Matthias snaps his head toward you, as though seeing
-			you for the first time. Your eyes lock and you see a 
-			determined but haunted look in his eyes.
-			
-			He looks back at the altar and tries to start again. Nothing comes
-			out of his mouth and he looks back at you.
+You look more closely at the altar.
+
+You notice that Matthias does not possess an {c:QItemElderSign}. That means he will need blood to keep the gate open. You must stop him before he uses you to supply it.
+
+You think back to the counter-spell you memorized earlier. Raising the {c:QItemRitualKnife} and the chalice above your head, you speak the words.
+
+Matthias's head snaps toward you, as though he is seeing you for the first time. Your eyes lock, and you see a look that is both determined and haunted.
+
+He turns back to the altar and tries again.
+
+Nothing comes out.
+
+Slowly, he looks back at you.
 			
 			This step is complete.
         """
@@ -104,20 +97,17 @@ Book OpenGate Ordered No Keep Looped
 
     Page Step2
         Prolog """
-            Your cousin lowers his eyes to the dagger he holds. While no
-			sound comes out, you see him moving his lips.
+Your cousin lowers his gaze to the dagger in his hand. Though no sound escapes him, you can see his lips moving.
         """
 
         Button "Stab Matthias first"
 
         Text """
-			You choose your moment and lunge at him with your knife. He deftly
-			steps to the left and your knife glances off of his
-			robe, doing no damage.
-			
-			You think you can turn and make a more direct hit. Test {agility}.
-			
-			For each Unique Item you have, you may roll 1 extra die.
+You choose your moment and lunge at him with your knife. He deftly sidesteps, and your blade glances off his robe, doing no harm.
+
+You think you can pivot and strike more cleanly. Test {agility}.
+
+For each Unique Item you possess, you may roll one additional die.
         """
 		
 		// even if we pass, we fail
@@ -126,17 +116,13 @@ Book OpenGate Ordered No Keep Looped
 
     Page Step3
         Prolog """
-			He steps away again and you stumble, bumping into him and knocking
-			the {c:QItemRitualDagger} from his hand. It clatters onto the altar
-			and you step back.
+He steps away again, and you stumble forward, colliding with him and knocking the {c:QItemRitualDagger} from his grasp. It clatters across the altar as you regain your footing and step back.
         """
 
 		Button "Speak the words"
 
         Text """
-			Matthias grabs the knife and begins speaking the
-			incantation again, his voice booming with power. The knife suddenly
-			glows and then, lightly, begins pulsing.
+Matthias snatches up the knife and begins the incantation again, his voice booming with power. The blade suddenly flares with light, then settles into a steady, pulsing glow.
 			
 			You speak the words again. Test {will}.
 			
@@ -149,8 +135,9 @@ Book OpenGate Ordered No Keep Looped
 
     Page Step3Fail
         Text """
-            You fumble the words and nothing happens. Matthias
-			ignores you and slides the blade across his palm.
+You fumble the words, and nothing happens.
+
+Matthias ignores you and draws the blade across his palm.
         
             Suffer 2 Horror ({will} negates).
 			
@@ -162,7 +149,7 @@ Book OpenGate Ordered No Keep Looped
 
 	Page Step3Repeat
 		Prolog """
-			Surprised that the spell didn't work, you raise your arms again.
+			Surprised that the spell fails, you raise your arms again.
 		"""
 		
 		Button "Speak the words"
@@ -173,17 +160,9 @@ Book OpenGate Ordered No Keep Looped
 			For each Unique Item you have, you may roll 1 extra die.
 		"""
 		
-		Test Quota 4 Set passOpenGateStep3
-		If passOpenGateStep3 Then Goto Step4
-	End Page Step3Repeat
+Matthias seems unfazed as blood wells from the cut in his palm. You glance at the dagger and chalice raised in your hands, wondering why nothing is happening.
 
-	Page Step3RepeatFail
-	
-		Text """
-			Matthias seems unfazed as blood wells up from the 
-			cut in his palm. You look at the dagger and chalice raised in your
-			hands and wonder why nothing is happening. You take a deep breath,
-			determined to stop this madness.
+You draw a steadying breath, determined to stop this madness.
 		"""
 
 		Mark Unread
@@ -194,17 +173,15 @@ Book OpenGate Ordered No Keep Looped
 		Mark Step3RepeatFail Read
 		
         Prolog """
-            Matthias squeezes blood from his fist into the
-			chalice, speaking in that same unknown language. As he does, you can
-			feel your spell take hold... he loses his voice again.
+Matthias squeezes blood from his fist into the chalice, speaking in that same unknown language.
+
+As he does, you feel your spell take hold… and his voice falters, then vanishes once more.
         """
 
         Button "Make your move"
 
         Text """
-			With Matthias both frustrated and distracted, you reach
-			out to grab the skull. If only you can reach it before he... does
-			something.
+With Matthias frustrated and distracted, you lunge for the skull. If only you can reach it before he… does something.
 			
 			Test {agility}.
 			
@@ -217,36 +194,28 @@ Book OpenGate Ordered No Keep Looped
 
 	Page Step4Fail
 		Text """
-			Matthias swings his arm at you, dagger flashing in the low
-			light. It catches your arm, causing you to drop your dagger.
-			
-			Drop {c:QItemRitualKnife}. Take 2 {damage} ({agility} negates).
-			
-			Matthias squeezes more of his blood into the chalice, 
-			causing it to... change in a way you cannot describe. It somehow
-			feels powerful, like the knife he is wielding.
+Matthias lashes out, his dagger flashing in the low light. The blade catches your arm, forcing you to drop your weapon.
+
+Drop {c:QItemRitualKnife}. Take 2 {damage} ({agility} negates).
+
+Matthias squeezes more blood into the chalice. As it fills, the vessel begins to change — in a way you cannot fully describe. It thrums with power now, resonant and dangerous, much like the dagger in his hand.
 		"""
 	End Page Step4Fail
 	
     Page KillHim
 		Prolog """
-			You stop for a moment to think. You need to decide what to do next
-			and you need to decide quickly.
-			
-			Sarah quavers, <<You have do something. He is nearly done casting.
-			Please.>>
+You hesitate for a moment, forcing yourself to think. You need to decide what to do next — and you need to decide quickly.
+
+Sarah quavers, <<You have to do something. He’s nearly finished casting. Please.>>
 		"""
 		Button "Make your decision"
 		
         Text """
-            The futility of trying to stop your uncle from completing this
-			ritual sinks in. You're going to have to kill him.
-			
-			Meanwhile, across the room, your friends are fighting for their 
-			lives against what seems to be a never-ending stream of local
-			townsfolk in cult robes.
-			
-			Your cousin still concentrates on the his casting.
+The futility of trying to stop your uncle from completing the ritual sinks in. There is only one way to end this. You’re going to have to kill him.
+
+Across the room, your friends fight for their lives against what feels like a never-ending stream of townsfolk clad in cult robes.
+
+Your cousin remains focused on his casting, oblivious to everything else.
         """
 	
 		// we need to replace unattackable monster with one we can attack
@@ -269,14 +238,15 @@ Book OpenGate Ordered No Keep Looped
 		Triggered By @CompleteRequirement If goal = goalOpenGate And foundKnife And foundDvm And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
 		
 		Text """
-			Sarah smiles for the first time and says out load, <<That's it! Now
-			we know what is going on, where it's happening, and what to do about
-			it. I think I can take us where we need to be.>>
-			
-			Sarah seems to grow, getting more transparent. Suddenly, the world
-			shifts and you are... somewhere else. And disoriented. There is
-			noise and light and someone yelling. Folks are rushing by. It all
-			seems far away.>>
+Sarah smiles for the first time and says out loud, <<That’s it! Now we know what’s happening, where it’s happening, and what to do about it. I think I can take us where we need to be.>>
+
+She seems to grow taller — and fainter at the same time, her form turning translucent.
+
+Suddenly, the world shifts.
+
+You are somewhere else. Disoriented.
+
+There is noise. Light. Someone shouting. People rush past you, their forms blurred and indistinct. It all feels distant… unreal.
 		"""
 		
 		If firstRitual < firstRitualWoman Call MythosFirstRitualOpenGate.Woman
@@ -290,13 +260,17 @@ End Book OpenGate
 Book MatthiasOpenGateActivation Ordered No Keep
 	Page First
 		Text """
-			Matthias picks up the chalice, a drop of blood still dripping down
-			its inside surface. He examines it carefully, then, seemingly
-			satisfied, he sets it back onto altar. He raises his other arm,
-			dagger still in his hand. After steadying the chalice, he reaches
-			over and flips a page in his book. He glances down, then looks to
-			the boy and begins speaking. As he does, you are briefly stunned by
-			the wave of energy that radiates from him.
+			Matthias lifts the chalice, a single drop of blood sliding down its
+			inner surface. He studies it carefully, then, seemingly satisfied,
+			sets it back upon the altar.
+
+			Raising his other arm, the dagger still clenched in his hand, he
+			steadies the chalice before reaching to turn a page in his book.
+			He glances down at the text, then looks to the boy and begins to
+			speak.
+
+			As the words leave his mouth, a wave of energy radiates from him,
+			and you are briefly stunned.
 			
 			Each investigator takes 1 facedown damage ({agility} negates).
 			
@@ -306,40 +280,45 @@ Book MatthiasOpenGateActivation Ordered No Keep
 
 	Page Second
 		Text """
-			Matthias begins speaking again, power radiating from him like it
-			did before. His is intent on his son or starts to move. As you watch
-			the boy begins to hover, being slowly pulled up like his on a
-			string. You hear the chain clank when it slips. 
-			
-			Sarah is panicking, look back and forth between her uncle and her
-			cousin. <<Do something,>> she yells. <<Do something now!>>
-			
-			Matthias doesn't notice, all of his attention focused on the words
-			he's speaking and the boy who is their target.
+			Matthias begins speaking again, power radiating from him as it did
+			before. His focus is fixed on his son as the boy begins to move.
+
+			You watch as he starts to hover, slowly lifted as though suspended
+			by an invisible string. The chain clanks as it slips free.
+
+			Sarah panics, her gaze darting back and forth between her uncle and
+			her cousin. <<Do something!>> she yells. <<Do something now!>>
+
+			Matthias doesn't notice. All his attention is consumed by the words
+			he chants---and by the boy who is their target.
 		"""
 	End Page Second
 	
 	Page Third
 		Text """
-			The boy screams as a glow begins to form around him. He stops rising
-			as the chain binding him to the floor is pulled taut. He is still
-			screaming. At the altar, Matthias is still casting the spell, all 
-			his attention focused, obvious to any of the other people in the
-			small room.
-			
-			Sarah shrieks at Matthias, <<Stop! Please stop!>>
-			
+			The boy screams as a glow begins to gather around him. He stops
+			rising when the chain binding him to the floor pulls taut, its links
+			straining. He is still screaming.
+
+			At the altar, Matthias continues the incantation, utterly focused---
+			so intent the everyone in the room can feel it.
+
+			Sarah shrieks at him. <<Stop! Please, stop!>>
+
 			With a final flourish of his knife, Matthias completes the spell.
-			A bolt strikes from the tip of the blade to the boys chest. When it
-			hits, the boy stops screaming and goes rigid. 
-			
-			Everyone stops and turns to watch, the room going completely silent
-			for a moment. Then, with a roar, the boy... changes. He is suddenly
-			something more. Something surging and abyssal, but unstable. The
-			gate is open and, somehow, the boy <i>is</i> the gate.
-			
+			A bolt lashes from the blade's tip into the boy's chest. The instant
+			it strikes, the screaming stops. The boy goes rigid.
+
+			Everyone turns to watch. For a moment, the room falls completely
+			silent.
+
+			Then, with a roar, the boy… changes.
+
+			He becomes something more. Surging. Abyssal. Unstable. The gate is
+			open and, somehow, the boy <i>is</i> the gate.
+
 			Sarah cries out in anguish.
-			
+
 			The gate sputters.
 		End Text
 		
@@ -348,21 +327,23 @@ Book MatthiasOpenGateActivation Ordered No Keep
 	
 	Page Fourth
 		Text """
-			This fight is exhausting you and, for a moment, you stop to catch
-			your breath.
-			
-			As you do, Matthias flip forward many pages in the book, smiling
-			when he finds what he is looking for. He raises his arms and begins
-			speaking again. His own blood still drips from the dagger, landing
-			on the altar. You can feel it in the air as each drop hits.
+			The fight is exhausting you. For a moment, you falter and stop to
+			catch your breath.
 
-			Sarah yells, <<He's starting the summoning. The Ancient One has 
-			heard his call. We are running out of time.>>
-			
-			Another cultist enters the room, steps toward the gate, raises a
-			dagger, and slits his own throat. When blood touches the boy's 
-			chain, the gate calms and becomes more stable. It still pops, but 
-			not as strongly now.
+			As you do, Matthias flips through several pages of the book, smiling
+			when he finds what he seeks. He raises his arms and begins speaking
+			again. His blood still drips from the dagger, spattering against the
+			altar. You can feel it in the air with each drop that falls.
+
+			Sarah shouts, <<He's beginning the summoning. The Ancient One has
+			heard him. We're running out of time!>>
+
+			Another cultist rushes into the room. He steps toward the gate,
+			raises a dagger, mutters words you do not understand, then slits his
+			own throat.
+
+			When his blood touches the boy's chain, the gate steadies. It still
+			crackles and spits, but the surges are weaker now.
 		"""
 		
 		summoning = true
@@ -370,15 +351,16 @@ Book MatthiasOpenGateActivation Ordered No Keep
 	
 	Page Fifth
 		Text """
-			Matthias continues to speak, his voice booming in the chamber. He
-			punctuates each sentence by stabbing the air with his dagger.
-			Suddenly, stops and just watches the gate as a lone tentacle
-			pokes through.
+			Matthias continues to chant, his voice booming through the chamber.
+			He punctuates each phrase by stabbing the air with his dagger.
+
+			Suddenly, he falls silent and simply watches the gate as a lone
+			tentacle pushes through.
 			
 			The investigation is over.
 		"""
 		
-		lose = true
+		outcome = gameLose
 		Trigger @GameOver
 	End Page Fifth
 	

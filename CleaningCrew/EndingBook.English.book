@@ -32,7 +32,7 @@ Book Endings
 	End Page HardFail
 
 	Page OpenGateWin
-		Visible If goal = goalOpenGate And win
+		Visible If goal = goalOpenGate And outcome = gameWin
 
 		Trigger @ShowIntroFrame
 		
@@ -61,7 +61,7 @@ Book Endings
 	End Page OpenGateWin
 	
 	Page OpenGateDraw
-		Visible If goal = goalOpenGate And draw
+		Visible If goal = goalOpenGate And outcome = gameDraw
 
 		Trigger @ShowIntroFrame
 		
@@ -92,7 +92,7 @@ Book Endings
 	End Page OpenGateDraw
 	
 	Page OpenGateLose
-		Visible If goal = goalOpenGate And lose
+		Visible If goal = goalOpenGate And outcome = gameLose
 
 		Trigger @ShowIntroFrame
 		
@@ -126,7 +126,7 @@ Book Endings
 	End Page OpenGateLose
 	
 	Page FeedGateWin
-		Visible If goal = goalFeedGate And win
+		Visible If goal = goalFeedGate And outcome = gameWin
 
 		Trigger @ShowIntroFrame
 		
@@ -158,7 +158,7 @@ Book Endings
 	End Page FeedGateWin
 	
 	Page FeedGateDraw
-		Visible If goal = goalFeedGate And draw
+		Visible If goal = goalFeedGate And outcome = gameDraw
 
 		Trigger @ShowIntroFrame
 
@@ -187,7 +187,7 @@ Book Endings
 	End Page FeedGateDraw
 	
 	Page FeedGateLose
-		Visible If goal = goalFeedGate And lose
+		Visible If goal = goalFeedGate And outcome = gameLose
 
 		Trigger @ShowIntroFrame
 		
@@ -215,7 +215,7 @@ Book Endings
 	End Page FeedGateLose
 	
 	Page CloseGateWin
-		Visible If goal = goalCloseGate And win
+		Visible If goal = goalCloseGate And outcome = gameWin
 
 		Trigger @ShowIntroFrame
 		
@@ -247,7 +247,7 @@ Book Endings
 	End Page CloseGateWin
 	
 	Page CloseGateDraw
-		Visible If goal = goalCloseGate And draw
+		Visible If goal = goalCloseGate And outcome = gameDraw
 
 		Trigger @ShowIntroFrame
 		
@@ -278,7 +278,7 @@ Book Endings
 	End Page CloseGateDraw
 	
 	Page CloseGateLose
-		Visible If goal = goalCloseGate And lose
+		Visible If goal = goalCloseGate And outcome = gameLose
 		No Text
 		
 		Goto OpenGateLose

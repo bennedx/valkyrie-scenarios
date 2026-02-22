@@ -79,6 +79,10 @@ Book Startup Ordered No Keep Looped
 		mainRitualStarted = 1
 		mainRitualGateOpen = 2
 		
+		gameWin = 1
+		gameDraw = 2
+		gameLose = 3
+		outcome = gameLose
 
 		No Text
 		

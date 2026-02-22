@@ -533,3 +533,18 @@ https://artlist.io/royalty-free-music/categories/scary
 - I Want You to See (parts)
 - Promises (!)
 [stopped at Goliath]
+
+
+
+You have been very helpful. Thank you. I'm going to ask you to do the same thing again, but with more specific instructions. 
+
+I am writing a game script. It is written in a custom programming language.
+ What is displayed is in chunks. Each chunk is in a "page" construct:
+ Page ... End Page.
+
+Inside each page are two statements:  Prolog and Text. The prolog introduces
+the 
+
+ The only text I want you to address is inside this construct:  Text """...""". It can span multiple lines. Inside each page there 
+ 
+ 
