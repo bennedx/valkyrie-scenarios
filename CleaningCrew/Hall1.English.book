@@ -61,7 +61,7 @@ Book Hall1 Ordered No Keep Looped
 			was intended for the servants:  plain and dark. Place the
 			{c:TileHall1} tile, a door, and a wall as indicated.
 			
-			Move one space space into the explored area.
+			Move 1 space space into the explored area.
 		"""
 	End Page PlaceHall1Tile
 	

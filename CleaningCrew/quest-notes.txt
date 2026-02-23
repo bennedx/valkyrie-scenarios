@@ -539,12 +539,119 @@ https://artlist.io/royalty-free-music/categories/scary
 You have been very helpful. Thank you. I'm going to ask you to do the same thing again, but with more specific instructions. 
 
 I am writing a game script. It is written in a custom programming language.
- What is displayed is in chunks. Each chunk is in a "page" construct:
- Page ... End Page.
 
-Inside each page are two statements:  Prolog and Text. The prolog introduces
-the 
+The top level is a book:  BOOK ... END BOOK. Everything inside it is a single topic, like a room, a conversation, or a sequence of events like a ritual.
 
- The only text I want you to address is inside this construct:  Text """...""". It can span multiple lines. Inside each page there 
+Inside the book are pages:  PAGE ... END PAGE. A page is a single exchange. Displayable text is always in single (") or triple (""") double-quotes. There are two kinds of text:  PROLOG/EPILOG and TEXT. You may change only text inside double-quotes.
+
+PROLOG:  This is text that the player will be presented with. If there is a 'BUTTON ""' after it, the text there will display as the button the player can push to see the next text. PROLOG is optional.
+
+TEXT:  This is the response to the PROLOG when the user pushes the button. If there is no PROLOG, it is displayed immediately. Every page will have either a TEXT statement or a NO TEXT statement.
+
+Each PAGE can have only a single TEXT block displayed. Some of the TEXT statements have IF in front of them. The first one matching the criteria will display. If none match, the TEXT will show.
+
+TEXT has certain formatting conventions that must be followed. Here are punctuation and what they mean.
+	<i>...</i>		italics
+	<b>...</b>		bold
+	
+	<<     			open double-quote
+	>>				close double-quote
+	<				open single quote
+	>				open double-quote
+	'				apostophe
+	-				hyphen
+	--				n-dash; used for ranges like 1 -- 10. I the text I give you, it is used as an em-dash; please fix this
+	---				em-dash
+	\\				A single \ in the text
+	
+White space
+    blank line		If there are blank lines, the separate paragraphs and should be honored
+	single line		A single linefeed is ignored, as though the line continues from the previous lines
+	space/tab		More than one in a row is ignored
+	top/bottom		All white space at the top and bottom of the text is ignored
+	\n				The same as having a blank line in the middle. Always rewrite this as a blank line between sentences.
+	
+Hypens and em-dashes never have spaces around them; en-dashes always have spaces around them.
+
+There is certain instructional text that needs to stay unchanged. Any sentence that starts with or contains these phrases should not be changed.
+	Place ... as indicated
+	Gain ... .
+	Remove ...
+	An investigator holding ... can interact with it in the app.	
+	Discard...
+	Improve... 
+	Tap to attempt the puzzle using...
+	Move 1 space into the explored area.
+	
+These words are always capitalized
+	Common Item
+	Unique Item
+	Site Token
+	Explore Token
+	Interact Token
+	
+These phrase have capitalization like what is shown here.
+	become Stunned/Restrained/Poisoned/Dazed/
+	suffer 1 Horror/Damage
+	suffer 1 facedown Horror/Damage
+	
+There are instructions with "negates" in them. The period should always go after the closing parentheses:
+	Suffer 1 Horror ({will} negates).
+	Suffer 1 facedown Damage ({strength} negates)
+	
+If you see "Take 1 Damage" change it to "Suffer 1 Damage". Always correct capitalization if it is wrong.
+	
+In instructional text, numbers are always spelled with digits; in expository writing, the numbers follow the usual 0 - 10 is spelled out and above that, digits are used.
+
+No line can be longer than 68 characters; wrap to the next line if needed.
+
+
+Chat-GPT rewrites
+
++--	done
+|+-	reviewed
+||
+vv
+x	Driveway
+o	Backyard
+o	DiningRoom
+o	Kitchen
+o	Hall1
+o	Hall2
+o	Gallery
+o	Foyer
+o	Study
+o	Library
+o	Chapel
+o	Crypt
+o	DungeonCave
+o	TortureChamber
+o	DungeonCell
+o	Altar
+
+o	BenBefore
+o	BenAfter
+o	CloseGate
+o	FeedGate
+x	OpenGate
+o	DvmOpenGate
+o	DvmCloseGate
+o	Journal
+o	EndingBook -> Endings (GameOver?)
+o	Mythos
+o	MythosFirstRitual
+o	WandererAttacks
+o	SarahPatter
+o	SarahritualWarnings (???)
+o	Startup
+
+
+
+
+
+
+
+	
+
  
  

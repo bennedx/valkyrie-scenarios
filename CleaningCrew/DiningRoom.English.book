@@ -191,9 +191,9 @@ Book SearchDiningRoom Ordered No Keep Looped
 		Prolog """
 			There is a control panel. You probably shouldn't, but maybe you can
 			restart it? You reach down and begin to fiddle with the buttons and
-			dials.
-
-			{c:EventChosenInvestigator} may attempt the puzzle using {lore}.
+			dials. Only {c:EventChosenInvestigator} can try to turn it on.
+			
+			Tap to attempt the puzzle using {lore}.
 		"""
 		Button "Attempt puzzle"
 		
@@ -210,9 +210,10 @@ Book SearchDiningRoom Ordered No Keep Looped
 		
 		Prolog """
 			Maybe if you randomly flipped a few more buttons or turned a few
-			more dials, it will do something.
-			
-			{c:EventChosenInvestigator} can attempt it again using {lore}.
+			more dials, it will do something. Only {c:EventChosenInvestigator}
+			can try to turn it on.
+
+			Tap to attempt the puzzle again using {lore}.
 		"""
 		
 		No Text
