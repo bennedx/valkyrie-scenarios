@@ -42,7 +42,7 @@ Book MythosFirstRitualOpenGate Ordered No Keep
 			waves happen, Sarah's expression turns darker.
 			
 			Sarah whispers, <<I can feel something happening with a dagger.
-			Mathias is start the spelll to open a gate.>>
+			Mathias is starting the spell to open a gate.>>
 			
 			Whatever is happening must be stopped.
 			
@@ -60,7 +60,7 @@ Book MythosFirstRitualOpenGate Ordered No Keep
 	
 	Page Vamp3
 		Text """
-			The power in air continues to pulse around you, occasionally
+			The power in the air continues to pulse around you, occasionally
 			raising the hair on the back of your neck again.
 			
 			Sarah looks worried.
@@ -79,7 +79,7 @@ Book MythosFirstRitualOpenGate Ordered No Keep
 	Page Vamp5
 		Text """
 			With each step Matthias takes toward opening the gate, the air
-			around you changes in color and texture. But getting stronger at
+			around you changes in color and texture, but getting stronger at
 			each step. You are feeling the first traces of it in your skin.
 			
 			Sarah whispers, <<Matthias's blood is spattering in a cup of some
@@ -149,8 +149,8 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 			shudders and everything goes quiet for a moment.
 
 			Sarah's eyes widen and she whispers to {c:EventChosenInvestigator},
-			<<Matthias has started. The ritual has started. We must get to the
-			altar and stop him.>>			
+			<<Matthias has started. The ritual has started. We must find and
+			stop him.>>			
 		"""
 	End Page Start
 	
@@ -269,7 +269,7 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 	
 	Page
 		Text """
-			The gate continues to hum while burst of energy come from beneath
+			The gate continues to hum while bursts of energy come from beneath
 			and course through you.
 			
 			Sarah yells, <<I can feel it---the Ancient One. It is nearly here.

@@ -7,13 +7,18 @@ Book OpenGate Ordered No Keep Looped
 
     Page Step1Prolog
         Text """
-Matthias stands at the altar, arms raised, speaking in a language you do not understand. Spread before him are the tools and materials required for the ritual.
+			Matthias stands at the altar, arms raised, speaking in a language
+			you do not understand. Spread before him are the tools and materials
+			required for the ritual.
 
-The boy is chained to the floor, crying and quietly begging his father to stop. Nearby, a cowering woman is shackled beside the altar.
+			The boy is chained to the floor, crying and quietly begging his
+			father to stop. Nearby, a cowering woman is shackled beside the altar.
 
-Now the woman is screaming. Something is happening to her body.
+			Now the woman is screaming. Something is happening to her body.
 
-Matthias continues the incantation, but this time the waves of power do not radiate from him — they pour from the air itself, rushing into him.
+			Matthias continues the incantation, but this time the waves of power
+			do not radiate from him — they pour from the air itself, rushing
+			into him.
 			
             If you have the {c:QItemRitualKnife}, the
 			{c:QItemRitualComponents}, and the {c:QItemElderSign}, you can
@@ -26,9 +31,13 @@ Matthias continues the incantation, but this time the waves of power do not radi
         """
 
 		If firstRitual >= firstRitualWoman Then Text """
-Matthias stands at the altar, arms raised, speaking in a language you do not understand. Spread before him are the tools and materials required for the ritual.
+			Matthias stands at the altar, arms raised, speaking in a language
+			you do not understand. Spread before him are the tools and materials
+			required for the ritual.
 
-The boy is chained to the floor, crying and quietly begging his father to stop. At Matthias’s feet lies a dead woman, her face frozen in a scream that will never fade.
+			The boy is chained to the floor, crying and quietly begging his
+			father to stop. At Matthias's feet lies a dead woman, her face
+			frozen in a scream that will never fade.
 			
             If you have the {c:QItemRitualKnife}, the
 			{c:QItemRitualComponents}, and the {c:QItemElderSign}, you can
@@ -54,17 +63,21 @@ The boy is chained to the floor, crying and quietly begging his father to stop. 
 		Add TokenDeadWoman
 		
 		Text """
-As you step closer, Matthias lowers his arms, then flings them skyward.
+			As you step closer, Matthias lowers his arms, then flings them
+			skyward.
 
-The woman screams, gasps for air, then screams again. The power you felt before comes in waves, but this time it feels as though it is flowing into Matthias.
+			The woman screams, gasps for air, then screams again. The power you
+			felt before comes in waves, but this time it feels as though it is flowing into Matthias.
 
-Abruptly, the woman stops screaming. She goes rigid — then limp.
+			Abruptly, the woman stops screaming. She goes rigid — then limp.
 
-A brief glow surrounds Matthias. He lowers his arms just long enough to flip to another page in the book resting on the altar.
+			A brief glow surrounds Matthias. He lowers his arms just long enough
+			to flip to another page in the book resting on the altar.
 
-The woman is dead.
+			The woman is dead.
 
-Sarah whispers, <<Matthias has recharged himself. He is at the final stage. He is ready to open the gate.>>
+			Sarah whispers, <<Matthias has recharged himself. He is at the final
+			stage. He is ready to open the gate.>>
 		"""
 		
 		Remove TokenLiveWoman
@@ -77,19 +90,25 @@ Sarah whispers, <<Matthias has recharged himself. He is at the final stage. He i
 		mainRitual = mainRitualStarted
 		
         Text """
-You look more closely at the altar.
+			You look more closely at the altar.
 
-You notice that Matthias does not possess an {c:QItemElderSign}. That means he will need blood to keep the gate open. You must stop him before he uses you to supply it.
+			You notice that Matthias does not possess an {c:QItemElderSign}.
+			That means he will need blood to keep the gate open. You must stop
+			him before he uses you to supply it.
 
-You think back to the counter-spell you memorized earlier. Raising the {c:QItemRitualKnife} and the chalice above your head, you speak the words.
+			You think back to the counter-spell you memorized earlier. Raising
+			the {c:QItemRitualKnife} and the chalice above your head, you speak
+			the words.
 
-Matthias's head snaps toward you, as though he is seeing you for the first time. Your eyes lock, and you see a look that is both determined and haunted.
+			Matthias's head snaps toward you, as though he is seeing you for
+			the first time. Your eyes lock, and you see a look that is both
+			determined and haunted.
 
-He turns back to the altar and tries again.
+			He turns back to the altar and tries again.
 
-Nothing comes out.
+			Nothing comes out.
 
-Slowly, he looks back at you.
+			Slowly, he looks back at you.
 			
 			This step is complete.
         """
@@ -97,17 +116,19 @@ Slowly, he looks back at you.
 
     Page Step2
         Prolog """
-Your cousin lowers his gaze to the dagger in his hand. Though no sound escapes him, you can see his lips moving.
+			Your cousin lowers his gaze to the dagger in his hand. Though no
+			sound escapes him, you can see his lips moving.
         """
 
         Button "Stab Matthias first"
 
         Text """
-You choose your moment and lunge at him with your knife. He deftly sidesteps, and your blade glances off his robe, doing no harm.
+			You choose your moment and lunge at him with your knife. He deftly
+			sidesteps, and your blade glances off his robe, doing no harm.
 
-You think you can pivot and strike more cleanly. Test {agility}.
+			You think you can pivot and strike more cleanly. Test {agility}.
 
-For each Unique Item you possess, you may roll one additional die.
+			For each Unique Item you possess, you may roll one additional die.
         """
 		
 		// even if we pass, we fail
@@ -116,13 +137,17 @@ For each Unique Item you possess, you may roll one additional die.
 
     Page Step3
         Prolog """
-He steps away again, and you stumble forward, colliding with him and knocking the {c:QItemRitualDagger} from his grasp. It clatters across the altar as you regain your footing and step back.
+			He steps away again, and you stumble forward, colliding with him
+			and knocking the {c:QItemRitualDagger} from his grasp. It clatters
+			across the altar as you regain your footing and step back.
         """
 
 		Button "Speak the words"
 
         Text """
-Matthias snatches up the knife and begins the incantation again, his voice booming with power. The blade suddenly flares with light, then settles into a steady, pulsing glow.
+			Matthias snatches up the knife and begins the incantation again, his
+			voice booming with power. The blade suddenly flares with light, then
+			settles into a steady, pulsing glow.
 			
 			You speak the words again. Test {will}.
 			
@@ -159,10 +184,19 @@ Matthias ignores you and draws the blade across his palm.
 			
 			For each Unique Item you have, you may roll 1 extra die.
 		"""
-		
-Matthias seems unfazed as blood wells from the cut in his palm. You glance at the dagger and chalice raised in your hands, wondering why nothing is happening.
 
-You draw a steadying breath, determined to stop this madness.
+		Test Quota 4 Set passOpenGateStep3
+		If passOpenGateStep3 Then Goto Step4
+	End Page Step3Repeat
+
+	Page Step3RepeatFail
+	
+		Text """
+			Matthias seems unfazed as blood wells from the cut in his palm. You
+			glance at the dagger and chalice raised in your hands, wondering
+			why nothing is happening.
+
+			You draw a steadying breath, determined to stop this madness.
 		"""
 
 		Mark Unread
@@ -173,15 +207,18 @@ You draw a steadying breath, determined to stop this madness.
 		Mark Step3RepeatFail Read
 		
         Prolog """
-Matthias squeezes blood from his fist into the chalice, speaking in that same unknown language.
+			Matthias squeezes blood from his fist into the chalice, speaking in
+			that same unknown language.
 
-As he does, you feel your spell take hold… and his voice falters, then vanishes once more.
+			As he does, you feel your spell take hold… and his voice falters,
+			then vanishes once more.
         """
 
         Button "Make your move"
 
         Text """
-With Matthias frustrated and distracted, you lunge for the skull. If only you can reach it before he… does something.
+			With Matthias frustrated and distracted, you lunge for the skull.
+			If only you can reach it before he… does something.
 			
 			Test {agility}.
 			
@@ -194,28 +231,38 @@ With Matthias frustrated and distracted, you lunge for the skull. If only you ca
 
 	Page Step4Fail
 		Text """
-Matthias lashes out, his dagger flashing in the low light. The blade catches your arm, forcing you to drop your weapon.
+			Matthias lashes out, his dagger flashing in the low light. The blade
+			catches your arm, forcing you to drop your weapon.
 
-Drop {c:QItemRitualKnife}. Take 2 {damage} ({agility} negates).
+			Drop {c:QItemRitualKnife}. Take 2 {damage} ({agility} negates).
 
-Matthias squeezes more blood into the chalice. As it fills, the vessel begins to change — in a way you cannot fully describe. It thrums with power now, resonant and dangerous, much like the dagger in his hand.
+			Matthias squeezes more blood into the chalice. As it fills, the
+			vessel begins to change — in a way you cannot fully describe. It
+			thrums with power now, resonant and dangerous, much like the dagger
+			in his hand.
 		"""
 	End Page Step4Fail
 	
     Page KillHim
 		Prolog """
-You hesitate for a moment, forcing yourself to think. You need to decide what to do next — and you need to decide quickly.
+			You hesitate for a moment, forcing yourself to think. You need to 
+			decide what to do next — and you need to decide quickly.
 
-Sarah quavers, <<You have to do something. He’s nearly finished casting. Please.>>
+			Sarah quavers, <<You have to do something. He's nearly finished
+			casting. Please.>>
 		"""
 		Button "Make your decision"
 		
         Text """
-The futility of trying to stop your uncle from completing the ritual sinks in. There is only one way to end this. You’re going to have to kill him.
+			The futility of trying to stop your uncle from completing the ritual
+			sinks in. There is only one way to end this. You're going to have to
+			kill him.
 
-Across the room, your friends fight for their lives against what feels like a never-ending stream of townsfolk clad in cult robes.
+			Across the room, your friends fight for their lives against what
+			feels like a never-ending stream of townsfolk clad in cult robes.
 
-Your cousin remains focused on his casting, oblivious to everything else.
+			Your cousin remains focused on his casting, oblivious to everything
+			else.
         """
 	
 		// we need to replace unattackable monster with one we can attack
@@ -238,15 +285,19 @@ Your cousin remains focused on his casting, oblivious to everything else.
 		Triggered By @CompleteRequirement If goal = goalOpenGate And foundKnife And foundDvm And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
 		
 		Text """
-Sarah smiles for the first time and says out loud, <<That’s it! Now we know what’s happening, where it’s happening, and what to do about it. I think I can take us where we need to be.>>
+			Sarah smiles for the first time and says out loud, <<That's it! Now
+			we know what's happening, where it's happening, and what to do about
+			it. I think I can take us where we need to be.>>
 
-She seems to grow taller — and fainter at the same time, her form turning translucent.
+			She seems to grow taller — and fainter at the same time, her form
+			turning translucent.
 
-Suddenly, the world shifts.
+			Suddenly, the world shifts.
 
-You are somewhere else. Disoriented.
+			You are somewhere else. Disoriented.
 
-There is noise. Light. Someone shouting. People rush past you, their forms blurred and indistinct. It all feels distant… unreal.
+			There is noise. Light. Someone shouting. People rush past you, their
+			forms blurred and indistinct. It all feels distant... unreal.
 		"""
 		
 		If firstRitual < firstRitualWoman Call MythosFirstRitualOpenGate.Woman

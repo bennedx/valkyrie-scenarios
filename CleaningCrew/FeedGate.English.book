@@ -10,7 +10,7 @@ Book FeedGate Ordered No Keep
 		Text """
 			Sarah looks at all of you and says, <<It is too late to stop Matthias
 			from opening the gate. But he didn't have an elder sign, so he was
-			not able to stabilize the gate. He needs a steady stream of the
+			not able to stabilize the i. He needs a steady stream of the
 			willing to sacrifice themselves to keep the gate open.>>
 			
 			As she speaks, a cultist somehow sqeezes through the hole to the cell,
@@ -23,7 +23,7 @@ Book FeedGate Ordered No Keep
 			
 			When she spoke, Matthias noticed the intruders for the first time.
 			A look of worry crosses his face, but only for a moment. He returns
-			immediately to his summoning.			
+			immediately to his summoning.
 		"""
 	End Page
 	

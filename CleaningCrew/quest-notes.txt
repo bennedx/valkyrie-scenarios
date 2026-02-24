@@ -603,47 +603,51 @@ If you see "Take 1 Damage" change it to "Suffer 1 Damage". Always correct capita
 	
 In instructional text, numbers are always spelled with digits; in expository writing, the numbers follow the usual 0 - 10 is spelled out and above that, digits are used.
 
-No line can be longer than 68 characters; wrap to the next line if needed.
+The text inside triple-quotes always has three tabs in front of it. Each tab is
+4 characters wide. Including those, no line can be longer than 80 columns. Wrap
+the lines if needed.
 
 
 Chat-GPT rewrites
 
-+--	done
-|+-	reviewed
-||
-vv
-x	Driveway
-o	Backyard
-o	DiningRoom
-o	Kitchen
-o	Hall1
-o	Hall2
-o	Gallery
-o	Foyer
-o	Study
-o	Library
-o	Chapel
-o	Crypt
-o	DungeonCave
-o	TortureChamber
-o	DungeonCell
-o	Altar
++----  done
+|+---  gpt
+||+--  reviewed
+|||+-  tested
+||||
+vvvv
+xx		Driveway
+x		Backyard
+x		DiningRoom
+x		Kitchen
+x		Hall1
+x		Hall2
+x		Gallery
+x		Foyer
+x		Study
+x		Library
+xxx		Chapel
+x		Crypt
+x		DungeonCave
+x		TortureChamber
+o		DungeonCell
+o		Altar
 
-o	BenBefore
-o	BenAfter
-o	CloseGate
-o	FeedGate
-x	OpenGate
-o	DvmOpenGate
-o	DvmCloseGate
-o	Journal
-o	EndingBook -> Endings (GameOver?)
-o	Mythos
-o	MythosFirstRitual
-o	WandererAttacks
-o	SarahPatter
-o	SarahritualWarnings (???)
-o	Startup
+x		BenBefore
+x		BenAfter
+o		CloseGate
+o		FeedGate
+xx		OpenGate
+x		DvmOpenGate
+x		DvmCloseGate
+x		Journal
+x		EndingBook -> Endings (GameOver?)
+o		Mythos
+o		MythosFirstRitual
+o		WandererAttacks
+x		SarahPatter
+o		SarahritualWarnings (???)
+o		Startup
 
 
 

@@ -319,7 +319,7 @@ Book CloseGate Ordered No Keep Looped
             This investigation is over.
         """
 		
-        win = true
+        outcome = gameWin
         Trigger @GameOver
 		$end = true
 	    Exit

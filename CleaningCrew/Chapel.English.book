@@ -2,7 +2,6 @@ Language English
 Debug Off
 
 Book Chapel Ordered No Keep Looped
-
 	Page Place
 		Triggered By @ExploreChapelViaLibrary
 		
@@ -10,22 +9,28 @@ Book Chapel Ordered No Keep Looped
 		Add TileChapel, TokenChapelTrapdoor!, TokenChapelWall!
 		
 		Prolog """
-			The door behind the bookcase is unlocked now. You aren't sure if you
-			want to see what's behind the door, but curiosity is getting the 
-			better of you. You look around, then reach for then door...
+			The door behind the bookcase now stands unlocked.
+			You are not sure you truly want to see what lies
+			beyond it, but curiosity wins. You glance
+			around, then reach for the door...
 		"""
 		Button "Explore"
 		
 		Text """
-			You grab the handle and pull. Behind it is the opening of a dark
-			tunnel. You walk in, but eventually it's so dark that you are
-			feeling your way along the smooth stone walls. Eventually,
-			you can see light coming through a crack in the ceiling. A
-			staircase leads up to it. You find a door in the ceiling and when
-			you open it, you find yourself
-			in an old chapel. In the distance, through one
-			of the windows, you can see the house you are supposed to be
-			cleaning.
+			You grasp the handle and pull. Beyond it
+			yawns the mouth of a dark tunnel. You step
+			inside, but soon the darkness grows so deep
+			that you must feel your way along the smooth
+			stone walls.
+
+			Eventually, you notice faint light slipping
+			through a crack above. A staircase leads up.
+			You climb and push open a door set in the
+			ceiling.
+
+			You emerge into an old chapel. Through one
+			of its distant windows, you can see the house
+			you were hired to clean.
 
 			Place the {c:TileChapel} tile, wall, and trap door as
 			indicated, then discard this Explore token. Move 1 space into the
@@ -37,83 +42,97 @@ Book Chapel Ordered No Keep Looped
 		exploredChapel = true
 		wandererInLibrary = false
 	End Page Place
-	
+
 	Page PlaceExploreOutsideViaChapelLocked
 		Add TokenExploreEscapeViaChapelLocked!
-	
+
 		Text """
-			Across the room in is the front door of the chapel.
+			Across the room is the chapel's front door.
 			Place an Explore token as indicated.
 		"""
 	End Page PlaceExploreOutsideViaChapelLocked
-	
+
 	Page PlaceWhiskey
 		Add TokenSearchChapelWhiskey!
 		
 		Text """
-			The room is clean, maintained with devotion.
+			The room is clean and carefully maintained.
 
-			Surprisingly, there's a bottle lying on one of the pews. Place a
-			Search token as indicated.
+			Strangely, a bottle rests on one of the pews.
+			Place a Search token as indicated.
 		"""
 	End Page PlaceWhiskey
-	
+
 	Page PlaceSearchRitualComponents
 		Add TokenSearchChapelRitualComponents!
 		
 		Text """
-			A ceremonial table sits next to you at the front of the room. There
-			is a large book and various religious icons and implements. Place a
-			Search token as indicated.
+			A ceremonial table stands at the front of
+			the room. A large book rests upon it beside
+			several religious icons and implements.
+			Place a Search token as indicated.
 		"""
-	
+
 		Exit
 	End Page PlaceSearchRitualComponents
-	
+
 	Page ExploreEscapeViaChapelLocked
 		Not Visible
 		Triggered By @ExploreEscapeViaChapelLocked
 		
 		Prolog """
-			You pull out keys and starting trying them in the lock.
+			You pull out a ring of keys and begin trying
+			them in the lock.
 		"""
 		Button "Explore"
 		
 		Text """
-			As you work through the keys, you hesitate. Whatever is going on
-			here could affect you, even if you leave immediately. You take a
-			breath and turn back to face the room. Discard this Explore token.
+			As you test each key, you hesitate.
+			Whatever is happening here could follow
+			you, even if you leave now.
+
+			You draw a breath and turn back toward the
+			room. Discard this Explore token.
 		"""
 		
 		Remove TokenExploreEscapeViaChapelLocked
 
 		Exit
 	End Page ExploreEscapeViaChapelLocked
-	
+
 	Page SearchRitualComponents
 		Not Visible
 		Triggered By @SearchChapelRitualComponents
 		
 		Prolog """
-			You walk over to the altar. There is a large book set out on it.
+			You approach the altar. A large book lies
+			open upon it.
 		"""
 		Button "Search"
 		
 		Text QItemRitualComponents """
-			As you walk around the altar to get a better look, you see that
-			there is a chalice, some herbs, and even a skull. As you prepare to
-			tuck the skull into your bag, you reflect on the many times you've
-			been in these situations. You've learned to shamelessly grab
-			anything you might need, no matter how unlikely. Gain the
+			As you circle the altar for a closer look,
+			you notice a chalice, bundles of herbs, and
+			even a skull. As you move to tuck the skull
+			into your bag, you reflect on the many times
+			you have faced scenes like this.
+
+			Experience has taught you to take anything
+			that might prove useful, no matter how
+			unlikely. Gain the
 			{c:QItemRitualComponents} Unique Item.
 
-			The book is the Smythe family bible. The first section lists
-			births, marriages, and deaths going back many generations. A few 
-			of the men--all named Smythe--have a {success} next to their names.
-			{c:EventChosenInvestigator}'s cousin Matthias has this marking. You
-			aren't sure what it means, but from what you've seen and read today,
-			it worries you.
-				
+			The book is the Smythe family bible. Its
+			first pages record births, marriages, and
+			deaths stretching back generations. Several
+			of the men---all named Smythe---have a
+			{success} beside their names.
+
+			{c:EventChosenInvestigator}'s cousin
+			Matthias bears that same mark. You do not
+			know its meaning, but after what you have
+			seen today, it troubles you.
+
 			Gain 2 {clue}, then discard this Search token.
 		"""
 
@@ -122,21 +141,25 @@ Book Chapel Ordered No Keep Looped
 		foundRitualComponents = true
 		Exit
 	End Page SearchRitualComponents
-	
+
 	Page SearchWhiskey
 		Not Visible
 		Triggered By @SearchChapelWhiskey
 		
 		Prolog """
-			There's a liquor bottle here. Someone has picked at the edges of the
-			label. It's about half-full.
+			A liquor bottle rests here. The edges of
+			its label have been picked at. It is about
+			half-full.
 		"""
 		Button "Search"
 		
 		Text QItemWhiskey """
-			You bend down to pick it up and casually smell the bottle. Man,
-			that is some good whiskey! Gain the {c:QItemWhiskey} Common Item,
-			then discard this Search token.
+			You bend to pick it up and casually sniff
+			the bottle.
+
+			That is some excellent whiskey. Gain the
+			{c:QItemWhiskey} Common Item, then discard
+			this Search token.
 		"""
 
 		Remove TokenSearchChapelWhiskey
@@ -144,39 +167,42 @@ Book Chapel Ordered No Keep Looped
 		$mythosMinor = true
 		Goto SearchWhiskeyNoise
 	End Page SearchWhiskey
-	
+
 	Page SearchWhiskeyNoise
 		Not Visible
 		Add TokenChapelPriestAlive!
 		
 		Text """
-			While you are bent over getting the bottle, you don't notice the
-			chapel door swing open and a priest walk in. Without looking around,
-			he walks along the back wall and turns to walk to the front of the 
-			room. 
+			While you are bent over retrieving the
+			bottle, you fail to notice the chapel door
+			swing open and a priest step inside.
 
-			As you stand up, pleased with your find, you catch your shirt on the
-			pew, trip, and fall to the ground. When you hit the floor, you 
-			let out a loud curse.
+			Without glancing around, he walks along the
+			back wall and turns toward the front.
 
-			The priest turns, his face turning from startled to angry. <<Who are
-			you and how did you get in here?>>
-			
+			As you stand, pleased with your find, your
+			shirt catches on a pew. You stumble and
+			crash to the floor, letting out a loud curse.
+
+			The priest turns, his expression shifting
+			from startled to furious. <<Who are you and
+			how did you get in here?>>
+
 			Place the White Man token as indicated.
 		"""
 		
 		Exit
 	End Page SearchWhiskeyNoise
-	
+
 	Page TalkToPriest
 		Not Visible
 		Triggered By @TalkToChapelPriest
 		
-		Text "The priest is glaring at you expectantly. You respond, ..."
+		Text "The priest glares at you expectantly. You respond, ..."
 		
-		Button 1, "{action} <<What are <i>you</i> doing here?!"
-		Button 2, "{action} <<I'm with a cleaning service and I got lost."
-		Button 3, "{action} In for a penny, in for a pound: kill him"
+		Button 1, "{action} <<What are <i>you</i> doing here?!>>"
+		Button 2, "{action} <<I'm with a cleaning service and I got lost.>>"
+		Button 3, "{action} In for a penny, in for a pound: kill him."
 		Button 4, "Cancel"
 		
 		If selection = 4 Then Mark Unread
@@ -186,35 +212,33 @@ Book Chapel Ordered No Keep Looped
 		if selection = 2 Then Goto TruthToPriest
 		Goto KillPriest
 	End Page TalkToPriest
-	
-	Page ChallengePriest
-		Not Visible
-		No Text
-		 
-		Remove TokenChapelPriestAlive
-		Call Event SpawnCustomMonsterChapelRiot
-		Exit
-	End Page ChallengePriest
-	
+
 	Page TruthToPriest
 		Not Visible
 		
 		Text QItemRitualDagger """
-			<<Oh,>> the priest brightens. <<Benjamin told me you'd be here
-			today. I'm not sure how you found this place, but you should head
-			back to the house and get to work. We need that place cleaned up.
-			I'll remind the boys that you're here at Benjamin's request.>> The
-			priest turns and walks back outside, leaving you puzzled at all
-			of this.
-			
+			<<Oh,>> the priest says, brightening.
+			<<Benjamin told me you would be here today.
+			I am not sure how you found this place, but
+			you should return to the house and get to
+			work. The family needs it cleaned properly.
+
+			<<I will remind the boys you are here at
+			Benjamin's request.>>
+
+			The priest turns and walks outside, leaving
+			you unsettled.
+
 			Discard the White Man token.
-			
-			As you ponder, you look down and see that the priest dropped
-			something. Wrapped in cloth is an ornate knife. Gain the 
+
+			As you consider everything, you glance down
+			and notice he dropped something. Wrapped in
+			cloth is an ornate knife. Gain the
 			{c:QItemRitualDagger} Common Item.
 
-			<<A Haunted house, murdered kids, and now what looks like a local
-			cult,>> you mutter to yourself. <<What have I gotten myself into?>>		
+			<<A haunted house, murdered children, and
+			now what looks like a local cult,>> you
+			mutter. <<What have I gotten myself into?>>
 		"""
 		
 		Remove TokenChapelPriest
@@ -222,38 +246,28 @@ Book Chapel Ordered No Keep Looped
 		wandererFrequency = wandererFrequency + 2
 		Goto PlaceSearchCryptViaChapel
 	End Page TruthToPriest
-	
-	Page PlaceSearchCryptViaChapel
-		Not Visible
-		
-		Add TokenSearchCryptViaChapel!
-		
-		TEXT """
-			As you pick up the knife, something about the floor makes you
-			look twice. Place a Search token as indicated.
-		"""
-		
-		foundRitualDagger = true
-		Trigger @CompletedRequirement
-		Exit	
-	End Page PlaceSearchCryptViaChapel
-	
-	
+
 	Page KillPriest
 		Not Visible
 		
 		Text QItemRitualDagger """
-			You cock your arm to punch the priest and he raises his arms in
-			defense. You punch hard through his waving arms and strike him in
-			the temple. The man falls back, hitting his head on the corner of a
-			pew. He slumps, seizes for a minute, and then goes still.
-			
-			You look down at the dead priest and see something 
-			falling out of the his robes. Gain the {c:QItemRitualDagger}.
-			
-			<<A haunted house, dead kids, and now a local cult,>> you mutter to
-			yourself. <<I should get out of here before someone finds this
-			body.>>
+			You draw back your arm and strike. The
+			priest raises his hands too late.
+
+			Your fist connects with his temple. He
+			staggers, falls backward, and strikes his
+			head against the corner of a pew.
+
+			He seizes briefly, then lies still. He is
+			dead.
+
+			You look down at the body and notice
+			something slipping from his robes. Gain the
+			{c:QItemRitualDagger}.
+
+			<<A haunted house, dead children, and now
+			a local cult,>> you mutter. <<I should leave
+			before someone finds this latest body.>>
 
 			Discard the White Man token.
 		"""
@@ -267,21 +281,26 @@ Book Chapel Ordered No Keep Looped
 		
 		Goto PlaceSearchCryptViaChapel
 	End Page KillPriest
-	
+
 	Page DefeatRiot
 		Not Visible
 		Triggered By @DefeatedCustomMonsterChapelRiot
-	
+
 		Text QItemRitualDagger """
-			The priest and his men lie dead at your feet, their blood seeping
-			into the wooden floor.
-			
-			<<A haunted house, dead kids, and now a local cult,>> you mutter to
-			yourself. <<I should get out of here before anyone else shows up.>>
-			
-			You casually look down at the carnage and think, <i>Maybe there's
-			something in there I can use?</i>  Then you see it:  something 
-			falling out of the priest's robe. Gain the {c:QItemRitualDagger}.
+			The priest and his men lie dead at your
+			feet, their blood seeping into the wooden
+			floor.
+
+			<<A haunted house, dead children, and now
+			a local cult,>> you mutter. <<I should get
+			out of here before anyone else arrives.>>
+
+			You glance over the carnage and think,
+			<i>Perhaps there is something useful
+			here?</i> Then you see it---something
+			slipping from the priest's robe.
+
+			Gain the {c:QItemRitualDagger}.
 		"""
 		
 		chapelPriestDead = 1
@@ -293,71 +312,80 @@ Book Chapel Ordered No Keep Looped
 		
 		Goto PlaceSearchCryptViaChapel
 	End Page
-	
+
 	Page SearchRitualDagger
 		Not Visible
 		Triggered By @SearchChapelRitualDagger If Unread
 		
 		Prolog """
-			The priest lies dead on the floor in front of you. Before you go
-			digging through his robes, maybe make sure he's really dead.
+			The priest lies motionless at your feet.
+			Before searching his robes, perhaps you
+			should be certain he is truly dead.
 		"""
 		Button "Make sure he's dead"
 		
 		Text QItemRitualDagger """
-			You step a bit closer and touch the body lightly with your foot.
-			
+			You step closer and nudge the body lightly
+			with your foot.
+
 			Nothing.
-			
-			With more confidence, you kick the body and it rolls limply off
-			its side. As it rolls, the priest's robes fall open, revealing an
-			ornate knife wrapped in cloth. Gain the {c:QItemRitualDagger}
-			Common Item.
-			
-			<<Hey, did any of you see the priest's right hand twitch?>>
+
+			Growing bolder, you kick him harder. The
+			body rolls limply onto its side. As it
+			turns, his robes fall open, revealing an
+			ornate knife wrapped in cloth.
+
+			Gain the {c:QItemRitualDagger} Common Item.
+
+			<<Did any of you see his right hand
+			twitch?>>
 		"""
 		
 		foundRitualDagger = true
 		Trigger @CompletedRequirement
 		Exit
 	End Page SearchRitualDagger
-	
+
 	Page SearchRitualDaggerAfter
 		Not Visible
 		Triggered By @SearchChapelRitualDagger If SearchRitualDagger Is Read	
 		
-		Prolog "The priest's fingers move slightly."
+		Prolog "The priest's fingers twitch slightly."
 		Button "Make sure he's dead"
 		
 		Text """
-			The recently dead sometimes twitch.
-			You should probably leave the priest alone and get on with it.
-			
+			The priest is dead and you're seeing things.
+
+			You should leave the priest alone
+			and focus on the task at hand.
+
 			Discard this Search token.
 		"""
 		
 		Remove TokenChapelPriest
 		Exit
 	End Page SearchRitualDaggerAfter
-	
+
 	Page SearchCryptViaChapel
 		Not Visible
 		Triggered By @SearchCryptViaChapel
 		
 		Prolog """
-			Something here doesn't feel right. You lean down to take a closer
-			look at the wooden floor.
+			Something about this place feels wrong.
+			You crouch to examine the wooden floor
+			more closely.
 		"""
 		Button "Search"
 		
 		Text """
-			One of the floor boards isn't exactly the same level as the others
-			around it. It also seems to be more worn. You press on it and it
-			moves, but not very much.
-			
-			You stand up and step on it. The panel sinks in and makes a
-			satisfying click. The wall in front of you pops open. Discard the 
-			wall and this Search token.
+			One floorboard sits slightly uneven among
+			the others. It appears more worn as well.
+			You press it. It shifts, but only a little.
+
+			You stand up and step onto it with more weight. The
+			panel sinks and clicks. The wall before
+			you swings open. Discard the wall and
+			this Search token.
 		"""
 		
 		Remove TokenSearchCryptViaChapel
@@ -365,25 +393,33 @@ Book Chapel Ordered No Keep Looped
 		
 		Goto SearchCryptViaChapel2
 	End Page SearchCryptViaChapel
-	
+
 	Page SearchCryptViaChapel2
 		Not Visible
 		
 		Add TileCrypt
 		
 		Text """
-			You pull the wall back to expose a doorway with a stone door. You
-			push on it. Place the {c:TileCrypt} tile.
+			You pull the wall aside, revealing a
+			doorway sealed by a heavy stone door.
+			You push against it.
+
+			Place the {c:TileCrypt} tile.
 		"""
 		
 		If exploredCrypt Then Text """
-			You pull back the wall to find a doorway with a stone door. You
-			push on it. Place the {c:TileCrypt} tile. <<This
-			is the door we found in the crypt earlier,>> you say.
+			You pull the wall aside and reveal a
+			stone-sealed doorway. You push against
+			it and it opens easily.
+
+			<<This
+			is another door to the crypt we found
+			earlier,>> you say.
 		"""
 		
 		If Not exploredCrypt Then Trigger @ExploreCryptViaChapel
 
 		Exit
 	End Page SearchCryptViaChapel2
+
 End Book Chapel
