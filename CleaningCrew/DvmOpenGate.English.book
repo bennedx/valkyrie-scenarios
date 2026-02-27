@@ -137,7 +137,7 @@ Book DvmOpenGate Ordered Keep Looped
         """
 
 		dvmFinished = true
-		Trigger @CompletedRequirement
+		Trigger @AnotherRequirementCompleted
     End Page Commentary
 
 	// this is the same as DvmCloseGate.Epilog

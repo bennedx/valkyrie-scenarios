@@ -111,7 +111,7 @@ Book Journal Ordered Keep Looped
 		readAboutBoy = true
 		journalFinished = true
 		Trigger @PlaceExploreAltarViaCell
-		Trigger @CompletedRequirement
+		Trigger @AnotherRequirementCompleted
     End Page Page4
     
     Page Page5

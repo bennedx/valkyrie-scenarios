@@ -10,7 +10,7 @@ Book FeedGate Ordered No Keep
 		Text """
 			Sarah looks at all of you and says, <<It is too late to stop Matthias
 			from opening the gate. But he didn't have an elder sign, so he was
-			not able to stabilize the i. He needs a steady stream of the
+			not able to stabilize it. He needs a steady stream of the
 			willing to sacrifice themselves to keep the gate open.>>
 			
 			As she speaks, a cultist somehow sqeezes through the hole to the cell,
@@ -18,8 +18,7 @@ Book FeedGate Ordered No Keep
 			blood hits the floor, it is pulled up by the gate, drop-by-drop.
 		
 			
-			<<You must kill them,>> she says loudly. Everyone in the room turns
-			to look at her. <<You must kill them all.>>
+			<<You must kill them,>> she says loudly. Your friends turn to look at her. <<You must kill them all.>>
 			
 			When she spoke, Matthias noticed the intruders for the first time.
 			A look of worry crosses his face, but only for a moment. He returns
@@ -157,7 +156,7 @@ Book FeedGate Ordered No Keep
 	
 	Page SarahTransports
 		Not Visible
-		Triggered By @CompleteRequirement If goal = goalFeedGate And foundKnife And foundDvm And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
+		Triggered By @AnotherRequirementCompleted If goal = goalFeedGate And foundKnife And foundDvm And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
 		
 		Text """
 			Sarah smiles for the first time and says out load, <<That's it! Now

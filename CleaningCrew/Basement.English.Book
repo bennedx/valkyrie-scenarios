@@ -123,7 +123,7 @@ Book Basement Ordered No Keep Looped
 		
 		Remove TokenSearchBasementEvidence
 		foundElderSign = true
-		Trigger @CompletedRequirement
+		Trigger @AnotherRequirementCompleted
 		Exit
 	End Page SearchEvidence2
 	

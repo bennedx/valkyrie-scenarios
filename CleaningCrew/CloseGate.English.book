@@ -5,12 +5,14 @@ Book CloseGate Ordered No Keep Looped
 
     // this hides the page since we are NO Keep
     // this is easier than managing visibility
-    Mark Step2Repeat Read
-
+    if Not closeGateInitialized Then Mark Step2Repeat Read
+	closeGateInitialized = true
+	
     Page Step1
         Prolog """
-            The gate is open and you must close it quickly. Only {c:EventChosenInvestigator} can perform this ritual and only
-            while standing at the altar.
+            The gate is open and you must close it quickly. Only
+			{c:EventChosenInvestigator} can perform this ritual and only while
+			standing at the altar.
         
             Are you ready?
         """
@@ -180,8 +182,7 @@ Book CloseGate Ordered No Keep Looped
             The gate is humming and pulsing with energy. You can feel
 			something trying to get through from the other side. You must
 			hurry. You turn the page and see the next incantation. Like the one
-			for the dagger, blessing, you can read it, but you aren't sure you
-			understand it.
+			for the dagger blessing, you can read now.
         """
 
         Button "Read the incantation"
@@ -253,7 +254,7 @@ Book CloseGate Ordered No Keep Looped
         Text """
             Your fellow investigators are struggling to keep you alive and one
             looks over at you and you meet their eyes. Terror. Horror.  You
-			must get this. You look back down at the text.
+			must get this right. You look back down at the text.
         
             If you understand it, test {lore}; otherwise, test {will} and hope
 			for the best.
@@ -303,18 +304,17 @@ Book CloseGate Ordered No Keep Looped
 
         Text """
             You squeeze your hand into a tight fist over the trinket. As your
-			blood drips, the it begins to glow. Then it and the knife begin
+			blood drips, it begins to glow. Then it and the knife begin
 			pulsing. When you look up, you see the gate is dimmer and
 			smaller, pulsing in sync with the {QItemRitualDagger} and the
-			{c:QItemElderSign}. The boy screams again, no longer sounding
-			human.
+			{c:QItemElderSign}. The boy silently screams again.
 
             The {c:QItemElderSign} rises and hovers over the altar. It vibrates
             briefly, then slowly moves across the room toward the gate.
 
             The boy screams one last time as the elder sign makes contact with
 			his forehead. The boy goes rigid, then the gate collapses and the
-			boy falls to the ground... still smoldering... still moaning.
+			boy falls to the ground... still smoldering.
         
             This investigation is over.
         """
@@ -342,15 +342,18 @@ Book CloseGate Ordered No Keep Looped
         Not Visible
 
         Prolog """
-            You lift your hand over the altar again and prepare to speak again.
-            The boy is still screaming in pain and terror.
+            You lift your hand over the altar and prepare to try again.
         """
 
         Button "Try again"
 
         Text """
+			Somehow your palm has stopped bleeding, so you must slice your hand
+			open again. When you do, the pain is worse than before. Suffer 1
+			Damage.
+			
             You squeeze more blood out of your fist on to the {c:QItemElderSign}.
-            As it hits the trinket, the boy stops screaming.
+			As you do, you speak the words again.
 
             Test {lore} or {will}.
         
@@ -364,11 +367,11 @@ Book CloseGate Ordered No Keep Looped
 
 	Page SarahTransports
 		Not Visible
-		Triggered By @CompleteRequirement If goal = goalCloseGate And foundKnife And foundDvm And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
+		Triggered By @AnotherRequirementCompleted If goal = goalCloseGate And foundKnife And foundDvm And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
 		
 		Text """
 			Sarah smiles for the first time and says out load, <<That's it! Now
-			we know what is going on, where it's happening, and what to do about
+			we know what is going on, where Mathias is working, and what to do about
 			it. I think I can take us where we need to be.>>
 			
 			Sarah seems to grow, getting more transparent. Suddenly, the world

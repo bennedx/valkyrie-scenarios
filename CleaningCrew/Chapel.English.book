@@ -342,7 +342,7 @@ Book Chapel Ordered No Keep Looped
 		"""
 		
 		foundRitualDagger = true
-		Trigger @CompletedRequirement
+		Trigger @AnotherRequirementCompleted
 		Exit
 	End Page SearchRitualDagger
 

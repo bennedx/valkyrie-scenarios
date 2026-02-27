@@ -162,7 +162,7 @@ Book DvmCloseGate Ordered Keep Looped
         """
 		
 		dvmFinished = true
-		Trigger @CompletedRequirement
+		Trigger @AnotherRequirementCompleted
     End Page Commentary
     
     Epilog

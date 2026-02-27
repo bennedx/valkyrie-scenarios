@@ -12,9 +12,7 @@ Book OpenGate Ordered No Keep Looped
 			required for the ritual.
 
 			The boy is chained to the floor, crying and quietly begging his
-			father to stop. Nearby, a cowering woman is shackled beside the altar.
-
-			Now the woman is screaming. Something is happening to her body.
+			father to stop. Nearby, a woman cowers own the floor, shackled to the altar.
 
 			Matthias continues the incantation, but this time the waves of power
 			do not radiate from him — they pour from the air itself, rushing
@@ -69,9 +67,9 @@ Book OpenGate Ordered No Keep Looped
 			The woman screams, gasps for air, then screams again. The power you
 			felt before comes in waves, but this time it feels as though it is flowing into Matthias.
 
-			Abruptly, the woman stops screaming. She goes rigid — then limp.
+			Something indescribable happens to the woman's body and she stops screaming. She goes rigid, then limp.
 
-			A brief glow surrounds Matthias. He lowers his arms just long enough
+			A brief glow surrounds Matthias. He lowers one arm just long enough
 			to flip to another page in the book resting on the altar.
 
 			The woman is dead.
@@ -146,7 +144,7 @@ Book OpenGate Ordered No Keep Looped
 
         Text """
 			Matthias snatches up the knife and begins the incantation again, his
-			voice booming with power. The blade suddenly flares with light, then
+			voice once again booming with power. The blade suddenly flares with light, then
 			settles into a steady, pulsing glow.
 			
 			You speak the words again. Test {will}.
@@ -160,9 +158,9 @@ Book OpenGate Ordered No Keep Looped
 
     Page Step3Fail
         Text """
-You fumble the words, and nothing happens.
+			You fumble the words... and nothing happens.
 
-Matthias ignores you and draws the blade across his palm.
+			Matthias ignores you and draws the blade across his palm.
         
             Suffer 2 Horror ({will} negates).
 			
@@ -174,13 +172,13 @@ Matthias ignores you and draws the blade across his palm.
 
 	Page Step3Repeat
 		Prolog """
-			Surprised that the spell fails, you raise your arms again.
+			Surprised that the spell failed, you raise your arms again.
 		"""
 		
 		Button "Speak the words"
 		
 		Text """
-			You begin speaking, hoping to block his voice again. Test {will}.
+			You begin speaking, hoping to silence him again. Test {will}.
 			
 			For each Unique Item you have, you may roll 1 extra die.
 		"""
@@ -210,7 +208,7 @@ Matthias ignores you and draws the blade across his palm.
 			Matthias squeezes blood from his fist into the chalice, speaking in
 			that same unknown language.
 
-			As he does, you feel your spell take hold… and his voice falters,
+			As he does, you feel your spell take hold... and his voice falters,
 			then vanishes once more.
         """
 
@@ -218,7 +216,7 @@ Matthias ignores you and draws the blade across his palm.
 
         Text """
 			With Matthias frustrated and distracted, you lunge for the skull.
-			If only you can reach it before he… does something.
+			If only you can reach it before he... does something.
 			
 			Test {agility}.
 			
@@ -237,7 +235,7 @@ Matthias ignores you and draws the blade across his palm.
 			Drop {c:QItemRitualKnife}. Take 2 {damage} ({agility} negates).
 
 			Matthias squeezes more blood into the chalice. As it fills, the
-			vessel begins to change — in a way you cannot fully describe. It
+			vessel begins to change in a way you cannot fully describe. It
 			thrums with power now, resonant and dangerous, much like the dagger
 			in his hand.
 		"""
@@ -246,7 +244,7 @@ Matthias ignores you and draws the blade across his palm.
     Page KillHim
 		Prolog """
 			You hesitate for a moment, forcing yourself to think. You need to 
-			decide what to do next — and you need to decide quickly.
+			decide what to do next---and you need to decide quickly.
 
 			Sarah quavers, <<You have to do something. He's nearly finished
 			casting. Please.>>
@@ -269,7 +267,7 @@ Matthias ignores you and draws the blade across his palm.
 		
 		Call Event SpawnAltarMatthiasOpenGate
 		
-		// does this make the DVM go away? (???)
+		// does this make the DVM go away? (??? why?)
 		Remove QItemDvm
     End Page KillHim
 	
@@ -282,11 +280,11 @@ Matthias ignores you and draws the blade across his palm.
 	
 	Page SarahTransports
 		Not Visible
-		Triggered By @CompleteRequirement If goal = goalOpenGate And foundKnife And foundDvm And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
+		Triggered By @AnotherRequirementCompleted If goal = goalOpenGate And foundKnife And foundDvm And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
 		
 		Text """
 			Sarah smiles for the first time and says out loud, <<That's it! Now
-			we know what's happening, where it's happening, and what to do about
+			we know what's happening, where Matthias is working, and what to do about
 			it. I think I can take us where we need to be.>>
 
 			She seems to grow taller — and fainter at the same time, her form
@@ -309,6 +307,8 @@ Matthias ignores you and draws the blade across his palm.
 End Book OpenGate
 
 Book MatthiasOpenGateActivation Ordered No Keep
+	Triggered By @MatthiasOpenGateActivation
+	
 	Page First
 		Text """
 			Matthias lifts the chalice, a single drop of blood sliding down its
@@ -352,7 +352,7 @@ Book MatthiasOpenGateActivation Ordered No Keep
 			straining. He is still screaming.
 
 			At the altar, Matthias continues the incantation, utterly focused---
-			so intent the everyone in the room can feel it.
+			so intent that everyone in the room can feel it.
 
 			Sarah shrieks at him. <<Stop! Please, stop!>>
 
@@ -363,7 +363,7 @@ Book MatthiasOpenGateActivation Ordered No Keep
 			Everyone turns to watch. For a moment, the room falls completely
 			silent.
 
-			Then, with a roar, the boy… changes.
+			Then, with a roar, the boy... changes.
 
 			He becomes something more. Surging. Abyssal. Unstable. The gate is
 			open and, somehow, the boy <i>is</i> the gate.
@@ -383,7 +383,7 @@ Book MatthiasOpenGateActivation Ordered No Keep
 
 			As you do, Matthias flips through several pages of the book, smiling
 			when he finds what he seeks. He raises his arms and begins speaking
-			again. His blood still drips from the dagger, spattering against the
+			again. His blood still drips from the dagger, spattering on the
 			altar. You can feel it in the air with each drop that falls.
 
 			Sarah shouts, <<He's beginning the summoning. The Ancient One has
@@ -394,7 +394,7 @@ Book MatthiasOpenGateActivation Ordered No Keep
 			own throat.
 
 			When his blood touches the boy's chain, the gate steadies. It still
-			crackles and spits, but the surges are weaker now.
+			crackles and spits, but the surges are weaker now, less erratic.
 		"""
 		
 		summoning = true
@@ -405,8 +405,8 @@ Book MatthiasOpenGateActivation Ordered No Keep
 			Matthias continues to chant, his voice booming through the chamber.
 			He punctuates each phrase by stabbing the air with his dagger.
 
-			Suddenly, he falls silent and simply watches the gate as a lone
-			tentacle pushes through.
+			Suddenly, he falls silent, lowers his arms, and simply watches the
+			gate as a lone tentacle pushes through.
 			
 			The investigation is over.
 		"""

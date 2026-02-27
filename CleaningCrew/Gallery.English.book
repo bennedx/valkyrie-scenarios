@@ -209,7 +209,7 @@ Book Gallery Ordered No Keep Looped
 		"""
 		
 		foundDvm = true
-		Trigger @CompletedRequirement
+		Trigger @AnotherRequirementCompleted
 		Exit
 	End Page SearchDvm
 	

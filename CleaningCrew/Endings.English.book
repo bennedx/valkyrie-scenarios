@@ -4,12 +4,12 @@ Debug Off
 Book Endings
 	Triggered By @GameOver
 	
-	Page HardFail 
+	Page HardFail Like UIOpeningText
 		Visible When firstRitual
 
 		Trigger @ShowIntroFrame
 		
-		Text Like UIOpeningText """
+		Text """
 			The house shakes, and light streams up through the floorboards and,
 			somehow, through the cave walls. With a thunderous clap and a shock
 			wave of power, the ceiling rains down as the house begins to
@@ -31,12 +31,12 @@ Book Endings
 		Audio "HardFail.English.ogg"
 	End Page HardFail
 
-	Page OpenGateWin
+	Page OpenGateWin Like UIOpeningText
 		Visible If goal = goalOpenGate And outcome = gameWin
 
 		Trigger @ShowIntroFrame
 		
-		Text Like UIOpeningText """
+		Text """
 			You run out the door of the Chapel, breathing hard and nearly
 			carrying the boy with you. Sarah follows you outside into the night.
 			The full moon shines down, showing the path is clear of cultists.
@@ -60,12 +60,12 @@ Book Endings
 		Audio "OpenGateWin.English.ogg"
 	End Page OpenGateWin
 	
-	Page OpenGateDraw
+	Page OpenGateDraw Like UIOpeningText
 		Visible If goal = goalOpenGate And outcome = gameDraw
 
 		Trigger @ShowIntroFrame
 		
-		Text Like UIOpeningText """
+		Text """
 			You run out the door of the Chapel, breathing hard, still panicked.
 			Sarah follows you outside into the night. The full moon shines down,
 			showing the path is clear of cultists. You are finally safe.
@@ -91,15 +91,14 @@ Book Endings
 		Audio "OpenGateDraw.English.ogg"
 	End Page OpenGateDraw
 	
-	Page OpenGateLose
+	Page OpenGateLose Like UIOpeningText
 		Visible If goal = goalOpenGate And outcome = gameLose
 
 		Trigger @ShowIntroFrame
 		
-		Text Like UIOpeningText """
-			As the Ancient One nears the portal, the altar room shakes and stone
-			from the ceiling starts to fall. Your cousin continues to cast the
-			summoning spell. You panic and begin to run.
+		Text """
+			As the Ancient One's tentacle comes farther through the  portal, the altar room shakes and stone
+			from the ceiling starts to fall. Your cousin smiles... his work is done.
 
 			You find a door that leads back to the cave, but when you enter, you
 			find yourself surrounded by more cultists. This time, they outnumber
@@ -125,7 +124,7 @@ Book Endings
 		Audio "OpenGateLose.English.ogg"
 	End Page OpenGateLose
 	
-	Page FeedGateWin
+	Page FeedGateWin Like UIOpeningText
 		Visible If goal = goalFeedGate And outcome = gameWin
 
 		Trigger @ShowIntroFrame
@@ -157,7 +156,7 @@ Book Endings
 		Audio "FeedGateWin.English.ogg"
 	End Page FeedGateWin
 	
-	Page FeedGateDraw
+	Page FeedGateDraw Like UIOpeningText
 		Visible If goal = goalFeedGate And outcome = gameDraw
 
 		Trigger @ShowIntroFrame
@@ -169,7 +168,7 @@ Book Endings
 			tentacle tentatively pokes through, but pulls back when the gate
 			suddenly pops.
 
-			Sarah leans down and whispers, <<"The Ancient One was not able to make it
+			Sarah leans down and whispers, <<"The Ancient One will not make it
 			through. But you were not able to seal the gate, so it can
 			happen here again. When the gate collapses, our nephew will die. I will
 			see him to peace. Then I will return and wait for the next attempt.>>
@@ -186,7 +185,7 @@ Book Endings
 		Audio "FeedGateDraw.English.ogg"
 	End Page FeedGateDraw
 	
-	Page FeedGateLose
+	Page FeedGateLose Like UIOpeningText
 		Visible If goal = goalFeedGate And outcome = gameLose
 
 		Trigger @ShowIntroFrame
@@ -205,7 +204,7 @@ Book Endings
 			the gate, but the world is in trouble.>>
 
 			The last thing you hear before it all goes dark is Sarah. <<Thank
-			you for trying. We did the best that we could.>>
+			you for trying. You did the best that you could.>>
 
 			The end.		
 		"""
@@ -214,12 +213,12 @@ Book Endings
 		Audio "FeedGateLose.English.ogg"
 	End Page FeedGateLose
 	
-	Page CloseGateWin
+	Page CloseGateWin Like UIOpeningText
 		Visible If goal = goalCloseGate And outcome = gameWin
 
 		Trigger @ShowIntroFrame
 		
-		Trigger """
+		Text """
 			The gate winks out and the boy falls to the ground, smoldering like
 			coals in a fire pit. The elder sign is embedded in his forehead,
 			unnoticed in the pain of the fire.
@@ -246,7 +245,7 @@ Book Endings
 		Audio "CloseGateWin.English.ogg"
 	End Page CloseGateWin
 	
-	Page CloseGateDraw
+	Page CloseGateDraw Like UIOpeningText
 		Visible If goal = goalCloseGate And outcome = gameDraw
 
 		Trigger @ShowIntroFrame
@@ -294,6 +293,7 @@ Book Endings
 	Page HideIntroFrame
 		Triggered By @HideIntroFrame
 		Remove UIStoryImage, UIStoryBackground, UISplashFancyBar, UIStoryContinue, UIEndGame
+		No Text
 	End Page HideIntroFrame
 End Book Endings
 
