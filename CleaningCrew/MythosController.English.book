@@ -1,0 +1,122 @@
+Language English
+Debug Off
+
+// All text in FirstRitual defaults to goal = closeGate
+
+Book MythosController Ordered No Keep
+	
+	Page TakeAction 
+		Not Visible
+		Triggered By @Mythos
+		No Text
+		
+		Trigger @Sarah
+		Trigger @Wanderers
+		Trigger @HealingStone
+		Trigger @StartFirstRitual
+		Trigger @EndGameRitual
+		
+		Exit
+	End Page TakeAction
+
+	// this will start and manage the ritual
+	// the ritual runs to the end of the game for goalOpenGate
+	// for goalFeedGate and goalCloseGate, it runs until the
+	// investigators are pulled into the altar room
+	Page StartFirstRitual 
+		Not Visible
+		Triggered By @Ritual If firstRitual = firstRitualNotStarted
+		No Text
+		
+		found = foundJournal + foundDvm + foundElderSign + foundRitualDagger
+		explored = exploredCryptViaChapel + exploredDungeonCaveViaBasement + exploredDungeonCell
+		read = dvmFinished + journalFinished
+		
+		// if we're not jerks, we get an extra tick to get everything ready
+		readyCount = 9 - (5 - #heros) * 2 + exploredGateNicely
+		
+
+		/*
+		#heros	nice	#things left to do before we start
+		3		0		2	
+		3		1		1	
+		4		0		3
+		4		1		2
+		5		0		4
+		5		1		3
+		*/
+		
+		There are 9 things total
+		if found + explored + read >= 9 - #heros + exploredGateNicely Then firstRitual = firstRitualStarted
+		startOnCount = #heros + exploredGateNicely
+
+		Exit
+	End Page StartOrContinueFirstRitual
+
+
+	
+	/*
+	Ritual Steps in Mythos:
+	
+	Boy
+
+	
+		Rules:  every goal
+	
+	Gate
+		You feel the power of the spell Matthias is casting. It draws you in and repulses you at the same time. A woman screams. The sound pierces the walls of the house, making the windows rattle in their frames. You feel her take a deep, gasping breath, then she screams again. And again. And again. The screaming sends a chill through you. Each investigator takes 2 Horror ({will} negates).
+		
+		if goalOpenGate: Sarah whispers, <<Our cousin has started the opening ritual. We must stop him.>>
+		
+		Rules:  every goal
+		
+		For goalOpenGate, this is the end; they have 2 - 3 rounds before a hard fail
+		
+	
+	Woman
+
+		
+		If goalFeedGate, Sarah whispers, <<The gate is open, but you have the 
+		elder sign. Matthias cannot stabilize the gate; instead, he will need a ready supply of blood sacrifice. Maybe
+		we can cut off the supply.
+		
+		if goalCloseGate: Sarah whispers, <<The gate is open. You must perform the closing ritual.>>
+		
+		For goalFeedGate, this is the end. In 2 - 3 rounds, hard fail
+		
+		Rules:  goalFeedGate Or goalCloseGate
+		
+	Seal/Stabilize
+			The woman screams again. After a few seconds, it doesn't sound human. Then the screaming stops and something... changes.
+			The gates power in the house has been uneven, sputtering and popping, but now it is seems to be stabilizing. Sarah whispers,
+			<<I think Matthias has used an elder sign to stabilize and hold open the gate. This is bad. We must get to the altar to stop him.>>
+	
+		Rules:  goalCloseGate
+
+	Summons--at altar
+		Matthias is still at the altar and still speaking a language you do not understand. The gate glows and hums, but it seems to be stable now. Matthias is focused on the gate. You can see by his excitement that he is anticipating something. You can feel it growing closer... a cold dread creeping into your already-pounding heart. You don't have long now. 
+
+		Sarah confirms your fear when she leans in and says, <<He is summoning his god. You must stop him. You must kill him.>>
+
+		Rules:  goalCloseGate And foundAltar
+
+	Summons--not at altar
+		You feel the house inhale again; your candle flickers and dances. A low drone signals that something important just happened. Even from here, away from the altar, you can feel a  pulsing of evil, a force from underground.
+
+		Sarah whispers desperately, <<He has started the summoning. I can feel the call to his god. We don't have much time.>>
+
+		Rules:  goalFeedGate Or goalCloseGate
+
+	Summoning continues
+		{c:CustomMonsterDavidSmythe} continues summoning... something.
+
+
+	
+	
+	Continues
+	Fail
+	
+	*/
+	
+
+End Book MythosController

@@ -104,15 +104,17 @@ Final thru main house in Actions
 									total		wanderer							start
 				nice		rounds 	wanderers	x 1000		counter 	w. rounds	ritual
 	fewest		116 - 12						
-	3			104 / 6		18		9			400			2-1/3		5			sarah + 12
-	4			104 / 8		13		9			500			2			7			sarah + 10
-	5			104 / 10	11		11			600			1000		8			sarah + 8
+	3			104 / 6		18		9			400			2-1/3		5			sarah + 4
+	4			104 / 8		13		9			500			2			7			sarah + 2
+	5			104 / 10	11		11			600			1000		8			sarah + 1
 
 
 - Movement:	34 moves from driveway to cell, via Chapel
 			11 from Gallery (w/candle) to opening exploreDungeonCaveViaBasement
 
-Whole house explored: exploredCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
+- First Ritual is 10 mythos phases from start to outcome = gameHardFail
+
+
 
 
 End Games -------------------------------------------------------------------------------
@@ -637,7 +639,7 @@ x		BenBefore
 x		BenAfter
 o		CloseGate
 o		FeedGate
-xx		OpenGate
+xxx		OpenGate
 x		DvmOpenGate
 x		DvmCloseGate
 x		Journal

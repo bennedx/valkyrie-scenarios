@@ -57,8 +57,7 @@ Book CloseGate Ordered No Keep Looped
         """
 		
 		// even if we pass, we fail
-        Test Quota 10 set passCloseGateStep2
-        If passCloseGateStep2 Then Goto Step2Fail
+        Test Quota 10 set passWhoCares
         Goto Step2Fail
     End Page Step2
 

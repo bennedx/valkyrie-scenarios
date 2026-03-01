@@ -69,12 +69,18 @@ Book Startup Ordered No Keep Looped
 		basementPhase = first
 
 		// firstRitual states
-		firstRitualStarted = 1
-		firstRitualDagger = 2
-		firstRitualChalice = 3
-		firstRitualGateOpen = 4
-		firstRitualWoman = 5
-		firstRitualGateStabilized = 6
+		firstRitualNotStarted = 0
+		firstRitualStarted = 10
+		firstRitualBoy = 20
+		firstRitualDagger = 30
+		firstRitualChalice = 40
+		firstRitualGateOpen = 50
+		firstRitualWoman = 60
+		firstRitualGateStabilized = 70
+		firstRitualOver = 99
+
+		firstRitual = firstRitualNotStarted
+
 
 		mainRitualStarted = 1
 		mainRitualGateOpen = 2

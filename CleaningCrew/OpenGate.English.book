@@ -12,7 +12,7 @@ Book OpenGate Ordered No Keep Looped
 			required for the ritual.
 
 			The boy is chained to the floor, crying and quietly begging his
-			father to stop. Nearby, a woman cowers own the floor, shackled to the altar.
+			father to stop. Nearby, a woman cowers on the floor, shackled to the altar.
 
 			Matthias continues the incantation, but this time the waves of power
 			do not radiate from him — they pour from the air itself, rushing
@@ -102,9 +102,9 @@ Book OpenGate Ordered No Keep Looped
 			the first time. Your eyes lock, and you see a look that is both
 			determined and haunted.
 
-			He turns back to the altar and tries again.
+			He turns back to the altar to continue.
 
-			Nothing comes out.
+			No sound comes out of his mouth.
 
 			Slowly, he looks back at you.
 			
@@ -172,7 +172,7 @@ Book OpenGate Ordered No Keep Looped
 
 	Page Step3Repeat
 		Prolog """
-			Surprised that the spell failed, you raise your arms again.
+			Surprised that your spell failed, you raise your arms again.
 		"""
 		
 		Button "Speak the words"
