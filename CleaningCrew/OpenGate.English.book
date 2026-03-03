@@ -15,7 +15,7 @@ Book OpenGate Ordered No Keep Looped
 			father to stop. Nearby, a woman cowers on the floor, shackled to the altar.
 
 			Matthias continues the incantation, but this time the waves of power
-			do not radiate from him — they pour from the air itself, rushing
+			do not radiate from him---they pour from the air itself, rushing
 			into him.
 			
             If you have the {c:QItemRitualKnife}, the
@@ -280,14 +280,14 @@ Book OpenGate Ordered No Keep Looped
 	
 	Page SarahTransports
 		Not Visible
-		Triggered By @AnotherRequirementCompleted If goal = goalOpenGate And foundKnife And foundDvm And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
+		Triggered By @AnotherRequirementCompleted If goal = goalOpenGate And foundKnife And dvmFinished and journalFinished And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
 		
 		Text """
 			Sarah smiles for the first time and says out loud, <<That's it! Now
 			we know what's happening, where Matthias is working, and what to do about
 			it. I think I can take us where we need to be.>>
 
-			She seems to grow taller — and fainter at the same time, her form
+			She seems to grow taller---and fainter at the same time, her form
 			turning translucent.
 
 			Suddenly, the world shifts.
@@ -300,8 +300,8 @@ Book OpenGate Ordered No Keep Looped
 		
 		If firstRitual < firstRitualWoman Call MythosFirstRitualOpenGate.Woman
 		
-		firstRitual = false
-		Trigger @ExploreAltar
+		firstRitual = firstRitualOver
+		Trigger @ExploreAltarViaSarah
 		Goto Init
 	End Page SarahTransports
 End Book OpenGate

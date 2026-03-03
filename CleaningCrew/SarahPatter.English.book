@@ -13,35 +13,42 @@ BOOK SarahPatter Ordered No Keep
 	Page Color1
 		Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<You don't remember
-			me or what happened 10 years ago. I am your little sister.
+			me. I am your little sister.
 			
-			<<I will tell you everything you need to know, but first I must
-			tell you that our cousin, Matthias, will open a gate
-			tonight. You must stop him. If you cannot stop him, you will
-			need to find a way to close that gate.>>
+			<<Ten years ago, our father opened a gate to another world. A world
+			of monsters. He failed, but now his nephew---our cousin
+			Matthias---is trying the same thing. He will try today. You must
+			stop him. If you cannot stop him, you will need to find a way to
+			close that gate.>>
+			
+			Sarah looks down and notices the {c:QItemJournal}. <<The
+			{c:QItemJournal}! The man who let you in was writing in it all
+			week. You must read it carefully.>>
 		"""
 
 		If goal = goalFeedGate Then Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<You don't remember
-			me or what happened 10 years ago. I am your little sister.
+			me. I am your little sister.
 			
-			<<I will tell you everything you need to know, but first I must
-			tell you that our cousin, Matthias, will open a gate
-			tonight. You must stop him. If that gate opens, evil could destroy
-			the world.>>
+			<<Ten years ago, our father opened a gate to another world. A world
+			of monsters. He failed, but now his nephew---our cousin
+			Matthias---is trying the same thing. He will try today. You must
+			stop him. If you cannot stop him, evil will destroy the world.>>
 		"""
 	End Page Color1
 
 	Page Color2
 		Text """
+			??? Do we want cultists coming through the gate or the hole in the wall?
+			
 			Sarah whispers to {c:EventChosenInvestigator}, <<The people in this
 			town worship a darker god than most. They want to bring their god
-			to Earth. 10 years ago, Our father, Elias, cast a ritual to summon It. He
-			opened a gate using my body. The power it possessed was breathtaking
-			and I could do nothing to stop it. Somehow, Father summoned local
-			church members through the gate to protect it, even after he
-			was dead. As the gate, I could feel people and monsters
-			approaching and passing through me from the either side.>>
+			to Earth. 10 years ago, our father, Elias, cast a ritual to summon
+			It. He opened a gate using my body. The power it possessed was
+			breathtaking and I could do nothing to stop it. Somehow, Father
+			summoned local church members through the gate to protect it, even
+			after he was dead. As the gate, I could feel people and monsters
+			approaching and passing through me from the other side.>>
 		"""
 	End Page Color2
 
@@ -61,7 +68,7 @@ BOOK SarahPatter Ordered No Keep
 			later.>>
 			
 			She's quiet for a moment, then says, <<Now
-			I know what really happened. And it will not happen again.>>
+			I know what really happened. It will not happen again.>>
 		"""
 	End Page PeterIsDead
 	
@@ -75,16 +82,6 @@ BOOK SarahPatter Ordered No Keep
 			Matthias.>>
 		"""
 	End Page Candles
-
-	Page Journal
-		Visible If foundJournal
-		
-		Text """
-			Sarah looks down and notices the {c:QItemJournal}. <<The
-			{c:QItemJournal}! The man who let you in was writing in it all
-			week. You should read it carefully.>>
-		"""
-	End Page Journal
 
 	Page Dvm
 		Visible If foundDvm
@@ -106,10 +103,9 @@ BOOK SarahPatter Ordered No Keep
 			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDVM} is
 			a spell book. It contains many powerful spells, including rituals to
 			open and close gates. If you cannot stop Matthias from opening a gate,
-			you'll need to starve it of sacrifice.
+			many horrors could come through.
 
-			<<You must read the {c:QItemDvm} to better understand what is
-			expected of you.>>
+			<<You must be prepared. Read the book carefully and read it soon.>>
 		"""
 	End Page Dvm
 
@@ -228,7 +224,7 @@ BOOK SarahPatter Ordered No Keep
 			Sarah whispers to {c:EventChosenInvestigator}, <<I am worried we are
 			running out of time. You must have the {c:QItemElderSign}, 
 			{c:QItemDvm}, and {c:QItemRitualComponents}. You must have also
-			read {QItemDvm} and {c:QItemJournal}>>
+			read the {QItemDvm} and the {c:QItemJournal}>>
 		"""
 	End Page ExhortationStart
 	
@@ -247,9 +243,9 @@ BOOK SarahPatter Ordered No Keep
 		
 		Text """
 			Sarah whispers to {c:EventChosenInvestigator}, <<The {c:QItemDvm}
-			contains infromation you must know so that you can do what needs to
-			be done tonight. Please read it now. There is nothing more imporant
-			that being prepared.
+			contains information you must know so that you can do what needs to
+			be done tonight. Please read it now. There is nothing more important
+			than being prepared.
 		"""
 	End Page ExhortationDvm
 	

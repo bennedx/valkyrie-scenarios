@@ -2,7 +2,7 @@ Language English
 Debug Off
 
 Book MythosFirstRitualOpenGate Ordered No Keep
-	Triggered By @FirstRitual If goal = goalOpenGate And firstRitual
+	Triggered By @FirstRitual If goal = goalOpenGate And firstRitual And firstRitual <> firstRitualOver
 	
 	Page Init
 		Text """
@@ -42,7 +42,7 @@ Book MythosFirstRitualOpenGate Ordered No Keep
 			waves happen, Sarah's expression turns darker.
 			
 			Sarah whispers, <<I can feel something happening with a dagger.
-			Mathias is starting the spell to open a gate.>>
+			I think Mathias is starting the spell to open a gate.>>
 			
 			Whatever is happening must be stopped.
 			
@@ -115,7 +115,7 @@ Book MythosFirstRitualOpenGate Ordered No Keep
 	Page Vamp8
 		Text """
 			A boy's terrified scream cuts through the silence. A moment
-			later, the most powerful wave yet pummels you. Its evil burning 
+			later, the most powerful wave yet pummels you. Its evil burns 
 			your skin. 
 			
 			Sarah leans in and whispers, <<He is starting to open the gate. We
@@ -135,7 +135,7 @@ Book MythosFirstRitualOpenGate Ordered No Keep
 End Book MythosFirstRitualOpenGate
 
 Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
-	Triggered By @Ritual If (goal = goalFeedGate Or goal = goalCloseGate) And firstRitual
+	Triggered By @Ritual If (goal = goalFeedGate Or goal = goalCloseGate) And firstRitual And firstRitual <> firstRitualOver
 
 	Page Init
 		No Text

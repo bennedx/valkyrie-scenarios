@@ -25,7 +25,7 @@ Book MythosController Ordered No Keep
 	// investigators are pulled into the altar room
 	Page StartFirstRitual 
 		Not Visible
-		Triggered By @Ritual If firstRitual = firstRitualNotStarted
+		Triggered By @Ritual If firstRitual = firstRitualNotStarted And firstRitual <> firstRitualOver
 		No Text
 		
 		found = foundJournal + foundDvm + foundElderSign + foundRitualDagger

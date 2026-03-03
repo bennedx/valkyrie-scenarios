@@ -4,7 +4,7 @@ Language English
 // are killing cultists
 
 Book FeedGate Ordered No Keep
-	Triggered By @ReadDvm If goal = goalFeedGate And ritual
+	Triggered By @Ritual If goal = goalFeedGate And firstRitual = firstRitualOver And secondRitual
 	
 	Page Init
 		Text """
@@ -13,14 +13,15 @@ Book FeedGate Ordered No Keep
 			not able to stabilize it. He needs a steady stream of the
 			willing to sacrifice themselves to keep the gate open.>>
 			
-			As she speaks, a cultist somehow sqeezes through the hole to the cell,
+			As she speaks, a cultist somehow squeezes through the hole to the cell,
 			steps to the gate, pulls out a dagger, and slits his throat. When his
-			blood hits the floor, it is pulled up by the gate, drop-by-drop.
+			blood hits the boy's chain, the gate's buzzing and popping slows
+			and it begins quietly humming.
 		
 			
 			<<You must kill them,>> she says loudly. Your friends turn to look at her. <<You must kill them all.>>
 			
-			When she spoke, Matthias noticed the intruders for the first time.
+			As she spoke, Matthias noticed you for the first time.
 			A look of worry crosses his face, but only for a moment. He returns
 			immediately to his summoning.
 		"""
@@ -35,13 +36,8 @@ Book FeedGate Ordered No Keep
 			must kill Matthias, then close and seal the gate.>>
 			
 			Sarah turns to the others and says loudly, <<You must kill these
-			cultists. It might be easier to head toward the chapel since that
-			seems to be where they are coming from. Speak to me if you want to
-			go out. If you want to come back, yell to me through the hole.>>
-			
-			Move Sarah to the board as indicated.
+			cultists. I believe his will summon them through the gate.>>
 		"""
-		
 	End Page Instructions
 	
 	Page RitualBegins
@@ -156,14 +152,14 @@ Book FeedGate Ordered No Keep
 	
 	Page SarahTransports
 		Not Visible
-		Triggered By @AnotherRequirementCompleted If goal = goalFeedGate And foundKnife And foundDvm And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
+		Triggered By @AnotherRequirementCompleted If goal = goalFeedGate And foundKnife And dvmFinished And journalFinished And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
 		
 		Text """
 			Sarah smiles for the first time and says out load, <<That's it! Now
 			we know what is going on, where it's happening, and what to do about
 			it. I think I can take us where we need to be.>>
 			
-			Sarah seems to grow, getting more transparent. Suddenly, the world
+			Sarah seems to grow, getting more transparent as she does. Suddenly, the world
 			shifts and you are... somewhere else. And disoriented. There is
 			noise and light and someone yelling. Folks are rushing by. It all
 			seems far away.>>
@@ -172,8 +168,8 @@ Book FeedGate Ordered No Keep
 		If firstRitual < firstRitualWoman Call MythosFirstRitualFeedOrCloseGate.Woman
 		If firstRitual < firstRitualOpenGate Call MythosFirstRitualFeedOrCloseGate.OpenGate
 		
-		firstRitual = false
-		Trigger @ExploreAltar
+		firstRitual = firstRitualOver
+		Trigger @ExploreAltarViaSarah
 		Goto Init
 	End Page SarahTransports
 End Book FeedGate
