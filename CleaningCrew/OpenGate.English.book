@@ -58,6 +58,7 @@ Book OpenGate Ordered No Keep Looped
 	Page Woman
 		Not Visible
 		
+		Remove TokenLiveWoman
 		Add TokenDeadWoman
 		
 		Text """
@@ -77,8 +78,6 @@ Book OpenGate Ordered No Keep Looped
 			Sarah whispers, <<Matthias has recharged himself. He is at the final
 			stage. He is ready to open the gate.>>
 		"""
-		
-		Remove TokenLiveWoman
 		
 		Goto Step1
 	End Page Woman
@@ -237,7 +236,7 @@ Book OpenGate Ordered No Keep Looped
 			Matthias squeezes more blood into the chalice. As it fills, the
 			vessel begins to change in a way you cannot fully describe. It
 			thrums with power now, resonant and dangerous, much like the dagger
-			in his hand.
+			in Matthias's hand.
 		"""
 	End Page Step4Fail
 	

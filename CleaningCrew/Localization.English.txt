@@ -41,8 +41,7 @@ TokenTestExploreDiningRoomViaBackyard.button1,Test
 TokenSearchKitchenRandom.button1,Trigger
 TokenTestExploreKitchenViaDiningRoom.button2,Cancel
 TokenTestExploreKitchenViaDiningRoom.button1,Test
-TokenGate.text,"\nYour cousin’s 13-year old son is hovering spread-eagled in a circle of light; somehow, he <i>is</i> the gate. He is motionless and stares forward with empty, unblinking eyes.\n"
-TokenGate.button1,Cancel
+TokenAltarGate.button1,Cancel
 TokenTestExploreDrivewayViaStartup.button1,Test
 TokenTestExploreKitchenViaDiningRoom.text,ExploreKitchenViaDiningRoom
 TokenTestExploreFoyerViaHall2.text,ExploreFoyerViaHall2
@@ -12915,3 +12914,4 @@ EventMythosWandererActivateMove1.button1,Attack
 EventMythosWandererActivateMove1.button2,No Investigator in the space
 EventMythosSarahPatterGo.button1,Button1
 EventMythosWandererSelect.button2,Button2
+TokenAltarGate.text,"\nYour cousin’s 13-year old son is hovering spread-eagled in a circle of light; somehow, he <i>is</i> the gate. He is motionless and stares forward with empty, unblinking eyes.\n"

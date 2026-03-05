@@ -66,7 +66,7 @@ Book Altar Ordered No Keep Looped
 	End Page Place
 	
 	Page PlaceAltar
-		Add TokenMatthias
+		Add TileAltar, TokenMatthias!, TokenAltarInvestigatos 
 		
 		Text """
 			Now that you have your bearings, you better understand where you are
@@ -80,15 +80,17 @@ Book Altar Ordered No Keep Looped
 			as indicated.
 		"""
 		
-		Remove TokenMatthias
+		Remove TokenMatthias, TokenAltarInvestigators
 	End Page PlaceAltar
 	
 	Page PlaceNpcs
 		If goal = goalOpenGate Then Add TokenLiveWoman!
 		If goal != goalOpenGate Then Add TokenDeadWoman!
 	
+		Add TokenAltarGate!
+	
 		Text """
-			The boy floats in the air. Place the {c:TokenGate} token as
+			The boy floats in the air. Place the {c:TokenAltarGate} token as
 			indicated. This is Matthias's son. Somehow, he <i>is</i> the gate.
 			
 			A dead woman is chained to the altar, lying at Matthias's feet. Place the
@@ -97,7 +99,7 @@ Book Altar Ordered No Keep Looped
 		"""
 		
 		If goal = goalOpenGate Then Text """
-			The boy floats in the air. Place the {c:TokenGate} token as
+			The boy floats in the air. Place the {c:TokenAltarGate} token as
 			indicated. This is Matthias's son. If you don't stop Matthias, 
 			the boy will soon be the gate.
 			
@@ -106,10 +108,4 @@ Book Altar Ordered No Keep Looped
 			healing stone you found.
 		"""
 	End Page PlaceNpc
-	
-	Page PlaceInvestigators
-		Text """
-			You are near the boy. Place your investigator figures as indicated.
-		"""
-	End Page
 End Book Altar
