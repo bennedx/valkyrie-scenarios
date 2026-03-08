@@ -3,93 +3,38 @@ Language English
 // this is run during the Mythos phase while they
 // are killing cultists
 
-Book FeedGate Ordered No Keep
-	Triggered By @Ritual If goal = goalFeedGate And firstRitual = firstRitualOver And secondRitual
+Book MythosFeedGate Ordered No Keep
+	Triggered By @Ritual If goal = goalFeedGate And firstRitual = firstRitualOver
 	
 	Page Init
 		Text """
-			Sarah looks at all of you and says, <<It is too late to stop Matthias
-			from opening the gate. But he didn't have an elder sign, so he was
+			Sarah looks at you and says, <<It is too late to stop Matthias
+			from opening the gate. But he doesn't have an elder sign, so he is
 			not able to stabilize it. He needs a steady stream of the
-			willing to sacrifice themselves to keep the gate open.>>
-			
-			As she speaks, a cultist somehow squeezes through the hole to the cell,
-			steps to the gate, pulls out a dagger, and slits his throat. When his
-			blood hits the boy's chain, the gate's buzzing and popping slows
-			and it begins quietly humming.
-		
-			
-			<<You must kill them,>> she says loudly. Your friends turn to look at her. <<You must kill them all.>>
-			
-			As she spoke, Matthias noticed you for the first time.
-			A look of worry crosses his face, but only for a moment. He returns
-			immediately to his summoning.
-		"""
-	End Page
-	
-	Page Instructions
-		
-		Add TokenSarahAltar!
-		
-		Text """
-			Sarah leans down and whispers to {c:EventChosenInvestigator}, <<You
-			must kill Matthias, then close and seal the gate.>>
-			
-			Sarah turns to the others and says loudly, <<You must kill these
-			cultists. I believe his will summon them through the gate.>>
-		"""
-	End Page Instructions
-	
-	Page RitualBegins
-		Text """
-			You freeze as something... <i>happens</> to the house. You aren't
-			sure what it is, but fear clutches your gut as the feeling washes
-			over you.
-			
-			Then, from deep in the house, you hear a boy scream in pain and
-			terror. He stops abruptly and you feel something in the air, like
-			electricity. The house shudders and everything goes quiet. Sarah's
-			eyes widen and she whispers to {c:EventChosenInvestigator}, <<He's
-			started. The ritual has started. We have to get to the
-			{c:TileAltar} and stop your cousin Matthias.>>
-			
-			As she finishes speaking, someone in cult robes runs by you,
-			heading toward the cell.
-		"""
-	End Page RitualBegins
+			willing to sacrifice themselves to keep the gate open.
 
-	Page GateOpens
-		Text """
-			The woman's screaming stops and, for a moment, the house is silent
-			again... as if the house were taking a breath. Then, though you
-			cannot see it, you can feel the gate spring into being. You
-			hear... <i>something</> moan in pain, reverberating through the
-			wall, an unearthly sound. You know in your gut it's Matthias's son.
-			
-			The feeling of power grows stronger; it radiates through the
-			floorboards and moves through the walls. Sarah whispers, <<The
-			gate is open, we have to stop him.>>
-			
-			As she speaks, another cultist brushes past you, also heading
-			toward the cell.
-
-			Sarah lights up. <<We have the {c:QItemElderSign}. Without it,
-			Matthias needs constant sacrifice to keep the gate open. Those
-			cultists are his sacrifices.
-
-			<<You must kill them,>> she says loudly. Everyone in the room turns
+			<<The cultists you have seen gathering are here to sacrifice
+			themselves. You must kill them,>> she says loudly. Your friends turn
 			to look at her. <<You must kill them all.>>
+			
+			As she speaks, Matthias notices you for the first time.
+			A look of worry crosses his face, but only for a moment. He returns
+			to his summoning.
 		"""
 		
-		feedGateKillCount = 0
-		feedGateKillGoal = 2 * #investigator + 2 + !exploredGateNicely * #investigator
-		feedGateKillCount = 0
-	End Page GateOpens
+		feederKillCount = 0
+		feederKillGoal = (#heros - exploredNicely) * 3 + 2
+		
+		Trigger @StartFeeders
+	End Page
 		
 	Page Sacrifice
 		Text """
-			The house pulses with power, overwhelming you for a moment. You
-			snap back to awareness as a cultist approaches. You steady yourself
+			Matthias raises his arms, dagger and chalice in hand. He continues
+			speaking words you do not understand, but it is clear he is focused
+			on the gate, attempting to call the Ancient One.
+			The room pulses with power, overwhelming you for a moment. You
+			snap back to awareness as another cultist approaches. You steady yourself
 			for another attack.
 			
 			The power you feel sputters with instability. With these cultists
@@ -101,18 +46,17 @@ Book FeedGate Ordered No Keep
 	Page Hurry
 		Text """
 			Sarah whispers, <<We must hurry. He is summoning his god. I can
-			feel it.>>
+			feel it responding.>>
 			
-			The house continues to vibrate with what you assume is the energy
-			of the gate. What should be a stable hum continues its uneven
-			popping.
+			The chamber continues to vibrate with both the energy
+			of the gate and Matthias's casting.
 		"""
 	End Page Hurry
 	
 	Page Ponder
 		Text """
 			You stop for a moment and wonder, <i>How many cultists do we have
-			to kill? We've already killed {feedGateKillCount}.</i> Out of
+			to kill? We've already killed {feederKillCount}.</i> Out of
 			the corner of your eye you see another one coming. It's time to get
 			back to work.
 		"""
@@ -120,7 +64,7 @@ Book FeedGate Ordered No Keep
 	
 	Page KeepGoing 
 		Text """
-			The house stops vibrating for a moment. When it starts again, it
+			The ground stops vibrating for a moment. When it starts again, it
 			is weaker, but still powerful.
 			
 			<<What you are doing is working,>> Sarah whispers. <<Keep going. I
@@ -170,6 +114,642 @@ Book FeedGate Ordered No Keep
 		
 		firstRitual = firstRitualOver
 		Trigger @ExploreAltarViaSarah
-		Goto Init
+		Goto PlaceSarah
 	End Page SarahTransports
-End Book FeedGate
+	
+	Page PlaceSarah
+		Not Visible
+		
+		Text """
+			Sarah drifts away from you and settles. Move Sarah from your 
+			investigator card to the board as indicated.
+			
+			She says loud enough the the people on the other side of the hole
+			in the wall can hear her, <<I'm going to stay here and watch over
+			what is happening. If you need to come into the cell or go back 
+			to the house, just call me and I will help.
+		"""
+		
+		Goto Init
+	End Page PlaceSarah
+	
+	Page CallSarah
+		Text """
+			I hear you calling me. What do you need?
+		"""
+		Button 1 "Bring me into the cell."
+		Button 2 "Take me through the hole in the wall."
+		
+		If selection = 1 Then Goto CallSarahToCell
+		Goto CallSarahFromCell
+	End Page CallSarah
+	
+	Page CallSarahToCell
+		Text """
+			Sarah comes to you and starts to grow like she did before. You grow
+			and become transparent with her then... your are overwhelmed for a
+			moment but quickly regain your senses.
+			
+			Move your investator figure to 
+	End Page CallSarahToCell
+	
+	Page CallSarahFromCell
+	
+End Book MythosFeedGate
+
+
+
+Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
+	/*	How This Works
+	
+		Feeders are cultists who sacrifice themselves to keep the gate open.
+	
+		On startup, a number of feeders are spawned and a message is displayed
+		showing how many and where they are.
+		
+		feederSpawnPosition is where the feeders spawn. It starts at 7 which
+		is in the torture chamber. Each sight token that is breached moves the
+		spawn point back. This is the list of spawn points and their position
+		nunmber.
+			7	torture chamber
+			6	dungeon cave
+			4	crypt
+			1	chapel
+			
+		The 'feeder' variable refers to the currently selected feeder. There
+		are no arrays, so feeder 1 keeps its values in feeder1whateve. These
+		are the values tracked.
+			
+			feederN			True if this feeder is active
+			feederPosition	Which token represents its position
+			feederSpawn		Which CustomMonster is used for this one, from 1-6
+			
+		When the Mythos phase starts, the feeder variable is set to 0. As
+		each one is activated, Movefeeder directs movement and increments
+		feeder so the next one can be handled for the next activated feeder
+		monster.
+		
+		When one is defeated, there are a set of methods here that catch that
+		specific monster's trigger and removes it.
+		
+		After reach defeat, @FeederDefeated fires so a count can be tracked.
+	*/
+	
+	Page StartFeeders
+		Not Visible
+		Triggered By @StartFeeders
+		
+		feederPosition = 8
+		
+		feederMax = #heros + 1 - openedGateNicely
+		Call AddFeeders
+	End Page StartFeeders
+
+	Page Spawn
+		No Text
+		
+		If feederSpawn = 1 Then Call Event SpawnFeeder1
+		If feederSpawn = 2 Then Call Event SpawnFeeder2
+		If feederSpawn = 3 Then Call Event SpawnFeeder3
+		If feederSpawn = 4 Then Call Event SpawnFeeder4
+		If feederSpawn = 5 Then Call Event SpawnFeeder5
+		If feederSpawn = 6 Then Call Event SpawnFeeder6
+	End Page Spawn
+
+	Page Move
+		Trigger By @ActiviateFeeder
+		
+		Call LoadFeeder
+		
+		If feederPosition = 9 Then Goto Sacrifice
+		
+		feederStart = feederPosition
+
+		// we call this twice; this shows where it is coming from
+		Call ShowFeeder
+		
+		distance = Random(2) + (1 - openedGateNicely)
+		feederPosition = feederPosition + distance
+		If feederPosition > 9 Then feederPosition = 9
+
+		// now that it's moved, we show its new place
+		Call ShowFeeder
+		
+		If feederStart <= 8 And feederPosition > 8 Then Goto GoThroughHole
+		
+		Text """
+			Move the cultist toward the dungeon cell as indicated. He is in a
+			hurry, so he does not stop when passing investigators.
+		"""
+		
+		If Not openedGateNicely And openGateFirstFeeder And distance > 1 Then Text """
+			As the cultist passes he mutters something about Benjamin and maybe
+			the words 'backyard gate'? He moves a little faster. Move the cultist toward
+			the dungeon cell as indicated. He is in a hurry so he does not stop
+			when passing invenstigators.
+			
+			You wonder, <i>Why do these men even know about the broken gate? Are the
+			folks here really that petty?</i>
+		"""
+
+		If Not openedGateNicely And feedGateFirstFeeder And distance > 1 Then feedGateFirstFeeder = false
+		
+		Button 1 "There is an investigator in this space"
+		Button 2 "There is no investigator in this space"
+		
+		Call Hidefeeder
+		
+		If selection = 1 Then Goto Attack
+	End Page Move
+
+	Page Attack
+		Call ShowFeeder
+		
+		option = RANDOM(3)
+		
+		Text """
+			The cultist turns to look at you briefly. He is in too much of a
+			hurry to stop so he keeps going.
+		"""
+
+		If option = 2 Then Text """
+			Choose a random investigator in the cultist's space.
+			
+			The cultist rears up, pulls a knife, and heads toward you. You have
+			to move quickly ({agility}+1;2).
+			
+			If you pass, his knife passes far to your left.
+			
+			If you fail, the knife cuts into you. Take 1 damage ({agility}
+			negates).
+		"""
+		
+		If option = 3 Then Text """
+			Choose a random investigator in the cultist's space.
+
+			The cultist turns and continues running, now directly at you. He
+			puts his head down, grabs you around the middle, and pushes you into
+			the wall behind you. Become Dazed.
+			
+			The cultist dosen't fare well either. The cultist takes 1 damage.
+		"""
+		
+		Call HideFeeder
+	End Page Attack
+	
+	Page GoThroughHole
+		If feederThroughHoleAlready Then Text """
+			The cultist continues running. He is in a hurry, so he doesn't
+			stop when passing investigators.
+			
+			He pours through the hole in the wall like the ones before him,
+			appearing near the gate.
+			
+			Move the cultist as indicated.
+		"""
+		
+		Text """
+			The cultist continues running. He is in a hurry, so he doesn't
+			stop when passing investigators.
+			
+			In the cell, he stops for a moment and mutters
+			something under his breath. He grows taller and thinner, then
+			transparent. Suddenly, his body swirls like smoke and disappears
+			through the hole in the wall. He appears on the other side near 
+			the gate.
+			
+			{c:EventChosenInvestigator} looks up as the cultist pours out of the
+			hole in the wall, solidifies, and looks around. While briefly dazed,
+			the man quickly gets his bearings and walks toward the gate.
+			
+			Move the cultist as indicated.
+			
+			{c:EventChosenInvestigator} returns to his work.
+		"""
+		
+		feederThroughHoleAlready = true
+		Call SaveFeeder
+	End Page GoThroughHole
+
+	Page Sacrifice
+		Text """
+			The cultist draws a knife, mumbles something, slits has throat, and
+			falls to the ground. Rather than pooling, his blood drips upward,
+			somehow feeding the gate. When the blood runs out, the cultist's 
+			body grows transparent again, but this time the swirl of smoke
+			drifts up and is swallowed by the gate.
+			
+			Remove the cultist from the board.
+		"""
+		
+		If feederSacrifiedAlready Then Text """
+			Like those before him, the feeder slits his throat and disappears.
+			The gate continues humming, stable for now.
+			
+			Remove the cultist from the board.
+		"""
+		
+		feederSacrificedAlready = true
+		Call RemoveFeeder
+	End Page Sacrifice
+
+	Page Evade
+		Triggered By @EvadeFeeder
+		
+		If RANDOM(3) = 3 Then Goto EvadeHarsh
+		
+		Text """
+			He is in a hurry and seems to be trying to evade you.
+		"""
+		
+		If RANDOM(3) = 3 Then 
+		
+
+	End Page Evade
+
+	Page EvadeHarsh
+		extraDice = openedGateNicely ? 2 : 1
+
+		Text """
+			As you try to walk around him, the man pulls a knife and approaches you.
+			
+			Test {agility}
+			
+			Add {var:extraDice} extra die if you are not wounded.
+		"""
+
+		Test Quota 2 Set isPass
+		If isPass Goto EvadePass
+		Goto EvadeFail
+	End Page EvadeHarsh
+
+	Page EvadeHarshPass
+		option = RANDOM(3)
+		
+		Text """
+			At the last minute, the cultist decides you are not important enough
+			to waste time on and lets you go.
+		"""
+		
+		If option = 1 Then Text """
+			He takes a stab at you but you twist and avoid his blade. He's in a
+			hurry, so one try was enough and he continues runnig toward the
+			altar.
+		"""
+		
+		If option = 2 Then Text """
+			You do this weird attack a friend showed you that puts the cultist
+			on the ground. Hard. The cultist takes 2 damage.
+		"""
+	End Page EvadeHarshPass
+	
+	Page EvadeHarshFail
+		option = RANDOM(3)
+		
+		Text """
+			At the last minute, the cultist decides you are not important enough
+			to waste time on and lets you go.		
+		"""
+		
+		If option = 1 Then Text """
+			He takes a stab at you but you twist and avoid his blade... until he
+			comes back around. You look down and see blood. Take 1 damage
+			({strength} negates).
+		"""
+		
+		If option = 2 Then Text """
+			You do this weird attack a friend showed you that puts the cultist
+			on the ground. Hard. The cultist takes 2 damage.
+
+			Unfortunately, you didn't do the move correctly and feel something
+			stinging in your right leg. Lose your action.
+		"""
+	End Page EvadeHarshFail
+
+
+	Page HorrorCheck
+		Text """
+			It's just a man in robes. Aside from his fervency and death wish,
+			he just isn't that scary.
+		"""
+		
+		If Random(3) = 1 Then Text """
+			It's just a man in robes. He isn't that scary.
+			
+			Suddenly he turns and meets your gaze. He is mad with fervency, his
+			eyes are hypnotic. He approaches you and you are unable to
+			look away. The terror is building. You know you have to look away,
+			but... ({will}+1;2)
+			
+			If you pass, you pull your eyes away and he loses interest. The
+			man turns back and resumes his trek toward the altar.
+			
+			If you fail, he holds your gaze until he slashes at your arm with
+			his knife, then he turns and walks away. When he breaks eye contact,
+			you are left with your terror and a new injury. Take 1 damage and 1
+			horror ({strength}+1 negates).
+		"""
+	
+	End Page HorrorCheck
+
+	Page Removefeeder
+		// we remove one by copying later values over this one
+		If feeder < 2 Then feeder1 = feeder2
+		If feeder < 2 Then feeder1position = feeder2position
+		If feeder < 2 Then feeder1spawn = feeder2spawn
+		
+		If feeder < 3 Then feeder2 = feeder3
+		If feeder < 3 Then feeder2position = feeder3position
+		If feeder < 3 Then feeder2spawn = feeder3spawn
+
+		If feeder < 4 Then feeder3 = feeder4
+		If feeder < 4 Then feeder3position = feeder4position
+		If feeder < 2 Then feeder3spawn = feeder4spawn
+		
+		If feeder < 5 Then feeder4 = feeder5
+		If feeder < 5 Then feeder4position = feeder5position
+		If feeder < 5 Then feeder4spawn = feeder5spawn
+		
+		If feeder < 6 Then feeder5 = feeder6
+		If feeder < 6 Then feeder5position = feeder6position
+		If feeder < 6 Then feeder5spawn = feeder6spawn
+		
+		feeder6 = false
+		feeder6position = 0
+		feeder6spawn = 0
+		
+		If feederSpawn = 1 Then Remove Spawnfeeder1
+		If feederSpawn = 2 Then Remove Spawnfeeder2
+		If feederSpawn = 3 Then Remove Spawnfeeder3
+		If feederSpawn = 4 Then Remove Spawnfeeder4
+		If feederSpawn = 5 Then Remove Spawnfeeder5
+		If feederSpawn = 6 Then Remove Spawnfeeder6
+		
+		// there is one fewer now
+		feederCount = feederCount - 1
+		
+		// we removed the current one, so back up so we don't
+		// miss the next one
+		feeder = feeder - 1
+
+		No Text
+	End Page Removefeeder
+	
+	Page AddFeeder
+		If Not feeder6 Then feeder = 6
+		If not feeder5 Then feeder = 5
+		If not feeder4 Then feeder = 4
+		If not feeder3 Then feeder = 3
+		If not feeder2 Then feeder = 2
+		If not feeder1 Then feeder = 1
+		
+		If feeder = 1 Then feeder1 = true
+		If feeder = 2 Then feeder2 = true
+		If feeder = 3 Then feeder3 = true
+		If feeder = 4 Then feeder4 = true
+		If feeder = 5 Then feeder5 = true
+		If feeder = 6 Then feeder6 = true
+		
+		Call GetFreeSpawnNumber
+		Call Spawn
+		Call SaveFeeder
+		
+		feederCount = feederCount + 1
+		
+		No Text
+	End Page AddFeeder
+	
+	Page Savefeeder
+		If feeder = 1 Then feeder1position = feederPosition
+		If feeder = 1 Then feeder1Spawn = feederSpawn
+		
+		If feeder = 2 Then feeder2position = feederPosition
+		If feeder = 2 Then feeder2Spawn = feederSpawn
+		
+		If feeder = 3 Then feeder3position = feederPosition
+		If feeder = 3 Then feeder3Spawn = feederSpawn
+		
+		If feeder = 4 Then feeder4position = feederPosition
+		If feeder = 4 Then feeder4Spawn = feederSpawn
+		
+		If feeder = 5 Then feeder5position = feederPosition
+		If feeder = 5 Then feeder5Spawn = feederSpawn
+		
+		If feeder = 6 Then feeder6position = feederPosition
+		If feeder = 6 Then feeder6Spawn = feederSpawn
+		
+	End Page Savefeeder
+	
+	Page LoadFeeder
+		No Text
+		
+		If feeder = 1 Then feederPosition = feeder1position
+		If feeder = 1 Then feederSpawn = feeder1spawn
+		
+		If feeder = 2 Then feederPosition = feeder2position
+		If feeder = 2 Then feederSpawn = feeder2spawn
+		
+		If feeder = 3 Then feederPosition = feeder3position
+		If feeder = 3 Then feederSpawn = feeder3spawn
+		
+		If feeder = 4 Then feederPosition = feeder4position
+		If feeder = 4 Then feederSpawn = feeder4spawn
+		
+		If feeder = 5 Then feederPosition = feeder5position
+		If feeder = 5 Then feederSpawn = feeder5spawn
+		
+		If feeder = 6 Then feederPosition = feeder6position
+		If feeder = 6 Then feederSpawn = feeder6spawn
+	End Page LoadFeeder
+	
+	Page LoadFeederBySpawn
+		No Text
+		
+		If feeder1 And feeder1spawn = feederSpawn Then feeder = 1
+		If feeder2 And feeder2spawn = feederSpawn Then feeder = 2
+		If feeder3 And feeder3spawn = feederSpawn Then feeder = 3
+		If feeder5 And feeder4spawn = feederSpawn Then feeder = 4
+		If feeder5 And feeder5spawn = feederSpawn Then feeder = 5
+		If feeder6 And feeder6spawn = feederSpawn Then feeder = 6
+		Call LoadFeeder
+	End Page LoadFeederBySpawn
+	
+	Page ShowFeeder
+		No Text
+		
+		If feederPosition = 1 Then Add TokenFeeder1!
+		If feederPosition = 2 Then Add TokenFeeder2!
+		If feederPosition = 3 Then Add Tokenfeeder3!
+		If feederPosition = 4 Then Add TokenFeeder4!
+		If feederPosition = 5 Then Add TokenFeeder5!
+		If feederPosition = 6 Then Add TokenFeeder6!
+		If feederPosition = 7 Then Add TokenFeeder7!
+		If feederPosition = 8 Then Add TokenFeeder8!
+		If feederPosition = 9 Then Add TokenFeeder9!
+	End Page ShowFeeder
+	
+	Page HideFeeder
+		No Text
+		
+		Remove TokenFeeder1, TokenFeeder2, TokenFeeder3, TokenFeeder4, TokenFeeder5, TokenFeeder6, TokenFeeder7, TokenFeeder8, TokenFeeder9
+	End Page HideFeeder
+	
+	Page Feeder1Dies
+		Trigger By @DefeatedSpawnFeeder1
+		No Text
+		
+		feederSpawn = 1
+		Call LoadBySpawn
+		Call RemoveFeeder
+		
+		Trigger @FeederKilled
+	End Page Feeder1Dies
+	
+	Page Feeder2Dies
+		Trigger By @DefeatedSpawnFeeder2
+		No Text
+		
+		feederSpawn = 2
+		Call LoadBySpawn
+		Call RemoveFeeder
+		
+		Trigger @FeederKilled
+	End Page Feeder2Dies
+	
+	Page Feeder3Dies
+		Trigger By @DefeatedSpawnFeeder3
+		No Text
+		
+		feederSpawn = 3
+		Call LoadBySpawn
+		Call RemoveFeeder
+		
+		Trigger @FeederKilled
+	End Page Feeder3Dies
+	
+	Page Feeder4Dies
+		Trigger By @DefeatedSpawnFeeder4
+		No Text
+		
+		feederSpawn = 4
+		Call LoadBySpawn
+		Call RemoveFeeder
+		
+		Trigger @FeederKilled
+	End Page Feeder4Dies
+	
+	Page Feeder5Dies
+		Trigger By @DefeatedSpawnFeeder5
+		No Text
+		
+		feederSpawn = 5
+		Call LoadBySpawn
+		Call RemoveFeeder
+		
+		Trigger @FeederKilled
+	End Page Feeder5Dies
+	
+	Page Feeder6Dies
+		Trigger By @DefeatedSpawnFeeder6
+		No Text
+		
+		feederSpawn = 6
+		Call LoadBySpawn
+		Call RemoveFeeder
+		
+		Trigger @FeederKilled
+	End Page Feeder6Dies
+	
+	Page GetFreeSpawnNumber
+		feederNextSpawn = 1
+
+		' If 1 is taken, bump to 2
+		If feederNextSpawn = 1 And feeder1 And feeder1spawn = 1 Then feederNextSpawn = 2
+		If feederNextSpawn = 1 And feeder2 And feeder2spawn = 1 Then feederNextSpawn = 2
+		If feederNextSpawn = 1 And feeder3 And feeder3spawn = 1 Then feederNextSpawn = 2
+		If feederNextSpawn = 1 And feeder4 And feeder4spawn = 1 Then feederNextSpawn = 2
+		If feederNextSpawn = 1 And feeder5 And feeder5spawn = 1 Then feederNextSpawn = 2
+		If feederNextSpawn = 1 And feeder6 And feeder6spawn = 1 Then feederNextSpawn = 2
+
+		' If 2 is taken, bump to 3
+		If feederNextSpawn = 2 And feeder1 And feeder1spawn = 2 Then feederNextSpawn = 3
+		If feederNextSpawn = 2 And feeder2 And feeder2spawn = 2 Then feederNextSpawn = 3
+		If feederNextSpawn = 2 And feeder3 And feeder3spawn = 2 Then feederNextSpawn = 3
+		If feederNextSpawn = 2 And feeder4 And feeder4spawn = 2 Then feederNextSpawn = 3
+		If feederNextSpawn = 2 And feeder5 And feeder5spawn = 2 Then feederNextSpawn = 3
+		If feederNextSpawn = 2 And feeder6 And feeder6spawn = 2 Then feederNextSpawn = 3
+
+		' If 3 is taken, bump to 4
+		If feederNextSpawn = 3 And feeder1 And feeder1spawn = 3 Then feederNextSpawn = 4
+		If feederNextSpawn = 3 And feeder2 And feeder2spawn = 3 Then feederNextSpawn = 4
+		If feederNextSpawn = 3 And feeder3 And feeder3spawn = 3 Then feederNextSpawn = 4
+		If feederNextSpawn = 3 And feeder4 And feeder4spawn = 3 Then feederNextSpawn = 4
+		If feederNextSpawn = 3 And feeder5 And feeder5spawn = 3 Then feederNextSpawn = 4
+		If feederNextSpawn = 3 And feeder6 And feeder6spawn = 3 Then feederNextSpawn = 4
+
+		' If 4 is taken, bump to 5
+		If feederNextSpawn = 4 And feeder1 And feeder1spawn = 4 Then feederNextSpawn = 5
+		If feederNextSpawn = 4 And feeder2 And feeder2spawn = 4 Then feederNextSpawn = 5
+		If feederNextSpawn = 4 And feeder3 And feeder3spawn = 4 Then feederNextSpawn = 5
+		If feederNextSpawn = 4 And feeder4 And feeder4spawn = 4 Then feederNextSpawn = 5
+		If feederNextSpawn = 4 And feeder5 And feeder5spawn = 4 Then feederNextSpawn = 5
+		If feederNextSpawn = 4 And feeder6 And feeder6spawn = 4 Then feederNextSpawn = 5
+
+		' If 5 is taken, bump to 6
+		If feederNextSpawn = 5 And feeder1 And feeder1spawn = 5 Then feederNextSpawn = 6
+		If feederNextSpawn = 5 And feeder2 And feeder2spawn = 5 Then feederNextSpawn = 6
+		If feederNextSpawn = 5 And feeder3 And feeder3spawn = 5 Then feederNextSpawn = 6
+		If feederNextSpawn = 5 And feeder4 And feeder4spawn = 5 Then feederNextSpawn = 6
+		If feederNextSpawn = 5 And feeder5 And feeder5spawn = 5 Then feederNextSpawn = 6
+		If feederNextSpawn = 5 And feeder6 And feeder6spawn = 5 Then feederNextSpawn = 6
+
+		' If 6 is taken, none available => 0
+		If feederNextSpawn = 6 And feeder1 And feeder1spawn = 6 Then feederNextSpawn = 0
+		If feederNextSpawn = 6 And feeder2 And feeder2spawn = 6 Then feederNextSpawn = 0
+		If feederNextSpawn = 6 And feeder3 And feeder3spawn = 6 Then feederNextSpawn = 0
+		If feederNextSpawn = 6 And feeder4 And feeder4spawn = 6 Then feederNextSpawn = 0
+		If feederNextSpawn = 6 And feeder5 And feeder5spawn = 6 Then feederNextSpawn = 0
+		If feederNextSpawn = 6 And feeder6 And feeder6spawn = 6 Then feederNextSpawn = 0	
+	End Page GetFreeSpawnNumber
+	
+	Page FeederDefeated
+		feederKillCount = feederKillCount + 1
+		If feederKillCount >= feederKillTarget Then Goto Done
+		
+		No Text
+	End Page FeederDefeated
+	
+	Page Done
+		// if we are clearing it here, it is a full win
+		outcome = gameWin
+		Trigger @GameOver
+	End Page Done
+	
+	Page AddFeeders
+		Triggered By @EndRound If goal = feedGate And firstRitual = firstRitualOver And feederCount < feederMax
+		
+		feedersAdded = feederMax - feederCount
+		
+		If feederCount < feederMax Then Call AddFeeder
+		If feederCount < feederMax Then Call AddFeeder
+		If feederCount < feederMax Then Call AddFeeder
+		If feederCount < feederMax Then Call AddFeeder
+		If feederCount < feederMax Then Call AddFeeder
+		If feederCount < feederMax Then Call AddFeeder
+		
+		Call ShowFeeder
+		
+		If Not feedersAlreadyAdded Then Text """
+			A group of cultists flood into the torture chamber. They are quiet
+			and moving quickly. Place {var:feedersAdded} cultists as indicated.
+		"""
+		
+		Text """
+			The cultists just keep coming. Place {var:feedersAdded} cultists
+			as indicated.
+		"""
+		
+		Call HideFeeder
+		feedersAlreadyAdded = true
+	End Page AddFeeders
+End Book MythosFeeders

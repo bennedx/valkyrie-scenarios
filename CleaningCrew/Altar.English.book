@@ -32,7 +32,7 @@ Book Altar Ordered No Keep Looped
 			in pain that his face barely looks human. He is surrounded by a
 			fearsome glow and is somehow part of it.
 
-			You look around and there is altar across the room and a man
+			You look around and there is an altar across the room and a man
 			standing behind it, arms raised. He is speaking in a language
 			you don't recognize. His voice seems amplified. As he finishes
 			each line, the gate pulses and makes loud electrical noises. The
@@ -63,10 +63,30 @@ Book Altar Ordered No Keep Looped
 			complete. The boy will be used as material to create the gate.
 			We must end this.>>
 		"""
+		
+		If goal = goalFeedGate Then Text """
+			{c:EventChosenInvestigator} becomes more aware of their surroundings. It is some
+			kind of underground chamber. A boy hovers in the air, so lost
+			in pain that his face barely looks human. He is surrounded by a
+			fearsome glow and is somehow part of it.
+
+			There is an altar across the room and a man
+			standing behind it, arms raised. He is speaking in a language
+			you don't recognize. His voice seems amplified. As he finishes
+			each line, the gate pulses and makes loud electrical noises. The
+			pulses radiate though you like shock waves. Each wave feels like 
+			fear.
+
+			A woman lies dead at his feet.
+
+			Sarah speaks loudly over the din, <<The summoning spell is nearly
+			complete. I can feel the Ancient One approaching from the other 
+			side. We must move quickly.>>
+		"""
 	End Page Place
 	
 	Page PlaceAltar
-		Add TileAltar, TokenMatthias!, TokenAltarInvestigatos 
+		Add TileAltar, TokenMatthias!, TokenAltarInvestigators, TokenDungeonCellInvestigators
 		
 		Text """
 			Now that you have your bearings, you better understand where you are
@@ -75,12 +95,15 @@ Book Altar Ordered No Keep Looped
 			The man at the altar continues casting his spell. Place a 
 			Cult Leader as indicated. This is your cousin
 			Matthias.
-	
-			You are standing near the boy. Place your investigator figures
-			as indicated.
+
+			{c:ChosenInvestigtor} stands near the boy. Move 
+			{c:EventChosenInvestigator} to the altar as indicated.
+
+			Sarah transported the rest of the investigators to the dungeon
+			cell. Move your investigator figures as indicated.
 		"""
 		
-		Remove TokenMatthias, TokenAltarInvestigators
+		Remove TokenMatthias, TokenAltarInvestigators, TokenDungeonCellInvestigators
 	End Page PlaceAltar
 	
 	Page PlaceNpcs
@@ -95,7 +118,7 @@ Book Altar Ordered No Keep Looped
 			
 			A dead woman is chained to the altar, lying at Matthias's feet. Place the
 			{c:TokenDeadWoman} token. This is the wife of the man who was
-			looking for the healing stone you found.
+			looking for the healing stone.
 		"""
 		
 		If goal = goalOpenGate Then Text """
@@ -103,9 +126,9 @@ Book Altar Ordered No Keep Looped
 			indicated. This is Matthias's son. If you don't stop Matthias, 
 			the boy will soon be the gate.
 			
-			A woman lies dead at Matthias's feet. Place the {c:TokenLiveWoman}
+			A woman lies at Matthias's feet. Place the {c:TokenLiveWoman}
 			token. This is the wife of the man who was looking for the
-			healing stone you found.
+			healing stone.
 		"""
 	End Page PlaceNpc
 End Book Altar

@@ -5,7 +5,7 @@ Debug Off
 
 Book MythosController Ordered No Keep
 	
-	Page TakeAction 
+	Page MythosPhase 
 		Not Visible
 		Triggered By @Mythos
 		No Text
@@ -13,28 +13,24 @@ Book MythosController Ordered No Keep
 		Trigger @Sarah
 		Trigger @Wanderers
 		Trigger @HealingStone
-		Trigger @StartFirstRitual
-		Trigger @EndGameRitual
+		Trigger @Ritual
 		
-		Exit
-	End Page TakeAction
+		// if we are just starting the first ritual, start it now
+		// (if there had been run earlier, it won't be firstRitualStarted now.
+		If firstRitual = firstRitualStarted Then Trigger @Ritual
+	End Page MythosPhase
 
 	// this will start and manage the ritual
 	// the ritual runs to the end of the game for goalOpenGate
 	// for goalFeedGate and goalCloseGate, it runs until the
 	// investigators are pulled into the altar room
 	Page StartFirstRitual 
-		Not Visible
-		Triggered By @Ritual If firstRitual = firstRitualNotStarted And firstRitual <> firstRitualOver
+		Triggered By @Ritual If firstRitual = firstRitualNotStarted
 		No Text
 		
 		found = foundJournal + foundDvm + foundElderSign + foundRitualDagger
 		explored = exploredCryptViaChapel + exploredDungeonCaveViaBasement + exploredDungeonCell
 		read = dvmFinished + journalFinished
-		
-		// if we're not jerks, we get an extra tick to get everything ready
-		readyCount = 9 - (5 - #heros) * 2 + exploredGateNicely
-		
 
 		/*
 		#heros	nice	#things left to do before we start
@@ -48,9 +44,6 @@ Book MythosController Ordered No Keep
 		
 		There are 9 things total
 		if found + explored + read >= 9 - #heros + exploredGateNicely Then firstRitual = firstRitualStarted
-		startOnCount = #heros + exploredGateNicely
-
-		Exit
 	End Page StartOrContinueFirstRitual
 
 

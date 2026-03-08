@@ -383,7 +383,7 @@ Book CloseGate Ordered No Keep Looped
 		If firstRitual < firstRitualOpenGate Call MythosFirstRitualFeedOrCloseGate.OpenGate
 		
 		firstRitual = false
-		Trigger @ExploreAltar
+		Trigger @ExploreAltarViaSarah
 		Goto Init
 	End Page SarahTransports
 End CloseGate

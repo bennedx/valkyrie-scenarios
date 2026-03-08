@@ -2,7 +2,7 @@ Language English
 Debug Off
 
 Book MythosFirstRitualOpenGate Ordered No Keep
-	Triggered By @FirstRitual If goal = goalOpenGate And firstRitual And firstRitual <> firstRitualOver
+	Triggered By @Ritual If goal = goalOpenGate And firstRitual And firstRitual <> firstRitualOver
 	
 	Page Init
 		Text """
