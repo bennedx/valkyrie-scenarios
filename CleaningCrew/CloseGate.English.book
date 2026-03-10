@@ -1,12 +1,25 @@
 Language English
 
 Book CloseGate Ordered No Keep Looped
-    Triggered By @ReadDvm If goal = goalCloseGate And ritual
+    Triggered By @ReadDvm If goal = goalCloseGate And firstRitual = firstRitualOver
 
     // this hides the page since we are NO Keep
     // this is easier than managing visibility
     if Not closeGateInitialized Then Mark Step2Repeat Read
 	closeGateInitialized = true
+	
+	Page Init
+		Text """
+			Matthias looks up and flings an arm in your direction and...
+			something happens. Each investigator except {c:EventChosenInvestigator}
+			becomes Restrained.
+			
+			Sarah says to {c:EventChosenInvestigator}, <<You must stop Matthias
+			and seal the gate. Only you can do it.>>
+		"""
+		
+		Exit
+	End Page
 	
     Page Step1
         Prolog """

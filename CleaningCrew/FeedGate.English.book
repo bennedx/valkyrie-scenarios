@@ -124,10 +124,10 @@ Book MythosFeedGate Ordered No Keep
 			Sarah drifts away from you and settles. Move Sarah from your 
 			investigator card to the board as indicated.
 			
-			She says loud enough the the people on the other side of the hole
+			She says loud enough that the people on the other side of the hole
 			in the wall can hear her, <<I'm going to stay here and watch over
 			what is happening. If you need to come into the cell or go back 
-			to the house, just call me and I will help.
+			to the house, call me and I will help.
 		"""
 		
 		Goto Init
@@ -137,26 +137,34 @@ Book MythosFeedGate Ordered No Keep
 		Text """
 			I hear you calling me. What do you need?
 		"""
-		Button 1 "Bring me into the cell."
-		Button 2 "Take me through the hole in the wall."
+		Button 1 "{action} Bring me into the cell."
+		Button 2 "{action} Take me through the hole in the wall."
 		
 		If selection = 1 Then Goto CallSarahToCell
-		Goto CallSarahFromCell
+		Goto CallSarahToHouse
 	End Page CallSarah
 	
 	Page CallSarahToCell
 		Text """
 			Sarah comes to you and starts to grow like she did before. You grow
-			and become transparent with her then... your are overwhelmed for a
+			and become transparent with her then... you are overwhelmed for a
 			moment but quickly regain your senses.
 			
-			Move your investator figure to 
+			Move your investator figure to Sarah's space in the altar room.
+		"""
 	End Page CallSarahToCell
 	
-	Page CallSarahFromCell
+	Page CallSarahToHouse
+		Text """
+			Sarah grows large and transparent, pulling you into her swirling smoke.
+			You are briefly disoriented, but knowing what is happening allows you
+			to quickly adjust.
+			
+			Move your investigator figure to the dungeon cell.
+		"""
+	End Page CallSarahToHouse
 	
 End Book MythosFeedGate
-
 
 
 Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
@@ -202,6 +210,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 		feederPosition = 8
 		
 		feederMax = #heros + 1 - openedGateNicely
+		feederKillTarget = feederMax * 3 + 1
 		Call AddFeeders
 	End Page StartFeeders
 

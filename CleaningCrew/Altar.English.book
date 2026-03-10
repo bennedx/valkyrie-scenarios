@@ -87,13 +87,14 @@ Book Altar Ordered No Keep Looped
 	
 	Page PlaceAltar
 		Add TileAltar, TokenMatthias!, TokenAltarInvestigators, TokenDungeonCellInvestigators
+		Call Event SpawnAltarMatthias
 		
 		Text """
-			Now that you have your bearings, you better understand where you are
+			Now that you have your bearings, you can better understand where you are
 			and what is around you. Place the {c:TileAltar} tile.
 			
 			The man at the altar continues casting his spell. Place a 
-			Cult Leader as indicated. This is your cousin
+			{c:SpawnAltarMatthias}. This is your cousin
 			Matthias.
 
 			{c:ChosenInvestigtor} stands near the boy. Move 
