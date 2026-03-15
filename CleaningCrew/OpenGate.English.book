@@ -82,7 +82,7 @@ Book OpenGate Ordered No Keep Looped
 		Goto Step1
 	End Page Woman
 	
-	Page step1
+	Page Step1
 		firstRitual = 0
 		mainRitual = mainRitualStarted
 		
@@ -370,7 +370,7 @@ Book MatthiasOpenGateActivation Ordered No Keep
 			Sarah cries out in anguish.
 
 			The gate sputters.
-		End Text
+		"""
 		
 		gateOpen = true
 	End Page Third

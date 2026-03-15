@@ -26,7 +26,7 @@ Book SarahRitualWarnings Ordered No Keep
 	End Page JournalNoHole
 	
 	Page Journal
-		Visible If Not journalfinished and foundHoleInWall
+		Visible If Not journalFinished and foundHoleInWall
 		
 		Text """
 			You must finish reading the journal. Surely it will tell in more

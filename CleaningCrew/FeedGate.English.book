@@ -150,7 +150,7 @@ Book MythosFeedGate Ordered No Keep
 			and become transparent with her then... you are overwhelmed for a
 			moment but quickly regain your senses.
 			
-			Move your investator figure to Sarah's space in the altar room.
+			Move your investigator figure to Sarah's space in the altar room.
 		"""
 	End Page CallSarahToCell
 	
@@ -206,6 +206,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 	Page StartFeeders
 		Not Visible
 		Triggered By @StartFeeders
+		No Text
 		
 		feederPosition = 8
 		
@@ -226,7 +227,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 	End Page Spawn
 
 	Page Move
-		Trigger By @ActiviateFeeder
+		Triggered By @ActiviateFeeder
 		
 		Call LoadFeeder
 		
@@ -505,6 +506,8 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 	End Page Removefeeder
 	
 	Page AddFeeder
+		No Text
+		
 		If Not feeder6 Then feeder = 6
 		If not feeder5 Then feeder = 5
 		If not feeder4 Then feeder = 4
@@ -524,11 +527,11 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 		Call SaveFeeder
 		
 		feederCount = feederCount + 1
-		
-		No Text
 	End Page AddFeeder
 	
 	Page Savefeeder
+		No Text
+		
 		If feeder = 1 Then feeder1position = feederPosition
 		If feeder = 1 Then feeder1Spawn = feederSpawn
 		
@@ -546,7 +549,6 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 		
 		If feeder = 6 Then feeder6position = feederPosition
 		If feeder = 6 Then feeder6Spawn = feederSpawn
-		
 	End Page Savefeeder
 	
 	Page LoadFeeder
@@ -604,7 +606,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 	End Page HideFeeder
 	
 	Page Feeder1Dies
-		Trigger By @DefeatedSpawnFeeder1
+		Triggered By @DefeatedSpawnFeeder1
 		No Text
 		
 		feederSpawn = 1
@@ -615,7 +617,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 	End Page Feeder1Dies
 	
 	Page Feeder2Dies
-		Trigger By @DefeatedSpawnFeeder2
+		Triggered By @DefeatedSpawnFeeder2
 		No Text
 		
 		feederSpawn = 2
@@ -626,7 +628,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 	End Page Feeder2Dies
 	
 	Page Feeder3Dies
-		Trigger By @DefeatedSpawnFeeder3
+		Triggered By @DefeatedSpawnFeeder3
 		No Text
 		
 		feederSpawn = 3
@@ -637,7 +639,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 	End Page Feeder3Dies
 	
 	Page Feeder4Dies
-		Trigger By @DefeatedSpawnFeeder4
+		Triggered By @DefeatedSpawnFeeder4
 		No Text
 		
 		feederSpawn = 4
@@ -648,7 +650,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 	End Page Feeder4Dies
 	
 	Page Feeder5Dies
-		Trigger By @DefeatedSpawnFeeder5
+		Triggered By @DefeatedSpawnFeeder5
 		No Text
 		
 		feederSpawn = 5
@@ -659,7 +661,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 	End Page Feeder5Dies
 	
 	Page Feeder6Dies
-		Trigger By @DefeatedSpawnFeeder6
+		Triggered By @DefeatedSpawnFeeder6
 		No Text
 		
 		feederSpawn = 6
@@ -670,9 +672,11 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 	End Page Feeder6Dies
 	
 	Page GetFreeSpawnNumber
+		No Text
+		
 		feederNextSpawn = 1
 
-		' If 1 is taken, bump to 2
+		// If 1 is taken, bump to 2
 		If feederNextSpawn = 1 And feeder1 And feeder1spawn = 1 Then feederNextSpawn = 2
 		If feederNextSpawn = 1 And feeder2 And feeder2spawn = 1 Then feederNextSpawn = 2
 		If feederNextSpawn = 1 And feeder3 And feeder3spawn = 1 Then feederNextSpawn = 2
@@ -680,7 +684,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 		If feederNextSpawn = 1 And feeder5 And feeder5spawn = 1 Then feederNextSpawn = 2
 		If feederNextSpawn = 1 And feeder6 And feeder6spawn = 1 Then feederNextSpawn = 2
 
-		' If 2 is taken, bump to 3
+		// If 2 is taken, bump to 3
 		If feederNextSpawn = 2 And feeder1 And feeder1spawn = 2 Then feederNextSpawn = 3
 		If feederNextSpawn = 2 And feeder2 And feeder2spawn = 2 Then feederNextSpawn = 3
 		If feederNextSpawn = 2 And feeder3 And feeder3spawn = 2 Then feederNextSpawn = 3
@@ -688,7 +692,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 		If feederNextSpawn = 2 And feeder5 And feeder5spawn = 2 Then feederNextSpawn = 3
 		If feederNextSpawn = 2 And feeder6 And feeder6spawn = 2 Then feederNextSpawn = 3
 
-		' If 3 is taken, bump to 4
+		// If 3 is taken, bump to 4
 		If feederNextSpawn = 3 And feeder1 And feeder1spawn = 3 Then feederNextSpawn = 4
 		If feederNextSpawn = 3 And feeder2 And feeder2spawn = 3 Then feederNextSpawn = 4
 		If feederNextSpawn = 3 And feeder3 And feeder3spawn = 3 Then feederNextSpawn = 4
@@ -696,7 +700,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 		If feederNextSpawn = 3 And feeder5 And feeder5spawn = 3 Then feederNextSpawn = 4
 		If feederNextSpawn = 3 And feeder6 And feeder6spawn = 3 Then feederNextSpawn = 4
 
-		' If 4 is taken, bump to 5
+		// If 4 is taken, bump to 5
 		If feederNextSpawn = 4 And feeder1 And feeder1spawn = 4 Then feederNextSpawn = 5
 		If feederNextSpawn = 4 And feeder2 And feeder2spawn = 4 Then feederNextSpawn = 5
 		If feederNextSpawn = 4 And feeder3 And feeder3spawn = 4 Then feederNextSpawn = 5
@@ -704,7 +708,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 		If feederNextSpawn = 4 And feeder5 And feeder5spawn = 4 Then feederNextSpawn = 5
 		If feederNextSpawn = 4 And feeder6 And feeder6spawn = 4 Then feederNextSpawn = 5
 
-		' If 5 is taken, bump to 6
+		// If 5 is taken, bump to 6
 		If feederNextSpawn = 5 And feeder1 And feeder1spawn = 5 Then feederNextSpawn = 6
 		If feederNextSpawn = 5 And feeder2 And feeder2spawn = 5 Then feederNextSpawn = 6
 		If feederNextSpawn = 5 And feeder3 And feeder3spawn = 5 Then feederNextSpawn = 6
@@ -712,7 +716,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 		If feederNextSpawn = 5 And feeder5 And feeder5spawn = 5 Then feederNextSpawn = 6
 		If feederNextSpawn = 5 And feeder6 And feeder6spawn = 5 Then feederNextSpawn = 6
 
-		' If 6 is taken, none available => 0
+		// If 6 is taken, none available => 0
 		If feederNextSpawn = 6 And feeder1 And feeder1spawn = 6 Then feederNextSpawn = 0
 		If feederNextSpawn = 6 And feeder2 And feeder2spawn = 6 Then feederNextSpawn = 0
 		If feederNextSpawn = 6 And feeder3 And feeder3spawn = 6 Then feederNextSpawn = 0
@@ -729,6 +733,8 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 	End Page FeederDefeated
 	
 	Page Done
+		No Text
+		
 		// if we are clearing it here, it is a full win
 		outcome = gameWin
 		Trigger @GameOver

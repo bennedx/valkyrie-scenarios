@@ -131,5 +131,5 @@ Book Altar Ordered No Keep Looped
 			token. This is the wife of the man who was looking for the
 			healing stone.
 		"""
-	End Page PlaceNpc
+	End Page PlaceNpcs
 End Book Altar

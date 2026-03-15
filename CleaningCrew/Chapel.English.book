@@ -208,7 +208,7 @@ Book Chapel Ordered No Keep Looped
 		If selection = 4 Then Mark Unread
 		If selection = 4 Then Exit
 		
-		If selection = 1 Then Goto ChallengePriest
+		If selection = 1 Then Goto KillPriest
 		if selection = 2 Then Goto TruthToPriest
 		Goto KillPriest
 	End Page TalkToPriest
@@ -246,6 +246,18 @@ Book Chapel Ordered No Keep Looped
 		wandererFrequency = wandererFrequency + 2
 		Goto PlaceSearchCryptViaChapel
 	End Page TruthToPriest
+
+	Page PlaceSearchCryptViaChapel
+		Not Visible
+		
+		Add TokenSearchCryptViaChapel!
+		
+		Text """
+			While you are bent down, you notice something odd about the floor.
+			
+			Place a Search token as indicated.
+		"""
+	End Page
 
 	Page KillPriest
 		Not Visible

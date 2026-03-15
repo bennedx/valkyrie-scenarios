@@ -396,7 +396,123 @@ o		SarahritualWarnings (???)
 o		Startup
 
 
+Highlighting
+- rules for determining size
+	File = token_items.ini:  card-sized
+	File = token_monsters.ini:  monster token-sized
+	File = tokens.ini:  size list
+			- bust open .png to see if it is round (has transparency)
 
+- when to use
+	- just before its target in the ADD
+	- on exit; issues:
+		- if 
+		
+		
+I need code to read multiple .ini files and populate List<IniSection>.
+You will be passed a string named rootspec; this is the root directory
+from which you will read. You will be given a flag IsSystem; each
+IniSection will get this flag. If IsSystem, recurse through the directories
+under the root; otherwise, only read files from the root. Only process .ini
+files.
+
+If IsSystem, only read from directories that have a content_pack.ini files.
+The folder you recurse through will be listed in the [ContentPackData] section;
+each entry is the name of a file with no key.
+
+If not IsSystem, read the quest.ini file. Then make a list of RequiredPacks from
+[Quest].packs. You will only parse files events.ini, items.ini, monsters.ini, 
+puzzles.ini, spawns.ini, tiles.ini, tokens.ini, and ui.ini.
+
+You will process IsSystem before !IsSystem.
+
+These rules are for either IsSystem or !IsSystem.
+
+Section names are PascalCase and should be unique; if they are not and IsSystem,
+ignore; otherwise log an error. Ignore leading and trailing spaces.
+
+Key/value pairs are separated by "=". Ignore spaces in the key name or after =.
+If there are multiple values, they will be separated by a space; ignore
+repeated spaces.
+
+The IniSection.Type is set based on the first characters in the section's name.
+Where there is overlap, they are listed in the enum in the correct order to
+check. If a section type is not found, issue a warning:  show the first word of
+the name; only show this warning once for each missing type for an entire run.
+
+The directory\filename is put into the Filespec property. This path is relative
+to the root. If the file is in the root, only put the file name.
+
+If a section you process has a list of values, leave the Key property empty.
+
+These rules are only for IsSystem.
+
+Pack property. If the content_pack.ini file is
+directly in the root, use the folder name; otherwise, use the part of the
+subdirectory name before the "-". Exceptions:  if folder starts with "ck" or
+"mom1e", use "mom1et".
+
+These rules are only for !IsSystem.
+
+For QItem, set the Item property to the IniSection that has the name listed in
+the value; if it is not found, log an error. if the Items Pack is not listed
+in the quest.ini Packs list, log an error.
+
+Record if a content pack has been used. At the end, log a warning if there are
+packs that are not used; also log an error for any pack references that is not
+in quest.ini.
+
+CustomMonster: the base property must be present. If activation, evadeevent, or
+horrorevent is set, it must be a single value and the listed event must exist.
+Allow forward references to events.
+
+Spawn:  The monster property must reference a Monster or CustomMonster section.
+If not, log an error.
+
+Tile. The side property must reference a Tile section that IsSystem.
+
+Token. These will always have a type property. This property must reference an
+IsSystem section.
+
+Any section can have these properties; all support forward references.
+	event1 where 1 can be any number; each listed event must exist
+	
+	add/remove:  each value must exist as a QItem, Tile, Token, Spawn, or UI.
+	
+	operations: these are variable assignments that take the form 
+	"variable,operation,value". Make a list of variables. When it in 'variable',
+	it is both IsDefined and IsWritten. If the variable is listed as a value, 
+	update it to Read; otherwise, add it as Undefined and Read. A trigger
+	variable always starts with "@" or "Var"; treat both as "@". If a trigger
+	variable is read, do not count it as Read and log a warning.
+	
+	vartests: these are conditionals. There are two forms: simple and not
+	simple. Not simple are preceded by "VarOperation:". The conditions look
+	like "variable,operator,value"; if one does not follow this form, ignore it.
+	If a variable appears on either side of the operator, mark it Read.  If you
+	have to add it, mark it Undefined, and Read if it is not a trigger variable.
+	
+	event1Condition: same as vartests. There must be an event1 key.
+	
+	trigger. This variable will always start with "Var"; treat this as though
+	it started with "@" instead. Mark this one Read.
+	
+At the end, generate these warnings.
+
+	- Variables that are read-but-not-written
+	- Variables written-but-not-read; for Trigger variables, they do not count 
+		count as Read, but are logged with a warning.
+	
+----
+
+
+
+	
+
+
+
+
+	
 
 
 

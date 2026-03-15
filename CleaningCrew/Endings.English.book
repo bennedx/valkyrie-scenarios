@@ -1,11 +1,11 @@
 Language English
 Debug Off
 
-Book Endings
+Book Endings Ordered No Keep
 	Triggered By @GameOver
 	
 	Page HardFail Like UIOpeningText
-		Visible When firstRitual
+		Visible If firstRitual
 
 		Trigger @ShowIntroFrame
 		
@@ -168,7 +168,7 @@ Book Endings
 			tentacle tentatively pokes through, but pulls back when the gate
 			suddenly pops.
 
-			Sarah leans down and whispers, <<"The Ancient One will not make it
+			Sarah leans down and whispers, <<The Ancient One will not make it
 			through. But you were not able to seal the gate, so it can
 			happen here again. When the gate collapses, our nephew will die. I will
 			see him to peace. Then I will return and wait for the next attempt.>>

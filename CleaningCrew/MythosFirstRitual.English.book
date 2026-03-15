@@ -213,7 +213,7 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 		"""
 		
 		firstRitual = firstRitualGateOpen
-	End Page Open
+	End Page OpenGate
 	
 	Page Stabilize
 		Text """

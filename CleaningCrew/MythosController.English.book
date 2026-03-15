@@ -28,12 +28,12 @@ Book MythosController Ordered No Keep
 		Triggered By @Ritual If firstRitual = firstRitualNotStarted
 		No Text
 		
-		found = foundJournal + foundDvm + foundElderSign + foundRitualDagger
-		explored = exploredCryptViaChapel + exploredDungeonCaveViaBasement + exploredDungeonCell
-		read = dvmFinished + journalFinished
+		isFound = foundJournal + foundDvm + foundElderSign + foundRitualDagger
+		isExplored = exploredCryptViaChapel + exploredDungeonCaveViaBasement + exploredDungeonCell
+		isRead = dvmFinished + journalFinished
 
 		/*
-		#heros	nice	#things left to do before we start
+		#heros	nice	#things left to do before we start (???)
 		3		0		2	
 		3		1		1	
 		4		0		3
@@ -42,9 +42,9 @@ Book MythosController Ordered No Keep
 		5		1		3
 		*/
 		
-		There are 9 things total
-		if found + explored + read >= 9 - #heros + exploredGateNicely Then firstRitual = firstRitualStarted
-	End Page StartOrContinueFirstRitual
+		// There are 9 things total
+		if isFound + isExplored + isRead >= 9 - #heros + exploredGateNicely Then firstRitual = firstRitualStarted
+	End Page StartFirstRitual
 
 
 	
