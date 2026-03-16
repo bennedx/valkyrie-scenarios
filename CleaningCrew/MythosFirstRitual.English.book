@@ -139,7 +139,7 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 
 	Page Init
 		No Text
-		Goto MythosFirstRitualOpenGate.One
+		Goto MythosFirstRitualOpenGate.Init
 	End Page Init
 	
 	Page Start
@@ -168,7 +168,7 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 		firstRitual = firstRitualDagger
 	End Page Dagger
 	
-	Page FirstRitualChalice
+	Page Chalice
 		Text """
 			Another shock hits you, making you feel the knife in your palm
 			again. You squeeze your hand into a tight fist but you aren't sure
@@ -180,7 +180,7 @@ Book MythosFirstRitualFeedOrCloseGate Ordered No Keep
 		"""
 		
 		firstRitual = firstRitualChalice
-	End Page FirstRitualChalice
+	End Page Chalice
 	
 	Page Woman
 		Text """

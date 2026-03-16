@@ -301,7 +301,7 @@ Book OpenGate Ordered No Keep Looped
 		
 		firstRitual = firstRitualOver
 		Trigger @ExploreAltarViaSarah
-		Goto Init
+		Goto Step1Prolog
 	End Page SarahTransports
 End Book OpenGate
 

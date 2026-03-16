@@ -389,8 +389,8 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 		"""
 
 		Test Quota 2 Set isPass
-		If isPass Goto EvadePass
-		Goto EvadeFail
+		If isPass Goto EvadeHarshPass
+		Goto EvadeHarshFail
 	End Page EvadeHarsh
 
 	Page EvadeHarshPass
