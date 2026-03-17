@@ -243,6 +243,7 @@ Book Chapel Ordered No Keep Looped
 		
 		Remove TokenChapelPriest
 		
+		foundDagger = true
 		wandererFrequency = wandererFrequency + 2
 		Goto PlaceSearchCryptViaChapel
 	End Page TruthToPriest
@@ -291,6 +292,7 @@ Book Chapel Ordered No Keep Looped
 		If wandererMax > 6 Then WandererMax = 6
 		wandererFrequency = wandererFrequency - 1
 		
+		foundDagger = true
 		Goto PlaceSearchCryptViaChapel
 	End Page KillPriest
 
@@ -322,6 +324,7 @@ Book Chapel Ordered No Keep Looped
 		If wandererMax > 6 Then WandererMax = 6
 		wandererFrequency = wandererFrequency - 1
 		
+		foundDagger = true
 		Goto PlaceSearchCryptViaChapel
 	End Page
 

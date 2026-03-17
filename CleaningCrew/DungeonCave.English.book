@@ -62,8 +62,9 @@ Book DungeonCave Ordered No Keep Looped
 			Discard this Explore token and the wall under it.
 		"""
 		
-		exploredDungeonCaveViaCrypt = true
-		If Not exploredDungeonCave Then Goto PlaceExploreCrypt
+		exploredDungeonCave = true
+		exploredDungeonCaveViaBasement = true
+		If Not exploredCrypt Then Goto PlaceExploreCrypt
 	End Page ExploreViaBasement
 
 	Page PlaceExploreCrypt

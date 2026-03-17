@@ -23,7 +23,7 @@ Book MythosFeedGate Ordered No Keep
 		"""
 		
 		feederKillCount = 0
-		feederKillGoal = (#heros - exploredNicely) * 3 + 2
+		feederKillGoal = (#heros - exploredBackyardNicely) * 3 + 2
 		
 		Trigger @StartFeeders
 	End Page
@@ -96,7 +96,7 @@ Book MythosFeedGate Ordered No Keep
 	
 	Page SarahTransports
 		Not Visible
-		Triggered By @AnotherRequirementCompleted If goal = goalFeedGate And foundKnife And dvmFinished And journalFinished And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
+		Triggered By @AnotherRequirementCompleted If goal = goalFeedGate And foundDagger And dvmFinished And journalFinished And foundElderSign And exploredDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
 		
 		Text """
 			Sarah smiles for the first time and says out load, <<That's it! Now
@@ -210,7 +210,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 		
 		feederPosition = 8
 		
-		feederMax = #heros + 1 - openedGateNicely
+		feederMax = #heros + 1 - exploredBackyardNicely
 		feederKillTarget = feederMax * 3 + 1
 		Call AddFeeders
 	End Page StartFeeders
@@ -238,7 +238,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 		// we call this twice; this shows where it is coming from
 		Call ShowFeeder
 		
-		distance = Random(2) + (1 - openedGateNicely)
+		distance = Random(2) + (1 - exploredBackyardNicely)
 		feederPosition = feederPosition + distance
 		If feederPosition > 9 Then feederPosition = 9
 
@@ -252,7 +252,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 			hurry, so he does not stop when passing investigators.
 		"""
 		
-		If Not openedGateNicely And openGateFirstFeeder And distance > 1 Then Text """
+		If Not exploredBackyardNicely And openGateFirstFeeder And distance > 1 Then Text """
 			As the cultist passes he mutters something about Benjamin and maybe
 			the words 'backyard gate'? He moves a little faster. Move the cultist toward
 			the dungeon cell as indicated. He is in a hurry so he does not stop
@@ -262,7 +262,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 			folks here really that petty?</i>
 		"""
 
-		If Not openedGateNicely And feedGateFirstFeeder And distance > 1 Then feedGateFirstFeeder = false
+		If Not exploredBackyardNicely And feedGateFirstFeeder And distance > 1 Then feedGateFirstFeeder = false
 		
 		Button 1 "There is an investigator in this space"
 		Button 2 "There is no investigator in this space"
@@ -378,7 +378,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 	End Page Evade
 
 	Page EvadeHarsh
-		extraDice = openedGateNicely ? 2 : 1
+		extraDice = exploredBackyardNicely ? 2 : 1
 
 		Text """
 			As you try to walk around him, the man pulls a knife and approaches you.
@@ -741,7 +741,7 @@ Book MythosFeeders Ordered No Keep // no looping, so each page is one-and-done
 	End Page Done
 	
 	Page AddFeeders
-		Triggered By @EndRound If goal = feedGate And firstRitual = firstRitualOver And feederCount < feederMax
+		Triggered By @EndRound If goal = goalFeedGate And firstRitual = firstRitualOver And feederCount < feederMax
 		
 		feedersAdded = feederMax - feederCount
 		

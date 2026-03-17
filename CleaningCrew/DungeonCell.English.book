@@ -6,8 +6,8 @@ Book DungeonCell Ordered No Keep Looped
 		Triggered By @ExploreDungeonCellViaTortureChamber
 		No Text
 		
-		exploredCellViaTortureChamber = true
-		exploredCell = true
+		exploredDungeonCellViaTortureChamber = true
+		exploredDungeonCell = true
 	End Page ExploreViaTorturChamber
 	
 	Page Place
@@ -29,7 +29,7 @@ Book DungeonCell Ordered No Keep Looped
 	
 	Page PlaceHoleInWall
 		Visible If readAboutBoy
-		Triggered By @ReadAboutBoy If exploredCell
+		Triggered By @ReadAboutBoy If exploredDungeonCell
 		
 		Add TokenCellHoleInWall!
 		
@@ -40,7 +40,7 @@ Book DungeonCell Ordered No Keep Looped
 			Place a Trapdoor as indicated.
 		"""
 		
-		cellHoleFound = true
+		foundDungeonCellHole = true
 	End Page PlaceHoleInWall
 	
 	Page PlaceExploreAltarViaCell

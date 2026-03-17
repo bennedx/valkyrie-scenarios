@@ -279,7 +279,7 @@ Book OpenGate Ordered No Keep Looped
 	
 	Page SarahTransports
 		Not Visible
-		Triggered By @AnotherRequirementCompleted If goal = goalOpenGate And foundKnife And dvmFinished and journalFinished And foundElderSign And foundDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
+		Triggered By @AnotherRequirementCompleted If goal = goalOpenGate And foundDagger And dvmFinished and journalFinished And foundElderSign And exploredDungeonCell And exploredCryptViaChapel And exploredDungeonCaveViaBasement
 		
 		Text """
 			Sarah smiles for the first time and says out loud, <<That's it! Now

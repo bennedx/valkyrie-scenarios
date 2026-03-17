@@ -99,7 +99,7 @@ Book DvmOpenGate Ordered Keep Looped
             gain 2 {clue} if you don't go Insane.
         """
         
-        If journalReadPage4 Then Text """
+        If readAboutExploreDungeonCaveViaBasement Then Text """
             The Sacrifice
         
             The next page delves into the importance of personal sacrifice.

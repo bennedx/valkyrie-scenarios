@@ -48,6 +48,7 @@ Book Crypt Ordered No Keep Looped
 			the explored area.
 		"""
 		
+		exploredCrypt = true
 		Goto PlaceSearchRandom
 	End Page PlaceCrypt
 	
